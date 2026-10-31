@@ -103,6 +103,15 @@ def update(s,b):
         s.update(closedAt=b['observedAt'],exit=exit,exitBook=b,exitReason='observed stop' if stop else 'one-hour observed exit',status='closed; funding/path audit pending')
         append('fills',{'kind':'exit','scenario':s})
 
+def decision(state,e,status,reason):
+    row={'at':stamp(),'eventId':e['id'],'action':e['payload'].get('action'),'tier':e['payload'].get('cohort'),'coin':e.get('coin'),'status':status,'reason':reason}
+    state['signalDecisions']=[row]+[r for r in state.get('signalDecisions',[]) if r['eventId']!=e['id']]
+    state['signalDecisions']=state['signalDecisions'][:200]
+    append('signal-decisions',row)
+
+def retryable(ex):
+    return isinstance(ex,KeyError) or any(t in str(ex).lower() for t in ['quote expired','stale, future','insufficient visible depth','timed out','temporarily unavailable'])
+
 def cycle(state, fetch_source=True):
     previous_heartbeat=state.get('heartbeatAt');state['heartbeatAt']=stamp();state['study']=VERSION
     if previous_heartbeat and millis(state['heartbeatAt'])-millis(previous_heartbeat)>30000:
@@ -111,6 +120,8 @@ def cycle(state, fetch_source=True):
         if s.get('study')!=VERSION: s['legacy']=True;s['entryCopyEligible']=False
     state['sourcePollSeconds']=30;state['quotePollSeconds']=10
     state['limitations']=['Exploratory source-alert scenarios; wallet/tier identity unverified. Not frozen Genius research.','One $1000 shared account with separate Fresh and Add-alert scalp sections. $200 target notional, tracked fresh-position adds up to $350. Source leverage matched only when readable and within venue limits; collateral/liquidation unverified.20 total slots; cash and risk gates apply.','4.5bps/side assumed fees, 10bps/side adverse slippage; funding excluded.','Stops sampled at observed books; gaps can exceed risk. No invented fills or historical entries.','GitHub scheduled jobs can be late or skipped; not guaranteed nonstop. Telegram not connected.']
+    state.setdefault('pendingSignals',{})
+    state.setdefault('signalCoverage',{'since':stamp(),'OPENED':{'observed':0,'SMART':0,'GENIUS':0},'ADDED':{'observed':0,'SMART':0,'GENIUS':0}})
     events=[]
     if fetch_source:
         try:
@@ -127,12 +138,18 @@ def cycle(state, fetch_source=True):
         key=str(e['id']);h=hashlib.sha256(json.dumps(e,sort_keys=True).encode()).hexdigest();old=state['seen'].get(key)
         if not old or old['hash']!=h:
             append('events',{'observedAt':stamp(),'kind':'first_observation' if not old else 'revision','event':e,'hash':h})
-            if not old: unseen.append(e)
+            if not old:
+                unseen.append(e)
+                action=e['payload'].get('action');tier=e['payload'].get('cohort')
+                if action in ('OPENED','ADDED'):
+                    state['pendingSignals'][key]=e
+                    state['signalCoverage'][action]['observed']+=1
+                    state['signalCoverage'][action][tier]+=1
             state['seen'][key]={'hash':h,'firstObservedAt':old['firstObservedAt'] if old else stamp()}
     active=[s for s in state['studies'] if not s.get('closedAt')]
     coins=set(s['symbol'] for s in active)
     eligible=[]
-    for e in sorted(unseen,key=lambda e:(e.get('createdAt',''),e.get('id',0))):
+    for e in sorted(state['pendingSignals'].values(),key=lambda e:(e.get('createdAt',''),e.get('id',0))):
         try:
             p=e['payload'];age=time.time()*1000-millis(e['createdAt'])
             if not (-1000<=age<=120000): raise ValueError('History/stale alert; no backdated entry')
@@ -141,7 +158,8 @@ def cycle(state, fetch_source=True):
             if p['action']=='OPENED' and any(s.get('study')==VERSION and s.get('signalClass','fresh')=='fresh' and s.get('wallet')==p.get('wallet') and s['symbol']==e['coin'] and time.time()*1000-millis(s['openedAt'])<86400000 for s in state['studies']): raise ValueError('24h wallet/market cooldown')
             if not re.fullmatch(r'[A-Za-z0-9:._-]{1,30}',e['coin']): raise ValueError('Invalid market')
             coins.add(e['coin']);eligible.append(e)
-        except Exception as ex: reject(state,e,ex)
+        except Exception as ex:
+            reject(state,e,ex);decision(state,e,'skipped',str(ex));state['pendingSignals'].pop(str(e['id']),None)
     quotes={}
     with ThreadPoolExecutor(max_workers=8) as pool:
         futures={pool.submit(book,coin):coin for coin in sorted(coins)}
@@ -167,15 +185,20 @@ def cycle(state, fetch_source=True):
                     if len(matches)>1: raise ValueError('Ambiguous initial position; no add or duplicate scalp')
                     if matches:
                         target=matches[0];candidate=portfolio.addition(target,e,quotes[e['coin']],sizes[e['coin']],portfolio.snapshot(state['studies'])['equity'])
-                        portfolio.admit(state['studies'],candidate,replace_id=target['id']);target.clear();target.update(candidate);append('fills',{'kind':'add','signalClass':'fresh','scenario':target});continue
+                        portfolio.admit(state['studies'],candidate,replace_id=target['id']);target.clear();target.update(candidate);append('fills',{'kind':'add','signalClass':'fresh','scenario':target});decision(state,e,'filled','Added to tracked fresh position');state['pendingSignals'].pop(str(e['id']),None);continue
                     if any(s.get('study')==VERSION and not s.get('closedAt') and s.get('signalClass')=='add_scalp' and s.get('wallet')==e['payload'].get('wallet') and s['symbol']==e['coin'] and s['direction']==('long' if e['payload']['side']=='LONG' else 'short') for s in state['studies']):raise ValueError('An add-alert scalp for this wallet/market/side is already open; no duplicate exposure')
                     s=portfolio.opening(e,quotes[e['coin']],sizes[e['coin']],assets[e['coin']]['maxLeverage'],os.getenv('PAPER_LEVERAGE_MODE','source'),portfolio.snapshot(state['studies'])['equity'],signal_class='add_scalp')
-                    portfolio.admit(state['studies'],s);state['studies'].append(s);append('fills',{'kind':'add_alert_scalp_entry','signalClass':'add_scalp','scenario':s});continue
+                    portfolio.admit(state['studies'],s);state['studies'].append(s);append('fills',{'kind':'add_alert_scalp_entry','signalClass':'add_scalp','scenario':s});decision(state,e,'filled','Standalone add-alert scalp opened');state['pendingSignals'].pop(str(e['id']),None);continue
                 if any(s.get('study')==VERSION and s.get('signalClass','fresh')=='fresh' and s.get('wallet')==e['payload'].get('wallet') and s['symbol']==e['coin'] and time.time()*1000-millis(s['openedAt'])<86400000 for s in state['studies']): raise ValueError('Wallet/market duplicate in batch')
                 fresh(quotes[e['coin']])
                 if time.time()*1000-millis(e['createdAt'])>120000: raise ValueError('Alert expired before entry')
-                s=create(e,quotes[e['coin']],sizes[e['coin']],assets[e['coin']]['maxLeverage'],portfolio.snapshot(state['studies'])['equity']);portfolio.admit(state['studies'],s);state['studies'].append(s);append('fills',{'kind':'entry','scenario':s})
-            except Exception as ex: reject(state,e,ex)
+                s=create(e,quotes[e['coin']],sizes[e['coin']],assets[e['coin']]['maxLeverage'],portfolio.snapshot(state['studies'])['equity']);portfolio.admit(state['studies'],s);state['studies'].append(s);append('fills',{'kind':'entry','scenario':s});decision(state,e,'filled','Fresh opening recorded');state['pendingSignals'].pop(str(e['id']),None)
+            except Exception as ex:
+                reason='Quote/market metadata unavailable' if isinstance(ex,KeyError) else str(ex)
+                if retryable(ex) and time.time()*1000-millis(e['createdAt'])<=120000:
+                    decision(state,e,'retrying',reason+'; retry only inside original120s eligibility window')
+                else:
+                    reject(state,e,reason);decision(state,e,'skipped',reason);state['pendingSignals'].pop(str(e['id']),None)
     for closed in [s for s in state['studies'] if s.get('study')==VERSION and s.get('closedAt') and not s.get('candleAudit')][:3]:
         try:
             candles=info({'type':'candleSnapshot','req':{'coin':closed['symbol'],'interval':'1m','startTime':int(millis(closed['openedAt'])//60000)*60000,'endTime':int(millis(closed['closedAt']))}})
@@ -186,7 +209,7 @@ def cycle(state, fetch_source=True):
     state['portfolio']['maxDrawdownObserved']=state['portfolioDrawdown'];append('portfolio',state['portfolio'])
     state['updatedAt']=stamp()
     tmp=ROOT/'state.tmp';tmp.write_text(json.dumps(state,separators=(',',':')));tmp.replace(ROOT/'state.json')
-    slim={k:v for k,v in state.items() if k not in ('seen','studies')}
+    slim={k:v for k,v in state.items() if k not in ('seen','studies','pendingSignals')}
     slim['studies']=[]
     for s in state['studies'][-200:]:
         item={k:v for k,v in s.items() if k not in ('entryBook','exitBook','legs')}
@@ -207,7 +230,7 @@ if __name__=='__main__':
     parser=argparse.ArgumentParser();parser.add_argument('--seconds',type=int,default=0);parser.add_argument('--publish-every',type=int,default=0);parser.add_argument('--continuous',action='store_true');args=parser.parse_args()
     path=ROOT/'state.json'
     state=json.loads(path.read_text()) if path.exists() else {'seen':{},'studies':[]}
-    end=float('inf') if args.continuous else time.monotonic()+min(max(args.seconds,0),270);source_due=0;publish_due=time.monotonic()+max(args.publish_every,1)
+    end=float('inf') if args.continuous else time.monotonic()+min(max(args.seconds,0),3300);source_due=0;publish_due=time.monotonic()+max(args.publish_every,1)
     while True:
         now=time.monotonic();source=now>=source_due
         cycle(state,source)
