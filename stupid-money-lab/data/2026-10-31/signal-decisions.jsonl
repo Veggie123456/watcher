@@ -88,3 +88,4 @@
 {"at":"2026-10-31T12:36:05.671176+00:00","eventId":7432,"action":"ADDED","tier":"SMART","coin":"HYPE","status":"filled","reason":"Standalone add-alert scalp opened"}
 {"at":"2026-10-31T12:39:33.436463+00:00","eventId":7434,"action":"ADDED","tier":"GENIUS","coin":"HYPE","status":"filled","reason":"Standalone add-alert scalp opened"}
 {"at":"2026-10-31T12:40:08.259562+00:00","eventId":7435,"action":"ADDED","tier":"SMART","coin":"HYPE","status":"skipped","reason":"An add-alert scalp for this wallet/market/side is already open; no duplicate exposure"}
+{"at":"2026-10-31T12:42:28.033058+00:00","eventId":7436,"action":"ADDED","tier":"GENIUS","coin":"NEAR","status":"filled","reason":"Standalone add-alert scalp opened"}
