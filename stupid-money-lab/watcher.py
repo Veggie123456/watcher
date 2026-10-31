@@ -1,9 +1,13 @@
 """Public-source collector and independent exploratory paper scenarios. No order API."""
+from concurrent.futures import ThreadPoolExecutor, as_completed
+import portfolio
+import evidence_audit
+import subprocess
 import argparse, datetime as dt, hashlib, json, math, os, pathlib, re, time, urllib.request
 ROOT = pathlib.Path(__file__).resolve().parent
 SOURCE = 'https://www.stupidmoney.io/live?money=smart'
 API = 'https://api.hyperliquid.xyz/info'
-VERSION = 'github-entry-study-v2'
+VERSION = portfolio.STUDY
 FEE, SLIP = .00045, .001  # assumptions, not an account-specific verified fee tier
 
 def stamp(): return dt.datetime.now(dt.timezone.utc).isoformat()
@@ -44,11 +48,14 @@ def append(kind, value):
     dest=ROOT/'data'/day/f'{kind}.jsonl';dest.parent.mkdir(parents=True,exist_ok=True)
     with dest.open('a') as f: f.write(json.dumps(value,separators=(',',':'))+'\n')
 
+def reject(state,e,ex):
+    r={'at':stamp(),'eventId':e.get('id'),'reason':str(ex)};append('rejections',r);state['rejections']=([r]+state.get('rejections',[]))[:100]
+
 def book(coin):
     b=info({'type':'l2Book','coin':coin});t=int(b['time']);now=time.time()*1000
     bid,ask=float(b['levels'][0][0]['px']),float(b['levels'][1][0]['px'])
     if not (0<=now-t<=10000 and 0<bid<=ask): raise ValueError('Stale, future or invalid quote')
-    b['observedAt']=stamp();return b
+    b['levels']=[levels[:10] for levels in b['levels']];b['observedAt']=stamp();return b
 
 def price(levels,q):
     left=q;value=0
@@ -67,18 +74,8 @@ def mark(s,b):
     gross=(exit-s['entry'])*(1 if long else -1)*s['quantity']
     return exit,gross-(exit+s['entry'])*s['quantity']*FEE
 
-def create(e,b,decimals,max_leverage=1):
-    if not re.fullmatch(r'0x[0-9a-fA-F]{40}',str(e['payload'].get('wallet',''))): raise ValueError('Full source wallet required')
-    if e['payload'].get('action')!='OPENED': raise ValueError('Only OPENED may start a position')
-    p=e['payload'];long=p['side']=='LONG';reference=float(b['levels'][1 if long else 0][0]['px'])
-    entry=reference*(1+SLIP if long else 1-SLIP)
-    q=math.floor(.5/(.02+2*FEE+2*SLIP)/entry*10**decimals)/10**decimals
-    if q<=0 or q*entry<10: raise ValueError('Infeasible minimum order size')
-    entry=price(b['levels'][1 if long else 0],q)*(1+SLIP if long else 1-SLIP)
-    if q*entry*(.02+2*FEE+2*SLIP)>.500001: raise ValueError('Initial modeled risk exceeds $0.50')
-    source_leverage=p.get('leverage',{}).get('value');mode=os.getenv('PAPER_LEVERAGE_MODE','recommended');leverage=source_leverage if mode=='source' else 1
-    if mode not in ('source','recommended') or not isinstance(leverage,(float,int)) or not 1<=leverage<=max_leverage: raise ValueError('Source leverage unavailable or above current venue limit')
-    return dict(id=VERSION+'-'+str(e['id']),eventId=e['id'],symbol=e['coin'],tier=p['cohort'],direction='long' if long else 'short',wallet=p.get('wallet'),quantity=q,entry=entry,stop=entry*(.98 if long else 1.02),openedAt=b['observedAt'],quoteTime=b['time'],sourceEvent=e,entryBook=b,balance=200,riskBudget=1,leverage=leverage,sourceLeverage=source_leverage,recommendedLeverage=1,leverageMode=mode,marginRequired=entry*q/leverage,leverageWarning='Leverage changes margin, not position size or dollar P&L; liquidation/source collateral not fully modeled.',feeBps=4.5,slippageBps=10,study=VERSION,funding=None,status='open',netPnl=None,pathGap=False,action='OPENED',handledEventIds=[e['id']],legs=[dict(kind='ENTRY',eventId=e['id'],quantity=q,price=entry,fee=q*entry*FEE,observedAt=b['observedAt'],quoteTime=b['time'],book=b,event=e)])
+def create(e,b,decimals,max_leverage=1,equity=1000):
+    return portfolio.opening(e,b,decimals,max_leverage,os.getenv('PAPER_LEVERAGE_MODE','recommended'),equity)
 
 def matching_position(studies,e):
     p=e['payload'];direction='long' if p['side']=='LONG' else 'short'
@@ -86,30 +83,10 @@ def matching_position(studies,e):
     if len(matches)!=1: raise ValueError('ADDED requires exactly one tracked initial OPENED position for this wallet/market/side')
     return matches[0]
 
-def risk_at_stop(s):
-    long=s['direction']=='long';stop_exit=s['stop']*(1-SLIP if long else 1+SLIP)
-    return max(0,(s['entry']-stop_exit)*(1 if long else -1))*s['quantity']+(s['entry']+stop_exit)*s['quantity']*FEE
+def risk_at_stop(s): return portfolio.risk(s)
 
-def add_to_position(s,e,b,decimals):
-    if e['payload'].get('action')!='ADDED' or matching_position([s],e) is not s: raise ValueError('Not a matching add')
-    if e['id'] in s.get('handledEventIds',[]): raise ValueError('Duplicate add event')
-    if millis(e['createdAt'])<millis(s['sourceEvent']['createdAt']): raise ValueError('Add predates initial opening')
-    if len(s.get('legs',[]))>=3: raise ValueError('Two risk-capped adds maximum')
-    long=s['direction']=='long';reference=float(b['levels'][1 if long else 0][0]['px']);entry=reference*(1+SLIP if long else 1-SLIP)
-    trigger=float(b['levels'][0 if long else 1][0]['px'])
-    if (long and trigger<=s['stop']) or (not long and trigger>=s['stop']): raise ValueError('Stop already breached; do not add')
-    allowance=min(.25,1-risk_at_stop(s));stop_exit=s['stop']*(1-SLIP if long else 1+SLIP)
-    unit=max(0,(entry-stop_exit)*(1 if long else -1))+(entry+stop_exit)*FEE
-    if allowance<=0 or unit<=0: raise ValueError('No add risk allowance')
-    q=math.floor(allowance/unit*10**decimals)/10**decimals
-    if q<=0 or q*entry<10: raise ValueError('Add below minimum order size')
-    entry=price(b['levels'][1 if long else 0],q)*(1+SLIP if long else 1-SLIP)
-    total=s['quantity']+q;average=(s['quantity']*s['entry']+q*entry)/total
-    candidate={**s,'quantity':total,'entry':average}
-    if risk_at_stop(candidate)>1.000001 or average*total>200: raise ValueError('Add exceeds total risk or 1x paper balance')
-    s.update(quantity=total,entry=average,marginRequired=average*total/s['leverage'])
-    s['handledEventIds'].append(e['id']);s['legs'].append(dict(kind='ADD',eventId=e['id'],quantity=q,price=entry,fee=q*entry*FEE,observedAt=b['observedAt'],quoteTime=b['time'],book=b,event=e))
-    # Original stop and one-hour deadline remain unchanged. Add quantity is modeled, not a claimed proportional source fill.
+def add_to_position(s,e,b,decimals,equity=1000):
+    next=portfolio.addition(s,e,b,decimals,equity);s.clear();s.update(next)
     append('fills',{'kind':'add','scenario':s})
 
 def update(s,b):
@@ -117,8 +94,8 @@ def update(s,b):
     if b['time']<s['quoteTime']: raise ValueError('Quote precedes entry')
     previous=s.get('markTime',s['quoteTime'])
     if b['time']-previous>20000: s['pathGap']=True
-    exit,net=mark(s,b);s.update(markTime=b['time'],markAt=b['observedAt'],mark=exit,netPnl=net)
-    append('quotes',{'scenario':s['id'],'quote':b,'netBeforeFunding':net})
+    exit,net=portfolio.observe(s,b) if s.get('study')==VERSION else mark(s,b);s.update(markTime=b['time'],markAt=b['observedAt'],mark=exit,netPnl=net)
+    append('quotes',{'scenario':s['id'],'bookHash':portfolio.digest(b),'quoteTime':b['time'],'observedAt':b['observedAt'],'netBeforeFunding':net})
     long=s['direction']=='long';trigger=float(b['levels'][0 if long else 1][0]['px'])
     stop=trigger<=s['stop'] if long else trigger>=s['stop']
     due=b['time']-millis(s['openedAt'])>=3600000
@@ -127,14 +104,19 @@ def update(s,b):
         append('fills',{'kind':'exit','scenario':s})
 
 def cycle(state, fetch_source=True):
-    state['heartbeatAt']=stamp();state['study']=VERSION
+    previous_heartbeat=state.get('heartbeatAt');state['heartbeatAt']=stamp();state['study']=VERSION
+    if previous_heartbeat and millis(state['heartbeatAt'])-millis(previous_heartbeat)>30000:
+        append('coverage-gaps',{'from':previous_heartbeat,'to':state['heartbeatAt'],'seconds':(millis(state['heartbeatAt'])-millis(previous_heartbeat))/1000})
     for s in state['studies']:
         if s.get('study')!=VERSION: s['legacy']=True;s['entryCopyEligible']=False
-    state['limitations']=['Exploratory source-alert scenarios; wallet/tier identity unverified. Not frozen Genius research.','OPENED starts a position with $0.50 modeled risk; matching ADDED events may add twice with $0.25 each, total cap $1. Legacy add-only tests are excluded from entry-copy results.','4.5bps/side assumed fees, 10bps/side adverse slippage; funding excluded.','Stops sampled at observed books; gaps can exceed risk. No invented fills or historical entries.','GitHub scheduled jobs can be late or skipped; not guaranteed nonstop. Telegram not connected.']
+    state['sourcePollSeconds']=30;state['quotePollSeconds']=10
+    state['limitations']=['Exploratory source-alert scenarios; wallet/tier identity unverified. Not frozen Genius research.','One $1000 shared portfolio: $200 target notional, source adds up to $350 total,20 slots but cash/margin and 0.5% initial/1% total risk gates. Legacy paths excluded.','4.5bps/side assumed fees, 10bps/side adverse slippage; funding excluded.','Stops sampled at observed books; gaps can exceed risk. No invented fills or historical entries.','GitHub scheduled jobs can be late or skipped; not guaranteed nonstop. Telegram not connected.']
     events=[]
     if fetch_source:
         try:
-            html=request(SOURCE);events=parse_events(html)
+            previous_source=state.get('sourceCheckedAt');html=request(SOURCE);events=parse_events(html)
+            state['sourceIntervalObservedSeconds']=(time.time()*1000-millis(previous_source))/1000 if previous_source else None
+            state['coverageWarning']='Latest returned public page only; no guarantee all events survive between checks. Late jobs, blocks and observation gaps are recorded.'
             state.update(sourceStatus='read' if events else 'no_parseable_events',sourceCheckedAt=stamp(),sourceHash=hashlib.sha256(html.encode()).hexdigest(),events=events,sourceError=None)
             append('source-checks',{k:state[k] for k in ('sourceStatus','sourceCheckedAt','sourceHash')})
         except Exception as ex:
@@ -155,15 +137,19 @@ def cycle(state, fetch_source=True):
             p=e['payload'];age=time.time()*1000-millis(e['createdAt'])
             if not (-1000<=age<=120000): raise ValueError('History/stale alert; no backdated entry')
             if p['action'] not in ('OPENED','ADDED') or p['side'] not in ('LONG','SHORT'): raise ValueError('Not an opening/add scenario')
-            if p['action']=='OPENED' and len(active)+sum(x['payload']['action']=='OPENED' for x in eligible)>=20: raise ValueError('20 open independent scenarios maximum')
+            if p['action']=='OPENED' and sum(s.get('study')==VERSION for s in active)+sum(x['payload']['action']=='OPENED' for x in eligible)>=20: raise ValueError('20 open independent scenarios maximum')
             if p['action']=='OPENED' and any(s.get('study')==VERSION and s.get('wallet')==p.get('wallet') and s['symbol']==e['coin'] and time.time()*1000-millis(s['openedAt'])<86400000 for s in state['studies']): raise ValueError('24h wallet/market cooldown')
             if not re.fullmatch(r'[A-Za-z0-9:._-]{1,30}',e['coin']): raise ValueError('Invalid market')
             coins.add(e['coin']);eligible.append(e)
-        except Exception as ex: append('rejections',{'at':stamp(),'eventId':e.get('id'),'reason':str(ex)})
+        except Exception as ex: reject(state,e,ex)
     quotes={}
-    for coin in sorted(coins):
-        try: quotes[coin]=book(coin)
-        except Exception as ex: append('errors',{'at':stamp(),'market':coin,'error':str(ex)})
+    with ThreadPoolExecutor(max_workers=8) as pool:
+        futures={pool.submit(book,coin):coin for coin in sorted(coins)}
+        for future in as_completed(futures):
+            coin=futures[future]
+            try:
+                quotes[coin]=future.result();append('books',{'bookHash':portfolio.digest(quotes[coin]),'book':quotes[coin]})
+            except Exception as ex: append('errors',{'at':stamp(),'market':coin,'error':str(ex)})
     for s in active:
         if s['symbol'] in quotes:
             try:
@@ -178,23 +164,50 @@ def cycle(state, fetch_source=True):
                     target=matching_position(state['studies'],e)
                     fresh(quotes[e['coin']])
                     if time.time()*1000-millis(e['createdAt'])>120000: raise ValueError('Alert expired before add')
-                    add_to_position(target,e,quotes[e['coin']],sizes[e['coin']]);continue
+                    candidate=portfolio.addition(target,e,quotes[e['coin']],sizes[e['coin']],portfolio.snapshot(state['studies'])['equity'])
+                    portfolio.admit(state['studies'],candidate,replace_id=target['id']);target.clear();target.update(candidate);append('fills',{'kind':'add','scenario':target});continue
                 if any(s.get('study')==VERSION and s.get('wallet')==e['payload'].get('wallet') and s['symbol']==e['coin'] and time.time()*1000-millis(s['openedAt'])<86400000 for s in state['studies']): raise ValueError('Wallet/market duplicate in batch')
                 fresh(quotes[e['coin']])
                 if time.time()*1000-millis(e['createdAt'])>120000: raise ValueError('Alert expired before entry')
-                s=create(e,quotes[e['coin']],sizes[e['coin']],assets[e['coin']]['maxLeverage']);state['studies'].append(s);append('fills',{'kind':'entry','scenario':s})
-            except Exception as ex: append('rejections',{'at':stamp(),'eventId':e['id'],'reason':str(ex)})
+                s=create(e,quotes[e['coin']],sizes[e['coin']],assets[e['coin']]['maxLeverage'],portfolio.snapshot(state['studies'])['equity']);portfolio.admit(state['studies'],s);state['studies'].append(s);append('fills',{'kind':'entry','scenario':s})
+            except Exception as ex: reject(state,e,ex)
+    for closed in [s for s in state['studies'] if s.get('study')==VERSION and s.get('closedAt') and not s.get('candleAudit')][:3]:
+        try:
+            candles=info({'type':'candleSnapshot','req':{'coin':closed['symbol'],'interval':'1m','startTime':int(millis(closed['openedAt'])//60000)*60000,'endTime':int(millis(closed['closedAt']))}})
+            closed['candleAudit']=evidence_audit.audit(closed,candles,stamp());append('candle-audits',{'scenario':closed['id'],'audit':closed['candleAudit'],'candles':candles})
+        except Exception as ex: append('errors',{'at':stamp(),'scenario':closed['id'],'error':'Candle audit pending: '+str(ex)})
+    state['portfolio']=portfolio.snapshot(state['studies']);state['portfolio']['at']=stamp()
+    state['portfolioPeak']=max(state.get('portfolioPeak',1000),state['portfolio']['equity']);state['portfolioDrawdown']=max(state.get('portfolioDrawdown',0),(state['portfolioPeak']-state['portfolio']['equity'])/state['portfolioPeak'])
+    state['portfolio']['maxDrawdownObserved']=state['portfolioDrawdown'];append('portfolio',state['portfolio'])
     state['updatedAt']=stamp()
     tmp=ROOT/'state.tmp';tmp.write_text(json.dumps(state,separators=(',',':')));tmp.replace(ROOT/'state.json')
+    slim={k:v for k,v in state.items() if k not in ('seen','studies')}
+    slim['studies']=[]
+    for s in state['studies'][-200:]:
+        item={k:v for k,v in s.items() if k not in ('entryBook','exitBook','legs')}
+        item['legs']=[{**{k:v for k,v in l.items() if k not in ('book','event')},'bookHash':portfolio.digest(l['book'])} for l in s.get('legs',[])]
+        slim['studies'].append(item)
+    (ROOT/'dashboard.json').write_text(json.dumps(slim,separators=(',',':')))
+
+def publish_checkpoint():
+    # Only public evidence paths; never add repository-wide files or account sessions.
+    commands=[['git','add','stupid-money-lab/data','stupid-money-lab/state.json','stupid-money-lab/dashboard.json'],['git','-c','user.name=Stupid Money research collector','-c','user.email=41898282+github-actions[bot]@users.noreply.github.com','commit','-m','Record public paper checkpoint [skip ci]'],['git','pull','--rebase','origin','main'],['git','push','origin','HEAD:main']]
+    for command in commands:
+        result=subprocess.run(command,cwd=ROOT.parent,stdout=subprocess.PIPE,stderr=subprocess.PIPE,timeout=30)
+        if result.returncode:
+            append('errors',{'at':stamp(),'error':'Checkpoint publication failed at '+command[1]+'; raw evidence retained locally/artifact, do not assume upload.'});return False
+    return True
 
 if __name__=='__main__':
-    parser=argparse.ArgumentParser();parser.add_argument('--seconds',type=int,default=0);args=parser.parse_args()
+    parser=argparse.ArgumentParser();parser.add_argument('--seconds',type=int,default=0);parser.add_argument('--publish-every',type=int,default=0);parser.add_argument('--continuous',action='store_true');args=parser.parse_args()
     path=ROOT/'state.json'
     state=json.loads(path.read_text()) if path.exists() else {'seen':{},'studies':[]}
-    end=time.monotonic()+min(max(args.seconds,0),240);source_due=0
+    end=float('inf') if args.continuous else time.monotonic()+min(max(args.seconds,0),270);source_due=0;publish_due=time.monotonic()+max(args.publish_every,1)
     while True:
         now=time.monotonic();source=now>=source_due
         cycle(state,source)
-        if source: source_due=now+(300 if state.get('sourceStatus')=='blocked_or_error' else 65)
+        if args.publish_every and time.monotonic()>=publish_due:
+            publish_checkpoint();publish_due=time.monotonic()+args.publish_every
+        if source: source_due=now+(300 if state.get('sourceStatus')=='blocked_or_error' else 30)
         if time.monotonic()+10>end: break
         time.sleep(10)
