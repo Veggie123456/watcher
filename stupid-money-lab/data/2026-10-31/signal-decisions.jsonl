@@ -41,3 +41,5 @@
 {"at":"2026-10-31T08:14:20.479479+00:00","eventId":7347,"action":"ADDED","tier":"SMART","coin":"ZRO","status":"filled","reason":"Standalone add-alert scalp opened"}
 {"at":"2026-10-31T08:15:11.692500+00:00","eventId":7348,"action":"ADDED","tier":"GENIUS","coin":"PUMP","status":"filled","reason":"Standalone add-alert scalp opened"}
 {"at":"2026-10-31T08:16:19.042292+00:00","eventId":7349,"action":"ADDED","tier":"SMART","coin":"HYPE","status":"skipped","reason":"An add-alert scalp for this wallet/market/side is already open; no duplicate exposure"}
+{"at":"2026-10-31T08:24:09.325634+00:00","eventId":7355,"action":"ADDED","tier":"GENIUS","coin":"HYPE","status":"filled","reason":"Standalone add-alert scalp opened"}
+{"at":"2026-10-31T08:24:09.326645+00:00","eventId":7357,"action":"ADDED","tier":"GENIUS","coin":"HYPE","status":"skipped","reason":"Insufficient shared bankroll after estimated fees/spread; alert retained, no fill"}
