@@ -75,7 +75,7 @@ def mark(s,b):
     return exit,gross-(exit+s['entry'])*s['quantity']*FEE
 
 def create(e,b,decimals,max_leverage=1,equity=1000):
-    return portfolio.opening(e,b,decimals,max_leverage,os.getenv('PAPER_LEVERAGE_MODE','recommended'),equity)
+    return portfolio.opening(e,b,decimals,max_leverage,os.getenv('PAPER_LEVERAGE_MODE','source'),equity)
 
 def matching_position(studies,e):
     p=e['payload'];direction='long' if p['side']=='LONG' else 'short'
@@ -110,7 +110,7 @@ def cycle(state, fetch_source=True):
     for s in state['studies']:
         if s.get('study')!=VERSION: s['legacy']=True;s['entryCopyEligible']=False
     state['sourcePollSeconds']=30;state['quotePollSeconds']=10
-    state['limitations']=['Exploratory source-alert scenarios; wallet/tier identity unverified. Not frozen Genius research.','One $1000 shared portfolio: $200 target notional, source adds up to $350 total,20 slots but cash/margin and 0.5% initial/1% total risk gates. Legacy paths excluded.','4.5bps/side assumed fees, 10bps/side adverse slippage; funding excluded.','Stops sampled at observed books; gaps can exceed risk. No invented fills or historical entries.','GitHub scheduled jobs can be late or skipped; not guaranteed nonstop. Telegram not connected.']
+    state['limitations']=['Exploratory source-alert scenarios; wallet/tier identity unverified. Not frozen Genius research.','One $1000 shared account with separate Fresh and Add-alert scalp sections. $200 target notional, tracked fresh-position adds up to $350. Source leverage matched only when readable and within venue limits; collateral/liquidation unverified.20 total slots; cash and risk gates apply.','4.5bps/side assumed fees, 10bps/side adverse slippage; funding excluded.','Stops sampled at observed books; gaps can exceed risk. No invented fills or historical entries.','GitHub scheduled jobs can be late or skipped; not guaranteed nonstop. Telegram not connected.']
     events=[]
     if fetch_source:
         try:
@@ -138,7 +138,7 @@ def cycle(state, fetch_source=True):
             if not (-1000<=age<=120000): raise ValueError('History/stale alert; no backdated entry')
             if p['action'] not in ('OPENED','ADDED') or p['side'] not in ('LONG','SHORT'): raise ValueError('Not an opening/add scenario')
             if p['action']=='OPENED' and sum(s.get('study')==VERSION for s in active)+sum(x['payload']['action']=='OPENED' for x in eligible)>=20: raise ValueError('20 open independent scenarios maximum')
-            if p['action']=='OPENED' and any(s.get('study')==VERSION and s.get('wallet')==p.get('wallet') and s['symbol']==e['coin'] and time.time()*1000-millis(s['openedAt'])<86400000 for s in state['studies']): raise ValueError('24h wallet/market cooldown')
+            if p['action']=='OPENED' and any(s.get('study')==VERSION and s.get('signalClass','fresh')=='fresh' and s.get('wallet')==p.get('wallet') and s['symbol']==e['coin'] and time.time()*1000-millis(s['openedAt'])<86400000 for s in state['studies']): raise ValueError('24h wallet/market cooldown')
             if not re.fullmatch(r'[A-Za-z0-9:._-]{1,30}',e['coin']): raise ValueError('Invalid market')
             coins.add(e['coin']);eligible.append(e)
         except Exception as ex: reject(state,e,ex)
@@ -161,12 +161,17 @@ def cycle(state, fetch_source=True):
         for e in eligible:
             try:
                 if e['payload']['action']=='ADDED':
-                    target=matching_position(state['studies'],e)
                     fresh(quotes[e['coin']])
-                    if time.time()*1000-millis(e['createdAt'])>120000: raise ValueError('Alert expired before add')
-                    candidate=portfolio.addition(target,e,quotes[e['coin']],sizes[e['coin']],portfolio.snapshot(state['studies'])['equity'])
-                    portfolio.admit(state['studies'],candidate,replace_id=target['id']);target.clear();target.update(candidate);append('fills',{'kind':'add','scenario':target});continue
-                if any(s.get('study')==VERSION and s.get('wallet')==e['payload'].get('wallet') and s['symbol']==e['coin'] and time.time()*1000-millis(s['openedAt'])<86400000 for s in state['studies']): raise ValueError('Wallet/market duplicate in batch')
+                    if time.time()*1000-millis(e['createdAt'])>120000: raise ValueError('Alert expired before add/scalp entry')
+                    matches=[s for s in state['studies'] if not s.get('closedAt') and s.get('study')==VERSION and s.get('action')=='OPENED' and s.get('wallet')==e['payload'].get('wallet') and s['symbol']==e['coin'] and s['direction']==('long' if e['payload']['side']=='LONG' else 'short')]
+                    if len(matches)>1: raise ValueError('Ambiguous initial position; no add or duplicate scalp')
+                    if matches:
+                        target=matches[0];candidate=portfolio.addition(target,e,quotes[e['coin']],sizes[e['coin']],portfolio.snapshot(state['studies'])['equity'])
+                        portfolio.admit(state['studies'],candidate,replace_id=target['id']);target.clear();target.update(candidate);append('fills',{'kind':'add','signalClass':'fresh','scenario':target});continue
+                    if any(s.get('study')==VERSION and not s.get('closedAt') and s.get('signalClass')=='add_scalp' and s.get('wallet')==e['payload'].get('wallet') and s['symbol']==e['coin'] and s['direction']==('long' if e['payload']['side']=='LONG' else 'short') for s in state['studies']):raise ValueError('An add-alert scalp for this wallet/market/side is already open; no duplicate exposure')
+                    s=portfolio.opening(e,quotes[e['coin']],sizes[e['coin']],assets[e['coin']]['maxLeverage'],os.getenv('PAPER_LEVERAGE_MODE','source'),portfolio.snapshot(state['studies'])['equity'],signal_class='add_scalp')
+                    portfolio.admit(state['studies'],s);state['studies'].append(s);append('fills',{'kind':'add_alert_scalp_entry','signalClass':'add_scalp','scenario':s});continue
+                if any(s.get('study')==VERSION and s.get('signalClass','fresh')=='fresh' and s.get('wallet')==e['payload'].get('wallet') and s['symbol']==e['coin'] and time.time()*1000-millis(s['openedAt'])<86400000 for s in state['studies']): raise ValueError('Wallet/market duplicate in batch')
                 fresh(quotes[e['coin']])
                 if time.time()*1000-millis(e['createdAt'])>120000: raise ValueError('Alert expired before entry')
                 s=create(e,quotes[e['coin']],sizes[e['coin']],assets[e['coin']]['maxLeverage'],portfolio.snapshot(state['studies'])['equity']);portfolio.admit(state['studies'],s);state['studies'].append(s);append('fills',{'kind':'entry','scenario':s})

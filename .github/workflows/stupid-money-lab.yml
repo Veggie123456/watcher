@@ -16,7 +16,7 @@ jobs:
     runs-on: ubuntu-latest
     timeout-minutes: 8
     env:
-      PAPER_LEVERAGE_MODE: ${{ vars.STUPID_MONEY_PAPER_LEVERAGE_MODE || 'recommended' }}
+      PAPER_LEVERAGE_MODE: ${{ vars.STUPID_MONEY_PAPER_LEVERAGE_MODE || 'source' }}
     steps:
       - uses: actions/checkout@v4
         with:

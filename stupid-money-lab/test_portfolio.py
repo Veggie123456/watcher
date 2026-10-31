@@ -40,3 +40,21 @@ class BankrollTests(unittest.TestCase):
         s=opening(self.e(),self.b(),5,20);s['closedAt']='1970-01-01T00:04:40+00:00';r=audit(s,[{'t':120000,'T':179999,'h':'130','l':'100'}],'now')
         self.assertTrue(r['possibleNotionalTouches']['20']);self.assertNotIn('20',s['milestones']['notional'])
 if __name__=='__main__':unittest.main()
+
+class SplitSignalTests(BankrollTests):
+    def test_add_alert_is_separate_without_falsifying_source_opening(self):
+        e=self.e(action='ADDED');s=opening(e,self.b(),5,20,'source',signal_class='add_scalp')
+        self.assertEqual(s['action'],'ADDED');self.assertEqual(s['sourceEvent']['payload']['action'],'ADDED');self.assertEqual(s['signalClass'],'add_scalp');self.assertFalse(s['checks']['observedOpening']);self.assertTrue(s['checks']['signalClassMatchesSource']);self.assertTrue(s['leverageMatched']);self.assertEqual(s['leverage'],10)
+        account=snapshot([s],100000);self.assertEqual(account['families']['add_scalp']['total'],1);self.assertEqual(account['families']['fresh']['total'],0)
+    def test_split_sections_share_the_same_cash_pool(self):
+        ss=[]
+        for i in range(4):
+            e=self.e(i,action='ADDED' if i%2 else 'OPENED');s=opening(e,self.b(),5,20,signal_class='add_scalp' if i%2 else 'fresh');admit(ss,s,now=100000);ss.append(s)
+        extra=opening(self.e(9,action='ADDED'),self.b(),5,20,signal_class='add_scalp')
+        with self.assertRaises(ValueError):admit(ss,extra,now=100000)
+    def test_missing_source_leverage_rejected_in_match_mode(self):
+        e=self.e(action='ADDED');e['payload'].pop('leverage')
+        with self.assertRaisesRegex(ValueError,'Source leverage'):opening(e,self.b(),5,20,'source',signal_class='add_scalp')
+    def test_standalone_add_scalp_cannot_be_scaled_as_original_position(self):
+        e=self.e(action='ADDED');s=opening(e,self.b(),5,20,'source',signal_class='add_scalp');e['id']=2
+        with self.assertRaises(ValueError):addition(s,e,self.b(),5)

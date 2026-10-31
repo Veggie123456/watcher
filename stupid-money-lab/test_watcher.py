@@ -3,7 +3,7 @@ from watcher import price,create,update,parse_events,fresh,add_to_position,match
 from unittest.mock import patch
 class PaperTests(unittest.TestCase):
     def book(self): return {'time':100000,'observedAt':'1970-01-01T00:01:40+00:00','levels':[[{'px':'99.9','sz':'10'}],[{'px':'100.1','sz':'10'}]]}
-    def event(self,side='LONG'): return {'id':1,'coin':'BTC','createdAt':'1970-01-01T00:01:00+00:00','payload':{'cohort':'GENIUS','side':side,'wallet':'0x'+'1'*40,'action':'OPENED'}}
+    def event(self,side='LONG'): return {'id':1,'coin':'BTC','createdAt':'1970-01-01T00:01:00+00:00','payload':{'cohort':'GENIUS','side':side,'wallet':'0x'+'1'*40,'action':'OPENED','leverage':{'value':1,'type':'cross'}}}
     def test_spread_fees_slippage_both_sides(self):
         for side in ['LONG','SHORT']:
             b=self.book();s=create(self.event(side),b,5)
@@ -12,7 +12,7 @@ class PaperTests(unittest.TestCase):
             self.assertLess(s['netPnl'],0);self.assertFalse(s.get('closedAt'))
     def test_source_leverage_preserves_size_and_changes_margin(self):
         e=self.event();e['payload']['leverage']={'value':10,'type':'cross'}
-        a=create(e,self.book(),5,max_leverage=20)
+        with patch.dict('os.environ',{'PAPER_LEVERAGE_MODE':'recommended'}): a=create(e,self.book(),5,max_leverage=20)
         with patch.dict('os.environ',{'PAPER_LEVERAGE_MODE':'source'}): b=create(e,self.book(),5,max_leverage=20)
         self.assertEqual(a['quantity'],b['quantity']);self.assertEqual(b['sourceLeverage'],10);self.assertEqual(b['leverage'],10)
         self.assertAlmostEqual(a['marginRequired']/10,b['marginRequired'])
