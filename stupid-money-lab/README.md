@@ -61,3 +61,12 @@ The previous four-minute jobs left material gaps: BTC OPENED7266 first appeared 
 Implementation tests include Smart OPENED plus Genius ADDED independent routing, attached ADDED retaining one fresh position, quote failure then recovery creating exactly one entry, and stale OPENED staying skipped. These tests validate mechanics, not profitability. Historic captured fills/losing trades are retained; no backfill or changed performance universe.
 
 Primary scheduler references: https://docs.github.com/en/actions/how-tos/write-workflows/choose-when-workflows-run/trigger-a-workflow and https://github.blog/changelog/2022-09-08-github-actions-use-github_token-with-workflow_dispatch-and-repository_dispatch/ .
+
+
+### Checkpoint and executable-size follow-up, 2026-10-31T04:31Z
+
+The first repair exposed a rebase conflict during data publication. Source3ab0cf5 now uses an isolated temporary Git index and a data-only fast-forward commit atop fetched main; it never rebases the running checkout. The final evidence step calls --publish-only. An actual local bare-repository regression test preserves a concurrent unrelated source edit. Push updates now cancel/restart the old code window; normal dispatch/schedule windows remain serialized. Update interruptions remain coverage gaps and artifacts preserve the previous job's raw evidence.
+
+Fresh Genius-claimed PUMP OPENED7277 was actually captured at04:29Z but skipped by the old sizing guard: a quantity computed from the best book level could exceed the$200 cap after deeper-level VWAP pricing. This is a sizing bug, not missing source detection. Source64bcb56 fits future initial quantities to executable multi-level depth and the unchanged notional/0.5% equity risk cap, records sizingVersion=depth-fit-v1, and retains the original displayed leverage policy. It does not raise exposure limits or backfill7277. Long/short PUMP-sized multi-level regression tests bring the suite to44 passing executions. Existing positions, outcomes, source eligibility, stops and deadlines remain unchanged. New entries use current observed quotes only; cost/funding/liquidation caveats still apply.
+
+Verified bootstrap41168590813 completed successfully and requested workflow_dispatch41168755221, which actually started. Subsequent source upgrades interrupt that first long window; verify the latest successor/checkpoints before claiming ongoing execution. Exact gap-free coverage is still unproven.
