@@ -1,0 +1,472 @@
+{
+  "cutoff": "2026-10-31T22:15:18.028279+00:00",
+  "portfolio": {
+    "protocolVersion": "split-v4",
+    "families": {
+      "fresh": {
+        "total": 21,
+        "open": 1,
+        "closed": 20,
+        "closedPnlBeforeFunding": -4.351135446012725,
+        "milestones": {
+          "notional": {
+            "5": 0,
+            "10": 0,
+            "20": 0
+          },
+          "margin": {
+            "5": 4,
+            "10": 1,
+            "20": 0
+          }
+        }
+      },
+      "add_scalp": {
+        "total": 162,
+        "open": 4,
+        "closed": 158,
+        "closedPnlBeforeFunding": -75.88126668751732,
+        "milestones": {
+          "notional": {
+            "5": 0,
+            "10": 0,
+            "20": 0
+          },
+          "margin": {
+            "5": 19,
+            "10": 6,
+            "20": 0
+          }
+        }
+      }
+    },
+    "study": "github-portfolio-v3",
+    "initialEquity": 1000,
+    "equity": 919.771115252264,
+    "realizedBeforeFunding": -80.23240213353004,
+    "openCloseEstimateBeforeFunding": 0.003517385794152589,
+    "marginInUse": 121.2630999618,
+    "available": 798.5080152904641,
+    "openCount": 5,
+    "closedCount": 178,
+    "totalCount": 183,
+    "maxOpen": 20,
+    "targetNotional": 200,
+    "maxPositionNotional": 350,
+    "stalePositions": [],
+    "milestones": {
+      "notional": {
+        "5": {
+          "hit": 0,
+          "total": 183,
+          "unconfirmed": 183
+        },
+        "10": {
+          "hit": 0,
+          "total": 183,
+          "unconfirmed": 183
+        },
+        "20": {
+          "hit": 0,
+          "total": 183,
+          "unconfirmed": 183
+        }
+      },
+      "margin": {
+        "5": {
+          "hit": 23,
+          "total": 183,
+          "unconfirmed": 160
+        },
+        "10": {
+          "hit": 7,
+          "total": 183,
+          "unconfirmed": 176
+        },
+        "20": {
+          "hit": 0,
+          "total": 183,
+          "unconfirmed": 183
+        }
+      }
+    },
+    "feesAssumedBps": 4.5,
+    "fundingComplete": false,
+    "at": "2026-10-31T22:15:18.028137+00:00",
+    "maxDrawdownObserved": 0.08258996529514774
+  },
+  "exitAudit": [
+    {
+      "raw": {
+        "observedAt": "2026-10-31T03:42:31.335354+00:00",
+        "kind": "first_observation",
+        "event": {
+          "id": 7268,
+          "type": "POSITION_CLOSED",
+          "coin": "BTC",
+          "createdAt": "2026-10-31T03:39:04.110Z",
+          "occurredAt": "2026-10-31T03:38:59.493Z",
+          "payload": {
+            "side": "LONG",
+            "action": "REDUCED",
+            "cohort": "GENIUS",
+            "exitPx": 77222.42077217624,
+            "pnlUsd": -28504.892977,
+            "wallet": "0xdc368c33b2ace0de3edb41ef1a756dadda3d84e2",
+            "entryPx": 78302,
+            "leftUsd": 6051054.517333522,
+            "leverage": {
+              "type": "isolated",
+              "value": 25
+            },
+            "pnlExact": true,
+            "closedPct": 56.1,
+            "closedUsd": 6961487.925412278,
+            "marginUsd": 653026.958149,
+            "allTimePnlUsd": 2199574.536867
+          },
+          "perpPnl": 2415602.152238
+        },
+        "hash": "afe262d4e24d7252a09f45e5d6c1af9a9dccd0f21a1b8e7484a52f7065742b1a"
+      },
+      "matchingReferenceTracks": []
+    },
+    {
+      "raw": {
+        "observedAt": "2026-10-31T04:25:08.314912+00:00",
+        "kind": "first_observation",
+        "event": {
+          "id": 7274,
+          "type": "POSITION_CLOSED",
+          "coin": "BTC",
+          "createdAt": "2026-10-31T04:02:04.267Z",
+          "occurredAt": "2026-10-31T04:01:06.424Z",
+          "payload": {
+            "side": "LONG",
+            "action": "CLOSED",
+            "cohort": "SMART",
+            "exitPx": 77123.00000000001,
+            "pnlUsd": -233752.81516973433,
+            "wallet": "0xace83bad72ce09ca27d80f353199b17799d9cade",
+            "entryPx": 78368,
+            "leftUsd": 0,
+            "leverage": {
+              "type": "cross",
+              "value": 25
+            },
+            "pnlExact": true,
+            "closedPct": 100,
+            "closedUsd": 10087490.587123077,
+            "marginUsd": 294462.853044,
+            "allTimePnlUsd": 23875088.927289
+          },
+          "tags": {
+            "0x469e9a7f624b04c24f0e64edf8d8a277e6bf58a5": [
+              "WHALE"
+            ]
+          },
+          "perpPnl": 12809594.81573
+        },
+        "hash": "8edfadef12aa406145fb5b73fbf780851740326f9f647799d9ec9ac098c91f9d"
+      },
+      "matchingReferenceTracks": []
+    },
+    {
+      "raw": {
+        "observedAt": "2026-10-31T04:25:08.315046+00:00",
+        "kind": "first_observation",
+        "event": {
+          "id": 7273,
+          "type": "POSITION_CLOSED",
+          "coin": "ETH",
+          "createdAt": "2026-10-31T03:52:04.775Z",
+          "occurredAt": "2026-10-31T03:51:57.935Z",
+          "payload": {
+            "side": "SHORT",
+            "action": "REDUCED",
+            "cohort": "SMART",
+            "exitPx": 2239.6829037580364,
+            "pnlUsd": -89679.8188724634,
+            "wallet": "0xace83bad72ce09ca27d80f353199b17799d9cade",
+            "entryPx": 2178,
+            "leftUsd": 3576605.333670766,
+            "leverage": {
+              "type": "cross",
+              "value": 25
+            },
+            "pnlExact": true,
+            "closedPct": 64.7,
+            "closedUsd": 5999163.193693412,
+            "marginUsd": 263857.439791,
+            "allTimePnlUsd": 20772808.898735
+          },
+          "tags": {
+            "0x469e9a7f624b04c24f0e64edf8d8a277e6bf58a5": [
+              "WHALE"
+            ]
+          },
+          "perpPnl": 14882462.77857
+        },
+        "hash": "c594320c17c5582f9a7492d2bc478823befc46fdc92867d850469822e72ae6b0"
+      },
+      "matchingReferenceTracks": []
+    },
+    {
+      "raw": {
+        "observedAt": "2026-10-31T06:23:34.403100+00:00",
+        "kind": "first_observation",
+        "event": {
+          "id": 7309,
+          "type": "POSITION_CLOSED",
+          "coin": "HYPE",
+          "createdAt": "2026-10-31T06:23:04.714Z",
+          "occurredAt": "2026-10-31T06:21:39.382Z",
+          "payload": {
+            "side": "SHORT",
+            "action": "CLOSED",
+            "cohort": "SMART",
+            "exitPx": 87.8985003898,
+            "pnlUsd": -57019.389285,
+            "wallet": "0x693b77eb4946bd1e12d5f34fea57b503b7c0d5f7",
+            "entryPx": 87.2577,
+            "leftUsd": 0,
+            "leverage": {
+              "type": "cross",
+              "value": 10
+            },
+            "pnlExact": true,
+            "closedPct": 100,
+            "closedUsd": 2792554.8358469876,
+            "marginUsd": 305046.540322,
+            "allTimePnlUsd": 310646.289271
+          },
+          "tags": {
+            "0x5b5f798b94f54d33ba316c8b1c837e930c90c052": [
+              "HIGH_FREQUENCY"
+            ]
+          },
+          "perpPnl": 659432.14761
+        },
+        "hash": "c92f4142935ded8ad9e48610c0508bc65f67c5c3351e60d839bc99b4b414a322"
+      },
+      "matchingReferenceTracks": []
+    },
+    {
+      "raw": {
+        "observedAt": "2026-10-31T06:31:23.957078+00:00",
+        "kind": "first_observation",
+        "event": {
+          "id": 7312,
+          "type": "POSITION_CLOSED",
+          "coin": "BTC",
+          "createdAt": "2026-10-31T06:31:04.728Z",
+          "occurredAt": "2026-10-31T06:00:44.194Z",
+          "payload": {
+            "side": "SHORT",
+            "action": "CLOSED",
+            "cohort": "SMART",
+            "exitPx": 77240.5684133329,
+            "pnlUsd": -31262.91762,
+            "wallet": "0x6af97add6d13fd31460a78b56017cf175d684217",
+            "entryPx": 79446,
+            "leftUsd": 0,
+            "leverage": {
+              "type": "cross",
+              "value": 40
+            },
+            "pnlExact": true,
+            "closedPct": 100,
+            "closedUsd": 1238324.190090085,
+            "marginUsd": 20976.570622,
+            "allTimePnlUsd": 1198266.771111
+          },
+          "tags": {
+            "0x352deb23bebae8b4c57d0ae341d9c1951fd8425a": [
+              "VETERAN"
+            ]
+          },
+          "perpPnl": 489461.721736
+        },
+        "hash": "4bd8b28cbf979c4b64267bde7be3948207b6c24c27d2f0fd5394a863b21f98a1"
+      },
+      "matchingReferenceTracks": []
+    },
+    {
+      "raw": {
+        "observedAt": "2026-10-31T08:38:12.275806+00:00",
+        "kind": "first_observation",
+        "event": {
+          "id": 7363,
+          "type": "POSITION_CLOSED",
+          "coin": "HYPE",
+          "createdAt": "2026-10-31T08:38:04.199Z",
+          "occurredAt": "2026-10-31T08:35:58.984Z",
+          "payload": {
+            "side": "LONG",
+            "action": "CLOSED",
+            "cohort": "SMART",
+            "exitPx": 86.67849230234995,
+            "pnlUsd": -412466.8170086702,
+            "wallet": "0xace83bad72ce09ca27d80f353199b17799d9cade",
+            "entryPx": 93.6022,
+            "leftUsd": 0,
+            "leverage": {
+              "type": "cross",
+              "value": 10
+            },
+            "pnlExact": true,
+            "closedPct": 100,
+            "closedUsd": 4331720.145002174,
+            "marginUsd": 405222.99113,
+            "allTimePnlUsd": 20709617.479892
+          },
+          "tags": {
+            "0x469e9a7f624b04c24f0e64edf8d8a277e6bf58a5": [
+              "WHALE"
+            ]
+          },
+          "perpPnl": 13435808.565922
+        },
+        "hash": "9802a89db510027a86f7fd9bad1d2abd2639940ea8fe5b3c3b9651fe46f88e60"
+      },
+      "matchingReferenceTracks": []
+    },
+    {
+      "raw": {
+        "observedAt": "2026-10-31T11:58:39.436491+00:00",
+        "kind": "first_observation",
+        "event": {
+          "id": 7419,
+          "type": "POSITION_CLOSED",
+          "coin": "HYPE",
+          "createdAt": "2026-10-31T11:58:05.062Z",
+          "occurredAt": "2026-10-31T11:56:54.045Z",
+          "payload": {
+            "side": "LONG",
+            "action": "CLOSED",
+            "cohort": "SMART",
+            "exitPx": 87.64322874110076,
+            "pnlUsd": -460177.81662567164,
+            "wallet": "0x5232a3f9ebcdbd9cc0e1867a89e646694deba9dc",
+            "entryPx": 87.1131,
+            "leftUsd": 0,
+            "leverage": {
+              "type": "cross",
+              "value": 10
+            },
+            "pnlExact": true,
+            "closedPct": 100,
+            "closedUsd": 14420973.312009057,
+            "marginUsd": 1421229.453349,
+            "allTimePnlUsd": 28826418.429714464
+          },
+          "tags": {
+            "0xbf732ea04197942783e34730ed6e0f6099575d58": [
+              "WHALE"
+            ]
+          },
+          "perpPnl": 27050850.487587
+        },
+        "hash": "278b3bdae99b7717e181db2b1ea97ed47a08a9184c12286ac32a2707fda0d558"
+      },
+      "matchingReferenceTracks": [
+        {
+          "id": "github-portfolio-v3-7482",
+          "entry": "2026-10-31T14:27:25.191126+00:00",
+          "trackingStarted": "2026-10-31T14:27:25.607250+00:00"
+        }
+      ]
+    },
+    {
+      "raw": {
+        "observedAt": "2026-10-31T13:19:30.445223+00:00",
+        "kind": "first_observation",
+        "event": {
+          "id": 7455,
+          "type": "POSITION_CLOSED",
+          "coin": "HYPE",
+          "createdAt": "2026-10-31T13:19:04.453Z",
+          "occurredAt": "2026-10-31T13:17:26.794Z",
+          "payload": {
+            "side": "LONG",
+            "action": "CLOSED",
+            "cohort": "SMART",
+            "exitPx": 87.06071101273751,
+            "pnlUsd": -13496.64864,
+            "wallet": "0xffbd977c791be0b9b77eee89c4c17da3aab27606",
+            "entryPx": 89.9537,
+            "leftUsd": 0,
+            "leverage": {
+              "type": "cross",
+              "value": 5
+            },
+            "pnlExact": true,
+            "closedPct": 100,
+            "closedUsd": 3163764.7315524896,
+            "marginUsd": 561672,
+            "allTimePnlUsd": 2557234.5131
+          },
+          "tags": {
+            "0x90dbb196cacf24bd212b377a0dd62eaad5e8151b": [
+              "WHALE"
+            ]
+          },
+          "perpPnl": 3179288.477615
+        },
+        "hash": "6296f0f76439c006303909fc2915a3cc3b5178946243fd9b1d396f515eced051"
+      },
+      "matchingReferenceTracks": []
+    },
+    {
+      "raw": {
+        "observedAt": "2026-10-31T14:25:29.212368+00:00",
+        "kind": "first_observation",
+        "event": {
+          "id": 7481,
+          "type": "POSITION_CLOSED",
+          "coin": "HYPE",
+          "createdAt": "2026-10-31T14:25:04.070Z",
+          "occurredAt": "2026-10-31T14:10:10.256Z",
+          "payload": {
+            "side": "SHORT",
+            "action": "REDUCED",
+            "cohort": "SMART",
+            "exitPx": 86.56178071936507,
+            "pnlUsd": 25343.373066,
+            "wallet": "0x3b8e9031ebc3458c27e78664b1fa7bd547f47659",
+            "entryPx": 80.49,
+            "leftUsd": 398871.30863671814,
+            "leverage": {
+              "type": "cross",
+              "value": 4
+            },
+            "pnlExact": true,
+            "closedPct": 52.1,
+            "closedUsd": 888088.4658191205,
+            "marginUsd": 202092.998082,
+            "allTimePnlUsd": 1478275.757623
+          },
+          "tags": {
+            "0xa99c9e5484e5b26635c07876d0859a1819ff40d5": [
+              "VETERAN"
+            ]
+          },
+          "perpPnl": 2017599.726207
+        },
+        "hash": "e5b76189abcc9b14cc8f9b422725d1bd2e64e9f6665690acf1b807c2f6f9ba26"
+      },
+      "matchingReferenceTracks": []
+    }
+  ],
+  "finding": "Eight exit events have no wallet/market/direction reference-track match. One identity-key match,7419 to7482, was observed before that track entered; cannot close a future position. All nine exits were observed before or near lifecycle activation; no temporally eligible current-reference exit.",
+  "metrics": {
+    "winRate": 0.3258426966292135,
+    "expectancy": -0.45074383221084297,
+    "profitFactor": 0.41859157313197126,
+    "payoff": 0.8660515306178717
+  },
+  "limitations": [
+    "Identity keys are source claims, not verified accounts. Daily exit absence after these observations is not proof no exits published; bounded feed and gaps.",
+    "Funding/liquidation incomplete, no source fill backdating or old exit reuse."
+  ]
+}
