@@ -48,3 +48,5 @@
 {"at":"2026-10-31T08:37:38.410100+00:00","eventId":7362,"action":"ADDED","tier":"SMART","coin":"ZRO","status":"skipped","reason":"Insufficient shared bankroll after estimated fees/spread; alert retained, no fill"}
 {"at":"2026-10-31T08:38:13.000888+00:00","eventId":7364,"action":"ADDED","tier":"GENIUS","coin":"ZRO","status":"skipped","reason":"Insufficient shared bankroll after estimated fees/spread; alert retained, no fill"}
 {"at":"2026-10-31T08:41:34.920651+00:00","eventId":7370,"action":"OPENED","tier":"GENIUS","coin":"HYPE","status":"skipped","reason":"24h wallet/market cooldown"}
+{"at":"2026-10-31T08:48:18.420202+00:00","eventId":7372,"action":"ADDED","tier":"GENIUS","coin":"HYPE","status":"skipped","reason":"Insufficient shared bankroll after estimated fees/spread; alert retained, no fill"}
+{"at":"2026-10-31T08:48:18.421246+00:00","eventId":7373,"action":"ADDED","tier":"SMART","coin":"HYPE","status":"skipped","reason":"Insufficient shared bankroll after estimated fees/spread; alert retained, no fill"}
