@@ -33,3 +33,14 @@ class MonitoringTests(unittest.TestCase):
   self.run_cycle(state,[self.event(1),self.event(2,'ADDED')])
   self.assertEqual(len(state['studies']),1);self.assertEqual(len(state['studies'][0]['legs']),2)
   self.assertEqual(state['studies'][0]['signalClass'],'fresh')
+
+class DepthSizingTests(unittest.TestCase):
+ def test_multilevel_fresh_long_and_short_fit_200_cap(self):
+  from portfolio import opening,risk
+  for side in ['LONG','SHORT']:
+   e={'id':9,'coin':'PUMP','createdAt':'1970-01-01T00:01:30+00:00','payload':{'cohort':'GENIUS','side':side,'wallet':'0x'+'1'*40,'action':'OPENED','leverage':{'value':10}}}
+   b={'time':100000,'observedAt':'1970-01-01T00:01:40+00:00','levels':[[{'px':'.00420','sz':'100'},{'px':'.00419','sz':'1000000'}],[{'px':'.00422','sz':'100'},{'px':'.00423','sz':'1000000'}]]}
+   s=opening(e,b,0,20,'source')
+   self.assertLessEqual(s['notional'],200);self.assertGreater(s['notional'],199)
+   self.assertLessEqual(risk(s),5);self.assertEqual(s['leverage'],10)
+   self.assertEqual(s['sizingVersion'],'depth-fit-v1')
