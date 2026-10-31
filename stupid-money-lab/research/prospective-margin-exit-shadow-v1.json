@@ -1,0 +1,17 @@
+{
+  "id": "prospective-margin-exit-shadow-v1",
+  "createdAt": "2026-10-31T10:17:22.702Z",
+  "effectiveAt": "2026-10-31T10:30:00Z",
+  "scope": "Exploratory Smart/Genius claimed alert-direction simulations only; does not loosen verified Genius study gates",
+  "eligibility": "First30 chronological NEW github-portfolio-v3 accepted initial positions opened on/after effectiveAt, both fresh and add_scalp, retain source labels and source leverage. Attached adds remain handled by existing baseline engine and historical denominators at each receipt. All accepted losers retained. Rejected events remain recorded outside paired sample.",
+  "arms": [
+    "unchanged baseline sampled stop or1h observed exit",
+    "first observed executable-book net >=5% of then-selected margin, otherwise baseline exit",
+    "first observed executable-book net >=10% of then-selected margin, otherwise baseline exit"
+  ],
+  "execution": "Shadow outcomes computed from archived first-hit receipts and exact original books after eligibility freeze; no original entry/exit mutation, no real orders, no claimed background TP executor. Receipt must precede baseline close and pass hash/arithmetic/quote freshness. If TP and stop ordering is ambiguous, adverse stop first; missing critical evidence=>unknown, no interpolation.",
+  "costs": "Baseline book VWAP/spread/depth,4.5bps fee/side and10bps adverse slippage/side modeled, funding excluded pending separate audit; additional25bps slip/side and9bps fee/side stress fixed in advance. No thresholds retuned.",
+  "holdout": "First30 eligible entries form untouched chronological holdout for this fixed family. Accrual and QA may be reported before completion, but do not select/validate a winner before all30 close and all missing evidence is reported.30 is a pilot minimum, not proof of edge or sufficient readiness.",
+  "capital": "Paired outcome study conditional on baseline's actual accepted entries, using same position quantities. Not an independently replayed shared-bankroll strategy: earlier cash release changes feasible candidate universe. Do not sum shadow P&L as an executable account result.",
+  "reporting": "Report paired net deltas, gains/losses, missing/censored paths, class and market concentration, funding uncertainty and both notional/margin denominators. No multiple-variant optimization or historical winners substituted. Entries before effectiveAt excluded."
+}
