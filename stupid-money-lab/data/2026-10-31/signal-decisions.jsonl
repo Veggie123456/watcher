@@ -129,3 +129,5 @@
 {"at":"2026-10-31T15:14:12.912242+00:00","eventId":7492,"action":"ADDED","tier":"SMART","coin":"XPL","status":"filled","reason":"Standalone add-alert scalp opened"}
 {"at":"2026-10-31T15:18:25.543755+00:00","eventId":7493,"action":"ADDED","tier":"SMART","coin":"HYPE","status":"filled","reason":"Standalone add-alert scalp opened"}
 {"at":"2026-10-31T15:18:25.547618+00:00","eventId":7494,"action":"ADDED","tier":"GENIUS","coin":"HYPE","status":"filled","reason":"Standalone add-alert scalp opened"}
+{"at":"2026-10-31T15:20:15.226197+00:00","eventId":7495,"action":"OPENED","tier":"SMART","coin":"HYPE","status":"filled","reason":"Fresh opening recorded"}
+{"at":"2026-10-31T15:20:15.226471+00:00","eventId":7496,"action":"ADDED","tier":"GENIUS","coin":"HYPE","status":"skipped","reason":"An add-alert scalp for this wallet/market/side is already open; no duplicate exposure"}
