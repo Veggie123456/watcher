@@ -78,9 +78,24 @@ def opening(e,b,decimals,max_leverage,leverage_mode='recommended',equity=INITIAL
     if p.get('side') not in ['LONG','SHORT']:raise ValueError('Invalid side')
     if not isinstance(p.get('wallet'),str) or len(p['wallet'])!=42:raise ValueError('Full source wallet required')
     long=p['side']=='LONG';reference=float(b['levels'][1 if long else 0][0]['px'])*(1+SLIP if long else 1-SLIP)
-    q=math.floor(min(TARGET/reference,equity*.005/(.02+2*FEE+2*SLIP)/reference)*10**decimals)/10**decimals
-    if q<=0 or q*reference<10:raise ValueError('Initial order below venue minimum')
-    entry=executable(b['levels'][1 if long else 0],q)*(1+SLIP if long else 1-SLIP)
+    # Fit the rounded quantity to executable depth, not just the best level.
+    # A tiny VWAP change must resize a valid opening rather than reject it.
+    scale=10**decimals
+    risk_fraction=(1-(.98*(1-SLIP)) if long else 1.02*(1+SLIP)-1)+FEE*(1+(.98*(1-SLIP) if long else 1.02*(1+SLIP)))
+    value_cap=min(TARGET,equity*.005/risk_fraction)
+    side=b['levels'][1 if long else 0]
+    upper=math.floor(min(value_cap/reference,sum(max(0,float(l['sz'])) for l in side))*scale)
+    low,high,best=1,upper,0
+    while low<=high:
+        mid=(low+high)//2;candidate=mid/scale
+        px=executable(side,candidate)*(1+SLIP if long else 1-SLIP)
+        if candidate*px<=value_cap:
+            best=mid;low=mid+1
+        else:high=mid-1
+    q=best/scale
+    if q<=0:raise ValueError('Initial order below venue minimum')
+    entry=executable(side,q)*(1+SLIP if long else 1-SLIP)
+    if q*entry<10:raise ValueError('Initial order below venue minimum')
     source=p.get('leverage',{}).get('value')
     if leverage_mode not in ['source','recommended']:raise ValueError('Unknown leverage mode')
     lev=source if leverage_mode=='source' else 1
