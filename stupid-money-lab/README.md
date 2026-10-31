@@ -22,3 +22,11 @@ GitHub Actions starts on the initial push and a best-effort five-minute schedule
 `python stupid-money-lab/watcher.py --seconds 240`
 
 The job commits only this module's public state and data. The dashboard reads the public state without service tokens. Collection writes do not recursively trigger jobs. There is no paid provisioning or real trading.
+
+## Entry lifecycle correction — github-entry-study-v2
+
+Prospectively supersedes v1 on this source commit. v1 add-only starters remain auditable legacy scenarios and continue their existing exit rules; never count them as initial-entry copying or relabel them as v2.
+
+Only a fresh first-observed **OPENED** event can start a position. An **ADDED** event requires exactly one live v2 position with the same source payload wallet, market and direction. No initial opening observed means no paper trade; retain the alert and rejection. Replay/revisions cannot duplicate a fill. Process unseen events in publication order. Initial modeled risk allowance is$0.50, with up to two matching adds of up to$0.25 each, total modeled stop risk <=$1 (0.5% of independent$200 equity). Venue quantity decimals, minimum$10, depth, fresh quotes, original stop and original one-hour deadline apply. Update weighted entry, cumulative quantity and fees on each add. These are fixed paper risk allocations, not a claim of proportional source quantities. An add after a closed/stopped position cannot reopen it. All v1 baselines and raw outcomes remain separate.
+
+Original source leverage and recommended paper leverage1x are recorded. Default is1x. Optional repository variable `STUPID_MONEY_PAPER_LEVERAGE_MODE=source` selects source leverage on FUTURE initial entries only, validated against the current market maximum. Position quantity and dollar P&L are not multiplied; margin requirement is notional/leverage. Source account collateral, cross/isolated mechanics and liquidation are not fully modeled, so source-leverage results remain exploratory and cannot count as validated leveraged copier results. Existing positions keep their original selected leverage; new source changes do not silently change a position's margin mode.
