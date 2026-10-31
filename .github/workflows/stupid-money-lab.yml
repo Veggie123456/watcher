@@ -19,6 +19,9 @@ jobs:
       PAPER_LEVERAGE_MODE: ${{ vars.STUPID_MONEY_PAPER_LEVERAGE_MODE || 'recommended' }}
     steps:
       - uses: actions/checkout@v4
+        with:
+          ref: main
+          fetch-depth: 0
       - uses: actions/setup-python@v5
         with:
           python-version: '3.12'
@@ -37,3 +40,12 @@ jobs:
             git pull --rebase origin main
             git push origin HEAD:main
           fi
+      - name: Preserve evidence artifact even if commit fails
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: stupid-money-evidence-${{ github.run_id }}
+          path: |
+            stupid-money-lab/data/
+            stupid-money-lab/state.json
+          retention-days: 30
