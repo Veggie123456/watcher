@@ -1,0 +1,553 @@
+{
+  "cutoff": "2026-10-31T23:16:14.573935+00:00",
+  "portfolio": {
+    "protocolVersion": "split-v4",
+    "families": {
+      "fresh": {
+        "total": 26,
+        "open": 4,
+        "closed": 22,
+        "closedPnlBeforeFunding": -10.960611480732734,
+        "milestones": {
+          "notional": {
+            "5": 0,
+            "10": 0,
+            "20": 0
+          },
+          "margin": {
+            "5": 4,
+            "10": 1,
+            "20": 0
+          }
+        }
+      },
+      "add_scalp": {
+        "total": 167,
+        "open": 5,
+        "closed": 162,
+        "closedPnlBeforeFunding": -76.41951908486568,
+        "milestones": {
+          "notional": {
+            "5": 0,
+            "10": 0,
+            "20": 0
+          },
+          "margin": {
+            "5": 19,
+            "10": 6,
+            "20": 0
+          }
+        }
+      }
+    },
+    "study": "github-portfolio-v3",
+    "initialEquity": 1000,
+    "equity": 905.5732606181803,
+    "realizedBeforeFunding": -87.38013056559842,
+    "openCloseEstimateBeforeFunding": -7.046608816221301,
+    "marginInUse": 247.1172995249,
+    "available": 658.4559610932803,
+    "openCount": 9,
+    "closedCount": 184,
+    "totalCount": 193,
+    "maxOpen": 20,
+    "targetNotional": 200,
+    "maxPositionNotional": 350,
+    "stalePositions": [],
+    "milestones": {
+      "notional": {
+        "5": {
+          "hit": 0,
+          "total": 193,
+          "unconfirmed": 193
+        },
+        "10": {
+          "hit": 0,
+          "total": 193,
+          "unconfirmed": 193
+        },
+        "20": {
+          "hit": 0,
+          "total": 193,
+          "unconfirmed": 193
+        }
+      },
+      "margin": {
+        "5": {
+          "hit": 23,
+          "total": 193,
+          "unconfirmed": 170
+        },
+        "10": {
+          "hit": 7,
+          "total": 193,
+          "unconfirmed": 186
+        },
+        "20": {
+          "hit": 0,
+          "total": 193,
+          "unconfirmed": 193
+        }
+      }
+    },
+    "feesAssumedBps": 4.5,
+    "fundingComplete": false,
+    "at": "2026-10-31T23:16:14.573797+00:00",
+    "maxDrawdownObserved": 0.09680818348132834
+  },
+  "concentration": {
+    "symbol": {
+      "HYPE": {
+        "entries": 83,
+        "closed": 81,
+        "closedNet": -37.584224782213326,
+        "grossClosedLoss": 60.49045686604106
+      },
+      "XPL": {
+        "entries": 10,
+        "closed": 10,
+        "closedNet": -4.293624078149316,
+        "grossClosedLoss": 6.671721039399058
+      },
+      "ETH": {
+        "entries": 15,
+        "closed": 14,
+        "closedNet": -8.608760956534152,
+        "grossClosedLoss": 8.624563644067695
+      },
+      "BTC": {
+        "entries": 12,
+        "closed": 11,
+        "closedNet": -6.804331501453289,
+        "grossClosedLoss": 6.804331501453289
+      },
+      "ZRO": {
+        "entries": 15,
+        "closed": 15,
+        "closedNet": -5.942284958083261,
+        "grossClosedLoss": 19.9208314089234
+      },
+      "LIT": {
+        "entries": 11,
+        "closed": 11,
+        "closedNet": 5.351228215620242,
+        "grossClosedLoss": 9.586708452019849
+      },
+      "SOL": {
+        "entries": 3,
+        "closed": 2,
+        "closedNet": -0.9754253265779991,
+        "grossClosedLoss": 0.9754253265779991
+      },
+      "NEAR": {
+        "entries": 6,
+        "closed": 6,
+        "closedNet": -3.5524286787294015,
+        "grossClosedLoss": 5.868481389769402
+      },
+      "PUMP": {
+        "entries": 8,
+        "closed": 8,
+        "closedNet": -2.720919206079869,
+        "grossClosedLoss": 3.774689263630669
+      },
+      "XMR": {
+        "entries": 12,
+        "closed": 10,
+        "closedNet": -5.991547597228296,
+        "grossClosedLoss": 7.304195576069837
+      },
+      "ZEC": {
+        "entries": 16,
+        "closed": 14,
+        "closedNet": -14.878726685999759,
+        "grossClosedLoss": 15.85796663024982
+      },
+      "XRP": {
+        "entries": 2,
+        "closed": 2,
+        "closedNet": -1.3790850101699796,
+        "grossClosedLoss": 1.3790850101699796
+      }
+    },
+    "wallet": {
+      "0x656479bffc5ae168ff19c11c6ed6b8b2d90261fc": {
+        "entries": 34,
+        "closed": 33,
+        "closedNet": -11.392524700961765,
+        "grossClosedLoss": 17.223305637851656
+      },
+      "0x7d12ca15c85f0291631cfb9ab4ddc74f58322c18": {
+        "entries": 16,
+        "closed": 16,
+        "closedNet": 1.6468726680888137,
+        "grossClosedLoss": 9.077498608415898
+      },
+      "0x0351e63ef46706709e51fd877a5976973a1ed11c": {
+        "entries": 8,
+        "closed": 8,
+        "closedNet": -10.236184264603674,
+        "grossClosedLoss": 13.60626089728616
+      },
+      "0x0e99330ee0f9c389e7d1793bf8ed4353008e47e7": {
+        "entries": 5,
+        "closed": 5,
+        "closedNet": -1.703085236407426,
+        "grossClosedLoss": 2.6365831077104804
+      },
+      "0x72d19ef1f9e11256eccb1edd3e1766fdf7596241": {
+        "entries": 4,
+        "closed": 4,
+        "closedNet": -0.994491666659413,
+        "grossClosedLoss": 3.108591798825966
+      },
+      "0x4623f25b919105765874381af97721bc40fdc06e": {
+        "entries": 6,
+        "closed": 5,
+        "closedNet": 0.21117467344697427,
+        "grossClosedLoss": 1.3422433427279103
+      },
+      "0x00c933e522e11b9a35aca53da7f7625919c42bd2": {
+        "entries": 4,
+        "closed": 4,
+        "closedNet": -3.221702727698335,
+        "grossClosedLoss": 3.3847374367783534
+      },
+      "0x489c3c4d652d798af64f0a056e40948ea667ea2b": {
+        "entries": 9,
+        "closed": 9,
+        "closedNet": -1.0856951126777454,
+        "grossClosedLoss": 7.991972256340239
+      },
+      "0xace83bad72ce09ca27d80f353199b17799d9cade": {
+        "entries": 9,
+        "closed": 9,
+        "closedNet": -1.5045537877658106,
+        "grossClosedLoss": 4.15290603413737
+      },
+      "0x6f1645aaed8beacaf59d43d4373a2069831238f6": {
+        "entries": 3,
+        "closed": 3,
+        "closedNet": -2.672806663777979,
+        "grossClosedLoss": 4.43357939177998
+      },
+      "0x08c87b2015583c291400851be9e8172405657244": {
+        "entries": 5,
+        "closed": 5,
+        "closedNet": -1.6992246798973256,
+        "grossClosedLoss": 2.9301380903904617
+      },
+      "0x89b69b4e5cc2d15a9b32add7d03c5b881ab69406": {
+        "entries": 2,
+        "closed": 2,
+        "closedNet": -0.6043534075644472,
+        "grossClosedLoss": 0.6043534075644472
+      },
+      "0x17984f92fa1a061d5e917153507a0ad3c6d88c27": {
+        "entries": 1,
+        "closed": 1,
+        "closedNet": -1.5836101266204836,
+        "grossClosedLoss": 1.5836101266204836
+      },
+      "0x3c9ef394edc178e827f772fc41a1b064e1c0224d": {
+        "entries": 2,
+        "closed": 2,
+        "closedNet": -3.5324112316404386,
+        "grossClosedLoss": 4.447167862579473
+      },
+      "0x9b9d28fa57d2ef2c14e0a15115f8ae9083b5c38f": {
+        "entries": 4,
+        "closed": 4,
+        "closedNet": -2.1666376935969183,
+        "grossClosedLoss": 3.858749756664944
+      },
+      "0xb5e49c8146555608058a629ba543fc0991dbd047": {
+        "entries": 1,
+        "closed": 1,
+        "closedNet": -2.8545929281079814,
+        "grossClosedLoss": 2.8545929281079814
+      },
+      "0x1053cdafe287e783eca26c4a4fbd441ebcbb2d8b": {
+        "entries": 2,
+        "closed": 2,
+        "closedNet": -2.2145981406849486,
+        "grossClosedLoss": 2.2145981406849486
+      },
+      "0xf6af84c22bca163f1c7ce8dbf3a6ac2c5230d622": {
+        "entries": 3,
+        "closed": 3,
+        "closedNet": 0.07278589476213049,
+        "grossClosedLoss": 1.3912577660663916
+      },
+      "0x5081d34bf94bf5e7204e22e233d01a5d9705dc38": {
+        "entries": 1,
+        "closed": 1,
+        "closedNet": -0.8321120755535075,
+        "grossClosedLoss": 0.8321120755535075
+      },
+      "0x5a499efccd4e98778b32cc5cf20c97d46e0cc96d": {
+        "entries": 3,
+        "closed": 3,
+        "closedNet": -3.60940875160942,
+        "grossClosedLoss": 3.60940875160942
+      },
+      "0x778b7b8bdfad4087d14eb3cd492990962121faa6": {
+        "entries": 2,
+        "closed": 2,
+        "closedNet": 0.8065965931245733,
+        "grossClosedLoss": 0
+      },
+      "0xfe902aca74d21bc36e679e123c189cad2c56f77a": {
+        "entries": 1,
+        "closed": 1,
+        "closedNet": 0.807284019483002,
+        "grossClosedLoss": 0
+      },
+      "0x0ec0c4a1a1ea9e679c950b2a1f72f17ec59c4554": {
+        "entries": 1,
+        "closed": 1,
+        "closedNet": -0.6325248040299856,
+        "grossClosedLoss": 0.6325248040299856
+      },
+      "0xdd0f5a68d69a71fff616ce06a45c0ce48c863e9f": {
+        "entries": 1,
+        "closed": 1,
+        "closedNet": -0.8445508790159691,
+        "grossClosedLoss": 0.8445508790159691
+      },
+      "0xeaac3e31aa732c1e378d2bb57e262d6caf9ad1d7": {
+        "entries": 14,
+        "closed": 13,
+        "closedNet": -8.505617627053677,
+        "grossClosedLoss": 10.590486426556227
+      },
+      "0xe655d50bd6de49907228e13084aa9e3ce972f3d3": {
+        "entries": 1,
+        "closed": 1,
+        "closedNet": -1.7229961080349518,
+        "grossClosedLoss": 1.7229961080349518
+      },
+      "0xab6b5ddb7ffb88eb342d0f550af6916d084e0d18": {
+        "entries": 1,
+        "closed": 1,
+        "closedNet": -0.821085567818962,
+        "grossClosedLoss": 0.821085567818962
+      },
+      "0x628f303158bb4dc2f6e31acb6e0a1fb464626a08": {
+        "entries": 6,
+        "closed": 5,
+        "closedNet": -3.7564909154288166,
+        "grossClosedLoss": 4.6518750532508655
+      },
+      "0xd87b8a19fdac0dade032fceecbf4a1c09a3c0d40": {
+        "entries": 1,
+        "closed": 1,
+        "closedNet": -0.05990762008995512,
+        "grossClosedLoss": 0.05990762008995512
+      },
+      "0x8792b0fc62141dd6f512ba05e44479431a92a38f": {
+        "entries": 3,
+        "closed": 3,
+        "closedNet": -1.7764063709629232,
+        "grossClosedLoss": 1.7764063709629232
+      },
+      "0xd60b7f7b35817dde9b6fb5bff60eb94c851f9cfb": {
+        "entries": 1,
+        "closed": 1,
+        "closedNet": -2.3383650178934743,
+        "grossClosedLoss": 2.3383650178934743
+      },
+      "0x5b5933d675c5b5adbaf1b21f33c2c48d06b995b9": {
+        "entries": 3,
+        "closed": 3,
+        "closedNet": 0.5386394693435768,
+        "grossClosedLoss": 1.9797994574154691
+      },
+      "0x51ea2134defff9597b66fc7addcf787a0ab69def": {
+        "entries": 1,
+        "closed": 1,
+        "closedNet": -2.17378951601894,
+        "grossClosedLoss": 2.17378951601894
+      },
+      "0x0adf9d609054849f64751fdf2e506efecfbd6ce0": {
+        "entries": 1,
+        "closed": 1,
+        "closedNet": -0.6738416231194958,
+        "grossClosedLoss": 0.6738416231194958
+      },
+      "0xda4076609a2697204c844351efef81c4ffaccf52": {
+        "entries": 1,
+        "closed": 1,
+        "closedNet": -0.49927947299999226,
+        "grossClosedLoss": 0.49927947299999226
+      },
+      "0x855aa5eca50ae8e8082d37b878965e160aded301": {
+        "entries": 1,
+        "closed": 1,
+        "closedNet": -0.27395312174998054,
+        "grossClosedLoss": 0.27395312174998054
+      },
+      "0xdda43aa10afbbec3216e43a9eb831709e018828f": {
+        "entries": 1,
+        "closed": 1,
+        "closedNet": -1.0639318167554783,
+        "grossClosedLoss": 1.0639318167554783
+      },
+      "0x5232a3f9ebcdbd9cc0e1867a89e646694deba9dc": {
+        "entries": 5,
+        "closed": 4,
+        "closedNet": 1.3597335124621135,
+        "grossClosedLoss": 1.602023004314976
+      },
+      "0x83be5a269a9a435bcd57d542bada53516ffb5092": {
+        "entries": 1,
+        "closed": 1,
+        "closedNet": -1.4988808579649702,
+        "grossClosedLoss": 1.4988808579649702
+      },
+      "0x1aa4d951817f6696d35dd4836223b85bd7797277": {
+        "entries": 1,
+        "closed": 1,
+        "closedNet": 0.8246789450748577,
+        "grossClosedLoss": 0
+      },
+      "0x2087ccfc2d07be3d245ee9c0f552e2b19ec3f3ca": {
+        "entries": 1,
+        "closed": 1,
+        "closedNet": -0.47762988977499554,
+        "grossClosedLoss": 0.47762988977499554
+      },
+      "0x4c4d69d29acd0f193d5c252edb6724d87c16603b": {
+        "entries": 1,
+        "closed": 1,
+        "closedNet": 1.265520286105014,
+        "grossClosedLoss": 0
+      },
+      "0xa9d72745018f1dc4a00e0a0653eb219299014337": {
+        "entries": 1,
+        "closed": 1,
+        "closedNet": -0.947155614879978,
+        "grossClosedLoss": 0.947155614879978
+      },
+      "0x7f53aa6f9cb3361a435eadb53fdd0c7e3083ccaf": {
+        "entries": 1,
+        "closed": 1,
+        "closedNet": 2.6834446688000253,
+        "grossClosedLoss": 0
+      },
+      "0x1d7fac8f7d171548d5840fca88dfb53d52a9c66e": {
+        "entries": 2,
+        "closed": 2,
+        "closedNet": -1.7895070044284425,
+        "grossClosedLoss": 2.4095524237084485
+      },
+      "0xb89957efe3757e5227cc4293c8aa7f8838376c48": {
+        "entries": 1,
+        "closed": 1,
+        "closedNet": -0.6011264666549734,
+        "grossClosedLoss": 0.6011264666549734
+      },
+      "0x90f5da7ae8fe4aa4d5d7c20e507be3672ab35d18": {
+        "entries": 1,
+        "closed": 1,
+        "closedNet": -1.1599278723959876,
+        "grossClosedLoss": 1.1599278723959876
+      },
+      "0x1ee3a711f337f7f8be5ad7724d76076bb70eca19": {
+        "entries": 1,
+        "closed": 1,
+        "closedNet": -0.2615038569900031,
+        "grossClosedLoss": 0.2615038569900031
+      },
+      "0x5b868622c88fb20dcadb1e5ceace750e91932308": {
+        "entries": 2,
+        "closed": 2,
+        "closedNet": -2.22003901252943,
+        "grossClosedLoss": 2.22003901252943
+      },
+      "0x5a48c6bf04708b6768abfef57edb71622c2e63c6": {
+        "entries": 1,
+        "closed": 1,
+        "closedNet": 0.6130734633540231,
+        "grossClosedLoss": 0
+      },
+      "0xe5ff982e6fbdb38cdf63ee2b12785b06677e3614": {
+        "entries": 1,
+        "closed": 1,
+        "closedNet": 2.4907263085250237,
+        "grossClosedLoss": 0
+      },
+      "0x5d26cbe12cad98e13c482a93f16bbcfbd0100731": {
+        "entries": 1,
+        "closed": 1,
+        "closedNet": -1.74446520332998,
+        "grossClosedLoss": 1.74446520332998
+      },
+      "0x50840f70176bd9fe96566fd4d61f1b9481e8a9a0": {
+        "entries": 1,
+        "closed": 1,
+        "closedNet": -0.6718890031999882,
+        "grossClosedLoss": 0.6718890031999882
+      },
+      "0xe9f826929c8d9d53d5c6ff63418b65bd4f56266c": {
+        "entries": 3,
+        "closed": 3,
+        "closedNet": -5.668326594499562,
+        "grossClosedLoss": 5.668326594499562
+      },
+      "0x6157d3768b8671733a0bd450c730cf007b18300e": {
+        "entries": 1,
+        "closed": 1,
+        "closedNet": -1.7241773339700024,
+        "grossClosedLoss": 1.7241773339700024
+      },
+      "0x34249e6153b1269e57518bfe412c87c127dcc86a": {
+        "entries": 1,
+        "closed": 1,
+        "closedNet": -4.885298700750006,
+        "grossClosedLoss": 4.885298700750006
+      },
+      "0xacb979c478edd31c785b83ce58da71aace5816a6": {
+        "entries": 1,
+        "closed": 0,
+        "closedNet": 0,
+        "grossClosedLoss": 0
+      },
+      "0xb3989715b7dbcea5a4a4c2d506e48c98866cb5e7": {
+        "entries": 1,
+        "closed": 0,
+        "closedNet": 0,
+        "grossClosedLoss": 0
+      },
+      "0x5c7531ebd71da6ec749a2f18e80e5a0c91d53e25": {
+        "entries": 1,
+        "closed": 0,
+        "closedNet": 0,
+        "grossClosedLoss": 0
+      },
+      "0x693b77eb4946bd1e12d5f34fea57b503b7c0d5f7": {
+        "entries": 1,
+        "closed": 0,
+        "closedNet": 0,
+        "grossClosedLoss": 0
+      }
+    }
+  },
+  "metrics": {
+    "winRate": 0.32065217391304346,
+    "expectancy": -0.4748920139434697,
+    "profitFactor": 0.4066206255667065,
+    "payoff": 0.8614843762006494
+  },
+  "lifecycle": {
+    "tracks": 104,
+    "observations": 154081,
+    "actions": {
+      "ADDED": 15
+    }
+  },
+  "limitations": [
+    "Descriptive concentration after observation, not a prospectively selected wallet strategy. Claimed wallets not verified identities; repeated signals correlated.",
+    "Funding/liquidation incomplete; no verifiedGenius copies or source exit matching proof."
+  ]
+}
