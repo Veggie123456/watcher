@@ -2,7 +2,7 @@
 from concurrent.futures import ThreadPoolExecutor, as_completed
 import portfolio
 import evidence_audit
-import subprocess
+import subprocess, tempfile
 import argparse, datetime as dt, hashlib, json, math, os, pathlib, re, time, urllib.request
 ROOT = pathlib.Path(__file__).resolve().parent
 SOURCE = 'https://www.stupidmoney.io/live?money=smart'
@@ -218,16 +218,31 @@ def cycle(state, fetch_source=True):
     (ROOT/'dashboard.json').write_text(json.dumps(slim,separators=(',',':')))
 
 def publish_checkpoint():
-    # Only public evidence paths; never add repository-wide files or account sessions.
-    commands=[['git','add','stupid-money-lab/data','stupid-money-lab/state.json','stupid-money-lab/dashboard.json'],['git','-c','user.name=Stupid Money research collector','-c','user.email=41898282+github-actions[bot]@users.noreply.github.com','commit','-m','Record public paper checkpoint [skip ci]'],['git','pull','--rebase','origin','main'],['git','push','origin','HEAD:main']]
-    for command in commands:
-        result=subprocess.run(command,cwd=ROOT.parent,stdout=subprocess.PIPE,stderr=subprocess.PIPE,timeout=30)
-        if result.returncode:
-            append('errors',{'at':stamp(),'error':'Checkpoint publication failed at '+command[1]+'; raw evidence retained locally/artifact, do not assume upload.'});return False
-    return True
+    # A separate index builds a data-only commit atop current main. Never rebase
+    # the running checkout or overwrite unrelated code/scanner files.
+    paths=['stupid-money-lab/data','stupid-money-lab/state.json','stupid-money-lab/dashboard.json']
+    identity=['git','-c','user.name=Stupid Money research collector','-c','user.email=41898282+github-actions[bot]@users.noreply.github.com']
+    def run(args,env=None):
+        r=subprocess.run(args,cwd=ROOT.parent,env=env,stdout=subprocess.PIPE,stderr=subprocess.PIPE,timeout=30)
+        if r.returncode: raise RuntimeError('Checkpoint git '+args[1]+' failed')
+        return r.stdout.decode().strip()
+    for attempt in range(2):
+        try:
+            run(['git','fetch','origin','main']);parent=run(['git','rev-parse','FETCH_HEAD'])
+            with tempfile.TemporaryDirectory() as td:
+                env={**os.environ,'GIT_INDEX_FILE':str(pathlib.Path(td)/'index')}
+                run(['git','read-tree',parent],env);run(['git','add','--',*paths],env);tree=run(['git','write-tree'],env)
+                if tree==run(['git','rev-parse',parent+'^{tree}']): return True
+                commit=run(identity+['commit-tree',tree,'-p',parent,'-m','Record public paper checkpoint [skip ci]'],env)
+                run(['git','push','origin',commit+':refs/heads/main'])
+            return True
+        except Exception as ex:
+            if attempt==1:append('errors',{'at':stamp(),'error':str(ex)+'; local evidence/artifact retained, no upload assumed.'})
+    return False
 
 if __name__=='__main__':
-    parser=argparse.ArgumentParser();parser.add_argument('--seconds',type=int,default=0);parser.add_argument('--publish-every',type=int,default=0);parser.add_argument('--continuous',action='store_true');args=parser.parse_args()
+    parser=argparse.ArgumentParser();parser.add_argument('--seconds',type=int,default=0);parser.add_argument('--publish-every',type=int,default=0);parser.add_argument('--continuous',action='store_true');parser.add_argument('--publish-only',action='store_true');args=parser.parse_args()
+    if args.publish_only: raise SystemExit(0 if publish_checkpoint() else 1)
     path=ROOT/'state.json'
     state=json.loads(path.read_text()) if path.exists() else {'seen':{},'studies':[]}
     end=float('inf') if args.continuous else time.monotonic()+min(max(args.seconds,0),3300);source_due=0;publish_due=time.monotonic()+max(args.publish_every,1)
