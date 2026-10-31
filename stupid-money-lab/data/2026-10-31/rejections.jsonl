@@ -28,3 +28,4 @@
 {"at":"2026-10-31T04:25:08.317201+00:00","eventId":7275,"reason":"History/stale alert; no backdated entry"}
 {"at":"2026-10-31T04:29:22.074893+00:00","eventId":7277,"reason":"Depth exceeds initial notional/risk limit"}
 {"at":"2026-10-31T05:58:12.322110+00:00","eventId":7299,"reason":"An add-alert scalp for this wallet/market/side is already open; no duplicate exposure"}
+{"at":"2026-10-31T06:04:15.481433+00:00","eventId":7301,"reason":"24h wallet/market cooldown"}
