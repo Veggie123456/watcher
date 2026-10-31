@@ -2,3 +2,18 @@
 {"at":"2026-10-31T05:42:32.592451+00:00","scenario":"github-portfolio-v3-7291","error":"Insufficient visible depth"}
 {"at":"2026-10-31T08:25:16.315072+00:00","scenario":"github-portfolio-v3-7355","error":"Insufficient visible depth"}
 {"at":"2026-10-31T08:26:03.029950+00:00","scenario":"github-portfolio-v3-7355","error":"Insufficient visible depth"}
+{"at":"2026-10-31T09:32:41.794575+00:00","market":"XMR","error":"Stale, future or invalid quote"}
+{"at":"2026-10-31T09:32:41.798595+00:00","market":"HYPE","error":"Stale, future or invalid quote"}
+{"at":"2026-10-31T09:32:41.799466+00:00","market":"ZRO","error":"Stale, future or invalid quote"}
+{"at":"2026-10-31T09:32:41.800559+00:00","market":"XPL","error":"Stale, future or invalid quote"}
+{"at":"2026-10-31T09:32:41.805918+00:00","market":"PUMP","error":"Stale, future or invalid quote"}
+{"at":"2026-10-31T09:32:51.962304+00:00","market":"XPL","error":"Stale, future or invalid quote"}
+{"at":"2026-10-31T09:32:51.966463+00:00","market":"HYPE","error":"Stale, future or invalid quote"}
+{"at":"2026-10-31T09:32:51.970998+00:00","market":"XMR","error":"Stale, future or invalid quote"}
+{"at":"2026-10-31T09:32:51.980005+00:00","market":"PUMP","error":"Stale, future or invalid quote"}
+{"at":"2026-10-31T09:32:51.981974+00:00","market":"ZRO","error":"Stale, future or invalid quote"}
+{"at":"2026-10-31T09:33:02.562011+00:00","market":"HYPE","error":"HTTP Error 502: Bad Gateway"}
+{"at":"2026-10-31T09:33:02.562417+00:00","market":"XMR","error":"HTTP Error 502: Bad Gateway"}
+{"at":"2026-10-31T09:33:02.562830+00:00","market":"PUMP","error":"HTTP Error 502: Bad Gateway"}
+{"at":"2026-10-31T09:33:02.563166+00:00","market":"XPL","error":"HTTP Error 502: Bad Gateway"}
+{"at":"2026-10-31T09:33:02.565976+00:00","market":"ZRO","error":"HTTP Error 502: Bad Gateway"}
