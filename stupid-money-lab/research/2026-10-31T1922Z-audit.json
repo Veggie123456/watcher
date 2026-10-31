@@ -1,0 +1,360 @@
+{
+  "cutoff": "2026-10-31T19:22:45.900502+00:00",
+  "portfolio": {
+    "protocolVersion": "split-v4",
+    "families": {
+      "fresh": {
+        "total": 16,
+        "open": 1,
+        "closed": 15,
+        "closedPnlBeforeFunding": 3.295575989186802,
+        "milestones": {
+          "notional": {
+            "5": 0,
+            "10": 0,
+            "20": 0
+          },
+          "margin": {
+            "5": 4,
+            "10": 1,
+            "20": 0
+          }
+        }
+      },
+      "add_scalp": {
+        "total": 143,
+        "open": 8,
+        "closed": 135,
+        "closedPnlBeforeFunding": -64.36930509996381,
+        "milestones": {
+          "notional": {
+            "5": 0,
+            "10": 0,
+            "20": 0
+          },
+          "margin": {
+            "5": 14,
+            "10": 5,
+            "20": 0
+          }
+        }
+      }
+    },
+    "study": "github-portfolio-v3",
+    "initialEquity": 1000,
+    "equity": 933.5478450734577,
+    "realizedBeforeFunding": -61.07372911077701,
+    "openCloseEstimateBeforeFunding": -5.378425815765307,
+    "marginInUse": 387.7895307491666,
+    "available": 545.7583143242911,
+    "openCount": 9,
+    "closedCount": 150,
+    "totalCount": 159,
+    "maxOpen": 20,
+    "targetNotional": 200,
+    "maxPositionNotional": 350,
+    "stalePositions": [],
+    "milestones": {
+      "notional": {
+        "5": {
+          "hit": 0,
+          "total": 159,
+          "unconfirmed": 159
+        },
+        "10": {
+          "hit": 0,
+          "total": 159,
+          "unconfirmed": 159
+        },
+        "20": {
+          "hit": 0,
+          "total": 159,
+          "unconfirmed": 159
+        }
+      },
+      "margin": {
+        "5": {
+          "hit": 18,
+          "total": 159,
+          "unconfirmed": 141
+        },
+        "10": {
+          "hit": 6,
+          "total": 159,
+          "unconfirmed": 153
+        },
+        "20": {
+          "hit": 0,
+          "total": 159,
+          "unconfirmed": 159
+        }
+      }
+    },
+    "feesAssumedBps": 4.5,
+    "fundingComplete": false,
+    "at": "2026-10-31T19:22:45.900374+00:00",
+    "maxDrawdownObserved": 0.07240455645698819
+  },
+  "bookReplay": {
+    "target": {
+      "at": "2026-10-31T18:20:57.029081+00:00",
+      "quoteTime": 1793470856582,
+      "bookHash": "258f1c5a64eb1d19387b4bacbfcfb6dab1b1669c5cf68887ab5c030005ac1f46",
+      "quantity": 44.9,
+      "netBeforeFunding": 4.757053236395012,
+      "exitPrice": 4.5557397,
+      "referenceNotional": 199.61378437,
+      "referenceMargin": 19.961378437
+    },
+    "found": true,
+    "raw": {
+      "bookHash": "258f1c5a64eb1d19387b4bacbfcfb6dab1b1669c5cf68887ab5c030005ac1f46",
+      "book": {
+        "coin": "NEAR",
+        "time": 1793470856582,
+        "levels": [
+          [
+            {
+              "px": "4.5603",
+              "sz": "657.8",
+              "n": 1
+            },
+            {
+              "px": "4.5596",
+              "sz": "228.6",
+              "n": 1
+            },
+            {
+              "px": "4.5592",
+              "sz": "345.9",
+              "n": 1
+            },
+            {
+              "px": "4.5591",
+              "sz": "465.4",
+              "n": 1
+            },
+            {
+              "px": "4.5589",
+              "sz": "311.8",
+              "n": 1
+            },
+            {
+              "px": "4.5588",
+              "sz": "162.2",
+              "n": 1
+            },
+            {
+              "px": "4.5587",
+              "sz": "1149.3",
+              "n": 2
+            },
+            {
+              "px": "4.5586",
+              "sz": "162.2",
+              "n": 1
+            },
+            {
+              "px": "4.5585",
+              "sz": "2138.9",
+              "n": 2
+            },
+            {
+              "px": "4.5584",
+              "sz": "162.2",
+              "n": 1
+            }
+          ],
+          [
+            {
+              "px": "4.5604",
+              "sz": "549.7",
+              "n": 1
+            },
+            {
+              "px": "4.5609",
+              "sz": "328.9",
+              "n": 1
+            },
+            {
+              "px": "4.5611",
+              "sz": "209.9",
+              "n": 1
+            },
+            {
+              "px": "4.5613",
+              "sz": "200.0",
+              "n": 1
+            },
+            {
+              "px": "4.5614",
+              "sz": "1094.4",
+              "n": 3
+            },
+            {
+              "px": "4.5615",
+              "sz": "375.3",
+              "n": 3
+            },
+            {
+              "px": "4.5616",
+              "sz": "309.6",
+              "n": 2
+            },
+            {
+              "px": "4.5617",
+              "sz": "309.6",
+              "n": 2
+            },
+            {
+              "px": "4.5618",
+              "sz": "600.3",
+              "n": 3
+            },
+            {
+              "px": "4.5619",
+              "sz": "327.7",
+              "n": 4
+            }
+          ]
+        ],
+        "observedAt": "2026-10-31T18:20:57.029081+00:00"
+      }
+    },
+    "bytesRead": 22082333,
+    "hashMatches": true,
+    "replayedExit": 4.5557397,
+    "replayedNet": 4.757053236395012,
+    "netDelta": 0.0
+  },
+  "metrics": {
+    "winRate": 0.3466666666666667,
+    "expectancy": -0.4071581940718467,
+    "profitFactor": 0.45810708169500874,
+    "payoff": 0.8633556539636703
+  },
+  "tracks": 70,
+  "observations": 63018,
+  "sourceAnnotations": [
+    {
+      "id": 7522,
+      "action": "ADDED",
+      "publication": "2026-10-31T16:37:04.640Z",
+      "observedAt": "2026-10-31T16:37:10.438148+00:00",
+      "occurredAt": "2026-10-31T16:37:00.788Z",
+      "sourceLeverage": {
+        "type": "cross",
+        "value": 3
+      },
+      "closedPct": null,
+      "note": "Claimed identity match only; initial-exposure reference unchanged"
+    },
+    {
+      "id": 7507,
+      "action": "ADDED",
+      "publication": "2026-10-31T15:49:03.764Z",
+      "observedAt": "2026-10-31T15:49:40.594207+00:00",
+      "occurredAt": "2026-10-31T15:49:00.195Z",
+      "sourceLeverage": {
+        "type": "cross",
+        "value": 20
+      },
+      "closedPct": null,
+      "note": "Claimed identity match only; initial-exposure reference unchanged"
+    },
+    {
+      "id": 7496,
+      "action": "ADDED",
+      "publication": "2026-10-31T15:20:04.346Z",
+      "observedAt": "2026-10-31T15:20:15.226617+00:00",
+      "occurredAt": "2026-10-31T15:20:00.287Z",
+      "sourceLeverage": {
+        "type": "cross",
+        "value": 10
+      },
+      "closedPct": null,
+      "note": "Claimed identity match only; initial-exposure reference unchanged"
+    },
+    {
+      "id": 7542,
+      "action": "ADDED",
+      "publication": "2026-10-31T17:49:03.215Z",
+      "observedAt": "2026-10-31T17:49:33.156549+00:00",
+      "occurredAt": "2026-10-31T17:49:00.230Z",
+      "sourceLeverage": {
+        "type": "cross",
+        "value": 15
+      },
+      "closedPct": null,
+      "note": "Claimed identity match only; initial-exposure reference unchanged"
+    },
+    {
+      "id": 7537,
+      "action": "ADDED",
+      "publication": "2026-10-31T17:26:04.078Z",
+      "observedAt": "2026-10-31T17:26:18.162932+00:00",
+      "occurredAt": "2026-10-31T17:26:00.328Z",
+      "sourceLeverage": {
+        "type": "cross",
+        "value": 3
+      },
+      "closedPct": null,
+      "note": "Claimed identity match only; initial-exposure reference unchanged"
+    },
+    {
+      "id": 7554,
+      "action": "ADDED",
+      "publication": "2026-10-31T18:39:03.520Z",
+      "observedAt": "2026-10-31T18:39:36.895567+00:00",
+      "occurredAt": "2026-10-31T18:39:00.371Z",
+      "sourceLeverage": {
+        "type": "cross",
+        "value": 3
+      },
+      "closedPct": null,
+      "note": "Claimed identity match only; initial-exposure reference unchanged"
+    },
+    {
+      "id": 7549,
+      "action": "ADDED",
+      "publication": "2026-10-31T18:19:03.918Z",
+      "observedAt": "2026-10-31T18:19:30.175508+00:00",
+      "occurredAt": "2026-10-31T18:19:00.418Z",
+      "sourceLeverage": {
+        "type": "cross",
+        "value": 3
+      },
+      "closedPct": null,
+      "note": "Claimed identity match only; initial-exposure reference unchanged"
+    },
+    {
+      "id": 7565,
+      "action": "ADDED",
+      "publication": "2026-10-31T19:20:03.852Z",
+      "observedAt": "2026-10-31T19:20:09.799013+00:00",
+      "occurredAt": "2026-10-31T19:20:00.462Z",
+      "sourceLeverage": {
+        "type": "cross",
+        "value": 20
+      },
+      "closedPct": null,
+      "note": "Claimed identity match only; initial-exposure reference unchanged"
+    },
+    {
+      "id": 7545,
+      "action": "ADDED",
+      "publication": "2026-10-31T18:01:03.208Z",
+      "observedAt": "2026-10-31T18:01:06.298981+00:00",
+      "occurredAt": "2026-10-31T18:01:00.363Z",
+      "sourceLeverage": {
+        "type": "cross",
+        "value": 5
+      },
+      "closedPct": null,
+      "note": "Claimed identity match only; initial-exposure reference unchanged"
+    }
+  ],
+  "limitations": [
+    "Peak receipt replay only, not full-path continuity or attained exit. Funding/liquidation excluded. Wallet attribution unverified."
+  ]
+}
