@@ -59,6 +59,9 @@ def price(levels,q):
         if left<1e-12: return value/q
     raise ValueError('Insufficient visible depth; no full fill')
 
+def fresh(b):
+    if not (-1000<=time.time()*1000-b['time']<=10000): raise ValueError('Quote expired before execution; no fill')
+
 def mark(s,b):
     long=s['direction']=='long';exit=price(b['levels'][0 if long else 1],s['quantity'])*(1-SLIP if long else 1+SLIP)
     gross=(exit-s['entry'])*(1 if long else -1)*s['quantity']
@@ -125,7 +128,8 @@ def cycle(state, fetch_source=True):
         except Exception as ex: append('errors',{'at':stamp(),'market':coin,'error':str(ex)})
     for s in active:
         if s['symbol'] in quotes:
-            try: update(s,quotes[s['symbol']])
+            try:
+                fresh(quotes[s['symbol']]); update(s,quotes[s['symbol']])
             except Exception as ex: append('errors',{'at':stamp(),'scenario':s['id'],'error':str(ex)})
     if eligible:
         try: sizes={a['name']:a['szDecimals'] for a in info({'type':'meta'})['universe']}
@@ -133,6 +137,8 @@ def cycle(state, fetch_source=True):
         for e in eligible:
             try:
                 if any(s.get('wallet')==e['payload'].get('wallet') and s['symbol']==e['coin'] and time.time()*1000-millis(s['openedAt'])<86400000 for s in state['studies']): raise ValueError('Wallet/market duplicate in batch')
+                fresh(quotes[e['coin']])
+                if time.time()*1000-millis(e['createdAt'])>120000: raise ValueError('Alert expired before entry')
                 s=create(e,quotes[e['coin']],sizes[e['coin']]);state['studies'].append(s);append('fills',{'kind':'entry','scenario':s})
             except Exception as ex: append('rejections',{'at':stamp(),'eventId':e['id'],'reason':str(ex)})
     state['updatedAt']=stamp()
