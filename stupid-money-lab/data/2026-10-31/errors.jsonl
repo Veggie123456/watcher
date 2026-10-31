@@ -42,3 +42,15 @@
 {"at":"2026-10-31T09:34:09.109954+00:00","market":"PUMP","error":"The read operation timed out"}
 {"at":"2026-10-31T09:34:09.113251+00:00","market":"XPL","error":"The read operation timed out"}
 {"at":"2026-10-31T09:34:09.114602+00:00","market":"HYPE","error":"The read operation timed out"}
+{"at":"2026-10-31T09:34:33.281185+00:00","market":"ZRO","error":"The read operation timed out"}
+{"at":"2026-10-31T09:34:33.282113+00:00","market":"HYPE","error":"The read operation timed out"}
+{"at":"2026-10-31T09:34:33.282346+00:00","market":"XMR","error":"The read operation timed out"}
+{"at":"2026-10-31T09:34:33.282851+00:00","scenario":"github-portfolio-v3-7378","error":"Quote expired before execution; no fill"}
+{"at":"2026-10-31T09:34:33.282980+00:00","scenario":"github-portfolio-v3-7386","error":"Quote expired before execution; no fill"}
+{"at":"2026-10-31T09:34:55.349589+00:00","market":"PUMP","error":"The read operation timed out"}
+{"at":"2026-10-31T09:34:55.349907+00:00","market":"XMR","error":"The read operation timed out"}
+{"at":"2026-10-31T09:34:55.350392+00:00","scenario":"github-portfolio-v3-7360","error":"Quote expired before execution; no fill"}
+{"at":"2026-10-31T09:34:55.350535+00:00","scenario":"github-portfolio-v3-7379","error":"Quote expired before execution; no fill"}
+{"at":"2026-10-31T09:34:55.350635+00:00","scenario":"github-portfolio-v3-7383","error":"Quote expired before execution; no fill"}
+{"at":"2026-10-31T09:34:55.350723+00:00","scenario":"github-portfolio-v3-7384","error":"Quote expired before execution; no fill"}
+{"at":"2026-10-31T09:34:55.350851+00:00","scenario":"github-portfolio-v3-7386","error":"Quote expired before execution; no fill"}
