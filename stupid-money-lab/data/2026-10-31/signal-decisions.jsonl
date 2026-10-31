@@ -1,2 +1,3 @@
 {"at":"2026-10-31T04:25:08.317295+00:00","eventId":7275,"action":"ADDED","tier":"GENIUS","coin":"ZRO","status":"skipped","reason":"History/stale alert; no backdated entry"}
 {"at":"2026-10-31T04:29:22.075109+00:00","eventId":7277,"action":"OPENED","tier":"GENIUS","coin":"PUMP","status":"skipped","reason":"Depth exceeds initial notional/risk limit"}
+{"at":"2026-10-31T04:33:18.658198+00:00","eventId":7279,"action":"ADDED","tier":"SMART","coin":"XPL","status":"filled","reason":"Standalone add-alert scalp opened"}
