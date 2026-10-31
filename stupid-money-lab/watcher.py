@@ -112,7 +112,71 @@ def decision(state,e,status,reason):
 def retryable(ex):
     return isinstance(ex,KeyError) or any(t in str(ex).lower() for t in ['quote expired','stale, future','insufficient visible depth','timed out','temporarily unavailable'])
 
+def excursion_seed(state):
+    """Separate observational lane; never changes the funded/scalp ledger."""
+    tracks=state.setdefault('lifecycleTracks',{})
+    now=stamp()
+    for s in state['studies']:
+        if s.get('study')!=VERSION or s.get('closedAt') or s['id'] in tracks: continue
+        tracks[s['id']]={'id':s['id'],'eventId':s['eventId'],'symbol':s['symbol'],'wallet':s['wallet'],'direction':s['direction'],'signalClass':s.get('signalClass','fresh'),'tierClaim':s.get('tier'),'sourceLeverage':s.get('sourceLeverage'),'selectedLeverage':s['leverage'],'referenceEntry':s['entry'],'referenceQuantity':s['quantity'],'referenceNotional':s['entry']*s['quantity'],'referenceMargin':s['marginRequired'],'referenceQuoteTime':s.get('quoteTime',millis(s['openedAt'])),'entryObservedAt':s['openedAt'],'trackingStartedAt':now,'coverageStart':now,'preStartPathUnknown':millis(now)-millis(s['openedAt'])>20000,'status':'observing','identityVerified':False,'scope':'Initial observed exposure only; source adds/reductions annotated, not claimed proportional fills. Independent of scalp exits. Funding/liquidation excluded.','maximumFavorablePriceReturn':0.0,'maximumAdversePriceReturn':0.0,'hits':{'notional':{},'margin':{}},'sourceEvents':[],'observations':0}
+
+def excursion_coins(state):
+    now=time.time()*1000;coins=set()
+    for t in state.get('lifecycleTracks',{}).values():
+        if t.get('endedAt'):continue
+        if now-millis(t['entryObservedAt'])>=86400000:
+            t.update(endedAt=stamp(),status='24h observation cap; source close unknown',censored=True)
+        else:coins.add(t['symbol'])
+    return coins
+
+def excursion_update(state,quotes,events):
+    now=stamp()
+    for t in state.get('lifecycleTracks',{}).values():
+        if t.get('endedAt') or t['symbol'] not in quotes:continue
+        try:
+            b=quotes[t['symbol']];fresh(b)
+            if b['time']<t['referenceQuoteTime']:raise ValueError('Lifecycle quote precedes entry')
+            previous=t.get('quoteTime')
+            if previous and b['time']<=previous:continue
+            if previous and b['time']-previous>20000:t['quoteGap']=True
+            long=t['direction']=='long';q=t['referenceQuantity'];entry=t['referenceEntry']
+            raw=price(b['levels'][0 if long else 1],q);exit=raw*(1-SLIP if long else 1+SLIP)
+            gross=(raw-entry)*(1 if long else -1)*q;net=(exit-entry)*(1 if long else -1)*q-(entry+exit)*q*FEE
+            price_return=gross/t['referenceNotional'];h=portfolio.digest(b)
+            t.update(quoteTime=b['time'],observedAt=b['observedAt'],currentNetBeforeFunding=net,currentPriceReturn=price_return,observations=t['observations']+1,bookHash=h)
+            receipt={'at':b['observedAt'],'quoteTime':b['time'],'bookHash':h,'quantity':q,'netBeforeFunding':net,'exitPrice':exit,'referenceNotional':t['referenceNotional'],'referenceMargin':t['referenceMargin']}
+            if price_return>t['maximumFavorablePriceReturn']:t.update(maximumFavorablePriceReturn=price_return,favorableReceipt=receipt)
+            if price_return<t['maximumAdversePriceReturn']:t.update(maximumAdversePriceReturn=price_return,adverseReceipt=receipt)
+            if 'maximumNetBeforeFunding' not in t or net>t['maximumNetBeforeFunding']:t.update(maximumNetBeforeFunding=net,peakNetReceipt=receipt)
+            if 'minimumNetBeforeFunding' not in t or net<t['minimumNetBeforeFunding']:t.update(minimumNetBeforeFunding=net,troughNetReceipt=receipt)
+            for basis,denom in [('notional',t['referenceNotional']),('margin',t['referenceMargin'])]:
+                for n in [5,10,20]:
+                    if net/denom>=n/100 and str(n) not in t['hits'][basis]:t['hits'][basis][str(n)]={**receipt,'denominator':denom}
+            if b['time']-t.get('lastEvidenceQuoteTime',0)>=60000:
+                append('lifecycle-quotes',{'id':t['id'],**receipt,'priceReturn':price_return})
+                t['lastEvidenceQuoteTime']=b['time']
+        except Exception as ex:append('errors',{'at':now,'lifecycle':t['id'],'error':str(ex)})
+    for e in sorted(events,key=lambda x:(x.get('createdAt',''),x.get('id',0))):
+        p=e.get('payload',{});action=p.get('action')
+        if action not in ('ADDED','REDUCED','CLOSED'):continue
+        if not (-1000<=time.time()*1000-millis(e['createdAt'])<=120000):continue
+        matches=[t for t in state.get('lifecycleTracks',{}).values() if not t.get('endedAt') and t['wallet']==p.get('wallet') and t['symbol']==e.get('coin') and t['direction']==p.get('side','').lower() and millis(e['createdAt'])>=millis(t['entryObservedAt'])]
+        if len(matches)!=1:
+            if matches:append('lifecycle-events',{'at':now,'event':e,'status':'ambiguous claimed identity; no lifecycle close'})
+            continue
+        t=matches[0]
+        if any(x['id']==e['id'] for x in t['sourceEvents']):continue
+        t['sourceEvents'].append({'id':e['id'],'action':action,'publication':e['createdAt'],'observedAt':now,'occurredAt':e.get('occurredAt'),'sourceLeverage':p.get('leverage'),'closedPct':p.get('closedPct'),'note':'Claimed identity match only; initial-exposure reference unchanged'})
+        append('lifecycle-events',{'id':t['id'],'at':now,'event':e,'status':'claimed identity match; not account verified'})
+        if action=='CLOSED':
+            t.update(endedAt=now,status='source close claim observed',sourceCloseEventId=e['id'],censored=False)
+            if t.get('observedAt') and millis(now)-millis(t['observedAt'])<=10000:t['sourceCloseObservationReceipt']=t.get('bookHash')
+            else:t['sourceCloseQuoteUnavailable']=True
+
+
+
 def cycle(state, fetch_source=True):
+    excursion_seed(state)
     previous_heartbeat=state.get('heartbeatAt');state['heartbeatAt']=stamp();state['study']=VERSION
     if previous_heartbeat and millis(state['heartbeatAt'])-millis(previous_heartbeat)>30000:
         append('coverage-gaps',{'from':previous_heartbeat,'to':state['heartbeatAt'],'seconds':(millis(state['heartbeatAt'])-millis(previous_heartbeat))/1000})
@@ -147,7 +211,7 @@ def cycle(state, fetch_source=True):
                     state['signalCoverage'][action][tier]+=1
             state['seen'][key]={'hash':h,'firstObservedAt':old['firstObservedAt'] if old else stamp()}
     active=[s for s in state['studies'] if not s.get('closedAt')]
-    coins=set(s['symbol'] for s in active)
+    coins=set(s['symbol'] for s in active) | excursion_coins(state)
     eligible=[]
     for e in sorted(state['pendingSignals'].values(),key=lambda e:(e.get('createdAt',''),e.get('id',0))):
         try:
@@ -199,6 +263,8 @@ def cycle(state, fetch_source=True):
                     decision(state,e,'retrying',reason+'; retry only inside original120s eligibility window')
                 else:
                     reject(state,e,reason);decision(state,e,'skipped',reason);state['pendingSignals'].pop(str(e['id']),None)
+    excursion_seed(state)
+    excursion_update(state,quotes,unseen)
     for closed in [s for s in state['studies'] if s.get('study')==VERSION and s.get('closedAt') and not s.get('candleAudit')][:3]:
         try:
             candles=info({'type':'candleSnapshot','req':{'coin':closed['symbol'],'interval':'1m','startTime':int(millis(closed['openedAt'])//60000)*60000,'endTime':int(millis(closed['closedAt']))}})
