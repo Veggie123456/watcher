@@ -1,0 +1,243 @@
+{
+  "cutoff": "2026-10-31T20:14:09.931572+00:00",
+  "portfolio": {
+    "protocolVersion": "split-v4",
+    "families": {
+      "fresh": {
+        "total": 17,
+        "open": 1,
+        "closed": 16,
+        "closedPnlBeforeFunding": 1.989080151686826,
+        "milestones": {
+          "notional": {
+            "5": 0,
+            "10": 0,
+            "20": 0
+          },
+          "margin": {
+            "5": 4,
+            "10": 1,
+            "20": 0
+          }
+        }
+      },
+      "add_scalp": {
+        "total": 151,
+        "open": 9,
+        "closed": 142,
+        "closedPnlBeforeFunding": -71.92579097982016,
+        "milestones": {
+          "notional": {
+            "5": 0,
+            "10": 0,
+            "20": 0
+          },
+          "margin": {
+            "5": 17,
+            "10": 6,
+            "20": 0
+          }
+        }
+      }
+    },
+    "study": "github-portfolio-v3",
+    "initialEquity": 1000,
+    "equity": 920.9865825583006,
+    "realizedBeforeFunding": -69.93671082813334,
+    "openCloseEstimateBeforeFunding": -9.07670661356612,
+    "marginInUse": 407.75406799916664,
+    "available": 513.232514559134,
+    "openCount": 10,
+    "closedCount": 158,
+    "totalCount": 168,
+    "maxOpen": 20,
+    "targetNotional": 200,
+    "maxPositionNotional": 350,
+    "stalePositions": [],
+    "milestones": {
+      "notional": {
+        "5": {
+          "hit": 0,
+          "total": 168,
+          "unconfirmed": 168
+        },
+        "10": {
+          "hit": 0,
+          "total": 168,
+          "unconfirmed": 168
+        },
+        "20": {
+          "hit": 0,
+          "total": 168,
+          "unconfirmed": 168
+        }
+      },
+      "margin": {
+        "5": {
+          "hit": 21,
+          "total": 168,
+          "unconfirmed": 147
+        },
+        "10": {
+          "hit": 7,
+          "total": 168,
+          "unconfirmed": 161
+        },
+        "20": {
+          "hit": 0,
+          "total": 168,
+          "unconfirmed": 168
+        }
+      }
+    },
+    "feesAssumedBps": 4.5,
+    "fundingComplete": false,
+    "at": "2026-10-31T20:14:09.931423+00:00",
+    "maxDrawdownObserved": 0.08102879155430481
+  },
+  "adverseBookReplay": {
+    "eventId": 7529,
+    "symbol": "LIT",
+    "target": {
+      "at": "2026-10-31T20:09:26.003731+00:00",
+      "quoteTime": 1793477365527,
+      "bookHash": "2983d77474e8a2f2786a1ad8611dd0f13c305f72072082008117a9fc7706288a",
+      "quantity": 67.0,
+      "netBeforeFunding": -13.17513802676497,
+      "exitPrice": 3.1512480999999997,
+      "referenceNotional": 198.142659,
+      "referenceMargin": 66.04755300000001
+    },
+    "found": true,
+    "book": {
+      "coin": "LIT",
+      "time": 1793477365527,
+      "levels": [
+        [
+          {
+            "px": "3.1474",
+            "sz": "2424.0",
+            "n": 1
+          },
+          {
+            "px": "3.1473",
+            "sz": "971.0",
+            "n": 1
+          },
+          {
+            "px": "3.1467",
+            "sz": "1235.0",
+            "n": 2
+          },
+          {
+            "px": "3.1464",
+            "sz": "100.0",
+            "n": 1
+          },
+          {
+            "px": "3.1463",
+            "sz": "10.0",
+            "n": 1
+          },
+          {
+            "px": "3.1462",
+            "sz": "100.0",
+            "n": 1
+          },
+          {
+            "px": "3.1461",
+            "sz": "7.0",
+            "n": 1
+          },
+          {
+            "px": "3.1459",
+            "sz": "100.0",
+            "n": 1
+          },
+          {
+            "px": "3.1458",
+            "sz": "199.0",
+            "n": 1
+          },
+          {
+            "px": "3.1452",
+            "sz": "318.0",
+            "n": 1
+          }
+        ],
+        [
+          {
+            "px": "3.1481",
+            "sz": "200.0",
+            "n": 1
+          },
+          {
+            "px": "3.1495",
+            "sz": "42.0",
+            "n": 2
+          },
+          {
+            "px": "3.1496",
+            "sz": "15.0",
+            "n": 1
+          },
+          {
+            "px": "3.1497",
+            "sz": "495.0",
+            "n": 3
+          },
+          {
+            "px": "3.1498",
+            "sz": "15.0",
+            "n": 1
+          },
+          {
+            "px": "3.1499",
+            "sz": "15.0",
+            "n": 1
+          },
+          {
+            "px": "3.15",
+            "sz": "15.0",
+            "n": 1
+          },
+          {
+            "px": "3.1501",
+            "sz": "19.0",
+            "n": 2
+          },
+          {
+            "px": "3.1502",
+            "sz": "15.0",
+            "n": 1
+          },
+          {
+            "px": "3.1503",
+            "sz": "15.0",
+            "n": 1
+          }
+        ]
+      ],
+      "observedAt": "2026-10-31T20:09:26.003731+00:00"
+    },
+    "hashMatches": true,
+    "replayNet": -13.17513802676497,
+    "delta": 0.0
+  },
+  "metrics": {
+    "winRate": 0.33544303797468356,
+    "expectancy": -0.44263741030464143,
+    "profitFactor": 0.42759505102515016,
+    "payoff": 0.8471222708988824
+  },
+  "lifecycle": {
+    "tracks": 79,
+    "observations": 80369,
+    "actions": {
+      "ADDED": 12
+    }
+  },
+  "limitations": [
+    "Worst sampled margin trough selected descriptively, not a strategy test. Fixed exposure only; not realized loss. Funding/liquidation excluded; gaps unknown. Source attribution unresolved."
+  ]
+}
