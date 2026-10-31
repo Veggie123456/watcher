@@ -1,0 +1,695 @@
+{
+  "cutoff": "2026-10-31T17:20:09.919079+00:00",
+  "portfolio": {
+    "protocolVersion": "split-v4",
+    "families": {
+      "fresh": {
+        "total": 14,
+        "open": 0,
+        "closed": 14,
+        "closedPnlBeforeFunding": 1.8061665895768133,
+        "milestones": {
+          "notional": {
+            "5": 0,
+            "10": 0,
+            "20": 0
+          },
+          "margin": {
+            "5": 4,
+            "10": 1,
+            "20": 0
+          }
+        }
+      },
+      "add_scalp": {
+        "total": 125,
+        "open": 10,
+        "closed": 115,
+        "closedPnlBeforeFunding": -55.02003557344976,
+        "milestones": {
+          "notional": {
+            "5": 0,
+            "10": 0,
+            "20": 0
+          },
+          "margin": {
+            "5": 14,
+            "10": 5,
+            "20": 0
+          }
+        }
+      }
+    },
+    "study": "github-portfolio-v3",
+    "initialEquity": 1000,
+    "equity": 940.3959147346862,
+    "realizedBeforeFunding": -53.21386898387294,
+    "openCloseEstimateBeforeFunding": -6.390216281440797,
+    "marginInUse": 415.2201595153333,
+    "available": 525.1757552193529,
+    "openCount": 10,
+    "closedCount": 129,
+    "totalCount": 139,
+    "maxOpen": 20,
+    "targetNotional": 200,
+    "maxPositionNotional": 350,
+    "stalePositions": [],
+    "milestones": {
+      "notional": {
+        "5": {
+          "hit": 0,
+          "total": 139,
+          "unconfirmed": 139
+        },
+        "10": {
+          "hit": 0,
+          "total": 139,
+          "unconfirmed": 139
+        },
+        "20": {
+          "hit": 0,
+          "total": 139,
+          "unconfirmed": 139
+        }
+      },
+      "margin": {
+        "5": {
+          "hit": 18,
+          "total": 139,
+          "unconfirmed": 121
+        },
+        "10": {
+          "hit": 6,
+          "total": 139,
+          "unconfirmed": 133
+        },
+        "20": {
+          "hit": 0,
+          "total": 139,
+          "unconfirmed": 139
+        }
+      }
+    },
+    "feesAssumedBps": 4.5,
+    "fundingComplete": false,
+    "at": "2026-10-31T17:20:09.918929+00:00",
+    "maxDrawdownObserved": 0.07240455645698819
+  },
+  "lifecycleTracks": 50,
+  "observations": 29034,
+  "sourceAnnotations": [
+    {
+      "id": "github-portfolio-v3-7458",
+      "eventId": 7458,
+      "symbol": "HYPE",
+      "wallet": "0x7d12ca15c85f0291631cfb9ab4ddc74f58322c18",
+      "direction": "long",
+      "signalClass": "add_scalp",
+      "tierClaim": "GENIUS",
+      "sourceLeverage": 3,
+      "selectedLeverage": 3,
+      "referenceEntry": 87.54846099999999,
+      "referenceQuantity": 2.28,
+      "referenceNotional": 199.61049107999995,
+      "referenceMargin": 66.53683035999998,
+      "referenceQuoteTime": 1793453973324,
+      "entryObservedAt": "2026-10-31T13:39:33.761789+00:00",
+      "trackingStartedAt": "2026-10-31T14:24:22.467060+00:00",
+      "coverageStart": "2026-10-31T14:24:22.467060+00:00",
+      "preStartPathUnknown": true,
+      "status": "observing",
+      "identityVerified": false,
+      "scope": "Initial observed exposure only; source adds/reductions annotated, not claimed proportional fills. Independent of scalp exits. Funding/liquidation excluded.",
+      "maximumFavorablePriceReturn": 0.00558021231235598,
+      "maximumAdversePriceReturn": -0.014351605792362103,
+      "hits": {
+        "notional": {},
+        "margin": {}
+      },
+      "sourceEvents": [
+        {
+          "id": 7522,
+          "action": "ADDED",
+          "publication": "2026-10-31T16:37:04.640Z",
+          "observedAt": "2026-10-31T16:37:10.438148+00:00",
+          "occurredAt": "2026-10-31T16:37:00.788Z",
+          "sourceLeverage": {
+            "type": "cross",
+            "value": 3
+          },
+          "closedPct": null,
+          "note": "Claimed identity match only; initial-exposure reference unchanged"
+        }
+      ],
+      "observations": 858,
+      "quoteTime": 1793467209300,
+      "observedAt": "2026-10-31T17:20:09.768261+00:00",
+      "currentNetBeforeFunding": -0.40298661499797095,
+      "currentPriceReturn": -0.00011948810842023006,
+      "bookHash": "bf92e5fe474644f26f289acdafa76f5e2abc097efaaed3010e51dc8609327b82",
+      "adverseReceipt": {
+        "at": "2026-10-31T14:30:03.513753+00:00",
+        "quoteTime": 1793457002775,
+        "bookHash": "9c4b24d4f2b6a07d4a8823e9aeacc96b0b0efe0e4178494d5b7e804f62eee44c",
+        "quantity": 2.28,
+        "netBeforeFunding": -3.2397486173939716,
+        "exitPrice": 86.205708,
+        "referenceNotional": 199.61049107999995,
+        "referenceMargin": 66.53683035999998
+      },
+      "maximumNetBeforeFunding": 0.7330842029760392,
+      "peakNetReceipt": {
+        "at": "2026-10-31T15:43:35.431814+00:00",
+        "quoteTime": 1793461414618,
+        "bookHash": "58544f31120090f9937eeb10fb736e62b9099567b5f14a6c4b5f9bd3b9affd6c",
+        "quantity": 2.28,
+        "netBeforeFunding": 0.7330842029760392,
+        "exitPrice": 87.948963,
+        "referenceNotional": 199.61049107999995,
+        "referenceMargin": 66.53683035999998
+      },
+      "minimumNetBeforeFunding": -3.2397486173939716,
+      "troughNetReceipt": {
+        "at": "2026-10-31T14:30:03.513753+00:00",
+        "quoteTime": 1793457002775,
+        "bookHash": "9c4b24d4f2b6a07d4a8823e9aeacc96b0b0efe0e4178494d5b7e804f62eee44c",
+        "quantity": 2.28,
+        "netBeforeFunding": -3.2397486173939716,
+        "exitPrice": 86.205708,
+        "referenceNotional": 199.61049107999995,
+        "referenceMargin": 66.53683035999998
+      },
+      "lastEvidenceQuoteTime": 1793467182739,
+      "quoteGap": true,
+      "favorableReceipt": {
+        "at": "2026-10-31T15:43:35.431814+00:00",
+        "quoteTime": 1793461414618,
+        "bookHash": "58544f31120090f9937eeb10fb736e62b9099567b5f14a6c4b5f9bd3b9affd6c",
+        "quantity": 2.28,
+        "netBeforeFunding": 0.7330842029760392,
+        "exitPrice": 87.948963,
+        "referenceNotional": 199.61049107999995,
+        "referenceMargin": 66.53683035999998
+      }
+    },
+    {
+      "id": "github-portfolio-v3-7473",
+      "eventId": 7473,
+      "symbol": "BTC",
+      "wallet": "0x656479bffc5ae168ff19c11c6ed6b8b2d90261fc",
+      "direction": "long",
+      "signalClass": "add_scalp",
+      "tierClaim": "GENIUS",
+      "sourceLeverage": 20,
+      "selectedLeverage": 20,
+      "referenceEntry": 77524.44699999999,
+      "referenceQuantity": 0.00257,
+      "referenceNotional": 199.23782878999995,
+      "referenceMargin": 9.961891439499997,
+      "referenceQuoteTime": 1793456241457,
+      "entryObservedAt": "2026-10-31T14:17:22.113378+00:00",
+      "trackingStartedAt": "2026-10-31T14:24:22.467060+00:00",
+      "coverageStart": "2026-10-31T14:24:22.467060+00:00",
+      "preStartPathUnknown": true,
+      "status": "observing",
+      "identityVerified": false,
+      "scope": "Initial observed exposure only; source adds/reductions annotated, not claimed proportional fills. Independent of scalp exits. Funding/liquidation excluded.",
+      "maximumFavorablePriceReturn": 0.0016969227784367743,
+      "maximumAdversePriceReturn": -0.002366311622964374,
+      "hits": {
+        "notional": {},
+        "margin": {}
+      },
+      "sourceEvents": [
+        {
+          "id": 7507,
+          "action": "ADDED",
+          "publication": "2026-10-31T15:49:03.764Z",
+          "observedAt": "2026-10-31T15:49:40.594207+00:00",
+          "occurredAt": "2026-10-31T15:49:00.195Z",
+          "sourceLeverage": {
+            "type": "cross",
+            "value": 20
+          },
+          "closedPct": null,
+          "note": "Claimed identity match only; initial-exposure reference unchanged"
+        }
+      ],
+      "observations": 858,
+      "quoteTime": 1793467209300,
+      "observedAt": "2026-10-31T17:20:09.767216+00:00",
+      "currentNetBeforeFunding": -0.10501795420394733,
+      "currentPriceReturn": 0.0013744438576906515,
+      "bookHash": "24aadae5509de7350ed1ea5e0ec219b7b05adb5fbd986aa2e872de7de4e6eb98",
+      "adverseReceipt": {
+        "at": "2026-10-31T15:04:23.389632+00:00",
+        "quoteTime": 1793459062797,
+        "bookHash": "79d88e2566de8cece5a2297e761ebff7e08b8b68a32d6dd1324773bdde34b0e7",
+        "quantity": 0.00257,
+        "netBeforeFunding": -0.8492376045889637,
+        "exitPrice": 77263.659,
+        "referenceNotional": 199.23782878999995,
+        "referenceMargin": 9.961891439499997
+      },
+      "maximumNetBeforeFunding": -0.04086108779146974,
+      "peakNetReceipt": {
+        "at": "2026-10-31T16:24:31.397230+00:00",
+        "quoteTime": 1793463870630,
+        "bookHash": "ee3eaa58aa3e98267e63a2f62c69a59ffb9b880da75c489c824d3df2b23e0f3a",
+        "quantity": 0.00257,
+        "netBeforeFunding": -0.04086108779146974,
+        "exitPrice": 77578.344,
+        "referenceNotional": 199.23782878999995,
+        "referenceMargin": 9.961891439499997
+      },
+      "minimumNetBeforeFunding": -0.8492376045889637,
+      "troughNetReceipt": {
+        "at": "2026-10-31T15:04:23.389632+00:00",
+        "quoteTime": 1793459062797,
+        "bookHash": "79d88e2566de8cece5a2297e761ebff7e08b8b68a32d6dd1324773bdde34b0e7",
+        "quantity": 0.00257,
+        "netBeforeFunding": -0.8492376045889637,
+        "exitPrice": 77263.659,
+        "referenceNotional": 199.23782878999995,
+        "referenceMargin": 9.961891439499997
+      },
+      "lastEvidenceQuoteTime": 1793467182739,
+      "quoteGap": true,
+      "favorableReceipt": {
+        "at": "2026-10-31T16:24:31.397230+00:00",
+        "quoteTime": 1793463870630,
+        "bookHash": "ee3eaa58aa3e98267e63a2f62c69a59ffb9b880da75c489c824d3df2b23e0f3a",
+        "quantity": 0.00257,
+        "netBeforeFunding": -0.04086108779146974,
+        "exitPrice": 77578.344,
+        "referenceNotional": 199.23782878999995,
+        "referenceMargin": 9.961891439499997
+      }
+    },
+    {
+      "id": "github-portfolio-v3-7478",
+      "eventId": 7478,
+      "symbol": "HYPE",
+      "wallet": "0x83be5a269a9a435bcd57d542bada53516ffb5092",
+      "direction": "short",
+      "signalClass": "add_scalp",
+      "tierClaim": "GENIUS",
+      "sourceLeverage": 10,
+      "selectedLeverage": 10,
+      "referenceEntry": 86.847066,
+      "referenceQuantity": 2.3,
+      "referenceNotional": 199.7482518,
+      "referenceMargin": 19.97482518,
+      "referenceQuoteTime": 1793456417423,
+      "entryObservedAt": "2026-10-31T14:20:17.933583+00:00",
+      "trackingStartedAt": "2026-10-31T14:24:22.467060+00:00",
+      "coverageStart": "2026-10-31T14:24:22.467060+00:00",
+      "preStartPathUnknown": true,
+      "status": "observing",
+      "identityVerified": false,
+      "scope": "Initial observed exposure only; source adds/reductions annotated, not claimed proportional fills. Independent of scalp exits. Funding/liquidation excluded.",
+      "maximumFavorablePriceReturn": 0.00637978950261822,
+      "maximumAdversePriceReturn": -0.01381663256188757,
+      "hits": {
+        "notional": {},
+        "margin": {}
+      },
+      "sourceEvents": [
+        {
+          "id": 7496,
+          "action": "ADDED",
+          "publication": "2026-10-31T15:20:04.346Z",
+          "observedAt": "2026-10-31T15:20:15.226617+00:00",
+          "occurredAt": "2026-10-31T15:20:00.287Z",
+          "sourceLeverage": {
+            "type": "cross",
+            "value": 10
+          },
+          "closedPct": null,
+          "note": "Claimed identity match only; initial-exposure reference unchanged"
+        }
+      ],
+      "observations": 858,
+      "quoteTime": 1793467209300,
+      "observedAt": "2026-10-31T17:20:09.768261+00:00",
+      "currentNetBeforeFunding": -1.980818872523006,
+      "currentPriceReturn": -0.008004516613246368,
+      "bookHash": "bf92e5fe474644f26f289acdafa76f5e2abc097efaaed3010e51dc8609327b82",
+      "adverseReceipt": {
+        "at": "2026-10-31T15:43:35.431814+00:00",
+        "quoteTime": 1793461414618,
+        "bookHash": "58544f31120090f9937eeb10fb736e62b9099567b5f14a6c4b5f9bd3b9affd6c",
+        "quantity": 2.3,
+        "netBeforeFunding": -3.143462786954972,
+        "exitPrice": 88.13504699999999,
+        "referenceNotional": 199.7482518,
+        "referenceMargin": 19.97482518
+      },
+      "maximumNetBeforeFunding": 0.8965886184350187,
+      "peakNetReceipt": {
+        "at": "2026-10-31T14:30:03.513753+00:00",
+        "quoteTime": 1793457002775,
+        "bookHash": "9c4b24d4f2b6a07d4a8823e9aeacc96b0b0efe0e4178494d5b7e804f62eee44c",
+        "quantity": 2.3,
+        "netBeforeFunding": 0.8965886184350187,
+        "exitPrice": 86.37929299999999,
+        "referenceNotional": 199.7482518,
+        "referenceMargin": 19.97482518
+      },
+      "minimumNetBeforeFunding": -3.143462786954972,
+      "troughNetReceipt": {
+        "at": "2026-10-31T15:43:35.431814+00:00",
+        "quoteTime": 1793461414618,
+        "bookHash": "58544f31120090f9937eeb10fb736e62b9099567b5f14a6c4b5f9bd3b9affd6c",
+        "quantity": 2.3,
+        "netBeforeFunding": -3.143462786954972,
+        "exitPrice": 88.13504699999999,
+        "referenceNotional": 199.7482518,
+        "referenceMargin": 19.97482518
+      },
+      "lastEvidenceQuoteTime": 1793467182739,
+      "favorableReceipt": {
+        "at": "2026-10-31T14:30:03.513753+00:00",
+        "quoteTime": 1793457002775,
+        "bookHash": "9c4b24d4f2b6a07d4a8823e9aeacc96b0b0efe0e4178494d5b7e804f62eee44c",
+        "quantity": 2.3,
+        "netBeforeFunding": 0.8965886184350187,
+        "exitPrice": 86.37929299999999,
+        "referenceNotional": 199.7482518,
+        "referenceMargin": 19.97482518
+      },
+      "quoteGap": true
+    }
+  ],
+  "topReferencePaths": [
+    {
+      "id": "github-portfolio-v3-7486",
+      "eventId": 7486,
+      "symbol": "NEAR",
+      "wallet": "0x656479bffc5ae168ff19c11c6ed6b8b2d90261fc",
+      "direction": "long",
+      "signalClass": "add_scalp",
+      "tierClaim": "GENIUS",
+      "sourceLeverage": 10,
+      "selectedLeverage": 10,
+      "referenceEntry": 4.4457413,
+      "referenceQuantity": 44.9,
+      "referenceNotional": 199.61378437,
+      "referenceMargin": 19.961378437,
+      "referenceQuoteTime": 1793458087507,
+      "entryObservedAt": "2026-10-31T14:48:07.938891+00:00",
+      "trackingStartedAt": "2026-10-31T14:48:08.557463+00:00",
+      "coverageStart": "2026-10-31T14:48:08.557463+00:00",
+      "preStartPathUnknown": false,
+      "status": "observing",
+      "identityVerified": false,
+      "scope": "Initial observed exposure only; source adds/reductions annotated, not claimed proportional fills. Independent of scalp exits. Funding/liquidation excluded.",
+      "maximumFavorablePriceReturn": 0.02192181087999875,
+      "maximumAdversePriceReturn": -0.005655142371869364,
+      "hits": {
+        "notional": {},
+        "margin": {
+          "5": {
+            "at": "2026-10-31T15:38:07.094016+00:00",
+            "quoteTime": 1793461086766,
+            "bookHash": "40330f099fe008b5548a7c687e35392451d51a222d73f0306be3c1aed4cf7f24",
+            "quantity": 44.9,
+            "netBeforeFunding": 1.0626562235029877,
+            "exitPrice": 4.4734221,
+            "referenceNotional": 199.61378437,
+            "referenceMargin": 19.961378437,
+            "denominator": 19.961378437
+          },
+          "10": {
+            "at": "2026-10-31T16:24:05.204251+00:00",
+            "quoteTime": 1793463844562,
+            "bookHash": "d9257b9d9d5769ff89d7a91f1afb23542acb35102d6df159245a24092838d992",
+            "quantity": 44.9,
+            "netBeforeFunding": 2.2462979849150027,
+            "exitPrice": 4.4997957,
+            "referenceNotional": 199.61378437,
+            "referenceMargin": 19.961378437,
+            "denominator": 19.961378437
+          }
+        }
+      },
+      "sourceEvents": [],
+      "observations": 739,
+      "quoteTime": 1793467209300,
+      "observedAt": "2026-10-31T17:20:09.801596+00:00",
+      "currentNetBeforeFunding": 2.7036141200060038,
+      "currentPriceReturn": 0.015466194580417907,
+      "bookHash": "1804a7918c64e956ee35bfd42947036c91583fd35fbea4f2f6f00b3dab193d2e",
+      "adverseReceipt": {
+        "at": "2026-10-31T15:04:44.136420+00:00",
+        "quoteTime": 1793459083747,
+        "bookHash": "fd37e9f9f2459be8494d021fdcc6e05ab4b95f7fb03dce25f27ede8cbaf6890a",
+        "quantity": 44.9,
+        "netBeforeFunding": -1.5063844177435013,
+        "exitPrice": 4.4161794,
+        "referenceNotional": 199.61378437,
+        "referenceMargin": 19.961378437
+      },
+      "maximumNetBeforeFunding": 3.9903761863895064,
+      "peakNetReceipt": {
+        "at": "2026-10-31T16:55:02.047783+00:00",
+        "quoteTime": 1793465701346,
+        "bookHash": "5f821236c2e11e374db1257cc453d6d3949d4c431c5cf07905f8139373be4b7b",
+        "quantity": 44.9,
+        "netBeforeFunding": 3.9903761863895064,
+        "exitPrice": 4.5386568,
+        "referenceNotional": 199.61378437,
+        "referenceMargin": 19.961378437
+      },
+      "minimumNetBeforeFunding": -1.5063844177435013,
+      "troughNetReceipt": {
+        "at": "2026-10-31T15:04:44.136420+00:00",
+        "quoteTime": 1793459083747,
+        "bookHash": "fd37e9f9f2459be8494d021fdcc6e05ab4b95f7fb03dce25f27ede8cbaf6890a",
+        "quantity": 44.9,
+        "netBeforeFunding": -1.5063844177435013,
+        "exitPrice": 4.4161794,
+        "referenceNotional": 199.61378437,
+        "referenceMargin": 19.961378437
+      },
+      "lastEvidenceQuoteTime": 1793467182739,
+      "favorableReceipt": {
+        "at": "2026-10-31T16:55:02.047783+00:00",
+        "quoteTime": 1793465701346,
+        "bookHash": "5f821236c2e11e374db1257cc453d6d3949d4c431c5cf07905f8139373be4b7b",
+        "quantity": 44.9,
+        "netBeforeFunding": 3.9903761863895064,
+        "exitPrice": 4.5386568,
+        "referenceNotional": 199.61378437,
+        "referenceMargin": 19.961378437
+      },
+      "quoteGap": true
+    },
+    {
+      "id": "github-portfolio-v3-7482",
+      "eventId": 7482,
+      "symbol": "HYPE",
+      "wallet": "0x5232a3f9ebcdbd9cc0e1867a89e646694deba9dc",
+      "direction": "long",
+      "signalClass": "fresh",
+      "tierClaim": "SMART",
+      "sourceLeverage": 10,
+      "selectedLeverage": 10,
+      "referenceEntry": 86.72263599999998,
+      "referenceQuantity": 2.3,
+      "referenceNotional": 199.46206279999993,
+      "referenceMargin": 19.94620627999999,
+      "referenceQuoteTime": 1793456844681,
+      "entryObservedAt": "2026-10-31T14:27:25.191126+00:00",
+      "trackingStartedAt": "2026-10-31T14:27:25.607250+00:00",
+      "coverageStart": "2026-10-31T14:27:25.607250+00:00",
+      "preStartPathUnknown": false,
+      "status": "observing",
+      "identityVerified": false,
+      "scope": "Initial observed exposure only; source adds/reductions annotated, not claimed proportional fills. Independent of scalp exits. Funding/liquidation excluded.",
+      "maximumFavorablePriceReturn": 0.015155950748545356,
+      "maximumAdversePriceReturn": -0.0049656700933304035,
+      "hits": {
+        "notional": {},
+        "margin": {
+          "5": {
+            "at": "2026-10-31T15:17:13.349835+00:00",
+            "quoteTime": 1793459833004,
+            "bookHash": "383ec164e9f5a4e59df53c83d37faa9bcf2990d2b8c38a0f8b592ca3dbbf06f3",
+            "quantity": 2.3,
+            "netBeforeFunding": 1.0206174403600232,
+            "exitPrice": 87.24466799999999,
+            "referenceNotional": 199.46206279999993,
+            "referenceMargin": 19.94620627999999,
+            "denominator": 19.94620627999999
+          },
+          "10": {
+            "at": "2026-10-31T15:36:43.769313+00:00",
+            "quoteTime": 1793461003012,
+            "bookHash": "23c37b16adbbe97a03a710d7a9811c8dfedf14724f7ec645033683fa15473c87",
+            "quantity": 2.3,
+            "netBeforeFunding": 2.132203801300043,
+            "exitPrice": 87.728184,
+            "referenceNotional": 199.46206279999993,
+            "referenceMargin": 19.94620627999999,
+            "denominator": 19.94620627999999
+          }
+        }
+      },
+      "sourceEvents": [],
+      "observations": 844,
+      "quoteTime": 1793467209300,
+      "observedAt": "2026-10-31T17:20:09.768261+00:00",
+      "currentNetBeforeFunding": 1.4937306435700497,
+      "currentPriceReturn": 0.009401974358805432,
+      "bookHash": "bf92e5fe474644f26f289acdafa76f5e2abc097efaaed3010e51dc8609327b82",
+      "adverseReceipt": {
+        "at": "2026-10-31T14:30:03.513753+00:00",
+        "quoteTime": 1793457002775,
+        "bookHash": "9c4b24d4f2b6a07d4a8823e9aeacc96b0b0efe0e4178494d5b7e804f62eee44c",
+        "quantity": 2.3,
+        "netBeforeFunding": -1.3679152360399511,
+        "exitPrice": 86.205708,
+        "referenceNotional": 199.46206279999993,
+        "referenceMargin": 19.94620627999999
+      },
+      "maximumNetBeforeFunding": 2.63976699503506,
+      "peakNetReceipt": {
+        "at": "2026-10-31T15:43:35.431814+00:00",
+        "quoteTime": 1793461414618,
+        "bookHash": "58544f31120090f9937eeb10fb736e62b9099567b5f14a6c4b5f9bd3b9affd6c",
+        "quantity": 2.3,
+        "netBeforeFunding": 2.63976699503506,
+        "exitPrice": 87.948963,
+        "referenceNotional": 199.46206279999993,
+        "referenceMargin": 19.94620627999999
+      },
+      "minimumNetBeforeFunding": -1.3679152360399511,
+      "troughNetReceipt": {
+        "at": "2026-10-31T14:30:03.513753+00:00",
+        "quoteTime": 1793457002775,
+        "bookHash": "9c4b24d4f2b6a07d4a8823e9aeacc96b0b0efe0e4178494d5b7e804f62eee44c",
+        "quantity": 2.3,
+        "netBeforeFunding": -1.3679152360399511,
+        "exitPrice": 86.205708,
+        "referenceNotional": 199.46206279999993,
+        "referenceMargin": 19.94620627999999
+      },
+      "lastEvidenceQuoteTime": 1793467182739,
+      "favorableReceipt": {
+        "at": "2026-10-31T15:43:35.431814+00:00",
+        "quoteTime": 1793461414618,
+        "bookHash": "58544f31120090f9937eeb10fb736e62b9099567b5f14a6c4b5f9bd3b9affd6c",
+        "quantity": 2.3,
+        "netBeforeFunding": 2.63976699503506,
+        "exitPrice": 87.948963,
+        "referenceNotional": 199.46206279999993,
+        "referenceMargin": 19.94620627999999
+      },
+      "quoteGap": true
+    },
+    {
+      "id": "github-portfolio-v3-7513",
+      "eventId": 7513,
+      "symbol": "ZRO",
+      "wallet": "0x0351e63ef46706709e51fd877a5976973a1ed11c",
+      "direction": "short",
+      "signalClass": "add_scalp",
+      "tierClaim": "SMART",
+      "sourceLeverage": 5,
+      "selectedLeverage": 5,
+      "referenceEntry": 1.8096884999999998,
+      "referenceQuantity": 110.5,
+      "referenceNotional": 199.97057925,
+      "referenceMargin": 39.99411585,
+      "referenceQuoteTime": 1793462921694,
+      "entryObservedAt": "2026-10-31T16:08:42.257525+00:00",
+      "trackingStartedAt": "2026-10-31T16:08:42.398359+00:00",
+      "coverageStart": "2026-10-31T16:08:42.398359+00:00",
+      "preStartPathUnknown": false,
+      "status": "observing",
+      "identityVerified": false,
+      "scope": "Initial observed exposure only; source adds/reductions annotated, not claimed proportional fills. Independent of scalp exits. Funding/liquidation excluded.",
+      "maximumFavorablePriceReturn": 0.023036284973905616,
+      "maximumAdversePriceReturn": -0.0031560680194409655,
+      "hits": {
+        "notional": {},
+        "margin": {
+          "5": {
+            "at": "2026-10-31T16:26:58.370971+00:00",
+            "quoteTime": 1793464017721,
+            "bookHash": "b5a8ec43b7fffe66d40cf8c81c1fa8985e342cf65a8767d9031d03826c8cf875",
+            "quantity": 110.5,
+            "netBeforeFunding": 2.075351418399988,
+            "exitPrice": 1.7892875,
+            "referenceNotional": 199.97057925,
+            "referenceMargin": 39.99411585,
+            "denominator": 39.99411585
+          },
+          "10": {
+            "at": "2026-10-31T17:01:39.113504+00:00",
+            "quoteTime": 1793466098698,
+            "bookHash": "90ae0d93129e7b91de4e7e0a5efd60ccfbe188ea9b41291b44e300dc87e9a547",
+            "quantity": 110.5,
+            "netBeforeFunding": 4.022972253560002,
+            "exitPrice": 1.7716698999999998,
+            "referenceNotional": 199.97057925,
+            "referenceMargin": 39.99411585,
+            "denominator": 39.99411585
+          }
+        }
+      },
+      "sourceEvents": [],
+      "observations": 342,
+      "quoteTime": 1793467209300,
+      "observedAt": "2026-10-31T17:20:09.913472+00:00",
+      "currentNetBeforeFunding": 2.075351418399988,
+      "currentPriceReturn": 0.012260949881706009,
+      "bookHash": "b4a73a19ea21ea716472581f80ef450ffe704a118a83a387e1d358346e70e556",
+      "adverseReceipt": {
+        "at": "2026-10-31T16:09:59.091414+00:00",
+        "quoteTime": 1793462997922,
+        "bookHash": "27ab6a17e2be5e7ab030ea57e81d23431e5ccc37f15dd219678a4e24cdd0afcf",
+        "quantity": 110.5,
+        "netBeforeFunding": -1.0120702464274758,
+        "exitPrice": 1.8172153999999996,
+        "referenceNotional": 199.97057925,
+        "referenceMargin": 39.99411585
+      },
+      "maximumNetBeforeFunding": 4.233226775537503,
+      "peakNetReceipt": {
+        "at": "2026-10-31T17:15:42.493367+00:00",
+        "quoteTime": 1793466941727,
+        "bookHash": "1b7e1cf74feb14911c2cfb5d82080930ad3defc49c2a74f254b638b224b4cf95",
+        "quantity": 110.5,
+        "netBeforeFunding": 4.233226775537503,
+        "exitPrice": 1.7697679999999998,
+        "referenceNotional": 199.97057925,
+        "referenceMargin": 39.99411585
+      },
+      "minimumNetBeforeFunding": -1.0120702464274758,
+      "troughNetReceipt": {
+        "at": "2026-10-31T16:09:59.091414+00:00",
+        "quoteTime": 1793462997922,
+        "bookHash": "27ab6a17e2be5e7ab030ea57e81d23431e5ccc37f15dd219678a4e24cdd0afcf",
+        "quantity": 110.5,
+        "netBeforeFunding": -1.0120702464274758,
+        "exitPrice": 1.8172153999999996,
+        "referenceNotional": 199.97057925,
+        "referenceMargin": 39.99411585
+      },
+      "lastEvidenceQuoteTime": 1793467182739,
+      "favorableReceipt": {
+        "at": "2026-10-31T17:15:42.493367+00:00",
+        "quoteTime": 1793466941727,
+        "bookHash": "1b7e1cf74feb14911c2cfb5d82080930ad3defc49c2a74f254b638b224b4cf95",
+        "quantity": 110.5,
+        "netBeforeFunding": 4.233226775537503,
+        "exitPrice": 1.7697679999999998,
+        "referenceNotional": 199.97057925,
+        "referenceMargin": 39.99411585
+      },
+      "quoteGap": true
+    }
+  ]
+}
