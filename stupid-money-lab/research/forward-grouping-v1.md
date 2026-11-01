@@ -1,0 +1,7 @@
+# Forward grouping v1
+
+Effective 2026-11-01T00:20:00Z (October 31 20:20 EDT). Only canonical github-portfolio-v3 entries opened at or after this timestamp qualify. Earlier open or closed paths are excluded. This is an analysis protocol, not a funded strategy change.
+
+Include every accepted entry and loss. Report rejected source events separately, never create retrospective fills. Group by original source signalClass (fresh/add_scalp), claimed cohort, exact claimed wallet, market, side, and UTC entry date. Report all groups, including new and low-count groups; no top-wallet selection. Primary outcome net closed P&L before funding under unchanged baseline exits; secondary observed MFE/MAE and milestone receipts on both initial notional and margin, with gaps flagged unknown. No optimal-peak exits.
+
+Freeze first 50 eligible chronological entries as the initial report window; do not expand to rescue results. Next 50 chronological eligible entries remain holdout; report only after initial window frozen. Repeated wallet/market entries are correlated; report counts of wallet-market-day clusters and equal-cluster summaries alongside entry-weighted summaries. No performance validation from these small counts. Separate fresh/add families; shared bankroll unchanged. No source identity, lawful eligibility, funding or liquidation completeness claim. No new collector or execution deployment implied.
