@@ -1,0 +1,126 @@
+{
+  "cutoff": "2026-11-01T01:13:44.767770+00:00",
+  "portfolio": {
+    "protocolVersion": "split-v4",
+    "families": {
+      "fresh": {
+        "total": 26,
+        "open": 0,
+        "closed": 26,
+        "closedPnlBeforeFunding": -15.245380522590176,
+        "milestones": {
+          "notional": {
+            "5": 0,
+            "10": 0,
+            "20": 0
+          },
+          "margin": {
+            "5": 4,
+            "10": 1,
+            "20": 0
+          }
+        }
+      },
+      "add_scalp": {
+        "total": 178,
+        "open": 7,
+        "closed": 171,
+        "closedPnlBeforeFunding": -84.98849487909659,
+        "milestones": {
+          "notional": {
+            "5": 0,
+            "10": 0,
+            "20": 0
+          },
+          "margin": {
+            "5": 19,
+            "10": 6,
+            "20": 0
+          }
+        }
+      }
+    },
+    "study": "github-portfolio-v3",
+    "initialEquity": 1000,
+    "equity": 895.4102218098255,
+    "realizedBeforeFunding": -100.23387540168676,
+    "openCloseEstimateBeforeFunding": -4.355902788487712,
+    "marginInUse": 296.17448228173333,
+    "available": 599.2357395280922,
+    "openCount": 7,
+    "closedCount": 197,
+    "totalCount": 204,
+    "maxOpen": 20,
+    "targetNotional": 200,
+    "maxPositionNotional": 350,
+    "stalePositions": [],
+    "milestones": {
+      "notional": {
+        "5": {
+          "hit": 0,
+          "total": 204,
+          "unconfirmed": 204
+        },
+        "10": {
+          "hit": 0,
+          "total": 204,
+          "unconfirmed": 204
+        },
+        "20": {
+          "hit": 0,
+          "total": 204,
+          "unconfirmed": 204
+        }
+      },
+      "margin": {
+        "5": {
+          "hit": 23,
+          "total": 204,
+          "unconfirmed": 181
+        },
+        "10": {
+          "hit": 7,
+          "total": 204,
+          "unconfirmed": 197
+        },
+        "20": {
+          "hit": 0,
+          "total": 204,
+          "unconfirmed": 204
+        }
+      }
+    },
+    "feesAssumedBps": 4.5,
+    "fundingComplete": false,
+    "at": "2026-11-01T01:13:44.767695+00:00",
+    "maxDrawdownObserved": 0.10725996386771708
+  },
+  "metrics": {
+    "winRate": 0.30456852791878175,
+    "expectancy": -0.5088013979781054,
+    "profitFactor": 0.3765695667991589,
+    "payoff": 0.8598338441914127
+  },
+  "forwardWindow": {
+    "eligible": 8,
+    "ids": [
+      "github-portfolio-v3-7618",
+      "github-portfolio-v3-7620",
+      "github-portfolio-v3-7621",
+      "github-portfolio-v3-7622",
+      "github-portfolio-v3-7623",
+      "github-portfolio-v3-7624",
+      "github-portfolio-v3-7627",
+      "github-portfolio-v3-7628"
+    ],
+    "closed": 1,
+    "walletMarketDayClusters": 8,
+    "status": "Accruing; no holdout analysis or winner selection"
+  },
+  "sourceActions": {
+    "ADDED": 16
+  },
+  "limitations": [
+    "Funding/liquidation incomplete; source wallet/tier attribution unverified. No verified Genius copies or new historical simulations."
+  ]
+}
