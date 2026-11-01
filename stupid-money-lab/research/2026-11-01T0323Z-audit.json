@@ -1,0 +1,142 @@
+{
+  "cutoff": "2026-11-01T03:22:57.797814+00:00",
+  "portfolio": {
+    "protocolVersion": "split-v4",
+    "families": {
+      "fresh": {
+        "total": 27,
+        "open": 0,
+        "closed": 27,
+        "closedPnlBeforeFunding": -15.873260200063646,
+        "milestones": {
+          "notional": {
+            "5": 0,
+            "10": 0,
+            "20": 0
+          },
+          "margin": {
+            "5": 4,
+            "10": 1,
+            "20": 0
+          }
+        }
+      },
+      "add_scalp": {
+        "total": 190,
+        "open": 4,
+        "closed": 186,
+        "closedPnlBeforeFunding": -98.60687876271004,
+        "milestones": {
+          "notional": {
+            "5": 0,
+            "10": 0,
+            "20": 0
+          },
+          "margin": {
+            "5": 19,
+            "10": 6,
+            "20": 0
+          }
+        }
+      }
+    },
+    "study": "github-portfolio-v3",
+    "initialEquity": 1000,
+    "equity": 883.4038483802995,
+    "realizedBeforeFunding": -114.48013896277368,
+    "openCloseEstimateBeforeFunding": -2.1160126569268924,
+    "marginInUse": 96.47952912499998,
+    "available": 786.9243192552995,
+    "openCount": 4,
+    "closedCount": 213,
+    "totalCount": 217,
+    "maxOpen": 20,
+    "targetNotional": 200,
+    "maxPositionNotional": 350,
+    "stalePositions": [],
+    "milestones": {
+      "notional": {
+        "5": {
+          "hit": 0,
+          "total": 217,
+          "unconfirmed": 217
+        },
+        "10": {
+          "hit": 0,
+          "total": 217,
+          "unconfirmed": 217
+        },
+        "20": {
+          "hit": 0,
+          "total": 217,
+          "unconfirmed": 217
+        }
+      },
+      "margin": {
+        "5": {
+          "hit": 23,
+          "total": 217,
+          "unconfirmed": 194
+        },
+        "10": {
+          "hit": 7,
+          "total": 217,
+          "unconfirmed": 210
+        },
+        "20": {
+          "hit": 0,
+          "total": 217,
+          "unconfirmed": 217
+        }
+      }
+    },
+    "feesAssumedBps": 4.5,
+    "fundingComplete": false,
+    "at": "2026-11-01T03:22:57.797736+00:00",
+    "maxDrawdownObserved": 0.11855183455966352
+  },
+  "metrics": {
+    "winRate": 0.2863849765258216,
+    "expectancy": -0.5374654411397826,
+    "profitFactor": 0.3464088938006476,
+    "payoff": 0.8631828173393189
+  },
+  "forward": {
+    "count": 21,
+    "closed": 17,
+    "pathGaps": 18,
+    "ids": [
+      "github-portfolio-v3-7618",
+      "github-portfolio-v3-7620",
+      "github-portfolio-v3-7621",
+      "github-portfolio-v3-7622",
+      "github-portfolio-v3-7623",
+      "github-portfolio-v3-7624",
+      "github-portfolio-v3-7627",
+      "github-portfolio-v3-7628",
+      "github-portfolio-v3-7631",
+      "github-portfolio-v3-7633",
+      "github-portfolio-v3-7634",
+      "github-portfolio-v3-7635",
+      "github-portfolio-v3-7636",
+      "github-portfolio-v3-7637",
+      "github-portfolio-v3-7641",
+      "github-portfolio-v3-7643",
+      "github-portfolio-v3-7644",
+      "github-portfolio-v3-7645",
+      "github-portfolio-v3-7650",
+      "github-portfolio-v3-7649",
+      "github-portfolio-v3-7653"
+    ],
+    "entriesBeforePublication": [],
+    "duplicateEventIds": [],
+    "marginArithmeticFailures": []
+  },
+  "sourceActions": {
+    "ADDED": 18
+  },
+  "limitations": [
+    "Audit verifies recorded arithmetic and timestamps only, not source identity/fullpath/liquidation or strategy validation. Funding excluded.",
+    "Initial50window incomplete; holdout untouched."
+  ]
+}
