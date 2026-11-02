@@ -58,3 +58,4 @@
 {"at":"2026-11-02T03:28:17.127289+00:00","eventId":8032,"action":"ADDED","tier":"GENIUS","coin":"ZEC","status":"filled","reason":"Standalone add-alert scalp opened"}
 {"at":"2026-11-02T03:32:34.929542+00:00","eventId":8044,"action":"ADDED","tier":"GENIUS","coin":"ETH","status":"skipped","reason":"Source leverage missing, unreadable or above venue limit; no matched-leverage fill"}
 {"at":"2026-11-02T03:39:20.096323+00:00","eventId":8046,"action":"ADDED","tier":"SMART","coin":"HYPE","status":"skipped","reason":"An add-alert scalp for this wallet/market/side is already open; no duplicate exposure"}
+{"at":"2026-11-02T03:41:10.474656+00:00","eventId":8047,"action":"ADDED","tier":"SMART","coin":"HYPE","status":"filled","reason":"Standalone add-alert scalp opened"}
