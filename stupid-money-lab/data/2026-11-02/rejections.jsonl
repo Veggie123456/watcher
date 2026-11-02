@@ -45,3 +45,5 @@
 {"at":"2026-11-02T11:35:49.849361+00:00","eventId":8223,"reason":"History/stale alert; no backdated entry"}
 {"at":"2026-11-02T12:42:35.432286+00:00","eventId":8247,"reason":"An add-alert scalp for this wallet/market/side is already open; no duplicate exposure"}
 {"at":"2026-11-02T13:43:23.014989+00:00","eventId":8281,"reason":"24h wallet/market cooldown"}
+{"at":"2026-11-02T14:04:14.806277+00:00","eventId":8298,"reason":"20 open funded positions maximum"}
+{"at":"2026-11-02T14:04:14.811399+00:00","eventId":8299,"reason":"20 open funded positions maximum"}
