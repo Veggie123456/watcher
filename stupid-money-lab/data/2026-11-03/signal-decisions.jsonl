@@ -50,3 +50,4 @@
 {"at":"2026-11-03T08:09:00.600551+00:00","eventId":8864,"action":"ADDED","tier":"SMART","coin":"XMR","status":"skipped","reason":"History/stale alert; no backdated entry"}
 {"at":"2026-11-03T08:09:00.600672+00:00","eventId":8866,"action":"ADDED","tier":"SMART","coin":"XMR","status":"skipped","reason":"History/stale alert; no backdated entry"}
 {"at":"2026-11-03T08:09:00.600779+00:00","eventId":8868,"action":"ADDED","tier":"SMART","coin":"ETH","status":"skipped","reason":"History/stale alert; no backdated entry"}
+{"at":"2026-11-03T08:11:23.124947+00:00","eventId":8869,"action":"ADDED","tier":"SMART","coin":"HYPE","status":"filled","reason":"Standalone add-alert scalp opened"}
