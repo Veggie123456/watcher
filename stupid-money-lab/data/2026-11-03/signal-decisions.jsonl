@@ -114,3 +114,4 @@
 {"at":"2026-11-03T16:54:30.673983+00:00","eventId":9189,"action":"ADDED","tier":"SMART","coin":"BTC","status":"filled","reason":"Standalone add-alert scalp opened"}
 {"at":"2026-11-03T16:55:09.302794+00:00","eventId":9190,"action":"OPENED","tier":"SMART","coin":"BTC","status":"skipped","reason":"20 open independent scenarios maximum"}
 {"at":"2026-11-03T16:55:09.303014+00:00","eventId":9191,"action":"OPENED","tier":"SMART","coin":"ETH","status":"skipped","reason":"20 open independent scenarios maximum"}
+{"at":"2026-11-03T16:56:26.030988+00:00","eventId":9192,"action":"ADDED","tier":"SMART","coin":"HYPE","status":"skipped","reason":"20 open funded positions maximum"}
