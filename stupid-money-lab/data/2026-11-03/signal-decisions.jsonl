@@ -136,3 +136,4 @@
 {"at":"2026-11-03T21:55:45.718920+00:00","eventId":9338,"action":"ADDED","tier":"GENIUS","coin":"ZEC","status":"skipped","reason":"History/stale alert; no backdated entry"}
 {"at":"2026-11-03T21:55:45.719022+00:00","eventId":9340,"action":"ADDED","tier":"SMART","coin":"HYPE","status":"skipped","reason":"History/stale alert; no backdated entry"}
 {"at":"2026-11-03T21:55:45.719145+00:00","eventId":9343,"action":"ADDED","tier":"SMART","coin":"BTC","status":"skipped","reason":"History/stale alert; no backdated entry"}
+{"at":"2026-11-03T22:04:25.740490+00:00","eventId":9344,"action":"ADDED","tier":"SMART","coin":"ZEC","status":"filled","reason":"Standalone add-alert scalp opened"}
