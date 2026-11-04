@@ -218,3 +218,5 @@
 {"at":"2026-11-04T21:26:32.963263+00:00","eventId":10547,"action":"ADDED","tier":"GENIUS","coin":"ETH","status":"skipped","reason":"History/stale alert; no backdated entry"}
 {"at":"2026-11-04T21:26:32.963327+00:00","eventId":10548,"action":"ADDED","tier":"SMART","coin":"ETH","status":"skipped","reason":"History/stale alert; no backdated entry"}
 {"at":"2026-11-04T21:28:27.926545+00:00","eventId":10549,"action":"ADDED","tier":"GENIUS","coin":"ZRO","status":"filled","reason":"Standalone add-alert scalp opened"}
+{"at":"2026-11-04T21:34:01.279798+00:00","eventId":10551,"action":"ADDED","tier":"GENIUS","coin":"VVV","status":"filled","reason":"Standalone add-alert scalp opened"}
+{"at":"2026-11-04T21:34:01.287231+00:00","eventId":10552,"action":"ADDED","tier":"SMART","coin":"HYPE","status":"filled","reason":"Standalone add-alert scalp opened"}
