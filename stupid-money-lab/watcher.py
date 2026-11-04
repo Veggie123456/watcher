@@ -1,6 +1,7 @@
 """Public-source collector and independent exploratory paper scenarios. No order API."""
 from concurrent.futures import ThreadPoolExecutor, as_completed
 import portfolio
+import genius_copy
 import evidence_audit
 import subprocess, tempfile
 import argparse, datetime as dt, hashlib, json, math, os, pathlib, re, time, urllib.request
@@ -186,6 +187,7 @@ def cycle(state, fetch_source=True):
     state['limitations']=['Exploratory source-alert scenarios; wallet/tier identity unverified. Not frozen Genius research.','One $1000 shared account with separate Fresh and Add-alert scalp sections. $200 target notional, tracked fresh-position adds up to $350. Source leverage matched only when readable and within venue limits; collateral/liquidation unverified.20 total slots; cash and risk gates apply.','4.5bps/side assumed fees, 10bps/side adverse slippage; funding excluded.','Stops sampled at observed books; gaps can exceed risk. No invented fills or historical entries.','GitHub scheduled jobs can be late or skipped; not guaranteed nonstop. Telegram not connected.']
     state.setdefault('pendingSignals',{})
     state.setdefault('signalCoverage',{'since':stamp(),'OPENED':{'observed':0,'SMART':0,'GENIUS':0},'ADDED':{'observed':0,'SMART':0,'GENIUS':0}})
+    previous_events=state.get("events", [])
     events=[]
     if fetch_source:
         try:
@@ -212,6 +214,14 @@ def cycle(state, fetch_source=True):
             state['seen'][key]={'hash':h,'firstObservedAt':old['firstObservedAt'] if old else stamp()}
     active=[s for s in state['studies'] if not s.get('closedAt')]
     coins=set(s['symbol'] for s in active) | excursion_coins(state)
+    copy_events=[e for e in unseen if genius_copy.candidate(e)]
+    copy_positions=state.get("geniusCopy", {}).get("positions", {}).values()
+    if events and previous_events and not ({e["id"] for e in events} & {e["id"] for e in previous_events}):
+        for position in copy_positions:
+            if not position.get("closedAt"):
+                position.setdefault("unresolved", "Public alert windows did not overlap")
+    coins.update(e["coin"] for e in copy_events)
+    coins.update(p["symbol"] for p in copy_positions if not p.get("closedAt"))
     eligible=[]
     for e in sorted(state['pendingSignals'].values(),key=lambda e:(e.get('createdAt',''),e.get('id',0))):
         try:
@@ -237,9 +247,12 @@ def cycle(state, fetch_source=True):
             try:
                 fresh(quotes[s['symbol']]); update(s,quotes[s['symbol']])
             except Exception as ex: append('errors',{'at':stamp(),'scenario':s['id'],'error':str(ex)})
-    if eligible:
+    assets={}
+    if eligible or copy_events:
         try: assets={a['name']:a for a in info({'type':'meta'})['universe']};sizes={k:a['szDecimals'] for k,a in assets.items()}
         except Exception: sizes={}
+    genius_copy.update(state,copy_events,quotes,assets,stamp,millis,fresh,price,append,FEE,SLIP,mark)
+    if eligible:
         for e in eligible:
             try:
                 if e['payload']['action']=='ADDED':
@@ -276,6 +289,9 @@ def cycle(state, fetch_source=True):
     state['updatedAt']=stamp()
     tmp=ROOT/'state.tmp';tmp.write_text(json.dumps(state,separators=(',',':')));tmp.replace(ROOT/'state.json')
     slim={k:v for k,v in state.items() if k not in ('seen','studies','pendingSignals')}
+    copy=state['geniusCopy']
+    slim['geniusCopy']={k:v for k,v in copy.items() if k not in ('positions','history','decisions')}
+    slim['geniusCopy'].update(history=copy.get('history',[]),decisions=copy['decisions'][-50:])
     slim['studies']=[]
     for s in state['studies'][-200:]:
         item={k:v for k,v in s.items() if k not in ('entryBook','exitBook','legs')}
