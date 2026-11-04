@@ -158,3 +158,22 @@
 {"at":"2026-11-04T18:04:05.740412+00:00","eventId":10412,"action":"ADDED","tier":"GENIUS","coin":"LIT","status":"filled","reason":"Standalone add-alert scalp opened"}
 {"at":"2026-11-04T18:06:39.439606+00:00","eventId":10413,"action":"ADDED","tier":"GENIUS","coin":"LIT","status":"filled","reason":"Standalone add-alert scalp opened"}
 {"at":"2026-11-04T18:11:08.553704+00:00","eventId":10416,"action":"ADDED","tier":"SMART","coin":"ZEC","status":"filled","reason":"Standalone add-alert scalp opened"}
+{"at":"2026-11-04T19:50:20.433941+00:00","eventId":10453,"action":"ADDED","tier":"GENIUS","coin":"NEAR","status":"skipped","reason":"History/stale alert; no backdated entry"}
+{"at":"2026-11-04T19:50:20.434149+00:00","eventId":10454,"action":"ADDED","tier":"SMART","coin":"HYPE","status":"skipped","reason":"History/stale alert; no backdated entry"}
+{"at":"2026-11-04T19:50:20.434344+00:00","eventId":10455,"action":"ADDED","tier":"SMART","coin":"HYPE","status":"skipped","reason":"History/stale alert; no backdated entry"}
+{"at":"2026-11-04T19:50:20.434530+00:00","eventId":10457,"action":"ADDED","tier":"GENIUS","coin":"XMR","status":"skipped","reason":"History/stale alert; no backdated entry"}
+{"at":"2026-11-04T19:50:20.434714+00:00","eventId":10458,"action":"ADDED","tier":"GENIUS","coin":"BTC","status":"skipped","reason":"History/stale alert; no backdated entry"}
+{"at":"2026-11-04T19:50:20.434921+00:00","eventId":10459,"action":"OPENED","tier":"GENIUS","coin":"BTC","status":"skipped","reason":"History/stale alert; no backdated entry"}
+{"at":"2026-11-04T19:50:20.435108+00:00","eventId":10460,"action":"ADDED","tier":"GENIUS","coin":"BTC","status":"skipped","reason":"History/stale alert; no backdated entry"}
+{"at":"2026-11-04T19:50:20.435298+00:00","eventId":10462,"action":"OPENED","tier":"GENIUS","coin":"UNI","status":"skipped","reason":"History/stale alert; no backdated entry"}
+{"at":"2026-11-04T19:50:20.435491+00:00","eventId":10465,"action":"ADDED","tier":"GENIUS","coin":"LIT","status":"skipped","reason":"History/stale alert; no backdated entry"}
+{"at":"2026-11-04T19:50:20.435673+00:00","eventId":10469,"action":"ADDED","tier":"SMART","coin":"ZEC","status":"skipped","reason":"History/stale alert; no backdated entry"}
+{"at":"2026-11-04T19:50:20.435883+00:00","eventId":10470,"action":"ADDED","tier":"SMART","coin":"ZEC","status":"skipped","reason":"History/stale alert; no backdated entry"}
+{"at":"2026-11-04T19:50:20.436069+00:00","eventId":10471,"action":"ADDED","tier":"SMART","coin":"SOL","status":"skipped","reason":"History/stale alert; no backdated entry"}
+{"at":"2026-11-04T19:50:20.436250+00:00","eventId":10476,"action":"OPENED","tier":"SMART","coin":"ZEC","status":"skipped","reason":"History/stale alert; no backdated entry"}
+{"at":"2026-11-04T19:50:20.436440+00:00","eventId":10478,"action":"ADDED","tier":"GENIUS","coin":"HYPE","status":"skipped","reason":"History/stale alert; no backdated entry"}
+{"at":"2026-11-04T19:50:20.436621+00:00","eventId":10480,"action":"ADDED","tier":"SMART","coin":"SOL","status":"skipped","reason":"History/stale alert; no backdated entry"}
+{"at":"2026-11-04T19:50:20.436817+00:00","eventId":10481,"action":"ADDED","tier":"SMART","coin":"SOL","status":"skipped","reason":"History/stale alert; no backdated entry"}
+{"at":"2026-11-04T19:50:20.437006+00:00","eventId":10484,"action":"ADDED","tier":"GENIUS","coin":"ETH","status":"skipped","reason":"History/stale alert; no backdated entry"}
+{"at":"2026-11-04T19:50:21.191672+00:00","eventId":10486,"action":"ADDED","tier":"GENIUS","coin":"ETH","status":"filled","reason":"Standalone add-alert scalp opened"}
+{"at":"2026-11-04T19:50:21.202408+00:00","eventId":10487,"action":"ADDED","tier":"GENIUS","coin":"HYPE","status":"filled","reason":"Standalone add-alert scalp opened"}
