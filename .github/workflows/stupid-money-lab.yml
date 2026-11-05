@@ -24,8 +24,13 @@ jobs:
         with:
           ref: main
           fetch-depth: 1
-          sparse-checkout: stupid-money-lab
-          sparse-checkout-cone-mode: true
+          sparse-checkout: |
+            /stupid-money-lab/*.py
+            /stupid-money-lab/state.json
+            /stupid-money-lab/dashboard.json
+            /stupid-money-lab/README.md
+            /stupid-money-lab/data/**/events.jsonl
+          sparse-checkout-cone-mode: false
       - uses: actions/setup-python@v5
         with:
           python-version: '3.12'
