@@ -5,6 +5,7 @@ import re
 STARTING_CASH = 10000
 MAX_OPEN = 50
 ENTRY = 200
+PAPER_LEVERAGE = 5
 ACTIONS = {'OPENED', 'ADDED', 'REDUCED', 'CLOSED'}
 
 
@@ -29,6 +30,7 @@ def update(state, events, quotes, metadata, stamp, millis, fresh, price, append,
         ledger['contributedCapital'] = STARTING_CASH
         ledger['capitalProtocol'] = '10k-50-v1'
     ledger['maxOpen'] = MAX_OPEN
+    ledger['defaultPaperLeverage'] = PAPER_LEVERAGE
     positions = ledger['positions']
     decided = {row['eventId'] for row in ledger['decisions']}
     for event in sorted(filter(candidate, events), key=lambda e: (millis(e['createdAt']), e['id'])):
@@ -61,6 +63,9 @@ def update(state, events, quotes, metadata, stamp, millis, fresh, price, append,
                 raise ValueError('No prospectively copied opening')
             if active and (position.get('unresolved') or millis(event['createdAt']) < millis(position['sourceOpenedAt'])):
                 raise ValueError('Lifecycle unresolved or out of order')
+            leverage = PAPER_LEVERAGE if action == 'OPENED' else position.get('paperLeverage', 1)
+            if action == 'OPENED' and metadata.get(coin, {}).get('maxLeverage', 0) < leverage:
+                raise ValueError('Requested 5x exceeds venue cap or cap unavailable')
             buying_exposure = action in ('OPENED', 'ADDED')
             buy = buying_exposure == (side == 'LONG')
             book = quotes.get(coin)
@@ -94,18 +99,20 @@ def update(state, events, quotes, metadata, stamp, millis, fresh, price, append,
             if buying_exposure and notional < 10:
                 raise ValueError('Below modeled $10 entry minimum')
             cost = notional * fee
-            if buying_exposure and notional + cost > ledger['cash']:
+            if buying_exposure and notional / leverage + cost > ledger['cash']:
                 raise ValueError('Insufficient paper cash')
             if action == 'OPENED':
                 if position:
                     ledger['history'] = [position if row['id'] == position['id'] else row for row in ledger['history']]
                 position = {'id': event['id'], 'wallet': wallet, 'symbol': coin, 'direction': side.lower(),
                             'sourceOpenedAt': event['createdAt'], 'sourceLeverage': p.get('leverage'),
+                            'paperLeverage': leverage, 'marginRequired': 0, 'leverageMode': 'fixed_5x',
                             'openedAt': now, 'quantity': 0, 'basis': 0, 'entryFees': 0, 'realized': 0, 'legs': []}
                 positions[key] = position
                 ledger.setdefault('history', []).append(position.copy() | {'legs': position['legs']})
             if buying_exposure:
-                ledger['cash'] -= notional + cost
+                ledger['cash'] -= notional / leverage + cost
+                position['marginRequired'] = position.get('marginRequired', position['basis'] / leverage) + notional / leverage
                 position['basis'] += notional
                 position['entryFees'] += cost
                 position['quantity'] += quantity
@@ -115,13 +122,15 @@ def update(state, events, quotes, metadata, stamp, millis, fresh, price, append,
                 entry_fees = position['entryFees'] * fraction
                 gross = (notional - basis) * (1 if side == 'LONG' else -1)
                 position['realized'] += gross - cost - entry_fees
-                ledger['cash'] += basis + gross - cost
+                released_margin = position.get('marginRequired', position['basis'] / leverage) * fraction
+                ledger['cash'] += released_margin + gross - cost
+                position['marginRequired'] = position.get('marginRequired', position['basis'] / leverage) - released_margin
                 position['basis'] -= basis
                 position['entryFees'] -= entry_fees
                 position['quantity'] -= quantity
                 if action == 'CLOSED':
                     position['closedAt'] = now
-            receipt.update(status='paper fill', quantity=quantity, price=fill, fee=cost, bookTime=book['time'], filledAt=stamp())
+            receipt.update(status='paper fill', quantity=quantity, price=fill, fee=cost, bookTime=book['time'], paperLeverage=leverage, margin=notional / leverage, filledAt=stamp())
             position['legs'].append(receipt)
         except (KeyError, ValueError, TypeError, OverflowError, IndexError) as exc:
             receipt.update(status='skipped', reason=str(exc))
@@ -184,8 +193,8 @@ def reconcile(state, info, stamp, millis, append):
                     matched = bool(opening and close and not current and len(fills) < 500 and ':' not in market)
                     p['reconciliation'] = {'at': now, 'status': 'corroborated missed full close; observation-price exit pending' if matched else 'unresolved source linkage/history' if not opening else 'position checked; no corroborated missed full close',
                         'sourceOpeningCorroborated': bool(opening), 'venuePosition': current, 'matchingFills': len(relevant),
-                        'historyPossiblyTruncated': len(fills) >= 500, 'paperLeverage': 1, 'sourceLeverage': p.get('sourceLeverage'),
-                        'leverageMatched': bool(p.get('sourceLeverage', {}).get('value') == 1)}
+                        'historyPossiblyTruncated': len(fills) >= 500, 'paperLeverage': p.get('paperLeverage', 1), 'sourceLeverage': p.get('sourceLeverage'),
+                        'leverageMatched': bool(p.get('sourceLeverage', {}).get('value') == p.get('paperLeverage', 1))}
                     if matched:
                         p['reconciliation']['closeFill'] = close[0]
             except Exception as exc:
@@ -216,9 +225,9 @@ def close_reconciled(state, quotes, stamp, fresh, price, append, fee, slip):
                        'sourceFill': r['closeFill'], 'observedAt': r['at'], 'filledAt': stamp(),
                        'status': 'late-discovery paper fill', 'quantity': q, 'price': fill, 'fee': cost,
                        'bookTime': b['time'], 'paperLeverage': 1, 'sourceLeverage': p.get('sourceLeverage')}
-            ledger['cash'] += p['basis'] + gross - cost
+            ledger['cash'] += p.get('marginRequired', p['basis'] / p.get('paperLeverage', 1)) + gross - cost
             p['realized'] += gross - cost - p['entryFees']
-            p.update(quantity=0, basis=0, entryFees=0, closedAt=receipt['filledAt'], openPnl=0,
+            p.update(quantity=0, basis=0, entryFees=0, marginRequired=0, closedAt=receipt['filledAt'], openPnl=0,
                      exitReason='Venue full close corroborated after monitoring gap; observation quote')
             p['legs'].append(receipt)
             ledger['decisions'].append(receipt)
