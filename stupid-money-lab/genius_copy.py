@@ -34,7 +34,10 @@ def update(state, events, quotes, metadata, stamp, millis, fresh, price, append,
     positions = ledger['positions']
     decided = {row['eventId'] for row in ledger['decisions']}
     for event in sorted(filter(candidate, events), key=lambda e: (millis(e['createdAt']), e['id'])):
-        if event['id'] in decided:
+        ep = event.get('payload', {})
+        target = positions.get(f"{str(ep.get('wallet', '')).lower()}:{event.get('coin')}:{ep.get('side')}")
+        exit_recovery = ep.get('action') in ('CLOSED', 'REDUCED') and target and not target.get('closedAt') and not any(l.get('eventId') == event['id'] for l in target.get('legs', []))
+        if event['id'] in decided and not exit_recovery:
             continue
         decided.add(event['id'])
         p = event['payload']
@@ -48,8 +51,14 @@ def update(state, events, quotes, metadata, stamp, millis, fresh, price, append,
         try:
             if not re.fullmatch(r'0x[0-9a-f]{40}', wallet) or side not in ('LONG', 'SHORT'):
                 raise ValueError('Missing full source address or direction')
-            if not -1000 <= millis(now) - millis(event['createdAt']) <= 120000:
-                raise ValueError('Outside 120-second observation window')
+            age = millis(now) - millis(event['createdAt'])
+            if age < -1000 or (action in ('OPENED', 'ADDED') and age > 120000):
+                raise ValueError('Outside 120-second entry observation window')
+            if action in ('REDUCED', 'CLOSED'):
+                receipt['exitDiscoveryAt'] = now
+                receipt['sourcePublicationAt'] = event['createdAt']
+                receipt['lateDiscovery'] = age > 120000
+                receipt['exitPolicy'] = 'Current observed book; never backdated to source close'
             if p.get('flippedFrom'):
                 old = positions.get(f"{wallet}:{coin}:{p['flippedFrom']}")
                 if old and not old.get('closedAt'):
@@ -61,7 +70,7 @@ def update(state, events, quotes, metadata, stamp, millis, fresh, price, append,
                 raise ValueError('Overlapping opening for the same address, market and side')
             if action != 'OPENED' and not active:
                 raise ValueError('No prospectively copied opening')
-            if active and (position.get('unresolved') or millis(event['createdAt']) < millis(position['sourceOpenedAt'])):
+            if active and ((position.get('unresolved') and action != 'CLOSED') or millis(event['createdAt']) < millis(position['sourceOpenedAt'])):
                 raise ValueError('Lifecycle unresolved or out of order')
             leverage = PAPER_LEVERAGE if action == 'OPENED' else position.get('paperLeverage', 1)
             if action == 'OPENED' and metadata.get(coin, {}).get('maxLeverage', 0) < leverage:
