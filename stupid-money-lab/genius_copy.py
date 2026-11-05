@@ -143,3 +143,87 @@ def update(state, events, quotes, metadata, stamp, millis, fresh, price, append,
     current = {p['id']: p for p in positions.values()}
     ledger['history'] = [current.get(p['id'], p) for p in ledger.get('history', [])]
     ledger['updatedAt'] = now
+
+
+def reconcile(state, info, stamp, millis, append):
+    """Read-only venue recovery. Empty wallets never prove a missed close."""
+    from concurrent.futures import ThreadPoolExecutor
+    ledger = state.get('geniusCopy', {})
+    now = stamp()
+    if millis(now) - millis(ledger.get('reconciledAt', '1970-01-01T00:00:00+00:00')) < 300000:
+        return
+    positions = [p for p in ledger.get('positions', {}).values() if not p.get('closedAt')]
+    wallets = sorted({p['wallet'] for p in positions})
+    def read(wallet):
+        start = int(min(millis(p['sourceOpenedAt']) for p in positions if p['wallet'] == wallet)) - 120000
+        account = info({'type': 'clearinghouseState', 'user': wallet})
+        fills = info({'type': 'userFillsByTime', 'user': wallet, 'startTime': start, 'endTime': int(millis(now)), 'aggregateByTime': False})
+        if not isinstance(account.get('assetPositions'), list) or not isinstance(fills, list):
+            raise ValueError('Invalid venue response')
+        return account, fills
+    with ThreadPoolExecutor(max_workers=6) as pool:
+        futures = {w: pool.submit(read, w) for w in wallets}
+        for wallet, future in futures.items():
+            try:
+                account, fills = future.result()
+                raw = {'at': now, 'wallet': wallet, 'account': account, 'fills': fills, 'historyPossiblyTruncated': len(fills) >= 500}
+                append('wallet-reconciliation', raw)
+                for p in [p for p in positions if p['wallet'] == wallet]:
+                    market = p['symbol']
+                    relevant = sorted([f for f in fills if f.get('coin') == market], key=lambda f: f['time'])
+                    opening = [f for f in relevant if abs(f['time'] - millis(p['sourceOpenedAt'])) <= 120000 and f.get('dir') == ('Open Long' if p['direction'] == 'long' else 'Open Short')]
+                    current = next((a['position'] for a in account['assetPositions'] if a.get('position', {}).get('coin') == market), None)
+                    close = []
+                    for f in relevant:
+                        if f['time'] < max(millis(p['sourceOpenedAt']), millis(p.get('openedAt', p['sourceOpenedAt'])), max([millis(l['filledAt']) for l in p.get('legs', []) if l.get('filledAt')] or [0])) or not str(f.get('dir', '')).startswith('Close'):
+                            continue
+                        start = float(f.get('startPosition', 0))
+                        end = start + float(f['sz']) * (1 if f['side'] == 'B' else -1)
+                        if (start > 0) == (p['direction'] == 'long') and start != 0 and start * end <= 0:
+                            close.append(f)
+                    matched = bool(opening and close and not current and len(fills) < 500 and ':' not in market)
+                    p['reconciliation'] = {'at': now, 'status': 'corroborated missed full close; observation-price exit pending' if matched else 'unresolved source linkage/history' if not opening else 'position checked; no corroborated missed full close',
+                        'sourceOpeningCorroborated': bool(opening), 'venuePosition': current, 'matchingFills': len(relevant),
+                        'historyPossiblyTruncated': len(fills) >= 500, 'paperLeverage': 1, 'sourceLeverage': p.get('sourceLeverage'),
+                        'leverageMatched': bool(p.get('sourceLeverage', {}).get('value') == 1)}
+                    if matched:
+                        p['reconciliation']['closeFill'] = close[0]
+            except Exception as exc:
+                append('wallet-reconciliation', {'at': now, 'wallet': wallet, 'error': str(exc)})
+                for p in positions:
+                    if p['wallet'] == wallet:
+                        p['reconciliation'] = {'at': now, 'status': 'venue read failed', 'error': str(exc)}
+    ledger['reconciledAt'] = now
+
+
+def close_reconciled(state, quotes, stamp, fresh, price, append, fee, slip):
+    """Prospective late-discovery exit, never the historical source fill price."""
+    ledger = state.get('geniusCopy', {})
+    for p in ledger.get('positions', {}).values():
+        r = p.get('reconciliation', {})
+        if p.get('closedAt') or not r.get('closeFill') or not r.get('sourceOpeningCorroborated'):
+            continue
+        try:
+            b = quotes[p['symbol']]
+            fresh(b)
+            q = p['quantity']
+            fill = price(b['levels'][0 if p['direction'] == 'long' else 1], q) * (1-slip if p['direction'] == 'long' else 1+slip)
+            notional = q * fill
+            cost = notional * fee
+            gross = (notional-p['basis']) * (1 if p['direction'] == 'long' else -1)
+            receipt = {'eventId': 'venue-close-'+str(r['closeFill']['tid']), 'action': 'CLOSED',
+                       'origin': 'venue_reconciliation', 'sourceFillTime': r['closeFill']['time'],
+                       'sourceFill': r['closeFill'], 'observedAt': r['at'], 'filledAt': stamp(),
+                       'status': 'late-discovery paper fill', 'quantity': q, 'price': fill, 'fee': cost,
+                       'bookTime': b['time'], 'paperLeverage': 1, 'sourceLeverage': p.get('sourceLeverage')}
+            ledger['cash'] += p['basis'] + gross - cost
+            p['realized'] += gross - cost - p['entryFees']
+            p.update(quantity=0, basis=0, entryFees=0, closedAt=receipt['filledAt'], openPnl=0,
+                     exitReason='Venue full close corroborated after monitoring gap; observation quote')
+            p['legs'].append(receipt)
+            ledger['decisions'].append(receipt)
+            append('genius-copy', {**receipt, 'positionId': p['id'], 'wallet': p['wallet'], 'book': b})
+        except (KeyError, ValueError, TypeError) as exc:
+            r['exitPendingReason'] = str(exc)
+    current = {p['id']: p for p in ledger.get('positions', {}).values()}
+    ledger['history'] = [current.get(p['id'], p) for p in ledger.get('history', [])]
