@@ -194,3 +194,5 @@
 {"at":"2026-11-05T14:59:32.868285+00:00","eventId":11003,"action":"OPENED","tier":"GENIUS","coin":"BTC","status":"filled","reason":"Fresh opening recorded"}
 {"at":"2026-11-05T15:01:05.130830+00:00","eventId":11008,"action":"OPENED","tier":"SMART","coin":"HYPE","status":"skipped","reason":"20 open independent scenarios maximum"}
 {"at":"2026-11-05T15:02:35.672617+00:00","eventId":11020,"action":"OPENED","tier":"GENIUS","coin":"ZEC","status":"skipped","reason":"20 open independent scenarios maximum"}
+{"at":"2026-11-05T15:05:41.412020+00:00","eventId":11040,"action":"OPENED","tier":"GENIUS","coin":"BTC","status":"skipped","reason":"20 open independent scenarios maximum"}
+{"at":"2026-11-05T15:05:42.065966+00:00","eventId":11041,"action":"ADDED","tier":"GENIUS","coin":"BTC","status":"skipped","reason":"20 open funded positions maximum"}
