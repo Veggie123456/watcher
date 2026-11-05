@@ -245,3 +245,66 @@ def close_reconciled(state, quotes, stamp, fresh, price, append, fee, slip):
             r['exitPendingReason'] = str(exc)
     current = {p['id']: p for p in ledger.get('positions', {}).values()}
     ledger['history'] = [current.get(p['id'], p) for p in ledger.get('history', [])]
+
+
+def archived_exit_events(state, root, stamp, millis, append, byte_limit=32000000):
+    """Incrementally review original saved feed cards; never claim unseen history."""
+    import json
+    from pathlib import Path
+    ledger = state.get('geniusCopy', {})
+    now = stamp()
+    if millis(now)-millis(ledger.get('archiveExitScanAt', '1970-01-01T00:00:00+00:00')) < 300000:
+        return []
+    active = [p for p in ledger.get('positions', {}).values() if not p.get('closedAt')]
+    if not active:
+        return []
+    targets = {(p['wallet'].lower(), p['symbol'], p['direction'].upper()): p for p in active}
+    earliest = min(p['sourceOpenedAt'][:10] for p in active)
+    files = [p for p in sorted((Path(root)/'data').glob('*/events.jsonl')) if p.parent.name >= earliest]
+    cursors = ledger.setdefault('archiveExitCursors', {})
+    used, cards, matches, errors = 0, 0, {}, []
+    for path in files:
+        key = str(path.relative_to(root))
+        offset = cursors.get(key, 0)
+        if path.stat().st_size < offset:
+            offset = 0
+        with path.open('rb') as stream:
+            stream.seek(offset)
+            while used < byte_limit:
+                before = stream.tell()
+                line = stream.readline(1500001)
+                if not line:
+                    break
+                used += len(line)
+                if not line.endswith(b'\n'):
+                    errors.append(key+': incomplete or oversized row; cursor not advanced')
+                    stream.seek(before)
+                    break
+                try:
+                    row = json.loads(line)
+                    e = row.get('event', {})
+                    p = e.get('payload', {})
+                    target = targets.get((str(p.get('wallet', '')).lower(), e.get('coin'), p.get('side')))
+                    if row.get('kind') == 'first_observation' and p.get('cohort') == 'GENIUS' and p.get('action') in ('CLOSED', 'REDUCED'):
+                        cards += 1
+                        if target and millis(e['createdAt']) >= millis(target['sourceOpenedAt']) and not any(l.get('eventId') == e['id'] for l in target.get('legs', [])):
+                            matches[e['id']] = e
+                except (ValueError, KeyError, TypeError) as exc:
+                    errors.append(key+': '+str(exc))
+                cursors[key] = stream.tell()
+        if used >= byte_limit:
+            break
+    for e in ledger.get('archiveExitPending', {}).values():
+        p = e.get('payload', {})
+        target = targets.get((str(p.get('wallet', '')).lower(), e.get('coin'), p.get('side')))
+        if target and millis(e['createdAt']) >= millis(target['sourceOpenedAt']) and not any(l.get('eventId') == e['id'] for l in target.get('legs', [])):
+            matches[e['id']] = e
+    ledger['archiveExitPending'] = {str(k): e for k, e in matches.items()}
+    pending = any(cursors.get(str(p.relative_to(root)), 0) < p.stat().st_size for p in files)
+    report = {'at': now, 'scope': 'Original saved website feed only; uncaptured source history unknown',
+              'files': len(files), 'bytesRead': used, 'exitCardsReviewed': cards,
+              'matchingExitIds': list(matches), 'backlogRemaining': pending, 'errors': errors[:20]}
+    ledger['archiveExitScan'] = report
+    ledger['archiveExitScanAt'] = now
+    append('archive-exit-audits', report)
+    return sorted(matches.values(), key=lambda e: (e['createdAt'], e['id']))
