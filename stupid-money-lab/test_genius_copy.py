@@ -25,7 +25,7 @@ assert [leg['action'] for leg in ledger['history'][0]['legs']]==['OPENED','ADDED
 ledger = run((8,'REDUCED','GENIUS',{}))
 assert ledger['history'][1]['unresolved']
 ledger = run((9,'CLOSED','GENIUS',{}))
-assert ledger['cash']==9960 and not ledger['history'][1].get('closedAt')
+assert ledger['cash']==10000 and ledger['history'][1].get('closedAt')
 print('Lifecycle, cash, orphan, Smart exclusion, reopen and unresolved checks passed')
 
 state.clear()
@@ -57,3 +57,21 @@ ledger=run((204,'OPENED','GENIUS',{}))
 assert ledger['decisions'][-1]['status']=='skipped'
 genius_copy.PAPER_LEVERAGE=5
 print('Fixed leverage margin, unchanged notional, retained add leverage, close release and venue-cap checks passed')
+
+state.clear()
+ledger=run((301,'OPENED','GENIUS',{}))
+original_now=now
+source_close=(dt.datetime.fromisoformat(now)+dt.timedelta(minutes=1)).isoformat()
+now=(dt.datetime.fromisoformat(now)+dt.timedelta(minutes=10)).isoformat()
+event=dict(id=302,coin='BTC',createdAt=source_close,payload=dict(wallet=wallet,cohort='GENIUS',side='LONG',action='CLOSED'))
+def late_exit():
+    genius_copy.update(state,[event],{'BTC':book},{'BTC':{'szDecimals':3,'maxLeverage':50}},lambda:now,
+       lambda s:dt.datetime.fromisoformat(s).timestamp()*1000,lambda b:None,
+       lambda levels,q:110,lambda *a:None,0,0,lambda s,b:(110,0))
+late_exit()
+assert ledger['history'][0]['closedAt']==now and ledger['cash']==10020
+assert ledger['history'][0]['legs'][-1]['lateDiscovery']
+late_exit()
+assert ledger['cash']==10020 and len(ledger['history'][0]['legs'])==2
+now=original_now
+print('Missed-close discovery-time pricing and duplicate recovery checks passed')
