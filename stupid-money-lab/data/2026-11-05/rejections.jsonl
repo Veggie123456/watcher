@@ -125,3 +125,8 @@
 {"at":"2026-11-05T17:33:50.189128+00:00","eventId":11505,"reason":"History/stale alert; no backdated entry"}
 {"at":"2026-11-05T18:03:47.712980+00:00","eventId":11525,"reason":"24h wallet/market cooldown"}
 {"at":"2026-11-05T18:04:32.792317+00:00","eventId":11528,"reason":"Source leverage missing, unreadable or above venue limit; no matched-leverage fill"}
+{"at":"2026-11-05T18:33:48.228034+00:00","eventId":11550,"reason":"History/stale alert; no backdated entry"}
+{"at":"2026-11-05T18:33:48.903843+00:00","eventId":11553,"reason":"20 open funded positions maximum"}
+{"at":"2026-11-05T18:33:48.908335+00:00","eventId":11554,"reason":"20 open funded positions maximum"}
+{"at":"2026-11-05T18:33:48.912721+00:00","eventId":11555,"reason":"20 open funded positions maximum"}
+{"at":"2026-11-05T18:33:48.917111+00:00","eventId":11556,"reason":"20 open funded positions maximum"}
