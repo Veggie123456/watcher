@@ -2,7 +2,8 @@
 import math
 import re
 
-STARTING_CASH = 4000
+STARTING_CASH = 10000
+MAX_OPEN = 50
 ENTRY = 200
 ACTIONS = {'OPENED', 'ADDED', 'REDUCED', 'CLOSED'}
 
@@ -17,7 +18,17 @@ def update(state, events, quotes, metadata, stamp, millis, fresh, price, append,
     now = stamp()
     ledger = state.setdefault('geniusCopy', {
         'startedAt': now, 'cash': STARTING_CASH, 'positions': {}, 'decisions': [],
+        'contributedCapital': STARTING_CASH,
     })
+    # Idempotent simulated capital change; prior fills and P&L stay intact.
+    if ledger.get('capitalProtocol') != '10k-50-v1':
+        prior = ledger.get('contributedCapital', 4000)
+        amount = STARTING_CASH - prior
+        ledger['cash'] += amount
+        ledger.setdefault('capitalFlows', []).append({'at': now, 'amount': amount, 'reason': 'User authorized simulated bankroll expansion', 'capitalAfter': STARTING_CASH})
+        ledger['contributedCapital'] = STARTING_CASH
+        ledger['capitalProtocol'] = '10k-50-v1'
+    ledger['maxOpen'] = MAX_OPEN
     positions = ledger['positions']
     decided = {row['eventId'] for row in ledger['decisions']}
     for event in sorted(filter(candidate, events), key=lambda e: (millis(e['createdAt']), e['id'])):
@@ -42,6 +53,8 @@ def update(state, events, quotes, metadata, stamp, millis, fresh, price, append,
                 if old and not old.get('closedAt'):
                     old['unresolved'] = 'Source reported a side flip without a separately matched close'
                 raise ValueError('Side flip requires independently matched closing and opening legs')
+            if action == 'OPENED' and sum(not row.get('closedAt') for row in positions.values()) >= MAX_OPEN:
+                raise ValueError('50 open paper position limit')
             if action == 'OPENED' and active:
                 raise ValueError('Overlapping opening for the same address, market and side')
             if action != 'OPENED' and not active:
