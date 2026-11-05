@@ -215,6 +215,8 @@ def cycle(state, fetch_source=True):
     active=[s for s in state['studies'] if not s.get('closedAt')]
     coins=set(s['symbol'] for s in active) | excursion_coins(state)
     copy_events=list({e['id']:e for e in unseen + [e for e in events if e.get('payload', {}).get('action') in ('REDUCED','CLOSED')] if genius_copy.candidate(e)}.values())
+    if fetch_source:
+        copy_events=list({e['id']:e for e in copy_events + genius_copy.archived_exit_events(state,ROOT,stamp,millis,append)}.values())
     copy_positions=state.get("geniusCopy", {}).get("positions", {}).values()
     if events and previous_events and not ({e["id"] for e in events} & {e["id"] for e in previous_events}):
         for position in copy_positions:
