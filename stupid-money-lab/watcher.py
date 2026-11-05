@@ -308,7 +308,7 @@ def cycle(state, fetch_source=True):
 def publish_checkpoint():
     # A separate index builds a data-only commit atop current main. Never rebase
     # the running checkout or overwrite unrelated code/scanner files.
-    paths=['stupid-money-lab/data','stupid-money-lab/state.json','stupid-money-lab/dashboard.json']
+    paths=['stupid-money-lab/state.json','stupid-money-lab/dashboard.json'] + [str(p.relative_to(ROOT.parent)) for p in (ROOT/'data').rglob('*') if p.is_file()]
     identity=['git','-c','user.name=Stupid Money research collector','-c','user.email=41898282+github-actions[bot]@users.noreply.github.com']
     def run(args,env=None):
         r=subprocess.run(args,cwd=ROOT.parent,env=env,stdout=subprocess.PIPE,stderr=subprocess.PIPE,timeout=30)
