@@ -17,13 +17,26 @@ def run(*rows, quotes=None):
 ledger = run((1,'OPENED','SMART',{}),(2,'ADDED','GENIUS',{}),(3,'OPENED','GENIUS',{}),
              (4,'ADDED','GENIUS',{'addedMarginUsd':100,'marginUsd':300}),
              (5,'REDUCED','GENIUS',{'closedPct':50}))
-assert ledger['cash']==3850
+assert ledger['cash']==9850
 assert ledger['history'][0]['quantity']==1.5
 ledger = run((6,'CLOSED','GENIUS',{}),(7,'OPENED','GENIUS',{}))
-assert ledger['cash']==3800 and ledger['history'][0]['closedAt']
+assert ledger['cash']==9800 and ledger['history'][0]['closedAt']
 assert [leg['action'] for leg in ledger['history'][0]['legs']]==['OPENED','ADDED','REDUCED','CLOSED']
 ledger = run((8,'REDUCED','GENIUS',{}))
 assert ledger['history'][1]['unresolved']
 ledger = run((9,'CLOSED','GENIUS',{}))
-assert ledger['cash']==3800 and not ledger['history'][1].get('closedAt')
+assert ledger['cash']==9800 and not ledger['history'][1].get('closedAt')
 print('Lifecycle, cash, orphan, Smart exclusion, reopen and unresolved checks passed')
+
+state.clear()
+state['geniusCopy']={'startedAt':'old','cash':3.8,'positions':{},'decisions':[]}
+ledger=run()
+assert ledger['cash']==6003.8
+run()
+assert ledger['cash']==6003.8 and len(ledger['capitalFlows'])==1
+state.clear()
+ledger=run()
+ledger['positions']={str(i):{'id':i,'symbol':'BTC','basis':1,'quantity':1} for i in range(50)}
+ledger=run((100,'OPENED','GENIUS',{}))
+assert ledger['decisions'][-1]['reason']=='50 open paper position limit'
+print('Capital migration idempotence and 50-slot guard passed')
