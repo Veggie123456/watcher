@@ -314,3 +314,5 @@
 {"at":"2026-11-05T18:55:39.032074+00:00","eventId":11570,"action":"ADDED","tier":"GENIUS","coin":"VVV","status":"filled","reason":"Standalone add-alert scalp opened"}
 {"at":"2026-11-05T18:57:08.133473+00:00","eventId":11572,"action":"ADDED","tier":"SMART","coin":"BTC","status":"skipped","reason":"20 open funded positions maximum"}
 {"at":"2026-11-05T19:00:08.396098+00:00","eventId":11573,"action":"ADDED","tier":"SMART","coin":"PUMP","status":"skipped","reason":"20 open funded positions maximum"}
+{"at":"2026-11-05T19:01:39.399238+00:00","eventId":11575,"action":"OPENED","tier":"SMART","coin":"ZEC","status":"skipped","reason":"20 open independent scenarios maximum"}
+{"at":"2026-11-05T19:01:40.010319+00:00","eventId":11574,"action":"ADDED","tier":"SMART","coin":"HYPE","status":"skipped","reason":"20 open funded positions maximum"}
