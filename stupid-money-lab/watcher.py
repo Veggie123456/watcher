@@ -234,6 +234,8 @@ def cycle(state, fetch_source=True):
             coins.add(e['coin']);eligible.append(e)
         except Exception as ex:
             reject(state,e,ex);decision(state,e,'skipped',str(ex));state['pendingSignals'].pop(str(e['id']),None)
+    if fetch_source:
+        genius_copy.reconcile(state,info,stamp,millis,append)
     quotes={}
     with ThreadPoolExecutor(max_workers=8) as pool:
         futures={pool.submit(book,coin):coin for coin in sorted(coins)}
@@ -252,6 +254,7 @@ def cycle(state, fetch_source=True):
         try: assets={a['name']:a for a in info({'type':'meta'})['universe']};sizes={k:a['szDecimals'] for k,a in assets.items()}
         except Exception: sizes={}
     genius_copy.update(state,copy_events,quotes,assets,stamp,millis,fresh,price,append,FEE,SLIP,mark)
+    genius_copy.close_reconciled(state,quotes,stamp,fresh,price,append,FEE,SLIP)
     if eligible:
         for e in eligible:
             try:
