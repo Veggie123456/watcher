@@ -260,7 +260,7 @@ def archived_exit_events(state, root, stamp, millis, append, byte_limit=32000000
         return []
     targets = {(p['wallet'].lower(), p['symbol'], p['direction'].upper()): p for p in active}
     earliest = min(p['sourceOpenedAt'][:10] for p in active)
-    files = [p for p in sorted((Path(root)/'data').glob('*/events.jsonl')) if p.parent.name >= earliest]
+    files = [p for p in sorted((Path(root)/'data').glob('**/events.jsonl')) if p.relative_to(Path(root)/'data').parts[0] >= earliest]
     cursors = ledger.setdefault('archiveExitCursors', {})
     used, cards, matches, errors = 0, 0, {}, []
     for path in files:
