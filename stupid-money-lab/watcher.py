@@ -46,7 +46,8 @@ def parse_events(html):
 
 def append(kind, value):
     day=dt.datetime.now(dt.timezone.utc).strftime('%Y-%m-%d')
-    dest=ROOT/'data'/day/f'{kind}.jsonl';dest.parent.mkdir(parents=True,exist_ok=True)
+    session=os.getenv('GITHUB_RUN_ID', 'local')+'-'+os.getenv('GITHUB_RUN_ATTEMPT', str(os.getpid()))
+    dest=ROOT/'data'/day/'sessions'/session/f'{kind}.jsonl';dest.parent.mkdir(parents=True,exist_ok=True)
     with dest.open('a') as f: f.write(json.dumps(value,separators=(',',':'))+'\n')
 
 def reject(state,e,ex):
@@ -318,7 +319,7 @@ def publish_checkpoint():
             run(['git','fetch','origin','main']);parent=run(['git','rev-parse','FETCH_HEAD'])
             with tempfile.TemporaryDirectory() as td:
                 env={**os.environ,'GIT_INDEX_FILE':str(pathlib.Path(td)/'index')}
-                run(['git','read-tree',parent],env);run(['git','add','--',*paths],env);tree=run(['git','write-tree'],env)
+                run(['git','read-tree',parent],env);run(['git','add','--sparse','--',*paths],env);tree=run(['git','write-tree'],env)
                 if tree==run(['git','rev-parse',parent+'^{tree}']): return True
                 commit=run(identity+['commit-tree',tree,'-p',parent,'-m','Record public paper checkpoint [skip ci]'],env)
                 run(['git','push','origin',commit+':refs/heads/main'])
