@@ -123,3 +123,4 @@
 {"at":"2026-11-05T10:13:38.516269+00:00","eventId":10799,"action":"ADDED","tier":"GENIUS","coin":"ZEC","status":"filled","reason":"Standalone add-alert scalp opened"}
 {"at":"2026-11-05T10:17:05.625240+00:00","eventId":10800,"action":"ADDED","tier":"SMART","coin":"HYPE","status":"filled","reason":"Standalone add-alert scalp opened"}
 {"at":"2026-11-05T10:19:10.388920+00:00","eventId":10801,"action":"ADDED","tier":"GENIUS","coin":"HYPE","status":"filled","reason":"Standalone add-alert scalp opened"}
+{"at":"2026-11-05T10:28:21.786232+00:00","eventId":10803,"action":"ADDED","tier":"GENIUS","coin":"HYPE","status":"skipped","reason":"History/stale alert; no backdated entry"}
