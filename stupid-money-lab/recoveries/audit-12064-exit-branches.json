@@ -1,0 +1,58 @@
+{
+  "kind": "recovered-execution-branch-audit",
+  "auditedAt": "2026-11-06T13:19:28.368806+00:00",
+  "eventId": 12064,
+  "study": "github-portfolio-v3",
+  "signalClass": "add_scalp",
+  "sourceOpeningCopied": false,
+  "recoveredArtifactSha256": "abb608942f0ad02e54af49d69e5e8c43988367d0aa7e233055dd1e3731a14f95",
+  "canonicalStateAsOf": "2026-11-06T13:18:21.340410+00:00",
+  "sameOriginalEntryLegs": true,
+  "distinctPositionCount": 1,
+  "receipts": [
+    {
+      "branch": "recovered_unpublished",
+      "closedAt": "2026-11-06T09:27:45.446215+00:00",
+      "exitPrice": 78.076845,
+      "quantity": 1.36,
+      "entryBasis": "105.65651096",
+      "entryFees": "0.047545429932",
+      "exitFee": "0.0477830291400",
+      "gross": "0.52799824",
+      "netBeforeFunding": "0.4326697809280",
+      "storedNetBeforeFunding": 0.4326697809280154,
+      "exitBookTime": 1793957264665,
+      "bookHash": "507a52fc0caa0f6cef8f484812f1075bf8940014f97a5526a3f6ca162fac94a0",
+      "pathComplete": false
+    },
+    {
+      "branch": "canonical_published",
+      "closedAt": "2026-11-06T10:16:36.513676+00:00",
+      "exitPrice": 77.99492699999999,
+      "quantity": 1.36,
+      "entryBasis": "105.65651096",
+      "entryFees": "0.047545429932",
+      "exitFee": "0.047732895323999993880",
+      "gross": "0.4165897599999864",
+      "netBeforeFunding": "0.321311434743986406120",
+      "storedNetBeforeFunding": 0.32131143474399376,
+      "exitBookTime": 1793960195819,
+      "bookHash": "691afd76b0e0e03a70802485e4581dfa8a697e0b431602bf662638c131076e58",
+      "pathComplete": false
+    }
+  ],
+  "deltaRecoveredMinusCanonicalBeforeFunding": "0.111358346184013593880",
+  "duplicateProfitAdded": false,
+  "accountMutationApplied": false,
+  "adjudication": "Arithmetic verified. Both branches retained as evidence; canonical published ledger is unchanged. Position is ineligible for validated strategy performance pending deterministic continuation replay. Do not sum results or replace the later account snapshot.",
+  "continuationRisk": "Earlier exit released margin sooner. Admission/risk-sizing decisions during the persistence gap may depend on that cash; adding only the PnL delta would not reconstruct a verified counterfactual account.",
+  "futureRecoveryRule": "Evidence first. Resolve one lifecycle once; any correction needs an append-only adjustment with prior/new references and a replay of affected downstream admissions. No source-price backdating, old opening replay or wholesale state restore.",
+  "checks": {
+    "entryLegIdentity": true,
+    "bothNetArithmetic": true,
+    "sameFixedQuantity": true,
+    "fullPathComplete": false,
+    "fundingComplete": false,
+    "continuationReplayed": false
+  }
+}
