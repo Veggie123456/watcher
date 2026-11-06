@@ -258,6 +258,8 @@ def cycle(state, fetch_source=True):
         except Exception: sizes={}
     genius_copy.update(state,copy_events,quotes,assets,stamp,millis,fresh,price,append,FEE,SLIP,mark)
     genius_copy.close_reconciled(state,quotes,stamp,fresh,price,append,FEE,SLIP)
+    if fetch_source:
+        genius_copy.audit_source_cards(state,events,stamp,append)
     if eligible:
         for e in eligible:
             try:
