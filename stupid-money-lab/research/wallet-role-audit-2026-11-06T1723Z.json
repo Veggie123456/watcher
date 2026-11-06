@@ -1,0 +1,47 @@
+{
+  "kind": "bounded-source-wallet-role-check",
+  "at": "2026-11-06T17:23:55.243754+00:00",
+  "positions": [
+    {
+      "positionId": 10652,
+      "wallet": "0x1053cdafe287e783eca26c4a4fbd441ebcbb2d8b",
+      "request": {
+        "type": "userRole",
+        "user": "0x1053cdafe287e783eca26c4a4fbd441ebcbb2d8b"
+      },
+      "observedAt": "2026-11-06T17:23:51.027758+00:00",
+      "httpStatus": 200,
+      "response": {
+        "role": "missing"
+      }
+    },
+    {
+      "positionId": 12250,
+      "wallet": "0x5232a3f9ebcdbd9cc0e1867a89e646694deba9dc",
+      "request": {
+        "type": "userRole",
+        "user": "0x5232a3f9ebcdbd9cc0e1867a89e646694deba9dc"
+      },
+      "observedAt": "2026-11-06T17:23:51.028950+00:00",
+      "httpStatus": 200,
+      "response": {
+        "role": "missing"
+      }
+    }
+  ],
+  "interpretation": "Two read-only role responses only. A missing or agent role does not establish source fills or a historical close. No inferred account substitution, automatic exit or financial mutation.",
+  "accountMutationApplied": false,
+  "control": {
+    "request": {
+      "type": "userRole",
+      "user": "0xdfc24b077bc1425ad1dea75bcb6f8158e10df303"
+    },
+    "httpStatus": 200,
+    "response": {
+      "role": "vault"
+    },
+    "observedAt": "2026-11-06T17:24:36.251955+00:00",
+    "provenance": "Address is the vaultAddress shown in current official Info endpoint vaultDetails example; used as a read-only response-type control, not a source trading candidate."
+  },
+  "primarySource": "https://hyperliquid.gitbook.io/hyperliquid-docs/for-developers/api/info-endpoint"
+}
