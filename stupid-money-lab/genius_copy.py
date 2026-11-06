@@ -308,3 +308,37 @@ def archived_exit_events(state, root, stamp, millis, append, byte_limit=32000000
     ledger['archiveExitScanAt'] = now
     append('archive-exit-audits', report)
     return sorted(matches.values(), key=lambda e: (e['createdAt'], e['id']))
+
+
+def audit_source_cards(state, events, stamp, append):
+    """Retain revision-level closure warnings without inventing exit fills."""
+    ledger = state.get('geniusCopy', {})
+    active = [p for p in ledger.get('positions', {}).values() if not p.get('closedAt')]
+    now = stamp()
+    warnings = ledger.setdefault('sourceCardClosureWarnings', {})
+    for position in active:
+        position['closureVerification'] = 'Unverified: no matched source exit; paper exposure remains open'
+        leg_ids = {leg.get('eventId') for leg in position.get('legs', [])}
+        for event in events:
+            payload = event.get('payload', {})
+            card = event.get('traderCard', {}).get('pnl') or {}
+            frozen = card.get('frozen') or {}
+            if (event.get('id') not in leg_ids
+                    or str(payload.get('wallet', '')).lower() != position['wallet'].lower()
+                    or event.get('coin') != position['symbol']
+                    or str(payload.get('side', '')).lower() != position['direction'].lower()):
+                continue
+            if card.get('live') is False and frozen.get('reason') in ('gone', 'reopened'):
+                key = str(event['id']) + ':' + str(frozen.get('at'))
+                if key not in warnings:
+                    receipt = {'positionId': position['id'], 'eventId': event['id'],
+                               'sourceFrozenAt': frozen.get('at'), 'discoveredAt': now,
+                               'reason': frozen['reason'], 'sourceCard': card,
+                               'interpretation': 'Source card no longer live; closure requires verification. No exit fill inferred.'}
+                    warnings[key] = receipt
+                    append('source-card-closure-warnings', receipt)
+                position['closureVerification'] = 'SOURCE CARD NO LONGER LIVE: ' + frozen['reason'] + '; exit unverified'
+                position['sourceCardClosureWarning'] = warnings[key]
+    ledger['sourceCardAudit'] = {'at': now, 'activePaperPositions': len(active),
+                               'retainedWarnings': len(warnings),
+                               'scope': 'Current source cards matched to exact copied leg IDs, wallet, market and side; no implied exit fills'}
