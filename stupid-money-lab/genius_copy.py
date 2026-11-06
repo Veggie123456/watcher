@@ -64,6 +64,12 @@ def update(state, events, quotes, metadata, stamp, millis, fresh, price, append,
                 if old and not old.get('closedAt'):
                     old['unresolved'] = 'Source reported a side flip without a separately matched close'
                 raise ValueError('Side flip requires independently matched closing and opening legs')
+            if action == 'OPENED':
+                opposite = positions.get(f"{wallet}:{coin}:{'SHORT' if side == 'LONG' else 'LONG'}")
+                if opposite and not opposite.get('closedAt'):
+                    opposite['unresolved'] = 'Opposite source opening observed; prior copied exposure closure unverified'
+                    receipt['conflictingPositionId'] = opposite['id']
+                    raise ValueError('Opposite copied exposure has no matched close; new entry quarantined')
             if action == 'OPENED' and sum(not row.get('closedAt') for row in positions.values()) >= MAX_OPEN:
                 raise ValueError('50 open paper position limit')
             if action == 'OPENED' and active:
