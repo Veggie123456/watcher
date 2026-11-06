@@ -1,0 +1,297 @@
+{
+  "at": "2026-11-06T15:28:49.746725+00:00",
+  "archiveAudit": {
+    "at": "2026-11-06T15:28:49.746725+00:00",
+    "scope": "Saved original exits and copied-card ending revisions; uncaptured source history unknown",
+    "files": 30,
+    "bytesRead": 11450758,
+    "exitCardsReviewed": 28,
+    "endingRevisionRowsReviewed": 99,
+    "newCardWarningsRecovered": 8,
+    "matchingExitIds": [],
+    "backlogRemaining": false,
+    "errors": []
+  },
+  "matchedExitIds": [],
+  "financialStateUnchanged": true,
+  "newRecoveredWarnings": [
+    {
+      "positionId": 10652,
+      "eventId": 10652,
+      "sourceFrozenAt": "2026-11-05T01:42:37.363Z",
+      "discoveredAt": "2026-11-06T15:28:49.746725+00:00",
+      "reason": "gone",
+      "sourceCard": {
+        "side": "short",
+        "entryPx": "1284.1856",
+        "leverage": 5,
+        "sizeAbs": 109.16,
+        "seedPx": "1285.5198",
+        "live": false,
+        "sizeShrunk": false,
+        "frozen": {
+          "reason": "gone",
+          "at": "2026-11-05T01:42:37.363Z",
+          "price": null,
+          "roePct": null,
+          "upnlUsd": null
+        }
+      },
+      "interpretation": "Source card no longer live; closure requires verification. No exit fill inferred.",
+      "archiveProvenance": {
+        "path": "data/2026-11-05/events.jsonl",
+        "originalCollectorObservedAt": "2026-11-05T01:42:39.899670+00:00",
+        "observationKind": "revision"
+      },
+      "recoveredAt": "2026-11-06T15:28:49.746725+00:00"
+    },
+    {
+      "positionId": 10936,
+      "eventId": 10936,
+      "sourceFrozenAt": "2026-11-05T14:55:46.379Z",
+      "discoveredAt": "2026-11-06T15:28:49.746725+00:00",
+      "reason": "gone",
+      "sourceCard": {
+        "side": "short",
+        "entryPx": "82.8891",
+        "leverage": 10,
+        "sizeAbs": 15115.05,
+        "seedPx": "83.778",
+        "live": false,
+        "sizeShrunk": false,
+        "frozen": {
+          "reason": "gone",
+          "at": "2026-11-05T14:55:46.379Z",
+          "price": null,
+          "roePct": null,
+          "upnlUsd": null
+        }
+      },
+      "interpretation": "Source card no longer live; closure requires verification. No exit fill inferred.",
+      "archiveProvenance": {
+        "path": "data/2026-11-05/events.jsonl",
+        "originalCollectorObservedAt": "2026-11-05T14:55:46.515073+00:00",
+        "observationKind": "revision"
+      },
+      "recoveredAt": "2026-11-06T15:28:49.746725+00:00"
+    },
+    {
+      "positionId": 10944,
+      "eventId": 10944,
+      "sourceFrozenAt": "2026-11-05T14:56:31.517Z",
+      "discoveredAt": "2026-11-06T15:28:49.746725+00:00",
+      "reason": "gone",
+      "sourceCard": {
+        "side": "short",
+        "entryPx": "2384.32",
+        "leverage": 25,
+        "sizeAbs": 261.7383,
+        "seedPx": "2298.7",
+        "live": false,
+        "sizeShrunk": false,
+        "frozen": {
+          "reason": "gone",
+          "at": "2026-11-05T14:56:31.517Z",
+          "price": null,
+          "roePct": null,
+          "upnlUsd": null
+        }
+      },
+      "interpretation": "Source card no longer live; closure requires verification. No exit fill inferred.",
+      "archiveProvenance": {
+        "path": "data/2026-11-05/events.jsonl",
+        "originalCollectorObservedAt": "2026-11-05T14:56:31.772631+00:00",
+        "observationKind": "revision"
+      },
+      "recoveredAt": "2026-11-06T15:28:49.746725+00:00"
+    },
+    {
+      "positionId": 11451,
+      "eventId": 11451,
+      "sourceFrozenAt": "2026-11-05T17:04:30.666Z",
+      "discoveredAt": "2026-11-06T15:28:49.746725+00:00",
+      "reason": "gone",
+      "sourceCard": {
+        "side": "short",
+        "entryPx": "1221.9",
+        "leverage": 10,
+        "sizeAbs": 178,
+        "seedPx": "1249",
+        "live": false,
+        "sizeShrunk": false,
+        "frozen": {
+          "reason": "gone",
+          "at": "2026-11-05T17:04:30.666Z",
+          "price": null,
+          "roePct": null,
+          "upnlUsd": null
+        }
+      },
+      "interpretation": "Source card no longer live; closure requires verification. No exit fill inferred.",
+      "archiveProvenance": {
+        "path": "data/2026-11-05/events.jsonl",
+        "originalCollectorObservedAt": "2026-11-05T17:04:32.505822+00:00",
+        "observationKind": "revision"
+      },
+      "recoveredAt": "2026-11-06T15:28:49.746725+00:00"
+    },
+    {
+      "positionId": 11464,
+      "eventId": 11464,
+      "sourceFrozenAt": "2026-11-05T17:14:40.696Z",
+      "discoveredAt": "2026-11-06T15:28:49.746725+00:00",
+      "reason": "gone",
+      "sourceCard": {
+        "side": "short",
+        "entryPx": "80.0793",
+        "leverage": 4,
+        "sizeAbs": 1199.1,
+        "seedPx": "78.43",
+        "live": false,
+        "sizeShrunk": false,
+        "frozen": {
+          "reason": "gone",
+          "at": "2026-11-05T17:14:40.696Z",
+          "price": null,
+          "roePct": null,
+          "upnlUsd": null
+        }
+      },
+      "interpretation": "Source card no longer live; closure requires verification. No exit fill inferred.",
+      "archiveProvenance": {
+        "path": "data/2026-11-05/events.jsonl",
+        "originalCollectorObservedAt": "2026-11-05T17:14:41.069597+00:00",
+        "observationKind": "revision"
+      },
+      "recoveredAt": "2026-11-06T15:28:49.746725+00:00"
+    },
+    {
+      "positionId": 11511,
+      "eventId": 11511,
+      "sourceFrozenAt": "2026-11-05T18:20:17.453Z",
+      "discoveredAt": "2026-11-06T15:28:49.746725+00:00",
+      "reason": "gone",
+      "sourceCard": {
+        "side": "long",
+        "entryPx": "80.17",
+        "leverage": 4,
+        "sizeAbs": 1764.05,
+        "seedPx": "80.977",
+        "live": false,
+        "sizeShrunk": false,
+        "frozen": {
+          "reason": "gone",
+          "at": "2026-11-05T18:20:17.453Z",
+          "price": null,
+          "roePct": null,
+          "upnlUsd": null
+        }
+      },
+      "interpretation": "Source card no longer live; closure requires verification. No exit fill inferred.",
+      "archiveProvenance": {
+        "path": "data/2026-11-05/events.jsonl",
+        "originalCollectorObservedAt": "2026-11-05T18:20:17.717649+00:00",
+        "observationKind": "revision"
+      },
+      "recoveredAt": "2026-11-06T15:28:49.746725+00:00"
+    },
+    {
+      "positionId": 11798,
+      "eventId": 11798,
+      "sourceFrozenAt": "2026-11-05T23:48:37.645Z",
+      "discoveredAt": "2026-11-06T15:28:49.746725+00:00",
+      "reason": "gone",
+      "sourceCard": {
+        "side": "short",
+        "entryPx": "1236.0213",
+        "leverage": 4,
+        "sizeAbs": 191.11,
+        "seedPx": "1251.2",
+        "live": false,
+        "sizeShrunk": false,
+        "frozen": {
+          "reason": "gone",
+          "at": "2026-11-05T23:48:37.645Z",
+          "price": null,
+          "roePct": null,
+          "upnlUsd": null
+        }
+      },
+      "interpretation": "Source card no longer live; closure requires verification. No exit fill inferred.",
+      "archiveProvenance": {
+        "path": "data/2026-11-05/sessions/42124534832-1/events.jsonl",
+        "originalCollectorObservedAt": "2026-11-05T23:48:48.318709+00:00",
+        "observationKind": "revision"
+      },
+      "recoveredAt": "2026-11-06T15:28:49.746725+00:00"
+    },
+    {
+      "positionId": 11841,
+      "eventId": 11841,
+      "sourceFrozenAt": "2026-11-06T00:45:09.999Z",
+      "discoveredAt": "2026-11-06T15:28:49.746725+00:00",
+      "reason": "gone",
+      "sourceCard": {
+        "side": "short",
+        "entryPx": "77652.2",
+        "leverage": 20,
+        "sizeAbs": 10,
+        "seedPx": "77095",
+        "live": false,
+        "sizeShrunk": false,
+        "frozen": {
+          "reason": "gone",
+          "at": "2026-11-06T00:45:09.999Z",
+          "price": null,
+          "roePct": null,
+          "upnlUsd": null
+        }
+      },
+      "interpretation": "Source card no longer live; closure requires verification. No exit fill inferred.",
+      "archiveProvenance": {
+        "path": "data/2026-11-06/sessions/42136128495-1/events.jsonl",
+        "originalCollectorObservedAt": "2026-11-06T00:45:13.498903+00:00",
+        "observationKind": "revision"
+      },
+      "recoveredAt": "2026-11-06T15:28:49.746725+00:00"
+    }
+  ],
+  "valuationQuality": {
+    "at": "2026-11-06T15:28:49.746725+00:00",
+    "status": "Unvalidated website-alert simulation; source holdings and funding incomplete",
+    "copyPerformanceEligible": false,
+    "activePaperExposures": 41,
+    "closureWarningPositionIds": [
+      10652,
+      10936,
+      10944,
+      11451,
+      11464,
+      11511,
+      11798,
+      11841,
+      11877,
+      11945,
+      11949,
+      11956,
+      11974,
+      11995,
+      12250
+    ],
+    "closureWarningCount": 15,
+    "sourceCardNoLongerLiveCount": 13,
+    "subsequentOpeningPositionIds": [
+      11841,
+      11945,
+      11949,
+      11974,
+      11995
+    ],
+    "subsequentOpeningWarningCount": 5,
+    "warningExposureModeledPnlBeforeFunding": -45.311652366986635,
+    "otherUnverifiedExposureModeledPnlBeforeFunding": -23.576854352941996,
+    "totalModeledPnlBeforeFunding": -68.88850671992863,
+    "interpretation": "Warning subtotal assumes continued exposure despite non-live source cards or subsequent openings; neither subtotal is verified copier performance."
+  },
+  "executionApplied": false
+}

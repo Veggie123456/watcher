@@ -1,0 +1,434 @@
+{
+  "kind": "archived-copied-card-ending-audit",
+  "at": "2026-11-06T15:26:34.391861+00:00",
+  "filesRead": 30,
+  "bytesRead": 11450758,
+  "sourceCoverage": "Saved website originals and revisions only; uncaptured intervals unknown. Per-file hashes in legacy venue audit.",
+  "canonicalStateAsOf": "2026-11-06T15:22:40.070266+00:00",
+  "positionsWithArchivedEndingIndications": [
+    10652,
+    10936,
+    10944,
+    11451,
+    11464,
+    11511,
+    11798,
+    11841,
+    11877,
+    11945,
+    11956,
+    11974,
+    12250
+  ],
+  "alreadyRetainedCardWarningIds": [
+    11877,
+    11945,
+    11956,
+    11974,
+    12250
+  ],
+  "newlyRecoveredWarningPositionIds": [
+    10652,
+    10936,
+    10944,
+    11451,
+    11464,
+    11511,
+    11798,
+    11841
+  ],
+  "receipts": [
+    {
+      "positionId": 10652,
+      "eventId": 10652,
+      "wallet": "0x1053cdafe287e783eca26c4a4fbd441ebcbb2d8b",
+      "market": "ZEC",
+      "side": "short",
+      "sourceFrozenAt": "2026-11-05T01:42:37.363Z",
+      "reason": "gone",
+      "originalCollectorObservedAt": "2026-11-05T01:42:39.899670+00:00",
+      "kind": "revision",
+      "path": "data/2026-11-05/events.jsonl",
+      "line": 87,
+      "rowHash": "2c9124ed014d81de661548d71fb74dadda7bd4142ebcf97c50ebc798ecf9de40",
+      "card": {
+        "side": "short",
+        "entryPx": "1284.1856",
+        "leverage": 5,
+        "sizeAbs": 109.16,
+        "seedPx": "1285.5198",
+        "live": false,
+        "sizeShrunk": false,
+        "frozen": {
+          "reason": "gone",
+          "at": "2026-11-05T01:42:37.363Z",
+          "price": null,
+          "roePct": null,
+          "upnlUsd": null
+        }
+      }
+    },
+    {
+      "positionId": 10936,
+      "eventId": 10936,
+      "wallet": "0x4fe8c13f70fba3081be9953869ae8f2ca3c3ba7a",
+      "market": "HYPE",
+      "side": "short",
+      "sourceFrozenAt": "2026-11-05T14:55:46.379Z",
+      "reason": "gone",
+      "originalCollectorObservedAt": "2026-11-05T14:55:46.515073+00:00",
+      "kind": "revision",
+      "path": "data/2026-11-05/events.jsonl",
+      "line": 2331,
+      "rowHash": "5433ca73367f470b6ae5597e2bf0b7fe1912d29dbf0c96ebefc6e6760772e07d",
+      "card": {
+        "side": "short",
+        "entryPx": "82.8891",
+        "leverage": 10,
+        "sizeAbs": 15115.05,
+        "seedPx": "83.778",
+        "live": false,
+        "sizeShrunk": false,
+        "frozen": {
+          "reason": "gone",
+          "at": "2026-11-05T14:55:46.379Z",
+          "price": null,
+          "roePct": null,
+          "upnlUsd": null
+        }
+      }
+    },
+    {
+      "positionId": 10944,
+      "eventId": 10944,
+      "wallet": "0x5130c49423d8f8b8dbf838a44725e5d5720e34dc",
+      "market": "ETH",
+      "side": "short",
+      "sourceFrozenAt": "2026-11-05T14:56:31.517Z",
+      "reason": "gone",
+      "originalCollectorObservedAt": "2026-11-05T14:56:31.772631+00:00",
+      "kind": "revision",
+      "path": "data/2026-11-05/events.jsonl",
+      "line": 2349,
+      "rowHash": "ba536b3210f34b8fa1537ba9ffcaf70b02c57d7dc31ca2a1e884d10589733b42",
+      "card": {
+        "side": "short",
+        "entryPx": "2384.32",
+        "leverage": 25,
+        "sizeAbs": 261.7383,
+        "seedPx": "2298.7",
+        "live": false,
+        "sizeShrunk": false,
+        "frozen": {
+          "reason": "gone",
+          "at": "2026-11-05T14:56:31.517Z",
+          "price": null,
+          "roePct": null,
+          "upnlUsd": null
+        }
+      }
+    },
+    {
+      "positionId": 11451,
+      "eventId": 11451,
+      "wallet": "0xa59261792941111f852067cee9349041efca2d76",
+      "market": "ZEC",
+      "side": "short",
+      "sourceFrozenAt": "2026-11-05T17:04:30.666Z",
+      "reason": "gone",
+      "originalCollectorObservedAt": "2026-11-05T17:04:32.505822+00:00",
+      "kind": "revision",
+      "path": "data/2026-11-05/events.jsonl",
+      "line": 3089,
+      "rowHash": "2c74572148a1484766e9106998f3c493fd1b44a844ada314d5f0d648c406a079",
+      "card": {
+        "side": "short",
+        "entryPx": "1221.9",
+        "leverage": 10,
+        "sizeAbs": 178,
+        "seedPx": "1249",
+        "live": false,
+        "sizeShrunk": false,
+        "frozen": {
+          "reason": "gone",
+          "at": "2026-11-05T17:04:30.666Z",
+          "price": null,
+          "roePct": null,
+          "upnlUsd": null
+        }
+      }
+    },
+    {
+      "positionId": 11464,
+      "eventId": 11464,
+      "wallet": "0x5dd4520818e244c426b64f9431e8afbd5b81f1fa",
+      "market": "HYPE",
+      "side": "short",
+      "sourceFrozenAt": "2026-11-05T17:14:40.696Z",
+      "reason": "gone",
+      "originalCollectorObservedAt": "2026-11-05T17:14:41.069597+00:00",
+      "kind": "revision",
+      "path": "data/2026-11-05/events.jsonl",
+      "line": 3230,
+      "rowHash": "d63f0d0a22fc21b348e31d762267302951dea0a8e995341c64b064703e153fb4",
+      "card": {
+        "side": "short",
+        "entryPx": "80.0793",
+        "leverage": 4,
+        "sizeAbs": 1199.1,
+        "seedPx": "78.43",
+        "live": false,
+        "sizeShrunk": false,
+        "frozen": {
+          "reason": "gone",
+          "at": "2026-11-05T17:14:40.696Z",
+          "price": null,
+          "roePct": null,
+          "upnlUsd": null
+        }
+      }
+    },
+    {
+      "positionId": 11511,
+      "eventId": 11511,
+      "wallet": "0x5dd4520818e244c426b64f9431e8afbd5b81f1fa",
+      "market": "HYPE",
+      "side": "long",
+      "sourceFrozenAt": "2026-11-05T18:20:17.453Z",
+      "reason": "gone",
+      "originalCollectorObservedAt": "2026-11-05T18:20:17.717649+00:00",
+      "kind": "revision",
+      "path": "data/2026-11-05/events.jsonl",
+      "line": 3576,
+      "rowHash": "f1e215579a7b7bef0ce52237d9752d76951dfdf90ac010e88641d6c119cdfeed",
+      "card": {
+        "side": "long",
+        "entryPx": "80.17",
+        "leverage": 4,
+        "sizeAbs": 1764.05,
+        "seedPx": "80.977",
+        "live": false,
+        "sizeShrunk": false,
+        "frozen": {
+          "reason": "gone",
+          "at": "2026-11-05T18:20:17.453Z",
+          "price": null,
+          "roePct": null,
+          "upnlUsd": null
+        }
+      }
+    },
+    {
+      "positionId": 11798,
+      "eventId": 11798,
+      "wallet": "0x5dd4520818e244c426b64f9431e8afbd5b81f1fa",
+      "market": "ZEC",
+      "side": "short",
+      "sourceFrozenAt": "2026-11-05T23:48:37.645Z",
+      "reason": "gone",
+      "originalCollectorObservedAt": "2026-11-05T23:48:48.318709+00:00",
+      "kind": "revision",
+      "path": "data/2026-11-05/sessions/42124534832-1/events.jsonl",
+      "line": 150,
+      "rowHash": "99a0aa234b5f905c5228d3c414d058fcdac6d16cb829c3da76c5a613603f354a",
+      "card": {
+        "side": "short",
+        "entryPx": "1236.0213",
+        "leverage": 4,
+        "sizeAbs": 191.11,
+        "seedPx": "1251.2",
+        "live": false,
+        "sizeShrunk": false,
+        "frozen": {
+          "reason": "gone",
+          "at": "2026-11-05T23:48:37.645Z",
+          "price": null,
+          "roePct": null,
+          "upnlUsd": null
+        }
+      }
+    },
+    {
+      "positionId": 11841,
+      "eventId": 11841,
+      "wallet": "0xe9d1a3a94ac91084fda4d28cf780625fa15afc59",
+      "market": "BTC",
+      "side": "short",
+      "sourceFrozenAt": "2026-11-06T00:45:09.999Z",
+      "reason": "gone",
+      "originalCollectorObservedAt": "2026-11-06T00:45:13.498903+00:00",
+      "kind": "revision",
+      "path": "data/2026-11-06/sessions/42136128495-1/events.jsonl",
+      "line": 143,
+      "rowHash": "25d7628d7a7281bfc9b340c0ddae980eb428e72fe32fd1e1a09f6722190a437d",
+      "card": {
+        "side": "short",
+        "entryPx": "77652.2",
+        "leverage": 20,
+        "sizeAbs": 10,
+        "seedPx": "77095",
+        "live": false,
+        "sizeShrunk": false,
+        "frozen": {
+          "reason": "gone",
+          "at": "2026-11-06T00:45:09.999Z",
+          "price": null,
+          "roePct": null,
+          "upnlUsd": null
+        }
+      }
+    },
+    {
+      "positionId": 11877,
+      "eventId": 11877,
+      "wallet": "0xe9d1a3a94ac91084fda4d28cf780625fa15afc59",
+      "market": "ZEC",
+      "side": "short",
+      "sourceFrozenAt": "2026-11-06T01:33:16.091Z",
+      "reason": "gone",
+      "originalCollectorObservedAt": "2026-11-06T01:33:46.699937+00:00",
+      "kind": "revision",
+      "path": "data/2026-11-06/sessions/42142637512-1/events.jsonl",
+      "line": 116,
+      "rowHash": "75ebaca345c697adf72a078ffd2a5080cd6cac6b00400df86553efb8c705a140",
+      "card": {
+        "side": "short",
+        "entryPx": "1269.6131",
+        "leverage": 5,
+        "sizeAbs": 245.1,
+        "seedPx": "1294",
+        "live": false,
+        "sizeShrunk": false,
+        "frozen": {
+          "reason": "gone",
+          "at": "2026-11-06T01:33:16.091Z",
+          "price": null,
+          "roePct": null,
+          "upnlUsd": null
+        }
+      }
+    },
+    {
+      "positionId": 11945,
+      "eventId": 11945,
+      "wallet": "0x693b77eb4946bd1e12d5f34fea57b503b7c0d5f7",
+      "market": "BTC",
+      "side": "long",
+      "sourceFrozenAt": "2026-11-06T04:41:42.134Z",
+      "reason": "gone",
+      "originalCollectorObservedAt": "2026-11-06T04:41:43.042458+00:00",
+      "kind": "revision",
+      "path": "data/2026-11-06/sessions/42161961189-1/events.jsonl",
+      "line": 142,
+      "rowHash": "597d48dd12dde0bc0ce7029ad4e5a99a84ded33440d6c214de1f322ea9ccbb3c",
+      "card": {
+        "side": "long",
+        "entryPx": "76199.6",
+        "leverage": 40,
+        "sizeAbs": 68,
+        "seedPx": "76606",
+        "live": false,
+        "sizeShrunk": false,
+        "frozen": {
+          "reason": "gone",
+          "at": "2026-11-06T04:41:42.134Z",
+          "price": null,
+          "roePct": null,
+          "upnlUsd": null
+        }
+      }
+    },
+    {
+      "positionId": 11956,
+      "eventId": 11956,
+      "wallet": "0xff05e1e7d565a8865b03aa384dddc7bcea23d9e4",
+      "market": "BTC",
+      "side": "long",
+      "sourceFrozenAt": "2026-11-06T05:14:02.091Z",
+      "reason": "gone",
+      "originalCollectorObservedAt": "2026-11-06T05:14:12.010973+00:00",
+      "kind": "revision",
+      "path": "data/2026-11-06/sessions/42161961189-1/events.jsonl",
+      "line": 255,
+      "rowHash": "132e4dd507667a8343c2969ae749ee2f2cbe8d83598f909335cdd99140b66fe6",
+      "card": {
+        "side": "long",
+        "entryPx": "74403",
+        "leverage": 40,
+        "sizeAbs": 15,
+        "seedPx": "76794",
+        "live": false,
+        "sizeShrunk": false,
+        "frozen": {
+          "reason": "gone",
+          "at": "2026-11-06T05:14:02.091Z",
+          "price": null,
+          "roePct": null,
+          "upnlUsd": null
+        }
+      }
+    },
+    {
+      "positionId": 11974,
+      "eventId": 11974,
+      "wallet": "0x693b77eb4946bd1e12d5f34fea57b503b7c0d5f7",
+      "market": "ZEC",
+      "side": "short",
+      "sourceFrozenAt": "2026-11-06T05:14:48.647Z",
+      "reason": "gone",
+      "originalCollectorObservedAt": "2026-11-06T05:14:48.799626+00:00",
+      "kind": "revision",
+      "path": "data/2026-11-06/sessions/42161961189-1/events.jsonl",
+      "line": 259,
+      "rowHash": "df425d9a06c54ec9b2e671f9b7390052bd50af4d41581812ad142df5f6751100",
+      "card": {
+        "side": "short",
+        "entryPx": "1312.9177",
+        "leverage": 10,
+        "sizeAbs": 1018.06,
+        "seedPx": "1240.1",
+        "live": false,
+        "sizeShrunk": false,
+        "frozen": {
+          "reason": "gone",
+          "at": "2026-11-06T05:14:48.647Z",
+          "price": null,
+          "roePct": null,
+          "upnlUsd": null
+        }
+      }
+    },
+    {
+      "positionId": 12250,
+      "eventId": 12250,
+      "wallet": "0x5232a3f9ebcdbd9cc0e1867a89e646694deba9dc",
+      "market": "BTC",
+      "side": "short",
+      "sourceFrozenAt": "2026-11-06T14:43:54.955Z",
+      "reason": "gone",
+      "originalCollectorObservedAt": "2026-11-06T14:43:55.273711+00:00",
+      "kind": "revision",
+      "path": "data/2026-11-06/sessions/42234360317-1/events.jsonl",
+      "line": 228,
+      "rowHash": "caa41eee11e5688be7c48b7e632c82f5b37adf29572a08d21704d7ebf6ece9c9",
+      "card": {
+        "side": "short",
+        "entryPx": "77225.4",
+        "leverage": 40,
+        "sizeAbs": 115,
+        "seedPx": "73395",
+        "live": false,
+        "sizeShrunk": false,
+        "frozen": {
+          "reason": "gone",
+          "at": "2026-11-06T14:43:54.955Z",
+          "price": null,
+          "roePct": null,
+          "upnlUsd": null
+        }
+      }
+    }
+  ],
+  "accountMutationApplied": false,
+  "interpretation": "Archived live=false with gone/reopened is source-card ending evidence, not authenticated source fills or a copier historical exit. Do not backdate a paper exit or infer a price. Recovered warnings must retain original and recovery timestamps."
+}

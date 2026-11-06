@@ -267,7 +267,7 @@ def close_reconciled(state, quotes, stamp, fresh, price, append, fee, slip):
 
 
 def archived_exit_events(state, root, stamp, millis, append, byte_limit=32000000):
-    """Incrementally review original saved feed cards; never claim unseen history."""
+    """Review saved original exits and copied-card ending revisions, never unseen history."""
     import json
     from pathlib import Path
     ledger = state.get('geniusCopy', {})
@@ -276,12 +276,19 @@ def archived_exit_events(state, root, stamp, millis, append, byte_limit=32000000
         ledger['archiveExitCursors'] = {}
         ledger.pop('archiveExitScanAt', None)
         ledger['exitTierPolicy'] = 'matched-any-tier-v1'
+    if ledger.get('archiveCardPolicy') != 'ending-revisions-v1':
+        ledger['archiveExitCursors'] = {}
+        ledger.pop('archiveExitScanAt', None)
+        ledger['archiveCardPolicy'] = 'ending-revisions-v1'
     if millis(now)-millis(ledger.get('archiveExitScanAt', '1970-01-01T00:00:00+00:00')) < 300000:
         return []
     active = [p for p in ledger.get('positions', {}).values() if not p.get('closedAt')]
     if not active:
         return []
     targets = {(p['wallet'].lower(), p['symbol'], p['direction'].upper()): p for p in active}
+    copied_leg_ids = {leg.get('eventId') for p in active for leg in p.get('legs', [])}
+    initial_warnings = len(ledger.get('sourceCardClosureWarnings', {}))
+    ending_revisions = 0
     earliest = min(p['sourceOpenedAt'][:10] for p in active)
     files = [p for p in sorted((Path(root)/'data').glob('**/events.jsonl')) if p.relative_to(Path(root)/'data').parts[0] >= earliest]
     cursors = ledger.setdefault('archiveExitCursors', {})
@@ -308,6 +315,15 @@ def archived_exit_events(state, root, stamp, millis, append, byte_limit=32000000
                     e = row.get('event', {})
                     p = e.get('payload', {})
                     target = targets.get((str(p.get('wallet', '')).lower(), e.get('coin'), p.get('side')))
+                    card = (e.get('traderCard') or {}).get('pnl') or {}
+                    if (row.get('kind') in ('first_observation', 'revision') and target
+                            and e.get('id') in copied_leg_ids and card.get('live') is False
+                            and (card.get('frozen') or {}).get('reason') in ('gone', 'reopened')):
+                        ending_revisions += 1
+                        recovered = dict(e, _archiveProvenance={'path': key,
+                                         'originalCollectorObservedAt': row.get('observedAt'),
+                                         'observationKind': row.get('kind')})
+                        audit_source_cards(state, [recovered], lambda: now, append)
                     if row.get('kind') == 'first_observation' and p.get('action') in ('CLOSED', 'REDUCED'):
                         cards += 1
                         if target and millis(e['createdAt']) >= millis(target['sourceOpenedAt']) and not any(l.get('eventId') == e['id'] for l in target.get('legs', [])):
@@ -324,8 +340,10 @@ def archived_exit_events(state, root, stamp, millis, append, byte_limit=32000000
             matches[e['id']] = e
     ledger['archiveExitPending'] = {str(k): e for k, e in matches.items()}
     pending = any(cursors.get(str(p.relative_to(root)), 0) < p.stat().st_size for p in files)
-    report = {'at': now, 'scope': 'Original saved website feed only; uncaptured source history unknown',
+    report = {'at': now, 'scope': 'Saved original exits and copied-card ending revisions; uncaptured source history unknown',
               'files': len(files), 'bytesRead': used, 'exitCardsReviewed': cards,
+              'endingRevisionRowsReviewed': ending_revisions,
+              'newCardWarningsRecovered': len(ledger.get('sourceCardClosureWarnings', {})) - initial_warnings,
               'matchingExitIds': list(matches), 'backlogRemaining': pending, 'errors': errors[:20]}
     ledger['archiveExitScan'] = report
     ledger['archiveExitScanAt'] = now
@@ -387,6 +405,9 @@ def audit_source_cards(state, events, stamp, append):
                                'sourceFrozenAt': frozen.get('at'), 'discoveredAt': now,
                                'reason': frozen['reason'], 'sourceCard': card,
                                'interpretation': 'Source card no longer live; closure requires verification. No exit fill inferred.'}
+                    if event.get('_archiveProvenance'):
+                        receipt['archiveProvenance'] = event['_archiveProvenance']
+                        receipt['recoveredAt'] = now
                     warnings[key] = receipt
                     append('source-card-closure-warnings', receipt)
                 position['closureVerification'] = 'SOURCE CARD NO LONGER LIVE: ' + frozen['reason'] + '; exit unverified'
@@ -417,4 +438,5 @@ def audit_source_cards(state, events, stamp, append):
         'totalModeledPnlBeforeFunding': modeled_total(active),
         'interpretation': 'Warning subtotal assumes continued exposure despite non-live source cards or subsequent openings; neither subtotal is verified copier performance.'
     }
+
 

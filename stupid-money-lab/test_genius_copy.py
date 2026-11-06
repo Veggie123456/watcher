@@ -136,3 +136,48 @@ genius_copy.update(state,[conflicting],{'BTC':book},{'BTC':{'szDecimals':3,'maxL
 assert 'Conflicting source venue' in ledger['decisions'][-1]['reason']
 print('Source venue gate: unknown, unsupported, conflicting fields, add/close accounting and valid matched-venue exit passed')
 
+import tempfile
+import json
+from pathlib import Path
+state.clear()
+ledger=run((701,'OPENED','GENIUS',{}))
+position=ledger['positions'][wallet+':BTC:LONG']
+frozen_at=(dt.datetime.fromisoformat(now)+dt.timedelta(minutes=1)).isoformat()
+recovery_at=(dt.datetime.fromisoformat(now)+dt.timedelta(minutes=20)).isoformat()
+old_card=dict(id=701,coin='BTC',createdAt=now,payload=dict(wallet=wallet,side='LONG',action='OPENED'),
+              traderCard={'pnl':{'live':False,'frozen':{'reason':'gone','at':frozen_at}}})
+records=[]
+with tempfile.TemporaryDirectory() as tmp:
+    path=Path(tmp)/'data'/now[:10]/'events.jsonl';path.parent.mkdir(parents=True)
+    path.write_text(json.dumps({'kind':'revision','observedAt':frozen_at,'event':old_card})+'\n')
+    key=str(path.relative_to(tmp))
+    ledger['archiveExitCursors']={key:path.stat().st_size}
+    ledger['archiveExitScanAt']=recovery_at
+    ledger['exitTierPolicy']='matched-any-tier-v1'
+    snapshot=(ledger['cash'],position['quantity'],position['basis'],position['marginRequired'],len(position['legs']))
+    matched=genius_copy.archived_exit_events(state,tmp,lambda:recovery_at,
+        lambda s:dt.datetime.fromisoformat(s).timestamp()*1000,lambda kind,row:records.append((kind,row)))
+    assert matched==[] and ledger['archiveExitScan']['newCardWarningsRecovered']==1
+    warning=position['sourceCardClosureWarning']
+    assert warning['discoveredAt']==recovery_at and warning['recoveredAt']==recovery_at
+    assert warning['sourceFrozenAt']==frozen_at
+    assert warning['archiveProvenance']['originalCollectorObservedAt']==frozen_at
+    assert snapshot==(ledger['cash'],position['quantity'],position['basis'],position['marginRequired'],len(position['legs']))
+    assert genius_copy.archived_exit_events(state,tmp,lambda:recovery_at,
+        lambda s:dt.datetime.fromisoformat(s).timestamp()*1000,lambda *args:None)==[]
+    assert len(ledger['sourceCardClosureWarnings'])==1
+    # A later true close is still recovered and filled now, not at the frozen time.
+    close_at=(dt.datetime.fromisoformat(now)+dt.timedelta(minutes=5)).isoformat()
+    event=dict(id=702,coin='BTC',createdAt=close_at,payload=dict(wallet=wallet,cohort='SMART',side='LONG',action='CLOSED',venue='hyperliquid'))
+    with path.open('a') as f:f.write(json.dumps({'kind':'first_observation','observedAt':close_at,'event':event})+'\n')
+    ledger.pop('archiveExitScanAt',None)
+    matched=genius_copy.archived_exit_events(state,tmp,lambda:recovery_at,
+        lambda s:dt.datetime.fromisoformat(s).timestamp()*1000,lambda *args:None)
+    assert [e['id'] for e in matched]==[702]
+    genius_copy.update(state,matched,{'BTC':book},{'BTC':{'szDecimals':3,'maxLeverage':50}},lambda:recovery_at,
+        lambda s:dt.datetime.fromisoformat(s).timestamp()*1000,lambda b:None,
+        lambda levels,q:110,lambda *args:None,0,0,lambda s,b:(110,0))
+    assert position['closedAt']==recovery_at and ledger['cash']==10020
+print('Archived revision reset, provenance, no fabricated fill, idempotence and actual late-close execution passed')
+
+
