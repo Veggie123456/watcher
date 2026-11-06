@@ -1,0 +1,383 @@
+{
+  "at": "2026-11-06T22:24:09.194028+00:00",
+  "objective": "Audit actual matching source add with inconsistent sizing inputs; no guessed or retrospective paper scale-in",
+  "stateCutoff": "2026-11-06T22:22:38.551578+00:00",
+  "stateSha256": "5dcdf3f0f8e7e63015293ae0fced57b35658724091e2741c1c467a8ae9a590db",
+  "sourceFiles": [
+    {
+      "filename": "42301720462-source-checks.jsonl",
+      "bytes": 4396,
+      "sha256": "be22ac52558ad0e3467790c47f6a9d87aae2d82ee53a2e3777273ee7caf5884d",
+      "rows": 28
+    },
+    {
+      "filename": "42301720462-events.jsonl",
+      "bytes": 47487,
+      "sha256": "608bca67fefe032edc6b5e18abce44c5f232b4a7829b36c2466ad414f0c7e968",
+      "rows": 41
+    },
+    {
+      "filename": "42294224600-source-checks.jsonl",
+      "bytes": 13345,
+      "sha256": "c7b25bf34c33f4c19944be2eafa156f2b35424c32207de11dcbe8827eea74f0f",
+      "rows": 85
+    },
+    {
+      "filename": "42294224600-events.jsonl",
+      "bytes": 107547,
+      "sha256": "169a50d7f79c13c0251251c6f31058ffbba95deda0c69cc3e1f23a65e8160bc3",
+      "rows": 92
+    }
+  ],
+  "coverage": [
+    {
+      "run": "42301720462",
+      "reads": 28,
+      "statuses": {
+        "read": 28
+      },
+      "first": "2026-11-06T22:03:55.357596+00:00",
+      "last": "2026-11-06T22:22:53.022665+00:00",
+      "maxGapSeconds": 132.2554
+    },
+    {
+      "run": "42294224600",
+      "reads": 85,
+      "statuses": {
+        "read": 85
+      },
+      "first": "2026-11-06T21:08:36.838375+00:00",
+      "last": "2026-11-06T22:03:18.332020+00:00",
+      "maxGapSeconds": 132.374401
+    }
+  ],
+  "rawAdd": {
+    "observedAt": "2026-11-06T21:16:06.396400+00:00",
+    "kind": "first_observation",
+    "event": {
+      "id": 12472,
+      "type": "SMART_FRESH",
+      "coin": "SOL",
+      "createdAt": "2026-11-06T21:16:02.459Z",
+      "occurredAt": "2026-11-06T21:16:00.372Z",
+      "payload": {
+        "side": "SHORT",
+        "liqPx": 121.14207857942975,
+        "action": "ADDED",
+        "cohort": "GENIUS",
+        "wallet": "0x5232a3f9ebcdbd9cc0e1867a89e646694deba9dc",
+        "entryPx": 87.1222,
+        "leverage": {
+          "type": "cross",
+          "value": 20
+        },
+        "marginUsd": 529037,
+        "positionUsd": 9915058,
+        "allTimePnlUsd": 30918914.372909,
+        "addedMarginUsd": 758525.119382
+      },
+      "tags": {
+        "0x5232a3f9ebcdbd9cc0e1867a89e646694deba9dc": [
+          "VETERAN",
+          "WHALE",
+          "HIGH_FREQUENCY"
+        ]
+      },
+      "perpPnl": 13871052.012655,
+      "allTimePnl": 13871052.012655,
+      "badges": {
+        "level": "genius-trader",
+        "secondary": [
+          "top-100",
+          "whale",
+          "veteran"
+        ]
+      },
+      "traderCard": {
+        "badges": [
+          "genius-trader",
+          "top-100",
+          "whale",
+          "veteran"
+        ],
+        "rank": 66,
+        "chips": [
+          {
+            "kind": "rank",
+            "label": "Trader Rank",
+            "value": "#66",
+            "url": "/trader/0x5232a3f9ebcdbd9cc0e1867a89e646694deba9dc"
+          }
+        ],
+        "venue": "hyperliquid",
+        "pnl": {
+          "side": "short",
+          "entryPx": "87.1222",
+          "leverage": 20,
+          "sizeAbs": 169638,
+          "seedPx": "86.89",
+          "live": true,
+          "sizeShrunk": false,
+          "frozen": null
+        }
+      }
+    },
+    "hash": "6fe7131ce01a039ae1ce394745e16a71572bb6c3aac75dd3ba7b8fb51af5ddda"
+  },
+  "decision": {
+    "eventId": 12472,
+    "action": "ADDED",
+    "wallet": "0x5232a3f9ebcdbd9cc0e1867a89e646694deba9dc",
+    "market": "SOL",
+    "side": "SHORT",
+    "publication": "2026-11-06T21:16:02.459Z",
+    "observedAt": "2026-11-06T21:16:06.396524+00:00",
+    "sourceVenue": "hyperliquid",
+    "paperQuoteVenue": "hyperliquid",
+    "status": "skipped",
+    "reason": "Cannot estimate proportional add from source margin"
+  },
+  "matchingPosition": {
+    "id": 12453,
+    "wallet": "0x5232a3f9ebcdbd9cc0e1867a89e646694deba9dc",
+    "symbol": "SOL",
+    "direction": "short",
+    "sourceVenue": "hyperliquid",
+    "paperQuoteVenue": "hyperliquid",
+    "sourceOpenedAt": "2026-11-06T20:16:02.600Z",
+    "sourceLeverage": {
+      "type": "cross",
+      "value": 20
+    },
+    "paperLeverage": 5,
+    "marginRequired": 39.841336782,
+    "leverageMode": "fixed_5x",
+    "openedAt": "2026-11-06T20:16:40.408384+00:00",
+    "quantity": 2.21,
+    "basis": 199.20668391,
+    "entryFees": 0.0896430077595,
+    "realized": 0,
+    "legs": [
+      {
+        "eventId": 12453,
+        "action": "OPENED",
+        "wallet": "0x5232a3f9ebcdbd9cc0e1867a89e646694deba9dc",
+        "market": "SOL",
+        "side": "SHORT",
+        "publication": "2026-11-06T20:16:02.600Z",
+        "observedAt": "2026-11-06T20:16:39.639015+00:00",
+        "sourceVenue": "hyperliquid",
+        "paperQuoteVenue": "hyperliquid",
+        "status": "paper fill",
+        "quantity": 2.21,
+        "price": 90.138771,
+        "fee": 0.0896430077595,
+        "bookTime": 1793996199210,
+        "paperLeverage": 5,
+        "margin": 39.841336782,
+        "filledAt": "2026-11-06T20:16:40.408557+00:00"
+      }
+    ],
+    "openPnl": -0.5008154686924864,
+    "closureVerification": "Unverified: no matched source exit; paper exposure remains open",
+    "reconciliation": {
+      "at": "2026-11-06T22:17:23.709028+00:00",
+      "status": "unresolved source linkage/history",
+      "sourceOpeningCorroborated": false,
+      "venuePosition": null,
+      "matchingFills": 0,
+      "historyPossiblyTruncated": false,
+      "paperLeverage": 5,
+      "sourceLeverage": {
+        "type": "cross",
+        "value": 20
+      },
+      "leverageMatched": false
+    },
+    "unresolved": "Cannot estimate proportional add from source margin"
+  },
+  "checks": {
+    "sameWalletMarketDirection": true,
+    "addedMarginExceedsDisplayedTotal": true,
+    "exactlyOneRejectedDecision": true,
+    "originalQuantityBasisAndSingleLegRetained": true,
+    "financialMutation": false
+  },
+  "sizingDiagnostics": {
+    "addedMarginUsd": 758525.119382,
+    "totalMarginUsd": 529037,
+    "impliedPriorMarginUsd": -229488.11938199995,
+    "sourceLeverageUnchanged": true,
+    "interpretation": "Negative implied prior margin invalidates current total-minus-add sizing proxy. Unknown field semantics or revisions; do not infer actual negative collateral."
+  },
+  "implementedGuard": "elif action == 'ADDED':\n                added, total = float(p['addedMarginUsd']), float(p['marginUsd'])\n                if not 0 < added < total or p.get('leverage') is None or p.get('leverage') != position['sourceLeverage']:\n                    raise ValueError('Cannot estimate proportional add from source margin')\n                receipt['fraction'] = added / (total - added)\n                quantity = position['quantity'] * receipt['fraction']\n            elif action == 'REDUCED':\n                receipt['fraction'] = float(p['closedPct']) / 100\n                if not 0 < receipt['fraction'] < 1:\n             ",
+  "codeSha256": "59720fae92b1e0ce098d708953bd6fa74d8e0e6dc2e7de4c417dd7fce5933305",
+  "rowKinds": {
+    "first_observation": 8,
+    "revision": 125
+  },
+  "firstActions": {
+    "ADDED": 7,
+    "OPENED": 1
+  },
+  "geniusSnapshot": {
+    "count": 48,
+    "closed": 0,
+    "cash": 4760.223823647307,
+    "realized": 0,
+    "openEstimateBeforeFunding": -11.277209980685859,
+    "quality": {
+      "at": "2026-11-06T22:22:17.339851+00:00",
+      "status": "Unvalidated website-alert simulation; source holdings and funding incomplete",
+      "copyPerformanceEligible": false,
+      "activePaperExposures": 48,
+      "closureWarningPositionIds": [
+        10652,
+        10936,
+        10944,
+        11451,
+        11464,
+        11511,
+        11798,
+        11841,
+        11877,
+        11945,
+        11949,
+        11956,
+        11974,
+        11995,
+        12122,
+        12250
+      ],
+      "closureWarningCount": 16,
+      "sourceCardNoLongerLiveCount": 13,
+      "subsequentOpeningPositionIds": [
+        10652,
+        11841,
+        11945,
+        11949,
+        11974,
+        11995,
+        12122
+      ],
+      "subsequentOpeningWarningCount": 7,
+      "warningExposureModeledPnlBeforeFunding": -25.980177117980872,
+      "otherUnverifiedExposureModeledPnlBeforeFunding": 14.275930931072434,
+      "totalModeledPnlBeforeFunding": -11.704246186908438,
+      "interpretation": "Warning subtotal assumes continued exposure despite non-live source cards or subsequent openings; neither subtotal is verified copier performance."
+    },
+    "archive": {
+      "at": "2026-11-06T22:17:23.703216+00:00",
+      "scope": "Saved original exits and copied-card ending revisions; uncaptured source history unknown",
+      "files": 40,
+      "bytesRead": 23122,
+      "exitCardsReviewed": 0,
+      "endingRevisionRowsReviewed": 0,
+      "newCardWarningsRecovered": 0,
+      "matchingExitIds": [],
+      "backlogRemaining": false,
+      "errors": []
+    }
+  },
+  "scalpSnapshot": {
+    "protocolVersion": "split-v4",
+    "families": {
+      "fresh": {
+        "total": 149,
+        "open": 1,
+        "closed": 148,
+        "closedPnlBeforeFunding": -17.46153051844049,
+        "milestones": {
+          "notional": {
+            "5": 4,
+            "10": 0,
+            "20": 0
+          },
+          "margin": {
+            "5": 48,
+            "10": 20,
+            "20": 11
+          }
+        }
+      },
+      "add_scalp": {
+        "total": 1077,
+        "open": 4,
+        "closed": 1073,
+        "closedPnlBeforeFunding": -595.6077430487999,
+        "milestones": {
+          "notional": {
+            "5": 3,
+            "10": 1,
+            "20": 0
+          },
+          "margin": {
+            "5": 203,
+            "10": 108,
+            "20": 38
+          }
+        }
+      }
+    },
+    "study": "github-portfolio-v3",
+    "initialEquity": 1000,
+    "equity": 384.9168664186609,
+    "realizedBeforeFunding": -613.0692735672404,
+    "openCloseEstimateBeforeFunding": -2.013860014098682,
+    "marginInUse": 56.107123849800004,
+    "available": 328.8097425688609,
+    "openCount": 5,
+    "closedCount": 1221,
+    "totalCount": 1226,
+    "maxOpen": 20,
+    "targetNotional": 200,
+    "maxPositionNotional": 350,
+    "stalePositions": [],
+    "milestones": {
+      "notional": {
+        "5": {
+          "hit": 7,
+          "total": 1226,
+          "unconfirmed": 1219
+        },
+        "10": {
+          "hit": 1,
+          "total": 1226,
+          "unconfirmed": 1225
+        },
+        "20": {
+          "hit": 0,
+          "total": 1226,
+          "unconfirmed": 1226
+        }
+      },
+      "margin": {
+        "5": {
+          "hit": 251,
+          "total": 1226,
+          "unconfirmed": 975
+        },
+        "10": {
+          "hit": 128,
+          "total": 1226,
+          "unconfirmed": 1098
+        },
+        "20": {
+          "hit": 49,
+          "total": 1226,
+          "unconfirmed": 1177
+        }
+      }
+    },
+    "feesAssumedBps": 4.5,
+    "fundingComplete": false,
+    "at": "2026-11-06T22:22:38.551437+00:00",
+    "maxDrawdownObserved": 0.6159950825179016
+  },
+  "limitations": [
+    "Public source card fields unverified and mutable. Margin proxy is not verified proportional source quantity.",
+    "No source-account linkage, liquidation model or exact funding; no copier-readiness claim.",
+    "No new explicit exits in audited first arrivals does not prove all source positions stayed open.",
+    "Sequential moving-main downloads hashed individually, not atomic snapshot."
+  ]
+}
