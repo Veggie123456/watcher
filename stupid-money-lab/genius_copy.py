@@ -1,6 +1,7 @@
 """Prospective, independently funded paper mirror of Genius-labeled alerts."""
 import math
 import re
+from datetime import datetime
 
 STARTING_CASH = 10000
 MAX_OPEN = 50
@@ -326,19 +327,45 @@ def audit_source_cards(state, events, stamp, append):
     active = [p for p in ledger.get('positions', {}).values() if not p.get('closedAt')]
     now = stamp()
     warnings = ledger.setdefault('sourceCardClosureWarnings', {})
+    lifecycle_warnings = ledger.setdefault('sourceLifecycleWarnings', {})
+    def event_time(value):
+        try:
+            parsed = datetime.fromisoformat(value.replace('Z', '+00:00'))
+            return parsed.timestamp() if parsed.tzinfo is not None else None
+        except (AttributeError, ValueError, TypeError, OverflowError):
+            return None
     for position in active:
         prior_warning = position.get('sourceCardClosureWarning')
+        prior_opening = position.get('subsequentOpeningWarning')
         position['closureVerification'] = ('SOURCE CARD NO LONGER LIVE: ' + prior_warning['reason'] + '; exit unverified'
-                                           if prior_warning else 'Unverified: no matched source exit; paper exposure remains open')
+                                           if prior_warning else 'SUBSEQUENT SOURCE OPENING: prior lifecycle ending unverified'
+                                           if prior_opening else 'Unverified: no matched source exit; paper exposure remains open')
         leg_ids = {leg.get('eventId') for leg in position.get('legs', [])}
         for event in events:
             payload = event.get('payload', {})
             card = event.get('traderCard', {}).get('pnl') or {}
             frozen = card.get('frozen') or {}
-            if (event.get('id') not in leg_ids
-                    or str(payload.get('wallet', '')).lower() != position['wallet'].lower()
+            if (str(payload.get('wallet', '')).lower() != position['wallet'].lower()
                     or event.get('coin') != position['symbol']
                     or str(payload.get('side', '')).lower() != position['direction'].lower()):
+                continue
+            if payload.get('action') == 'OPENED' and event.get('id') is not None and event['id'] not in leg_ids:
+                published, opened, observed = (event_time(event.get('createdAt')),
+                                              event_time(position.get('sourceOpenedAt')), event_time(now))
+                if published is not None and opened is not None and observed is not None and opened < published <= observed:
+                    key = str(position['id']) + ':opening:' + str(event['id'])
+                    if key not in lifecycle_warnings:
+                        receipt = {'positionId': position['id'], 'eventId': event['id'],
+                                   'sourcePublicationAt': event['createdAt'], 'discoveredAt': now,
+                                   'reason': 'subsequent_same_side_opening', 'wallet': position['wallet'],
+                                   'market': position['symbol'], 'side': position['direction'],
+                                   'interpretation': 'Later OPENED alert for an already tracked wallet/market/side; prior ending unverified. No exit fill inferred.'}
+                        lifecycle_warnings[key] = receipt
+                        append('source-lifecycle-warnings', receipt)
+                    position['subsequentOpeningWarning'] = lifecycle_warnings[key]
+                    if not position.get('sourceCardClosureWarning'):
+                        position['closureVerification'] = 'SUBSEQUENT SOURCE OPENING: prior lifecycle ending unverified'
+            if event.get('id') not in leg_ids:
                 continue
             if card.get('live') is False and frozen.get('reason') in ('gone', 'reopened'):
                 key = str(event['id']) + ':' + str(frozen.get('at'))
@@ -353,9 +380,12 @@ def audit_source_cards(state, events, stamp, append):
                 position['sourceCardClosureWarning'] = warnings[key]
     ledger['sourceCardAudit'] = {'at': now, 'activePaperPositions': len(active),
                                'retainedWarnings': len(warnings),
-                               'scope': 'Current source cards matched to exact copied leg IDs, wallet, market and side; no implied exit fills'}
+                               'retainedLifecycleWarnings': len(lifecycle_warnings),
+                               'scope': 'Exact copied-card revisions and subsequent same-wallet/market/side openings; warnings only, no implied exit fills'}
 
-    flagged_ids = {row['positionId'] for row in warnings.values()}
+    card_ids = {row['positionId'] for row in warnings.values()}
+    opening_ids = {row['positionId'] for row in lifecycle_warnings.values()}
+    flagged_ids = card_ids | opening_ids
     flagged = [p for p in active if p['id'] in flagged_ids]
     remaining = [p for p in active if p['id'] not in flagged_ids]
     def modeled_total(rows):
@@ -366,8 +396,12 @@ def audit_source_cards(state, events, stamp, append):
         'copyPerformanceEligible': False, 'activePaperExposures': len(active),
         'closureWarningPositionIds': [p['id'] for p in flagged],
         'closureWarningCount': len(flagged),
+        'sourceCardNoLongerLiveCount': sum(p['id'] in card_ids for p in active),
+        'subsequentOpeningPositionIds': [p['id'] for p in active if p['id'] in opening_ids],
+        'subsequentOpeningWarningCount': sum(p['id'] in opening_ids for p in active),
         'warningExposureModeledPnlBeforeFunding': modeled_total(flagged),
         'otherUnverifiedExposureModeledPnlBeforeFunding': modeled_total(remaining),
         'totalModeledPnlBeforeFunding': modeled_total(active),
-        'interpretation': 'Warning subtotal assumes continued exposure after source card became non-live; neither subtotal is verified copier performance.'
+        'interpretation': 'Warning subtotal assumes continued exposure despite non-live source cards or subsequent openings; neither subtotal is verified copier performance.'
     }
+

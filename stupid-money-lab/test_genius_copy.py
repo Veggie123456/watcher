@@ -75,3 +75,42 @@ late_exit()
 assert ledger['cash']==10020 and len(ledger['history'][0]['legs'])==2
 now=original_now
 print('Missed-close discovery-time pricing and duplicate recovery checks passed')
+
+# Repeated OPENED is lifecycle evidence, never another fill or an inferred close.
+state.clear()
+ledger=run((401,'OPENED','GENIUS',{}))
+position=ledger['positions'][wallet+':BTC:LONG']
+snapshot=(ledger['cash'],position['quantity'],position['basis'],position['marginRequired'],len(position['legs']))
+later=(dt.datetime.fromisoformat(now)+dt.timedelta(minutes=1)).isoformat()
+audit_now=(dt.datetime.fromisoformat(now)+dt.timedelta(minutes=2)).isoformat()
+event=dict(id=402,coin='BTC',createdAt=later,payload=dict(wallet=wallet.upper(),cohort='SMART',side='LONG',action='OPENED'))
+warnings=[]
+def audit(rows):
+    genius_copy.audit_source_cards(state,rows,lambda:audit_now,lambda kind,row:warnings.append((kind,row)))
+audit([event,event])
+assert len(warnings)==1 and len(ledger['sourceLifecycleWarnings'])==1
+assert position['subsequentOpeningWarning']['eventId']==402
+assert ledger['valuationQuality']['subsequentOpeningPositionIds']==[401]
+assert ledger['valuationQuality']['closureWarningCount']==1
+assert snapshot==(ledger['cash'],position['quantity'],position['basis'],position['marginRequired'],len(position['legs']))
+audit([])
+assert 'SUBSEQUENT SOURCE OPENING' in position['closureVerification']
+for row in [dict(event,id=403,coin='ETH'),dict(event,id=404,payload=dict(event['payload'],side='SHORT')),
+            dict(event,id=405,createdAt=now),dict(event,id=406,createdAt='bad'),
+            dict(event,id=401),dict(event,id=407,createdAt='2099-01-01T00:00:00Z')]:
+    audit([row])
+assert len(warnings)==1
+# Exact copied-card disappearance keeps priority over the subsequent-opening warning.
+gone=dict(id=401,coin='BTC',createdAt=now,payload=dict(wallet=wallet,side='LONG',action='OPENED'),
+          traderCard={'pnl':{'live':False,'frozen':{'reason':'gone','at':later}}})
+audit([gone,event]);audit([])
+assert 'NO LONGER LIVE' in position['closureVerification']
+assert ledger['valuationQuality']['sourceCardNoLongerLiveCount']==1
+assert ledger['valuationQuality']['closureWarningCount']==1
+# Diagnostic warnings must not prevent a real matched full close.
+run((408,'CLOSED','SMART',{}))
+audit([])
+assert position.get('closedAt') and ledger['valuationQuality']['closureWarningCount']==0
+assert ledger['cash']==10000
+print('Subsequent-opening warning identity, chronology, idempotence, retention, accounting and matched-close checks passed')
+
