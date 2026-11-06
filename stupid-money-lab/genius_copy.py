@@ -321,7 +321,9 @@ def audit_source_cards(state, events, stamp, append):
     now = stamp()
     warnings = ledger.setdefault('sourceCardClosureWarnings', {})
     for position in active:
-        position['closureVerification'] = 'Unverified: no matched source exit; paper exposure remains open'
+        prior_warning = position.get('sourceCardClosureWarning')
+        position['closureVerification'] = ('SOURCE CARD NO LONGER LIVE: ' + prior_warning['reason'] + '; exit unverified'
+                                           if prior_warning else 'Unverified: no matched source exit; paper exposure remains open')
         leg_ids = {leg.get('eventId') for leg in position.get('legs', [])}
         for event in events:
             payload = event.get('payload', {})
@@ -346,3 +348,20 @@ def audit_source_cards(state, events, stamp, append):
     ledger['sourceCardAudit'] = {'at': now, 'activePaperPositions': len(active),
                                'retainedWarnings': len(warnings),
                                'scope': 'Current source cards matched to exact copied leg IDs, wallet, market and side; no implied exit fills'}
+
+    flagged_ids = {row['positionId'] for row in warnings.values()}
+    flagged = [p for p in active if p['id'] in flagged_ids]
+    remaining = [p for p in active if p['id'] not in flagged_ids]
+    def modeled_total(rows):
+        values = [p.get('openPnl') for p in rows]
+        return sum(values) if all(isinstance(v, (int, float)) and math.isfinite(v) for v in values) else None
+    ledger['valuationQuality'] = {
+        'at': now, 'status': 'Unvalidated website-alert simulation; source holdings and funding incomplete',
+        'copyPerformanceEligible': False, 'activePaperExposures': len(active),
+        'closureWarningPositionIds': [p['id'] for p in flagged],
+        'closureWarningCount': len(flagged),
+        'warningExposureModeledPnlBeforeFunding': modeled_total(flagged),
+        'otherUnverifiedExposureModeledPnlBeforeFunding': modeled_total(remaining),
+        'totalModeledPnlBeforeFunding': modeled_total(active),
+        'interpretation': 'Warning subtotal assumes continued exposure after source card became non-live; neither subtotal is verified copier performance.'
+    }
