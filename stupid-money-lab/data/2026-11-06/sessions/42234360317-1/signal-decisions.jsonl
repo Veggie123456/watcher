@@ -4,3 +4,4 @@
 {"at":"2026-11-06T14:32:30.187671+00:00","eventId":12230,"action":"ADDED","tier":"SMART","coin":"BTC","status":"filled","reason":"Standalone add-alert scalp opened"}
 {"at":"2026-11-06T14:32:30.197759+00:00","eventId":12231,"action":"ADDED","tier":"GENIUS","coin":"BTC","status":"filled","reason":"Standalone add-alert scalp opened"}
 {"at":"2026-11-06T14:34:43.782580+00:00","eventId":12235,"action":"OPENED","tier":"GENIUS","coin":"BTC","status":"skipped","reason":"Source leverage missing, unreadable or above venue limit; no matched-leverage fill"}
+{"at":"2026-11-06T14:35:20.466650+00:00","eventId":12237,"action":"ADDED","tier":"SMART","coin":"XMR","status":"filled","reason":"Standalone add-alert scalp opened"}
