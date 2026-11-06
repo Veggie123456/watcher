@@ -1,1 +1,7 @@
 {"at":"2026-11-06T02:22:11.311832+00:00","error":"Command '['git', 'write-tree']' timed out after 30 seconds; local evidence/artifact retained, no upload assumed."}
+{"at":"2026-11-06T02:31:36.627917+00:00","scenario":"github-portfolio-v3-11908","error":"Insufficient visible depth"}
+{"at":"2026-11-06T02:31:36.628812+00:00","lifecycle":"github-portfolio-v3-10742","error":"Insufficient visible depth; no full fill"}
+{"at":"2026-11-06T02:31:36.628812+00:00","lifecycle":"github-portfolio-v3-10910","error":"Insufficient visible depth; no full fill"}
+{"at":"2026-11-06T02:31:36.628812+00:00","lifecycle":"github-portfolio-v3-11512","error":"Insufficient visible depth; no full fill"}
+{"at":"2026-11-06T02:31:36.628812+00:00","lifecycle":"github-portfolio-v3-11863","error":"Insufficient visible depth; no full fill"}
+{"at":"2026-11-06T02:31:36.628812+00:00","lifecycle":"github-portfolio-v3-11908","error":"Insufficient visible depth; no full fill"}
