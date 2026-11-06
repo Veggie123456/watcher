@@ -41,7 +41,7 @@ def parse_events(html):
             except ValueError: continue
             for e in items:
                 p=e.get('payload',{}) if isinstance(e,dict) else {}
-                if p.get('cohort') in ('GENIUS','SMART') and isinstance(e.get('id'),int): found[str(e['id'])]=e
+                if (p.get('cohort') in ('GENIUS','SMART') or p.get('action') in ('CLOSED','REDUCED')) and isinstance(e.get('id'),int): found[str(e['id'])]=e
     return list(found.values())
 
 def append(kind, value):
