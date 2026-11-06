@@ -16,3 +16,4 @@
 {"at":"2026-11-06T13:43:39.010856+00:00","eventId":12204,"action":"OPENED","tier":"SMART","coin":"ZEC","status":"filled","reason":"Fresh opening recorded"}
 {"at":"2026-11-06T13:50:25.137381+00:00","eventId":12206,"action":"ADDED","tier":"GENIUS","coin":"HYPE","status":"filled","reason":"Standalone add-alert scalp opened"}
 {"at":"2026-11-06T13:51:04.480936+00:00","eventId":12207,"action":"OPENED","tier":"GENIUS","coin":"BTC","status":"skipped","reason":"Source leverage missing, unreadable or above venue limit; no matched-leverage fill"}
+{"at":"2026-11-06T13:52:17.385266+00:00","eventId":12208,"action":"ADDED","tier":"GENIUS","coin":"BTC","status":"filled","reason":"Standalone add-alert scalp opened"}
