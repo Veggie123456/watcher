@@ -313,12 +313,12 @@ def publish_checkpoint():
     paths=['stupid-money-lab/state.json','stupid-money-lab/dashboard.json'] + [str(p.relative_to(ROOT.parent)) for p in (ROOT/'data').rglob('*') if p.is_file()]
     identity=['git','-c','user.name=Stupid Money research collector','-c','user.email=41898282+github-actions[bot]@users.noreply.github.com']
     def run(args,env=None):
-        r=subprocess.run(args,cwd=ROOT.parent,env=env,stdout=subprocess.PIPE,stderr=subprocess.PIPE,timeout=30)
-        if r.returncode: raise RuntimeError('Checkpoint git '+args[1]+' failed')
+        r=subprocess.run(args,cwd=ROOT.parent,env=env,stdout=subprocess.PIPE,stderr=subprocess.PIPE,timeout=60)
+        if r.returncode: raise RuntimeError('Checkpoint git '+args[1]+' failed (exit '+str(r.returncode)+')')
         return r.stdout.decode().strip()
     for attempt in range(2):
         try:
-            run(['git','fetch','origin','main']);parent=run(['git','rev-parse','FETCH_HEAD'])
+            run(['git','fetch','--depth=1','origin','main']);parent=run(['git','rev-parse','FETCH_HEAD'])
             with tempfile.TemporaryDirectory() as td:
                 env={**os.environ,'GIT_INDEX_FILE':str(pathlib.Path(td)/'index')}
                 run(['git','read-tree',parent],env);run(['git','add','--sparse','--',*paths],env);tree=run(['git','write-tree'],env)
