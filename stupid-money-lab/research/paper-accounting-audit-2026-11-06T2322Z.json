@@ -1,0 +1,1911 @@
+{
+  "at": "2026-11-06T23:23:31.056538+00:00",
+  "objective": "Replay actual paper ledger quantity, basis, assumed entry fees and shared cash reservation",
+  "stateCutoff": "2026-11-06T23:21:54.406647+00:00",
+  "stateSha256": "b6adba03319b179322eb30ce0ee573a0e3bd22f2302e9649584423484e356df3",
+  "contributedCapital": 10000,
+  "capitalFlows": [
+    {
+      "at": "2026-11-05T22:26:10.497570+00:00",
+      "amount": 6000,
+      "reason": "User authorized simulated bankroll expansion",
+      "capitalAfter": 10000
+    }
+  ],
+  "positionCount": 48,
+  "legActions": {
+    "OPENED": 48,
+    "ADDED": 3
+  },
+  "uniqueLegEventIds": 51,
+  "sumEntryFees": "4.58924704469099975",
+  "sumReservedMargin": "5235.186929307999787",
+  "reconstructedCash": "4760.22382364730921325",
+  "storedCash": 4760.223823647307,
+  "cashResidual": "-2.21325E-12",
+  "errors": [],
+  "receipts": [
+    {
+      "positionId": 10652,
+      "paperLeverage": "1",
+      "margin": "195.13467",
+      "replayedQuantity": "0.15",
+      "replayedBasis": "195.134670",
+      "replayedFees": "0.0878106015",
+      "checks": {
+        "quantity": true,
+        "basis": true,
+        "entryFees": true,
+        "margin": true,
+        "feeRate": true
+      },
+      "legs": [
+        {
+          "eventId": 10652,
+          "action": "OPENED",
+          "wallet": "0x1053cdafe287e783eca26c4a4fbd441ebcbb2d8b",
+          "market": "ZEC",
+          "side": "SHORT",
+          "publication": "2026-11-05T01:41:02.297Z",
+          "observedAt": "2026-11-05T01:41:28.403765+00:00",
+          "status": "paper fill",
+          "quantity": 0.15,
+          "price": 1300.8978,
+          "fee": 0.0878106015,
+          "bookTime": 1793842888118,
+          "filledAt": "2026-11-05T01:41:28.843262+00:00"
+        }
+      ]
+    },
+    {
+      "positionId": 10677,
+      "paperLeverage": "1",
+      "margin": "197.816985",
+      "replayedQuantity": "0.15",
+      "replayedBasis": "197.816985",
+      "replayedFees": "0.08901764324999999",
+      "checks": {
+        "quantity": true,
+        "basis": true,
+        "entryFees": true,
+        "margin": true,
+        "feeRate": true
+      },
+      "legs": [
+        {
+          "eventId": 10677,
+          "action": "OPENED",
+          "wallet": "0xace83bad72ce09ca27d80f353199b17799d9cade",
+          "market": "ZEC",
+          "side": "SHORT",
+          "publication": "2026-11-05T02:50:02.893Z",
+          "observedAt": "2026-11-05T02:50:15.691461+00:00",
+          "status": "paper fill",
+          "quantity": 0.15,
+          "price": 1318.7799,
+          "fee": 0.08901764324999999,
+          "bookTime": 1793847015377,
+          "filledAt": "2026-11-05T02:50:16.537410+00:00"
+        }
+      ]
+    },
+    {
+      "positionId": 10721,
+      "paperLeverage": "1",
+      "margin": "199.27684368",
+      "replayedQuantity": "0.00248",
+      "replayedBasis": "199.27684368",
+      "replayedFees": "0.08967457965600001",
+      "checks": {
+        "quantity": true,
+        "basis": true,
+        "entryFees": true,
+        "margin": true,
+        "feeRate": true
+      },
+      "legs": [
+        {
+          "eventId": 10721,
+          "action": "OPENED",
+          "wallet": "0x253b7b4ba1af2b86a6a010d8cf48e4252e603b22",
+          "market": "BTC",
+          "side": "SHORT",
+          "publication": "2026-11-05T04:31:02.221Z",
+          "observedAt": "2026-11-05T04:31:36.609024+00:00",
+          "status": "paper fill",
+          "quantity": 0.00248,
+          "price": 80353.566,
+          "fee": 0.08967457965600001,
+          "bookTime": 1793853096439,
+          "filledAt": "2026-11-05T04:31:37.234100+00:00"
+        }
+      ]
+    },
+    {
+      "positionId": 10723,
+      "paperLeverage": "1",
+      "margin": "199.73270736",
+      "replayedQuantity": "0.00248",
+      "replayedBasis": "199.73270736",
+      "replayedFees": "0.089879718312",
+      "checks": {
+        "quantity": true,
+        "basis": true,
+        "entryFees": true,
+        "margin": true,
+        "feeRate": true
+      },
+      "legs": [
+        {
+          "eventId": 10723,
+          "action": "OPENED",
+          "wallet": "0x9f9230a0b48d6f800b2c10036f25ac89455298ee",
+          "market": "BTC",
+          "side": "SHORT",
+          "publication": "2026-11-05T04:35:02.191Z",
+          "observedAt": "2026-11-05T04:35:18.587377+00:00",
+          "status": "paper fill",
+          "quantity": 0.00248,
+          "price": 80537.382,
+          "fee": 0.089879718312,
+          "bookTime": 1793853318368,
+          "filledAt": "2026-11-05T04:35:19.083002+00:00"
+        }
+      ]
+    },
+    {
+      "positionId": 10728,
+      "paperLeverage": "1",
+      "margin": "199.9940058",
+      "replayedQuantity": "26.2",
+      "replayedBasis": "199.99400580000001048",
+      "replayedFees": "0.08999730261",
+      "checks": {
+        "quantity": true,
+        "basis": true,
+        "entryFees": true,
+        "margin": true,
+        "feeRate": true
+      },
+      "legs": [
+        {
+          "eventId": 10728,
+          "action": "OPENED",
+          "wallet": "0xb9f73a0bd2fa864f63f357093a7ed297994c1f51",
+          "market": "UNI",
+          "side": "SHORT",
+          "publication": "2026-11-05T05:02:01.709Z",
+          "observedAt": "2026-11-05T05:02:20.695488+00:00",
+          "status": "paper fill",
+          "quantity": 26.2,
+          "price": 7.6333590000000004,
+          "fee": 0.08999730261,
+          "bookTime": 1793854940239,
+          "filledAt": "2026-11-05T05:02:21.161353+00:00"
+        }
+      ]
+    },
+    {
+      "positionId": 10736,
+      "paperLeverage": "1",
+      "margin": "199.699101",
+      "replayedQuantity": "0.315",
+      "replayedBasis": "199.6991010",
+      "replayedFees": "0.08986459545",
+      "checks": {
+        "quantity": true,
+        "basis": true,
+        "entryFees": true,
+        "margin": true,
+        "feeRate": true
+      },
+      "legs": [
+        {
+          "eventId": 10736,
+          "action": "OPENED",
+          "wallet": "0xf6af84c22bca163f1c7ce8dbf3a6ac2c5230d622",
+          "market": "XMR",
+          "side": "SHORT",
+          "publication": "2026-11-05T05:33:02.614Z",
+          "observedAt": "2026-11-05T05:33:40.487668+00:00",
+          "status": "paper fill",
+          "quantity": 0.315,
+          "price": 633.9654,
+          "fee": 0.08986459545,
+          "bookTime": 1793856820060,
+          "filledAt": "2026-11-05T05:33:41.135844+00:00"
+        }
+      ]
+    },
+    {
+      "positionId": 10936,
+      "paperLeverage": "1",
+      "margin": "199.60635383999997",
+      "replayedQuantity": "2.48",
+      "replayedBasis": "199.6063538399999752",
+      "replayedFees": "0.08982285922799998",
+      "checks": {
+        "quantity": true,
+        "basis": true,
+        "entryFees": true,
+        "margin": true,
+        "feeRate": true
+      },
+      "legs": [
+        {
+          "eventId": 10936,
+          "action": "OPENED",
+          "wallet": "0x4fe8c13f70fba3081be9953869ae8f2ca3c3ba7a",
+          "market": "HYPE",
+          "side": "SHORT",
+          "publication": "2026-11-05T14:41:03.573Z",
+          "observedAt": "2026-11-05T14:41:37.639966+00:00",
+          "status": "paper fill",
+          "quantity": 2.48,
+          "price": 80.48643299999999,
+          "fee": 0.08982285922799998,
+          "bookTime": 1793889694462,
+          "filledAt": "2026-11-05T14:41:38.362408+00:00"
+        }
+      ]
+    },
+    {
+      "positionId": 10944,
+      "paperLeverage": "1",
+      "margin": "199.9544454",
+      "replayedQuantity": "0.0844",
+      "replayedBasis": "199.95444540",
+      "replayedFees": "0.08997950043",
+      "checks": {
+        "quantity": true,
+        "basis": true,
+        "entryFees": true,
+        "margin": true,
+        "feeRate": true
+      },
+      "legs": [
+        {
+          "eventId": 10944,
+          "action": "OPENED",
+          "wallet": "0x5130c49423d8f8b8dbf838a44725e5d5720e34dc",
+          "market": "ETH",
+          "side": "SHORT",
+          "publication": "2026-11-05T14:43:02.643Z",
+          "observedAt": "2026-11-05T14:43:07.577586+00:00",
+          "status": "paper fill",
+          "quantity": 0.0844,
+          "price": 2369.1285,
+          "fee": 0.08997950043,
+          "bookTime": 1793889786552,
+          "filledAt": "2026-11-05T14:43:08.398653+00:00"
+        }
+      ]
+    },
+    {
+      "positionId": 11003,
+      "paperLeverage": "1",
+      "margin": "199.83148185000002",
+      "replayedQuantity": "0.00255",
+      "replayedBasis": "199.83148185",
+      "replayedFees": "0.0899241668325",
+      "checks": {
+        "quantity": true,
+        "basis": true,
+        "entryFees": true,
+        "margin": true,
+        "feeRate": true
+      },
+      "legs": [
+        {
+          "eventId": 11003,
+          "action": "OPENED",
+          "wallet": "0x8e56e91bcb3640d11247d607201a73e13040f4b7",
+          "market": "BTC",
+          "side": "LONG",
+          "publication": "2026-11-05T14:59:03.625Z",
+          "observedAt": "2026-11-05T14:59:32.284627+00:00",
+          "status": "paper fill",
+          "quantity": 0.00255,
+          "price": 78365.287,
+          "fee": 0.0899241668325,
+          "bookTime": 1793890771572,
+          "filledAt": "2026-11-05T14:59:32.824886+00:00"
+        }
+      ]
+    },
+    {
+      "positionId": 11020,
+      "paperLeverage": "1",
+      "margin": "188.61619499999998",
+      "replayedQuantity": "0.15",
+      "replayedBasis": "188.616195",
+      "replayedFees": "0.08487728774999999",
+      "checks": {
+        "quantity": true,
+        "basis": true,
+        "entryFees": true,
+        "margin": true,
+        "feeRate": true
+      },
+      "legs": [
+        {
+          "eventId": 11020,
+          "action": "OPENED",
+          "wallet": "0xa75eb8813909f9185e90aa1eb5f7b667f68820e1",
+          "market": "ZEC",
+          "side": "SHORT",
+          "publication": "2026-11-05T15:02:03.428Z",
+          "observedAt": "2026-11-05T15:02:35.669290+00:00",
+          "status": "paper fill",
+          "quantity": 0.15,
+          "price": 1257.4413,
+          "fee": 0.08487728774999999,
+          "bookTime": 1793890952554,
+          "filledAt": "2026-11-05T15:02:36.486452+00:00"
+        }
+      ]
+    },
+    {
+      "positionId": 11040,
+      "paperLeverage": "1",
+      "margin": "199.72404451999998",
+      "replayedQuantity": "0.00257",
+      "replayedBasis": "199.72404452",
+      "replayedFees": "0.08987582003399999",
+      "checks": {
+        "quantity": true,
+        "basis": true,
+        "entryFees": true,
+        "margin": true,
+        "feeRate": true
+      },
+      "legs": [
+        {
+          "eventId": 11040,
+          "action": "OPENED",
+          "wallet": "0x1fd1c1bcafc18e4dc5bedc8331286246d8d7482e",
+          "market": "BTC",
+          "side": "LONG",
+          "publication": "2026-11-05T15:05:03.550Z",
+          "observedAt": "2026-11-05T15:05:41.408752+00:00",
+          "status": "paper fill",
+          "quantity": 0.00257,
+          "price": 77713.636,
+          "fee": 0.08987582003399999,
+          "bookTime": 1793891139158,
+          "filledAt": "2026-11-05T15:05:42.055478+00:00"
+        }
+      ]
+    },
+    {
+      "positionId": 11114,
+      "paperLeverage": "1",
+      "margin": "199.9010988",
+      "replayedQuantity": "0.0026",
+      "replayedBasis": "199.9010988",
+      "replayedFees": "0.08995549446",
+      "checks": {
+        "quantity": true,
+        "basis": true,
+        "entryFees": true,
+        "margin": true,
+        "feeRate": true
+      },
+      "legs": [
+        {
+          "eventId": 11114,
+          "action": "OPENED",
+          "wallet": "0xe3a670dc409f8774288f783f37643e5b3af54f7d",
+          "market": "BTC",
+          "side": "SHORT",
+          "publication": "2026-11-05T15:12:04.060Z",
+          "observedAt": "2026-11-05T15:12:35.439394+00:00",
+          "status": "paper fill",
+          "quantity": 0.0026,
+          "price": 76885.038,
+          "fee": 0.08995549446,
+          "bookTime": 1793891548170,
+          "filledAt": "2026-11-05T15:12:35.981505+00:00"
+        }
+      ]
+    },
+    {
+      "positionId": 11128,
+      "paperLeverage": "1",
+      "margin": "199.71784832999998",
+      "replayedQuantity": "2.53",
+      "replayedBasis": "199.71784833",
+      "replayedFees": "0.08987303174849999",
+      "checks": {
+        "quantity": true,
+        "basis": true,
+        "entryFees": true,
+        "margin": true,
+        "feeRate": true
+      },
+      "legs": [
+        {
+          "eventId": 11128,
+          "action": "OPENED",
+          "wallet": "0x4fe8c13f70fba3081be9953869ae8f2ca3c3ba7a",
+          "market": "HYPE",
+          "side": "LONG",
+          "publication": "2026-11-05T15:13:04.602Z",
+          "observedAt": "2026-11-05T15:13:21.325444+00:00",
+          "status": "paper fill",
+          "quantity": 2.53,
+          "price": 78.939861,
+          "fee": 0.08987303174849999,
+          "bookTime": 1793891596009,
+          "filledAt": "2026-11-05T15:13:21.905273+00:00"
+        }
+      ]
+    },
+    {
+      "positionId": 11154,
+      "paperLeverage": "1",
+      "margin": "199.7629371",
+      "replayedQuantity": "0.00258",
+      "replayedBasis": "199.76293710",
+      "replayedFees": "0.08989332169499999",
+      "checks": {
+        "quantity": true,
+        "basis": true,
+        "entryFees": true,
+        "margin": true,
+        "feeRate": true
+      },
+      "legs": [
+        {
+          "eventId": 11154,
+          "action": "OPENED",
+          "wallet": "0x656479bffc5ae168ff19c11c6ed6b8b2d90261fc",
+          "market": "BTC",
+          "side": "SHORT",
+          "publication": "2026-11-05T15:17:04.884Z",
+          "observedAt": "2026-11-05T15:17:11.302531+00:00",
+          "status": "paper fill",
+          "quantity": 0.00258,
+          "price": 77427.495,
+          "fee": 0.08989332169499999,
+          "bookTime": 1793891826661,
+          "filledAt": "2026-11-05T15:17:12.112996+00:00"
+        }
+      ]
+    },
+    {
+      "positionId": 11438,
+      "paperLeverage": "1",
+      "margin": "199.66473539999998",
+      "replayedQuantity": "0.0026",
+      "replayedBasis": "199.6647354",
+      "replayedFees": "0.08984913092999999",
+      "checks": {
+        "quantity": true,
+        "basis": true,
+        "entryFees": true,
+        "margin": true,
+        "feeRate": true
+      },
+      "legs": [
+        {
+          "eventId": 11438,
+          "action": "OPENED",
+          "wallet": "0x14e95649375b41fd674ddc6f2f50758ba86f0d30",
+          "market": "BTC",
+          "side": "SHORT",
+          "publication": "2026-11-05T16:29:03.039Z",
+          "observedAt": "2026-11-05T16:29:39.611476+00:00",
+          "status": "paper fill",
+          "quantity": 0.0026,
+          "price": 76794.129,
+          "fee": 0.08984913092999999,
+          "bookTime": 1793896179006,
+          "filledAt": "2026-11-05T16:29:40.155901+00:00"
+        }
+      ]
+    },
+    {
+      "positionId": 11451,
+      "paperLeverage": "1",
+      "margin": "189.51729300000002",
+      "replayedQuantity": "0.15",
+      "replayedBasis": "189.517293000000015",
+      "replayedFees": "0.08528278185",
+      "checks": {
+        "quantity": true,
+        "basis": true,
+        "entryFees": true,
+        "margin": true,
+        "feeRate": true
+      },
+      "legs": [
+        {
+          "eventId": 11451,
+          "action": "OPENED",
+          "wallet": "0xa59261792941111f852067cee9349041efca2d76",
+          "market": "ZEC",
+          "side": "SHORT",
+          "publication": "2026-11-05T16:38:02.707Z",
+          "observedAt": "2026-11-05T16:38:47.008164+00:00",
+          "status": "paper fill",
+          "quantity": 0.15,
+          "price": 1263.4486200000001,
+          "fee": 0.08528278185,
+          "bookTime": 1793896726792,
+          "filledAt": "2026-11-05T16:38:47.709184+00:00"
+        }
+      ]
+    },
+    {
+      "positionId": 11453,
+      "paperLeverage": "1",
+      "margin": "426.6237875899999",
+      "replayedQuantity": "0.00559",
+      "replayedBasis": "426.6237875899999441",
+      "replayedFees": "0.19198070441549996",
+      "checks": {
+        "quantity": true,
+        "basis": true,
+        "entryFees": true,
+        "margin": true,
+        "feeRate": true
+      },
+      "legs": [
+        {
+          "eventId": 11453,
+          "action": "OPENED",
+          "wallet": "0x3c88192119517f7a2d99eac100f0e8c93ea6f5bb",
+          "market": "BTC",
+          "side": "LONG",
+          "publication": "2026-11-05T16:41:03.162Z",
+          "observedAt": "2026-11-05T16:41:48.953824+00:00",
+          "status": "paper fill",
+          "quantity": 0.0026,
+          "price": 76781.70499999999,
+          "fee": 0.08983459484999998,
+          "bookTime": 1793896908738,
+          "filledAt": "2026-11-05T16:41:49.537235+00:00"
+        },
+        {
+          "eventId": 11523,
+          "action": "ADDED",
+          "wallet": "0x3c88192119517f7a2d99eac100f0e8c93ea6f5bb",
+          "market": "BTC",
+          "side": "LONG",
+          "publication": "2026-11-05T18:02:04.459Z",
+          "observedAt": "2026-11-05T18:02:17.259881+00:00",
+          "fraction": 1.1500446515415585,
+          "status": "paper fill",
+          "quantity": 0.00299,
+          "price": 75916.84099999999,
+          "fee": 0.10214610956549998,
+          "bookTime": 1793901736635,
+          "filledAt": "2026-11-05T18:02:17.765455+00:00"
+        }
+      ]
+    },
+    {
+      "positionId": 11464,
+      "paperLeverage": "1",
+      "margin": "199.94056929",
+      "replayedQuantity": "2.53",
+      "replayedBasis": "199.94056929",
+      "replayedFees": "0.0899732561805",
+      "checks": {
+        "quantity": true,
+        "basis": true,
+        "entryFees": true,
+        "margin": true,
+        "feeRate": true
+      },
+      "legs": [
+        {
+          "eventId": 11464,
+          "action": "OPENED",
+          "wallet": "0x5dd4520818e244c426b64f9431e8afbd5b81f1fa",
+          "market": "HYPE",
+          "side": "SHORT",
+          "publication": "2026-11-05T16:56:02.451Z",
+          "observedAt": "2026-11-05T16:56:12.764857+00:00",
+          "status": "paper fill",
+          "quantity": 2.53,
+          "price": 79.027893,
+          "fee": 0.0899732561805,
+          "bookTime": 1793897772065,
+          "filledAt": "2026-11-05T16:56:13.361745+00:00"
+        }
+      ]
+    },
+    {
+      "positionId": 11511,
+      "paperLeverage": "1",
+      "margin": "199.88686718",
+      "replayedQuantity": "2.54",
+      "replayedBasis": "199.88686718",
+      "replayedFees": "0.08994909023099999",
+      "checks": {
+        "quantity": true,
+        "basis": true,
+        "entryFees": true,
+        "margin": true,
+        "feeRate": true
+      },
+      "legs": [
+        {
+          "eventId": 11511,
+          "action": "OPENED",
+          "wallet": "0x5dd4520818e244c426b64f9431e8afbd5b81f1fa",
+          "market": "HYPE",
+          "side": "LONG",
+          "publication": "2026-11-05T17:37:02.703Z",
+          "observedAt": "2026-11-05T17:37:43.423715+00:00",
+          "status": "paper fill",
+          "quantity": 2.54,
+          "price": 78.695617,
+          "fee": 0.08994909023099999,
+          "bookTime": 1793900262753,
+          "filledAt": "2026-11-05T17:37:44.061002+00:00"
+        }
+      ]
+    },
+    {
+      "positionId": 11696,
+      "paperLeverage": "5",
+      "margin": "82.16050642799999",
+      "replayedQuantity": "0.00540",
+      "replayedBasis": "410.8025321399999460",
+      "replayedFees": "0.18486113946299997",
+      "checks": {
+        "quantity": true,
+        "basis": true,
+        "entryFees": true,
+        "margin": true,
+        "feeRate": true
+      },
+      "legs": [
+        {
+          "eventId": 11696,
+          "action": "OPENED",
+          "wallet": "0xe3a670dc409f8774288f783f37643e5b3af54f7d",
+          "market": "BTC",
+          "side": "LONG",
+          "publication": "2026-11-05T22:36:03.106Z",
+          "observedAt": "2026-11-05T22:36:11.613384+00:00",
+          "status": "paper fill",
+          "quantity": 0.00262,
+          "price": 76072.99699999999,
+          "fee": 0.08969006346299999,
+          "bookTime": 1793918171226,
+          "paperLeverage": 5,
+          "margin": 39.862250427999996,
+          "filledAt": "2026-11-05T22:36:12.204738+00:00"
+        },
+        {
+          "eventId": 11796,
+          "action": "ADDED",
+          "wallet": "0xe3a670dc409f8774288f783f37643e5b3af54f7d",
+          "market": "BTC",
+          "side": "LONG",
+          "publication": "2026-11-05T23:36:01.904Z",
+          "observedAt": "2026-11-05T23:36:16.466624+00:00",
+          "fraction": 1.0641240886159085,
+          "status": "paper fill",
+          "quantity": 0.00278,
+          "price": 76075.99999999999,
+          "fee": 0.09517107599999998,
+          "bookTime": 1793921776744,
+          "paperLeverage": 5,
+          "margin": 42.298255999999995,
+          "filledAt": "2026-11-05T23:36:17.826845+00:00"
+        }
+      ]
+    },
+    {
+      "positionId": 11777,
+      "paperLeverage": "5",
+      "margin": "39.9326274",
+      "replayedQuantity": "0.00265",
+      "replayedBasis": "199.6631370",
+      "replayedFees": "0.08984841165",
+      "checks": {
+        "quantity": true,
+        "basis": true,
+        "entryFees": true,
+        "margin": true,
+        "feeRate": true
+      },
+      "legs": [
+        {
+          "eventId": 11777,
+          "action": "OPENED",
+          "wallet": "0xf47546ca25a0358da1cc4a1c11dbf0e3a0e5e1c7",
+          "market": "BTC",
+          "side": "SHORT",
+          "publication": "2026-11-05T23:16:03.349Z",
+          "observedAt": "2026-11-05T23:16:05.367151+00:00",
+          "status": "paper fill",
+          "quantity": 0.00265,
+          "price": 75344.58,
+          "fee": 0.08984841165,
+          "bookTime": 1793920564619,
+          "paperLeverage": 5,
+          "margin": 39.9326274,
+          "filledAt": "2026-11-05T23:16:05.933449+00:00"
+        }
+      ]
+    },
+    {
+      "positionId": 11798,
+      "paperLeverage": "5",
+      "margin": "38.265696",
+      "replayedQuantity": "0.15",
+      "replayedBasis": "191.328479999999985",
+      "replayedFees": "0.086097816",
+      "checks": {
+        "quantity": true,
+        "basis": true,
+        "entryFees": true,
+        "margin": true,
+        "feeRate": true
+      },
+      "legs": [
+        {
+          "eventId": 11798,
+          "action": "OPENED",
+          "wallet": "0x5dd4520818e244c426b64f9431e8afbd5b81f1fa",
+          "market": "ZEC",
+          "side": "SHORT",
+          "publication": "2026-11-05T23:44:02.270Z",
+          "observedAt": "2026-11-05T23:44:02.709027+00:00",
+          "status": "paper fill",
+          "quantity": 0.15,
+          "price": 1275.5231999999999,
+          "fee": 0.086097816,
+          "bookTime": 1793922242953,
+          "paperLeverage": 5,
+          "margin": 38.265696,
+          "filledAt": "2026-11-05T23:44:03.597755+00:00"
+        }
+      ]
+    },
+    {
+      "positionId": 11841,
+      "paperLeverage": "5",
+      "margin": "39.975244739999994",
+      "replayedQuantity": "0.00262",
+      "replayedBasis": "199.87622370",
+      "replayedFees": "0.08994430066499998",
+      "checks": {
+        "quantity": true,
+        "basis": true,
+        "entryFees": true,
+        "margin": true,
+        "feeRate": true
+      },
+      "legs": [
+        {
+          "eventId": 11841,
+          "action": "OPENED",
+          "wallet": "0xe9d1a3a94ac91084fda4d28cf780625fa15afc59",
+          "market": "BTC",
+          "side": "SHORT",
+          "publication": "2026-11-06T00:43:02.591Z",
+          "observedAt": "2026-11-06T00:43:24.407064+00:00",
+          "status": "paper fill",
+          "quantity": 0.00262,
+          "price": 76288.635,
+          "fee": 0.08994430066499998,
+          "bookTime": 1793925803970,
+          "paperLeverage": 5,
+          "margin": 39.975244739999994,
+          "filledAt": "2026-11-06T00:43:24.867165+00:00"
+        }
+      ]
+    },
+    {
+      "positionId": 11867,
+      "paperLeverage": "5",
+      "margin": "39.482478",
+      "replayedQuantity": "0.15",
+      "replayedBasis": "197.412390000000030",
+      "replayedFees": "0.0888355755",
+      "checks": {
+        "quantity": true,
+        "basis": true,
+        "entryFees": true,
+        "margin": true,
+        "feeRate": true
+      },
+      "legs": [
+        {
+          "eventId": 11867,
+          "action": "OPENED",
+          "wallet": "0xaefb21635c5df37cbdc6161bd2172c0f6121c172",
+          "market": "ZEC",
+          "side": "SHORT",
+          "publication": "2026-11-06T01:15:04.243Z",
+          "observedAt": "2026-11-06T01:15:19.486487+00:00",
+          "status": "paper fill",
+          "quantity": 0.15,
+          "price": 1316.0826000000002,
+          "fee": 0.0888355755,
+          "bookTime": 1793927719128,
+          "paperLeverage": 5,
+          "margin": 39.482478,
+          "filledAt": "2026-11-06T01:15:20.043176+00:00"
+        }
+      ]
+    },
+    {
+      "positionId": 11877,
+      "paperLeverage": "5",
+      "margin": "39.13482599999999",
+      "replayedQuantity": "0.15",
+      "replayedBasis": "195.674129999999985",
+      "replayedFees": "0.08805335849999998",
+      "checks": {
+        "quantity": true,
+        "basis": true,
+        "entryFees": true,
+        "margin": true,
+        "feeRate": true
+      },
+      "legs": [
+        {
+          "eventId": 11877,
+          "action": "OPENED",
+          "wallet": "0xe9d1a3a94ac91084fda4d28cf780625fa15afc59",
+          "market": "ZEC",
+          "side": "SHORT",
+          "publication": "2026-11-06T01:30:02.663Z",
+          "observedAt": "2026-11-06T01:30:12.302415+00:00",
+          "status": "paper fill",
+          "quantity": 0.15,
+          "price": 1304.4941999999999,
+          "fee": 0.08805335849999998,
+          "bookTime": 1793928612133,
+          "paperLeverage": 5,
+          "margin": 39.13482599999999,
+          "filledAt": "2026-11-06T01:30:13.018694+00:00"
+        }
+      ]
+    },
+    {
+      "positionId": 11904,
+      "paperLeverage": "5",
+      "margin": "39.84057954000001",
+      "replayedQuantity": "59.0",
+      "replayedBasis": "199.20289770",
+      "replayedFees": "0.089641303965",
+      "checks": {
+        "quantity": true,
+        "basis": true,
+        "entryFees": true,
+        "margin": true,
+        "feeRate": true
+      },
+      "legs": [
+        {
+          "eventId": 11904,
+          "action": "OPENED",
+          "wallet": "0x5dd4520818e244c426b64f9431e8afbd5b81f1fa",
+          "market": "LIT",
+          "side": "SHORT",
+          "publication": "2026-11-06T02:22:02.640Z",
+          "observedAt": "2026-11-06T02:22:21.646517+00:00",
+          "status": "paper fill",
+          "quantity": 59.0,
+          "price": 3.3763203,
+          "fee": 0.089641303965,
+          "bookTime": 1793931741166,
+          "paperLeverage": 5,
+          "margin": 39.84057954000001,
+          "filledAt": "2026-11-06T02:22:22.144110+00:00"
+        }
+      ]
+    },
+    {
+      "positionId": 11935,
+      "paperLeverage": "5",
+      "margin": "38.639601",
+      "replayedQuantity": "0.15",
+      "replayedBasis": "193.198005",
+      "replayedFees": "0.08693910225",
+      "checks": {
+        "quantity": true,
+        "basis": true,
+        "entryFees": true,
+        "margin": true,
+        "feeRate": true
+      },
+      "legs": [
+        {
+          "eventId": 11935,
+          "action": "OPENED",
+          "wallet": "0x628f303158bb4dc2f6e31acb6e0a1fb464626a08",
+          "market": "ZEC",
+          "side": "LONG",
+          "publication": "2026-11-06T03:35:04.088Z",
+          "observedAt": "2026-11-06T03:35:29.995728+00:00",
+          "status": "paper fill",
+          "quantity": 0.15,
+          "price": 1287.9867,
+          "fee": 0.08693910225,
+          "bookTime": 1793936129961,
+          "paperLeverage": 5,
+          "margin": 38.639601,
+          "filledAt": "2026-11-06T03:35:30.553800+00:00"
+        }
+      ]
+    },
+    {
+      "positionId": 11945,
+      "paperLeverage": "5",
+      "margin": "39.89645459799999",
+      "replayedQuantity": "0.00263",
+      "replayedBasis": "199.4822729899999737",
+      "replayedFees": "0.08976702284549998",
+      "checks": {
+        "quantity": true,
+        "basis": true,
+        "entryFees": true,
+        "margin": true,
+        "feeRate": true
+      },
+      "legs": [
+        {
+          "eventId": 11945,
+          "action": "OPENED",
+          "wallet": "0x693b77eb4946bd1e12d5f34fea57b503b7c0d5f7",
+          "market": "BTC",
+          "side": "LONG",
+          "publication": "2026-11-06T03:57:02.623Z",
+          "observedAt": "2026-11-06T03:57:12.485272+00:00",
+          "status": "paper fill",
+          "quantity": 0.00263,
+          "price": 75848.77299999999,
+          "fee": 0.08976702284549998,
+          "bookTime": 1793937432225,
+          "paperLeverage": 5,
+          "margin": 39.89645459799999,
+          "filledAt": "2026-11-06T03:57:12.901912+00:00"
+        }
+      ]
+    },
+    {
+      "positionId": 11949,
+      "paperLeverage": "5",
+      "margin": "39.99134462400001",
+      "replayedQuantity": "0.00264",
+      "replayedBasis": "199.95672312",
+      "replayedFees": "0.089980525404",
+      "checks": {
+        "quantity": true,
+        "basis": true,
+        "entryFees": true,
+        "margin": true,
+        "feeRate": true
+      },
+      "legs": [
+        {
+          "eventId": 11949,
+          "action": "OPENED",
+          "wallet": "0xc7d78605a9627cc4bf0b182e03d583bc5b5882ae",
+          "market": "BTC",
+          "side": "SHORT",
+          "publication": "2026-11-06T04:02:29.197Z",
+          "observedAt": "2026-11-06T04:02:39.631734+00:00",
+          "status": "paper fill",
+          "quantity": 0.00264,
+          "price": 75741.183,
+          "fee": 0.089980525404,
+          "bookTime": 1793937759387,
+          "paperLeverage": 5,
+          "margin": 39.99134462400001,
+          "filledAt": "2026-11-06T04:02:40.141954+00:00"
+        }
+      ]
+    },
+    {
+      "positionId": 11956,
+      "paperLeverage": "5",
+      "margin": "39.854859043999994",
+      "replayedQuantity": "0.00263",
+      "replayedBasis": "199.2742952199999737",
+      "replayedFees": "0.08967343284899998",
+      "checks": {
+        "quantity": true,
+        "basis": true,
+        "entryFees": true,
+        "margin": true,
+        "feeRate": true
+      },
+      "legs": [
+        {
+          "eventId": 11956,
+          "action": "OPENED",
+          "wallet": "0xff05e1e7d565a8865b03aa384dddc7bcea23d9e4",
+          "market": "BTC",
+          "side": "LONG",
+          "publication": "2026-11-06T04:10:03.636Z",
+          "observedAt": "2026-11-06T04:10:36.474646+00:00",
+          "status": "paper fill",
+          "quantity": 0.00263,
+          "price": 75769.69399999999,
+          "fee": 0.08967343284899998,
+          "bookTime": 1793938235973,
+          "paperLeverage": 5,
+          "margin": 39.854859043999994,
+          "filledAt": "2026-11-06T04:10:37.045358+00:00"
+        }
+      ]
+    },
+    {
+      "positionId": 11974,
+      "paperLeverage": "5",
+      "margin": "38.415546",
+      "replayedQuantity": "0.15",
+      "replayedBasis": "192.077730",
+      "replayedFees": "0.0864349785",
+      "checks": {
+        "quantity": true,
+        "basis": true,
+        "entryFees": true,
+        "margin": true,
+        "feeRate": true
+      },
+      "legs": [
+        {
+          "eventId": 11974,
+          "action": "OPENED",
+          "wallet": "0x693b77eb4946bd1e12d5f34fea57b503b7c0d5f7",
+          "market": "ZEC",
+          "side": "SHORT",
+          "publication": "2026-11-06T04:42:02.568Z",
+          "observedAt": "2026-11-06T04:42:18.944131+00:00",
+          "status": "paper fill",
+          "quantity": 0.15,
+          "price": 1280.5182,
+          "fee": 0.0864349785,
+          "bookTime": 1793940138907,
+          "paperLeverage": 5,
+          "margin": 38.415546,
+          "filledAt": "2026-11-06T04:42:19.602866+00:00"
+        }
+      ]
+    },
+    {
+      "positionId": 11986,
+      "paperLeverage": "5",
+      "margin": "37.903059",
+      "replayedQuantity": "0.15",
+      "replayedBasis": "189.515295",
+      "replayedFees": "0.08528188275",
+      "checks": {
+        "quantity": true,
+        "basis": true,
+        "entryFees": true,
+        "margin": true,
+        "feeRate": true
+      },
+      "legs": [
+        {
+          "eventId": 11986,
+          "action": "OPENED",
+          "wallet": "0xff05e1e7d565a8865b03aa384dddc7bcea23d9e4",
+          "market": "ZEC",
+          "side": "SHORT",
+          "publication": "2026-11-06T05:16:02.173Z",
+          "observedAt": "2026-11-06T05:16:23.315947+00:00",
+          "status": "paper fill",
+          "quantity": 0.15,
+          "price": 1263.4353,
+          "fee": 0.08528188275,
+          "bookTime": 1793942183380,
+          "paperLeverage": 5,
+          "margin": 37.903059,
+          "filledAt": "2026-11-06T05:16:24.199884+00:00"
+        }
+      ]
+    },
+    {
+      "positionId": 11995,
+      "paperLeverage": "5",
+      "margin": "39.872135952",
+      "replayedQuantity": "0.00264",
+      "replayedBasis": "199.36067976",
+      "replayedFees": "0.08971230589200001",
+      "checks": {
+        "quantity": true,
+        "basis": true,
+        "entryFees": true,
+        "margin": true,
+        "feeRate": true
+      },
+      "legs": [
+        {
+          "eventId": 11995,
+          "action": "OPENED",
+          "wallet": "0x693b77eb4946bd1e12d5f34fea57b503b7c0d5f7",
+          "market": "BTC",
+          "side": "SHORT",
+          "publication": "2026-11-06T05:28:03.218Z",
+          "observedAt": "2026-11-06T05:28:06.579273+00:00",
+          "status": "paper fill",
+          "quantity": 0.00264,
+          "price": 75515.409,
+          "fee": 0.08971230589200001,
+          "bookTime": 1793942885946,
+          "paperLeverage": 5,
+          "margin": 39.872135952,
+          "filledAt": "2026-11-06T05:28:07.087081+00:00"
+        }
+      ]
+    },
+    {
+      "positionId": 12026,
+      "paperLeverage": "5",
+      "margin": "39.879023184",
+      "replayedQuantity": "0.00264",
+      "replayedBasis": "199.39511592",
+      "replayedFees": "0.08972780216399999",
+      "checks": {
+        "quantity": true,
+        "basis": true,
+        "entryFees": true,
+        "margin": true,
+        "feeRate": true
+      },
+      "legs": [
+        {
+          "eventId": 12026,
+          "action": "OPENED",
+          "wallet": "0x7a08e304f41ee6e85e55023fb0fe0e4e4318b0f7",
+          "market": "BTC",
+          "side": "LONG",
+          "publication": "2026-11-06T07:20:01.880Z",
+          "observedAt": "2026-11-06T07:20:31.888726+00:00",
+          "status": "paper fill",
+          "quantity": 0.00264,
+          "price": 75528.453,
+          "fee": 0.08972780216399999,
+          "bookTime": 1793949631528,
+          "paperLeverage": 5,
+          "margin": 39.879023184,
+          "filledAt": "2026-11-06T07:20:32.587259+00:00"
+        }
+      ]
+    },
+    {
+      "positionId": 12076,
+      "paperLeverage": "5",
+      "margin": "39.65919957999999",
+      "replayedQuantity": "59.0",
+      "replayedBasis": "198.29599789999998570",
+      "replayedFees": "0.08923319905499999",
+      "checks": {
+        "quantity": true,
+        "basis": true,
+        "entryFees": true,
+        "margin": true,
+        "feeRate": true
+      },
+      "legs": [
+        {
+          "eventId": 12076,
+          "action": "OPENED",
+          "wallet": "0x5dd4520818e244c426b64f9431e8afbd5b81f1fa",
+          "market": "LIT",
+          "side": "LONG",
+          "publication": "2026-11-06T09:09:02.899Z",
+          "observedAt": "2026-11-06T09:09:26.498232+00:00",
+          "status": "paper fill",
+          "quantity": 59.0,
+          "price": 3.3609491169491523,
+          "fee": 0.08923319905499999,
+          "bookTime": 1793956166243,
+          "paperLeverage": 5,
+          "margin": 39.65919957999999,
+          "filledAt": "2026-11-06T09:09:26.929496+00:00"
+        }
+      ]
+    },
+    {
+      "positionId": 12122,
+      "paperLeverage": "5",
+      "margin": "39.919208832",
+      "replayedQuantity": "0.00263",
+      "replayedBasis": "199.59604416",
+      "replayedFees": "0.089818219872",
+      "checks": {
+        "quantity": true,
+        "basis": true,
+        "entryFees": true,
+        "margin": true,
+        "feeRate": true
+      },
+      "legs": [
+        {
+          "eventId": 12122,
+          "action": "OPENED",
+          "wallet": "0xdc7b64fed5b76efed17e4dd6ed0221f3984fb4b8",
+          "market": "BTC",
+          "side": "SHORT",
+          "publication": "2026-11-06T11:12:03.407Z",
+          "observedAt": "2026-11-06T11:12:37.296111+00:00",
+          "status": "paper fill",
+          "quantity": 0.00263,
+          "price": 75892.032,
+          "fee": 0.089818219872,
+          "bookTime": 1793963559283,
+          "paperLeverage": 5,
+          "margin": 39.919208832,
+          "filledAt": "2026-11-06T11:12:40.377334+00:00"
+        }
+      ]
+    },
+    {
+      "positionId": 12148,
+      "paperLeverage": "5",
+      "margin": "94.72318200000001",
+      "replayedQuantity": "0.36",
+      "replayedBasis": "473.615909999999985",
+      "replayedFees": "0.21312715949999998",
+      "checks": {
+        "quantity": true,
+        "basis": true,
+        "entryFees": true,
+        "margin": true,
+        "feeRate": true
+      },
+      "legs": [
+        {
+          "eventId": 12148,
+          "action": "OPENED",
+          "wallet": "0x5d26cbe12cad98e13c482a93f16bbcfbd0100731",
+          "market": "ZEC",
+          "side": "SHORT",
+          "publication": "2026-11-06T12:23:02.900Z",
+          "observedAt": "2026-11-06T12:23:20.072003+00:00",
+          "status": "paper fill",
+          "quantity": 0.15,
+          "price": 1318.2803999999999,
+          "fee": 0.08898392699999999,
+          "bookTime": 1793967800076,
+          "paperLeverage": 5,
+          "margin": 39.548412,
+          "filledAt": "2026-11-06T12:23:21.254050+00:00"
+        },
+        {
+          "eventId": 12222,
+          "action": "ADDED",
+          "wallet": "0x5d26cbe12cad98e13c482a93f16bbcfbd0100731",
+          "market": "ZEC",
+          "side": "SHORT",
+          "publication": "2026-11-06T14:17:02.459Z",
+          "observedAt": "2026-11-06T14:17:33.440666+00:00",
+          "fraction": 1.4045449349235952,
+          "status": "paper fill",
+          "quantity": 0.21,
+          "price": 1313.685,
+          "fee": 0.12414323249999999,
+          "bookTime": 1793974653042,
+          "paperLeverage": 5,
+          "margin": 55.17477,
+          "filledAt": "2026-11-06T14:17:34.140311+00:00"
+        }
+      ]
+    },
+    {
+      "positionId": 12250,
+      "paperLeverage": "5",
+      "margin": "39.859304795999996",
+      "replayedQuantity": "0.00263",
+      "replayedBasis": "199.29652398",
+      "replayedFees": "0.089683435791",
+      "checks": {
+        "quantity": true,
+        "basis": true,
+        "entryFees": true,
+        "margin": true,
+        "feeRate": true
+      },
+      "legs": [
+        {
+          "eventId": 12250,
+          "action": "OPENED",
+          "wallet": "0x5232a3f9ebcdbd9cc0e1867a89e646694deba9dc",
+          "market": "BTC",
+          "side": "SHORT",
+          "publication": "2026-11-06T14:41:03.520Z",
+          "observedAt": "2026-11-06T14:41:27.410928+00:00",
+          "sourceVenue": "hyperliquid",
+          "paperQuoteVenue": "hyperliquid",
+          "status": "paper fill",
+          "quantity": 0.00263,
+          "price": 75778.146,
+          "fee": 0.089683435791,
+          "bookTime": 1793976086706,
+          "paperLeverage": 5,
+          "margin": 39.859304795999996,
+          "filledAt": "2026-11-06T14:41:28.024261+00:00"
+        }
+      ]
+    },
+    {
+      "positionId": 12267,
+      "paperLeverage": "5",
+      "margin": "38.592968400000004",
+      "replayedQuantity": "0.14",
+      "replayedBasis": "192.964842",
+      "replayedFees": "0.08683417890000002",
+      "checks": {
+        "quantity": true,
+        "basis": true,
+        "entryFees": true,
+        "margin": true,
+        "feeRate": true
+      },
+      "legs": [
+        {
+          "eventId": 12267,
+          "action": "OPENED",
+          "wallet": "0x778b7b8bdfad4087d14eb3cd492990962121faa6",
+          "market": "ZEC",
+          "side": "SHORT",
+          "publication": "2026-11-06T14:49:03.038Z",
+          "observedAt": "2026-11-06T14:49:26.804173+00:00",
+          "sourceVenue": "hyperliquid",
+          "paperQuoteVenue": "hyperliquid",
+          "status": "paper fill",
+          "quantity": 0.14,
+          "price": 1378.3203,
+          "fee": 0.08683417890000002,
+          "bookTime": 1793976566564,
+          "paperLeverage": 5,
+          "margin": 38.592968400000004,
+          "filledAt": "2026-11-06T14:49:27.256204+00:00"
+        }
+      ]
+    },
+    {
+      "positionId": 12287,
+      "paperLeverage": "5",
+      "margin": "39.970782852",
+      "replayedQuantity": "0.0897",
+      "replayedBasis": "199.85391426",
+      "replayedFees": "0.08993426141699999",
+      "checks": {
+        "quantity": true,
+        "basis": true,
+        "entryFees": true,
+        "margin": true,
+        "feeRate": true
+      },
+      "legs": [
+        {
+          "eventId": 12287,
+          "action": "OPENED",
+          "wallet": "0x2ba07003ef9b849310cc2d0eced9c7318190cd4f",
+          "market": "ETH",
+          "side": "LONG",
+          "publication": "2026-11-06T15:01:02.617Z",
+          "observedAt": "2026-11-06T15:01:08.679289+00:00",
+          "sourceVenue": "hyperliquid",
+          "paperQuoteVenue": "hyperliquid",
+          "status": "paper fill",
+          "quantity": 0.0897,
+          "price": 2228.0258,
+          "fee": 0.08993426141699999,
+          "bookTime": 1793977268187,
+          "paperLeverage": 5,
+          "margin": 39.970782852,
+          "filledAt": "2026-11-06T15:01:09.218618+00:00"
+        }
+      ]
+    },
+    {
+      "positionId": 12340,
+      "paperLeverage": "5",
+      "margin": "39.95701709999999",
+      "replayedQuantity": "0.0894",
+      "replayedBasis": "199.78508549999996424",
+      "replayedFees": "0.08990328847499998",
+      "checks": {
+        "quantity": true,
+        "basis": true,
+        "entryFees": true,
+        "margin": true,
+        "feeRate": true
+      },
+      "legs": [
+        {
+          "eventId": 12340,
+          "action": "OPENED",
+          "wallet": "0xace83bad72ce09ca27d80f353199b17799d9cade",
+          "market": "ETH",
+          "side": "LONG",
+          "publication": "2026-11-06T15:15:02.844Z",
+          "observedAt": "2026-11-06T15:15:27.507686+00:00",
+          "sourceVenue": "hyperliquid",
+          "paperQuoteVenue": "hyperliquid",
+          "status": "paper fill",
+          "quantity": 0.0894,
+          "price": 2234.7324999999996,
+          "fee": 0.08990328847499998,
+          "bookTime": 1793978127239,
+          "paperLeverage": 5,
+          "margin": 39.95701709999999,
+          "filledAt": "2026-11-06T15:15:27.972364+00:00"
+        }
+      ]
+    },
+    {
+      "positionId": 12348,
+      "paperLeverage": "5",
+      "margin": "39.96323331",
+      "replayedQuantity": "0.0901",
+      "replayedBasis": "199.81616655",
+      "replayedFees": "0.0899172749475",
+      "checks": {
+        "quantity": true,
+        "basis": true,
+        "entryFees": true,
+        "margin": true,
+        "feeRate": true
+      },
+      "legs": [
+        {
+          "eventId": 12348,
+          "action": "OPENED",
+          "wallet": "0xfef85d329791724d7878fe326aff183d66569f14",
+          "market": "ETH",
+          "side": "LONG",
+          "publication": "2026-11-06T15:31:02.421Z",
+          "observedAt": "2026-11-06T15:31:25.253377+00:00",
+          "sourceVenue": "hyperliquid",
+          "paperQuoteVenue": "hyperliquid",
+          "status": "paper fill",
+          "quantity": 0.0901,
+          "price": 2217.7155,
+          "fee": 0.0899172749475,
+          "bookTime": 1793979084623,
+          "paperLeverage": 5,
+          "margin": 39.96323331,
+          "filledAt": "2026-11-06T15:31:25.774744+00:00"
+        }
+      ]
+    },
+    {
+      "positionId": 12400,
+      "paperLeverage": "5",
+      "margin": "37.7789832",
+      "replayedQuantity": "0.14",
+      "replayedBasis": "188.894916",
+      "replayedFees": "0.0850027122",
+      "checks": {
+        "quantity": true,
+        "basis": true,
+        "entryFees": true,
+        "margin": true,
+        "feeRate": true
+      },
+      "legs": [
+        {
+          "eventId": 12400,
+          "action": "OPENED",
+          "wallet": "0xa9d72745018f1dc4a00e0a0653eb219299014337",
+          "market": "ZEC",
+          "side": "SHORT",
+          "publication": "2026-11-06T16:46:02.739Z",
+          "observedAt": "2026-11-06T16:46:41.352771+00:00",
+          "sourceVenue": "hyperliquid",
+          "paperQuoteVenue": "hyperliquid",
+          "status": "paper fill",
+          "quantity": 0.14,
+          "price": 1349.2494,
+          "fee": 0.0850027122,
+          "bookTime": 1793983600865,
+          "paperLeverage": 5,
+          "margin": 37.7789832,
+          "filledAt": "2026-11-06T16:46:41.827524+00:00"
+        }
+      ]
+    },
+    {
+      "positionId": 12433,
+      "paperLeverage": "5",
+      "margin": "39.915025019999995",
+      "replayedQuantity": "169.0",
+      "replayedBasis": "199.57512509999998310",
+      "replayedFees": "0.08980880629499999",
+      "checks": {
+        "quantity": true,
+        "basis": true,
+        "entryFees": true,
+        "margin": true,
+        "feeRate": true
+      },
+      "legs": [
+        {
+          "eventId": 12433,
+          "action": "OPENED",
+          "wallet": "0xc936eda2f48b4ecc5221baa5d54bf5b785a71181",
+          "market": "XRP",
+          "side": "SHORT",
+          "publication": "2026-11-06T18:06:02.833Z",
+          "observedAt": "2026-11-06T18:06:13.759481+00:00",
+          "sourceVenue": "hyperliquid",
+          "paperQuoteVenue": "hyperliquid",
+          "status": "paper fill",
+          "quantity": 169.0,
+          "price": 1.1809178999999999,
+          "fee": 0.08980880629499999,
+          "bookTime": 1793988373848,
+          "paperLeverage": 5,
+          "margin": 39.915025019999995,
+          "filledAt": "2026-11-06T18:06:14.438632+00:00"
+        }
+      ]
+    },
+    {
+      "positionId": 12441,
+      "paperLeverage": "5",
+      "margin": "37.518843600000004",
+      "replayedQuantity": "0.14",
+      "replayedBasis": "187.594218",
+      "replayedFees": "0.0844173981",
+      "checks": {
+        "quantity": true,
+        "basis": true,
+        "entryFees": true,
+        "margin": true,
+        "feeRate": true
+      },
+      "legs": [
+        {
+          "eventId": 12441,
+          "action": "OPENED",
+          "wallet": "0x10125541e960ca1d0105110bc1844c7adf1b1109",
+          "market": "ZEC",
+          "side": "SHORT",
+          "publication": "2026-11-06T19:03:02.615Z",
+          "observedAt": "2026-11-06T19:03:26.890205+00:00",
+          "sourceVenue": "hyperliquid",
+          "paperQuoteVenue": "hyperliquid",
+          "status": "paper fill",
+          "quantity": 0.14,
+          "price": 1339.9587,
+          "fee": 0.0844173981,
+          "bookTime": 1793991806518,
+          "paperLeverage": 5,
+          "margin": 37.518843600000004,
+          "filledAt": "2026-11-06T19:03:27.353080+00:00"
+        }
+      ]
+    },
+    {
+      "positionId": 12445,
+      "paperLeverage": "5",
+      "margin": "39.88460946599999",
+      "replayedQuantity": "2.21",
+      "replayedBasis": "199.42304733",
+      "replayedFees": "0.08974037129849999",
+      "checks": {
+        "quantity": true,
+        "basis": true,
+        "entryFees": true,
+        "margin": true,
+        "feeRate": true
+      },
+      "legs": [
+        {
+          "eventId": 12445,
+          "action": "OPENED",
+          "wallet": "0x628f303158bb4dc2f6e31acb6e0a1fb464626a08",
+          "market": "SOL",
+          "side": "SHORT",
+          "publication": "2026-11-06T20:02:02.922Z",
+          "observedAt": "2026-11-06T20:02:29.963841+00:00",
+          "sourceVenue": "hyperliquid",
+          "paperQuoteVenue": "hyperliquid",
+          "status": "paper fill",
+          "quantity": 2.21,
+          "price": 90.236673,
+          "fee": 0.08974037129849999,
+          "bookTime": 1793995349553,
+          "paperLeverage": 5,
+          "margin": 39.88460946599999,
+          "filledAt": "2026-11-06T20:02:30.530728+00:00"
+        }
+      ]
+    },
+    {
+      "positionId": 12453,
+      "paperLeverage": "5",
+      "margin": "39.841336782",
+      "replayedQuantity": "2.21",
+      "replayedBasis": "199.20668391",
+      "replayedFees": "0.0896430077595",
+      "checks": {
+        "quantity": true,
+        "basis": true,
+        "entryFees": true,
+        "margin": true,
+        "feeRate": true
+      },
+      "legs": [
+        {
+          "eventId": 12453,
+          "action": "OPENED",
+          "wallet": "0x5232a3f9ebcdbd9cc0e1867a89e646694deba9dc",
+          "market": "SOL",
+          "side": "SHORT",
+          "publication": "2026-11-06T20:16:02.600Z",
+          "observedAt": "2026-11-06T20:16:39.639015+00:00",
+          "sourceVenue": "hyperliquid",
+          "paperQuoteVenue": "hyperliquid",
+          "status": "paper fill",
+          "quantity": 2.21,
+          "price": 90.138771,
+          "fee": 0.0896430077595,
+          "bookTime": 1793996199210,
+          "paperLeverage": 5,
+          "margin": 39.841336782,
+          "filledAt": "2026-11-06T20:16:40.408557+00:00"
+        }
+      ]
+    },
+    {
+      "positionId": 12459,
+      "paperLeverage": "5",
+      "margin": "39.95728272",
+      "replayedQuantity": "2.23",
+      "replayedBasis": "199.7864136",
+      "replayedFees": "0.08990388612",
+      "checks": {
+        "quantity": true,
+        "basis": true,
+        "entryFees": true,
+        "margin": true,
+        "feeRate": true
+      },
+      "legs": [
+        {
+          "eventId": 12459,
+          "action": "OPENED",
+          "wallet": "0x693b77eb4946bd1e12d5f34fea57b503b7c0d5f7",
+          "market": "SOL",
+          "side": "SHORT",
+          "publication": "2026-11-06T20:26:04.265Z",
+          "observedAt": "2026-11-06T20:26:32.384572+00:00",
+          "sourceVenue": "hyperliquid",
+          "paperQuoteVenue": "hyperliquid",
+          "status": "paper fill",
+          "quantity": 2.23,
+          "price": 89.59032,
+          "fee": 0.08990388612,
+          "bookTime": 1793996792320,
+          "paperLeverage": 5,
+          "margin": 39.95728272,
+          "filledAt": "2026-11-06T20:26:33.063312+00:00"
+        }
+      ]
+    }
+  ],
+  "sourceCoverage": [
+    {
+      "run": "42308665149",
+      "statusCounts": {
+        "read": 35
+      },
+      "first": "2026-11-06T22:59:13.604058+00:00",
+      "last": "2026-11-06T23:22:45.711558+00:00",
+      "maxGapSeconds": 132.224261
+    },
+    {
+      "run": "42301720462",
+      "statusCounts": {
+        "read": 86
+      },
+      "first": "2026-11-06T22:03:55.357596+00:00",
+      "last": "2026-11-06T22:58:27.567565+00:00",
+      "maxGapSeconds": 132.2554
+    }
+  ],
+  "files": [
+    {
+      "filename": "42308665149-source-checks.jsonl",
+      "sha256": "d00e577b476bc3a7fb1d8cdf4b814973abff6efacf14136c05df0420fdd1af0f",
+      "bytes": 5495,
+      "rows": 35
+    },
+    {
+      "filename": "42308665149-events.jsonl",
+      "sha256": "5d9b82b9abebfd1c6bd544bf0c9340878dc238efb2c244ffb3e03bafe288817c",
+      "bytes": 34035,
+      "rows": 31
+    },
+    {
+      "filename": "42301720462-source-checks.jsonl",
+      "sha256": "75410a39c91c32e98c9819cf12d61edd23b06f4e2fb5ee2040d35356ae578554",
+      "bytes": 13502,
+      "rows": 86
+    },
+    {
+      "filename": "42301720462-events.jsonl",
+      "sha256": "545cdd2be28295edd69bf2bdc05234b30db96c63f37bbe5dac2a73347d3ed574",
+      "bytes": 150996,
+      "rows": 132
+    }
+  ],
+  "financialMutation": false,
+  "snapshot": {
+    "heartbeat": "2026-11-06T23:21:54.077096+00:00",
+    "sourceCheckedAt": "2026-11-06T23:21:32.392724+00:00",
+    "sourceStatus": "read",
+    "geniusQuality": {
+      "at": "2026-11-06T23:21:32.811929+00:00",
+      "status": "Unvalidated website-alert simulation; source holdings and funding incomplete",
+      "copyPerformanceEligible": false,
+      "activePaperExposures": 48,
+      "closureWarningPositionIds": [
+        10652,
+        10936,
+        10944,
+        11451,
+        11464,
+        11511,
+        11798,
+        11841,
+        11877,
+        11945,
+        11949,
+        11956,
+        11974,
+        11995,
+        12122,
+        12250
+      ],
+      "closureWarningCount": 16,
+      "sourceCardNoLongerLiveCount": 13,
+      "subsequentOpeningPositionIds": [
+        10652,
+        11841,
+        11945,
+        11949,
+        11974,
+        11995,
+        12122
+      ],
+      "subsequentOpeningWarningCount": 7,
+      "warningExposureModeledPnlBeforeFunding": -16.017715971830345,
+      "otherUnverifiedExposureModeledPnlBeforeFunding": 30.983057101504286,
+      "totalModeledPnlBeforeFunding": 14.965341129673943,
+      "interpretation": "Warning subtotal assumes continued exposure despite non-live source cards or subsequent openings; neither subtotal is verified copier performance."
+    },
+    "archive": {
+      "at": "2026-11-06T23:17:51.744929+00:00",
+      "scope": "Saved original exits and copied-card ending revisions; uncaptured source history unknown",
+      "files": 41,
+      "bytesRead": 0,
+      "exitCardsReviewed": 0,
+      "endingRevisionRowsReviewed": 0,
+      "newCardWarningsRecovered": 0,
+      "matchingExitIds": [],
+      "backlogRemaining": false,
+      "errors": []
+    },
+    "openEstimateBeforeFunding": 14.674169573435302,
+    "scalp": {
+      "protocolVersion": "split-v4",
+      "families": {
+        "fresh": {
+          "total": 149,
+          "open": 0,
+          "closed": 149,
+          "closedPnlBeforeFunding": -17.881735231717492,
+          "milestones": {
+            "notional": {
+              "5": 4,
+              "10": 0,
+              "20": 0
+            },
+            "margin": {
+              "5": 48,
+              "10": 20,
+              "20": 11
+            }
+          }
+        },
+        "add_scalp": {
+          "total": 1081,
+          "open": 4,
+          "closed": 1077,
+          "closedPnlBeforeFunding": -597.3418660527741,
+          "milestones": {
+            "notional": {
+              "5": 3,
+              "10": 1,
+              "20": 0
+            },
+            "margin": {
+              "5": 204,
+              "10": 109,
+              "20": 38
+            }
+          }
+        }
+      },
+      "study": "github-portfolio-v3",
+      "initialEquity": 1000,
+      "equity": 384.4841995674389,
+      "realizedBeforeFunding": -615.2236012844916,
+      "openCloseEstimateBeforeFunding": -0.2921991480695281,
+      "marginInUse": 52.6182207936,
+      "available": 331.8659787738389,
+      "openCount": 4,
+      "closedCount": 1226,
+      "totalCount": 1230,
+      "maxOpen": 20,
+      "targetNotional": 200,
+      "maxPositionNotional": 350,
+      "stalePositions": [],
+      "milestones": {
+        "notional": {
+          "5": {
+            "hit": 7,
+            "total": 1230,
+            "unconfirmed": 1223
+          },
+          "10": {
+            "hit": 1,
+            "total": 1230,
+            "unconfirmed": 1229
+          },
+          "20": {
+            "hit": 0,
+            "total": 1230,
+            "unconfirmed": 1230
+          }
+        },
+        "margin": {
+          "5": {
+            "hit": 252,
+            "total": 1230,
+            "unconfirmed": 978
+          },
+          "10": {
+            "hit": 129,
+            "total": 1230,
+            "unconfirmed": 1101
+          },
+          "20": {
+            "hit": 49,
+            "total": 1230,
+            "unconfirmed": 1181
+          }
+        }
+      },
+      "feesAssumedBps": 4.5,
+      "fundingComplete": false,
+      "at": "2026-11-06T23:21:54.406412+00:00",
+      "maxDrawdownObserved": 0.6166054228035075
+    }
+  },
+  "limitations": [
+    "Accounting consistency does not verify source fills, proportional add accuracy, wallet identity or exit completeness.",
+    "Margin and fees replay current paper assumptions; liquidation and exact funding not modeled.",
+    "Open PnL not independently quote-repriced in this audit.",
+    "Sequential moving-main files with hashes, not atomic snapshot."
+  ],
+  "eventKinds": {
+    "revision": 156,
+    "first_observation": 7
+  },
+  "firstActions": {
+    "ADDED": 6,
+    "OPENED": 1
+  }
+}
