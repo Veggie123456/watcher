@@ -1,0 +1,241 @@
+{
+  "kind": "source-venue-mismatch-audit",
+  "at": "2026-11-06T14:23:53.415218+00:00",
+  "positionId": 11949,
+  "sourceVenue": "lighter",
+  "paperQuoteVenue": "hyperliquid",
+  "sourceEvidence": {
+    "path": "data/2026-11-06/sessions/42156486447-1/events.jsonl",
+    "row": {
+      "observedAt": "2026-11-06T04:02:39.631582+00:00",
+      "kind": "first_observation",
+      "event": {
+        "id": 11949,
+        "type": "SMART_FRESH",
+        "coin": "BTC",
+        "createdAt": "2026-11-06T04:02:29.197Z",
+        "occurredAt": "2026-11-06T04:02:27.419Z",
+        "payload": {
+          "side": "SHORT",
+          "venue": "lighter",
+          "action": "OPENED",
+          "cohort": "GENIUS",
+          "wallet": "0xc7d78605a9627cc4bf0b182e03d583bc5b5882ae",
+          "entryPx": 75935.3,
+          "leverage": {
+            "type": "cross",
+            "value": 50
+          },
+          "marginUsd": 127924.79795336502,
+          "positionUsd": 5511147.539253,
+          "allTimePnlUsd": 15748182.248208,
+          "addedMarginUsd": null
+        },
+        "tags": {
+          "0xc7d78605a9627cc4bf0b182e03d583bc5b5882ae": [
+            "VETERAN"
+          ]
+        },
+        "perpPnl": 10069662.595282,
+        "allTimePnl": 10069662.595282,
+        "badges": {
+          "level": "genius-trader",
+          "secondary": [
+            "top-1000",
+            "veteran"
+          ]
+        },
+        "traderCard": {
+          "badges": [],
+          "rank": null,
+          "chips": [
+            {
+              "kind": "address",
+              "value": "0xc7d7\u202682ae",
+              "url": "/trader/0xc7d78605a9627cc4bf0b182e03d583bc5b5882ae"
+            }
+          ],
+          "venue": "lighter",
+          "pnl": null
+        }
+      },
+      "hash": "e085744722c8faab0c8bdb7204dd74c983a73231ba00ccb80b4ce80671e4e200"
+    }
+  },
+  "capturedRevisionCount": 18,
+  "revisionEvidence": [
+    {
+      "path": "data/2026-11-06/sessions/42156486447-1/events.jsonl",
+      "kind": "first_observation",
+      "observedAt": "2026-11-06T04:02:39.631582+00:00",
+      "hash": "e085744722c8faab0c8bdb7204dd74c983a73231ba00ccb80b4ce80671e4e200"
+    },
+    {
+      "path": "data/2026-11-06/sessions/42156486447-1/events.jsonl",
+      "kind": "revision",
+      "observedAt": "2026-11-06T04:03:16.038287+00:00",
+      "hash": "50b172b13c475e2e6e4d6f2b1f1270d3e2081b1362f22bfcbaea73fa51b89112"
+    },
+    {
+      "path": "data/2026-11-06/sessions/42156486447-1/events.jsonl",
+      "kind": "revision",
+      "observedAt": "2026-11-06T04:04:29.242234+00:00",
+      "hash": "df2de96ee8cc5cc95a7e526a2dc594dbabda1580b0682590d4c75b3fdecf94bc"
+    },
+    {
+      "path": "data/2026-11-06/sessions/42156486447-1/events.jsonl",
+      "kind": "revision",
+      "observedAt": "2026-11-06T04:05:05.680735+00:00",
+      "hash": "12408d11f46f242243145e304fda25c8c8be7c953ec6418b54db253e4cbaf83e"
+    },
+    {
+      "path": "data/2026-11-06/sessions/42156486447-1/events.jsonl",
+      "kind": "revision",
+      "observedAt": "2026-11-06T04:10:36.475303+00:00",
+      "hash": "03dc160db562241f1b5b238fc0e5edd25816a672e7fa625533ed309e7edd9f8f"
+    },
+    {
+      "path": "data/2026-11-06/sessions/42156486447-1/events.jsonl",
+      "kind": "revision",
+      "observedAt": "2026-11-06T04:11:13.489847+00:00",
+      "hash": "fc768e3a576dc73dd8d0c09a98405ae066c2aa9e8701516dfbb892b720dd51cb"
+    },
+    {
+      "path": "data/2026-11-06/sessions/42156486447-1/events.jsonl",
+      "kind": "revision",
+      "observedAt": "2026-11-06T04:15:29.337204+00:00",
+      "hash": "91b1edb7deabb877740bc05ea92642f12b633ee5a6ae81d5c17e066a8d0fd2a1"
+    },
+    {
+      "path": "data/2026-11-06/sessions/42156486447-1/events.jsonl",
+      "kind": "revision",
+      "observedAt": "2026-11-06T04:16:05.983879+00:00",
+      "hash": "9e5332179b80fb508ed52f668eb7784db1d2889233f5cacf7b20969811801c27"
+    },
+    {
+      "path": "data/2026-11-06/sessions/42161961189-1/events.jsonl",
+      "kind": "revision",
+      "observedAt": "2026-11-06T04:22:54.355460+00:00",
+      "hash": "7da571beed6c12db113af0bce9d12c2b12b38c3abb328761d069e2388714f96d"
+    },
+    {
+      "path": "data/2026-11-06/sessions/42161961189-1/events.jsonl",
+      "kind": "revision",
+      "observedAt": "2026-11-06T04:24:03.368375+00:00",
+      "hash": "e19b7f6b859ca9d7d4dabbd067476f3aa644b4d0b58cff729beafbf79ab5f97a"
+    },
+    {
+      "path": "data/2026-11-06/sessions/42161961189-1/events.jsonl",
+      "kind": "revision",
+      "observedAt": "2026-11-06T04:27:04.780372+00:00",
+      "hash": "83dd851a25a2275b16cec9029ab32d56832d1ea526d183df64055fff72d538e3"
+    },
+    {
+      "path": "data/2026-11-06/sessions/42161961189-1/events.jsonl",
+      "kind": "revision",
+      "observedAt": "2026-11-06T04:28:17.775285+00:00",
+      "hash": "437f4900b196bf1c63e14a442c4d1e13cac316c59fb3449c9230f8c3d3c9b216"
+    },
+    {
+      "path": "data/2026-11-06/sessions/42161961189-1/events.jsonl",
+      "kind": "revision",
+      "observedAt": "2026-11-06T04:36:14.430850+00:00",
+      "hash": "fe06742325d6783bc460ee44aa8409b242825dc1d62c909d4e26b976e7accd0e"
+    },
+    {
+      "path": "data/2026-11-06/sessions/42161961189-1/events.jsonl",
+      "kind": "revision",
+      "observedAt": "2026-11-06T04:39:15.242693+00:00",
+      "hash": "acd0ae8c4d2e1116c6d60880ddb55ed381f3bdfc477bd4f949f9d4c1b93da876"
+    },
+    {
+      "path": "data/2026-11-06/sessions/42161961189-1/events.jsonl",
+      "kind": "revision",
+      "observedAt": "2026-11-06T04:40:30.145770+00:00",
+      "hash": "bf32167390fa8e115bef459159fdd188ba0c39d64bd706c815a82bdf7f23238a"
+    },
+    {
+      "path": "data/2026-11-06/sessions/42161961189-1/events.jsonl",
+      "kind": "revision",
+      "observedAt": "2026-11-06T04:42:18.946489+00:00",
+      "hash": "2fb15d9fd1772df6649af792454b526bae399d3d87def15b0191b2d5018793e8"
+    },
+    {
+      "path": "data/2026-11-06/sessions/42161961189-1/events.jsonl",
+      "kind": "revision",
+      "observedAt": "2026-11-06T04:49:37.247230+00:00",
+      "hash": "f192a9f2c0a41bf34a509b2fe5c71c8931604fcd90a7d634a086891c42738428"
+    },
+    {
+      "path": "data/2026-11-06/sessions/42161961189-1/events.jsonl",
+      "kind": "revision",
+      "observedAt": "2026-11-06T04:55:42.038939+00:00",
+      "hash": "2ec9bce011a18ed85e21fb4818911fc58d5cea42b3e9c6c7b09351d04087a984"
+    },
+    {
+      "path": "data/2026-11-06/sessions/42161961189-1/events.jsonl",
+      "kind": "revision",
+      "observedAt": "2026-11-06T05:05:33.272882+00:00",
+      "hash": "1375156c0fff9c5081d8cdc657be1cde7fcb278a31b8a4d04bceee671de10f80"
+    }
+  ],
+  "legacyPaperPosition": {
+    "id": 11949,
+    "wallet": "0xc7d78605a9627cc4bf0b182e03d583bc5b5882ae",
+    "symbol": "BTC",
+    "direction": "short",
+    "sourceOpenedAt": "2026-11-06T04:02:29.197Z",
+    "sourceLeverage": {
+      "type": "cross",
+      "value": 50
+    },
+    "paperLeverage": 5,
+    "marginRequired": 39.99134462400001,
+    "leverageMode": "fixed_5x",
+    "openedAt": "2026-11-06T04:02:40.141815+00:00",
+    "quantity": 0.00264,
+    "basis": 199.95672312000002,
+    "entryFees": 0.089980525404,
+    "realized": 0,
+    "legs": [
+      {
+        "eventId": 11949,
+        "action": "OPENED",
+        "wallet": "0xc7d78605a9627cc4bf0b182e03d583bc5b5882ae",
+        "market": "BTC",
+        "side": "SHORT",
+        "publication": "2026-11-06T04:02:29.197Z",
+        "observedAt": "2026-11-06T04:02:39.631734+00:00",
+        "status": "paper fill",
+        "quantity": 0.00264,
+        "price": 75741.183,
+        "fee": 0.089980525404,
+        "bookTime": 1793937759387,
+        "paperLeverage": 5,
+        "margin": 39.99134462400001,
+        "filledAt": "2026-11-06T04:02:40.141954+00:00"
+      }
+    ],
+    "openPnl": -0.1997435489279754,
+    "closureVerification": "Unverified: no matched source exit; paper exposure remains open",
+    "reconciliation": {
+      "at": "2026-11-06T14:18:46.932418+00:00",
+      "status": "unresolved source linkage/history",
+      "sourceOpeningCorroborated": false,
+      "venuePosition": null,
+      "matchingFills": 0,
+      "historyPossiblyTruncated": false,
+      "paperLeverage": 5,
+      "sourceLeverage": {
+        "type": "cross",
+        "value": 50
+      },
+      "leverageMatched": false
+    }
+  },
+  "finding": "Explicit Lighter source opening was simulated using Hyperliquid quotes/metadata. Not a matched-venue copy. Empty Hyperliquid account lookup cannot verify this source position.",
+  "interpretationLimit": "This establishes the displayed source venue and wrong quote-venue assumption, not authenticated trader identity, actual fills, closure or Lighter account eligibility.",
+  "accountMutationApplied": false,
+  "futurePolicy": "Genius paper adapter supports Hyperliquid only. Require a known supported venue for new OPENED; reject explicit unsupported venues for any action and conflicting venue fields. Keep raw events and saved rejection reasons.",
+  "nextTest": "Audit remaining legacy openings for venue metadata and build a separate read-only Lighter adapter only after account mapping, quotes, cost rules and lawful access are verified."
+}

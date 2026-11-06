@@ -7,8 +7,8 @@ book = {'time':1,'levels':[[{'px':100,'sz':100}],[{'px':100,'sz':100}]]}
 state = {}
 
 def run(*rows, quotes=None):
-    events = [dict(id=i, coin='BTC', createdAt=now, payload=dict(wallet=wallet, cohort=tier,
-              side='LONG', leverage={'value':3}, action=action, **extra)) for i,action,tier,extra in rows]
+    events = [dict(id=i, coin='BTC', createdAt=now, payload=dict(dict(wallet=wallet, cohort=tier,
+              venue='hyperliquid', side='LONG', leverage={'value':3}, action=action), **extra)) for i,action,tier,extra in rows]
     genius_copy.update(state,events,{'BTC':book} if quotes is None else quotes,
         {'BTC':{'szDecimals':3,'maxLeverage':50}},lambda:now,lambda s:dt.datetime.fromisoformat(s).timestamp()*1000,
         lambda b:None,lambda levels,q:levels[0]['px'],lambda *args:None,0,0,lambda s,b:(100,0))
@@ -113,4 +113,26 @@ audit([])
 assert position.get('closedAt') and ledger['valuationQuality']['closureWarningCount']==0
 assert ledger['cash']==10000
 print('Subsequent-opening warning identity, chronology, idempotence, retention, accounting and matched-close checks passed')
+
+state.clear()
+ledger=run((501,'OPENED','GENIUS',{'venue':'lighter'}))
+assert not ledger['positions'] and 'Unsupported source venue lighter' in ledger['decisions'][-1]['reason']
+ledger=run((502,'OPENED','GENIUS',{'venue':None}))
+assert not ledger['positions'] and 'Source venue unavailable' in ledger['decisions'][-1]['reason']
+ledger=run((503,'OPENED','GENIUS',{}))
+position=ledger['positions'][wallet+':BTC:LONG']
+assert position['sourceVenue']=='hyperliquid'
+snapshot=(ledger['cash'],position['quantity'],position['basis'],position['marginRequired'],len(position['legs']))
+run((504,'ADDED','GENIUS',{'venue':'lighter'}),(505,'CLOSED','GENIUS',{'venue':'lighter'}))
+assert snapshot==(ledger['cash'],position['quantity'],position['basis'],position['marginRequired'],len(position['legs']))
+run((506,'CLOSED','SMART',{}))
+assert position.get('closedAt') and ledger['cash']==10000
+run((507,'OPENED','GENIUS',{'venue':None}))
+assert ledger['decisions'][-1]['status']=='skipped'
+conflicting=dict(id=508,coin='BTC',createdAt=now,payload=dict(wallet=wallet,cohort='GENIUS',side='LONG',action='OPENED',venue='hyperliquid'),traderCard={'venue':'lighter'})
+genius_copy.update(state,[conflicting],{'BTC':book},{'BTC':{'szDecimals':3,'maxLeverage':50}},lambda:now,
+   lambda s:dt.datetime.fromisoformat(s).timestamp()*1000,lambda b:None,
+   lambda levels,q:100,lambda *args:None,0,0,lambda s,b:(100,0))
+assert 'Conflicting source venue' in ledger['decisions'][-1]['reason']
+print('Source venue gate: unknown, unsupported, conflicting fields, add/close accounting and valid matched-venue exit passed')
 

@@ -52,6 +52,17 @@ def update(state, events, quotes, metadata, stamp, millis, fresh, price, append,
         try:
             if not re.fullmatch(r'0x[0-9a-f]{40}', wallet) or side not in ('LONG', 'SHORT'):
                 raise ValueError('Missing full source address or direction')
+            payload_venue = str(p.get('venue') or '').lower()
+            card_venue = str(event.get('traderCard', {}).get('venue') or '').lower()
+            source_venue = payload_venue or card_venue or (position.get('sourceVenue', '') if position and action != 'OPENED' else '')
+            receipt['sourceVenue'] = source_venue or None
+            receipt['paperQuoteVenue'] = 'hyperliquid'
+            if payload_venue and card_venue and payload_venue != card_venue:
+                raise ValueError('Conflicting source venue fields; no paper fill')
+            if source_venue and source_venue != 'hyperliquid':
+                raise ValueError('Unsupported source venue ' + source_venue + '; Hyperliquid quote is not a matched-venue fill')
+            if action == 'OPENED' and not source_venue:
+                raise ValueError('Source venue unavailable; no matched-venue opening')
             age = millis(now) - millis(event['createdAt'])
             if age < -1000 or (action in ('OPENED', 'ADDED') and age > 120000):
                 raise ValueError('Outside 120-second entry observation window')
@@ -121,6 +132,7 @@ def update(state, events, quotes, metadata, stamp, millis, fresh, price, append,
                 if position:
                     ledger['history'] = [position if row['id'] == position['id'] else row for row in ledger['history']]
                 position = {'id': event['id'], 'wallet': wallet, 'symbol': coin, 'direction': side.lower(),
+                            'sourceVenue': source_venue, 'paperQuoteVenue': 'hyperliquid',
                             'sourceOpenedAt': event['createdAt'], 'sourceLeverage': p.get('leverage'),
                             'paperLeverage': leverage, 'marginRequired': 0, 'leverageMode': 'fixed_5x',
                             'openedAt': now, 'quantity': 0, 'basis': 0, 'entryFees': 0, 'realized': 0, 'legs': []}
@@ -358,6 +370,7 @@ def audit_source_cards(state, events, stamp, append):
                         receipt = {'positionId': position['id'], 'eventId': event['id'],
                                    'sourcePublicationAt': event['createdAt'], 'discoveredAt': now,
                                    'reason': 'subsequent_same_side_opening', 'wallet': position['wallet'],
+                                   'sourceVenue': payload.get('venue') or event.get('traderCard', {}).get('venue'),
                                    'market': position['symbol'], 'side': position['direction'],
                                    'interpretation': 'Later OPENED alert for an already tracked wallet/market/side; prior ending unverified. No exit fill inferred.'}
                         lifecycle_warnings[key] = receipt
