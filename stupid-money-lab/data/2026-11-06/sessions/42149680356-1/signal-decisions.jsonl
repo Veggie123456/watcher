@@ -9,3 +9,4 @@
 {"at":"2026-11-06T02:38:24.299487+00:00","eventId":11917,"action":"OPENED","tier":"SMART","coin":"HYPE","status":"skipped","reason":"20 open funded positions maximum"}
 {"at":"2026-11-06T02:48:33.685810+00:00","eventId":11919,"action":"ADDED","tier":"SMART","coin":"ZEC","status":"filled","reason":"Standalone add-alert scalp opened"}
 {"at":"2026-11-06T02:50:22.516774+00:00","eventId":11920,"action":"ADDED","tier":"SMART","coin":"VVV","status":"filled","reason":"Standalone add-alert scalp opened"}
+{"at":"2026-11-06T02:58:12.891743+00:00","eventId":11921,"action":"ADDED","tier":"SMART","coin":"ETH","status":"skipped","reason":"An add-alert scalp for this wallet/market/side is already open; no duplicate exposure"}
