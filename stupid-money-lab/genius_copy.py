@@ -11,7 +11,7 @@ ACTIONS = {'OPENED', 'ADDED', 'REDUCED', 'CLOSED'}
 
 def candidate(event):
     payload = event.get('payload', {})
-    return (payload.get('cohort') == 'GENIUS' and payload.get('action') in ACTIONS
+    return ((payload.get('cohort') == 'GENIUS' or payload.get('action') in ('CLOSED', 'REDUCED')) and payload.get('action') in ACTIONS
             and re.fullmatch(r'[A-Za-z0-9:._-]{1,30}', event.get('coin', '')))
 
 
@@ -253,6 +253,10 @@ def archived_exit_events(state, root, stamp, millis, append, byte_limit=32000000
     from pathlib import Path
     ledger = state.get('geniusCopy', {})
     now = stamp()
+    if ledger.get('exitTierPolicy') != 'matched-any-tier-v1':
+        ledger['archiveExitCursors'] = {}
+        ledger.pop('archiveExitScanAt', None)
+        ledger['exitTierPolicy'] = 'matched-any-tier-v1'
     if millis(now)-millis(ledger.get('archiveExitScanAt', '1970-01-01T00:00:00+00:00')) < 300000:
         return []
     active = [p for p in ledger.get('positions', {}).values() if not p.get('closedAt')]
@@ -285,7 +289,7 @@ def archived_exit_events(state, root, stamp, millis, append, byte_limit=32000000
                     e = row.get('event', {})
                     p = e.get('payload', {})
                     target = targets.get((str(p.get('wallet', '')).lower(), e.get('coin'), p.get('side')))
-                    if row.get('kind') == 'first_observation' and p.get('cohort') == 'GENIUS' and p.get('action') in ('CLOSED', 'REDUCED'):
+                    if row.get('kind') == 'first_observation' and p.get('action') in ('CLOSED', 'REDUCED'):
                         cards += 1
                         if target and millis(e['createdAt']) >= millis(target['sourceOpenedAt']) and not any(l.get('eventId') == e['id'] for l in target.get('legs', [])):
                             matches[e['id']] = e
