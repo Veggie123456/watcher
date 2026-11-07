@@ -1,0 +1,962 @@
+{
+  "at": "2026-11-07T00:14:50.747775+00:00",
+  "objective": "Measure current paper exposure concentration using entry basis and reserved margin, not source holdings",
+  "stateCutoff": "2026-11-07T00:13:15.285384+00:00",
+  "stateSha256": "31ee27796b38ff8482f136e318cfa3136a8044bc2fccd9ec1ad8e6afacd2c4ae",
+  "totals": {
+    "positions": 48,
+    "entryBasisUsd": 10198.32676598,
+    "reservedMarginUsd": 5235.186929308,
+    "cash": 4760.223823647307,
+    "contributedCapital": 10000,
+    "openEstimateBeforeFunding": 7.08313253551936
+  },
+  "byMarket": {
+    "BTC": {
+      "count": 18,
+      "entryBasisUsd": 4031.2211842899997,
+      "reservedMarginUsd": 2265.8583458979997,
+      "openEstimateBeforeFunding": 8.574653317474475,
+      "positionIds": [
+        10721,
+        10723,
+        11003,
+        11040,
+        11114,
+        11154,
+        11438,
+        11453,
+        11696,
+        11777,
+        11841,
+        11945,
+        11949,
+        11956,
+        11995,
+        12026,
+        12122,
+        12250
+      ],
+      "marginSharePct": 43.28132646444979,
+      "entryBasisSharePct": 39.52826063327873
+    },
+    "ZEC": {
+      "count": 14,
+      "entryBasisUsd": 2973.361059,
+      "reservedMarginUsd": 1211.5403262,
+      "openEstimateBeforeFunding": -40.881257484599374,
+      "positionIds": [
+        10652,
+        10677,
+        11020,
+        11451,
+        11798,
+        11867,
+        11877,
+        11935,
+        11974,
+        11986,
+        12148,
+        12267,
+        12400,
+        12441
+      ],
+      "marginSharePct": 23.142255330320065,
+      "entryBasisSharePct": 29.155381340777
+    },
+    "HYPE": {
+      "count": 4,
+      "entryBasisUsd": 799.1516386399999,
+      "reservedMarginUsd": 799.1516386399999,
+      "openEstimateBeforeFunding": 3.1402182353575196,
+      "positionIds": [
+        10936,
+        11128,
+        11464,
+        11511
+      ],
+      "marginSharePct": 15.265006759665672,
+      "entryBasisSharePct": 7.8361054413930225
+    },
+    "ETH": {
+      "count": 4,
+      "entryBasisUsd": 799.4096117099998,
+      "reservedMarginUsd": 319.845478662,
+      "openEstimateBeforeFunding": 13.303360727652509,
+      "positionIds": [
+        10944,
+        12287,
+        12340,
+        12348
+      ],
+      "marginSharePct": 6.109533107049494,
+      "entryBasisSharePct": 7.838635004094038
+    },
+    "UNI": {
+      "count": 1,
+      "entryBasisUsd": 199.9940058,
+      "reservedMarginUsd": 199.9940058,
+      "openEstimateBeforeFunding": 19.105809563037027,
+      "positionIds": [
+        10728
+      ],
+      "marginSharePct": 3.8201884383608005,
+      "entryBasisSharePct": 1.9610472422510354
+    },
+    "XMR": {
+      "count": 1,
+      "entryBasisUsd": 199.699101,
+      "reservedMarginUsd": 199.699101,
+      "openEstimateBeforeFunding": 6.425689160362536,
+      "positionIds": [
+        10736
+      ],
+      "marginSharePct": 3.814555309993424,
+      "entryBasisSharePct": 1.958155544360125
+    },
+    "SOL": {
+      "count": 3,
+      "entryBasisUsd": 598.41614484,
+      "reservedMarginUsd": 119.68322896799998,
+      "openEstimateBeforeFunding": -2.306758965455394,
+      "positionIds": [
+        12445,
+        12453,
+        12459
+      ],
+      "marginSharePct": 2.286130955477076,
+      "entryBasisSharePct": 5.86778751624454
+    },
+    "LIT": {
+      "count": 2,
+      "entryBasisUsd": 397.49889559999997,
+      "reservedMarginUsd": 79.49977912,
+      "openEstimateBeforeFunding": 0.09767104043006292,
+      "positionIds": [
+        11904,
+        12076
+      ],
+      "marginSharePct": 1.5185661981798324,
+      "entryBasisSharePct": 3.8976873826596066
+    },
+    "XRP": {
+      "count": 1,
+      "entryBasisUsd": 199.57512509999998,
+      "reservedMarginUsd": 39.915025019999995,
+      "openEstimateBeforeFunding": -0.37625305874000425,
+      "positionIds": [
+        12433
+      ],
+      "marginSharePct": 0.7624374365038397,
+      "entryBasisSharePct": 1.956939894941893
+    }
+  },
+  "byWallet": {
+    "0x5dd4520818e244c426b64f9431e8afbd5b81f1fa": {
+      "count": 5,
+      "entryBasisUsd": 988.6548120699999,
+      "reservedMarginUsd": 517.59291159,
+      "openEstimateBeforeFunding": -7.5139177186198935,
+      "positionIds": [
+        11464,
+        11511,
+        11798,
+        11904,
+        12076
+      ],
+      "marginSharePct": 9.886808600708681,
+      "entryBasisSharePct": 9.694284511141529
+    },
+    "0x3c88192119517f7a2d99eac100f0e8c93ea6f5bb": {
+      "count": 1,
+      "entryBasisUsd": 426.6237875899999,
+      "reservedMarginUsd": 426.6237875899999,
+      "openEstimateBeforeFunding": -2.9488365254074327,
+      "positionIds": [
+        11453
+      ],
+      "marginSharePct": 8.149160542895688,
+      "entryBasisSharePct": 4.183272387517031
+    },
+    "0x4fe8c13f70fba3081be9953869ae8f2ca3c3ba7a": {
+      "count": 2,
+      "entryBasisUsd": 399.3242021699999,
+      "reservedMarginUsd": 399.3242021699999,
+      "openEstimateBeforeFunding": 3.061064538157498,
+      "positionIds": [
+        10936,
+        11128
+      ],
+      "marginSharePct": 7.6276971111475405,
+      "entryBasisSharePct": 3.9155854811603223
+    },
+    "0xe3a670dc409f8774288f783f37643e5b3af54f7d": {
+      "count": 2,
+      "entryBasisUsd": 610.7036309399999,
+      "reservedMarginUsd": 282.06160522799996,
+      "openEstimateBeforeFunding": 0.5611843342670881,
+      "positionIds": [
+        11114,
+        11696
+      ],
+      "marginSharePct": 5.3878038938579715,
+      "entryBasisSharePct": 5.988272830962922
+    },
+    "0xace83bad72ce09ca27d80f353199b17799d9cade": {
+      "count": 2,
+      "entryBasisUsd": 397.60207049999997,
+      "reservedMarginUsd": 237.77400209999996,
+      "openEstimateBeforeFunding": -0.9358863363149412,
+      "positionIds": [
+        10677,
+        12340
+      ],
+      "marginSharePct": 4.541843592420291,
+      "entryBasisSharePct": 3.898699067246378
+    },
+    "0xb9f73a0bd2fa864f63f357093a7ed297994c1f51": {
+      "count": 1,
+      "entryBasisUsd": 199.9940058,
+      "reservedMarginUsd": 199.9940058,
+      "openEstimateBeforeFunding": 19.105809563037027,
+      "positionIds": [
+        10728
+      ],
+      "marginSharePct": 3.8201884383608005,
+      "entryBasisSharePct": 1.9610472422510354
+    },
+    "0x5130c49423d8f8b8dbf838a44725e5d5720e34dc": {
+      "count": 1,
+      "entryBasisUsd": 199.9544454,
+      "reservedMarginUsd": 199.9544454,
+      "openEstimateBeforeFunding": 10.356752546611997,
+      "positionIds": [
+        10944
+      ],
+      "marginSharePct": 3.819432774799323,
+      "entryBasisSharePct": 1.9606593315583523
+    },
+    "0x8e56e91bcb3640d11247d607201a73e13040f4b7": {
+      "count": 1,
+      "entryBasisUsd": 199.83148185000002,
+      "reservedMarginUsd": 199.83148185000002,
+      "openEstimateBeforeFunding": -6.565292240272496,
+      "positionIds": [
+        11003
+      ],
+      "marginSharePct": 3.8170839847434874,
+      "entryBasisSharePct": 1.9594536087685102
+    },
+    "0x656479bffc5ae168ff19c11c6ed6b8b2d90261fc": {
+      "count": 1,
+      "entryBasisUsd": 199.7629371,
+      "reservedMarginUsd": 199.7629371,
+      "openEstimateBeforeFunding": 3.4714152984480116,
+      "positionIds": [
+        11154
+      ],
+      "marginSharePct": 3.8157746761948985,
+      "entryBasisSharePct": 1.9587814911596815
+    },
+    "0x9f9230a0b48d6f800b2c10036f25ac89455298ee": {
+      "count": 1,
+      "entryBasisUsd": 199.73270736,
+      "reservedMarginUsd": 199.73270736,
+      "openEstimateBeforeFunding": 11.045913443996017,
+      "positionIds": [
+        10723
+      ],
+      "marginSharePct": 3.8151972423724168,
+      "entryBasisSharePct": 1.9584850725344145
+    },
+    "0x1fd1c1bcafc18e4dc5bedc8331286246d8d7482e": {
+      "count": 1,
+      "entryBasisUsd": 199.72404451999998,
+      "reservedMarginUsd": 199.72404451999998,
+      "openEstimateBeforeFunding": -4.9412880240499994,
+      "positionIds": [
+        11040
+      ],
+      "marginSharePct": 3.815031769006957,
+      "entryBasisSharePct": 1.958400128796105
+    },
+    "0xf6af84c22bca163f1c7ce8dbf3a6ac2c5230d622": {
+      "count": 1,
+      "entryBasisUsd": 199.699101,
+      "reservedMarginUsd": 199.699101,
+      "openEstimateBeforeFunding": 6.425689160362536,
+      "positionIds": [
+        10736
+      ],
+      "marginSharePct": 3.814555309993424,
+      "entryBasisSharePct": 1.958155544360125
+    },
+    "0x14e95649375b41fd674ddc6f2f50758ba86f0d30": {
+      "count": 1,
+      "entryBasisUsd": 199.66473539999998,
+      "reservedMarginUsd": 199.66473539999998,
+      "openEstimateBeforeFunding": 1.8523149327800261,
+      "positionIds": [
+        11438
+      ],
+      "marginSharePct": 3.8138988749804237,
+      "entryBasisSharePct": 1.9578185714351677
+    },
+    "0x253b7b4ba1af2b86a6a010d8cf48e4252e603b22": {
+      "count": 1,
+      "entryBasisUsd": 199.27684368,
+      "reservedMarginUsd": 199.27684368,
+      "openEstimateBeforeFunding": 10.590254902652038,
+      "positionIds": [
+        10721
+      ],
+      "marginSharePct": 3.8064895555953133,
+      "entryBasisSharePct": 1.954015087501961
+    },
+    "0x1053cdafe287e783eca26c4a4fbd441ebcbb2d8b": {
+      "count": 1,
+      "entryBasisUsd": 195.13467,
+      "reservedMarginUsd": 195.13467,
+      "openEstimateBeforeFunding": -3.886265241749964,
+      "positionIds": [
+        10652
+      ],
+      "marginSharePct": 3.727367764226012,
+      "entryBasisSharePct": 1.9133988788331269
+    },
+    "0xa59261792941111f852067cee9349041efca2d76": {
+      "count": 1,
+      "entryBasisUsd": 189.51729300000002,
+      "reservedMarginUsd": 189.51729300000002,
+      "openEstimateBeforeFunding": -9.50111442209994,
+      "positionIds": [
+        11451
+      ],
+      "marginSharePct": 3.6200673549788775,
+      "entryBasisSharePct": 1.858317519617038
+    },
+    "0xa75eb8813909f9185e90aa1eb5f7b667f68820e1": {
+      "count": 1,
+      "entryBasisUsd": 188.61619499999998,
+      "reservedMarginUsd": 188.61619499999998,
+      "openEstimateBeforeFunding": -10.401806927999964,
+      "positionIds": [
+        11020
+      ],
+      "marginSharePct": 3.6028550183007835,
+      "entryBasisSharePct": 1.8494817760614777
+    },
+    "0x693b77eb4946bd1e12d5f34fea57b503b7c0d5f7": {
+      "count": 4,
+      "entryBasisUsd": 790.70709635,
+      "reservedMarginUsd": 158.14141927,
+      "openEstimateBeforeFunding": -10.243784117577865,
+      "positionIds": [
+        11945,
+        11974,
+        11995,
+        12459
+      ],
+      "marginSharePct": 3.020740642223897,
+      "entryBasisSharePct": 7.753302227848527
+    },
+    "0x5d26cbe12cad98e13c482a93f16bbcfbd0100731": {
+      "count": 1,
+      "entryBasisUsd": 473.61591,
+      "reservedMarginUsd": 94.72318200000001,
+      "openEstimateBeforeFunding": -4.036716296099868,
+      "positionIds": [
+        12148
+      ],
+      "marginSharePct": 1.8093562518219528,
+      "entryBasisSharePct": 4.6440550579327144
+    },
+    "0x5232a3f9ebcdbd9cc0e1867a89e646694deba9dc": {
+      "count": 2,
+      "entryBasisUsd": 398.50320789,
+      "reservedMarginUsd": 79.70064157799999,
+      "openEstimateBeforeFunding": -1.2293511750934512,
+      "positionIds": [
+        12250,
+        12453
+      ],
+      "marginSharePct": 1.522402975370643,
+      "entryBasisSharePct": 3.907535197041768
+    },
+    "0xe9d1a3a94ac91084fda4d28cf780625fa15afc59": {
+      "count": 2,
+      "entryBasisUsd": 395.55035369999996,
+      "reservedMarginUsd": 79.11007073999998,
+      "openEstimateBeforeFunding": -2.804282792137968,
+      "positionIds": [
+        11841,
+        11877
+      ],
+      "marginSharePct": 1.5111221778370567,
+      "entryBasisSharePct": 3.8785808964220796
+    },
+    "0x628f303158bb4dc2f6e31acb6e0a1fb464626a08": {
+      "count": 2,
+      "entryBasisUsd": 392.62105233,
+      "reservedMarginUsd": 78.524210466,
+      "openEstimateBeforeFunding": 4.8411917393480355,
+      "positionIds": [
+        11935,
+        12445
+      ],
+      "marginSharePct": 1.4999313592108836,
+      "entryBasisSharePct": 3.849857543687672
+    },
+    "0xff05e1e7d565a8865b03aa384dddc7bcea23d9e4": {
+      "count": 2,
+      "entryBasisUsd": 388.78959022,
+      "reservedMarginUsd": 77.757918044,
+      "openEstimateBeforeFunding": -9.444892241592918,
+      "positionIds": [
+        11956,
+        11986
+      ],
+      "marginSharePct": 1.4852940132603485,
+      "entryBasisSharePct": 3.8122880266686523
+    },
+    "0xc7d78605a9627cc4bf0b182e03d583bc5b5882ae": {
+      "count": 1,
+      "entryBasisUsd": 199.95672312000002,
+      "reservedMarginUsd": 39.99134462400001,
+      "openEstimateBeforeFunding": -0.8977144545599638,
+      "positionIds": [
+        11949
+      ],
+      "marginSharePct": 0.7638952565402696,
+      "entryBasisSharePct": 1.9606816658103554
+    },
+    "0x2ba07003ef9b849310cc2d0eced9c7318190cd4f": {
+      "count": 1,
+      "entryBasisUsd": 199.85391425999998,
+      "reservedMarginUsd": 39.970782852,
+      "openEstimateBeforeFunding": 0.8720362469129929,
+      "positionIds": [
+        12287
+      ],
+      "marginSharePct": 0.7635024955504968,
+      "entryBasisSharePct": 1.959673570439819
+    },
+    "0xfef85d329791724d7878fe326aff183d66569f14": {
+      "count": 1,
+      "entryBasisUsd": 199.81616655,
+      "reservedMarginUsd": 39.96323331,
+      "openEstimateBeforeFunding": 1.8053009869425016,
+      "positionIds": [
+        12348
+      ],
+      "marginSharePct": 0.7633582878631315,
+      "entryBasisSharePct": 1.9593034341334796
+    },
+    "0xf47546ca25a0358da1cc4a1c11dbf0e3a0e5e1c7": {
+      "count": 1,
+      "entryBasisUsd": 199.663137,
+      "reservedMarginUsd": 39.9326274,
+      "openEstimateBeforeFunding": -1.9516398890224709,
+      "positionIds": [
+        11777
+      ],
+      "marginSharePct": 0.7627736686238709,
+      "entryBasisSharePct": 1.9578028982758675
+    },
+    "0xdc7b64fed5b76efed17e4dd6ed0221f3984fb4b8": {
+      "count": 1,
+      "entryBasisUsd": 199.59604416000002,
+      "reservedMarginUsd": 39.919208832,
+      "openEstimateBeforeFunding": -0.4977596808114586,
+      "positionIds": [
+        12122
+      ],
+      "marginSharePct": 0.76251735365019,
+      "entryBasisSharePct": 1.9571450174142364
+    },
+    "0xc936eda2f48b4ecc5221baa5d54bf5b785a71181": {
+      "count": 1,
+      "entryBasisUsd": 199.57512509999998,
+      "reservedMarginUsd": 39.915025019999995,
+      "openEstimateBeforeFunding": -0.37625305874000425,
+      "positionIds": [
+        12433
+      ],
+      "marginSharePct": 0.7624374365038397,
+      "entryBasisSharePct": 1.956939894941893
+    },
+    "0x7a08e304f41ee6e85e55023fb0fe0e4e4318b0f7": {
+      "count": 1,
+      "entryBasisUsd": 199.39511592,
+      "reservedMarginUsd": 39.879023184,
+      "openEstimateBeforeFunding": 0.6956034818040117,
+      "positionIds": [
+        12026
+      ],
+      "marginSharePct": 0.76174974690486,
+      "entryBasisSharePct": 1.9551748095104233
+    },
+    "0xaefb21635c5df37cbdc6161bd2172c0f6121c172": {
+      "count": 1,
+      "entryBasisUsd": 197.41239000000002,
+      "reservedMarginUsd": 39.482478,
+      "openEstimateBeforeFunding": -1.6095702157499305,
+      "positionIds": [
+        11867
+      ],
+      "marginSharePct": 0.7541751332500919,
+      "entryBasisSharePct": 1.9357331308360939
+    },
+    "0x778b7b8bdfad4087d14eb3cd492990962121faa6": {
+      "count": 1,
+      "entryBasisUsd": 192.96484200000003,
+      "reservedMarginUsd": 38.592968400000004,
+      "openEstimateBeforeFunding": 7.207091490200052,
+      "positionIds": [
+        12267
+      ],
+      "marginSharePct": 0.7371841525647551,
+      "entryBasisSharePct": 1.892122565082932
+    },
+    "0xa9d72745018f1dc4a00e0a0653eb219299014337": {
+      "count": 1,
+      "entryBasisUsd": 188.894916,
+      "reservedMarginUsd": 37.7789832,
+      "openEstimateBeforeFunding": 3.1389969569000287,
+      "positionIds": [
+        12400
+      ],
+      "marginSharePct": 0.7216358023149656,
+      "entryBasisSharePct": 1.8522147832144726
+    },
+    "0x10125541e960ca1d0105110bc1844c7adf1b1109": {
+      "count": 1,
+      "entryBasisUsd": 187.594218,
+      "reservedMarginUsd": 37.518843600000004,
+      "openEstimateBeforeFunding": 1.8388842710000264,
+      "positionIds": [
+        12441
+      ],
+      "marginSharePct": 0.7166667419258578,
+      "entryBasisSharePct": 1.839460749833831
+    }
+  },
+  "byPaperLeverage": {
+    "1": {
+      "count": 19,
+      "entryBasisUsd": 3994.4019701399993,
+      "reservedMarginUsd": 3994.4019701399993,
+      "openEstimateBeforeFunding": 28.627179387415445,
+      "positionIds": [
+        10652,
+        10677,
+        10721,
+        10723,
+        10728,
+        10736,
+        10936,
+        10944,
+        11003,
+        11020,
+        11040,
+        11114,
+        11128,
+        11154,
+        11438,
+        11451,
+        11453,
+        11464,
+        11511
+      ],
+      "marginSharePct": 76.29912788363393,
+      "entryBasisSharePct": 39.167228720937736
+    },
+    "5": {
+      "count": 29,
+      "entryBasisUsd": 6203.924795840001,
+      "reservedMarginUsd": 1240.7849591680001,
+      "openEstimateBeforeFunding": -21.54404685189609,
+      "positionIds": [
+        11696,
+        11777,
+        11798,
+        11841,
+        11867,
+        11877,
+        11904,
+        11935,
+        11945,
+        11949,
+        11956,
+        11974,
+        11986,
+        11995,
+        12026,
+        12076,
+        12122,
+        12148,
+        12250,
+        12267,
+        12287,
+        12340,
+        12348,
+        12400,
+        12433,
+        12441,
+        12445,
+        12453,
+        12459
+      ],
+      "marginSharePct": 23.700872116366057,
+      "entryBasisSharePct": 60.832771279062264
+    }
+  },
+  "bySide": {
+    "short": {
+      "count": 34,
+      "entryBasisUsd": 6972.6393510299995,
+      "reservedMarginUsd": 3609.422222741999,
+      "openEstimateBeforeFunding": 18.506254391464616,
+      "positionIds": [
+        10652,
+        10677,
+        10721,
+        10723,
+        10728,
+        10736,
+        10936,
+        10944,
+        11020,
+        11114,
+        11154,
+        11438,
+        11451,
+        11464,
+        11777,
+        11798,
+        11841,
+        11867,
+        11877,
+        11904,
+        11949,
+        11974,
+        11986,
+        11995,
+        12122,
+        12148,
+        12250,
+        12267,
+        12400,
+        12433,
+        12441,
+        12445,
+        12453,
+        12459
+      ],
+      "marginSharePct": 68.94543158593768,
+      "entryBasisSharePct": 68.3704249827493
+    },
+    "long": {
+      "count": 14,
+      "entryBasisUsd": 3225.68741495,
+      "reservedMarginUsd": 1625.764706566,
+      "openEstimateBeforeFunding": -11.423121855945253,
+      "positionIds": [
+        11003,
+        11040,
+        11128,
+        11453,
+        11511,
+        11696,
+        11935,
+        11945,
+        11956,
+        12026,
+        12076,
+        12287,
+        12340,
+        12348
+      ],
+      "marginSharePct": 31.054568414062295,
+      "entryBasisSharePct": 31.629575017250684
+    }
+  },
+  "byClosureWarning": {
+    "other_unverified": {
+      "count": 32,
+      "entryBasisUsd": 7038.36346434,
+      "reservedMarginUsd": 3655.962110011999,
+      "openEstimateBeforeFunding": 26.6975286493715,
+      "positionIds": [
+        10677,
+        10721,
+        10723,
+        10728,
+        10736,
+        11003,
+        11020,
+        11040,
+        11114,
+        11128,
+        11154,
+        11438,
+        11453,
+        11696,
+        11777,
+        11867,
+        11904,
+        11935,
+        11986,
+        12026,
+        12076,
+        12148,
+        12267,
+        12287,
+        12340,
+        12348,
+        12400,
+        12433,
+        12441,
+        12445,
+        12453,
+        12459
+      ],
+      "marginSharePct": 69.83441392598475,
+      "entryBasisSharePct": 69.01488475363296
+    },
+    "flagged": {
+      "count": 16,
+      "entryBasisUsd": 3159.96330164,
+      "reservedMarginUsd": 1579.224819296,
+      "openEstimateBeforeFunding": -19.614396113852134,
+      "positionIds": [
+        10652,
+        10936,
+        10944,
+        11451,
+        11464,
+        11511,
+        11798,
+        11841,
+        11877,
+        11945,
+        11949,
+        11956,
+        11974,
+        11995,
+        12122,
+        12250
+      ],
+      "marginSharePct": 30.16558607401524,
+      "entryBasisSharePct": 30.98511524636704
+    }
+  },
+  "quality": {
+    "at": "2026-11-07T00:12:54.011751+00:00",
+    "status": "Unvalidated website-alert simulation; source holdings and funding incomplete",
+    "copyPerformanceEligible": false,
+    "activePaperExposures": 48,
+    "closureWarningPositionIds": [
+      10652,
+      10936,
+      10944,
+      11451,
+      11464,
+      11511,
+      11798,
+      11841,
+      11877,
+      11945,
+      11949,
+      11956,
+      11974,
+      11995,
+      12122,
+      12250
+    ],
+    "closureWarningCount": 16,
+    "sourceCardNoLongerLiveCount": 13,
+    "subsequentOpeningPositionIds": [
+      10652,
+      11841,
+      11945,
+      11949,
+      11974,
+      11995,
+      12122
+    ],
+    "subsequentOpeningWarningCount": 7,
+    "warningExposureModeledPnlBeforeFunding": -19.837241516490685,
+    "otherUnverifiedExposureModeledPnlBeforeFunding": 26.40735620064582,
+    "totalModeledPnlBeforeFunding": 6.5701146841551346,
+    "interpretation": "Warning subtotal assumes continued exposure despite non-live source cards or subsequent openings; neither subtotal is verified copier performance."
+  },
+  "archive": {
+    "at": "2026-11-07T00:08:02.178021+00:00",
+    "scope": "Saved original exits and copied-card ending revisions; uncaptured source history unknown",
+    "files": 42,
+    "bytesRead": 30762,
+    "exitCardsReviewed": 0,
+    "endingRevisionRowsReviewed": 0,
+    "newCardWarningsRecovered": 0,
+    "matchingExitIds": [],
+    "backlogRemaining": false,
+    "errors": []
+  },
+  "scalp": {
+    "protocolVersion": "split-v4",
+    "families": {
+      "fresh": {
+        "total": 150,
+        "open": 1,
+        "closed": 149,
+        "closedPnlBeforeFunding": -17.881735231717492,
+        "milestones": {
+          "notional": {
+            "5": 4,
+            "10": 0,
+            "20": 0
+          },
+          "margin": {
+            "5": 48,
+            "10": 20,
+            "20": 11
+          }
+        }
+      },
+      "add_scalp": {
+        "total": 1086,
+        "open": 5,
+        "closed": 1081,
+        "closedPnlBeforeFunding": -598.0096364222962,
+        "milestones": {
+          "notional": {
+            "5": 3,
+            "10": 1,
+            "20": 0
+          },
+          "margin": {
+            "5": 204,
+            "10": 109,
+            "20": 38
+          }
+        }
+      }
+    },
+    "study": "github-portfolio-v3",
+    "initialEquity": 1000,
+    "equity": 382.50982813810435,
+    "realizedBeforeFunding": -615.8913716540137,
+    "openCloseEstimateBeforeFunding": -1.5988002078819434,
+    "marginInUse": 84.02536028749999,
+    "available": 298.48446785060435,
+    "openCount": 6,
+    "closedCount": 1230,
+    "totalCount": 1236,
+    "maxOpen": 20,
+    "targetNotional": 200,
+    "maxPositionNotional": 350,
+    "stalePositions": [],
+    "milestones": {
+      "notional": {
+        "5": {
+          "hit": 7,
+          "total": 1236,
+          "unconfirmed": 1229
+        },
+        "10": {
+          "hit": 1,
+          "total": 1236,
+          "unconfirmed": 1235
+        },
+        "20": {
+          "hit": 0,
+          "total": 1236,
+          "unconfirmed": 1236
+        }
+      },
+      "margin": {
+        "5": {
+          "hit": 252,
+          "total": 1236,
+          "unconfirmed": 984
+        },
+        "10": {
+          "hit": 129,
+          "total": 1236,
+          "unconfirmed": 1107
+        },
+        "20": {
+          "hit": 49,
+          "total": 1236,
+          "unconfirmed": 1187
+        }
+      }
+    },
+    "feesAssumedBps": 4.5,
+    "fundingComplete": false,
+    "at": "2026-11-07T00:13:15.285231+00:00",
+    "maxDrawdownObserved": 0.618640343589146
+  },
+  "financialMutation": false,
+  "limitations": [
+    "Entry basis is historical modeled notional, not current marked notional. Reserved margin is paper allocation, not real venue collateral or liquidation protection.",
+    "Source wallet identities and continued holdings remain unverified. Opposing paper positions are not evidence of actual source hedges.",
+    "Open estimated PnL includes modeled fees/slippage but excludes exact funding; no completed verified copy trades."
+  ],
+  "files": [
+    {
+      "filename": "2026-11-07-42314885094-events.jsonl",
+      "bytes": 95342,
+      "sha256": "5bf5ffe7fbcb8aa6b5c5406e094a98fd15a79ff35e141bbb538e87044f4defc8",
+      "rows": 84
+    },
+    {
+      "filename": "2026-11-07-42314885094-source-checks.jsonl",
+      "bytes": 3768,
+      "sha256": "16773d02ed4ef2ccb5e8f55299e835216ba26c85fe8e7d49190966a56609f26a",
+      "rows": 24
+    },
+    {
+      "filename": "2026-11-06-42314885094-source-checks.jsonl",
+      "bytes": 785,
+      "sha256": "2160a44d4641b08b5c902ae4daf8ff89034b56b81ece657745d1b8fddf3447fc",
+      "rows": 5
+    },
+    {
+      "filename": "2026-11-06-42308665149-source-checks.jsonl",
+      "bytes": 13345,
+      "sha256": "d52b4919551366de32cf93bb57561a1b2e3734a7901207bc83aa708e52cc23bd",
+      "rows": 85
+    }
+  ],
+  "coverage": [
+    {
+      "run": "42314885094",
+      "reads": 29,
+      "statusCounts": {
+        "read": 29
+      },
+      "first": "2026-11-06T23:54:31.480301+00:00",
+      "last": "2026-11-07T00:14:08.251802+00:00",
+      "maxGapSeconds": 131.876662
+    },
+    {
+      "run": "42308665149",
+      "reads": 85,
+      "statusCounts": {
+        "read": 85
+      },
+      "first": "2026-11-06T22:59:13.604058+00:00",
+      "last": "2026-11-06T23:53:47.594318+00:00",
+      "maxGapSeconds": 132.224261
+    }
+  ],
+  "currentUtcDayEventKinds": {
+    "revision": 80,
+    "first_observation": 4
+  },
+  "currentUtcDayFirstActions": {
+    "ADDED": 4
+  }
+}
