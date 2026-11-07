@@ -1,0 +1,373 @@
+{
+  "objective": "Retain observed SMART label despite displayed PnL above2m;no retrospective Genius promotion from numerical thresholds",
+  "stateCutoff": "2026-11-07T11:15:32.234349+00:00",
+  "heartbeat": "2026-11-07T11:15:31.778034+00:00",
+  "sourceRead": "2026-11-07T11:15:10.195361+00:00",
+  "stateSha256": "41a7a1f240b8b6b91fa61d9c5ea39cba33997cad6e049c7ac3191210f81296e2",
+  "website": {
+    "at": "2026-11-07T11:16:17.790Z",
+    "status": "page_read",
+    "httpStatus": 200,
+    "hash": "b5156a4dc8d5d81d53e82718df88b1785e7320037de15f06e8c0212e439ccaa3"
+  },
+  "websiteActions": {
+    "ADDED": 20
+  },
+  "coverage": [
+    {
+      "run": 42362251166,
+      "reads": 86,
+      "statuses": {
+        "read": 86
+      },
+      "start": "2026-11-07T10:02:59.054008+00:00",
+      "end": "2026-11-07T10:57:55.496966+00:00",
+      "maxGapSeconds": 132.330902
+    },
+    {
+      "run": 42366147028,
+      "reads": 26,
+      "statuses": {
+        "read": 26
+      },
+      "start": "2026-11-07T10:58:21.356002+00:00",
+      "end": "2026-11-07T11:16:24.426659+00:00",
+      "maxGapSeconds": 132.508461
+    }
+  ],
+  "handoffSeconds": 25.859036,
+  "rawFiles": [
+    {
+      "path": "stupid-money-lab/data/2026-11-07/sessions/42362251166-1/events.jsonl",
+      "bytes": 44512,
+      "sha256": "8c18a71435770332f04f1529107da0ead1aab0b97e875493fb61e3725d9124da"
+    },
+    {
+      "path": "stupid-money-lab/data/2026-11-07/sessions/42362251166-1/source-checks.jsonl",
+      "bytes": 13502,
+      "sha256": "15242864bd0f0fc71c16cf4e45aed8f8d8b6e4f4586b880246e6bbf4bd90b6ac"
+    },
+    {
+      "path": "stupid-money-lab/data/2026-11-07/sessions/42366147028-1/events.jsonl",
+      "bytes": 1196,
+      "sha256": "c3f59b482ff872ae8e167d759dce8e19cad17799bfa4af5e1f29af6ee800482f"
+    },
+    {
+      "path": "stupid-money-lab/data/2026-11-07/sessions/42366147028-1/source-checks.jsonl",
+      "bytes": 4082,
+      "sha256": "ee499dc5be384e3792b020c863b8153abff40f16e894a3c34848fa31135911c0"
+    }
+  ],
+  "rawKinds": {
+    "first_observation": 1,
+    "revision": 39
+  },
+  "newOriginalIds": [
+    12587
+  ],
+  "targetOriginal": {
+    "observedAt": "2026-11-07T10:27:04.254336+00:00",
+    "kind": "first_observation",
+    "event": {
+      "id": 12587,
+      "type": "SMART_FRESH",
+      "coin": "ZEC",
+      "createdAt": "2026-11-07T10:27:02.940Z",
+      "occurredAt": "2026-11-07T10:27:00.375Z",
+      "payload": {
+        "side": "SHORT",
+        "liqPx": 967.9208070481591,
+        "action": "ADDED",
+        "cohort": "SMART",
+        "wallet": "0x14e95649375b41fd674ddc6f2f50758ba86f0d30",
+        "entryPx": 1305.9891,
+        "leverage": {
+          "type": "cross",
+          "value": 10
+        },
+        "marginUsd": 691055.8121,
+        "positionUsd": 9195088.239,
+        "allTimePnlUsd": 4030181.937742,
+        "addedMarginUsd": 214723
+      },
+      "perpPnl": 2146520.818356,
+      "allTimePnl": 2146520.818356,
+      "badges": {
+        "level": "smart-trader",
+        "secondary": [
+          "top-1000",
+          "whale"
+        ]
+      },
+      "traderCard": {
+        "badges": [
+          "smart-trader",
+          "top-1000",
+          "whale"
+        ],
+        "rank": 579,
+        "chips": [
+          {
+            "kind": "rank",
+            "label": "Trader Rank",
+            "value": "#579",
+            "url": "/trader/0x14e95649375b41fd674ddc6f2f50758ba86f0d30"
+          }
+        ],
+        "venue": "hyperliquid",
+        "pnl": {
+          "side": "short",
+          "entryPx": "1305.9891",
+          "leverage": 10,
+          "sizeAbs": 4684.71,
+          "seedPx": "1262.2",
+          "live": true,
+          "sizeShrunk": false,
+          "frozen": null
+        }
+      }
+    },
+    "hash": "e236a9b2b422932700815b6142840ef54d06b8d5d8883f4a5126f58317b856e9"
+  },
+  "targetLatestRevision": {
+    "id": 12587,
+    "type": "SMART_FRESH",
+    "coin": "ZEC",
+    "createdAt": "2026-11-07T10:27:02.940Z",
+    "occurredAt": "2026-11-07T10:27:00.375Z",
+    "payload": {
+      "side": "SHORT",
+      "liqPx": 967.9208070481591,
+      "action": "ADDED",
+      "cohort": "SMART",
+      "wallet": "0x14e95649375b41fd674ddc6f2f50758ba86f0d30",
+      "entryPx": 1305.9891,
+      "leverage": {
+        "type": "cross",
+        "value": 10
+      },
+      "marginUsd": 691055.8121,
+      "positionUsd": 9195088.239,
+      "allTimePnlUsd": 4030181.937742,
+      "addedMarginUsd": 214723
+    },
+    "perpPnl": 2090096.202719,
+    "allTimePnl": 2090096.202719,
+    "badges": {
+      "level": "smart-trader",
+      "secondary": [
+        "top-1000",
+        "whale"
+      ]
+    },
+    "traderCard": {
+      "badges": [
+        "smart-trader",
+        "top-1000",
+        "whale"
+      ],
+      "rank": 589,
+      "chips": [
+        {
+          "kind": "rank",
+          "label": "Trader Rank",
+          "value": "#589",
+          "url": "/trader/0x14e95649375b41fd674ddc6f2f50758ba86f0d30"
+        }
+      ],
+      "venue": "hyperliquid",
+      "pnl": {
+        "side": "short",
+        "entryPx": "1305.9891",
+        "leverage": 10,
+        "sizeAbs": 4684.71,
+        "seedPx": "1262.2",
+        "live": true,
+        "sizeShrunk": false,
+        "frozen": null
+      }
+    }
+  },
+  "publicationToObservationSeconds": 1.314336,
+  "originalLabelAndFigures": {
+    "cohort": "SMART",
+    "badge": {
+      "level": "smart-trader",
+      "secondary": [
+        "top-1000",
+        "whale"
+      ]
+    },
+    "perpPnl": 2146520.818356,
+    "allTimePnl": 2146520.818356,
+    "payloadAllTimePnlUsd": 4030181.937742
+  },
+  "geniusDecisionsForTarget": [],
+  "geniusFillLegsForTarget": [],
+  "interpretation": "Displayed PnL fields do not reconstruct timestamped ranking/classification methodology. The source explicitly says SMART/smart-trader for12587;retain exact original label. No manual upgrade to GENIUS or inference of skill/account identity. Potential label-vs-figures discrepancy requires official methodology/account linkage,not a silent data correction. Source may use other metrics/timing;cause unknown. No new Genius entry or exit in captured arrivals;scalpstudy remains separate.",
+  "genius": {
+    "exposures": 48,
+    "realized": 0,
+    "openEstimateBeforeFunding": 62.20996688603201,
+    "cash": 4760.223823647307,
+    "quality": {
+      "at": "2026-11-07T11:15:10.931495+00:00",
+      "status": "Unvalidated website-alert simulation; source holdings and funding incomplete",
+      "copyPerformanceEligible": false,
+      "activePaperExposures": 48,
+      "closureWarningPositionIds": [
+        10652,
+        10936,
+        10944,
+        11451,
+        11464,
+        11511,
+        11798,
+        11841,
+        11877,
+        11945,
+        11949,
+        11956,
+        11974,
+        11995,
+        12122,
+        12250
+      ],
+      "closureWarningCount": 16,
+      "sourceCardNoLongerLiveCount": 13,
+      "subsequentOpeningPositionIds": [
+        10652,
+        11841,
+        11945,
+        11949,
+        11974,
+        11995,
+        12122
+      ],
+      "subsequentOpeningWarningCount": 7,
+      "warningExposureModeledPnlBeforeFunding": 2.688785314909233,
+      "otherUnverifiedExposureModeledPnlBeforeFunding": 63.06826123603279,
+      "totalModeledPnlBeforeFunding": 65.75704655094202,
+      "interpretation": "Warning subtotal assumes continued exposure despite non-live source cards or subsequent openings; neither subtotal is verified copier performance."
+    },
+    "archive": {
+      "at": "2026-11-07T11:12:02.324178+00:00",
+      "scope": "Saved original exits and copied-card ending revisions; uncaptured source history unknown",
+      "files": 54,
+      "bytesRead": 0,
+      "exitCardsReviewed": 0,
+      "endingRevisionRowsReviewed": 0,
+      "newCardWarningsRecovered": 0,
+      "matchingExitIds": [],
+      "backlogRemaining": false,
+      "errors": []
+    }
+  },
+  "separateScalp": {
+    "protocolVersion": "split-v4",
+    "families": {
+      "fresh": {
+        "total": 150,
+        "open": 0,
+        "closed": 150,
+        "closedPnlBeforeFunding": -18.16151631630047,
+        "milestones": {
+          "notional": {
+            "5": 4,
+            "10": 0,
+            "20": 0
+          },
+          "margin": {
+            "5": 48,
+            "10": 20,
+            "20": 11
+          }
+        }
+      },
+      "add_scalp": {
+        "total": 1128,
+        "open": 1,
+        "closed": 1127,
+        "closedPnlBeforeFunding": -601.8522462261678,
+        "milestones": {
+          "notional": {
+            "5": 3,
+            "10": 1,
+            "20": 0
+          },
+          "margin": {
+            "5": 212,
+            "10": 112,
+            "20": 38
+          }
+        }
+      }
+    },
+    "study": "github-portfolio-v3",
+    "initialEquity": 1000,
+    "equity": 379.7826145674316,
+    "realizedBeforeFunding": -620.0137625424684,
+    "openCloseEstimateBeforeFunding": -0.20362289009998258,
+    "marginInUse": 7.7734188,
+    "available": 372.0091957674316,
+    "openCount": 1,
+    "closedCount": 1277,
+    "totalCount": 1278,
+    "maxOpen": 20,
+    "targetNotional": 200,
+    "maxPositionNotional": 350,
+    "stalePositions": [],
+    "milestones": {
+      "notional": {
+        "5": {
+          "hit": 7,
+          "total": 1278,
+          "unconfirmed": 1271
+        },
+        "10": {
+          "hit": 1,
+          "total": 1278,
+          "unconfirmed": 1277
+        },
+        "20": {
+          "hit": 0,
+          "total": 1278,
+          "unconfirmed": 1278
+        }
+      },
+      "margin": {
+        "5": {
+          "hit": 260,
+          "total": 1278,
+          "unconfirmed": 1018
+        },
+        "10": {
+          "hit": 132,
+          "total": 1278,
+          "unconfirmed": 1146
+        },
+        "20": {
+          "hit": 49,
+          "total": 1278,
+          "unconfirmed": 1229
+        }
+      }
+    },
+    "feesAssumedBps": 4.5,
+    "fundingComplete": false,
+    "at": "2026-11-07T11:15:32.234165+00:00",
+    "maxDrawdownObserved": 0.6230327956776279
+  },
+  "workflow": {
+    "completedRun": 42362251166,
+    "job": 128372901123,
+    "allSteps": "success",
+    "activeRun": 42366147028
+  },
+  "limitations": [
+    "Rolling20cards/gaps preclude complete source event universe",
+    "Individually hashed moving-main downloads,not atomic",
+    "Funding/accountidentity/holding/classificationtiming/collateral/liquidation/lawful execution access incomplete",
+    "No completed Genius copier lifecycle;closed statistics undefined"
+  ]
+}
