@@ -1,0 +1,356 @@
+{
+  "at": "2026-11-07T04:22:40.801698+00:00",
+  "objective": "Separate unclassified liquidation-related event from explicit trade close and prevent invented liquidation fill",
+  "stateCutoff": "2026-11-07T04:21:03.316998+00:00",
+  "stateSha256": "4949a6e0257fce5215a76b8c4237da3604bba2154f58d961a0c30191d3f86d35",
+  "rawFirstObservation": {
+    "observedAt": "2026-11-07T03:43:23.894410+00:00",
+    "kind": "first_observation",
+    "event": {
+      "id": 12545,
+      "type": "LIQ_CLOSE",
+      "coin": "XRP",
+      "createdAt": "2026-11-07T03:43:03.281Z",
+      "occurredAt": "2026-11-07T03:43:00.362Z",
+      "payload": {
+        "side": "LONG",
+        "liqPx": 1.1452578446280912,
+        "cohort": "GENIUS",
+        "markPx": 1.1517,
+        "wallet": "0x55fcf67520caf9d19127a6b2f1398b69f6a7aabc",
+        "distPct": 1.11,
+        "outcome": null,
+        "rearmed": false,
+        "leverage": {
+          "type": "cross",
+          "value": 14
+        },
+        "marginUsd": 76548.214272,
+        "positionUsd": 1266389.185
+      },
+      "perpPnl": null,
+      "allTimePnl": null,
+      "badges": {
+        "level": "genius-trader",
+        "secondary": []
+      },
+      "traderCard": {
+        "badges": [
+          "genius-trader"
+        ],
+        "rank": 2057,
+        "chips": [
+          {
+            "kind": "rank",
+            "label": "Trader Rank",
+            "value": "#2,057",
+            "url": "/trader/0x55fcf67520caf9d19127a6b2f1398b69f6a7aabc"
+          }
+        ],
+        "venue": "hyperliquid",
+        "pnl": {
+          "side": "long",
+          "entryPx": "1.345865",
+          "leverage": 14,
+          "sizeAbs": 2013629,
+          "seedPx": "1.1903",
+          "live": true,
+          "sizeShrunk": false,
+          "frozen": null
+        }
+      }
+    },
+    "hash": "e6071cfde839dc69883de74d829d8a01068dd2558e930bf8bcf84ed4a9494680"
+  },
+  "latestWebsiteEvent": {
+    "id": 12545,
+    "type": "LIQ_CLOSE",
+    "coin": "XRP",
+    "createdAt": "2026-11-07T03:43:03.281Z",
+    "occurredAt": "2026-11-07T03:43:00.362Z",
+    "payload": {
+      "side": "LONG",
+      "liqPx": 1.144300527060218,
+      "cohort": "GENIUS",
+      "markPx": 1.1517,
+      "wallet": "0x55fcf67520caf9d19127a6b2f1398b69f6a7aabc",
+      "distPct": 1.16,
+      "outcome": null,
+      "rearmed": false,
+      "leverage": {
+        "type": "cross",
+        "value": 14
+      },
+      "marginUsd": 84898.995757,
+      "positionUsd": 1110362.194
+    },
+    "perpPnl": null,
+    "allTimePnl": null,
+    "badges": {
+      "level": "genius-trader",
+      "secondary": []
+    },
+    "traderCard": {
+      "badges": [
+        "genius-trader"
+      ],
+      "rank": 2057,
+      "chips": [
+        {
+          "kind": "rank",
+          "label": "Trader Rank",
+          "value": "#2,057",
+          "url": "/trader/0x55fcf67520caf9d19127a6b2f1398b69f6a7aabc"
+        }
+      ],
+      "venue": "hyperliquid",
+      "pnl": {
+        "side": "long",
+        "entryPx": "1.345865",
+        "leverage": 14,
+        "sizeAbs": 2013629,
+        "seedPx": "1.1903",
+        "live": true,
+        "sizeShrunk": false,
+        "frozen": null
+      }
+    }
+  },
+  "revisionReceipts": [
+    {
+      "observedAt": "2026-11-07T03:43:23.894410+00:00",
+      "hash": "e6071cfde839dc69883de74d829d8a01068dd2558e930bf8bcf84ed4a9494680",
+      "kind": "first_observation"
+    },
+    {
+      "observedAt": "2026-11-07T03:58:13.697298+00:00",
+      "hash": "4c19e005a62384126a873a7658ad83e7fd60abb6dad3daea82facb8f9919f435",
+      "kind": "revision"
+    },
+    {
+      "observedAt": "2026-11-07T04:08:14.310546+00:00",
+      "hash": "b066d91bfec78ecc0706522c00ba46c3f76531d96bf93c71882f1ad1d7f0da45",
+      "kind": "revision"
+    },
+    {
+      "observedAt": "2026-11-07T04:11:20.086854+00:00",
+      "hash": "27e3db8dad87343813fb1da74a75f60e7894dbf1999102464c8cc42205590b2e",
+      "kind": "revision"
+    }
+  ],
+  "canonicalDecisionCount": 0,
+  "canonicalFillLegCount": 0,
+  "sameWalletMarketSidePositions": [],
+  "interpretation": "Unclassified source risk candidate; no payload.action, outcome null, live card true. LIQ_CLOSE type alone does not prove liquidation or a completed position close.",
+  "officialSemantics": "Two search engines restricted to official domain found no indexed result for LIQ_CLOSE/liquidation alert semantics; not proof documentation absent. Direct blocked website route not retried.",
+  "files": [
+    {
+      "file": "42334704726-events.jsonl",
+      "bytes": 114102,
+      "sha256": "760965768a56de2ecf1ec19f36eb2cd1ac5f3776a87d270f4deaa77198e5526d",
+      "rows": 100
+    },
+    {
+      "file": "42334704726-source-checks.jsonl",
+      "bytes": 11304,
+      "sha256": "35121973e1bbe77d159b8994136a4652eadb9a772caa0004e6d28a743a21bc5d",
+      "rows": 72
+    },
+    {
+      "file": "42330365166-source-checks.jsonl",
+      "bytes": 13816,
+      "sha256": "5f449cad906e6f496c6108ea58c88a828fb7a42dd949794884c6c39d118a5c0c",
+      "rows": 88
+    }
+  ],
+  "coverage": [
+    {
+      "run": "42334704726",
+      "reads": 72,
+      "statuses": {
+        "read": 72
+      },
+      "first": "2026-11-07T03:35:43.126533+00:00",
+      "last": "2026-11-07T04:21:18.041657+00:00",
+      "maxGapSeconds": 132.936768
+    },
+    {
+      "run": "42330365166",
+      "reads": 88,
+      "statuses": {
+        "read": 88
+      },
+      "first": "2026-11-07T02:40:21.815974+00:00",
+      "last": "2026-11-07T03:34:58.320785+00:00",
+      "maxGapSeconds": 131.793705
+    }
+  ],
+  "rowKinds": {
+    "first_observation": 6,
+    "revision": 94
+  },
+  "firstEventTypes": {
+    "SMART_FRESH": 5,
+    "LIQ_CLOSE": 1
+  },
+  "financialMutation": false,
+  "snapshot": {
+    "count": 48,
+    "closed": 0,
+    "cash": 4760.223823647307,
+    "realized": 0,
+    "openEstimateBeforeFunding": -6.613277029966436,
+    "quality": {
+      "at": "2026-11-07T04:20:41.355850+00:00",
+      "status": "Unvalidated website-alert simulation; source holdings and funding incomplete",
+      "copyPerformanceEligible": false,
+      "activePaperExposures": 48,
+      "closureWarningPositionIds": [
+        10652,
+        10936,
+        10944,
+        11451,
+        11464,
+        11511,
+        11798,
+        11841,
+        11877,
+        11945,
+        11949,
+        11956,
+        11974,
+        11995,
+        12122,
+        12250
+      ],
+      "closureWarningCount": 16,
+      "sourceCardNoLongerLiveCount": 13,
+      "subsequentOpeningPositionIds": [
+        10652,
+        11841,
+        11945,
+        11949,
+        11974,
+        11995,
+        12122
+      ],
+      "subsequentOpeningWarningCount": 7,
+      "warningExposureModeledPnlBeforeFunding": -27.96889736054762,
+      "otherUnverifiedExposureModeledPnlBeforeFunding": 21.77098680144002,
+      "totalModeledPnlBeforeFunding": -6.197910559107598,
+      "interpretation": "Warning subtotal assumes continued exposure despite non-live source cards or subsequent openings; neither subtotal is verified copier performance."
+    },
+    "archive": {
+      "at": "2026-11-07T04:16:20.147174+00:00",
+      "scope": "Saved original exits and copied-card ending revisions; uncaptured source history unknown",
+      "files": 46,
+      "bytesRead": 0,
+      "exitCardsReviewed": 0,
+      "endingRevisionRowsReviewed": 0,
+      "newCardWarningsRecovered": 0,
+      "matchingExitIds": [],
+      "backlogRemaining": false,
+      "errors": []
+    },
+    "scalp": {
+      "protocolVersion": "split-v4",
+      "families": {
+        "fresh": {
+          "total": 150,
+          "open": 0,
+          "closed": 150,
+          "closedPnlBeforeFunding": -18.16151631630047,
+          "milestones": {
+            "notional": {
+              "5": 4,
+              "10": 0,
+              "20": 0
+            },
+            "margin": {
+              "5": 48,
+              "10": 20,
+              "20": 11
+            }
+          }
+        },
+        "add_scalp": {
+          "total": 1110,
+          "open": 7,
+          "closed": 1103,
+          "closedPnlBeforeFunding": -598.9338374120026,
+          "milestones": {
+            "notional": {
+              "5": 3,
+              "10": 1,
+              "20": 0
+            },
+            "margin": {
+              "5": 209,
+              "10": 111,
+              "20": 38
+            }
+          }
+        }
+      },
+      "study": "github-portfolio-v3",
+      "initialEquity": 1000,
+      "equity": 382.00918527562953,
+      "realizedBeforeFunding": -617.095353728303,
+      "openCloseEstimateBeforeFunding": -0.8954609960674,
+      "marginInUse": 109.55485403799999,
+      "available": 272.45433123762956,
+      "openCount": 7,
+      "closedCount": 1253,
+      "totalCount": 1260,
+      "maxOpen": 20,
+      "targetNotional": 200,
+      "maxPositionNotional": 350,
+      "stalePositions": [],
+      "milestones": {
+        "notional": {
+          "5": {
+            "hit": 7,
+            "total": 1260,
+            "unconfirmed": 1253
+          },
+          "10": {
+            "hit": 1,
+            "total": 1260,
+            "unconfirmed": 1259
+          },
+          "20": {
+            "hit": 0,
+            "total": 1260,
+            "unconfirmed": 1260
+          }
+        },
+        "margin": {
+          "5": {
+            "hit": 257,
+            "total": 1260,
+            "unconfirmed": 1003
+          },
+          "10": {
+            "hit": 131,
+            "total": 1260,
+            "unconfirmed": 1129
+          },
+          "20": {
+            "hit": 49,
+            "total": 1260,
+            "unconfirmed": 1211
+          }
+        }
+      },
+      "feesAssumedBps": 4.5,
+      "fundingComplete": false,
+      "at": "2026-11-07T04:21:03.316816+00:00",
+      "maxDrawdownObserved": 0.6197102739204885
+    }
+  },
+  "limitations": [
+    "Source identity/actual venue fills/liquidation and collateral unverified. Live card is a source claim, not proof source position remains open.",
+    "Do not infer missing close from alarm name or apply actual liquidation loss to paper positions.",
+    "Sequential moving-main files individually hashed, not atomic snapshot; sampled read gaps remain."
+  ]
+}
