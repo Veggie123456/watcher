@@ -1,0 +1,1338 @@
+{
+  "objective": "Reconcile12612observed time exit and separate12625Lighter source from Hyperliquid proxy",
+  "cutoff": "2026-11-07T14:14:43.195956+00:00",
+  "heartbeat": "2026-11-07T14:14:42.877856+00:00",
+  "sourceRead": "2026-11-07T14:14:21.861316+00:00",
+  "stateSha256": "98c124b42c2aecda5bdd2ac2fd3f02c43515b31d5fdca5508b24843aa66a3f44",
+  "website": {
+    "at": "2026-11-07T14:14:53.937Z",
+    "status": "page_read",
+    "httpStatus": 200,
+    "hash": "0be35d12102d80e41e84530421bf31355167ce20fa97df7bb33ba27f3fbf9cae"
+  },
+  "snapshotActions": {
+    "ADDED": 18,
+    "OPENED": 2
+  },
+  "coverage": [
+    {
+      "run": 42374119464,
+      "reads": 86,
+      "statuses": {
+        "read": 86
+      },
+      "start": "2026-11-07T12:49:01.209289+00:00",
+      "end": "2026-11-07T13:43:26.809825+00:00",
+      "maxGapSeconds": 132.396003
+    },
+    {
+      "run": 42378298027,
+      "reads": 48,
+      "statuses": {
+        "read": 48
+      },
+      "start": "2026-11-07T13:44:12.737314+00:00",
+      "end": "2026-11-07T14:14:57.809162+00:00",
+      "maxGapSeconds": 131.674794
+    }
+  ],
+  "handoffSeconds": 45.927489,
+  "rawFiles": [
+    {
+      "path": "stupid-money-lab/data/2026-11-07/sessions/42374119464-1/events.jsonl",
+      "bytes": 147372,
+      "sha256": "68446b4b56d8c215c29d8049be828f8e6b9dfb40926d028deeadbff666efac4c"
+    },
+    {
+      "path": "stupid-money-lab/data/2026-11-07/sessions/42374119464-1/source-checks.jsonl",
+      "bytes": 13502,
+      "sha256": "e13cf3a6644074635694a971a5442b41e0cc130c9c61c301804a0230db89d763"
+    },
+    {
+      "path": "stupid-money-lab/data/2026-11-07/sessions/42378298027-1/events.jsonl",
+      "bytes": 186478,
+      "sha256": "b929e91efc87e31a4a1e560bdf0991d6bf1e84925ce1cfa9a569f501839b25a0"
+    },
+    {
+      "path": "stupid-money-lab/data/2026-11-07/sessions/42378298027-1/source-checks.jsonl",
+      "bytes": 7536,
+      "sha256": "fec481df61f725d2c3492d25a11c85ae7f0fb4b4b70314c7af90b9af4280865c"
+    }
+  ],
+  "rawKinds": {
+    "first_observation": 13,
+    "revision": 289
+  },
+  "newArrivals": [
+    {
+      "id": 12617,
+      "action": "ADDED",
+      "cohort": "GENIUS",
+      "observedAt": "2026-11-07T13:19:34.806897+00:00"
+    },
+    {
+      "id": 12621,
+      "action": "ADDED",
+      "cohort": "GENIUS",
+      "observedAt": "2026-11-07T13:44:12.737699+00:00"
+    },
+    {
+      "id": 12622,
+      "action": "ADDED",
+      "cohort": "SMART",
+      "observedAt": "2026-11-07T13:46:57.296854+00:00"
+    },
+    {
+      "id": 12624,
+      "action": "ADDED",
+      "cohort": "SMART",
+      "observedAt": "2026-11-07T13:50:23.428103+00:00"
+    },
+    {
+      "id": 12625,
+      "action": "OPENED",
+      "cohort": "GENIUS",
+      "observedAt": "2026-11-07T13:57:31.083995+00:00"
+    },
+    {
+      "id": 12626,
+      "action": "ADDED",
+      "cohort": "SMART",
+      "observedAt": "2026-11-07T14:04:08.218983+00:00"
+    },
+    {
+      "id": 12627,
+      "action": "ADDED",
+      "cohort": "GENIUS",
+      "observedAt": "2026-11-07T14:09:32.978557+00:00"
+    }
+  ],
+  "scalp12612FullReceipt": {
+    "id": "github-portfolio-v3-12612",
+    "recordId": "github-portfolio-v3-12612",
+    "eventId": 12612,
+    "symbol": "ZEC",
+    "wallet": "0x5232a3f9ebcdbd9cc0e1867a89e646694deba9dc",
+    "tier": "GENIUS",
+    "action": "OPENED",
+    "signalClass": "fresh",
+    "protocolVersion": "split-v4",
+    "sizingVersion": "depth-fit-v1",
+    "targetNotional": 200,
+    "sizingNote": "Quantity fitted to visible executable depth and notional/risk cap; actual size shown",
+    "sourceMarginMode": "cross",
+    "sourceLeverageStatus": "source-claimed, not account-verified",
+    "leverageMatched": true,
+    "direction": "short",
+    "quantity": 0.06,
+    "entry": 1277.6211,
+    "notional": 76.657266,
+    "stop": 1303.173522,
+    "openedAt": "2026-11-07T13:09:12.277500+00:00",
+    "quoteTime": 1794056951883,
+    "entryBook": {
+      "coin": "ZEC",
+      "time": 1794056951883,
+      "levels": [
+        [
+          {
+            "px": "1278.9",
+            "sz": "14.06",
+            "n": 13
+          },
+          {
+            "px": "1278.8",
+            "sz": "52.6",
+            "n": 14
+          },
+          {
+            "px": "1278.7",
+            "sz": "10.1",
+            "n": 5
+          },
+          {
+            "px": "1278.6",
+            "sz": "11.98",
+            "n": 7
+          },
+          {
+            "px": "1278.5",
+            "sz": "27.5",
+            "n": 7
+          },
+          {
+            "px": "1278.4",
+            "sz": "28.3",
+            "n": 7
+          },
+          {
+            "px": "1278.3",
+            "sz": "14.06",
+            "n": 7
+          },
+          {
+            "px": "1278.2",
+            "sz": "27.64",
+            "n": 8
+          },
+          {
+            "px": "1278.1",
+            "sz": "25.92",
+            "n": 7
+          },
+          {
+            "px": "1278.0",
+            "sz": "9.69",
+            "n": 7
+          }
+        ],
+        [
+          {
+            "px": "1279.0",
+            "sz": "0.15",
+            "n": 1
+          },
+          {
+            "px": "1279.2",
+            "sz": "0.01",
+            "n": 1
+          },
+          {
+            "px": "1279.4",
+            "sz": "4.49",
+            "n": 2
+          },
+          {
+            "px": "1279.5",
+            "sz": "18.1",
+            "n": 4
+          },
+          {
+            "px": "1279.6",
+            "sz": "4.07",
+            "n": 2
+          },
+          {
+            "px": "1279.7",
+            "sz": "2.3",
+            "n": 3
+          },
+          {
+            "px": "1279.8",
+            "sz": "18.01",
+            "n": 5
+          },
+          {
+            "px": "1279.9",
+            "sz": "3.37",
+            "n": 2
+          },
+          {
+            "px": "1280.0",
+            "sz": "12.23",
+            "n": 4
+          },
+          {
+            "px": "1280.1",
+            "sz": "19.61",
+            "n": 6
+          }
+        ]
+      ],
+      "observedAt": "2026-11-07T13:09:12.277500+00:00"
+    },
+    "sourceEvent": {
+      "id": 12612,
+      "type": "SMART_FRESH",
+      "coin": "ZEC",
+      "createdAt": "2026-11-07T13:09:02.120Z",
+      "occurredAt": "2026-11-07T13:09:00.276Z",
+      "payload": {
+        "side": "SHORT",
+        "liqPx": 3467.193740752531,
+        "action": "OPENED",
+        "cohort": "GENIUS",
+        "wallet": "0x5232a3f9ebcdbd9cc0e1867a89e646694deba9dc",
+        "entryPx": 1308.4793,
+        "leverage": {
+          "type": "cross",
+          "value": 10
+        },
+        "marginUsd": 586306,
+        "positionUsd": 4588694,
+        "allTimePnlUsd": 21992906.7738,
+        "addedMarginUsd": null,
+        "flippedFrom": "LONG"
+      },
+      "tags": {
+        "0x5232a3f9ebcdbd9cc0e1867a89e646694deba9dc": [
+          "VETERAN",
+          "WHALE"
+        ]
+      },
+      "perpPnl": 25754178.3498,
+      "allTimePnl": 25754178.3498,
+      "badges": {
+        "level": "genius-trader",
+        "secondary": [
+          "top-100",
+          "whale",
+          "veteran"
+        ]
+      },
+      "traderCard": {
+        "badges": [
+          "genius-trader",
+          "top-100",
+          "whale",
+          "veteran"
+        ],
+        "rank": 49,
+        "chips": [
+          {
+            "kind": "rank",
+            "label": "Trader Rank",
+            "value": "#49",
+            "url": "/trader/0x5232a3f9ebcdbd9cc0e1867a89e646694deba9dc"
+          }
+        ],
+        "venue": "hyperliquid",
+        "pnl": {
+          "side": "short",
+          "entryPx": "1308.4793",
+          "leverage": 10,
+          "sizeAbs": 3839,
+          "seedPx": "1249.4",
+          "live": true,
+          "sizeShrunk": false,
+          "frozen": null
+        }
+      }
+    },
+    "study": "github-portfolio-v3",
+    "balance": 1000,
+    "riskBudget": 3.7721880229015983,
+    "initialRiskBudget": 1.8860940114507991,
+    "sourceLeverage": 10,
+    "recommendedLeverage": 1,
+    "leverage": 10,
+    "leverageMode": "source",
+    "marginRequired": 7.665726600000001,
+    "handledEventIds": [
+      12612
+    ],
+    "legs": [
+      {
+        "kind": "ENTRY",
+        "eventId": 12612,
+        "quantity": 0.06,
+        "price": 1277.6211,
+        "fee": 0.034495769700000005,
+        "observedAt": "2026-11-07T13:09:12.277500+00:00",
+        "quoteTime": 1794056951883,
+        "book": {
+          "coin": "ZEC",
+          "time": 1794056951883,
+          "levels": [
+            [
+              {
+                "px": "1278.9",
+                "sz": "14.06",
+                "n": 13
+              },
+              {
+                "px": "1278.8",
+                "sz": "52.6",
+                "n": 14
+              },
+              {
+                "px": "1278.7",
+                "sz": "10.1",
+                "n": 5
+              },
+              {
+                "px": "1278.6",
+                "sz": "11.98",
+                "n": 7
+              },
+              {
+                "px": "1278.5",
+                "sz": "27.5",
+                "n": 7
+              },
+              {
+                "px": "1278.4",
+                "sz": "28.3",
+                "n": 7
+              },
+              {
+                "px": "1278.3",
+                "sz": "14.06",
+                "n": 7
+              },
+              {
+                "px": "1278.2",
+                "sz": "27.64",
+                "n": 8
+              },
+              {
+                "px": "1278.1",
+                "sz": "25.92",
+                "n": 7
+              },
+              {
+                "px": "1278.0",
+                "sz": "9.69",
+                "n": 7
+              }
+            ],
+            [
+              {
+                "px": "1279.0",
+                "sz": "0.15",
+                "n": 1
+              },
+              {
+                "px": "1279.2",
+                "sz": "0.01",
+                "n": 1
+              },
+              {
+                "px": "1279.4",
+                "sz": "4.49",
+                "n": 2
+              },
+              {
+                "px": "1279.5",
+                "sz": "18.1",
+                "n": 4
+              },
+              {
+                "px": "1279.6",
+                "sz": "4.07",
+                "n": 2
+              },
+              {
+                "px": "1279.7",
+                "sz": "2.3",
+                "n": 3
+              },
+              {
+                "px": "1279.8",
+                "sz": "18.01",
+                "n": 5
+              },
+              {
+                "px": "1279.9",
+                "sz": "3.37",
+                "n": 2
+              },
+              {
+                "px": "1280.0",
+                "sz": "12.23",
+                "n": 4
+              },
+              {
+                "px": "1280.1",
+                "sz": "19.61",
+                "n": 6
+              }
+            ]
+          ],
+          "observedAt": "2026-11-07T13:09:12.277500+00:00"
+        },
+        "event": {
+          "id": 12612,
+          "type": "SMART_FRESH",
+          "coin": "ZEC",
+          "createdAt": "2026-11-07T13:09:02.120Z",
+          "occurredAt": "2026-11-07T13:09:00.276Z",
+          "payload": {
+            "side": "SHORT",
+            "liqPx": 3467.193740752531,
+            "action": "OPENED",
+            "cohort": "GENIUS",
+            "wallet": "0x5232a3f9ebcdbd9cc0e1867a89e646694deba9dc",
+            "entryPx": 1308.4793,
+            "leverage": {
+              "type": "cross",
+              "value": 10
+            },
+            "marginUsd": 586306,
+            "positionUsd": 4588694,
+            "allTimePnlUsd": 21992906.7738,
+            "addedMarginUsd": null,
+            "flippedFrom": "LONG"
+          },
+          "tags": {
+            "0x5232a3f9ebcdbd9cc0e1867a89e646694deba9dc": [
+              "VETERAN",
+              "WHALE"
+            ]
+          },
+          "perpPnl": 25754178.3498,
+          "allTimePnl": 25754178.3498,
+          "badges": {
+            "level": "genius-trader",
+            "secondary": [
+              "top-100",
+              "whale",
+              "veteran"
+            ]
+          },
+          "traderCard": {
+            "badges": [
+              "genius-trader",
+              "top-100",
+              "whale",
+              "veteran"
+            ],
+            "rank": 49,
+            "chips": [
+              {
+                "kind": "rank",
+                "label": "Trader Rank",
+                "value": "#49",
+                "url": "/trader/0x5232a3f9ebcdbd9cc0e1867a89e646694deba9dc"
+              }
+            ],
+            "venue": "hyperliquid",
+            "pnl": {
+              "side": "short",
+              "entryPx": "1308.4793",
+              "leverage": 10,
+              "sizeAbs": 3839,
+              "seedPx": "1249.4",
+              "live": true,
+              "sizeShrunk": false,
+              "frozen": null
+            }
+          }
+        }
+      }
+    ],
+    "feeBps": 4.5,
+    "slippageBps": 10,
+    "funding": null,
+    "status": "closed; funding/path audit pending",
+    "pathGap": true,
+    "sourceIdentityVerified": false,
+    "mark": 1278.8775999999998,
+    "markTime": 1794060557891,
+    "markAt": "2026-11-07T14:09:18.149056+00:00",
+    "netPnl": -0.14441546489998397,
+    "grossPnl": -0.07538999999998396,
+    "returnOnNotional": -0.0018839109772057871,
+    "returnOnMargin": -0.01883910977205787,
+    "milestones": {
+      "notional": {},
+      "margin": {}
+    },
+    "peakReturnOnNotional": 0.004151656582691221,
+    "peakReturnOnMargin": 0.041516565826912204,
+    "checks": {
+      "observedOpening": true,
+      "signalClassMatchesSource": true,
+      "entryInterpretation": "Fresh source opening",
+      "sourceLeverageStatus": "source claim available",
+      "leverageMatched": true,
+      "liquidation": "not modeled; source collateral unknown",
+      "entryAfterPublication": true,
+      "legArithmetic": true,
+      "quoteAgeSeconds": 0.258055908203125,
+      "sourceIdentity": "source-claimed; not independently verified",
+      "pathComplete": false,
+      "funding": "missing",
+      "costModel": "4.5bps fee/side and10bps adverse slippage/side assumed",
+      "bookHash": "048a49fe0b65b8f98ade2618129e13146e7c7907c5df199629dca2e9832d62a1",
+      "checkedAt": "2026-11-07T14:09:18.149056+00:00",
+      "verdict": "Exploratory quote evidence; not full-path or liquidation verification"
+    },
+    "closedAt": "2026-11-07T14:09:18.149056+00:00",
+    "exit": 1278.8775999999998,
+    "exitBook": {
+      "coin": "ZEC",
+      "time": 1794060557891,
+      "levels": [
+        [
+          {
+            "px": "1277.5",
+            "sz": "13.15",
+            "n": 10
+          },
+          {
+            "px": "1277.4",
+            "sz": "12.28",
+            "n": 6
+          },
+          {
+            "px": "1277.3",
+            "sz": "7.27",
+            "n": 6
+          },
+          {
+            "px": "1277.2",
+            "sz": "30.64",
+            "n": 14
+          },
+          {
+            "px": "1277.1",
+            "sz": "14.9",
+            "n": 7
+          },
+          {
+            "px": "1277.0",
+            "sz": "19.12",
+            "n": 4
+          },
+          {
+            "px": "1276.9",
+            "sz": "22.46",
+            "n": 6
+          },
+          {
+            "px": "1276.8",
+            "sz": "14.99",
+            "n": 9
+          },
+          {
+            "px": "1276.7",
+            "sz": "27.11",
+            "n": 5
+          },
+          {
+            "px": "1276.6",
+            "sz": "47.91",
+            "n": 9
+          }
+        ],
+        [
+          {
+            "px": "1277.6",
+            "sz": "5.29",
+            "n": 1
+          },
+          {
+            "px": "1277.7",
+            "sz": "2.64",
+            "n": 3
+          },
+          {
+            "px": "1277.8",
+            "sz": "3.2",
+            "n": 4
+          },
+          {
+            "px": "1277.9",
+            "sz": "53.53",
+            "n": 15
+          },
+          {
+            "px": "1278.0",
+            "sz": "34.19",
+            "n": 12
+          },
+          {
+            "px": "1278.1",
+            "sz": "38.14",
+            "n": 12
+          },
+          {
+            "px": "1278.2",
+            "sz": "14.97",
+            "n": 11
+          },
+          {
+            "px": "1278.3",
+            "sz": "21.6",
+            "n": 12
+          },
+          {
+            "px": "1278.4",
+            "sz": "22.14",
+            "n": 8
+          },
+          {
+            "px": "1278.5",
+            "sz": "11.92",
+            "n": 9
+          }
+        ]
+      ],
+      "observedAt": "2026-11-07T14:09:18.149056+00:00"
+    },
+    "exitReason": "one-hour observed exit",
+    "candleAudit": {
+      "checkedAt": "2026-11-07T14:09:18.322965+00:00",
+      "minuteCount": 61,
+      "expectedMinutes": 61,
+      "contiguous": true,
+      "boundaryMinutesAmbiguous": 2,
+      "possibleNotionalTouches": {
+        "5": false,
+        "10": false,
+        "20": false
+      },
+      "method": "Official 1m OHLC cross-check; reconstructs entry/add timing; wick/spread/depth/ordering cannot establish an executable hit. Only observed L2 evidence counts as confirmed.",
+      "funding": "not included"
+    }
+  },
+  "closeArithmetic": {
+    "gross": -0.07538999999998396,
+    "entryFeeAssumed": 0.034495769700000005,
+    "exitFeeAssumed": 0.034529695199999995,
+    "netBeforeFunding": -0.14441546489998394,
+    "exitAtAskPlus10bps": true,
+    "durationSeconds": 3605.871556,
+    "exitBookAgeSeconds": 0.2580559253692627,
+    "funding": null,
+    "pathGap": true,
+    "exitReason": "one-hour observed exit"
+  },
+  "lighter12625": {
+    "original": {
+      "observedAt": "2026-11-07T13:57:31.083995+00:00",
+      "kind": "first_observation",
+      "event": {
+        "id": 12625,
+        "type": "SMART_FRESH",
+        "coin": "LIT",
+        "createdAt": "2026-11-07T13:57:29.327Z",
+        "occurredAt": "2026-11-07T13:57:27.622Z",
+        "payload": {
+          "side": "SHORT",
+          "venue": "lighter",
+          "action": "OPENED",
+          "cohort": "GENIUS",
+          "wallet": "0xc7d78605a9627cc4bf0b182e03d583bc5b5882ae",
+          "entryPx": 3.2144,
+          "leverage": {
+            "type": "cross",
+            "value": 5
+          },
+          "marginUsd": 228033.1,
+          "positionUsd": 826386.9,
+          "allTimePnlUsd": 17823670.731996,
+          "addedMarginUsd": null
+        },
+        "tags": {
+          "0xc7d78605a9627cc4bf0b182e03d583bc5b5882ae": [
+            "VETERAN"
+          ]
+        },
+        "perpPnl": 9835318.086451,
+        "allTimePnl": 9835318.086451,
+        "badges": {
+          "level": "genius-trader",
+          "secondary": [
+            "top-1000",
+            "veteran"
+          ]
+        },
+        "traderCard": {
+          "badges": [],
+          "rank": null,
+          "chips": [
+            {
+              "kind": "address",
+              "value": "0xc7d7\u202682ae",
+              "url": "/trader/0xc7d78605a9627cc4bf0b182e03d583bc5b5882ae"
+            }
+          ],
+          "venue": "lighter",
+          "pnl": null
+        }
+      },
+      "hash": "c5fa7eefcf6cd1a82ba046b2dc8054ef896c592d374b8c6532d9c36db4e5738c"
+    },
+    "geniusDecision": [
+      {
+        "eventId": 12625,
+        "action": "OPENED",
+        "wallet": "0xc7d78605a9627cc4bf0b182e03d583bc5b5882ae",
+        "market": "LIT",
+        "side": "SHORT",
+        "publication": "2026-11-07T13:57:29.327Z",
+        "observedAt": "2026-11-07T13:57:31.084067+00:00",
+        "sourceVenue": "lighter",
+        "paperQuoteVenue": "hyperliquid",
+        "status": "skipped",
+        "reason": "Unsupported source venue lighter; Hyperliquid quote is not a matched-venue fill"
+      }
+    ],
+    "geniusFillLegs": [],
+    "separateScalpProxyReceipt": {
+      "id": "github-portfolio-v3-12625",
+      "recordId": "github-portfolio-v3-12625",
+      "eventId": 12625,
+      "symbol": "LIT",
+      "wallet": "0xc7d78605a9627cc4bf0b182e03d583bc5b5882ae",
+      "tier": "GENIUS",
+      "action": "OPENED",
+      "signalClass": "fresh",
+      "protocolVersion": "split-v4",
+      "sizingVersion": "depth-fit-v1",
+      "targetNotional": 200,
+      "sizingNote": "Quantity fitted to visible executable depth and notional/risk cap; actual size shown",
+      "sourceMarginMode": "cross",
+      "sourceLeverageStatus": "source-claimed, not account-verified",
+      "leverageMatched": true,
+      "direction": "short",
+      "quantity": 26.0,
+      "entry": 3.2562405,
+      "notional": 84.662253,
+      "stop": 3.32136531,
+      "openedAt": "2026-11-07T13:57:33.226259+00:00",
+      "quoteTime": 1794059852734,
+      "entryBook": {
+        "coin": "LIT",
+        "time": 1794059852734,
+        "levels": [
+          [
+            {
+              "px": "3.2595",
+              "sz": "400.0",
+              "n": 1
+            },
+            {
+              "px": "3.2588",
+              "sz": "294.0",
+              "n": 1
+            },
+            {
+              "px": "3.2585",
+              "sz": "293.0",
+              "n": 1
+            },
+            {
+              "px": "3.2583",
+              "sz": "123.0",
+              "n": 1
+            },
+            {
+              "px": "3.2582",
+              "sz": "293.0",
+              "n": 1
+            },
+            {
+              "px": "3.2581",
+              "sz": "458.0",
+              "n": 1
+            },
+            {
+              "px": "3.2579",
+              "sz": "515.0",
+              "n": 3
+            },
+            {
+              "px": "3.2577",
+              "sz": "292.0",
+              "n": 1
+            },
+            {
+              "px": "3.2575",
+              "sz": "15.0",
+              "n": 1
+            },
+            {
+              "px": "3.2574",
+              "sz": "309.0",
+              "n": 2
+            }
+          ],
+          [
+            {
+              "px": "3.2607",
+              "sz": "294.0",
+              "n": 1
+            },
+            {
+              "px": "3.261",
+              "sz": "294.0",
+              "n": 1
+            },
+            {
+              "px": "3.2612",
+              "sz": "127.0",
+              "n": 2
+            },
+            {
+              "px": "3.2613",
+              "sz": "298.0",
+              "n": 2
+            },
+            {
+              "px": "3.2614",
+              "sz": "598.0",
+              "n": 3
+            },
+            {
+              "px": "3.2615",
+              "sz": "155.0",
+              "n": 3
+            },
+            {
+              "px": "3.2616",
+              "sz": "4.0",
+              "n": 1
+            },
+            {
+              "px": "3.2617",
+              "sz": "4.0",
+              "n": 1
+            },
+            {
+              "px": "3.2618",
+              "sz": "4.0",
+              "n": 1
+            },
+            {
+              "px": "3.2619",
+              "sz": "293.0",
+              "n": 1
+            }
+          ]
+        ],
+        "observedAt": "2026-11-07T13:57:33.226259+00:00"
+      },
+      "sourceEvent": {
+        "id": 12625,
+        "type": "SMART_FRESH",
+        "coin": "LIT",
+        "createdAt": "2026-11-07T13:57:29.327Z",
+        "occurredAt": "2026-11-07T13:57:27.622Z",
+        "payload": {
+          "side": "SHORT",
+          "venue": "lighter",
+          "action": "OPENED",
+          "cohort": "GENIUS",
+          "wallet": "0xc7d78605a9627cc4bf0b182e03d583bc5b5882ae",
+          "entryPx": 3.2144,
+          "leverage": {
+            "type": "cross",
+            "value": 5
+          },
+          "marginUsd": 228033.1,
+          "positionUsd": 826386.9,
+          "allTimePnlUsd": 17823670.731996,
+          "addedMarginUsd": null
+        },
+        "tags": {
+          "0xc7d78605a9627cc4bf0b182e03d583bc5b5882ae": [
+            "VETERAN"
+          ]
+        },
+        "perpPnl": 9835318.086451,
+        "allTimePnl": 9835318.086451,
+        "badges": {
+          "level": "genius-trader",
+          "secondary": [
+            "top-1000",
+            "veteran"
+          ]
+        },
+        "traderCard": {
+          "badges": [],
+          "rank": null,
+          "chips": [
+            {
+              "kind": "address",
+              "value": "0xc7d7\u202682ae",
+              "url": "/trader/0xc7d78605a9627cc4bf0b182e03d583bc5b5882ae"
+            }
+          ],
+          "venue": "lighter",
+          "pnl": null
+        }
+      },
+      "study": "github-portfolio-v3",
+      "balance": 1000,
+      "riskBudget": 3.7580118839641647,
+      "initialRiskBudget": 1.8790059419820824,
+      "sourceLeverage": 5,
+      "recommendedLeverage": 1,
+      "leverage": 5,
+      "leverageMode": "source",
+      "marginRequired": 16.932450600000003,
+      "handledEventIds": [
+        12625
+      ],
+      "legs": [
+        {
+          "kind": "ENTRY",
+          "eventId": 12625,
+          "quantity": 26.0,
+          "price": 3.2562405,
+          "fee": 0.03809801385,
+          "observedAt": "2026-11-07T13:57:33.226259+00:00",
+          "quoteTime": 1794059852734,
+          "book": {
+            "coin": "LIT",
+            "time": 1794059852734,
+            "levels": [
+              [
+                {
+                  "px": "3.2595",
+                  "sz": "400.0",
+                  "n": 1
+                },
+                {
+                  "px": "3.2588",
+                  "sz": "294.0",
+                  "n": 1
+                },
+                {
+                  "px": "3.2585",
+                  "sz": "293.0",
+                  "n": 1
+                },
+                {
+                  "px": "3.2583",
+                  "sz": "123.0",
+                  "n": 1
+                },
+                {
+                  "px": "3.2582",
+                  "sz": "293.0",
+                  "n": 1
+                },
+                {
+                  "px": "3.2581",
+                  "sz": "458.0",
+                  "n": 1
+                },
+                {
+                  "px": "3.2579",
+                  "sz": "515.0",
+                  "n": 3
+                },
+                {
+                  "px": "3.2577",
+                  "sz": "292.0",
+                  "n": 1
+                },
+                {
+                  "px": "3.2575",
+                  "sz": "15.0",
+                  "n": 1
+                },
+                {
+                  "px": "3.2574",
+                  "sz": "309.0",
+                  "n": 2
+                }
+              ],
+              [
+                {
+                  "px": "3.2607",
+                  "sz": "294.0",
+                  "n": 1
+                },
+                {
+                  "px": "3.261",
+                  "sz": "294.0",
+                  "n": 1
+                },
+                {
+                  "px": "3.2612",
+                  "sz": "127.0",
+                  "n": 2
+                },
+                {
+                  "px": "3.2613",
+                  "sz": "298.0",
+                  "n": 2
+                },
+                {
+                  "px": "3.2614",
+                  "sz": "598.0",
+                  "n": 3
+                },
+                {
+                  "px": "3.2615",
+                  "sz": "155.0",
+                  "n": 3
+                },
+                {
+                  "px": "3.2616",
+                  "sz": "4.0",
+                  "n": 1
+                },
+                {
+                  "px": "3.2617",
+                  "sz": "4.0",
+                  "n": 1
+                },
+                {
+                  "px": "3.2618",
+                  "sz": "4.0",
+                  "n": 1
+                },
+                {
+                  "px": "3.2619",
+                  "sz": "293.0",
+                  "n": 1
+                }
+              ]
+            ],
+            "observedAt": "2026-11-07T13:57:33.226259+00:00"
+          },
+          "event": {
+            "id": 12625,
+            "type": "SMART_FRESH",
+            "coin": "LIT",
+            "createdAt": "2026-11-07T13:57:29.327Z",
+            "occurredAt": "2026-11-07T13:57:27.622Z",
+            "payload": {
+              "side": "SHORT",
+              "venue": "lighter",
+              "action": "OPENED",
+              "cohort": "GENIUS",
+              "wallet": "0xc7d78605a9627cc4bf0b182e03d583bc5b5882ae",
+              "entryPx": 3.2144,
+              "leverage": {
+                "type": "cross",
+                "value": 5
+              },
+              "marginUsd": 228033.1,
+              "positionUsd": 826386.9,
+              "allTimePnlUsd": 17823670.731996,
+              "addedMarginUsd": null
+            },
+            "tags": {
+              "0xc7d78605a9627cc4bf0b182e03d583bc5b5882ae": [
+                "VETERAN"
+              ]
+            },
+            "perpPnl": 9835318.086451,
+            "allTimePnl": 9835318.086451,
+            "badges": {
+              "level": "genius-trader",
+              "secondary": [
+                "top-1000",
+                "veteran"
+              ]
+            },
+            "traderCard": {
+              "badges": [],
+              "rank": null,
+              "chips": [
+                {
+                  "kind": "address",
+                  "value": "0xc7d7\u202682ae",
+                  "url": "/trader/0xc7d78605a9627cc4bf0b182e03d583bc5b5882ae"
+                }
+              ],
+              "venue": "lighter",
+              "pnl": null
+            }
+          }
+        }
+      ],
+      "feeBps": 4.5,
+      "slippageBps": 10,
+      "funding": null,
+      "status": "open",
+      "pathGap": false,
+      "sourceIdentityVerified": false,
+      "mark": 3.2341309,
+      "markTime": 1794060882541,
+      "markAt": "2026-11-07T14:14:43.023370+00:00",
+      "netPnl": 0.49891225462000743,
+      "grossPnl": 0.5748496000000074,
+      "returnOnNotional": 0.0058929716247925435,
+      "returnOnMargin": 0.029464858123962715,
+      "milestones": {
+        "notional": {},
+        "margin": {}
+      },
+      "peakReturnOnNotional": 0.007769014793287076,
+      "peakReturnOnMargin": 0.03884507396643538,
+      "checks": {
+        "observedOpening": true,
+        "signalClassMatchesSource": true,
+        "entryInterpretation": "Fresh source opening",
+        "sourceLeverageStatus": "source claim available",
+        "leverageMatched": true,
+        "liquidation": "not modeled; source collateral unknown",
+        "entryAfterPublication": true,
+        "legArithmetic": true,
+        "quoteAgeSeconds": 0.4823701171875,
+        "sourceIdentity": "source-claimed; not independently verified",
+        "pathComplete": true,
+        "funding": "missing",
+        "costModel": "4.5bps fee/side and10bps adverse slippage/side assumed",
+        "bookHash": "dea971cd0190b22f2fcff7ca5c6c8734d1c7e7044d5b6270714ceaf24e2f462d",
+        "checkedAt": "2026-11-07T14:14:43.023370+00:00",
+        "verdict": "Exploratory quote evidence; not full-path or liquidation verification"
+      }
+    },
+    "label": "Cross-venue Hyperliquid price proxy for a Lighter-labelled opening;not source-venue execution or verified Genius copy"
+  },
+  "interpretation": "12612closed by predeclared one-hour observed exit,not captured source close. Actual entry/exit quote receipts and modeled fees reconcile to loss-.1444154649beforefunding. pathGap=true/fundingnull prevent full-path/cost-complete claim.12625sourceLighter is rejected in Genius lifecycle;separate old scalp quote model still usesHyperliquid and is explicitly excluded from matched-venue copier evidence. No backdated source close or combined studyPnL. Audit only,no financial/protocol/code changes.",
+  "genius": {
+    "exposures": 48,
+    "realized": 0,
+    "openEstimateBeforeFunding": 101.84750701416057,
+    "cash": 4760.223823647307,
+    "quality": {
+      "at": "2026-11-07T14:14:22.165036+00:00",
+      "status": "Unvalidated website-alert simulation; source holdings and funding incomplete",
+      "copyPerformanceEligible": false,
+      "activePaperExposures": 48,
+      "closureWarningPositionIds": [
+        10652,
+        10936,
+        10944,
+        11451,
+        11464,
+        11511,
+        11798,
+        11841,
+        11877,
+        11945,
+        11949,
+        11956,
+        11974,
+        11995,
+        12122,
+        12250
+      ],
+      "closureWarningCount": 16,
+      "sourceCardNoLongerLiveCount": 13,
+      "subsequentOpeningPositionIds": [
+        10652,
+        11841,
+        11945,
+        11949,
+        11974,
+        11995,
+        12122
+      ],
+      "subsequentOpeningWarningCount": 7,
+      "warningExposureModeledPnlBeforeFunding": 18.208707942218734,
+      "otherUnverifiedExposureModeledPnlBeforeFunding": 84.07752960796033,
+      "totalModeledPnlBeforeFunding": 102.28623755017907,
+      "interpretation": "Warning subtotal assumes continued exposure despite non-live source cards or subsequent openings; neither subtotal is verified copier performance."
+    },
+    "archive": {
+      "at": "2026-11-07T14:13:43.722839+00:00",
+      "scope": "Saved original exits and copied-card ending revisions; uncaptured source history unknown",
+      "files": 57,
+      "bytesRead": 22101,
+      "exitCardsReviewed": 0,
+      "endingRevisionRowsReviewed": 0,
+      "newCardWarningsRecovered": 0,
+      "matchingExitIds": [],
+      "backlogRemaining": false,
+      "errors": []
+    }
+  },
+  "separateScalpSummary": {
+    "protocolVersion": "split-v4",
+    "families": {
+      "fresh": {
+        "total": 152,
+        "open": 1,
+        "closed": 151,
+        "closedPnlBeforeFunding": -18.305931781200456,
+        "milestones": {
+          "notional": {
+            "5": 4,
+            "10": 0,
+            "20": 0
+          },
+          "margin": {
+            "5": 48,
+            "10": 20,
+            "20": 11
+          }
+        }
+      },
+      "add_scalp": {
+        "total": 1146,
+        "open": 5,
+        "closed": 1141,
+        "closedPnlBeforeFunding": -605.7910032927198,
+        "milestones": {
+          "notional": {
+            "5": 3,
+            "10": 1,
+            "20": 0
+          },
+          "margin": {
+            "5": 212,
+            "10": 112,
+            "20": 38
+          }
+        }
+      }
+    },
+    "study": "github-portfolio-v3",
+    "initialEquity": 1000,
+    "equity": 375.29512872691447,
+    "realizedBeforeFunding": -624.0969350739202,
+    "openCloseEstimateBeforeFunding": -0.6079361991652806,
+    "marginInUse": 101.34525934733333,
+    "available": 273.9498693795812,
+    "openCount": 6,
+    "closedCount": 1292,
+    "totalCount": 1298,
+    "maxOpen": 20,
+    "targetNotional": 200,
+    "maxPositionNotional": 350,
+    "stalePositions": [],
+    "milestones": {
+      "notional": {
+        "5": {
+          "hit": 7,
+          "total": 1298,
+          "unconfirmed": 1291
+        },
+        "10": {
+          "hit": 1,
+          "total": 1298,
+          "unconfirmed": 1297
+        },
+        "20": {
+          "hit": 0,
+          "total": 1298,
+          "unconfirmed": 1298
+        }
+      },
+      "margin": {
+        "5": {
+          "hit": 260,
+          "total": 1298,
+          "unconfirmed": 1038
+        },
+        "10": {
+          "hit": 132,
+          "total": 1298,
+          "unconfirmed": 1166
+        },
+        "20": {
+          "hit": 49,
+          "total": 1298,
+          "unconfirmed": 1249
+        }
+      }
+    },
+    "feesAssumedBps": 4.5,
+    "fundingComplete": false,
+    "at": "2026-11-07T14:14:43.195855+00:00",
+    "maxDrawdownObserved": 0.6258551624136799
+  },
+  "workflow": {
+    "completedRun": 42374119464,
+    "job": 128408114538,
+    "allSteps": "success",
+    "activeRun": 42378298027
+  },
+  "limitations": [
+    "Rolling20cards/gaps;complete source universe unavailable",
+    "Moving-main files individually hashed,not atomic",
+    "Sourcewalletidentity/classificationtiming/funding/collateral/liquidation/lawful execution access unresolved",
+    "No Genius matchedclosedtrades;closedstatisticsundefined"
+  ]
+}
