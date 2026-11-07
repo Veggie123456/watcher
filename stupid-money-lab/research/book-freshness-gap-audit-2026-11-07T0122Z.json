@@ -1,0 +1,512 @@
+{
+  "at": "2026-11-07T01:23:33.566039+00:00",
+  "objective": "Measure saved order-book age and actual per-market sampling gaps; no inferred fills",
+  "stateCutoff": "2026-11-07T01:21:59.661452+00:00",
+  "stateSha256": "97bf665d904de209e2b4a1915907a800cc1099d9c1288ec2737e78c72207248f",
+  "booksFile": {
+    "path": "data/2026-11-07/sessions/42320570297-1/books.jsonl",
+    "bytes": 1896515,
+    "sha256": "2617da483dd197c407d745e8ff96d8d5e692cbd5f953f7c7e39b3b46bc7ccdd2",
+    "rows": 2072
+  },
+  "markets": {
+    "ETH": {
+      "firstObservedAt": "2026-11-07T00:49:47.617757+00:00",
+      "lastObservedAt": "2026-11-07T01:22:35.371646+00:00",
+      "bookAgeSeconds": {
+        "n": 148,
+        "min": 0.27219700813293457,
+        "medianNearestRank": 0.5435590744018555,
+        "p95NearestRank": 0.7979140281677246,
+        "max": 0.8290510177612305
+      },
+      "observedSampleGapSeconds": {
+        "n": 147,
+        "min": 10.590709,
+        "medianNearestRank": 10.741915,
+        "p95NearestRank": 16.743269,
+        "max": 134.308633
+      },
+      "distinctBookTimestamps": 148,
+      "distinctHashes": 148
+    },
+    "BTC": {
+      "firstObservedAt": "2026-11-07T00:49:47.620710+00:00",
+      "lastObservedAt": "2026-11-07T01:22:35.365872+00:00",
+      "bookAgeSeconds": {
+        "n": 148,
+        "min": 0.27638888359069824,
+        "medianNearestRank": 0.5689182281494141,
+        "p95NearestRank": 0.7946150302886963,
+        "max": 0.9033408164978027
+      },
+      "observedSampleGapSeconds": {
+        "n": 147,
+        "min": 10.579656,
+        "medianNearestRank": 10.729296,
+        "p95NearestRank": 16.732145,
+        "max": 134.310229
+      },
+      "distinctBookTimestamps": 148,
+      "distinctHashes": 148
+    },
+    "LIT": {
+      "firstObservedAt": "2026-11-07T00:49:47.626427+00:00",
+      "lastObservedAt": "2026-11-07T01:22:35.369981+00:00",
+      "bookAgeSeconds": {
+        "n": 148,
+        "min": 0.27832794189453125,
+        "medianNearestRank": 0.5614809989929199,
+        "p95NearestRank": 0.8002362251281738,
+        "max": 0.8981869220733643
+      },
+      "observedSampleGapSeconds": {
+        "n": 147,
+        "min": 10.577515,
+        "medianNearestRank": 10.736199,
+        "p95NearestRank": 16.75134,
+        "max": 134.300514
+      },
+      "distinctBookTimestamps": 148,
+      "distinctHashes": 148
+    },
+    "NEAR": {
+      "firstObservedAt": "2026-11-07T00:49:47.630954+00:00",
+      "lastObservedAt": "2026-11-07T01:22:35.370976+00:00",
+      "bookAgeSeconds": {
+        "n": 148,
+        "min": 0.28142285346984863,
+        "medianNearestRank": 0.5560550689697266,
+        "p95NearestRank": 0.8001890182495117,
+        "max": 0.8922359943389893
+      },
+      "observedSampleGapSeconds": {
+        "n": 147,
+        "min": 10.426639,
+        "medianNearestRank": 10.721441,
+        "p95NearestRank": 16.732579,
+        "max": 134.313607
+      },
+      "distinctBookTimestamps": 148,
+      "distinctHashes": 148
+    },
+    "UNI": {
+      "firstObservedAt": "2026-11-07T00:49:47.632019+00:00",
+      "lastObservedAt": "2026-11-07T01:22:35.364841+00:00",
+      "bookAgeSeconds": {
+        "n": 148,
+        "min": 0.24344801902770996,
+        "medianNearestRank": 0.5539591312408447,
+        "p95NearestRank": 0.8083291053771973,
+        "max": 0.9242868423461914
+      },
+      "observedSampleGapSeconds": {
+        "n": 147,
+        "min": 10.521852,
+        "medianNearestRank": 10.725326,
+        "p95NearestRank": 16.738514,
+        "max": 134.293969
+      },
+      "distinctBookTimestamps": 148,
+      "distinctHashes": 148
+    },
+    "SOL": {
+      "firstObservedAt": "2026-11-07T00:49:47.632864+00:00",
+      "lastObservedAt": "2026-11-07T01:22:35.375630+00:00",
+      "bookAgeSeconds": {
+        "n": 148,
+        "min": 0.2776157855987549,
+        "medianNearestRank": 0.533409833908081,
+        "p95NearestRank": 0.7959589958190918,
+        "max": 0.8334100246429443
+      },
+      "observedSampleGapSeconds": {
+        "n": 147,
+        "min": 10.557498,
+        "medianNearestRank": 10.728618,
+        "p95NearestRank": 16.74219,
+        "max": 134.294873
+      },
+      "distinctBookTimestamps": 148,
+      "distinctHashes": 148
+    },
+    "HYPE": {
+      "firstObservedAt": "2026-11-07T00:49:47.684187+00:00",
+      "lastObservedAt": "2026-11-07T01:22:35.375715+00:00",
+      "bookAgeSeconds": {
+        "n": 148,
+        "min": 0.2704288959503174,
+        "medianNearestRank": 0.5465490818023682,
+        "p95NearestRank": 0.8022048473358154,
+        "max": 0.9024648666381836
+      },
+      "observedSampleGapSeconds": {
+        "n": 147,
+        "min": 10.492859,
+        "medianNearestRank": 10.728175,
+        "p95NearestRank": 16.734204,
+        "max": 134.327703
+      },
+      "distinctBookTimestamps": 148,
+      "distinctHashes": 148
+    },
+    "PUMP": {
+      "firstObservedAt": "2026-11-07T00:49:47.687129+00:00",
+      "lastObservedAt": "2026-11-07T01:22:35.367021+00:00",
+      "bookAgeSeconds": {
+        "n": 148,
+        "min": 0.27556800842285156,
+        "medianNearestRank": 0.5575299263000488,
+        "p95NearestRank": 0.7994070053100586,
+        "max": 0.8973569869995117
+      },
+      "observedSampleGapSeconds": {
+        "n": 147,
+        "min": 10.475549,
+        "medianNearestRank": 10.722595,
+        "p95NearestRank": 16.737041,
+        "max": 134.322825
+      },
+      "distinctBookTimestamps": 148,
+      "distinctHashes": 148
+    },
+    "VVV": {
+      "firstObservedAt": "2026-11-07T00:49:47.877525+00:00",
+      "lastObservedAt": "2026-11-07T01:22:35.619957+00:00",
+      "bookAgeSeconds": {
+        "n": 148,
+        "min": 0.25699400901794434,
+        "medianNearestRank": 0.5767149925231934,
+        "p95NearestRank": 0.7994570732116699,
+        "max": 1.0396251678466797
+      },
+      "observedSampleGapSeconds": {
+        "n": 147,
+        "min": 10.595239,
+        "medianNearestRank": 10.731056,
+        "p95NearestRank": 16.730296,
+        "max": 134.282748
+      },
+      "distinctBookTimestamps": 148,
+      "distinctHashes": 148
+    },
+    "kPEPE": {
+      "firstObservedAt": "2026-11-07T00:49:47.878142+00:00",
+      "lastObservedAt": "2026-11-07T01:22:35.554076+00:00",
+      "bookAgeSeconds": {
+        "n": 148,
+        "min": 0.2784860134124756,
+        "medianNearestRank": 0.5867838859558105,
+        "p95NearestRank": 0.8032751083374023,
+        "max": 0.91139817237854
+      },
+      "observedSampleGapSeconds": {
+        "n": 147,
+        "min": 10.590825,
+        "medianNearestRank": 10.745299,
+        "p95NearestRank": 16.787883,
+        "max": 134.287812
+      },
+      "distinctBookTimestamps": 148,
+      "distinctHashes": 148
+    },
+    "ZRO": {
+      "firstObservedAt": "2026-11-07T00:49:47.878546+00:00",
+      "lastObservedAt": "2026-11-07T01:22:35.568829+00:00",
+      "bookAgeSeconds": {
+        "n": 148,
+        "min": 0.2756359577178955,
+        "medianNearestRank": 0.5812671184539795,
+        "p95NearestRank": 0.805800199508667,
+        "max": 0.9069440364837646
+      },
+      "observedSampleGapSeconds": {
+        "n": 147,
+        "min": 10.590317,
+        "medianNearestRank": 10.72976,
+        "p95NearestRank": 16.800814,
+        "max": 134.294555
+      },
+      "distinctBookTimestamps": 148,
+      "distinctHashes": 148
+    },
+    "ZEC": {
+      "firstObservedAt": "2026-11-07T00:49:47.880356+00:00",
+      "lastObservedAt": "2026-11-07T01:22:35.627985+00:00",
+      "bookAgeSeconds": {
+        "n": 148,
+        "min": 0.27355504035949707,
+        "medianNearestRank": 0.6032748222351074,
+        "p95NearestRank": 0.8023431301116943,
+        "max": 0.9259381294250488
+      },
+      "observedSampleGapSeconds": {
+        "n": 147,
+        "min": 10.591221,
+        "medianNearestRank": 10.723997,
+        "p95NearestRank": 16.796294,
+        "max": 134.295931
+      },
+      "distinctBookTimestamps": 148,
+      "distinctHashes": 148
+    },
+    "XMR": {
+      "firstObservedAt": "2026-11-07T00:49:47.881228+00:00",
+      "lastObservedAt": "2026-11-07T01:22:35.555169+00:00",
+      "bookAgeSeconds": {
+        "n": 148,
+        "min": 0.27605509757995605,
+        "medianNearestRank": 0.5968348979949951,
+        "p95NearestRank": 0.8005521297454834,
+        "max": 0.9048061370849609
+      },
+      "observedSampleGapSeconds": {
+        "n": 147,
+        "min": 10.582628,
+        "medianNearestRank": 10.72045,
+        "p95NearestRank": 16.737684,
+        "max": 134.292316
+      },
+      "distinctBookTimestamps": 148,
+      "distinctHashes": 148
+    },
+    "XRP": {
+      "firstObservedAt": "2026-11-07T00:49:47.882996+00:00",
+      "lastObservedAt": "2026-11-07T01:22:35.554709+00:00",
+      "bookAgeSeconds": {
+        "n": 148,
+        "min": 0.25431323051452637,
+        "medianNearestRank": 0.5901579856872559,
+        "p95NearestRank": 0.8087940216064453,
+        "max": 1.032984972000122
+      },
+      "observedSampleGapSeconds": {
+        "n": 147,
+        "min": 10.588627,
+        "medianNearestRank": 10.726878,
+        "p95NearestRank": 16.729395,
+        "max": 134.29483
+      },
+      "distinctBookTimestamps": 148,
+      "distinctHashes": 148
+    }
+  },
+  "allBookAgeSeconds": {
+    "n": 2072,
+    "min": 0.24344801902770996,
+    "medianNearestRank": 0.5761110782623291,
+    "p95NearestRank": 0.8017477989196777,
+    "max": 1.0396251678466797
+  },
+  "invalidRows": [],
+  "coverage": [
+    {
+      "run": "42320570297",
+      "reads": 50,
+      "statuses": {
+        "read": 50
+      },
+      "first": "2026-11-07T00:49:47.436006+00:00",
+      "last": "2026-11-07T01:22:13.818940+00:00",
+      "maxGapSeconds": 131.721505
+    },
+    {
+      "run": "42314885094",
+      "reads": 81,
+      "statuses": {
+        "read": 81
+      },
+      "first": "2026-11-07T00:00:08.041980+00:00",
+      "last": "2026-11-07T00:49:02.717253+00:00",
+      "maxGapSeconds": 40.624612
+    }
+  ],
+  "files": [
+    {
+      "filename": "42320570297-events.jsonl",
+      "bytes": 33999,
+      "sha256": "ec8e7b66ac6504f9789aa75c881cc2d8ad9e2d50d5cad0c0659f5fc1bfd72dac",
+      "rows": 30
+    },
+    {
+      "filename": "42320570297-source-checks.jsonl",
+      "bytes": 7850,
+      "sha256": "ac4d63011f27ea28aec07ec20c33c4164a0af3c4d35221669be8182b6b0274fd",
+      "rows": 50
+    },
+    {
+      "filename": "42314885094-source-checks.jsonl",
+      "bytes": 12717,
+      "sha256": "783accadfa7141a534fae32ad9da137a896c86fc368f9ec5201d4fd60f8e67b3",
+      "rows": 81
+    }
+  ],
+  "financialMutation": false,
+  "limitations": [
+    "Venue book timestamps and local observedAt are distinct recorded clocks; measured age may include clock error.",
+    "Sampled books do not establish intragap path, guaranteed continuous execution, or actual venue fills.",
+    "No 5s/30s/60s/5m latency PnL or stop-touch interpolation generated.",
+    "Source holdings, wallet mapping, fees/funding/liquidation not independently validated."
+  ],
+  "eventKinds": {
+    "revision": 29,
+    "first_observation": 1
+  },
+  "firstActions": {
+    "ADDED": 1
+  },
+  "geniusSnapshot": {
+    "positions": 48,
+    "closed": 0,
+    "cash": 4760.223823647307,
+    "realized": 0,
+    "openEstimateBeforeFunding": -30.25674203551588,
+    "quality": {
+      "at": "2026-11-07T01:21:38.379772+00:00",
+      "status": "Unvalidated website-alert simulation; source holdings and funding incomplete",
+      "copyPerformanceEligible": false,
+      "activePaperExposures": 48,
+      "closureWarningPositionIds": [
+        10652,
+        10936,
+        10944,
+        11451,
+        11464,
+        11511,
+        11798,
+        11841,
+        11877,
+        11945,
+        11949,
+        11956,
+        11974,
+        11995,
+        12122,
+        12250
+      ],
+      "closureWarningCount": 16,
+      "sourceCardNoLongerLiveCount": 13,
+      "subsequentOpeningPositionIds": [
+        10652,
+        11841,
+        11945,
+        11949,
+        11974,
+        11995,
+        12122
+      ],
+      "subsequentOpeningWarningCount": 7,
+      "warningExposureModeledPnlBeforeFunding": -35.05762240191561,
+      "otherUnverifiedExposureModeledPnlBeforeFunding": 1.8573544600290173,
+      "totalModeledPnlBeforeFunding": -33.200267941886594,
+      "interpretation": "Warning subtotal assumes continued exposure despite non-live source cards or subsequent openings; neither subtotal is verified copier performance."
+    },
+    "archive": {
+      "at": "2026-11-07T01:19:45.665368+00:00",
+      "scope": "Saved original exits and copied-card ending revisions; uncaptured source history unknown",
+      "files": 43,
+      "bytesRead": 23772,
+      "exitCardsReviewed": 0,
+      "endingRevisionRowsReviewed": 0,
+      "newCardWarningsRecovered": 0,
+      "matchingExitIds": [],
+      "backlogRemaining": false,
+      "errors": []
+    }
+  },
+  "scalp": {
+    "protocolVersion": "split-v4",
+    "families": {
+      "fresh": {
+        "total": 150,
+        "open": 0,
+        "closed": 150,
+        "closedPnlBeforeFunding": -18.16151631630047,
+        "milestones": {
+          "notional": {
+            "5": 4,
+            "10": 0,
+            "20": 0
+          },
+          "margin": {
+            "5": 48,
+            "10": 20,
+            "20": 11
+          }
+        }
+      },
+      "add_scalp": {
+        "total": 1090,
+        "open": 4,
+        "closed": 1086,
+        "closedPnlBeforeFunding": -597.9071548283537,
+        "milestones": {
+          "notional": {
+            "5": 3,
+            "10": 1,
+            "20": 0
+          },
+          "margin": {
+            "5": 204,
+            "10": 109,
+            "20": 38
+          }
+        }
+      }
+    },
+    "study": "github-portfolio-v3",
+    "initialEquity": 1000,
+    "equity": 383.4168073383318,
+    "realizedBeforeFunding": -616.0686711446542,
+    "openCloseEstimateBeforeFunding": -0.5145215170139946,
+    "marginInUse": 80.968932792,
+    "available": 302.44787454633183,
+    "openCount": 4,
+    "closedCount": 1236,
+    "totalCount": 1240,
+    "maxOpen": 20,
+    "targetNotional": 200,
+    "maxPositionNotional": 350,
+    "stalePositions": [],
+    "milestones": {
+      "notional": {
+        "5": {
+          "hit": 7,
+          "total": 1240,
+          "unconfirmed": 1233
+        },
+        "10": {
+          "hit": 1,
+          "total": 1240,
+          "unconfirmed": 1239
+        },
+        "20": {
+          "hit": 0,
+          "total": 1240,
+          "unconfirmed": 1240
+        }
+      },
+      "margin": {
+        "5": {
+          "hit": 252,
+          "total": 1240,
+          "unconfirmed": 988
+        },
+        "10": {
+          "hit": 129,
+          "total": 1240,
+          "unconfirmed": 1111
+        },
+        "20": {
+          "hit": 49,
+          "total": 1240,
+          "unconfirmed": 1191
+        }
+      }
+    },
+    "feesAssumedBps": 4.5,
+    "fundingComplete": false,
+    "at": "2026-11-07T01:21:59.661300+00:00",
+    "maxDrawdownObserved": 0.6188943780036019
+  }
+}
