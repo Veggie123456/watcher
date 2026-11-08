@@ -1,0 +1,13 @@
+{"at":"2026-11-08T22:00:23.838231+00:00","eventId":13727,"action":"OPENED","tier":"GENIUS","coin":"BTC","status":"skipped","reason":"20 open independent scenarios maximum"}
+{"at":"2026-11-08T22:00:24.574072+00:00","eventId":13726,"action":"ADDED","tier":"SMART","coin":"BTC","status":"skipped","reason":"20 open funded positions maximum"}
+{"at":"2026-11-08T22:00:24.592499+00:00","eventId":13728,"action":"ADDED","tier":"GENIUS","coin":"XMR","status":"skipped","reason":"20 open funded positions maximum"}
+{"at":"2026-11-08T22:02:36.751460+00:00","eventId":13752,"action":"ADDED","tier":"SMART","coin":"HYPE","status":"skipped","reason":"History/stale alert; no backdated entry"}
+{"at":"2026-11-08T22:02:36.751705+00:00","eventId":13759,"action":"OPENED","tier":"GENIUS","coin":"ZEC","status":"skipped","reason":"20 open independent scenarios maximum"}
+{"at":"2026-11-08T22:02:36.751936+00:00","eventId":13760,"action":"OPENED","tier":"GENIUS","coin":"GRAM","status":"skipped","reason":"20 open independent scenarios maximum"}
+{"at":"2026-11-08T22:02:39.372883+00:00","eventId":13769,"action":"ADDED","tier":"SMART","coin":"ETH","status":"filled","reason":"Standalone add-alert scalp opened"}
+{"at":"2026-11-08T22:02:39.391362+00:00","eventId":13771,"action":"ADDED","tier":"GENIUS","coin":"HYPE","status":"skipped","reason":"20 open funded positions maximum"}
+{"at":"2026-11-08T22:05:13.115000+00:00","eventId":13796,"action":"ADDED","tier":"GENIUS","coin":"HYPE","status":"skipped","reason":"History/stale alert; no backdated entry"}
+{"at":"2026-11-08T22:05:13.115254+00:00","eventId":13811,"action":"OPENED","tier":"GENIUS","coin":"ETH","status":"skipped","reason":"20 open independent scenarios maximum"}
+{"at":"2026-11-08T22:05:13.736755+00:00","eventId":13812,"action":"ADDED","tier":"GENIUS","coin":"ETH","status":"skipped","reason":"20 open funded positions maximum"}
+{"at":"2026-11-08T22:05:13.755408+00:00","eventId":13813,"action":"ADDED","tier":"GENIUS","coin":"BTC","status":"skipped","reason":"20 open funded positions maximum"}
+{"at":"2026-11-08T22:05:13.773971+00:00","eventId":13814,"action":"ADDED","tier":"SMART","coin":"BTC","status":"skipped","reason":"20 open funded positions maximum"}
