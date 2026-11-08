@@ -105,9 +105,20 @@ def update(state, events, quotes, metadata, stamp, millis, fresh, price, append,
             if action == 'OPENED':
                 quantity = ENTRY / (float(levels[-1 if buy else 0]["px"]) * (1 + slip if buy else 1 - slip))
             elif action == 'ADDED':
-                added, total = float(p['addedMarginUsd']), float(p['marginUsd'])
-                if not 0 < added < total or p.get('leverage') is None or p.get('leverage') != position['sourceLeverage']:
-                    raise ValueError('Cannot estimate proportional add from source margin')
+                try:
+                    added, total = float(p['addedMarginUsd']), float(p['marginUsd'])
+                except (KeyError, ValueError, TypeError, OverflowError):
+                    receipt['addRejectionCode'] = 'source_margin_unreadable'
+                    raise ValueError('Cannot estimate proportional add: source margin missing or unreadable') from None
+                if not 0 < added < total:
+                    receipt['addRejectionCode'] = 'source_margin_invalid'
+                    raise ValueError('Cannot estimate proportional add: source margin must satisfy 0 < added < total')
+                if p.get('leverage') is None:
+                    receipt['addRejectionCode'] = 'source_leverage_missing'
+                    raise ValueError('Cannot estimate proportional add: source leverage missing')
+                if p.get('leverage') != position['sourceLeverage']:
+                    receipt['addRejectionCode'] = 'source_leverage_changed'
+                    raise ValueError('Cannot estimate proportional add: source leverage changed; margin basis not comparable')
                 receipt['fraction'] = added / (total - added)
                 quantity = position['quantity'] * receipt['fraction']
             elif action == 'REDUCED':
