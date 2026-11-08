@@ -1,0 +1,1456 @@
+{
+  "title": "Closed lifecycle public account and funding-rate audit; new Genius opening and partial-close coverage",
+  "at": "2026-11-08T01:21:10.216753+00:00",
+  "canonicalCommit": "14822b3cc1eaca2b48a87cc782d4173838d75a4b",
+  "cutoff": "2026-11-08T01:18:39.662068+00:00",
+  "website": {
+    "page": {
+      "at": "2026-11-08T01:19:23.896Z",
+      "status": "page_read",
+      "httpStatus": 200,
+      "hash": "e71ff157c696eeeb3fa764ab6c1f17fbb795e2893d91c1c78af623552ce41e85"
+    },
+    "live": {
+      "at": "2026-11-08T01:19:26.448Z",
+      "status": "page_read",
+      "sourceHash": "78600e37eef37880f4a9718141c365cb234d397b13827dd11319327421bc70ae"
+    },
+    "count": 20,
+    "actions": {
+      "ADDED": 18,
+      "OPENED": 1,
+      "REDUCED": 1
+    }
+  },
+  "heartbeat": {
+    "heartbeatAt": "2026-11-08T01:18:39.148633+00:00",
+    "sourceCheckedAt": "2026-11-08T01:18:17.450560+00:00",
+    "sourceStatus": "read"
+  },
+  "coverage": [
+    {
+      "run": "42427151742",
+      "day": "2026-11-07",
+      "count": 9,
+      "first": "2026-11-07T23:52:07.695603+00:00",
+      "last": "2026-11-07T23:59:33.607398+00:00",
+      "maxGapSeconds": 132.213546,
+      "statuses": {
+        "read": 9
+      }
+    },
+    {
+      "run": "42427151742",
+      "day": "2026-11-08",
+      "count": 77,
+      "first": "2026-11-08T00:00:09.919616+00:00",
+      "last": "2026-11-08T00:46:41.456876+00:00",
+      "maxGapSeconds": 39.465655,
+      "statuses": {
+        "read": 77
+      }
+    },
+    {
+      "run": "42431343605",
+      "day": "2026-11-08",
+      "count": 46,
+      "first": "2026-11-08T00:47:28.209745+00:00",
+      "last": "2026-11-08T01:18:17.450560+00:00",
+      "maxGapSeconds": 133.05163,
+      "statuses": {
+        "read": 46
+      }
+    }
+  ],
+  "handoffSeconds": 46.752869,
+  "newFirstObservations": [
+    {
+      "id": 12731,
+      "kind": "first_observation",
+      "observedAt": "2026-11-08T00:31:21.677975+00:00",
+      "publishedAt": "2026-11-07T21:43:04.575Z",
+      "publicationAgeSeconds": 10097.102975,
+      "type": "POSITION_CLOSED",
+      "action": "REDUCED",
+      "cohort": "SMART",
+      "hash": "3691ec61b48a0ff7de26fa5d5c05c177d28130cd65bf7081d2a20ca48e051bf4"
+    },
+    {
+      "id": 12821,
+      "kind": "first_observation",
+      "observedAt": "2026-11-08T00:32:34.690362+00:00",
+      "publishedAt": "2026-11-08T00:32:04.260Z",
+      "publicationAgeSeconds": 30.430362,
+      "type": "SMART_FRESH",
+      "action": "ADDED",
+      "cohort": "SMART",
+      "hash": "f02f869b0ee2de3c0e8f2afcbcedd41929bae4b51351b57ddf27144d7726b2a1"
+    },
+    {
+      "id": 12820,
+      "kind": "first_observation",
+      "observedAt": "2026-11-08T00:32:34.690551+00:00",
+      "publishedAt": "2026-11-08T00:32:04.256Z",
+      "publicationAgeSeconds": 30.434551,
+      "type": "SMART_FRESH",
+      "action": "ADDED",
+      "cohort": "GENIUS",
+      "hash": "428dbcec8da0b943fdf3a767d62da98bbecf0e5cc50aa41b7eb835bb4863dabd"
+    },
+    {
+      "id": 12819,
+      "kind": "first_observation",
+      "observedAt": "2026-11-08T00:32:34.690730+00:00",
+      "publishedAt": "2026-11-08T00:32:04.250Z",
+      "publicationAgeSeconds": 30.44073,
+      "type": "SMART_FRESH",
+      "action": "ADDED",
+      "cohort": "SMART",
+      "hash": "affba3d763a90365c51dbfd49776544a140aca9c7341ed59461f4ea7ddc29e43"
+    },
+    {
+      "id": 12818,
+      "kind": "first_observation",
+      "observedAt": "2026-11-08T00:32:34.690883+00:00",
+      "publishedAt": "2026-11-08T00:32:04.246Z",
+      "publicationAgeSeconds": 30.444883,
+      "type": "SMART_FRESH",
+      "action": "ADDED",
+      "cohort": "SMART",
+      "hash": "fd7df4692207f4ff645f21aa3bda5997bf45d923ff46e4d65bdb70ab82f0203a"
+    },
+    {
+      "id": 12817,
+      "kind": "first_observation",
+      "observedAt": "2026-11-08T00:32:34.691029+00:00",
+      "publishedAt": "2026-11-08T00:32:04.242Z",
+      "publicationAgeSeconds": 30.449029,
+      "type": "SMART_FRESH",
+      "action": "ADDED",
+      "cohort": "GENIUS",
+      "hash": "63f13e6f0f296d7e497c50df86831f4b92839333b4c9a29d54a4433539f91dfc"
+    },
+    {
+      "id": 12816,
+      "kind": "first_observation",
+      "observedAt": "2026-11-08T00:32:34.691182+00:00",
+      "publishedAt": "2026-11-08T00:32:04.235Z",
+      "publicationAgeSeconds": 30.456182,
+      "type": "SMART_FRESH",
+      "action": "ADDED",
+      "cohort": "GENIUS",
+      "hash": "020e17d05b342a03d418f71003d96098d010d9a21571daaaf5bbfa9a546d8d09"
+    },
+    {
+      "id": 12815,
+      "kind": "first_observation",
+      "observedAt": "2026-11-08T00:32:34.691326+00:00",
+      "publishedAt": "2026-11-08T00:32:04.230Z",
+      "publicationAgeSeconds": 30.461326,
+      "type": "SMART_FRESH",
+      "action": "ADDED",
+      "cohort": "SMART",
+      "hash": "70e466899d103b521eef999b0c80928efc7899cfe862c136570a5ae46197771c"
+    },
+    {
+      "id": 12814,
+      "kind": "first_observation",
+      "observedAt": "2026-11-08T00:32:34.691466+00:00",
+      "publishedAt": "2026-11-08T00:32:04.225Z",
+      "publicationAgeSeconds": 30.466466,
+      "type": "SMART_FRESH",
+      "action": "ADDED",
+      "cohort": "SMART",
+      "hash": "4bb091bf3454f6e8eea95df83b40c7d6c2cc15f74f5b6ad89e3a94459e5a2aca"
+    },
+    {
+      "id": 12813,
+      "kind": "first_observation",
+      "observedAt": "2026-11-08T00:32:34.691614+00:00",
+      "publishedAt": "2026-11-08T00:32:04.169Z",
+      "publicationAgeSeconds": 30.522614,
+      "type": "SMART_FRESH",
+      "action": "ADDED",
+      "cohort": "SMART",
+      "hash": "f588ae7f40aab1d49c8e0ed51242d627989c63d08c4c7876b041bb3c99ad7dd7"
+    },
+    {
+      "id": 12812,
+      "kind": "first_observation",
+      "observedAt": "2026-11-08T00:32:34.691782+00:00",
+      "publishedAt": "2026-11-08T00:32:04.163Z",
+      "publicationAgeSeconds": 30.528782,
+      "type": "SMART_FRESH",
+      "action": "ADDED",
+      "cohort": "SMART",
+      "hash": "3516c266ea9a2516dcb8dcbd41b0fbddcabc1b4d82962a372df78c136abf8e70"
+    },
+    {
+      "id": 12811,
+      "kind": "first_observation",
+      "observedAt": "2026-11-08T00:32:34.691927+00:00",
+      "publishedAt": "2026-11-08T00:32:04.159Z",
+      "publicationAgeSeconds": 30.532927,
+      "type": "SMART_FRESH",
+      "action": "ADDED",
+      "cohort": "GENIUS",
+      "hash": "820fa58919cc29a166961eb7bd5451bfec31657f3c339b1accb46b15183b8d71"
+    },
+    {
+      "id": 12810,
+      "kind": "first_observation",
+      "observedAt": "2026-11-08T00:32:34.692069+00:00",
+      "publishedAt": "2026-11-08T00:32:04.153Z",
+      "publicationAgeSeconds": 30.539069,
+      "type": "SMART_FRESH",
+      "action": "ADDED",
+      "cohort": "SMART",
+      "hash": "00ea03a5e71f1dbe05c9b43a0d6171628ec233bdc824e985891b4deafdcd9da2"
+    },
+    {
+      "id": 12809,
+      "kind": "first_observation",
+      "observedAt": "2026-11-08T00:32:34.692217+00:00",
+      "publishedAt": "2026-11-08T00:32:04.147Z",
+      "publicationAgeSeconds": 30.545217,
+      "type": "SMART_FRESH",
+      "action": "ADDED",
+      "cohort": "GENIUS",
+      "hash": "974bf0a6e4cc4b7ad794f6e5282ad886c15360c0701422435a5f6146c57c2c86"
+    },
+    {
+      "id": 12808,
+      "kind": "first_observation",
+      "observedAt": "2026-11-08T00:32:34.692361+00:00",
+      "publishedAt": "2026-11-08T00:32:04.142Z",
+      "publicationAgeSeconds": 30.550361,
+      "type": "SMART_FRESH",
+      "action": "ADDED",
+      "cohort": "GENIUS",
+      "hash": "282235c9ec67e0ff4f453af9e37ff5957ae87952820f152b72b5a50596b740a1"
+    },
+    {
+      "id": 12807,
+      "kind": "first_observation",
+      "observedAt": "2026-11-08T00:32:34.692504+00:00",
+      "publishedAt": "2026-11-08T00:32:04.133Z",
+      "publicationAgeSeconds": 30.559504,
+      "type": "SMART_FRESH",
+      "action": "ADDED",
+      "cohort": "GENIUS",
+      "hash": "c3fb4881e5ddc5777bc6915516a8708e84322986ef397be37960e9872ac93d33"
+    },
+    {
+      "id": 12806,
+      "kind": "first_observation",
+      "observedAt": "2026-11-08T00:32:34.692648+00:00",
+      "publishedAt": "2026-11-08T00:32:04.128Z",
+      "publicationAgeSeconds": 30.564648,
+      "type": "SMART_FRESH",
+      "action": "ADDED",
+      "cohort": "GENIUS",
+      "hash": "28312dac4065d7cc715712832e92362ba1c92349aec920559e2bf83a0be94be5"
+    },
+    {
+      "id": 12805,
+      "kind": "first_observation",
+      "observedAt": "2026-11-08T00:32:34.692828+00:00",
+      "publishedAt": "2026-11-08T00:32:04.123Z",
+      "publicationAgeSeconds": 30.569828,
+      "type": "SMART_FRESH",
+      "action": "ADDED",
+      "cohort": "SMART",
+      "hash": "2bb4b56b4df9658a92841c1ff23a4c2f6fcf8ff391708b88742a8c9e0eb5c766"
+    },
+    {
+      "id": 12804,
+      "kind": "first_observation",
+      "observedAt": "2026-11-08T00:32:34.692972+00:00",
+      "publishedAt": "2026-11-08T00:32:04.119Z",
+      "publicationAgeSeconds": 30.573972,
+      "type": "SMART_FRESH",
+      "action": "ADDED",
+      "cohort": "SMART",
+      "hash": "f43c2963f235dfda56aa526f72336f36a4a1761dad1fd0f33d98b30409254654"
+    },
+    {
+      "id": 12803,
+      "kind": "first_observation",
+      "observedAt": "2026-11-08T00:32:34.693110+00:00",
+      "publishedAt": "2026-11-08T00:32:04.115Z",
+      "publicationAgeSeconds": 30.57811,
+      "type": "SMART_FRESH",
+      "action": "ADDED",
+      "cohort": "SMART",
+      "hash": "5ec16b2a6e21e7726bcaa3324f3bc4d0d961f1c6aca88aa72f54ec66cf694b58"
+    },
+    {
+      "id": 12802,
+      "kind": "first_observation",
+      "observedAt": "2026-11-08T00:32:34.693258+00:00",
+      "publishedAt": "2026-11-08T00:32:04.105Z",
+      "publicationAgeSeconds": 30.588258,
+      "type": "SMART_FRESH",
+      "action": "ADDED",
+      "cohort": "SMART",
+      "hash": "42e3740a0db09cdc5f3b6a196a4010fcd0dbca6b21686f5914305f39079e7e9b"
+    },
+    {
+      "id": 12833,
+      "kind": "first_observation",
+      "observedAt": "2026-11-08T00:35:39.702040+00:00",
+      "publishedAt": "2026-11-08T00:35:05.807Z",
+      "publicationAgeSeconds": 33.89504,
+      "type": "SMART_FRESH",
+      "action": "ADDED",
+      "cohort": "SMART",
+      "hash": "64ac064f3246fbae83f4e63f997653a7c9a070b230097a53f9e604db707de9e3"
+    },
+    {
+      "id": 12832,
+      "kind": "first_observation",
+      "observedAt": "2026-11-08T00:35:39.702216+00:00",
+      "publishedAt": "2026-11-08T00:35:05.803Z",
+      "publicationAgeSeconds": 33.899216,
+      "type": "SMART_FRESH",
+      "action": "ADDED",
+      "cohort": "GENIUS",
+      "hash": "74d3ea25df9a073e665c40d2795ed1803b8e87f8e94a32768c7e489c22929691"
+    },
+    {
+      "id": 12831,
+      "kind": "first_observation",
+      "observedAt": "2026-11-08T00:35:39.702372+00:00",
+      "publishedAt": "2026-11-08T00:35:05.799Z",
+      "publicationAgeSeconds": 33.903372,
+      "type": "SMART_FRESH",
+      "action": "ADDED",
+      "cohort": "SMART",
+      "hash": "8cda6c85c83e179b1a17d31c679d2fe0e8b7781c45ac213ffcda1e87b2617a63"
+    },
+    {
+      "id": 12830,
+      "kind": "first_observation",
+      "observedAt": "2026-11-08T00:35:39.702537+00:00",
+      "publishedAt": "2026-11-08T00:35:05.793Z",
+      "publicationAgeSeconds": 33.909537,
+      "type": "SMART_FRESH",
+      "action": "ADDED",
+      "cohort": "GENIUS",
+      "hash": "c7b0ac37eda27bd9b07210b2da41babb974a843096e928f6b5c53d8ba2953ab2"
+    },
+    {
+      "id": 12829,
+      "kind": "first_observation",
+      "observedAt": "2026-11-08T00:35:39.702701+00:00",
+      "publishedAt": "2026-11-08T00:35:05.786Z",
+      "publicationAgeSeconds": 33.916701,
+      "type": "SMART_FRESH",
+      "action": "ADDED",
+      "cohort": "SMART",
+      "hash": "8ed648922647c9a0d7b29bb5f4ba29b5eaa9aed15fc73e24f0401d226c138be9"
+    },
+    {
+      "id": 12828,
+      "kind": "first_observation",
+      "observedAt": "2026-11-08T00:35:39.702852+00:00",
+      "publishedAt": "2026-11-08T00:35:05.781Z",
+      "publicationAgeSeconds": 33.921852,
+      "type": "SMART_FRESH",
+      "action": "ADDED",
+      "cohort": "SMART",
+      "hash": "c97015495d9306efe8f4a1b95b3b04b9feff9e7da583db05a39d45f15a87cbfd"
+    },
+    {
+      "id": 12827,
+      "kind": "first_observation",
+      "observedAt": "2026-11-08T00:35:39.702994+00:00",
+      "publishedAt": "2026-11-08T00:35:05.777Z",
+      "publicationAgeSeconds": 33.925994,
+      "type": "SMART_FRESH",
+      "action": "ADDED",
+      "cohort": "SMART",
+      "hash": "ab94b0f33e58b5faf1d8791c0d0b295a0eed6a902d85ea70a2c0879f1108ce09"
+    },
+    {
+      "id": 12826,
+      "kind": "first_observation",
+      "observedAt": "2026-11-08T00:35:39.703143+00:00",
+      "publishedAt": "2026-11-08T00:35:05.767Z",
+      "publicationAgeSeconds": 33.936143,
+      "type": "SMART_FRESH",
+      "action": "ADDED",
+      "cohort": "SMART",
+      "hash": "de1d96ab3eb15b1ed5b26853f622e75a247df47a078ac220679b75a1bb61402f"
+    },
+    {
+      "id": 12824,
+      "kind": "first_observation",
+      "observedAt": "2026-11-08T00:35:39.703289+00:00",
+      "publishedAt": "2026-11-08T00:35:05.745Z",
+      "publicationAgeSeconds": 33.958289,
+      "type": "SMART_FRESH",
+      "action": "ADDED",
+      "cohort": "GENIUS",
+      "hash": "b5edf2ce0e1dac5d7648a4ed1a1eb728e61a5a2e8f181d8275939798c86b58f9"
+    },
+    {
+      "id": 12823,
+      "kind": "first_observation",
+      "observedAt": "2026-11-08T00:35:39.703431+00:00",
+      "publishedAt": "2026-11-08T00:35:05.739Z",
+      "publicationAgeSeconds": 33.964431,
+      "type": "SMART_FRESH",
+      "action": "ADDED",
+      "cohort": "GENIUS",
+      "hash": "4f4421d78043b369c7ac2d244e9ed84b2f9d17a00e82e9d3ad2e4f5074afa8d5"
+    },
+    {
+      "id": 12822,
+      "kind": "first_observation",
+      "observedAt": "2026-11-08T00:35:39.703572+00:00",
+      "publishedAt": "2026-11-08T00:35:05.735Z",
+      "publicationAgeSeconds": 33.968572,
+      "type": "SMART_FRESH",
+      "action": "ADDED",
+      "cohort": "SMART",
+      "hash": "0cf5b56113648c1be650e3ebd101776c9217769defa95c9272d921c67d22a1e9"
+    },
+    {
+      "id": 12834,
+      "kind": "first_observation",
+      "observedAt": "2026-11-08T00:36:16.768414+00:00",
+      "publishedAt": "2026-11-08T00:36:03.699Z",
+      "publicationAgeSeconds": 13.069414,
+      "type": "SMART_FRESH",
+      "action": "ADDED",
+      "cohort": "GENIUS",
+      "hash": "08f5d986a773d6822c1ca179bd981d714bbd31712d147c0002dda0eda44cf234"
+    },
+    {
+      "id": 12835,
+      "kind": "first_observation",
+      "observedAt": "2026-11-08T00:37:30.115340+00:00",
+      "publishedAt": "2026-11-08T00:37:04.187Z",
+      "publicationAgeSeconds": 25.92834,
+      "type": "SMART_FRESH",
+      "action": "ADDED",
+      "cohort": "SMART",
+      "hash": "ccc21de80cda89683cf4bbbaca3ee12cea0e271e5d56c5896c98c590efa56816"
+    },
+    {
+      "id": 12837,
+      "kind": "first_observation",
+      "observedAt": "2026-11-08T00:40:34.529868+00:00",
+      "publishedAt": "2026-11-08T00:40:03.180Z",
+      "publicationAgeSeconds": 31.349868,
+      "type": "SMART_FRESH",
+      "action": "ADDED",
+      "cohort": "SMART",
+      "hash": "a3685534cd542add2a19fbf3e67bd40da33b1eeecb59d8e9b137512ecf0b83f7"
+    },
+    {
+      "id": 12836,
+      "kind": "first_observation",
+      "observedAt": "2026-11-08T00:40:34.530058+00:00",
+      "publishedAt": "2026-11-08T00:40:03.174Z",
+      "publicationAgeSeconds": 31.356058,
+      "type": "SMART_FRESH",
+      "action": "ADDED",
+      "cohort": "GENIUS",
+      "hash": "01a62e581793a87b4678a23eebad0751cb02a2f7de8254afde1ddaa05e8590f9"
+    },
+    {
+      "id": 12838,
+      "kind": "first_observation",
+      "observedAt": "2026-11-08T00:46:05.130797+00:00",
+      "publishedAt": "2026-11-08T00:46:03.536Z",
+      "publicationAgeSeconds": 1.594797,
+      "type": "POSITION_CLOSED",
+      "action": "REDUCED",
+      "cohort": "GENIUS",
+      "hash": "fb017312640ea52bed8380f9b6627a66e6122b21d0588eb0d18fb0c463e5c6c6"
+    },
+    {
+      "id": 12839,
+      "kind": "first_observation",
+      "observedAt": "2026-11-08T01:14:30.112960+00:00",
+      "publishedAt": "2026-11-08T01:14:02.929Z",
+      "publicationAgeSeconds": 27.18396,
+      "type": "SMART_FRESH",
+      "action": "OPENED",
+      "cohort": "GENIUS",
+      "hash": "13cdf978ed2b63852c165b298dc5c4188340064e8e959d7c23c7044b1ea58a9c"
+    },
+    {
+      "id": 12840,
+      "kind": "first_observation",
+      "observedAt": "2026-11-08T01:15:07.378555+00:00",
+      "publishedAt": "2026-11-08T01:15:03.716Z",
+      "publicationAgeSeconds": 3.662555,
+      "type": "SMART_FRESH",
+      "action": "ADDED",
+      "cohort": "SMART",
+      "hash": "9926103b515a6c806d1d649dda74beae5e99b415340003d892d9b4453a080d8c"
+    }
+  ],
+  "newCounts": {
+    "REDUCED": 2,
+    "ADDED": 36,
+    "OPENED": 1
+  },
+  "focusOriginalAndRevisions": [
+    {
+      "observedAt": "2026-11-08T00:31:21.677975+00:00",
+      "kind": "first_observation",
+      "event": {
+        "id": 12731,
+        "type": "POSITION_CLOSED",
+        "coin": "ZEC",
+        "createdAt": "2026-11-07T21:43:04.575Z",
+        "occurredAt": "2026-11-07T21:42:48.008Z",
+        "payload": {
+          "side": "SHORT",
+          "action": "REDUCED",
+          "cohort": "SMART",
+          "exitPx": 1246.0995544999998,
+          "pnlUsd": -43261.03668411583,
+          "wallet": "0x0adf9d609054849f64751fdf2e506efecfbd6ce0",
+          "entryPx": 1242.543,
+          "leftUsd": 3593249.6941395104,
+          "leverage": {
+            "type": "cross",
+            "value": 10
+          },
+          "pnlExact": true,
+          "closedPct": 50,
+          "closedUsd": 1588349.3419274224,
+          "marginUsd": 751779,
+          "allTimePnlUsd": 5261588.597048
+        },
+        "perpPnl": 6351658.943159,
+        "allTimePnl": 6351658.943159,
+        "badges": {
+          "level": "smart-trader",
+          "secondary": [
+            "whale"
+          ]
+        },
+        "traderCard": {
+          "badges": [
+            "smart-trader",
+            "whale"
+          ],
+          "rank": 1326,
+          "chips": [
+            {
+              "kind": "rank",
+              "label": "Trader Rank",
+              "value": "#1,326",
+              "url": "/trader/0x0adf9d609054849f64751fdf2e506efecfbd6ce0"
+            }
+          ],
+          "venue": "hyperliquid",
+          "pnl": {
+            "side": "short",
+            "entryPx": "1242.543",
+            "leverage": 10,
+            "sizeAbs": 1996,
+            "seedPx": "1228.1667",
+            "live": true,
+            "sizeShrunk": false,
+            "frozen": null
+          }
+        }
+      },
+      "hash": "3691ec61b48a0ff7de26fa5d5c05c177d28130cd65bf7081d2a20ca48e051bf4"
+    },
+    {
+      "observedAt": "2026-11-08T00:46:05.130797+00:00",
+      "kind": "first_observation",
+      "event": {
+        "id": 12838,
+        "type": "POSITION_CLOSED",
+        "coin": "BTC",
+        "createdAt": "2026-11-08T00:46:03.536Z",
+        "occurredAt": "2026-11-08T00:45:58.053Z",
+        "payload": {
+          "side": "LONG",
+          "action": "REDUCED",
+          "cohort": "GENIUS",
+          "exitPx": 75761.33602993464,
+          "pnlUsd": -7384.717104,
+          "wallet": "0x3c88192119517f7a2d99eac100f0e8c93ea6f5bb",
+          "entryPx": 75587.9,
+          "leftUsd": 1439783.1057768918,
+          "leverage": {
+            "type": "cross",
+            "value": 20
+          },
+          "pnlExact": true,
+          "closedPct": 50.8,
+          "closedUsd": 1682104.12024,
+          "marginUsd": 183366.41,
+          "allTimePnlUsd": 640397.065716
+        },
+        "perpPnl": null,
+        "allTimePnl": null,
+        "badges": {
+          "level": "genius-trader",
+          "secondary": []
+        },
+        "traderCard": {
+          "badges": [
+            "genius-trader"
+          ],
+          "rank": 4483,
+          "chips": [
+            {
+              "kind": "rank",
+              "label": "Trader Rank",
+              "value": "#4,483",
+              "url": "/trader/0x3c88192119517f7a2d99eac100f0e8c93ea6f5bb"
+            }
+          ],
+          "venue": "hyperliquid",
+          "pnl": {
+            "side": "long",
+            "entryPx": "75587.9",
+            "leverage": 20,
+            "sizeAbs": 14.53006,
+            "seedPx": "73682",
+            "live": true,
+            "sizeShrunk": true,
+            "frozen": null
+          }
+        }
+      },
+      "hash": "fb017312640ea52bed8380f9b6627a66e6122b21d0588eb0d18fb0c463e5c6c6"
+    },
+    {
+      "observedAt": "2026-11-08T01:14:30.112960+00:00",
+      "kind": "first_observation",
+      "event": {
+        "id": 12839,
+        "type": "SMART_FRESH",
+        "coin": "ZEC",
+        "createdAt": "2026-11-08T01:14:02.929Z",
+        "occurredAt": "2026-11-08T01:14:00.326Z",
+        "payload": {
+          "side": "SHORT",
+          "liqPx": null,
+          "action": "OPENED",
+          "cohort": "GENIUS",
+          "wallet": "0x608e2d5386ead96e8360565e14d33840fcc4ef17",
+          "entryPx": 1219.9469,
+          "leverage": {
+            "type": "cross",
+            "value": 2
+          },
+          "marginUsd": 15190.01829,
+          "positionUsd": 29023.55512,
+          "allTimePnlUsd": 1400985.651362,
+          "addedMarginUsd": null
+        },
+        "perpPnl": null,
+        "allTimePnl": null,
+        "badges": {
+          "level": "genius-trader",
+          "secondary": []
+        },
+        "traderCard": {
+          "badges": [
+            "genius-trader"
+          ],
+          "rank": 3162,
+          "chips": [
+            {
+              "kind": "rank",
+              "label": "Trader Rank",
+              "value": "#3,162",
+              "url": "/trader/0x608e2d5386ead96e8360565e14d33840fcc4ef17"
+            }
+          ],
+          "venue": "hyperliquid",
+          "pnl": {
+            "side": "short",
+            "entryPx": "1219.9469",
+            "leverage": 2,
+            "sizeAbs": 38.49,
+            "seedPx": "1236.7",
+            "live": true,
+            "sizeShrunk": false,
+            "frozen": null
+          }
+        }
+      },
+      "hash": "13cdf978ed2b63852c165b298dc5c4188340064e8e959d7c23c7044b1ea58a9c"
+    }
+  ],
+  "fundingAndIdentity": {
+    "position12148": {
+      "id": 12148,
+      "wallet": "0x5d26cbe12cad98e13c482a93f16bbcfbd0100731",
+      "symbol": "ZEC",
+      "direction": "short",
+      "sourceOpenedAt": "2026-11-06T12:23:02.900Z",
+      "sourceLeverage": {
+        "type": "cross",
+        "value": 10
+      },
+      "paperLeverage": 5,
+      "marginRequired": 0.0,
+      "leverageMode": "fixed_5x",
+      "openedAt": "2026-11-06T12:23:21.253872+00:00",
+      "quantity": 0.0,
+      "basis": 0.0,
+      "entryFees": 0.0,
+      "realized": 21.091678395300136,
+      "legs": [
+        {
+          "eventId": 12148,
+          "action": "OPENED",
+          "wallet": "0x5d26cbe12cad98e13c482a93f16bbcfbd0100731",
+          "market": "ZEC",
+          "side": "SHORT",
+          "publication": "2026-11-06T12:23:02.900Z",
+          "observedAt": "2026-11-06T12:23:20.072003+00:00",
+          "status": "paper fill",
+          "quantity": 0.15,
+          "price": 1318.2803999999999,
+          "fee": 0.08898392699999999,
+          "bookTime": 1793967800076,
+          "paperLeverage": 5,
+          "margin": 39.548412,
+          "filledAt": "2026-11-06T12:23:21.254050+00:00"
+        },
+        {
+          "eventId": 12222,
+          "action": "ADDED",
+          "wallet": "0x5d26cbe12cad98e13c482a93f16bbcfbd0100731",
+          "market": "ZEC",
+          "side": "SHORT",
+          "publication": "2026-11-06T14:17:02.459Z",
+          "observedAt": "2026-11-06T14:17:33.440666+00:00",
+          "fraction": 1.4045449349235952,
+          "status": "paper fill",
+          "quantity": 0.21,
+          "price": 1313.685,
+          "fee": 0.12414323249999999,
+          "bookTime": 1793974653042,
+          "paperLeverage": 5,
+          "margin": 55.17477,
+          "filledAt": "2026-11-06T14:17:34.140311+00:00"
+        },
+        {
+          "eventId": 12743,
+          "action": "CLOSED",
+          "wallet": "0x5d26cbe12cad98e13c482a93f16bbcfbd0100731",
+          "market": "ZEC",
+          "side": "SHORT",
+          "publication": "2026-11-07T23:26:04.772Z",
+          "observedAt": "2026-11-07T23:26:21.739972+00:00",
+          "sourceVenue": "hyperliquid",
+          "paperQuoteVenue": "hyperliquid",
+          "exitDiscoveryAt": "2026-11-07T23:26:22.320335+00:00",
+          "sourcePublicationAt": "2026-11-07T23:26:04.772Z",
+          "lateDiscovery": false,
+          "exitPolicy": "Current observed book; never backdated to source close",
+          "status": "paper fill",
+          "quantity": 0.36,
+          "price": 1255.8545999999997,
+          "fee": 0.20344844519999994,
+          "bookTime": 1794093981343,
+          "paperLeverage": 5,
+          "margin": 90.42153119999998,
+          "filledAt": "2026-11-07T23:26:22.320470+00:00"
+        }
+      ],
+      "openPnl": 0,
+      "closureVerification": "Unverified: no matched source exit; paper exposure remains open",
+      "reconciliation": {
+        "at": "2026-11-07T23:21:28.090437+00:00",
+        "status": "unresolved source linkage/history",
+        "sourceOpeningCorroborated": false,
+        "venuePosition": null,
+        "matchingFills": 0,
+        "historyPossiblyTruncated": false,
+        "paperLeverage": 5,
+        "sourceLeverage": {
+          "type": "cross",
+          "value": 10
+        },
+        "leverageMatched": false
+      },
+      "closedAt": "2026-11-07T23:26:22.320335+00:00"
+    },
+    "publicRequests": [
+      {
+        "requestedAt": "2026-11-08T01:20:00.997403+00:00",
+        "payload": {
+          "type": "userRole",
+          "user": "0x5d26cbe12cad98e13c482a93f16bbcfbd0100731"
+        },
+        "status": 200,
+        "response": {
+          "role": "missing"
+        }
+      },
+      {
+        "requestedAt": "2026-11-08T01:20:00.998278+00:00",
+        "payload": {
+          "type": "userFillsByTime",
+          "user": "0x5d26cbe12cad98e13c482a93f16bbcfbd0100731",
+          "startTime": 1793967741253,
+          "endTime": 1794094042320,
+          "aggregateByTime": false
+        },
+        "status": 200,
+        "response": []
+      },
+      {
+        "requestedAt": "2026-11-08T01:20:00.998688+00:00",
+        "payload": {
+          "type": "fundingHistory",
+          "coin": "ZEC",
+          "startTime": 1793967801253,
+          "endTime": 1794093982320
+        },
+        "status": 200,
+        "response": [
+          {
+            "coin": "ZEC",
+            "fundingRate": "0.0000289648",
+            "premium": "0.0007317187",
+            "time": 1793970000000
+          },
+          {
+            "coin": "ZEC",
+            "fundingRate": "0.0000125",
+            "premium": "0.0005330592",
+            "time": 1793973600044
+          },
+          {
+            "coin": "ZEC",
+            "fundingRate": "0.0000327662",
+            "premium": "0.0007621296",
+            "time": 1793977200084
+          },
+          {
+            "coin": "ZEC",
+            "fundingRate": "0.0000125",
+            "premium": "0.0005571615",
+            "time": 1793980800060
+          },
+          {
+            "coin": "ZEC",
+            "fundingRate": "0.0000125",
+            "premium": "0.0003961459",
+            "time": 1793984400027
+          },
+          {
+            "coin": "ZEC",
+            "fundingRate": "0.0000125",
+            "premium": "0.0003192702",
+            "time": 1793988000021
+          },
+          {
+            "coin": "ZEC",
+            "fundingRate": "0.0000125",
+            "premium": "0.0002270801",
+            "time": 1793991600028
+          },
+          {
+            "coin": "ZEC",
+            "fundingRate": "0.0000125",
+            "premium": "0.0001366349",
+            "time": 1793995200074
+          },
+          {
+            "coin": "ZEC",
+            "fundingRate": "0.0000125",
+            "premium": "0.0000159309",
+            "time": 1793998800038
+          },
+          {
+            "coin": "ZEC",
+            "fundingRate": "0.0000125",
+            "premium": "-0.0000557164",
+            "time": 1794002400059
+          },
+          {
+            "coin": "ZEC",
+            "fundingRate": "0.0000125",
+            "premium": "-0.0001394892",
+            "time": 1794006000012
+          },
+          {
+            "coin": "ZEC",
+            "fundingRate": "0.0000125",
+            "premium": "-0.0001965669",
+            "time": 1794009600036
+          },
+          {
+            "coin": "ZEC",
+            "fundingRate": "0.0000125",
+            "premium": "-0.0000357098",
+            "time": 1794013200053
+          },
+          {
+            "coin": "ZEC",
+            "fundingRate": "0.0000125",
+            "premium": "-0.0000197514",
+            "time": 1794016800039
+          },
+          {
+            "coin": "ZEC",
+            "fundingRate": "0.0000125",
+            "premium": "-0.0000437589",
+            "time": 1794020400010
+          },
+          {
+            "coin": "ZEC",
+            "fundingRate": "0.0000125",
+            "premium": "-0.0001494636",
+            "time": 1794024000056
+          },
+          {
+            "coin": "ZEC",
+            "fundingRate": "0.0000125",
+            "premium": "-0.0001587804",
+            "time": 1794027600020
+          },
+          {
+            "coin": "ZEC",
+            "fundingRate": "0.0000125",
+            "premium": "-0.0001609155",
+            "time": 1794031200012
+          },
+          {
+            "coin": "ZEC",
+            "fundingRate": "0.0000125",
+            "premium": "-0.0001323097",
+            "time": 1794034800020
+          },
+          {
+            "coin": "ZEC",
+            "fundingRate": "0.0000125",
+            "premium": "-0.0000244721",
+            "time": 1794038400049
+          },
+          {
+            "coin": "ZEC",
+            "fundingRate": "0.0000125",
+            "premium": "0.0000960461",
+            "time": 1794042000015
+          },
+          {
+            "coin": "ZEC",
+            "fundingRate": "0.0000125",
+            "premium": "0.0003684545",
+            "time": 1794045600003
+          },
+          {
+            "coin": "ZEC",
+            "fundingRate": "0.0000125",
+            "premium": "0.0001094738",
+            "time": 1794049200014
+          },
+          {
+            "coin": "ZEC",
+            "fundingRate": "0.0000125",
+            "premium": "-0.0002124355",
+            "time": 1794052800018
+          },
+          {
+            "coin": "ZEC",
+            "fundingRate": "0.000009338",
+            "premium": "-0.000425296",
+            "time": 1794056400020
+          },
+          {
+            "coin": "ZEC",
+            "fundingRate": "-0.000008053",
+            "premium": "-0.0005644241",
+            "time": 1794060000002
+          },
+          {
+            "coin": "ZEC",
+            "fundingRate": "-0.0000006804",
+            "premium": "-0.0005054436",
+            "time": 1794063600077
+          },
+          {
+            "coin": "ZEC",
+            "fundingRate": "-0.0000035658",
+            "premium": "-0.0005285266",
+            "time": 1794067200001
+          },
+          {
+            "coin": "ZEC",
+            "fundingRate": "0.0000033064",
+            "premium": "-0.0004735489",
+            "time": 1794070800024
+          },
+          {
+            "coin": "ZEC",
+            "fundingRate": "-0.0000002272",
+            "premium": "-0.0005018178",
+            "time": 1794074400017
+          },
+          {
+            "coin": "ZEC",
+            "fundingRate": "0.0000125",
+            "premium": "-0.0003900488",
+            "time": 1794078000042
+          },
+          {
+            "coin": "ZEC",
+            "fundingRate": "0.000005636",
+            "premium": "-0.0004549124",
+            "time": 1794081600034
+          },
+          {
+            "coin": "ZEC",
+            "fundingRate": "-0.0000107649",
+            "premium": "-0.0005861195",
+            "time": 1794085200042
+          },
+          {
+            "coin": "ZEC",
+            "fundingRate": "-0.0000011761",
+            "premium": "-0.0005094088",
+            "time": 1794088800052
+          },
+          {
+            "coin": "ZEC",
+            "fundingRate": "0.0000125",
+            "premium": "-0.000358857",
+            "time": 1794092400002
+          }
+        ]
+      }
+    ],
+    "fundingRows": 35,
+    "positiveRates": 29,
+    "negativeRates": 6,
+    "rateSumNotDollarPnl": 0.000355544,
+    "officialDocumentation": "https://hyperliquid.gitbook.io/hyperliquid-docs/trading/funding",
+    "interpretation": "35 hourly rates cover the paper hold, but exact USDC funding requires the spot oracle price and position size at each settlement. No rate-times-mark or zero-funding substitution. role missing/empty account fills do not prove source never traded or that reported close is false; account mapping remains unresolved. Closed paper realized remains21.0916783953 before funding."
+  },
+  "newOpening12839": {
+    "position": {
+      "id": 12839,
+      "wallet": "0x608e2d5386ead96e8360565e14d33840fcc4ef17",
+      "symbol": "ZEC",
+      "direction": "short",
+      "sourceVenue": "hyperliquid",
+      "paperQuoteVenue": "hyperliquid",
+      "sourceOpenedAt": "2026-11-08T01:14:02.929Z",
+      "sourceLeverage": {
+        "type": "cross",
+        "value": 2
+      },
+      "paperLeverage": 5,
+      "marginRequired": 37.67229,
+      "leverageMode": "fixed_5x",
+      "openedAt": "2026-11-08T01:14:30.783369+00:00",
+      "quantity": 0.15,
+      "basis": 188.36145,
+      "entryFees": 0.0847626525,
+      "realized": 0,
+      "legs": [
+        {
+          "eventId": 12839,
+          "action": "OPENED",
+          "wallet": "0x608e2d5386ead96e8360565e14d33840fcc4ef17",
+          "market": "ZEC",
+          "side": "SHORT",
+          "publication": "2026-11-08T01:14:02.929Z",
+          "observedAt": "2026-11-08T01:14:30.113116+00:00",
+          "sourceVenue": "hyperliquid",
+          "paperQuoteVenue": "hyperliquid",
+          "status": "paper fill",
+          "quantity": 0.15,
+          "price": 1255.743,
+          "fee": 0.0847626525,
+          "bookTime": 1794100469958,
+          "paperLeverage": 5,
+          "margin": 37.67229,
+          "filledAt": "2026-11-08T01:14:30.783853+00:00"
+        }
+      ],
+      "openPnl": -0.2463598649999915,
+      "closureVerification": "Unverified: no matched source exit; paper exposure remains open",
+      "reconciliation": {
+        "at": "2026-11-08T01:15:45.176076+00:00",
+        "status": "unresolved source linkage/history",
+        "sourceOpeningCorroborated": false,
+        "venuePosition": null,
+        "matchingFills": 0,
+        "historyPossiblyTruncated": false,
+        "paperLeverage": 5,
+        "sourceLeverage": {
+          "type": "cross",
+          "value": 2
+        },
+        "leverageMatched": false
+      }
+    },
+    "newFillLegs": [
+      {
+        "eventId": 12839,
+        "action": "OPENED",
+        "wallet": "0x608e2d5386ead96e8360565e14d33840fcc4ef17",
+        "market": "ZEC",
+        "side": "SHORT",
+        "publication": "2026-11-08T01:14:02.929Z",
+        "observedAt": "2026-11-08T01:14:30.113116+00:00",
+        "sourceVenue": "hyperliquid",
+        "paperQuoteVenue": "hyperliquid",
+        "status": "paper fill",
+        "quantity": 0.15,
+        "price": 1255.743,
+        "fee": 0.0847626525,
+        "bookTime": 1794100469958,
+        "paperLeverage": 5,
+        "margin": 37.67229,
+        "filledAt": "2026-11-08T01:14:30.783853+00:00"
+      }
+    ],
+    "interpretation": "Genius-labeled fresh prospective paper entry188.36145notional, fixedpaper5x vs sourceclaimed2x,not independently verified source execution."
+  },
+  "partialExit12838": {
+    "decisionCount": 48,
+    "decisionReasons": {
+      "Lifecycle unresolved or out of order": 48
+    },
+    "latestDecision": {
+      "eventId": 12838,
+      "action": "REDUCED",
+      "wallet": "0x3c88192119517f7a2d99eac100f0e8c93ea6f5bb",
+      "market": "BTC",
+      "side": "LONG",
+      "publication": "2026-11-08T00:46:03.536Z",
+      "observedAt": "2026-11-08T00:46:05.130933+00:00",
+      "sourceVenue": "hyperliquid",
+      "paperQuoteVenue": "hyperliquid",
+      "exitDiscoveryAt": "2026-11-08T01:18:18.155068+00:00",
+      "sourcePublicationAt": "2026-11-08T00:46:03.536Z",
+      "lateDiscovery": true,
+      "exitPolicy": "Current observed book; never backdated to source close",
+      "status": "skipped",
+      "reason": "Lifecycle unresolved or out of order"
+    },
+    "fillLegs": [],
+    "interpretation": "Repeated retry diagnostics are one source event, not multiple exits or independent signals. Lifecycle unresolved; no closing fill inferred."
+  },
+  "genius": {
+    "total": 49,
+    "active": 48,
+    "closed": 1,
+    "realizedBeforeFunding": 21.091678395300136,
+    "cash": 4838.4947585496075,
+    "updatedAt": "2026-11-08T01:18:39.650313+00:00",
+    "openEstimateBeforeFunding": 128.12085481672534,
+    "quality": {
+      "at": "2026-11-08T01:18:18.155700+00:00",
+      "status": "Unvalidated website-alert simulation; source holdings and funding incomplete",
+      "copyPerformanceEligible": false,
+      "activePaperExposures": 48,
+      "closureWarningPositionIds": [
+        10652,
+        10736,
+        10936,
+        10944,
+        11451,
+        11464,
+        11511,
+        11798,
+        11841,
+        11877,
+        11945,
+        11949,
+        11956,
+        11974,
+        11995,
+        12076,
+        12122,
+        12250
+      ],
+      "closureWarningCount": 18,
+      "sourceCardNoLongerLiveCount": 13,
+      "subsequentOpeningPositionIds": [
+        10652,
+        10736,
+        11841,
+        11945,
+        11949,
+        11974,
+        11995,
+        12076,
+        12122
+      ],
+      "subsequentOpeningWarningCount": 9,
+      "warningExposureModeledPnlBeforeFunding": 40.84981022319936,
+      "otherUnverifiedExposureModeledPnlBeforeFunding": 86.33342041457782,
+      "totalModeledPnlBeforeFunding": 127.18323063777719,
+      "interpretation": "Warning subtotal assumes continued exposure despite non-live source cards or subsequent openings; neither subtotal is verified copier performance."
+    },
+    "archiveExitScan": {
+      "at": "2026-11-08T01:15:45.162632+00:00",
+      "scope": "Saved original exits and copied-card ending revisions; uncaptured source history unknown",
+      "files": 70,
+      "bytesRead": 42758,
+      "exitCardsReviewed": 0,
+      "endingRevisionRowsReviewed": 0,
+      "newCardWarningsRecovered": 0,
+      "matchingExitIds": [
+        12838
+      ],
+      "backlogRemaining": false,
+      "errors": []
+    }
+  },
+  "separateScalp": {
+    "protocolVersion": "split-v4",
+    "families": {
+      "fresh": {
+        "total": 159,
+        "open": 0,
+        "closed": 159,
+        "closedPnlBeforeFunding": -21.803530257663283,
+        "milestones": {
+          "notional": {
+            "5": 4,
+            "10": 0,
+            "20": 0
+          },
+          "margin": {
+            "5": 49,
+            "10": 20,
+            "20": 11
+          }
+        }
+      },
+      "add_scalp": {
+        "total": 1198,
+        "open": 19,
+        "closed": 1179,
+        "closedPnlBeforeFunding": -614.4284355819997,
+        "milestones": {
+          "notional": {
+            "5": 3,
+            "10": 1,
+            "20": 0
+          },
+          "margin": {
+            "5": 214,
+            "10": 113,
+            "20": 38
+          }
+        }
+      }
+    },
+    "study": "github-portfolio-v3",
+    "initialEquity": 1000,
+    "equity": 358.9361466300712,
+    "realizedBeforeFunding": -636.231965839663,
+    "openCloseEstimateBeforeFunding": -4.83188753026584,
+    "marginInUse": 200.96244691531666,
+    "available": 157.97369971475456,
+    "openCount": 19,
+    "closedCount": 1338,
+    "totalCount": 1357,
+    "maxOpen": 20,
+    "targetNotional": 200,
+    "maxPositionNotional": 350,
+    "stalePositions": [],
+    "milestones": {
+      "notional": {
+        "5": {
+          "hit": 7,
+          "total": 1357,
+          "unconfirmed": 1350
+        },
+        "10": {
+          "hit": 1,
+          "total": 1357,
+          "unconfirmed": 1356
+        },
+        "20": {
+          "hit": 0,
+          "total": 1357,
+          "unconfirmed": 1357
+        }
+      },
+      "margin": {
+        "5": {
+          "hit": 263,
+          "total": 1357,
+          "unconfirmed": 1094
+        },
+        "10": {
+          "hit": 133,
+          "total": 1357,
+          "unconfirmed": 1224
+        },
+        "20": {
+          "hit": 49,
+          "total": 1357,
+          "unconfirmed": 1308
+        }
+      }
+    },
+    "feesAssumedBps": 4.5,
+    "fundingComplete": false,
+    "at": "2026-11-08T01:18:39.661794+00:00",
+    "maxDrawdownObserved": 0.6425006403839696
+  },
+  "scalpDiagnostics": {
+    "closed": 1338,
+    "wins": 408,
+    "losses": 930,
+    "winRate": 0.30493273542600896,
+    "expectancy": -0.4755096904631263,
+    "profitFactor": 0.4529202287182462,
+    "payoffRatio": 1.0323916978136496,
+    "pathGapCount": 1304,
+    "fundingMissingCount": 1338
+  },
+  "limitations": [
+    "Full universe/entryexit coverage unknown due rolling cards and sampling gaps.",
+    "First observation can be delayed archive discovery;12731 source published2h48m earlier, not a new timely live close.",
+    "Source account identity/classification timing, funding, collateral/liquidation and lawfulUSPA execution remain gates.",
+    "Frozen validated-study gates unchanged; paper result not edge.",
+    "No protocol/source-code/financial-record changes or retrospective fills."
+  ],
+  "files": {
+    "audit.py": {
+      "bytes": 6129,
+      "sha256": "63a54a5b59ce1cc4cba930d48350db0b3c1d113aa4339edfffca336f43f71d2c"
+    },
+    "public-check.json": {
+      "bytes": 5798,
+      "sha256": "e961dd9d4fdc497833be428781718e7b7e9f04cb90684458ccbf80677031363f"
+    },
+    "public_check.py": {
+      "bytes": 1332,
+      "sha256": "43bd4da760ef156ea640419e4dd14e7ffd6d4416b10b52a193d14573c76c54e3"
+    },
+    "scan.json": {
+      "bytes": 120338,
+      "sha256": "6c81acd50aff8a5b595fdfe984a4f940325230fe0f9d2a24a23d7467682d1650"
+    },
+    "data_2026-11-08_sessions_42427151742-1_source-checks.jsonl": {
+      "bytes": 12089,
+      "sha256": "7457ab216f6a5af4a1196b77c1d85d71e55cba339ed5732e6f535291e932169c"
+    },
+    "data_2026-11-08_sessions_42427151742-1_events.jsonl": {
+      "bytes": 206025,
+      "sha256": "526fc8f489654007f5db7a95a52bb4fbb11b5fdab3f2e0acc0c86c1c435044e0"
+    },
+    "data_2026-11-08_sessions_42431343605-1_events.jsonl": {
+      "bytes": 57729,
+      "sha256": "64464d36354de30c2d40e38dec7aa267b922690dbd5e16ab3c8b30c4afee4d7d"
+    },
+    "data_2026-11-08_sessions_42431343605-1_source-checks.jsonl": {
+      "bytes": 7222,
+      "sha256": "8a2851f0b7b2ade8ac141d93ae7a71c507d07bd872c9364bb31210c4623d54a4"
+    },
+    "state.json": {
+      "bytes": 14420667,
+      "sha256": "8a8593483c44cd483e7e40cacb912531b0cf31ef9b173553f1383d15e6e731a6"
+    },
+    "genius_copy.py": {
+      "bytes": 28770,
+      "sha256": "59720fae92b1e0ce098d708953bd6fa74d8e0e6dc2e7de4c417dd7fce5933305"
+    },
+    "data_2026-11-07_sessions_42427151742-1_source-checks.jsonl": {
+      "bytes": 1413,
+      "sha256": "f2d6cb80e5f41ef7da975ef3d024f9f7bc9b7124a6820faf0779028f276227a0"
+    },
+    "data_2026-11-07_sessions_42427151742-1_events.jsonl": {
+      "bytes": 1113,
+      "sha256": "ed81ec81350fdf0a230558e63eca70e27038b79c5632a3a46a2538c1eb38533c"
+    }
+  },
+  "workflowVerification": [
+    {
+      "id": 128567769315,
+      "name": "observe",
+      "status": "completed",
+      "conclusion": "success",
+      "run_id": 42427151742,
+      "logs_url": null,
+      "steps": [
+        {
+          "name": "Set up job",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 1
+        },
+        {
+          "name": "Run actions/checkout@v4",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 2
+        },
+        {
+          "name": "Run actions/setup-python@v5",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 3
+        },
+        {
+          "name": "Verify paper math",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 4
+        },
+        {
+          "name": "Collect public events and paper quotes",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 5
+        },
+        {
+          "name": "Persist public evidence",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 6
+        },
+        {
+          "name": "Preserve evidence artifact even if commit fails",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 7
+        },
+        {
+          "name": "Hand off to next bounded collector window",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 8
+        },
+        {
+          "name": "Post Run actions/setup-python@v5",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 15
+        },
+        {
+          "name": "Post Run actions/checkout@v4",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 16
+        },
+        {
+          "name": "Complete job",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 17
+        }
+      ]
+    }
+  ]
+}
