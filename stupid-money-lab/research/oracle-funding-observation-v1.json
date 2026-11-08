@@ -1,0 +1,68 @@
+{
+  "protocol": "oracle-funding-observation-v1",
+  "status": "preregistered design; not implemented or deployed",
+  "scope": "Cost-quality audit only; does not alter entry, add, exit, leverage, bankroll or eligibility rules",
+  "effective": "Future collector observations after implementation/deployment are verified; no retrospective use of current context snapshots",
+  "sources": [
+    "https://hyperliquid.gitbook.io/hyperliquid-docs/for-developers/api/info-endpoint/perpetuals",
+    "https://hyperliquid.gitbook.io/hyperliquid-docs/trading/funding"
+  ],
+  "collection": {
+    "endpoint": "https://api.hyperliquid.xyz/info",
+    "method": "POST",
+    "request": {
+      "type": "metaAndAssetCtxs"
+    },
+    "targetCadenceSeconds": 30,
+    "existingBoundedWindowsOnly": true,
+    "continuousGuarantee": false,
+    "markets": "Active canonical Genius paper positions explicitly on first Hyperliquid perp dex; unknown/unsupported venues excluded with reason",
+    "receiptFields": [
+      "requestStartedAtUTC",
+      "responseReceivedAtUTC",
+      "monotonicDurationMs",
+      "httpStatus",
+      "responseSha256",
+      "rawResponse",
+      "universeIndex",
+      "market",
+      "oraclePx",
+      "markPx",
+      "currentPredictedFunding"
+    ],
+    "validation": [
+      "Universe/context arrays must align in length",
+      "Market association must use universe index, not an independently sorted array",
+      "Oracle/mark must be finite positive; funding must be finite",
+      "Invalid/absent context recorded as missing; no zero replacement"
+    ],
+    "failurePolicy": "Record bounded error and retry only at next scheduled collection opportunity; no paid access or credentials"
+  },
+  "frozenEstimator": {
+    "name": "preceding-oracle-30s",
+    "settlement": "UTC hourly boundary h",
+    "oracleSelection": "Most recent complete response received at or before h, h minus responseReceivedAt <=30 seconds, request duration <=5 seconds; never select a post-boundary oracle",
+    "rate": "Actual fundingHistory row timestamped h once published; current context funding is predicted and never substituted",
+    "quantity": "Canonical paper quantity and direction reconstructed from saved fills effective at h; fills whose request/observation uncertainty straddles h are flagged ambiguous and excluded",
+    "calculation": "Modeled USDC funding = -signedPaperQuantityAtH * precedingOraclePx * realizedHourlyFundingRate; long signed positive, short negative",
+    "labels": [
+      "modeled approximation, not exact settlement funding",
+      "known source-closure/identity warnings retained",
+      "sample age and request interval uncertainty displayed"
+    ],
+    "missingPolicy": "Any missing oracle/rate/quantity or timing gate failure yields missing receipt; never zero, interpolation, carry-forward beyond30s or retrospective quote",
+    "ledgerPolicy": "Separate cost-audit records only; no cash/P&L overwrite or claim fundingComplete"
+  },
+  "validationBeforeDeployment": [
+    "Synthetic boundary cases: pre/post h,30s threshold,5s duration, missing/nonfinite data, reordered universe and changed leg quantity",
+    "Prove no trade/accounting writes in capture path",
+    "First published raw context receipt plus measured cadence/gaps/errors",
+    "One prospective hourly estimate checked against saved oracle/rate/quantity inputs; keep exactFunding=false"
+  ],
+  "nonGoals": [
+    "No new trading strategy or optimization variants",
+    "No paid historical archive",
+    "No proof of source wallet identity, collateral or liquidation survival"
+  ],
+  "nextAction": "Implement a failure-isolated read-only collector path and tests, then verify actual publication before claiming collection exists"
+}
