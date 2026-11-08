@@ -163,7 +163,22 @@ def update(state, events, quotes, metadata, stamp, millis, fresh, price, append,
         except (KeyError, ValueError, TypeError, OverflowError, IndexError) as exc:
             receipt.update(status='skipped', reason=str(exc))
             if active and action != 'OPENED' and millis(event['createdAt']) >= millis(position['sourceOpenedAt']):
-                position['unresolved'] = str(exc)
+                prior_reason = position.get('unresolved')
+                # Capture what was observed now; do not claim to recover an old origin.
+                receipt['priorUnresolvedReason'] = prior_reason
+                receipt['priorUnresolvedCategory'] = (
+                    'coverage_gap' if prior_reason == 'Public alert windows did not overlap'
+                    else 'unspecified' if prior_reason else 'none')
+                diagnostic = position.setdefault('unresolvedDiagnostic', {
+                    'firstRecordedAt': now,
+                    'reasonAtFirstRecord': prior_reason or str(exc),
+                    'reasonSource': 'preexisting flag' if prior_reason else 'current failure',
+                })
+                diagnostic['latestFailure'] = {
+                    'at': now, 'eventId': event['id'], 'action': action, 'reason': str(exc),
+                }
+                # All existing execution guards still see a nonempty unresolved flag.
+                position.setdefault('unresolved', str(exc))
         ledger['decisions'].append(receipt)
         append('genius-copy', {**receipt, 'event': event, 'book': quotes.get(coin)})
     for position in positions.values():
