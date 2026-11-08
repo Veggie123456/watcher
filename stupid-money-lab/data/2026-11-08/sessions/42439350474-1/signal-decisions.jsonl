@@ -3,3 +3,5 @@
 {"at":"2026-11-08T02:47:21.049615+00:00","eventId":12873,"action":"ADDED","tier":"SMART","coin":"ENA","status":"filled","reason":"Standalone add-alert scalp opened"}
 {"at":"2026-11-08T02:57:21.980545+00:00","eventId":12875,"action":"ADDED","tier":"GENIUS","coin":"LIT","status":"filled","reason":"Standalone add-alert scalp opened"}
 {"at":"2026-11-08T03:11:12.875576+00:00","eventId":12880,"action":"ADDED","tier":"SMART","coin":"HYPE","status":"filled","reason":"Standalone add-alert scalp opened"}
+{"at":"2026-11-08T03:18:06.444269+00:00","eventId":12881,"action":"ADDED","tier":"SMART","coin":"XMR","status":"skipped","reason":"An add-alert scalp for this wallet/market/side is already open; no duplicate exposure"}
+{"at":"2026-11-08T03:18:06.470962+00:00","eventId":12882,"action":"ADDED","tier":"GENIUS","coin":"NEAR","status":"filled","reason":"Standalone add-alert scalp opened"}
