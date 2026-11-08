@@ -1,0 +1,25 @@
+{
+  "protocol": "funding-hour-association-v1",
+  "registeredAtUTC": "2026-11-08 14:23:17 UTC",
+  "effectiveFirstWallHour": "2026-11-08T15:00:00Z",
+  "scope": "Separate exploratory funding audit only; no canonical accounting or eligibility change",
+  "rationale": {
+    "officialSource": "https://hyperliquid.gitbook.io/hyperliquid-docs/for-developers/api/info-endpoint/perpetuals",
+    "officialExampleTime": 1683849600076,
+    "officialExampleOffsetMs": 76,
+    "statement": "Official historical-rate example has a nonzero millisecond offset; this does not guarantee all rows fall within one second."
+  },
+  "rules": {
+    "wallHour": "H must be an exact UTC hour and >= effectiveFirstWallHour",
+    "rate": "Exactly one actual fundingHistory row per market with finite fundingRate and integer time T in inclusive [H,H+999ms]. Reject absent, duplicate or out-of-window rows; never use predicted funding.",
+    "timestamp": "Preserve T and H separately; association is a modeled assumption, not exact settlement-time proof. No raw timestamp rewrite.",
+    "oracle": "Use existing complete finite preceding-oracle-30s receipt at or before H with receipt age<=30000ms and request duration<=5000ms; do not use receipt after H.",
+    "quantity": "Reconstruct exclusively from chronological saved paper fills; explicit Hyperliquid source venue required. Reject fills within inclusive [H-1000,H+1000ms] as ambiguous, negative/nonfinite quantity or unknown actions.",
+    "calculation": "Modeled USDC = -signed saved paper quantity * selected spot oracle * actual rate; long positive quantity, short negative. Exact funding remains false.",
+    "missing": "Never infer zero or interpolate; report eligibility denominators and exclusions.",
+    "accounting": "No change to canonical cash/P&L/fundingComplete; no historical backfill or relabeling of strict prior results.",
+    "family": "One prospective association rule only; no search over timestamp windows or best-results selection."
+  },
+  "validationNext": "Implement and test exact/in-window/out-of-window/duplicate and ambiguous-leg cases, then audit first eligible hour after15:00Z; no performance-readiness inference.",
+  "status": "Preregistered design; implementation and prospective result pending"
+}
