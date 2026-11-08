@@ -337,11 +337,11 @@ if __name__=='__main__':
     path=ROOT/'state.json'
     state=json.loads(path.read_text()) if path.exists() else {'seen':{},'studies':[]}
     end=float('inf') if args.continuous else time.monotonic()+min(max(args.seconds,0),3300);source_due=0;publish_due=time.monotonic()+max(args.publish_every,1)
-    oracle = oracle_capture.Collector()
+    oracle = oracle_capture.BackgroundCollector(deadline=end)
     while True:
         now=time.monotonic();source=now>=source_due
         cycle(state,source)
-        oracle.step(state, append)  # Async read-only cost inputs, after paper updates.
+        oracle.step(state, append)  # Publish immutable market snapshot; sampler has its own clock.
         if args.publish_every and time.monotonic()>=publish_due:
             publish_checkpoint();publish_due=time.monotonic()+args.publish_every
         if source: source_due=now+(300 if state.get('sourceStatus')=='blocked_or_error' else 30)
