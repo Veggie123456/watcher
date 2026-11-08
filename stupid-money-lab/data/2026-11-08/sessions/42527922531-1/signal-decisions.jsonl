@@ -47,3 +47,6 @@
 {"at":"2026-11-08T22:42:23.792249+00:00","eventId":13938,"action":"ADDED","tier":"SMART","coin":"kPEPE","status":"skipped","reason":"20 open funded positions maximum"}
 {"at":"2026-11-08T22:43:42.888294+00:00","eventId":13939,"action":"ADDED","tier":"GENIUS","coin":"BTC","status":"filled","reason":"Standalone add-alert scalp opened"}
 {"at":"2026-11-08T22:44:22.443694+00:00","eventId":13941,"action":"ADDED","tier":"GENIUS","coin":"ZEC","status":"filled","reason":"Standalone add-alert scalp opened"}
+{"at":"2026-11-08T22:45:40.635882+00:00","eventId":13946,"action":"OPENED","tier":"GENIUS","coin":"ZEC","status":"filled","reason":"Fresh opening recorded"}
+{"at":"2026-11-08T22:45:40.654483+00:00","eventId":13947,"action":"ADDED","tier":"GENIUS","coin":"ZEC","status":"skipped","reason":"20 open funded positions maximum"}
+{"at":"2026-11-08T22:45:40.672991+00:00","eventId":13948,"action":"ADDED","tier":"GENIUS","coin":"VVV","status":"skipped","reason":"20 open funded positions maximum"}
