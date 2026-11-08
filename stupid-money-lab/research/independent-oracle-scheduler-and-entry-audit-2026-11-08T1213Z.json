@@ -1142,7 +1142,7 @@
     },
     "priorReceipt": "2026-11-08T11:59:28.887623+00:00",
     "priorAgeSeconds": 31.112377,
-    "meaning": "All missing; prior receipt31.112377s old exceeds unchanged30s gate. kPEPE also absent from preboundary eligible market snapshot. No actual fundingRate retrieved or USD estimate calculated.",
+    "meaning": "All six markets missing at settlement: valid preceding receipt31.112377s old exceeds unchanged30s gate, including newly captured kPEPE context. No actual fundingRate retrieved or USD estimate calculated.",
     "exactFunding": false
   },
   "implementation": {
