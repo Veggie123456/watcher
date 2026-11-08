@@ -7,6 +7,7 @@ import math
 import re
 import time
 import urllib.request
+import threading
 
 PROTOCOL = 'oracle-funding-observation-v1'
 def stamp(): return datetime.now(timezone.utc).isoformat()
@@ -104,3 +105,63 @@ def preceding_sample(receipts, market, settlement):
                 eligible.append(r)
         except (KeyError, TypeError, ValueError, OverflowError): pass
     return max(eligible, key=lambda r: millis(r['responseReceivedAtUTC'])) if eligible else None
+
+class BackgroundCollector:
+    """Read-only sampler with its own clock; main thread publishes market snapshots."""
+    def __init__(self, deadline, reader=read_context, interval=30):
+        self.deadline, self.reader, self.interval = deadline, reader, interval
+        self.stop = threading.Event()
+        self.lock = threading.Lock()
+        self.markets = ()
+        self.snapshot_at = None
+        self.thread = None
+        self.last_error = None
+        self.closed = False
+
+    def step(self, state, append):
+        snapshot = tuple(markets_from(state))
+        with self.lock:
+            self.markets = snapshot
+            self.snapshot_at = stamp()
+        if self.thread is None and not self.closed:
+            self.thread = threading.Thread(target=self._run, args=(append,), daemon=True)
+            self.thread.start()
+
+    def _run(self, append):
+        due = time.monotonic()
+        while not self.stop.is_set():
+            now = time.monotonic()
+            if now >= self.deadline: break
+            if self.stop.wait(max(0, min(due, self.deadline)-now)): break
+            if time.monotonic() >= self.deadline: break
+            with self.lock:
+                markets = list(self.markets)
+                snapshot_at = self.snapshot_at
+            due = time.monotonic() + self.interval  # No overlapping or catch-up reads.
+            if not markets: continue
+            try:
+                row = self.reader(markets)
+            except Exception as ex:
+                row = {'protocol': PROTOCOL, 'status': 'missing', 'reason': str(ex),
+                       'observedAt': stamp(), 'markets': markets, 'exactFunding': False}
+            row['captureScheduler'] = 'independent-clock-v1'
+            row['marketSnapshotAtUTC'] = snapshot_at
+            # This worker alone writes this stream. Late results after close are discarded.
+            with self.lock:
+                if self.closed: break
+                try: append('oracle-contexts', row)
+                except Exception as ex: self.last_error = str(ex)
+
+    def close(self, append):
+        self.stop.set()
+        if self.thread is not None: self.thread.join(timeout=6)
+        with self.lock:
+            self.closed = True
+            if self.thread is not None and self.thread.is_alive():
+                append('oracle-contexts', {'protocol': PROTOCOL, 'status': 'incomplete_at_window_end',
+                       'observedAt': stamp(), 'markets': list(self.markets), 'exactFunding': False,
+                       'captureScheduler': 'independent-clock-v1'})
+            if self.last_error:
+                append('oracle-contexts', {'protocol': PROTOCOL, 'status': 'missing',
+                       'observedAt': stamp(), 'reason': 'Receipt persistence failed: '+self.last_error,
+                       'exactFunding': False, 'captureScheduler': 'independent-clock-v1'})
