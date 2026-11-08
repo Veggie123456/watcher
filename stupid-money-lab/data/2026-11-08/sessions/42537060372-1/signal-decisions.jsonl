@@ -1,0 +1,9 @@
+{"at":"2026-11-08T23:50:24.787021+00:00","eventId":14075,"action":"ADDED","tier":"SMART","coin":"BTC","status":"filled","reason":"Standalone add-alert scalp opened"}
+{"at":"2026-11-08T23:50:56.943848+00:00","eventId":14076,"action":"OPENED","tier":"SMART","coin":"BTC","status":"skipped","reason":"20 open independent scenarios maximum"}
+{"at":"2026-11-08T23:50:57.537632+00:00","eventId":14077,"action":"ADDED","tier":"SMART","coin":"HYPE","status":"skipped","reason":"An add-alert scalp for this wallet/market/side is already open; no duplicate exposure"}
+{"at":"2026-11-08T23:53:09.960192+00:00","eventId":14080,"action":"OPENED","tier":"SMART","coin":"ZEC","status":"skipped","reason":"20 open independent scenarios maximum"}
+{"at":"2026-11-08T23:53:09.960457+00:00","eventId":14082,"action":"OPENED","tier":"GENIUS","coin":"ZEC","status":"skipped","reason":"20 open independent scenarios maximum"}
+{"at":"2026-11-08T23:53:12.565087+00:00","eventId":14078,"action":"ADDED","tier":"GENIUS","coin":"HYPE","status":"filled","reason":"Standalone add-alert scalp opened"}
+{"at":"2026-11-08T23:53:12.586417+00:00","eventId":14079,"action":"ADDED","tier":"SMART","coin":"ZEC","status":"skipped","reason":"20 open funded positions maximum"}
+{"at":"2026-11-08T23:53:12.607714+00:00","eventId":14081,"action":"ADDED","tier":"GENIUS","coin":"ZEC","status":"skipped","reason":"20 open funded positions maximum"}
+{"at":"2026-11-08T23:55:46.750061+00:00","eventId":14083,"action":"OPENED","tier":"SMART","coin":"SOL","status":"skipped","reason":"20 open independent scenarios maximum"}
