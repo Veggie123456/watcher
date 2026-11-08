@@ -3,6 +3,7 @@ from concurrent.futures import ThreadPoolExecutor, as_completed
 import portfolio
 import genius_copy
 import evidence_audit
+import oracle_capture
 import subprocess, tempfile
 import argparse, datetime as dt, hashlib, json, math, os, pathlib, re, time, urllib.request
 ROOT = pathlib.Path(__file__).resolve().parent
@@ -336,11 +337,15 @@ if __name__=='__main__':
     path=ROOT/'state.json'
     state=json.loads(path.read_text()) if path.exists() else {'seen':{},'studies':[]}
     end=float('inf') if args.continuous else time.monotonic()+min(max(args.seconds,0),3300);source_due=0;publish_due=time.monotonic()+max(args.publish_every,1)
+    oracle = oracle_capture.Collector()
     while True:
         now=time.monotonic();source=now>=source_due
         cycle(state,source)
+        oracle.step(state, append)  # Async read-only cost inputs, after paper updates.
         if args.publish_every and time.monotonic()>=publish_due:
             publish_checkpoint();publish_due=time.monotonic()+args.publish_every
         if source: source_due=now+(300 if state.get('sourceStatus')=='blocked_or_error' else 30)
         if time.monotonic()+10>end: break
         time.sleep(10)
+
+    oracle.close(append)
