@@ -20,3 +20,5 @@
 {"at":"2026-11-09T15:58:33.782672+00:00","eventId":14878,"action":"ADDED","tier":"GENIUS","coin":"ETH","status":"filled","reason":"Standalone add-alert scalp opened"}
 {"at":"2026-11-09T16:01:20.542585+00:00","eventId":14880,"action":"ADDED","tier":"SMART","coin":"BTC","status":"skipped","reason":"An add-alert scalp for this wallet/market/side is already open; no duplicate exposure"}
 {"at":"2026-11-09T16:04:07.293371+00:00","eventId":14881,"action":"ADDED","tier":"GENIUS","coin":"XMR","status":"filled","reason":"Standalone add-alert scalp opened"}
+{"at":"2026-11-09T16:05:29.357678+00:00","eventId":14882,"action":"ADDED","tier":"GENIUS","coin":"HYPE","status":"filled","reason":"Standalone add-alert scalp opened"}
+{"at":"2026-11-09T16:05:29.394692+00:00","eventId":14883,"action":"ADDED","tier":"SMART","coin":"ZEC","status":"filled","reason":"Standalone add-alert scalp opened"}
