@@ -11,3 +11,4 @@
 {"at":"2026-11-09T12:20:34.089086+00:00","eventId":14668,"action":"ADDED","tier":"GENIUS","coin":"VVV","status":"filled","reason":"Standalone add-alert scalp opened"}
 {"at":"2026-11-09T12:20:34.089195+00:00","eventId":14669,"action":"ADDED","tier":"SMART","coin":"LIT","status":"retrying","reason":"Quote/market metadata unavailable; retry only inside original120s eligibility window"}
 {"at":"2026-11-09T12:20:45.297433+00:00","eventId":14669,"action":"ADDED","tier":"SMART","coin":"LIT","status":"filled","reason":"Standalone add-alert scalp opened"}
+{"at":"2026-11-09T12:21:13.709400+00:00","eventId":14670,"action":"OPENED","tier":"GENIUS","coin":"BTC","status":"skipped","reason":"24h wallet/market cooldown"}
