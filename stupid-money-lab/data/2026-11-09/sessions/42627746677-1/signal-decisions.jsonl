@@ -14,3 +14,4 @@
 {"at":"2026-11-09T14:06:29.321165+00:00","eventId":14744,"action":"ADDED","tier":"SMART","coin":"XMR","status":"skipped","reason":"20 open funded positions maximum"}
 {"at":"2026-11-09T14:08:31.833678+00:00","eventId":14745,"action":"ADDED","tier":"SMART","coin":"BTC","status":"filled","reason":"Standalone add-alert scalp opened"}
 {"at":"2026-11-09T14:09:15.881328+00:00","eventId":14746,"action":"ADDED","tier":"SMART","coin":"HYPE","status":"filled","reason":"Standalone add-alert scalp opened"}
+{"at":"2026-11-09T14:11:17.364830+00:00","eventId":14750,"action":"OPENED","tier":"SMART","coin":"BTC","status":"skipped","reason":"20 open independent scenarios maximum"}
