@@ -19,3 +19,4 @@
 {"at":"2026-11-09T06:52:20.440962+00:00","eventId":14355,"action":"OPENED","tier":"GENIUS","coin":"BTC","status":"skipped","reason":"20 open independent scenarios maximum"}
 {"at":"2026-11-09T06:53:40.604457+00:00","eventId":14356,"action":"ADDED","tier":"SMART","coin":"BTC","status":"skipped","reason":"20 open funded positions maximum"}
 {"at":"2026-11-09T06:56:21.612958+00:00","eventId":14359,"action":"OPENED","tier":"GENIUS","coin":"kPEPE","status":"skipped","reason":"20 open independent scenarios maximum"}
+{"at":"2026-11-09T07:00:21.116790+00:00","eventId":14361,"action":"ADDED","tier":"GENIUS","coin":"XPL","status":"filled","reason":"Standalone add-alert scalp opened"}
