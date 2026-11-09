@@ -13,3 +13,4 @@
 {"at":"2026-11-09T10:35:20.555258+00:00","eventId":14615,"action":"ADDED","tier":"GENIUS","coin":"PUMP","status":"filled","reason":"Standalone add-alert scalp opened"}
 {"at":"2026-11-09T10:36:41.604746+00:00","eventId":14616,"action":"ADDED","tier":"GENIUS","coin":"HYPE","status":"filled","reason":"Standalone add-alert scalp opened"}
 {"at":"2026-11-09T10:37:22.525193+00:00","eventId":14617,"action":"ADDED","tier":"GENIUS","coin":"HYPE","status":"filled","reason":"Standalone add-alert scalp opened"}
+{"at":"2026-11-09T10:44:12.876592+00:00","eventId":14618,"action":"ADDED","tier":"GENIUS","coin":"ZEC","status":"skipped","reason":"An add-alert scalp for this wallet/market/side is already open; no duplicate exposure"}
