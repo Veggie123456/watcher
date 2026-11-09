@@ -20,3 +20,4 @@
 {"at":"2026-11-09T14:20:14.212505+00:00","eventId":14754,"action":"ADDED","tier":"SMART","coin":"ZEC","status":"skipped","reason":"20 open funded positions maximum"}
 {"at":"2026-11-09T14:22:17.750743+00:00","eventId":14756,"action":"ADDED","tier":"SMART","coin":"SOL","status":"skipped","reason":"20 open funded positions maximum"}
 {"at":"2026-11-09T14:23:40.410399+00:00","eventId":14758,"action":"OPENED","tier":"GENIUS","coin":"PUMP","status":"filled","reason":"Fresh opening recorded"}
+{"at":"2026-11-09T14:25:42.753075+00:00","eventId":14759,"action":"OPENED","tier":"GENIUS","coin":"BTC","status":"skipped","reason":"20 open independent scenarios maximum"}
