@@ -21,3 +21,5 @@
 {"at":"2026-11-09T14:57:30.177566+00:00","eventId":14802,"action":"ADDED","tier":"GENIUS","coin":"BTC","status":"filled","reason":"Standalone add-alert scalp opened"}
 {"at":"2026-11-09T15:01:37.092977+00:00","eventId":14804,"action":"ADDED","tier":"SMART","coin":"BTC","status":"filled","reason":"Standalone add-alert scalp opened"}
 {"at":"2026-11-09T15:03:38.273615+00:00","eventId":14806,"action":"OPENED","tier":"SMART","coin":"HYPE","status":"filled","reason":"Fresh opening recorded"}
+{"at":"2026-11-09T15:05:43.059823+00:00","eventId":14809,"action":"OPENED","tier":"GENIUS","coin":"HYPE","status":"skipped","reason":"24h wallet/market cooldown"}
+{"at":"2026-11-09T15:05:44.029553+00:00","eventId":14808,"action":"ADDED","tier":"GENIUS","coin":"HYPE","status":"filled","reason":"Standalone add-alert scalp opened"}
