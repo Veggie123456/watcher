@@ -6,3 +6,5 @@
 {"at":"2026-11-09T12:52:11.633168+00:00","eventId":14685,"action":"ADDED","tier":"SMART","coin":"VVV","status":"skipped","reason":"History/stale alert; no backdated entry"}
 {"at":"2026-11-09T12:52:14.514195+00:00","eventId":14686,"action":"ADDED","tier":"SMART","coin":"BTC","status":"filled","reason":"Standalone add-alert scalp opened"}
 {"at":"2026-11-09T12:52:14.540365+00:00","eventId":14692,"action":"ADDED","tier":"GENIUS","coin":"ETH","status":"filled","reason":"Standalone add-alert scalp opened"}
+{"at":"2026-11-09T12:55:30.094152+00:00","eventId":14693,"action":"OPENED","tier":"SMART","coin":"BTC","status":"filled","reason":"Fresh opening recorded"}
+{"at":"2026-11-09T12:55:30.122236+00:00","eventId":14694,"action":"ADDED","tier":"GENIUS","coin":"SOL","status":"filled","reason":"Standalone add-alert scalp opened"}
