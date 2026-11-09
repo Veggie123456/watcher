@@ -22,3 +22,5 @@
 {"at":"2026-11-09T00:32:29.848119+00:00","eventId":14127,"action":"ADDED","tier":"GENIUS","coin":"ETH","status":"skipped","reason":"20 open funded positions maximum"}
 {"at":"2026-11-09T00:33:09.507461+00:00","eventId":14128,"action":"ADDED","tier":"GENIUS","coin":"ZEC","status":"skipped","reason":"20 open funded positions maximum"}
 {"at":"2026-11-09T00:37:04.595793+00:00","eventId":14130,"action":"ADDED","tier":"SMART","coin":"ZEC","status":"skipped","reason":"20 open funded positions maximum"}
+{"at":"2026-11-09T00:39:42.653382+00:00","eventId":14133,"action":"ADDED","tier":"GENIUS","coin":"ZEC","status":"filled","reason":"Standalone add-alert scalp opened"}
+{"at":"2026-11-09T00:39:42.684488+00:00","eventId":14134,"action":"ADDED","tier":"GENIUS","coin":"ETH","status":"filled","reason":"Standalone add-alert scalp opened"}
