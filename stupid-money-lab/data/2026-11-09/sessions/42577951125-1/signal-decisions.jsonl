@@ -21,3 +21,5 @@
 {"at":"2026-11-09T07:53:20.042261+00:00","eventId":14471,"action":"ADDED","tier":"GENIUS","coin":"BTC","status":"skipped","reason":"20 open funded positions maximum"}
 {"at":"2026-11-09T07:55:18.707988+00:00","eventId":14472,"action":"ADDED","tier":"SMART","coin":"HYPE","status":"skipped","reason":"20 open funded positions maximum"}
 {"at":"2026-11-09T07:55:18.729154+00:00","eventId":14473,"action":"ADDED","tier":"GENIUS","coin":"HYPE","status":"skipped","reason":"20 open funded positions maximum"}
+{"at":"2026-11-09T07:58:41.045895+00:00","eventId":14482,"action":"ADDED","tier":"GENIUS","coin":"BTC","status":"filled","reason":"Standalone add-alert scalp opened"}
+{"at":"2026-11-09T07:58:41.066851+00:00","eventId":14483,"action":"OPENED","tier":"SMART","coin":"BTC","status":"skipped","reason":"20 open funded positions maximum"}
