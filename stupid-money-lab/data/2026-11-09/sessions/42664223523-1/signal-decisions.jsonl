@@ -1,0 +1,5 @@
+{"at":"2026-11-09T17:24:24.823718+00:00","eventId":14974,"action":"ADDED","tier":"GENIUS","coin":"SOL","status":"skipped","reason":"20 open funded positions maximum"}
+{"at":"2026-11-09T17:29:52.125677+00:00","eventId":14977,"action":"OPENED","tier":"GENIUS","coin":"BTC","status":"skipped","reason":"History/stale alert; no backdated entry"}
+{"at":"2026-11-09T17:29:53.166065+00:00","eventId":14978,"action":"ADDED","tier":"SMART","coin":"BTC","status":"filled","reason":"Standalone add-alert scalp opened"}
+{"at":"2026-11-09T17:32:28.673831+00:00","eventId":14979,"action":"OPENED","tier":"SMART","coin":"SUI","status":"skipped","reason":"History/stale alert; no backdated entry"}
+{"at":"2026-11-09T17:32:32.006736+00:00","eventId":14981,"action":"ADDED","tier":"SMART","coin":"ZEC","status":"filled","reason":"Standalone add-alert scalp opened"}
