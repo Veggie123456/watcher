@@ -25,3 +25,5 @@
 {"at":"2026-11-09T01:32:34.543831+00:00","eventId":14179,"action":"ADDED","tier":"SMART","coin":"SOL","status":"skipped","reason":"20 open funded positions maximum"}
 {"at":"2026-11-09T01:33:14.033475+00:00","eventId":14180,"action":"ADDED","tier":"GENIUS","coin":"LIT","status":"skipped","reason":"20 open funded positions maximum"}
 {"at":"2026-11-09T01:34:31.961433+00:00","eventId":14181,"action":"ADDED","tier":"GENIUS","coin":"BTC","status":"skipped","reason":"Source leverage missing, unreadable or above venue limit; no matched-leverage fill"}
+{"at":"2026-11-09T01:39:10.059163+00:00","eventId":14182,"action":"ADDED","tier":"GENIUS","coin":"ETH","status":"skipped","reason":"20 open funded positions maximum"}
+{"at":"2026-11-09T01:39:10.079371+00:00","eventId":14183,"action":"ADDED","tier":"GENIUS","coin":"BTC","status":"skipped","reason":"20 open funded positions maximum"}
