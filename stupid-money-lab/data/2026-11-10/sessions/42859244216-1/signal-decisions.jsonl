@@ -5,3 +5,5 @@
 {"at":"2026-11-10T17:02:24.084400+00:00","eventId":16280,"action":"ADDED","tier":"GENIUS","coin":"AERO","status":"skipped","reason":"History/stale alert; no backdated entry"}
 {"at":"2026-11-10T17:02:24.901536+00:00","eventId":16281,"action":"ADDED","tier":"GENIUS","coin":"ETH","status":"skipped","reason":"20 open funded positions maximum"}
 {"at":"2026-11-10T17:02:24.929065+00:00","eventId":16284,"action":"ADDED","tier":"SMART","coin":"PUMP","status":"skipped","reason":"20 open funded positions maximum"}
+{"at":"2026-11-10T17:05:46.235436+00:00","eventId":16287,"action":"OPENED","tier":"SMART","coin":"BTC","status":"skipped","reason":"20 open independent scenarios maximum"}
+{"at":"2026-11-10T17:05:46.984726+00:00","eventId":16288,"action":"ADDED","tier":"GENIUS","coin":"HYPE","status":"skipped","reason":"20 open funded positions maximum"}
