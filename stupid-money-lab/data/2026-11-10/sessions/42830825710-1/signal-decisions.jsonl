@@ -3,3 +3,4 @@
 {"at":"2026-11-10T14:07:31.316010+00:00","eventId":15672,"action":"ADDED","tier":"GENIUS","coin":"ZEC","status":"skipped","reason":"20 open funded positions maximum"}
 {"at":"2026-11-10T14:10:23.469569+00:00","eventId":15673,"action":"ADDED","tier":"SMART","coin":"ZEC","status":"skipped","reason":"20 open funded positions maximum"}
 {"at":"2026-11-10T14:15:33.370081+00:00","eventId":15676,"action":"ADDED","tier":"SMART","coin":"BTC","status":"skipped","reason":"History/stale alert; no backdated entry"}
+{"at":"2026-11-10T14:16:17.717799+00:00","eventId":15677,"action":"ADDED","tier":"GENIUS","coin":"ZEC","status":"filled","reason":"Standalone add-alert scalp opened"}
