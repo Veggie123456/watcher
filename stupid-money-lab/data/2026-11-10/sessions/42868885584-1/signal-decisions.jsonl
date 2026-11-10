@@ -6,3 +6,4 @@
 {"at":"2026-11-10T18:06:36.113332+00:00","eventId":16386,"action":"ADDED","tier":"SMART","coin":"ETH","status":"skipped","reason":"20 open funded positions maximum"}
 {"at":"2026-11-10T18:09:17.597382+00:00","eventId":16389,"action":"ADDED","tier":"SMART","coin":"PUMP","status":"filled","reason":"Standalone add-alert scalp opened"}
 {"at":"2026-11-10T18:09:17.612795+00:00","eventId":16390,"action":"ADDED","tier":"SMART","coin":"ZEC","status":"skipped","reason":"20 open funded positions maximum"}
+{"at":"2026-11-10T18:10:38.129124+00:00","eventId":16392,"action":"OPENED","tier":"SMART","coin":"ZEC","status":"skipped","reason":"20 open independent scenarios maximum"}
