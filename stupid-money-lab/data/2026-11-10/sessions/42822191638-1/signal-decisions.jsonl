@@ -51,3 +51,5 @@
 {"at":"2026-11-10T13:55:42.408184+00:00","eventId":15660,"action":"OPENED","tier":"SMART","coin":"BTC","status":"filled","reason":"Fresh opening recorded"}
 {"at":"2026-11-10T13:57:07.851195+00:00","eventId":15661,"action":"ADDED","tier":"SMART","coin":"kPEPE","status":"filled","reason":"Standalone add-alert scalp opened"}
 {"at":"2026-11-10T14:02:09.996948+00:00","eventId":15663,"action":"OPENED","tier":"SMART","coin":"ZEC","status":"skipped","reason":"20 open independent scenarios maximum"}
+{"at":"2026-11-10T14:04:25.500548+00:00","eventId":15664,"action":"OPENED","tier":"SMART","coin":"ZEC","status":"skipped","reason":"20 open independent scenarios maximum"}
+{"at":"2026-11-10T14:04:26.552455+00:00","eventId":15665,"action":"ADDED","tier":"GENIUS","coin":"BTC","status":"skipped","reason":"20 open funded positions maximum"}
