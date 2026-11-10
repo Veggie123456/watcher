@@ -4,3 +4,4 @@
 {"at":"2026-11-10T12:34:20.741073+00:00","eventId":15475,"action":"ADDED","tier":"SMART","coin":"ETH","status":"filled","reason":"Standalone add-alert scalp opened"}
 {"at":"2026-11-10T12:37:04.005186+00:00","eventId":15478,"action":"OPENED","tier":"SMART","coin":"BTC","status":"skipped","reason":"Source leverage missing, unreadable or above venue limit; no matched-leverage fill"}
 {"at":"2026-11-10T12:44:33.587424+00:00","eventId":15481,"action":"ADDED","tier":"SMART","coin":"BTC","status":"skipped","reason":"Source leverage missing, unreadable or above venue limit; no matched-leverage fill"}
+{"at":"2026-11-10T12:45:14.654471+00:00","eventId":15482,"action":"ADDED","tier":"GENIUS","coin":"BTC","status":"filled","reason":"Standalone add-alert scalp opened"}
