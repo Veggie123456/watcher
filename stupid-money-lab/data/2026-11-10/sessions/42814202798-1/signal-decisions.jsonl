@@ -9,3 +9,4 @@
 {"at":"2026-11-10T12:56:16.302313+00:00","eventId":15485,"action":"ADDED","tier":"SMART","coin":"kPEPE","status":"filled","reason":"Standalone add-alert scalp opened"}
 {"at":"2026-11-10T13:04:34.890833+00:00","eventId":15488,"action":"ADDED","tier":"GENIUS","coin":"HYPE","status":"filled","reason":"Standalone add-alert scalp opened"}
 {"at":"2026-11-10T13:06:40.611576+00:00","eventId":15489,"action":"ADDED","tier":"SMART","coin":"HYPE","status":"filled","reason":"Standalone add-alert scalp opened"}
+{"at":"2026-11-10T13:10:10.180193+00:00","eventId":15490,"action":"OPENED","tier":"SMART","coin":"BTC","status":"skipped","reason":"Source leverage missing, unreadable or above venue limit; no matched-leverage fill"}
