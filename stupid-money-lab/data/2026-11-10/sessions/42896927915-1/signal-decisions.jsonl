@@ -19,3 +19,4 @@
 {"at":"2026-11-10T21:03:41.624464+00:00","eventId":16520,"action":"OPENED","tier":"SMART","coin":"BTC","status":"skipped","reason":"20 open independent scenarios maximum"}
 {"at":"2026-11-10T21:04:25.037907+00:00","eventId":16525,"action":"OPENED","tier":"SMART","coin":"UNI","status":"skipped","reason":"20 open independent scenarios maximum"}
 {"at":"2026-11-10T21:04:25.038072+00:00","eventId":16526,"action":"OPENED","tier":"SMART","coin":"BTC","status":"skipped","reason":"20 open independent scenarios maximum"}
+{"at":"2026-11-10T21:09:14.080846+00:00","eventId":16527,"action":"ADDED","tier":"SMART","coin":"BTC","status":"filled","reason":"Standalone add-alert scalp opened"}
