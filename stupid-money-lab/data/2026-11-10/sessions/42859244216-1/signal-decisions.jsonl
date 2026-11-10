@@ -42,3 +42,4 @@
 {"at":"2026-11-10T17:44:24.927689+00:00","eventId":16360,"action":"ADDED","tier":"SMART","coin":"ZEC","status":"skipped","reason":"20 open funded positions maximum"}
 {"at":"2026-11-10T17:44:24.956012+00:00","eventId":16361,"action":"ADDED","tier":"SMART","coin":"ETH","status":"skipped","reason":"20 open funded positions maximum"}
 {"at":"2026-11-10T17:44:24.985462+00:00","eventId":16363,"action":"ADDED","tier":"SMART","coin":"BTC","status":"skipped","reason":"20 open funded positions maximum"}
+{"at":"2026-11-10T17:45:06.374957+00:00","eventId":16364,"action":"ADDED","tier":"SMART","coin":"ETH","status":"skipped","reason":"Source leverage missing, unreadable or above venue limit; no matched-leverage fill"}
