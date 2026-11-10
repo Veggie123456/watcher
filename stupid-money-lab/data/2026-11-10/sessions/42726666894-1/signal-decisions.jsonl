@@ -5,3 +5,4 @@
 {"at":"2026-11-10T00:28:17.113863+00:00","eventId":15191,"action":"ADDED","tier":"GENIUS","coin":"AVAX","status":"filled","reason":"Standalone add-alert scalp opened"}
 {"at":"2026-11-10T00:30:19.854713+00:00","eventId":15192,"action":"ADDED","tier":"GENIUS","coin":"BTC","status":"skipped","reason":"An add-alert scalp for this wallet/market/side is already open; no duplicate exposure"}
 {"at":"2026-11-10T00:33:42.950609+00:00","eventId":15194,"action":"ADDED","tier":"GENIUS","coin":"XRP","status":"filled","reason":"Standalone add-alert scalp opened"}
+{"at":"2026-11-10T00:38:33.135185+00:00","eventId":15196,"action":"ADDED","tier":"SMART","coin":"BTC","status":"filled","reason":"Standalone add-alert scalp opened"}
