@@ -6,3 +6,5 @@
 {"at":"2026-11-10T21:46:17.964081+00:00","eventId":16548,"action":"ADDED","tier":"SMART","coin":"ZRO","status":"filled","reason":"Standalone add-alert scalp opened"}
 {"at":"2026-11-10T21:48:22.317204+00:00","eventId":16549,"action":"ADDED","tier":"GENIUS","coin":"LIT","status":"skipped","reason":"20 open funded positions maximum"}
 {"at":"2026-11-10T21:50:23.508189+00:00","eventId":16550,"action":"ADDED","tier":"SMART","coin":"HYPE","status":"filled","reason":"Standalone add-alert scalp opened"}
+{"at":"2026-11-10T21:59:19.486898+00:00","eventId":16552,"action":"ADDED","tier":"SMART","coin":"ZEC","status":"skipped","reason":"An add-alert scalp for this wallet/market/side is already open; no duplicate exposure"}
+{"at":"2026-11-10T21:59:19.514693+00:00","eventId":16553,"action":"ADDED","tier":"GENIUS","coin":"GRAM","status":"filled","reason":"Standalone add-alert scalp opened"}
