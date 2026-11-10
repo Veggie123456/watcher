@@ -32,3 +32,7 @@
 {"at":"2026-11-10T17:35:19.002597+00:00","eventId":16337,"action":"ADDED","tier":"GENIUS","coin":"BTC","status":"filled","reason":"Standalone add-alert scalp opened"}
 {"at":"2026-11-10T17:37:20.327684+00:00","eventId":16339,"action":"ADDED","tier":"SMART","coin":"HYPE","status":"filled","reason":"Standalone add-alert scalp opened"}
 {"at":"2026-11-10T17:39:28.929611+00:00","eventId":16344,"action":"OPENED","tier":"SMART","coin":"HYPE","status":"filled","reason":"Fresh opening recorded"}
+{"at":"2026-11-10T17:41:33.037234+00:00","eventId":16352,"action":"OPENED","tier":"GENIUS","coin":"BTC","status":"skipped","reason":"20 open independent scenarios maximum"}
+{"at":"2026-11-10T17:41:33.941249+00:00","eventId":16349,"action":"ADDED","tier":"GENIUS","coin":"HYPE","status":"filled","reason":"Standalone add-alert scalp opened"}
+{"at":"2026-11-10T17:41:33.982665+00:00","eventId":16350,"action":"ADDED","tier":"GENIUS","coin":"GRAM","status":"filled","reason":"Standalone add-alert scalp opened"}
+{"at":"2026-11-10T17:41:34.024511+00:00","eventId":16351,"action":"OPENED","tier":"SMART","coin":"LIT","status":"filled","reason":"Fresh opening recorded"}
