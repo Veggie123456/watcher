@@ -1,3 +1,4 @@
 {"at":"2026-11-10T04:01:29.372963+00:00","eventId":15270,"action":"ADDED","tier":"SMART","coin":"ETH","status":"filled","reason":"Standalone add-alert scalp opened"}
 {"at":"2026-11-10T04:06:04.187533+00:00","eventId":15272,"action":"ADDED","tier":"GENIUS","coin":"AAVE","status":"skipped","reason":"An add-alert scalp for this wallet/market/side is already open; no duplicate exposure"}
 {"at":"2026-11-10T04:06:04.217911+00:00","eventId":15273,"action":"OPENED","tier":"SMART","coin":"BTC","status":"filled","reason":"Fresh opening recorded"}
+{"at":"2026-11-10T04:18:41.215404+00:00","eventId":15277,"action":"ADDED","tier":"GENIUS","coin":"kPEPE","status":"filled","reason":"Standalone add-alert scalp opened"}
