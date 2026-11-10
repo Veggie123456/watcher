@@ -14,3 +14,6 @@
 {"at":"2026-11-10T17:09:28.400439+00:00","eventId":16297,"action":"OPENED","tier":"GENIUS","coin":"AERO","status":"skipped","reason":"20 open independent scenarios maximum"}
 {"at":"2026-11-10T17:12:23.021427+00:00","eventId":16302,"action":"ADDED","tier":"GENIUS","coin":"VVV","status":"filled","reason":"Standalone add-alert scalp opened"}
 {"at":"2026-11-10T17:14:26.425288+00:00","eventId":16312,"action":"ADDED","tier":"SMART","coin":"ZEC","status":"filled","reason":"Standalone add-alert scalp opened"}
+{"at":"2026-11-10T17:16:32.101319+00:00","eventId":16314,"action":"ADDED","tier":"GENIUS","coin":"VVV","status":"filled","reason":"Standalone add-alert scalp opened"}
+{"at":"2026-11-10T17:16:32.142207+00:00","eventId":16315,"action":"ADDED","tier":"GENIUS","coin":"BTC","status":"filled","reason":"Standalone add-alert scalp opened"}
+{"at":"2026-11-10T17:16:32.170075+00:00","eventId":16316,"action":"ADDED","tier":"SMART","coin":"ETH","status":"skipped","reason":"20 open funded positions maximum"}
