@@ -16,3 +16,6 @@
 {"at":"2026-11-10T15:32:24.150652+00:00","eventId":15803,"reason":"20 open independent scenarios maximum"}
 {"at":"2026-11-10T15:33:10.770409+00:00","eventId":15809,"reason":"20 open funded positions maximum"}
 {"at":"2026-11-10T15:35:17.571877+00:00","eventId":15818,"reason":"20 open funded positions maximum"}
+{"at":"2026-11-10T15:38:07.869635+00:00","eventId":15839,"reason":"24h wallet/market cooldown"}
+{"at":"2026-11-10T15:38:08.961908+00:00","eventId":15831,"reason":"Source leverage missing, unreadable or above venue limit; no matched-leverage fill"}
+{"at":"2026-11-10T15:38:09.080159+00:00","eventId":15844,"reason":"20 open funded positions maximum"}
