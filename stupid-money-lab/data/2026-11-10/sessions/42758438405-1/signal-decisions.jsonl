@@ -1,3 +1,4 @@
 {"at":"2026-11-10T04:51:36.234530+00:00","eventId":15290,"action":"OPENED","tier":"SMART","coin":"HYPE","status":"filled","reason":"Fresh opening recorded"}
 {"at":"2026-11-10T04:51:36.271763+00:00","eventId":15291,"action":"OPENED","tier":"SMART","coin":"HYPE","status":"filled","reason":"Fresh opening recorded"}
 {"at":"2026-11-10T04:57:02.193296+00:00","eventId":15292,"action":"ADDED","tier":"SMART","coin":"HYPE","status":"skipped","reason":"Alert expired before add/scalp entry"}
+{"at":"2026-11-10T05:01:21.068852+00:00","eventId":15293,"action":"ADDED","tier":"SMART","coin":"ETH","status":"skipped","reason":"An add-alert scalp for this wallet/market/side is already open; no duplicate exposure"}
