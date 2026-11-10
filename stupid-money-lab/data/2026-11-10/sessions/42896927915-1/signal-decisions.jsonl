@@ -22,3 +22,4 @@
 {"at":"2026-11-10T21:09:14.080846+00:00","eventId":16527,"action":"ADDED","tier":"SMART","coin":"BTC","status":"filled","reason":"Standalone add-alert scalp opened"}
 {"at":"2026-11-10T21:11:15.014155+00:00","eventId":16528,"action":"OPENED","tier":"SMART","coin":"BTC","status":"skipped","reason":"24h wallet/market cooldown"}
 {"at":"2026-11-10T21:11:15.766173+00:00","eventId":16529,"action":"ADDED","tier":"GENIUS","coin":"ZEC","status":"filled","reason":"Standalone add-alert scalp opened"}
+{"at":"2026-11-10T21:12:36.905247+00:00","eventId":16530,"action":"OPENED","tier":"SMART","coin":"BTC","status":"skipped","reason":"20 open independent scenarios maximum"}
