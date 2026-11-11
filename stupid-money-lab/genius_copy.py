@@ -16,6 +16,33 @@ def candidate(event):
             and re.fullmatch(r'[A-Za-z0-9:._-]{1,30}', event.get('coin', '')))
 
 
+def refresh_paper_close_labels(ledger):
+    """Describe saved paper closure without changing execution or source evidence."""
+    seen = set()
+    for position in list(ledger.get('history', [])) + list(ledger.get('positions', {}).values()):
+        if id(position) in seen or not position.get('closedAt'):
+            continue
+        seen.add(id(position))
+        try:
+            quantity = float(position['quantity'])
+            empty = math.isfinite(quantity) and abs(quantity) < 1e-12
+        except (KeyError, TypeError, ValueError, OverflowError):
+            empty = False
+        closes = [leg for leg in position.get('legs', []) if leg.get('action') == 'CLOSED']
+        close = closes[-1] if closes else {}
+        if not empty:
+            label = 'PAPER CLOSE FLAG: remaining quantity requires review; source identity and venue execution unverified'
+        elif close.get('origin') == 'venue_reconciliation' and close.get('status') == 'late-discovery paper fill':
+            label = 'PAPER CLOSED: corroborated source-history close; copier execution modeled and source identity unverified'
+        elif close.get('status') == 'paper fill':
+            label = 'PAPER CLOSED: matched website full-close alert; source identity and venue execution unverified'
+        else:
+            label = 'PAPER CLOSED: saved closure record; source identity and venue execution unverified'
+        position.setdefault('closureVerificationBeforePaperCloseLabel', position.get('closureVerification'))
+        position['closureVerification'] = label
+        position['paperClosureLabelVersion'] = 'paper-close-label-v1'
+
+
 def update(state, events, quotes, metadata, stamp, millis, fresh, price, append, fee, slip, mark):
     now = stamp()
     ledger = state.setdefault('geniusCopy', {
@@ -205,6 +232,7 @@ def update(state, events, quotes, metadata, stamp, millis, fresh, price, append,
             pass
     current = {p['id']: p for p in positions.values()}
     ledger['history'] = [current.get(p['id'], p) for p in ledger.get('history', [])]
+    refresh_paper_close_labels(ledger)
     ledger['updatedAt'] = now
 
 
@@ -290,6 +318,7 @@ def close_reconciled(state, quotes, stamp, fresh, price, append, fee, slip):
             r['exitPendingReason'] = str(exc)
     current = {p['id']: p for p in ledger.get('positions', {}).values()}
     ledger['history'] = [current.get(p['id'], p) for p in ledger.get('history', [])]
+    refresh_paper_close_labels(ledger)
 
 
 def archived_exit_events(state, root, stamp, millis, append, byte_limit=32000000):
@@ -380,6 +409,7 @@ def archived_exit_events(state, root, stamp, millis, append, byte_limit=32000000
 def audit_source_cards(state, events, stamp, append):
     """Retain revision-level closure warnings without inventing exit fills."""
     ledger = state.get('geniusCopy', {})
+    refresh_paper_close_labels(ledger)
     active = [p for p in ledger.get('positions', {}).values() if not p.get('closedAt')]
     now = stamp()
     warnings = ledger.setdefault('sourceCardClosureWarnings', {})
