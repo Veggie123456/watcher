@@ -8,3 +8,6 @@
 {"at":"2026-11-11T15:34:10.007017+00:00","eventId":17055,"action":"OPENED","tier":"GENIUS","coin":"BTC","status":"filled","reason":"Fresh opening recorded"}
 {"at":"2026-11-11T15:35:35.537318+00:00","eventId":17056,"action":"ADDED","tier":"GENIUS","coin":"XMR","status":"filled","reason":"Standalone add-alert scalp opened"}
 {"at":"2026-11-11T15:35:35.576614+00:00","eventId":17057,"action":"ADDED","tier":"GENIUS","coin":"VVV","status":"filled","reason":"Standalone add-alert scalp opened"}
+{"at":"2026-11-11T15:36:18.513379+00:00","eventId":17065,"action":"OPENED","tier":"SMART","coin":"BTC","status":"skipped","reason":"24h wallet/market cooldown"}
+{"at":"2026-11-11T15:36:19.425674+00:00","eventId":17066,"action":"ADDED","tier":"SMART","coin":"BTC","status":"filled","reason":"Standalone add-alert scalp opened"}
+{"at":"2026-11-11T15:36:19.464816+00:00","eventId":17067,"action":"OPENED","tier":"GENIUS","coin":"HYPE","status":"filled","reason":"Fresh opening recorded"}
