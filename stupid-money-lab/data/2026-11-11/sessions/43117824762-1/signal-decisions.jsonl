@@ -1,0 +1,7 @@
+{"at":"2026-11-11T23:14:22.376632+00:00","eventId":17390,"action":"ADDED","tier":"SMART","coin":"PUMP","status":"filled","reason":"Standalone add-alert scalp opened"}
+{"at":"2026-11-11T23:16:58.016154+00:00","eventId":17403,"action":"OPENED","tier":"GENIUS","coin":"BTC","status":"skipped","reason":"24h wallet/market cooldown"}
+{"at":"2026-11-11T23:17:01.981988+00:00","eventId":17402,"action":"ADDED","tier":"GENIUS","coin":"ETH","status":"filled","reason":"Standalone add-alert scalp opened"}
+{"at":"2026-11-11T23:19:37.575372+00:00","eventId":17405,"action":"ADDED","tier":"SMART","coin":"HYPE","status":"filled","reason":"Standalone add-alert scalp opened"}
+{"at":"2026-11-11T23:22:12.422075+00:00","eventId":17409,"action":"ADDED","tier":"GENIUS","coin":"HYPE","status":"skipped","reason":"History/stale alert; no backdated entry"}
+{"at":"2026-11-11T23:22:16.027608+00:00","eventId":17411,"action":"OPENED","tier":"SMART","coin":"ETH","status":"skipped","reason":"Source leverage missing, unreadable or above venue limit; no matched-leverage fill"}
+{"at":"2026-11-11T23:24:51.670130+00:00","eventId":17414,"action":"OPENED","tier":"GENIUS","coin":"ZEC","status":"skipped","reason":"24h wallet/market cooldown"}
