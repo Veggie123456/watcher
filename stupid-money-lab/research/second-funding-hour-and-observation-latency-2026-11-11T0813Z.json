@@ -1,0 +1,2473 @@
+{
+  "runNY": "2026-11-11T03:16:36.321050-05:00",
+  "stateCommit": "adeae9834f1c06536f48a2f6aec468afc63ba3b7",
+  "stateSha256": "a4afcd384681f9fd7a8b297fe633fe79cb30452ef68ea7bda465d77217773a07",
+  "cutoff": "2026-11-11T08:13:35.965865+00:00",
+  "heartbeat": "2026-11-11T08:13:35.371540+00:00",
+  "sourceCheckedAt": "2026-11-11T08:13:13.175162+00:00",
+  "scan": {
+    "page": {
+      "at": "2026-11-11T08:14:37.055Z",
+      "status": "page_read",
+      "httpStatus": 200,
+      "hash": "4150e486eb6a5c8a6dd41c6cdf0f7deb166cba0dd1de5a8487933544f6c7e4f1"
+    },
+    "live": {
+      "at": "2026-11-11T08:14:38.415Z",
+      "status": "page_read",
+      "hash": "713e4832b7ca6a5e193c88d7924eff9d1703dfd22553a81fd9cf62a2d3e41d51",
+      "events": 20,
+      "actions": {
+        "OPENED": 5,
+        "ADDED": 14,
+        "CLOSED": 1
+      }
+    }
+  },
+  "completedWorkflow": {
+    "id": 42974893370,
+    "job": 130371585403,
+    "allSteps": "success"
+  },
+  "sourceCoverage": [
+    {
+      "run": "42974893370-1",
+      "reads": 68,
+      "first": "2026-11-11T06:47:54.841529+00:00",
+      "last": "2026-11-11T07:42:35.828333+00:00",
+      "maxGapSeconds": 158.398408,
+      "sha256": "6f3b875f4a4577a7bb9225bf5e5baa83d29e61e8b3584798641daee5fcc26875"
+    },
+    {
+      "run": "42981522696-1",
+      "reads": 32,
+      "first": "2026-11-11T07:43:32.397164+00:00",
+      "last": "2026-11-11T08:13:13.175162+00:00",
+      "maxGapSeconds": 158.62066,
+      "sha256": "6de3f175ff44997e0ec9edadab2735d72918c60b04bb2d12232e0850342d701c"
+    }
+  ],
+  "handoffSeconds": 56.568831,
+  "newOriginals": [
+    {
+      "observedAt": "2026-11-11T07:21:40.447222+00:00",
+      "hash": "7022d4ad271d58e87c29cee1b3ec06621f678d9fa28b9673942dcf0d1d36c65d",
+      "eventId": 16808,
+      "market": "kPEPE",
+      "publication": "2026-11-11T07:21:03.748Z",
+      "occurredAt": "2026-11-11T07:21:00.452Z",
+      "payload": {
+        "side": "SHORT",
+        "addPx": 0.005309123123227152,
+        "liqPx": 0.02239342787720314,
+        "action": "ADDED",
+        "cohort": "SMART",
+        "wallet": "0x0062d1e3f66d7468003216d2d284cc2269f50269",
+        "entryPx": 0.00526,
+        "leverage": {
+          "type": "cross",
+          "value": 10
+        },
+        "marginUsd": 135486.615787,
+        "positionUsd": 1188264.854104,
+        "allTimePnlUsd": 24281795.750487,
+        "addedMarginUsd": 28359.591377122215
+      }
+    },
+    {
+      "observedAt": "2026-11-11T07:23:44.158991+00:00",
+      "hash": "707ee45475e6d9aad9c7d670deb110254d046258b77d6ac33a63bba3147d4df7",
+      "eventId": 16810,
+      "market": "kPEPE",
+      "publication": "2026-11-11T07:23:02.433Z",
+      "occurredAt": "2026-11-11T07:23:00.369Z",
+      "payload": {
+        "side": "SHORT",
+        "addPx": 0.005361052613938459,
+        "liqPx": 0.031893223868031055,
+        "action": "ADDED",
+        "cohort": "SMART",
+        "wallet": "0x3c9ef394edc178e827f772fc41a1b064e1c0224d",
+        "entryPx": 0.00536,
+        "leverage": {
+          "type": "cross",
+          "value": 10
+        },
+        "marginUsd": 55248.813051,
+        "positionUsd": 842430.220829,
+        "allTimePnlUsd": 24700841.96782,
+        "addedMarginUsd": 12890.57279406847
+      }
+    },
+    {
+      "observedAt": "2026-11-11T07:24:24.418391+00:00",
+      "hash": "0b3f4fd17be7c0571be33f1f7f22413e34c9871199c981acf54ff815a581e17b",
+      "eventId": 16811,
+      "market": "SOL",
+      "publication": "2026-11-11T07:24:02.741Z",
+      "occurredAt": "2026-11-11T07:24:00.262Z",
+      "payload": {
+        "side": "SHORT",
+        "addPx": 82.72800393453831,
+        "liqPx": 409.6304133412366,
+        "action": "ADDED",
+        "cohort": "GENIUS",
+        "wallet": "0x4623f25b919105765874381af97721bc40fdc06e",
+        "entryPx": 85.5884,
+        "leverage": {
+          "type": "cross",
+          "value": 20
+        },
+        "marginUsd": 40037.84545,
+        "positionUsd": 684526.6687,
+        "allTimePnlUsd": 39641793.225725,
+        "addedMarginUsd": 12585.14336
+      }
+    },
+    {
+      "observedAt": "2026-11-11T07:26:30.208207+00:00",
+      "hash": "cc29926eae4ffd59d6dc6cc4e6521b6b8414917de3f63645fc1ca1e57140f5d5",
+      "eventId": 16814,
+      "market": "ZEC",
+      "publication": "2026-11-11T07:26:02.659Z",
+      "occurredAt": "2026-11-11T07:26:00.200Z",
+      "payload": {
+        "side": "LONG",
+        "liqPx": null,
+        "action": "OPENED",
+        "cohort": "GENIUS",
+        "wallet": "0xb049cae02e1682c5ecc1a4fb4f7eba112b31360c",
+        "entryPx": 1022.9709,
+        "leverage": {
+          "type": "cross",
+          "value": 10
+        },
+        "marginUsd": 28172.1,
+        "positionUsd": 156493,
+        "allTimePnlUsd": 1162700.979641,
+        "addedMarginUsd": null
+      }
+    },
+    {
+      "observedAt": "2026-11-11T07:26:30.208311+00:00",
+      "hash": "9586f0cb02d87c5602b315fe4ae940b0f2a22708ec3710c847cea7a5b0b41288",
+      "eventId": 16813,
+      "market": "VVV",
+      "publication": "2026-11-11T07:26:02.644Z",
+      "occurredAt": "2026-11-11T07:26:00.200Z",
+      "payload": {
+        "side": "SHORT",
+        "addPx": 19.097684027170324,
+        "liqPx": null,
+        "action": "ADDED",
+        "cohort": "GENIUS",
+        "wallet": "0x83be5a269a9a435bcd57d542bada53516ffb5092",
+        "entryPx": 19.8991,
+        "leverage": {
+          "type": "cross",
+          "value": 3
+        },
+        "marginUsd": 52430.02943,
+        "positionUsd": 64426.27479,
+        "allTimePnlUsd": 1784745.813022,
+        "addedMarginUsd": 30900.219727019845
+      }
+    },
+    {
+      "observedAt": "2026-11-11T07:27:13.470747+00:00",
+      "hash": "e4daaeaaaa68d7b161874517e923e9ca075676558bb7cd6f4ad3275eacb01ede",
+      "eventId": 16815,
+      "market": "kPEPE",
+      "publication": "2026-11-11T07:27:02.528Z",
+      "occurredAt": "2026-11-11T07:27:00.215Z",
+      "payload": {
+        "side": "SHORT",
+        "addPx": 0.005387213189854542,
+        "liqPx": 0.06486786065591159,
+        "action": "ADDED",
+        "cohort": "GENIUS",
+        "wallet": "0x656479bffc5ae168ff19c11c6ed6b8b2d90261fc",
+        "entryPx": 0.005193,
+        "leverage": {
+          "type": "cross",
+          "value": 10
+        },
+        "marginUsd": 229330.32241,
+        "positionUsd": 2522553.911595,
+        "allTimePnlUsd": 360552452.47285,
+        "addedMarginUsd": 19011.292247616733
+      }
+    },
+    {
+      "observedAt": "2026-11-11T07:36:15.308416+00:00",
+      "hash": "f5a2996f2745c221b9a8a0294bc7754c32a7993fa8905540a480ffff593595c6",
+      "eventId": 16820,
+      "market": "SOL",
+      "publication": "2026-11-11T07:36:03.947Z",
+      "occurredAt": "2026-11-11T07:36:00.397Z",
+      "payload": {
+        "side": "SHORT",
+        "addPx": 82.40495445593443,
+        "liqPx": 321.4283791821823,
+        "action": "ADDED",
+        "cohort": "GENIUS",
+        "wallet": "0x656479bffc5ae168ff19c11c6ed6b8b2d90261fc",
+        "entryPx": 86.4649,
+        "leverage": {
+          "type": "cross",
+          "value": 20
+        },
+        "marginUsd": 465269.506371,
+        "positionUsd": 10989274.94629,
+        "allTimePnlUsd": 223945507.82255,
+        "addedMarginUsd": 32526.47380460028
+      }
+    },
+    {
+      "observedAt": "2026-11-11T07:48:55.136202+00:00",
+      "hash": "958e76b8fd6847af1e1eb0abc892be6b3d16ecd855ffd75dffed1589e9a974a5",
+      "eventId": 16826,
+      "market": "ZEC",
+      "publication": "2026-11-11T07:48:02.758Z",
+      "occurredAt": "2026-11-11T07:48:00.421Z",
+      "payload": {
+        "side": "SHORT",
+        "addPx": 969.6063744263444,
+        "liqPx": null,
+        "action": "ADDED",
+        "cohort": "GENIUS",
+        "wallet": "0x2dfe69fc6f1464e2d9905e0321aff8f98065fee7",
+        "entryPx": 1004.808,
+        "leverage": {
+          "type": "cross",
+          "value": 10
+        },
+        "marginUsd": 154912.3908,
+        "positionUsd": 776015.6735,
+        "allTimePnlUsd": 7054968.081666,
+        "addedMarginUsd": 47295.274
+      }
+    },
+    {
+      "observedAt": "2026-11-11T07:48:55.136449+00:00",
+      "hash": "042502ab81d0513ec15bdd5bf9e175cb4eea144e79496f2639366a4dc5db95df",
+      "eventId": 16824,
+      "market": "HYPE",
+      "publication": "2026-11-11T07:47:02.878Z",
+      "occurredAt": "2026-11-11T07:47:00.454Z",
+      "payload": {
+        "side": "SHORT",
+        "addPx": 71.67314999999996,
+        "liqPx": null,
+        "action": "ADDED",
+        "cohort": "GENIUS",
+        "wallet": "0x4b3a3410a37801647d521744d1f60dfb51765beb",
+        "entryPx": 74.2868,
+        "leverage": {
+          "type": "cross",
+          "value": 5
+        },
+        "marginUsd": 338613,
+        "positionUsd": 1039218,
+        "allTimePnlUsd": 2211216.666616,
+        "addedMarginUsd": 30513
+      }
+    },
+    {
+      "observedAt": "2026-11-11T07:51:33.756882+00:00",
+      "hash": "e11c4b7598197458500f73e02a1d142285b20f8847fd0935193d2457ce1064e8",
+      "eventId": 16828,
+      "market": "ZEC",
+      "publication": "2026-11-11T07:50:02.905Z",
+      "occurredAt": "2026-11-11T07:49:40.633Z",
+      "payload": {
+        "side": "LONG",
+        "action": "CLOSED",
+        "cohort": "SMART",
+        "exitPx": 990.2952872,
+        "pnlUsd": 26363.06769029905,
+        "wallet": "0x8a29618627bb11b0437ca1c11af5898180944fa7",
+        "entryPx": 991.2771,
+        "leftUsd": 0,
+        "leverage": {
+          "type": "cross",
+          "value": 10
+        },
+        "pnlExact": true,
+        "closedPct": 100,
+        "closedUsd": 1184837.0632,
+        "marginUsd": 102256.1,
+        "allTimePnlUsd": 729843.17392
+      }
+    },
+    {
+      "observedAt": "2026-11-11T07:51:33.757085+00:00",
+      "hash": "037b8b1e08a20456c75ef933179e8a2e0becbe6f8f87affe97e0c272acb62431",
+      "eventId": 16827,
+      "market": "kPEPE",
+      "publication": "2026-11-11T07:49:01.969Z",
+      "occurredAt": "2026-11-11T07:49:00.314Z",
+      "payload": {
+        "side": "LONG",
+        "addPx": 0.00527233679269224,
+        "liqPx": 0.023539060181294955,
+        "action": "ADDED",
+        "cohort": "GENIUS",
+        "wallet": "0x4623f25b919105765874381af97721bc40fdc06e",
+        "entryPx": 0.0053,
+        "leverage": {
+          "type": "cross",
+          "value": 10
+        },
+        "marginUsd": 86544.68318,
+        "positionUsd": 1685797.69758,
+        "allTimePnlUsd": 95168490.691996,
+        "addedMarginUsd": 21019.851968423212
+      }
+    },
+    {
+      "observedAt": "2026-11-11T07:54:09.568480+00:00",
+      "hash": "4e687c38b797cf3eed7a2c181775db46876137219e5b1d57af09a80dc9540e37",
+      "eventId": 16830,
+      "market": "XMR",
+      "publication": "2026-11-11T07:53:03.309Z",
+      "occurredAt": "2026-11-11T07:53:00.357Z",
+      "payload": {
+        "side": "LONG",
+        "addPx": null,
+        "liqPx": 10391.126326526797,
+        "action": "ADDED",
+        "cohort": "SMART",
+        "wallet": "0x5b5933d675c5b5adbaf1b21f33c2c48d06b995b9",
+        "entryPx": 616.066,
+        "leverage": {
+          "type": "cross",
+          "value": 3
+        },
+        "marginUsd": 1236659.046034,
+        "positionUsd": 4553193.954514,
+        "allTimePnlUsd": 276792500.12289,
+        "addedMarginUsd": 20717.556006142288
+      }
+    },
+    {
+      "observedAt": "2026-11-11T07:54:09.568681+00:00",
+      "hash": "8056913a66e9f9416ee5f946ddf6f9b9ef898e1a8cb7c97d0a7d862a9e515f1b",
+      "eventId": 16829,
+      "market": "BTC",
+      "publication": "2026-11-11T07:52:02.954Z",
+      "occurredAt": "2026-11-11T07:52:00.321Z",
+      "payload": {
+        "side": "SHORT",
+        "liqPx": null,
+        "action": "OPENED",
+        "cohort": "GENIUS",
+        "wallet": "0x83be5a269a9a435bcd57d542bada53516ffb5092",
+        "entryPx": 74601.1,
+        "leverage": {
+          "type": "cross",
+          "value": 20
+        },
+        "marginUsd": 46825.6,
+        "positionUsd": 894724,
+        "allTimePnlUsd": 1050369.948202,
+        "addedMarginUsd": null
+      }
+    },
+    {
+      "observedAt": "2026-11-11T07:55:54.414950+00:00",
+      "hash": "11bba48fe93e5475efd1d09f2e2574f4da255f35222f77e359bab538f0dd0c72",
+      "eventId": 16832,
+      "market": "ZEC",
+      "publication": "2026-11-11T07:55:01.840Z",
+      "occurredAt": "2026-11-11T07:55:00.166Z",
+      "payload": {
+        "side": "SHORT",
+        "addPx": 936.7546080210367,
+        "liqPx": 5661.705350450378,
+        "action": "ADDED",
+        "cohort": "SMART",
+        "wallet": "0xeaac3e31aa732c1e378d2bb57e262d6caf9ad1d7",
+        "entryPx": 1156.76,
+        "leverage": {
+          "type": "cross",
+          "value": 5
+        },
+        "marginUsd": 508916.40056,
+        "positionUsd": 2639505.5112,
+        "allTimePnlUsd": 244421365.26731,
+        "addedMarginUsd": 15235.90950717164
+      }
+    },
+    {
+      "observedAt": "2026-11-11T07:55:54.415155+00:00",
+      "hash": "7131ada9629c53141086bb5926094827d5057dbfd74d697eeb5ea87cc51a4c9a",
+      "eventId": 16831,
+      "market": "ZEC",
+      "publication": "2026-11-11T07:55:01.825Z",
+      "occurredAt": "2026-11-11T07:55:00.166Z",
+      "payload": {
+        "side": "LONG",
+        "liqPx": null,
+        "action": "OPENED",
+        "cohort": "SMART",
+        "wallet": "0x8a29618627bb11b0437ca1c11af5898180944fa7",
+        "entryPx": 1002.9844,
+        "leverage": {
+          "type": "cross",
+          "value": 10
+        },
+        "marginUsd": 39130.41,
+        "positionUsd": 359337.7,
+        "allTimePnlUsd": 700076.673052,
+        "addedMarginUsd": null
+      }
+    },
+    {
+      "observedAt": "2026-11-11T07:58:39.810394+00:00",
+      "hash": "3e339a8d4e70ed38852983106a6d73532b29db68a9cfb02f15a3d7802f94f6a2",
+      "eventId": 16833,
+      "market": "BTC",
+      "publication": "2026-11-11T07:58:02.952Z",
+      "occurredAt": "2026-11-11T07:58:00.189Z",
+      "payload": {
+        "side": "LONG",
+        "addPx": null,
+        "liqPx": 204691.18489441206,
+        "action": "ADDED",
+        "cohort": "SMART",
+        "wallet": "0xfe902aca74d21bc36e679e123c189cad2c56f77a",
+        "entryPx": 74836.2,
+        "leverage": {
+          "type": "cross",
+          "value": 40
+        },
+        "marginUsd": 81051.46,
+        "positionUsd": 2480952,
+        "allTimePnlUsd": 46466404.750986,
+        "addedMarginUsd": 43082.41222215732
+      }
+    },
+    {
+      "observedAt": "2026-11-11T07:59:20.529782+00:00",
+      "hash": "c236249c9345576765225880c7ee45a4059749a09553ea1baeaa39dfcb83a18c",
+      "eventId": 16837,
+      "market": "HYPE",
+      "publication": "2026-11-11T07:59:02.876Z",
+      "occurredAt": "2026-11-11T07:59:00.404Z",
+      "payload": {
+        "side": "LONG",
+        "addPx": null,
+        "liqPx": 330.03968256585625,
+        "action": "ADDED",
+        "cohort": "GENIUS",
+        "wallet": "0x656479bffc5ae168ff19c11c6ed6b8b2d90261fc",
+        "entryPx": 73.3132,
+        "leverage": {
+          "type": "cross",
+          "value": 3
+        },
+        "marginUsd": 2490206.68618,
+        "positionUsd": 4284448.11158,
+        "allTimePnlUsd": 349760064.19218,
+        "addedMarginUsd": 21490.303822117403
+      }
+    },
+    {
+      "observedAt": "2026-11-11T07:59:20.529972+00:00",
+      "hash": "ed733431fc321f9fbd731864f77875ea79ca113fc088db89641abe06d8813c49",
+      "eventId": 16836,
+      "market": "HYPE",
+      "publication": "2026-11-11T07:59:02.856Z",
+      "occurredAt": "2026-11-11T07:59:00.404Z",
+      "payload": {
+        "side": "SHORT",
+        "addPx": 72.21497221974094,
+        "liqPx": 551.9247536275187,
+        "action": "ADDED",
+        "cohort": "GENIUS",
+        "wallet": "0x1b2987fc22923c61629ba1cb8900982f784c618d",
+        "entryPx": 70.4472,
+        "leverage": {
+          "type": "cross",
+          "value": 3
+        },
+        "marginUsd": 32358.71778,
+        "positionUsd": 162252.57076,
+        "allTimePnlUsd": 5072909.607259,
+        "addedMarginUsd": 33203.63233
+      }
+    },
+    {
+      "observedAt": "2026-11-11T08:02:09.858723+00:00",
+      "hash": "070ffb4e17c570806ad64cdee20f31322d9f178625b5edcfe1baf215752e7da2",
+      "eventId": 16839,
+      "market": "ZEC",
+      "publication": "2026-11-11T08:02:02.926Z",
+      "occurredAt": "2026-11-11T08:02:00.508Z",
+      "payload": {
+        "side": "LONG",
+        "addPx": 1002.6501000000001,
+        "liqPx": null,
+        "action": "ADDED",
+        "cohort": "GENIUS",
+        "wallet": "0x041517217f028ddfc15715a07d74df3e9695df5a",
+        "entryPx": 971.2919,
+        "leverage": {
+          "type": "cross",
+          "value": 5
+        },
+        "marginUsd": 52967.8225,
+        "positionUsd": 321416.736,
+        "allTimePnlUsd": 12720507.788757,
+        "addedMarginUsd": 30358.4101
+      }
+    },
+    {
+      "observedAt": "2026-11-11T08:02:09.858908+00:00",
+      "hash": "74bccc32d1c73555ac726ad905b1389b1a4a0e33de4314da43f74feb19008acb",
+      "eventId": 16838,
+      "market": "ZEC",
+      "publication": "2026-11-11T08:02:02.915Z",
+      "occurredAt": "2026-11-11T08:02:00.508Z",
+      "payload": {
+        "side": "SHORT",
+        "addPx": null,
+        "liqPx": null,
+        "action": "ADDED",
+        "cohort": "GENIUS",
+        "wallet": "0x2522d52c115e0b38c6bd129c8a83252522f702d5",
+        "entryPx": 1282.5181,
+        "leverage": {
+          "type": "cross",
+          "value": 10
+        },
+        "marginUsd": 207474.01561,
+        "positionUsd": 1487849.0491,
+        "allTimePnlUsd": 3850245.675467,
+        "addedMarginUsd": 32745.7
+      }
+    },
+    {
+      "observedAt": "2026-11-11T08:04:14.598233+00:00",
+      "hash": "346c87b55d43c4073205f4281a3c80f9fbd69a3ec3ccfc40803ea18ed02c2722",
+      "eventId": 16840,
+      "market": "ETH",
+      "publication": "2026-11-11T08:04:03.977Z",
+      "occurredAt": "2026-11-11T08:04:00.744Z",
+      "payload": {
+        "side": "LONG",
+        "addPx": 2054.294770476284,
+        "liqPx": 1058.8009763823165,
+        "action": "ADDED",
+        "cohort": "GENIUS",
+        "wallet": "0x2dfe69fc6f1464e2d9905e0321aff8f98065fee7",
+        "entryPx": 2093.6,
+        "leverage": {
+          "type": "cross",
+          "value": 15
+        },
+        "marginUsd": 232323.13879,
+        "positionUsd": 4847541.3065,
+        "allTimePnlUsd": 7497446.955755,
+        "addedMarginUsd": 70714.2,
+        "flippedFrom": "SHORT"
+      }
+    },
+    {
+      "observedAt": "2026-11-11T08:07:41.395916+00:00",
+      "hash": "8f12efa85f149113e3f18c6feca287ac04e05c9940e8f8977b448a5539565575",
+      "eventId": 16842,
+      "market": "BTC",
+      "publication": "2026-11-11T08:07:02.674Z",
+      "occurredAt": "2026-11-11T08:07:00.365Z",
+      "payload": {
+        "side": "LONG",
+        "liqPx": 53537.930845555165,
+        "action": "OPENED",
+        "cohort": "GENIUS",
+        "wallet": "0xd4031b78f6721cfb24eb38f778d67be196fc8646",
+        "entryPx": 76337.6,
+        "leverage": {
+          "type": "cross",
+          "value": 30
+        },
+        "marginUsd": 19774.143468,
+        "positionUsd": 1103702.21331,
+        "allTimePnlUsd": 315334.236274,
+        "addedMarginUsd": null,
+        "flippedFrom": "SHORT"
+      }
+    },
+    {
+      "observedAt": "2026-11-11T08:09:44.566947+00:00",
+      "hash": "7b60eebc790406d50fc81693adba567de715644d1453080d382c253c76d7ea32",
+      "eventId": 16845,
+      "market": "HYPE",
+      "publication": "2026-11-11T08:09:03.925Z",
+      "occurredAt": "2026-11-11T08:09:00.355Z",
+      "payload": {
+        "side": "SHORT",
+        "addPx": null,
+        "liqPx": 119.3154358466158,
+        "action": "ADDED",
+        "cohort": "SMART",
+        "wallet": "0xeaac3e31aa732c1e378d2bb57e262d6caf9ad1d7",
+        "entryPx": 84.1352,
+        "leverage": {
+          "type": "cross",
+          "value": 5
+        },
+        "marginUsd": 6071533.06481,
+        "positionUsd": 12719400.62385,
+        "allTimePnlUsd": 149586560.576775,
+        "addedMarginUsd": 25072.415723022143
+      }
+    },
+    {
+      "observedAt": "2026-11-11T08:10:25.747560+00:00",
+      "hash": "8fcca00b48e6b23464143235ae2f5ace2c65a55c3a2d4164dc5c404806c8a704",
+      "eventId": 16846,
+      "market": "BTC",
+      "publication": "2026-11-11T08:10:03.225Z",
+      "occurredAt": "2026-11-11T08:10:00.244Z",
+      "payload": {
+        "side": "SHORT",
+        "liqPx": null,
+        "action": "OPENED",
+        "cohort": "GENIUS",
+        "wallet": "0x2522d52c115e0b38c6bd129c8a83252522f702d5",
+        "entryPx": 75116,
+        "leverage": {
+          "type": "cross",
+          "value": 20
+        },
+        "marginUsd": 8122.726893,
+        "positionUsd": 378891.57808,
+        "allTimePnlUsd": 3336623.182195,
+        "addedMarginUsd": null
+      }
+    }
+  ],
+  "rawProvenance": "Full originals/revisions retained in immutable events.jsonl for the two session paths",
+  "decisionSummary": [
+    {
+      "eventId": 16811,
+      "receipts": 1,
+      "first": {
+        "eventId": 16811,
+        "action": "ADDED",
+        "wallet": "0x4623f25b919105765874381af97721bc40fdc06e",
+        "market": "SOL",
+        "side": "SHORT",
+        "publication": "2026-11-11T07:24:02.741Z",
+        "observedAt": "2026-11-11T07:24:24.418470+00:00",
+        "sourceVenue": "hyperliquid",
+        "paperQuoteVenue": "hyperliquid",
+        "status": "skipped",
+        "reason": "No prospectively copied opening"
+      },
+      "latest": {
+        "eventId": 16811,
+        "action": "ADDED",
+        "wallet": "0x4623f25b919105765874381af97721bc40fdc06e",
+        "market": "SOL",
+        "side": "SHORT",
+        "publication": "2026-11-11T07:24:02.741Z",
+        "observedAt": "2026-11-11T07:24:24.418470+00:00",
+        "sourceVenue": "hyperliquid",
+        "paperQuoteVenue": "hyperliquid",
+        "status": "skipped",
+        "reason": "No prospectively copied opening"
+      }
+    },
+    {
+      "eventId": 16813,
+      "receipts": 1,
+      "first": {
+        "eventId": 16813,
+        "action": "ADDED",
+        "wallet": "0x83be5a269a9a435bcd57d542bada53516ffb5092",
+        "market": "VVV",
+        "side": "SHORT",
+        "publication": "2026-11-11T07:26:02.644Z",
+        "observedAt": "2026-11-11T07:26:30.208371+00:00",
+        "sourceVenue": "hyperliquid",
+        "paperQuoteVenue": "hyperliquid",
+        "status": "skipped",
+        "reason": "No prospectively copied opening"
+      },
+      "latest": {
+        "eventId": 16813,
+        "action": "ADDED",
+        "wallet": "0x83be5a269a9a435bcd57d542bada53516ffb5092",
+        "market": "VVV",
+        "side": "SHORT",
+        "publication": "2026-11-11T07:26:02.644Z",
+        "observedAt": "2026-11-11T07:26:30.208371+00:00",
+        "sourceVenue": "hyperliquid",
+        "paperQuoteVenue": "hyperliquid",
+        "status": "skipped",
+        "reason": "No prospectively copied opening"
+      }
+    },
+    {
+      "eventId": 16814,
+      "receipts": 1,
+      "first": {
+        "eventId": 16814,
+        "action": "OPENED",
+        "wallet": "0xb049cae02e1682c5ecc1a4fb4f7eba112b31360c",
+        "market": "ZEC",
+        "side": "LONG",
+        "publication": "2026-11-11T07:26:02.659Z",
+        "observedAt": "2026-11-11T07:26:30.208290+00:00",
+        "sourceVenue": "hyperliquid",
+        "paperQuoteVenue": "hyperliquid",
+        "status": "skipped",
+        "reason": "50 open paper position limit"
+      },
+      "latest": {
+        "eventId": 16814,
+        "action": "OPENED",
+        "wallet": "0xb049cae02e1682c5ecc1a4fb4f7eba112b31360c",
+        "market": "ZEC",
+        "side": "LONG",
+        "publication": "2026-11-11T07:26:02.659Z",
+        "observedAt": "2026-11-11T07:26:30.208290+00:00",
+        "sourceVenue": "hyperliquid",
+        "paperQuoteVenue": "hyperliquid",
+        "status": "skipped",
+        "reason": "50 open paper position limit"
+      }
+    },
+    {
+      "eventId": 16815,
+      "receipts": 1,
+      "first": {
+        "eventId": 16815,
+        "action": "ADDED",
+        "wallet": "0x656479bffc5ae168ff19c11c6ed6b8b2d90261fc",
+        "market": "kPEPE",
+        "side": "SHORT",
+        "publication": "2026-11-11T07:27:02.528Z",
+        "observedAt": "2026-11-11T07:27:13.470846+00:00",
+        "sourceVenue": "hyperliquid",
+        "paperQuoteVenue": "hyperliquid",
+        "status": "skipped",
+        "reason": "No prospectively copied opening"
+      },
+      "latest": {
+        "eventId": 16815,
+        "action": "ADDED",
+        "wallet": "0x656479bffc5ae168ff19c11c6ed6b8b2d90261fc",
+        "market": "kPEPE",
+        "side": "SHORT",
+        "publication": "2026-11-11T07:27:02.528Z",
+        "observedAt": "2026-11-11T07:27:13.470846+00:00",
+        "sourceVenue": "hyperliquid",
+        "paperQuoteVenue": "hyperliquid",
+        "status": "skipped",
+        "reason": "No prospectively copied opening"
+      }
+    },
+    {
+      "eventId": 16820,
+      "receipts": 1,
+      "first": {
+        "eventId": 16820,
+        "action": "ADDED",
+        "wallet": "0x656479bffc5ae168ff19c11c6ed6b8b2d90261fc",
+        "market": "SOL",
+        "side": "SHORT",
+        "publication": "2026-11-11T07:36:03.947Z",
+        "observedAt": "2026-11-11T07:36:15.308492+00:00",
+        "sourceVenue": "hyperliquid",
+        "paperQuoteVenue": "hyperliquid",
+        "status": "skipped",
+        "reason": "No prospectively copied opening"
+      },
+      "latest": {
+        "eventId": 16820,
+        "action": "ADDED",
+        "wallet": "0x656479bffc5ae168ff19c11c6ed6b8b2d90261fc",
+        "market": "SOL",
+        "side": "SHORT",
+        "publication": "2026-11-11T07:36:03.947Z",
+        "observedAt": "2026-11-11T07:36:15.308492+00:00",
+        "sourceVenue": "hyperliquid",
+        "paperQuoteVenue": "hyperliquid",
+        "status": "skipped",
+        "reason": "No prospectively copied opening"
+      }
+    },
+    {
+      "eventId": 16824,
+      "receipts": 1,
+      "first": {
+        "eventId": 16824,
+        "action": "ADDED",
+        "wallet": "0x4b3a3410a37801647d521744d1f60dfb51765beb",
+        "market": "HYPE",
+        "side": "SHORT",
+        "publication": "2026-11-11T07:47:02.878Z",
+        "observedAt": "2026-11-11T07:48:55.136580+00:00",
+        "sourceVenue": "hyperliquid",
+        "paperQuoteVenue": "hyperliquid",
+        "status": "skipped",
+        "reason": "No prospectively copied opening"
+      },
+      "latest": {
+        "eventId": 16824,
+        "action": "ADDED",
+        "wallet": "0x4b3a3410a37801647d521744d1f60dfb51765beb",
+        "market": "HYPE",
+        "side": "SHORT",
+        "publication": "2026-11-11T07:47:02.878Z",
+        "observedAt": "2026-11-11T07:48:55.136580+00:00",
+        "sourceVenue": "hyperliquid",
+        "paperQuoteVenue": "hyperliquid",
+        "status": "skipped",
+        "reason": "No prospectively copied opening"
+      }
+    },
+    {
+      "eventId": 16826,
+      "receipts": 1,
+      "first": {
+        "eventId": 16826,
+        "action": "ADDED",
+        "wallet": "0x2dfe69fc6f1464e2d9905e0321aff8f98065fee7",
+        "market": "ZEC",
+        "side": "SHORT",
+        "publication": "2026-11-11T07:48:02.758Z",
+        "observedAt": "2026-11-11T07:48:55.136407+00:00",
+        "sourceVenue": "hyperliquid",
+        "paperQuoteVenue": "hyperliquid",
+        "status": "skipped",
+        "reason": "No prospectively copied opening"
+      },
+      "latest": {
+        "eventId": 16826,
+        "action": "ADDED",
+        "wallet": "0x2dfe69fc6f1464e2d9905e0321aff8f98065fee7",
+        "market": "ZEC",
+        "side": "SHORT",
+        "publication": "2026-11-11T07:48:02.758Z",
+        "observedAt": "2026-11-11T07:48:55.136407+00:00",
+        "sourceVenue": "hyperliquid",
+        "paperQuoteVenue": "hyperliquid",
+        "status": "skipped",
+        "reason": "No prospectively copied opening"
+      }
+    },
+    {
+      "eventId": 16827,
+      "receipts": 1,
+      "first": {
+        "eventId": 16827,
+        "action": "ADDED",
+        "wallet": "0x4623f25b919105765874381af97721bc40fdc06e",
+        "market": "kPEPE",
+        "side": "LONG",
+        "publication": "2026-11-11T07:49:01.969Z",
+        "observedAt": "2026-11-11T07:51:33.757234+00:00",
+        "sourceVenue": "hyperliquid",
+        "paperQuoteVenue": "hyperliquid",
+        "status": "skipped",
+        "reason": "Outside 120-second entry observation window"
+      },
+      "latest": {
+        "eventId": 16827,
+        "action": "ADDED",
+        "wallet": "0x4623f25b919105765874381af97721bc40fdc06e",
+        "market": "kPEPE",
+        "side": "LONG",
+        "publication": "2026-11-11T07:49:01.969Z",
+        "observedAt": "2026-11-11T07:51:33.757234+00:00",
+        "sourceVenue": "hyperliquid",
+        "paperQuoteVenue": "hyperliquid",
+        "status": "skipped",
+        "reason": "Outside 120-second entry observation window"
+      }
+    },
+    {
+      "eventId": 16828,
+      "receipts": 1,
+      "first": {
+        "eventId": 16828,
+        "action": "CLOSED",
+        "wallet": "0x8a29618627bb11b0437ca1c11af5898180944fa7",
+        "market": "ZEC",
+        "side": "LONG",
+        "publication": "2026-11-11T07:50:02.905Z",
+        "observedAt": "2026-11-11T07:51:33.757037+00:00",
+        "sourceVenue": "hyperliquid",
+        "paperQuoteVenue": "hyperliquid",
+        "exitDiscoveryAt": "2026-11-11T07:51:34.626382+00:00",
+        "sourcePublicationAt": "2026-11-11T07:50:02.905Z",
+        "lateDiscovery": false,
+        "exitPolicy": "Current observed book; never backdated to source close",
+        "status": "skipped",
+        "reason": "No prospectively copied opening"
+      },
+      "latest": {
+        "eventId": 16828,
+        "action": "CLOSED",
+        "wallet": "0x8a29618627bb11b0437ca1c11af5898180944fa7",
+        "market": "ZEC",
+        "side": "LONG",
+        "publication": "2026-11-11T07:50:02.905Z",
+        "observedAt": "2026-11-11T07:51:33.757037+00:00",
+        "sourceVenue": "hyperliquid",
+        "paperQuoteVenue": "hyperliquid",
+        "exitDiscoveryAt": "2026-11-11T07:51:34.626382+00:00",
+        "sourcePublicationAt": "2026-11-11T07:50:02.905Z",
+        "lateDiscovery": false,
+        "exitPolicy": "Current observed book; never backdated to source close",
+        "status": "skipped",
+        "reason": "No prospectively copied opening"
+      }
+    },
+    {
+      "eventId": 16829,
+      "receipts": 1,
+      "first": {
+        "eventId": 16829,
+        "action": "OPENED",
+        "wallet": "0x83be5a269a9a435bcd57d542bada53516ffb5092",
+        "market": "BTC",
+        "side": "SHORT",
+        "publication": "2026-11-11T07:52:02.954Z",
+        "observedAt": "2026-11-11T07:54:09.568810+00:00",
+        "sourceVenue": "hyperliquid",
+        "paperQuoteVenue": "hyperliquid",
+        "status": "skipped",
+        "reason": "Outside 120-second entry observation window"
+      },
+      "latest": {
+        "eventId": 16829,
+        "action": "OPENED",
+        "wallet": "0x83be5a269a9a435bcd57d542bada53516ffb5092",
+        "market": "BTC",
+        "side": "SHORT",
+        "publication": "2026-11-11T07:52:02.954Z",
+        "observedAt": "2026-11-11T07:54:09.568810+00:00",
+        "sourceVenue": "hyperliquid",
+        "paperQuoteVenue": "hyperliquid",
+        "status": "skipped",
+        "reason": "Outside 120-second entry observation window"
+      }
+    },
+    {
+      "eventId": 16836,
+      "receipts": 1,
+      "first": {
+        "eventId": 16836,
+        "action": "ADDED",
+        "wallet": "0x1b2987fc22923c61629ba1cb8900982f784c618d",
+        "market": "HYPE",
+        "side": "SHORT",
+        "publication": "2026-11-11T07:59:02.856Z",
+        "observedAt": "2026-11-11T07:59:20.530103+00:00",
+        "sourceVenue": "hyperliquid",
+        "paperQuoteVenue": "hyperliquid",
+        "status": "skipped",
+        "reason": "No prospectively copied opening"
+      },
+      "latest": {
+        "eventId": 16836,
+        "action": "ADDED",
+        "wallet": "0x1b2987fc22923c61629ba1cb8900982f784c618d",
+        "market": "HYPE",
+        "side": "SHORT",
+        "publication": "2026-11-11T07:59:02.856Z",
+        "observedAt": "2026-11-11T07:59:20.530103+00:00",
+        "sourceVenue": "hyperliquid",
+        "paperQuoteVenue": "hyperliquid",
+        "status": "skipped",
+        "reason": "No prospectively copied opening"
+      }
+    },
+    {
+      "eventId": 16837,
+      "receipts": 1,
+      "first": {
+        "eventId": 16837,
+        "action": "ADDED",
+        "wallet": "0x656479bffc5ae168ff19c11c6ed6b8b2d90261fc",
+        "market": "HYPE",
+        "side": "LONG",
+        "publication": "2026-11-11T07:59:02.876Z",
+        "observedAt": "2026-11-11T07:59:20.529930+00:00",
+        "sourceVenue": "hyperliquid",
+        "paperQuoteVenue": "hyperliquid",
+        "status": "skipped",
+        "reason": "No prospectively copied opening"
+      },
+      "latest": {
+        "eventId": 16837,
+        "action": "ADDED",
+        "wallet": "0x656479bffc5ae168ff19c11c6ed6b8b2d90261fc",
+        "market": "HYPE",
+        "side": "LONG",
+        "publication": "2026-11-11T07:59:02.876Z",
+        "observedAt": "2026-11-11T07:59:20.529930+00:00",
+        "sourceVenue": "hyperliquid",
+        "paperQuoteVenue": "hyperliquid",
+        "status": "skipped",
+        "reason": "No prospectively copied opening"
+      }
+    },
+    {
+      "eventId": 16838,
+      "receipts": 1,
+      "first": {
+        "eventId": 16838,
+        "action": "ADDED",
+        "wallet": "0x2522d52c115e0b38c6bd129c8a83252522f702d5",
+        "market": "ZEC",
+        "side": "SHORT",
+        "publication": "2026-11-11T08:02:02.915Z",
+        "observedAt": "2026-11-11T08:02:09.859037+00:00",
+        "sourceVenue": "hyperliquid",
+        "paperQuoteVenue": "hyperliquid",
+        "status": "skipped",
+        "reason": "No prospectively copied opening"
+      },
+      "latest": {
+        "eventId": 16838,
+        "action": "ADDED",
+        "wallet": "0x2522d52c115e0b38c6bd129c8a83252522f702d5",
+        "market": "ZEC",
+        "side": "SHORT",
+        "publication": "2026-11-11T08:02:02.915Z",
+        "observedAt": "2026-11-11T08:02:09.859037+00:00",
+        "sourceVenue": "hyperliquid",
+        "paperQuoteVenue": "hyperliquid",
+        "status": "skipped",
+        "reason": "No prospectively copied opening"
+      }
+    },
+    {
+      "eventId": 16839,
+      "receipts": 1,
+      "first": {
+        "eventId": 16839,
+        "action": "ADDED",
+        "wallet": "0x041517217f028ddfc15715a07d74df3e9695df5a",
+        "market": "ZEC",
+        "side": "LONG",
+        "publication": "2026-11-11T08:02:02.926Z",
+        "observedAt": "2026-11-11T08:02:09.858869+00:00",
+        "sourceVenue": "hyperliquid",
+        "paperQuoteVenue": "hyperliquid",
+        "status": "skipped",
+        "reason": "No prospectively copied opening"
+      },
+      "latest": {
+        "eventId": 16839,
+        "action": "ADDED",
+        "wallet": "0x041517217f028ddfc15715a07d74df3e9695df5a",
+        "market": "ZEC",
+        "side": "LONG",
+        "publication": "2026-11-11T08:02:02.926Z",
+        "observedAt": "2026-11-11T08:02:09.858869+00:00",
+        "sourceVenue": "hyperliquid",
+        "paperQuoteVenue": "hyperliquid",
+        "status": "skipped",
+        "reason": "No prospectively copied opening"
+      }
+    },
+    {
+      "eventId": 16840,
+      "receipts": 1,
+      "first": {
+        "eventId": 16840,
+        "action": "ADDED",
+        "wallet": "0x2dfe69fc6f1464e2d9905e0321aff8f98065fee7",
+        "market": "ETH",
+        "side": "LONG",
+        "publication": "2026-11-11T08:04:03.977Z",
+        "observedAt": "2026-11-11T08:04:14.598411+00:00",
+        "sourceVenue": "hyperliquid",
+        "paperQuoteVenue": "hyperliquid",
+        "status": "skipped",
+        "reason": "Side flip requires independently matched closing and opening legs"
+      },
+      "latest": {
+        "eventId": 16840,
+        "action": "ADDED",
+        "wallet": "0x2dfe69fc6f1464e2d9905e0321aff8f98065fee7",
+        "market": "ETH",
+        "side": "LONG",
+        "publication": "2026-11-11T08:04:03.977Z",
+        "observedAt": "2026-11-11T08:04:14.598411+00:00",
+        "sourceVenue": "hyperliquid",
+        "paperQuoteVenue": "hyperliquid",
+        "status": "skipped",
+        "reason": "Side flip requires independently matched closing and opening legs"
+      }
+    },
+    {
+      "eventId": 16842,
+      "receipts": 1,
+      "first": {
+        "eventId": 16842,
+        "action": "OPENED",
+        "wallet": "0xd4031b78f6721cfb24eb38f778d67be196fc8646",
+        "market": "BTC",
+        "side": "LONG",
+        "publication": "2026-11-11T08:07:02.674Z",
+        "observedAt": "2026-11-11T08:07:41.396051+00:00",
+        "sourceVenue": "hyperliquid",
+        "paperQuoteVenue": "hyperliquid",
+        "status": "skipped",
+        "reason": "Side flip requires independently matched closing and opening legs"
+      },
+      "latest": {
+        "eventId": 16842,
+        "action": "OPENED",
+        "wallet": "0xd4031b78f6721cfb24eb38f778d67be196fc8646",
+        "market": "BTC",
+        "side": "LONG",
+        "publication": "2026-11-11T08:07:02.674Z",
+        "observedAt": "2026-11-11T08:07:41.396051+00:00",
+        "sourceVenue": "hyperliquid",
+        "paperQuoteVenue": "hyperliquid",
+        "status": "skipped",
+        "reason": "Side flip requires independently matched closing and opening legs"
+      }
+    },
+    {
+      "eventId": 16846,
+      "receipts": 1,
+      "first": {
+        "eventId": 16846,
+        "action": "OPENED",
+        "wallet": "0x2522d52c115e0b38c6bd129c8a83252522f702d5",
+        "market": "BTC",
+        "side": "SHORT",
+        "publication": "2026-11-11T08:10:03.225Z",
+        "observedAt": "2026-11-11T08:10:25.747723+00:00",
+        "sourceVenue": "hyperliquid",
+        "paperQuoteVenue": "hyperliquid",
+        "status": "skipped",
+        "reason": "50 open paper position limit"
+      },
+      "latest": {
+        "eventId": 16846,
+        "action": "OPENED",
+        "wallet": "0x2522d52c115e0b38c6bd129c8a83252522f702d5",
+        "market": "BTC",
+        "side": "SHORT",
+        "publication": "2026-11-11T08:10:03.225Z",
+        "observedAt": "2026-11-11T08:10:25.747723+00:00",
+        "sourceVenue": "hyperliquid",
+        "paperQuoteVenue": "hyperliquid",
+        "status": "skipped",
+        "reason": "50 open paper position limit"
+      }
+    }
+  ],
+  "publicationToFirstObservedLatency": {
+    "n": 24,
+    "minSeconds": 6.932723,
+    "medianSeconds": 36.778808,
+    "maxSeconds": 151.788085,
+    "countsOverSeconds": {
+      "5": 24,
+      "30": 13,
+      "60": 5,
+      "120": 2
+    },
+    "interpretation": "Measured publication-to-observation only,not source-fill latency or simulated alternate fills. No5/30/60s replayable price paths inferred."
+  },
+  "genius": {
+    "cumulativeFromHistory": 57,
+    "active": 50,
+    "closed": 7,
+    "cash": 4981.144768331205,
+    "realizedBeforeFunding": 87.45476028331522,
+    "openEstimateBeforeFunding": 489.3890751469525,
+    "newLegs": [],
+    "newExecutedExits": [],
+    "quality": {
+      "at": "2026-11-11T08:13:13.900484+00:00",
+      "status": "Unvalidated website-alert simulation; source holdings and funding incomplete",
+      "copyPerformanceEligible": false,
+      "activePaperExposures": 50,
+      "closureWarningPositionIds": [
+        10652,
+        10736,
+        10936,
+        11128,
+        11154,
+        11438,
+        11451,
+        11464,
+        11511,
+        11777,
+        11798,
+        11841,
+        11904,
+        11945,
+        11949,
+        11956,
+        11974,
+        11995,
+        12076,
+        12122,
+        12445,
+        12839,
+        13388,
+        14155
+      ],
+      "closureWarningCount": 24,
+      "sourceCardNoLongerLiveCount": 11,
+      "subsequentOpeningPositionIds": [
+        10652,
+        10736,
+        10936,
+        11128,
+        11154,
+        11438,
+        11464,
+        11511,
+        11777,
+        11798,
+        11841,
+        11904,
+        11945,
+        11949,
+        11974,
+        11995,
+        12076,
+        12122,
+        12445,
+        12839,
+        14155
+      ],
+      "subsequentOpeningWarningCount": 21,
+      "warningExposureModeledPnlBeforeFunding": 222.94307657193846,
+      "otherUnverifiedExposureModeledPnlBeforeFunding": 270.62701569360627,
+      "totalModeledPnlBeforeFunding": 493.5700922655447,
+      "interpretation": "Warning subtotal assumes continued exposure despite non-live source cards or subsequent openings; neither subtotal is verified copier performance."
+    },
+    "archive": {
+      "at": "2026-11-11T08:10:25.752077+00:00",
+      "scope": "Saved original exits and copied-card ending revisions; uncaptured source history unknown",
+      "files": 155,
+      "bytesRead": 67029,
+      "exitCardsReviewed": 0,
+      "endingRevisionRowsReviewed": 0,
+      "newCardWarningsRecovered": 0,
+      "matchingExitIds": [
+        16710,
+        16479,
+        15815,
+        15248,
+        15176,
+        13000,
+        12838
+      ],
+      "backlogRemaining": false,
+      "errors": []
+    },
+    "concentration": {
+      "ZEC": 12,
+      "BTC": 19,
+      "UNI": 1,
+      "XMR": 1,
+      "HYPE": 4,
+      "LIT": 2,
+      "ETH": 6,
+      "XRP": 1,
+      "SOL": 3,
+      "kPEPE": 1
+    }
+  },
+  "scalp": {
+    "protocolVersion": "split-v4",
+    "families": {
+      "fresh": {
+        "total": 318,
+        "open": 4,
+        "closed": 314,
+        "closedPnlBeforeFunding": -35.83097358148981,
+        "milestones": {
+          "notional": {
+            "5": 9,
+            "10": 0,
+            "20": 0
+          },
+          "margin": {
+            "5": 94,
+            "10": 46,
+            "20": 29
+          }
+        }
+      },
+      "add_scalp": {
+        "total": 2140,
+        "open": 15,
+        "closed": 2125,
+        "closedPnlBeforeFunding": -760.3146389735147,
+        "milestones": {
+          "notional": {
+            "5": 5,
+            "10": 1,
+            "20": 0
+          },
+          "margin": {
+            "5": 450,
+            "10": 227,
+            "20": 82
+          }
+        }
+      }
+    },
+    "study": "github-portfolio-v3",
+    "initialEquity": 1000,
+    "equity": 200.76201310628394,
+    "realizedBeforeFunding": -796.1456125550045,
+    "openCloseEstimateBeforeFunding": -3.09237433871154,
+    "marginInUse": 126.92755783509999,
+    "available": 73.83445527118396,
+    "openCount": 19,
+    "closedCount": 2439,
+    "totalCount": 2458,
+    "maxOpen": 20,
+    "targetNotional": 200,
+    "maxPositionNotional": 350,
+    "stalePositions": [],
+    "milestones": {
+      "notional": {
+        "5": {
+          "hit": 14,
+          "total": 2458,
+          "unconfirmed": 2444
+        },
+        "10": {
+          "hit": 1,
+          "total": 2458,
+          "unconfirmed": 2457
+        },
+        "20": {
+          "hit": 0,
+          "total": 2458,
+          "unconfirmed": 2458
+        }
+      },
+      "margin": {
+        "5": {
+          "hit": 544,
+          "total": 2458,
+          "unconfirmed": 1914
+        },
+        "10": {
+          "hit": 273,
+          "total": 2458,
+          "unconfirmed": 2185
+        },
+        "20": {
+          "hit": 111,
+          "total": 2458,
+          "unconfirmed": 2347
+        }
+      }
+    },
+    "feesAssumedBps": 4.5,
+    "fundingComplete": false,
+    "at": "2026-11-11T08:13:35.965532+00:00",
+    "maxDrawdownObserved": 0.7996773098672224
+  },
+  "scalpStats": {
+    "closed": 2439,
+    "wins": 786,
+    "losses": 1653,
+    "winRate": 0.32226322263222634,
+    "expectancyBeforeFunding": -0.3264229653772056,
+    "profitFactor": 0.4613191064007814,
+    "payoffRatio": 0.9701787314001166,
+    "pathGapCount": 2398
+  },
+  "oracleCoverage": [
+    {
+      "run": "42974893370-1",
+      "receipts": 110,
+      "first": "2026-11-11T06:47:59.521929+00:00",
+      "last": "2026-11-11T07:42:29.681234+00:00",
+      "medianInterval": 29.993176,
+      "maxInterval": 30.300361,
+      "sha256": "fe9643925173b900514bd583891a276bab870eed76b5532698b291fbdf4840a5"
+    },
+    {
+      "run": "42981522696-1",
+      "receipts": 61,
+      "first": "2026-11-11T07:43:34.025192+00:00",
+      "last": "2026-11-11T08:13:34.262934+00:00",
+      "medianInterval": 29.994365000000002,
+      "maxInterval": 30.390135,
+      "sha256": "8b74ee5d380d8171008dab60856414bff44e627d458ca861432ee0f797b78cb1"
+    }
+  ],
+  "fundingAudit": {
+    "policy": "funding-hour-association-v1",
+    "boundary": "2026-11-11T08:00:00Z",
+    "actualRateRequests": {
+      "BTC": {
+        "request": {
+          "type": "fundingHistory",
+          "coin": "BTC",
+          "startTime": 1794383940000,
+          "endTime": 1794384060000
+        },
+        "requestStartedAtUTC": "2026-11-11T08:14:44.493944+00:00",
+        "status": "read",
+        "httpStatus": 200,
+        "responseSha256": "6d48c899e3db30fa0382da930b3e35355463b655883d9678621072539e772cb9",
+        "rawResponse": [
+          {
+            "coin": "BTC",
+            "fundingRate": "0.0000125",
+            "premium": "-0.0002722544",
+            "time": 1794384000021
+          }
+        ],
+        "responseReceivedAtUTC": "2026-11-11T08:14:49.945494+00:00"
+      },
+      "ETH": {
+        "request": {
+          "type": "fundingHistory",
+          "coin": "ETH",
+          "startTime": 1794383940000,
+          "endTime": 1794384060000
+        },
+        "requestStartedAtUTC": "2026-11-11T08:14:44.494996+00:00",
+        "status": "read",
+        "httpStatus": 200,
+        "responseSha256": "f74df381316ebf0ad52fbe9d44102575d25a43d84c851cd73cb85ba3fee0c361",
+        "rawResponse": [
+          {
+            "coin": "ETH",
+            "fundingRate": "0.0000125",
+            "premium": "-0.0003332162",
+            "time": 1794384000021
+          }
+        ],
+        "responseReceivedAtUTC": "2026-11-11T08:14:49.937786+00:00"
+      },
+      "SOL": {
+        "request": {
+          "type": "fundingHistory",
+          "coin": "SOL",
+          "startTime": 1794383940000,
+          "endTime": 1794384060000
+        },
+        "requestStartedAtUTC": "2026-11-11T08:14:44.495854+00:00",
+        "status": "read",
+        "httpStatus": 200,
+        "responseSha256": "0945b5a54b86a89dbc2f0421605b4dd0a3f501145ffb36b14679bec1caf1e417",
+        "rawResponse": [
+          {
+            "coin": "SOL",
+            "fundingRate": "0.0000125",
+            "premium": "-0.0003947986",
+            "time": 1794384000021
+          }
+        ],
+        "responseReceivedAtUTC": "2026-11-11T08:14:49.963648+00:00"
+      },
+      "XRP": {
+        "request": {
+          "type": "fundingHistory",
+          "coin": "XRP",
+          "startTime": 1794383940000,
+          "endTime": 1794384060000
+        },
+        "requestStartedAtUTC": "2026-11-11T08:14:49.937834+00:00",
+        "status": "read",
+        "httpStatus": 200,
+        "responseSha256": "b88c727c168611c2e02e1779371cfe2b82470236e34b3b3da09415d2391c3b9a",
+        "rawResponse": [
+          {
+            "coin": "XRP",
+            "fundingRate": "0.0000057073",
+            "premium": "-0.0004543419",
+            "time": 1794384000021
+          }
+        ],
+        "responseReceivedAtUTC": "2026-11-11T08:14:56.239328+00:00"
+      },
+      "ZEC": {
+        "request": {
+          "type": "fundingHistory",
+          "coin": "ZEC",
+          "startTime": 1794383940000,
+          "endTime": 1794384060000
+        },
+        "requestStartedAtUTC": "2026-11-11T08:14:49.945564+00:00",
+        "status": "read",
+        "httpStatus": 200,
+        "responseSha256": "3d8bb85bbb5fe1565f2bb4bbd98e7f5b8cdd228d3ba8de3305488c2e7cb17cce",
+        "rawResponse": [
+          {
+            "coin": "ZEC",
+            "fundingRate": "0.0000125",
+            "premium": "-0.0001913977",
+            "time": 1794384000021
+          }
+        ],
+        "responseReceivedAtUTC": "2026-11-11T08:14:56.258922+00:00"
+      },
+      "kPEPE": {
+        "request": {
+          "type": "fundingHistory",
+          "coin": "kPEPE",
+          "startTime": 1794383940000,
+          "endTime": 1794384060000
+        },
+        "requestStartedAtUTC": "2026-11-11T08:14:49.963698+00:00",
+        "status": "read",
+        "httpStatus": 200,
+        "responseSha256": "abbdd5d51761f82e0a4265650301d1360cc3914f899150ae13feb509e0c1a359",
+        "rawResponse": [
+          {
+            "coin": "kPEPE",
+            "fundingRate": "0.0000315984",
+            "premium": "0.000752787",
+            "time": 1794384000021
+          }
+        ],
+        "responseReceivedAtUTC": "2026-11-11T08:14:56.237520+00:00"
+      }
+    },
+    "selectedReceipt": {
+      "protocol": "oracle-funding-observation-v1",
+      "requestStartedAtUTC": "2026-11-11T07:59:33.699184+00:00",
+      "markets": [
+        "BTC",
+        "ETH",
+        "SOL",
+        "XRP",
+        "ZEC",
+        "kPEPE"
+      ],
+      "request": {
+        "type": "metaAndAssetCtxs"
+      },
+      "exactFunding": false,
+      "httpStatus": 200,
+      "responseSha256": "2c41a2c1d8efecad1df881ae26f6d2f63f8ead1729d3bb2d40eaf59ca225a803",
+      "contexts": {
+        "BTC": {
+          "status": "valid",
+          "universeIndex": 0,
+          "oraclePx": "74101.0",
+          "markPx": "74081.0",
+          "currentPredictedFunding": "0.0000125"
+        },
+        "ETH": {
+          "status": "valid",
+          "universeIndex": 1,
+          "oraclePx": "2070.44",
+          "markPx": "2069.7",
+          "currentPredictedFunding": "0.0000125"
+        },
+        "SOL": {
+          "status": "valid",
+          "universeIndex": 5,
+          "oraclePx": "83.4011",
+          "markPx": "83.366",
+          "currentPredictedFunding": "0.0000125"
+        },
+        "XRP": {
+          "status": "valid",
+          "universeIndex": 25,
+          "oraclePx": "1.0601",
+          "markPx": "1.0596",
+          "currentPredictedFunding": "0.0000057158"
+        },
+        "ZEC": {
+          "status": "valid",
+          "universeIndex": 214,
+          "oraclePx": "1002.1099",
+          "markPx": "1001.9",
+          "currentPredictedFunding": "0.0000125"
+        },
+        "kPEPE": {
+          "status": "valid",
+          "universeIndex": 15,
+          "oraclePx": "0.005253",
+          "markPx": "0.005256",
+          "currentPredictedFunding": "0.0000319235"
+        }
+      },
+      "status": "read",
+      "responseReceivedAtUTC": "2026-11-11T07:59:33.878875+00:00",
+      "monotonicDurationMs": 179.68393499995727,
+      "captureScheduler": "independent-clock-v1",
+      "marketSnapshotAtUTC": "2026-11-11T07:59:24.570884+00:00"
+    },
+    "oracleAgeSeconds": 26.121125,
+    "results": [
+      {
+        "protocol": "funding-hour-association-v1",
+        "positionId": 10652,
+        "market": "ZEC",
+        "wallHour": "2026-11-11T08:00:00Z",
+        "exactFunding": false,
+        "accountingChanged": false,
+        "status": "missing",
+        "reason": "Explicit source venue unavailable"
+      },
+      {
+        "protocol": "funding-hour-association-v1",
+        "positionId": 10677,
+        "market": "ZEC",
+        "wallHour": "2026-11-11T08:00:00Z",
+        "exactFunding": false,
+        "accountingChanged": false,
+        "status": "missing",
+        "reason": "Explicit source venue unavailable"
+      },
+      {
+        "protocol": "funding-hour-association-v1",
+        "positionId": 10721,
+        "market": "BTC",
+        "wallHour": "2026-11-11T08:00:00Z",
+        "exactFunding": false,
+        "accountingChanged": false,
+        "status": "missing",
+        "reason": "Explicit source venue unavailable"
+      },
+      {
+        "protocol": "funding-hour-association-v1",
+        "positionId": 10723,
+        "market": "BTC",
+        "wallHour": "2026-11-11T08:00:00Z",
+        "exactFunding": false,
+        "accountingChanged": false,
+        "status": "missing",
+        "reason": "Explicit source venue unavailable"
+      },
+      {
+        "protocol": "funding-hour-association-v1",
+        "positionId": 10728,
+        "market": "UNI",
+        "wallHour": "2026-11-11T08:00:00Z",
+        "exactFunding": false,
+        "accountingChanged": false,
+        "status": "missing",
+        "reason": "Explicit source venue unavailable"
+      },
+      {
+        "protocol": "funding-hour-association-v1",
+        "positionId": 10736,
+        "market": "XMR",
+        "wallHour": "2026-11-11T08:00:00Z",
+        "exactFunding": false,
+        "accountingChanged": false,
+        "status": "missing",
+        "reason": "Explicit source venue unavailable"
+      },
+      {
+        "protocol": "funding-hour-association-v1",
+        "positionId": 10936,
+        "market": "HYPE",
+        "wallHour": "2026-11-11T08:00:00Z",
+        "exactFunding": false,
+        "accountingChanged": false,
+        "status": "missing",
+        "reason": "Explicit source venue unavailable"
+      },
+      {
+        "protocol": "funding-hour-association-v1",
+        "positionId": 10944,
+        "market": "ETH",
+        "wallHour": "2026-11-11T08:00:00Z",
+        "exactFunding": false,
+        "accountingChanged": false,
+        "status": "missing",
+        "reason": "Explicit source venue unavailable"
+      },
+      {
+        "protocol": "funding-hour-association-v1",
+        "positionId": 11003,
+        "market": "BTC",
+        "wallHour": "2026-11-11T08:00:00Z",
+        "exactFunding": false,
+        "accountingChanged": false,
+        "status": "missing",
+        "reason": "Explicit source venue unavailable"
+      },
+      {
+        "protocol": "funding-hour-association-v1",
+        "positionId": 11020,
+        "market": "ZEC",
+        "wallHour": "2026-11-11T08:00:00Z",
+        "exactFunding": false,
+        "accountingChanged": false,
+        "status": "missing",
+        "reason": "Explicit source venue unavailable"
+      },
+      {
+        "protocol": "funding-hour-association-v1",
+        "positionId": 11040,
+        "market": "BTC",
+        "wallHour": "2026-11-11T08:00:00Z",
+        "exactFunding": false,
+        "accountingChanged": false,
+        "status": "missing",
+        "reason": "Explicit source venue unavailable"
+      },
+      {
+        "protocol": "funding-hour-association-v1",
+        "positionId": 11114,
+        "market": "BTC",
+        "wallHour": "2026-11-11T08:00:00Z",
+        "exactFunding": false,
+        "accountingChanged": false,
+        "status": "missing",
+        "reason": "Explicit source venue unavailable"
+      },
+      {
+        "protocol": "funding-hour-association-v1",
+        "positionId": 11128,
+        "market": "HYPE",
+        "wallHour": "2026-11-11T08:00:00Z",
+        "exactFunding": false,
+        "accountingChanged": false,
+        "status": "missing",
+        "reason": "Explicit source venue unavailable"
+      },
+      {
+        "protocol": "funding-hour-association-v1",
+        "positionId": 11154,
+        "market": "BTC",
+        "wallHour": "2026-11-11T08:00:00Z",
+        "exactFunding": false,
+        "accountingChanged": false,
+        "status": "missing",
+        "reason": "Explicit source venue unavailable"
+      },
+      {
+        "protocol": "funding-hour-association-v1",
+        "positionId": 11438,
+        "market": "BTC",
+        "wallHour": "2026-11-11T08:00:00Z",
+        "exactFunding": false,
+        "accountingChanged": false,
+        "status": "missing",
+        "reason": "Explicit source venue unavailable"
+      },
+      {
+        "protocol": "funding-hour-association-v1",
+        "positionId": 11451,
+        "market": "ZEC",
+        "wallHour": "2026-11-11T08:00:00Z",
+        "exactFunding": false,
+        "accountingChanged": false,
+        "status": "missing",
+        "reason": "Explicit source venue unavailable"
+      },
+      {
+        "protocol": "funding-hour-association-v1",
+        "positionId": 11453,
+        "market": "BTC",
+        "wallHour": "2026-11-11T08:00:00Z",
+        "exactFunding": false,
+        "accountingChanged": false,
+        "status": "missing",
+        "reason": "Explicit source venue unavailable"
+      },
+      {
+        "protocol": "funding-hour-association-v1",
+        "positionId": 11464,
+        "market": "HYPE",
+        "wallHour": "2026-11-11T08:00:00Z",
+        "exactFunding": false,
+        "accountingChanged": false,
+        "status": "missing",
+        "reason": "Explicit source venue unavailable"
+      },
+      {
+        "protocol": "funding-hour-association-v1",
+        "positionId": 11511,
+        "market": "HYPE",
+        "wallHour": "2026-11-11T08:00:00Z",
+        "exactFunding": false,
+        "accountingChanged": false,
+        "status": "missing",
+        "reason": "Explicit source venue unavailable"
+      },
+      {
+        "protocol": "funding-hour-association-v1",
+        "positionId": 11696,
+        "market": "BTC",
+        "wallHour": "2026-11-11T08:00:00Z",
+        "exactFunding": false,
+        "accountingChanged": false,
+        "status": "missing",
+        "reason": "Explicit source venue unavailable"
+      },
+      {
+        "protocol": "funding-hour-association-v1",
+        "positionId": 11777,
+        "market": "BTC",
+        "wallHour": "2026-11-11T08:00:00Z",
+        "exactFunding": false,
+        "accountingChanged": false,
+        "status": "missing",
+        "reason": "Explicit source venue unavailable"
+      },
+      {
+        "protocol": "funding-hour-association-v1",
+        "positionId": 11798,
+        "market": "ZEC",
+        "wallHour": "2026-11-11T08:00:00Z",
+        "exactFunding": false,
+        "accountingChanged": false,
+        "status": "missing",
+        "reason": "Explicit source venue unavailable"
+      },
+      {
+        "protocol": "funding-hour-association-v1",
+        "positionId": 11841,
+        "market": "BTC",
+        "wallHour": "2026-11-11T08:00:00Z",
+        "exactFunding": false,
+        "accountingChanged": false,
+        "status": "missing",
+        "reason": "Explicit source venue unavailable"
+      },
+      {
+        "protocol": "funding-hour-association-v1",
+        "positionId": 11867,
+        "market": "ZEC",
+        "wallHour": "2026-11-11T08:00:00Z",
+        "exactFunding": false,
+        "accountingChanged": false,
+        "status": "missing",
+        "reason": "Explicit source venue unavailable"
+      },
+      {
+        "protocol": "funding-hour-association-v1",
+        "positionId": 11877,
+        "market": "ZEC",
+        "wallHour": "2026-11-11T08:00:00Z",
+        "exactFunding": false,
+        "accountingChanged": false,
+        "status": "missing",
+        "reason": "Explicit source venue unavailable"
+      },
+      {
+        "protocol": "funding-hour-association-v1",
+        "positionId": 11904,
+        "market": "LIT",
+        "wallHour": "2026-11-11T08:00:00Z",
+        "exactFunding": false,
+        "accountingChanged": false,
+        "status": "missing",
+        "reason": "Explicit source venue unavailable"
+      },
+      {
+        "protocol": "funding-hour-association-v1",
+        "positionId": 11935,
+        "market": "ZEC",
+        "wallHour": "2026-11-11T08:00:00Z",
+        "exactFunding": false,
+        "accountingChanged": false,
+        "status": "missing",
+        "reason": "Explicit source venue unavailable"
+      },
+      {
+        "protocol": "funding-hour-association-v1",
+        "positionId": 11945,
+        "market": "BTC",
+        "wallHour": "2026-11-11T08:00:00Z",
+        "exactFunding": false,
+        "accountingChanged": false,
+        "status": "missing",
+        "reason": "Explicit source venue unavailable"
+      },
+      {
+        "protocol": "funding-hour-association-v1",
+        "positionId": 11949,
+        "market": "BTC",
+        "wallHour": "2026-11-11T08:00:00Z",
+        "exactFunding": false,
+        "accountingChanged": false,
+        "status": "missing",
+        "reason": "Explicit source venue unavailable"
+      },
+      {
+        "protocol": "funding-hour-association-v1",
+        "positionId": 11956,
+        "market": "BTC",
+        "wallHour": "2026-11-11T08:00:00Z",
+        "exactFunding": false,
+        "accountingChanged": false,
+        "status": "missing",
+        "reason": "Explicit source venue unavailable"
+      },
+      {
+        "protocol": "funding-hour-association-v1",
+        "positionId": 11974,
+        "market": "ZEC",
+        "wallHour": "2026-11-11T08:00:00Z",
+        "exactFunding": false,
+        "accountingChanged": false,
+        "status": "missing",
+        "reason": "Explicit source venue unavailable"
+      },
+      {
+        "protocol": "funding-hour-association-v1",
+        "positionId": 11986,
+        "market": "ZEC",
+        "wallHour": "2026-11-11T08:00:00Z",
+        "exactFunding": false,
+        "accountingChanged": false,
+        "status": "missing",
+        "reason": "Explicit source venue unavailable"
+      },
+      {
+        "protocol": "funding-hour-association-v1",
+        "positionId": 11995,
+        "market": "BTC",
+        "wallHour": "2026-11-11T08:00:00Z",
+        "exactFunding": false,
+        "accountingChanged": false,
+        "status": "missing",
+        "reason": "Explicit source venue unavailable"
+      },
+      {
+        "protocol": "funding-hour-association-v1",
+        "positionId": 12026,
+        "market": "BTC",
+        "wallHour": "2026-11-11T08:00:00Z",
+        "exactFunding": false,
+        "accountingChanged": false,
+        "status": "missing",
+        "reason": "Explicit source venue unavailable"
+      },
+      {
+        "protocol": "funding-hour-association-v1",
+        "positionId": 12076,
+        "market": "LIT",
+        "wallHour": "2026-11-11T08:00:00Z",
+        "exactFunding": false,
+        "accountingChanged": false,
+        "status": "missing",
+        "reason": "Explicit source venue unavailable"
+      },
+      {
+        "protocol": "funding-hour-association-v1",
+        "positionId": 12122,
+        "market": "BTC",
+        "wallHour": "2026-11-11T08:00:00Z",
+        "exactFunding": false,
+        "accountingChanged": false,
+        "status": "missing",
+        "reason": "Explicit source venue unavailable"
+      },
+      {
+        "protocol": "funding-hour-association-v1",
+        "positionId": 12148,
+        "market": "ZEC",
+        "wallHour": "2026-11-11T08:00:00Z",
+        "exactFunding": false,
+        "accountingChanged": false,
+        "status": "missing",
+        "reason": "Explicit source venue unavailable"
+      },
+      {
+        "protocol": "funding-hour-association-v1",
+        "positionId": 12250,
+        "market": "BTC",
+        "wallHour": "2026-11-11T08:00:00Z",
+        "exactFunding": false,
+        "accountingChanged": false,
+        "status": "excluded",
+        "reason": "No saved paper exposure at boundary"
+      },
+      {
+        "protocol": "funding-hour-association-v1",
+        "positionId": 12267,
+        "market": "ZEC",
+        "wallHour": "2026-11-11T08:00:00Z",
+        "exactFunding": false,
+        "accountingChanged": false,
+        "status": "excluded",
+        "reason": "No saved paper exposure at boundary"
+      },
+      {
+        "protocol": "funding-hour-association-v1",
+        "positionId": 12287,
+        "market": "ETH",
+        "wallHour": "2026-11-11T08:00:00Z",
+        "exactFunding": false,
+        "accountingChanged": false,
+        "status": "modeled",
+        "paperQuantity": 0.0897,
+        "signedQuantity": 0.0897,
+        "actualRateRecord": {
+          "coin": "ETH",
+          "fundingRate": "0.0000125",
+          "premium": "-0.0003332162",
+          "time": 1794384000021
+        },
+        "actualRateTime": 1794384000021,
+        "associationOffsetMs": 21.0,
+        "actualFundingRate": 1.25e-05,
+        "oraclePx": 2070.44,
+        "modeledUSDC": -0.00232148085,
+        "oracleReceivedAt": "2026-11-11T07:59:33.878875+00:00",
+        "oracleResponseSha256": "2c41a2c1d8efecad1df881ae26f6d2f63f8ead1729d3bb2d40eaf59ca225a803",
+        "sourceHoldingsVerified": false,
+        "limitation": "Modeled hour association and preceding oracle, not exact account funding"
+      },
+      {
+        "protocol": "funding-hour-association-v1",
+        "positionId": 12340,
+        "market": "ETH",
+        "wallHour": "2026-11-11T08:00:00Z",
+        "exactFunding": false,
+        "accountingChanged": false,
+        "status": "modeled",
+        "paperQuantity": 0.0894,
+        "signedQuantity": 0.0894,
+        "actualRateRecord": {
+          "coin": "ETH",
+          "fundingRate": "0.0000125",
+          "premium": "-0.0003332162",
+          "time": 1794384000021
+        },
+        "actualRateTime": 1794384000021,
+        "associationOffsetMs": 21.0,
+        "actualFundingRate": 1.25e-05,
+        "oraclePx": 2070.44,
+        "modeledUSDC": -0.0023137166999999998,
+        "oracleReceivedAt": "2026-11-11T07:59:33.878875+00:00",
+        "oracleResponseSha256": "2c41a2c1d8efecad1df881ae26f6d2f63f8ead1729d3bb2d40eaf59ca225a803",
+        "sourceHoldingsVerified": false,
+        "limitation": "Modeled hour association and preceding oracle, not exact account funding"
+      },
+      {
+        "protocol": "funding-hour-association-v1",
+        "positionId": 12348,
+        "market": "ETH",
+        "wallHour": "2026-11-11T08:00:00Z",
+        "exactFunding": false,
+        "accountingChanged": false,
+        "status": "modeled",
+        "paperQuantity": 0.0901,
+        "signedQuantity": 0.0901,
+        "actualRateRecord": {
+          "coin": "ETH",
+          "fundingRate": "0.0000125",
+          "premium": "-0.0003332162",
+          "time": 1794384000021
+        },
+        "actualRateTime": 1794384000021,
+        "associationOffsetMs": 21.0,
+        "actualFundingRate": 1.25e-05,
+        "oraclePx": 2070.44,
+        "modeledUSDC": -0.0023318330500000004,
+        "oracleReceivedAt": "2026-11-11T07:59:33.878875+00:00",
+        "oracleResponseSha256": "2c41a2c1d8efecad1df881ae26f6d2f63f8ead1729d3bb2d40eaf59ca225a803",
+        "sourceHoldingsVerified": false,
+        "limitation": "Modeled hour association and preceding oracle, not exact account funding"
+      },
+      {
+        "protocol": "funding-hour-association-v1",
+        "positionId": 12400,
+        "market": "ZEC",
+        "wallHour": "2026-11-11T08:00:00Z",
+        "exactFunding": false,
+        "accountingChanged": false,
+        "status": "modeled",
+        "paperQuantity": 0.14,
+        "signedQuantity": -0.14,
+        "actualRateRecord": {
+          "coin": "ZEC",
+          "fundingRate": "0.0000125",
+          "premium": "-0.0001913977",
+          "time": 1794384000021
+        },
+        "actualRateTime": 1794384000021,
+        "associationOffsetMs": 21.0,
+        "actualFundingRate": 1.25e-05,
+        "oraclePx": 1002.1099,
+        "modeledUSDC": 0.0017536923250000003,
+        "oracleReceivedAt": "2026-11-11T07:59:33.878875+00:00",
+        "oracleResponseSha256": "2c41a2c1d8efecad1df881ae26f6d2f63f8ead1729d3bb2d40eaf59ca225a803",
+        "sourceHoldingsVerified": false,
+        "limitation": "Modeled hour association and preceding oracle, not exact account funding"
+      },
+      {
+        "protocol": "funding-hour-association-v1",
+        "positionId": 12433,
+        "market": "XRP",
+        "wallHour": "2026-11-11T08:00:00Z",
+        "exactFunding": false,
+        "accountingChanged": false,
+        "status": "modeled",
+        "paperQuantity": 169.0,
+        "signedQuantity": -169.0,
+        "actualRateRecord": {
+          "coin": "XRP",
+          "fundingRate": "0.0000057073",
+          "premium": "-0.0004543419",
+          "time": 1794384000021
+        },
+        "actualRateTime": 1794384000021,
+        "associationOffsetMs": 21.0,
+        "actualFundingRate": 5.7073e-06,
+        "oraclePx": 1.0601,
+        "modeledUSDC": 0.0010225021753700002,
+        "oracleReceivedAt": "2026-11-11T07:59:33.878875+00:00",
+        "oracleResponseSha256": "2c41a2c1d8efecad1df881ae26f6d2f63f8ead1729d3bb2d40eaf59ca225a803",
+        "sourceHoldingsVerified": false,
+        "limitation": "Modeled hour association and preceding oracle, not exact account funding"
+      },
+      {
+        "protocol": "funding-hour-association-v1",
+        "positionId": 12441,
+        "market": "ZEC",
+        "wallHour": "2026-11-11T08:00:00Z",
+        "exactFunding": false,
+        "accountingChanged": false,
+        "status": "modeled",
+        "paperQuantity": 0.14,
+        "signedQuantity": -0.14,
+        "actualRateRecord": {
+          "coin": "ZEC",
+          "fundingRate": "0.0000125",
+          "premium": "-0.0001913977",
+          "time": 1794384000021
+        },
+        "actualRateTime": 1794384000021,
+        "associationOffsetMs": 21.0,
+        "actualFundingRate": 1.25e-05,
+        "oraclePx": 1002.1099,
+        "modeledUSDC": 0.0017536923250000003,
+        "oracleReceivedAt": "2026-11-11T07:59:33.878875+00:00",
+        "oracleResponseSha256": "2c41a2c1d8efecad1df881ae26f6d2f63f8ead1729d3bb2d40eaf59ca225a803",
+        "sourceHoldingsVerified": false,
+        "limitation": "Modeled hour association and preceding oracle, not exact account funding"
+      },
+      {
+        "protocol": "funding-hour-association-v1",
+        "positionId": 12445,
+        "market": "SOL",
+        "wallHour": "2026-11-11T08:00:00Z",
+        "exactFunding": false,
+        "accountingChanged": false,
+        "status": "modeled",
+        "paperQuantity": 2.21,
+        "signedQuantity": -2.21,
+        "actualRateRecord": {
+          "coin": "SOL",
+          "fundingRate": "0.0000125",
+          "premium": "-0.0003947986",
+          "time": 1794384000021
+        },
+        "actualRateTime": 1794384000021,
+        "associationOffsetMs": 21.0,
+        "actualFundingRate": 1.25e-05,
+        "oraclePx": 83.4011,
+        "modeledUSDC": 0.0023039553875,
+        "oracleReceivedAt": "2026-11-11T07:59:33.878875+00:00",
+        "oracleResponseSha256": "2c41a2c1d8efecad1df881ae26f6d2f63f8ead1729d3bb2d40eaf59ca225a803",
+        "sourceHoldingsVerified": false,
+        "limitation": "Modeled hour association and preceding oracle, not exact account funding"
+      },
+      {
+        "protocol": "funding-hour-association-v1",
+        "positionId": 12453,
+        "market": "SOL",
+        "wallHour": "2026-11-11T08:00:00Z",
+        "exactFunding": false,
+        "accountingChanged": false,
+        "status": "excluded",
+        "reason": "No saved paper exposure at boundary"
+      },
+      {
+        "protocol": "funding-hour-association-v1",
+        "positionId": 12459,
+        "market": "SOL",
+        "wallHour": "2026-11-11T08:00:00Z",
+        "exactFunding": false,
+        "accountingChanged": false,
+        "status": "modeled",
+        "paperQuantity": 2.23,
+        "signedQuantity": -2.23,
+        "actualRateRecord": {
+          "coin": "SOL",
+          "fundingRate": "0.0000125",
+          "premium": "-0.0003947986",
+          "time": 1794384000021
+        },
+        "actualRateTime": 1794384000021,
+        "associationOffsetMs": 21.0,
+        "actualFundingRate": 1.25e-05,
+        "oraclePx": 83.4011,
+        "modeledUSDC": 0.0023248056625000003,
+        "oracleReceivedAt": "2026-11-11T07:59:33.878875+00:00",
+        "oracleResponseSha256": "2c41a2c1d8efecad1df881ae26f6d2f63f8ead1729d3bb2d40eaf59ca225a803",
+        "sourceHoldingsVerified": false,
+        "limitation": "Modeled hour association and preceding oracle, not exact account funding"
+      },
+      {
+        "protocol": "funding-hour-association-v1",
+        "positionId": 12839,
+        "market": "ZEC",
+        "wallHour": "2026-11-11T08:00:00Z",
+        "exactFunding": false,
+        "accountingChanged": false,
+        "status": "modeled",
+        "paperQuantity": 0.15,
+        "signedQuantity": -0.15,
+        "actualRateRecord": {
+          "coin": "ZEC",
+          "fundingRate": "0.0000125",
+          "premium": "-0.0001913977",
+          "time": 1794384000021
+        },
+        "actualRateTime": 1794384000021,
+        "associationOffsetMs": 21.0,
+        "actualFundingRate": 1.25e-05,
+        "oraclePx": 1002.1099,
+        "modeledUSDC": 0.0018789560625000002,
+        "oracleReceivedAt": "2026-11-11T07:59:33.878875+00:00",
+        "oracleResponseSha256": "2c41a2c1d8efecad1df881ae26f6d2f63f8ead1729d3bb2d40eaf59ca225a803",
+        "sourceHoldingsVerified": false,
+        "limitation": "Modeled hour association and preceding oracle, not exact account funding"
+      },
+      {
+        "protocol": "funding-hour-association-v1",
+        "positionId": 12906,
+        "market": "BTC",
+        "wallHour": "2026-11-11T08:00:00Z",
+        "exactFunding": false,
+        "accountingChanged": false,
+        "status": "modeled",
+        "paperQuantity": 0.00263,
+        "signedQuantity": 0.00263,
+        "actualRateRecord": {
+          "coin": "BTC",
+          "fundingRate": "0.0000125",
+          "premium": "-0.0002722544",
+          "time": 1794384000021
+        },
+        "actualRateTime": 1794384000021,
+        "associationOffsetMs": 21.0,
+        "actualFundingRate": 1.25e-05,
+        "oraclePx": 74101.0,
+        "modeledUSDC": -0.002436070375,
+        "oracleReceivedAt": "2026-11-11T07:59:33.878875+00:00",
+        "oracleResponseSha256": "2c41a2c1d8efecad1df881ae26f6d2f63f8ead1729d3bb2d40eaf59ca225a803",
+        "sourceHoldingsVerified": false,
+        "limitation": "Modeled hour association and preceding oracle, not exact account funding"
+      },
+      {
+        "protocol": "funding-hour-association-v1",
+        "positionId": 12970,
+        "market": "kPEPE",
+        "wallHour": "2026-11-11T08:00:00Z",
+        "exactFunding": false,
+        "accountingChanged": false,
+        "status": "modeled",
+        "paperQuantity": 40016.0,
+        "signedQuantity": -40016.0,
+        "actualRateRecord": {
+          "coin": "kPEPE",
+          "fundingRate": "0.0000315984",
+          "premium": "0.000752787",
+          "time": 1794384000021
+        },
+        "actualRateTime": 1794384000021,
+        "associationOffsetMs": 21.0,
+        "actualFundingRate": 3.15984e-05,
+        "oraclePx": 0.005253,
+        "modeledUSDC": 0.0066421115903232,
+        "oracleReceivedAt": "2026-11-11T07:59:33.878875+00:00",
+        "oracleResponseSha256": "2c41a2c1d8efecad1df881ae26f6d2f63f8ead1729d3bb2d40eaf59ca225a803",
+        "sourceHoldingsVerified": false,
+        "limitation": "Modeled hour association and preceding oracle, not exact account funding"
+      },
+      {
+        "protocol": "funding-hour-association-v1",
+        "positionId": 13388,
+        "market": "ETH",
+        "wallHour": "2026-11-11T08:00:00Z",
+        "exactFunding": false,
+        "accountingChanged": false,
+        "status": "modeled",
+        "paperQuantity": 0.0934,
+        "signedQuantity": 0.0934,
+        "actualRateRecord": {
+          "coin": "ETH",
+          "fundingRate": "0.0000125",
+          "premium": "-0.0003332162",
+          "time": 1794384000021
+        },
+        "actualRateTime": 1794384000021,
+        "associationOffsetMs": 21.0,
+        "actualFundingRate": 1.25e-05,
+        "oraclePx": 2070.44,
+        "modeledUSDC": -0.0024172387,
+        "oracleReceivedAt": "2026-11-11T07:59:33.878875+00:00",
+        "oracleResponseSha256": "2c41a2c1d8efecad1df881ae26f6d2f63f8ead1729d3bb2d40eaf59ca225a803",
+        "sourceHoldingsVerified": false,
+        "limitation": "Modeled hour association and preceding oracle, not exact account funding"
+      },
+      {
+        "protocol": "funding-hour-association-v1",
+        "positionId": 13811,
+        "market": "ETH",
+        "wallHour": "2026-11-11T08:00:00Z",
+        "exactFunding": false,
+        "accountingChanged": false,
+        "status": "modeled",
+        "paperQuantity": 0.0939,
+        "signedQuantity": 0.0939,
+        "actualRateRecord": {
+          "coin": "ETH",
+          "fundingRate": "0.0000125",
+          "premium": "-0.0003332162",
+          "time": 1794384000021
+        },
+        "actualRateTime": 1794384000021,
+        "associationOffsetMs": 21.0,
+        "actualFundingRate": 1.25e-05,
+        "oraclePx": 2070.44,
+        "modeledUSDC": -0.0024301789500000004,
+        "oracleReceivedAt": "2026-11-11T07:59:33.878875+00:00",
+        "oracleResponseSha256": "2c41a2c1d8efecad1df881ae26f6d2f63f8ead1729d3bb2d40eaf59ca225a803",
+        "sourceHoldingsVerified": false,
+        "limitation": "Modeled hour association and preceding oracle, not exact account funding"
+      },
+      {
+        "protocol": "funding-hour-association-v1",
+        "positionId": 14155,
+        "market": "ZEC",
+        "wallHour": "2026-11-11T08:00:00Z",
+        "exactFunding": false,
+        "accountingChanged": false,
+        "status": "modeled",
+        "paperQuantity": 0.16,
+        "signedQuantity": 0.16,
+        "actualRateRecord": {
+          "coin": "ZEC",
+          "fundingRate": "0.0000125",
+          "premium": "-0.0001913977",
+          "time": 1794384000021
+        },
+        "actualRateTime": 1794384000021,
+        "associationOffsetMs": 21.0,
+        "actualFundingRate": 1.25e-05,
+        "oraclePx": 1002.1099,
+        "modeledUSDC": -0.0020042198000000005,
+        "oracleReceivedAt": "2026-11-11T07:59:33.878875+00:00",
+        "oracleResponseSha256": "2c41a2c1d8efecad1df881ae26f6d2f63f8ead1729d3bb2d40eaf59ca225a803",
+        "sourceHoldingsVerified": false,
+        "limitation": "Modeled hour association and preceding oracle, not exact account funding"
+      },
+      {
+        "protocol": "funding-hour-association-v1",
+        "positionId": 14230,
+        "market": "SOL",
+        "wallHour": "2026-11-11T08:00:00Z",
+        "exactFunding": false,
+        "accountingChanged": false,
+        "status": "modeled",
+        "paperQuantity": 2.27,
+        "signedQuantity": -2.27,
+        "actualRateRecord": {
+          "coin": "SOL",
+          "fundingRate": "0.0000125",
+          "premium": "-0.0003947986",
+          "time": 1794384000021
+        },
+        "actualRateTime": 1794384000021,
+        "associationOffsetMs": 21.0,
+        "actualFundingRate": 1.25e-05,
+        "oraclePx": 83.4011,
+        "modeledUSDC": 0.0023665062125,
+        "oracleReceivedAt": "2026-11-11T07:59:33.878875+00:00",
+        "oracleResponseSha256": "2c41a2c1d8efecad1df881ae26f6d2f63f8ead1729d3bb2d40eaf59ca225a803",
+        "sourceHoldingsVerified": false,
+        "limitation": "Modeled hour association and preceding oracle, not exact account funding"
+      },
+      {
+        "protocol": "funding-hour-association-v1",
+        "positionId": 15803,
+        "market": "BTC",
+        "wallHour": "2026-11-11T08:00:00Z",
+        "exactFunding": false,
+        "accountingChanged": false,
+        "status": "modeled",
+        "paperQuantity": 0.0027,
+        "signedQuantity": 0.0027,
+        "actualRateRecord": {
+          "coin": "BTC",
+          "fundingRate": "0.0000125",
+          "premium": "-0.0002722544",
+          "time": 1794384000021
+        },
+        "actualRateTime": 1794384000021,
+        "associationOffsetMs": 21.0,
+        "actualFundingRate": 1.25e-05,
+        "oraclePx": 74101.0,
+        "modeledUSDC": -0.00250090875,
+        "oracleReceivedAt": "2026-11-11T07:59:33.878875+00:00",
+        "oracleResponseSha256": "2c41a2c1d8efecad1df881ae26f6d2f63f8ead1729d3bb2d40eaf59ca225a803",
+        "sourceHoldingsVerified": false,
+        "limitation": "Modeled hour association and preceding oracle, not exact account funding"
+      },
+      {
+        "protocol": "funding-hour-association-v1",
+        "positionId": 16295,
+        "market": "ETH",
+        "wallHour": "2026-11-11T08:00:00Z",
+        "exactFunding": false,
+        "accountingChanged": false,
+        "status": "modeled",
+        "paperQuantity": 0.099,
+        "signedQuantity": 0.099,
+        "actualRateRecord": {
+          "coin": "ETH",
+          "fundingRate": "0.0000125",
+          "premium": "-0.0003332162",
+          "time": 1794384000021
+        },
+        "actualRateTime": 1794384000021,
+        "associationOffsetMs": 21.0,
+        "actualFundingRate": 1.25e-05,
+        "oraclePx": 2070.44,
+        "modeledUSDC": -0.0025621695,
+        "oracleReceivedAt": "2026-11-11T07:59:33.878875+00:00",
+        "oracleResponseSha256": "2c41a2c1d8efecad1df881ae26f6d2f63f8ead1729d3bb2d40eaf59ca225a803",
+        "sourceHoldingsVerified": false,
+        "limitation": "Modeled hour association and preceding oracle, not exact account funding"
+      }
+    ],
+    "counts": {
+      "missing": 37,
+      "excluded": 3,
+      "modeled": 17
+    },
+    "partialModeledUSDC": -0.0012715949343068006,
+    "sameEligibleIdsAsPriorHour": true,
+    "twoAuditedHourPartialUSDC": -0.013060606594491802,
+    "priorAuditCommit": "6880ab39941cde1fd9a127ea9d53fd5ee242efba",
+    "scope": "17 exposures for07Z and08Z only;37missingvenue/3noexposure. Partial model,not whole-account funding.",
+    "exactFunding": false,
+    "accountingChanged": false
+  },
+  "validation": "No code changes or redundant unit rerun; applied existing frozen selector and verified same17 modeled IDs across the two audits.",
+  "readiness": "Research-only; source identities,tier timestamps,lawful access,funding/liquidation incomplete; no demonstrated edge"
+}
