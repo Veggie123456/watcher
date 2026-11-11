@@ -3,3 +3,5 @@
 {"at":"2026-11-11T13:24:50.067742+00:00","error":"Command '['git', 'write-tree']' timed out after 60 seconds; local evidence/artifact retained, no upload assumed."}
 {"at":"2026-11-11T13:27:25.637746+00:00","error":"Command '['git', 'write-tree']' timed out after 60 seconds; local evidence/artifact retained, no upload assumed."}
 {"at":"2026-11-11T13:30:04.267480+00:00","error":"Command '['git', 'write-tree']' timed out after 60 seconds; local evidence/artifact retained, no upload assumed."}
+{"at":"2026-11-11T14:09:25.513097+00:00","market":"LIT","error":"<urlopen error [Errno 104] Connection reset by peer>"}
+{"at":"2026-11-11T14:09:25.515960+00:00","market":"PUMP","error":"<urlopen error [Errno 104] Connection reset by peer>"}
