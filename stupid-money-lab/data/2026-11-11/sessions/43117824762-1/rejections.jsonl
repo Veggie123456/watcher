@@ -2,3 +2,4 @@
 {"at":"2026-11-11T23:22:12.421980+00:00","eventId":17409,"reason":"History/stale alert; no backdated entry"}
 {"at":"2026-11-11T23:22:16.027478+00:00","eventId":17411,"reason":"Source leverage missing, unreadable or above venue limit; no matched-leverage fill"}
 {"at":"2026-11-11T23:24:51.669993+00:00","eventId":17414,"reason":"24h wallet/market cooldown"}
+{"at":"2026-11-11T23:33:19.516820+00:00","eventId":17422,"reason":"20 open funded positions maximum"}
