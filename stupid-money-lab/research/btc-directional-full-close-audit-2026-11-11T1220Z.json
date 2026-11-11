@@ -1,0 +1,2337 @@
+{
+  "stateCommit": "08dc628f1c5ec8d2883f00e230f369480cb98cd3",
+  "cutoff": "2026-11-11T12:20:32.539899+00:00",
+  "heartbeat": "2026-11-11T12:20:31.775562+00:00",
+  "website": "2026-11-11T12:20:09.439899+00:00",
+  "sourceStatus": "read",
+  "scan": {
+    "page": {
+      "at": "2026-11-11T12:22:02.236Z",
+      "status": "page_read",
+      "httpStatus": 200,
+      "hash": "e63419ebc2b64726f7b65122eea64d2cdddf30942894c931d7030a7dda8b0b17"
+    },
+    "live": {
+      "at": "2026-11-11T12:22:05.633Z",
+      "status": "page_read"
+    },
+    "cards": [
+      {
+        "id": 16971,
+        "action": "OPENED"
+      },
+      {
+        "id": 16969,
+        "action": "ADDED"
+      },
+      {
+        "id": 16967,
+        "action": "ADDED"
+      },
+      {
+        "id": 16966,
+        "action": "ADDED"
+      },
+      {
+        "id": 16965,
+        "action": "ADDED"
+      },
+      {
+        "id": 16963,
+        "action": "ADDED"
+      },
+      {
+        "id": 16961,
+        "action": "REDUCED"
+      },
+      {
+        "id": 16960,
+        "action": "ADDED"
+      },
+      {
+        "id": 16959,
+        "action": "ADDED"
+      },
+      {
+        "id": 16958,
+        "action": "ADDED"
+      },
+      {
+        "id": 16957,
+        "action": "ADDED"
+      },
+      {
+        "id": 16956,
+        "action": "ADDED"
+      },
+      {
+        "id": 16955,
+        "action": "ADDED"
+      },
+      {
+        "id": 16954,
+        "action": "ADDED"
+      },
+      {
+        "id": 16953,
+        "action": "ADDED"
+      },
+      {
+        "id": 16952,
+        "action": "ADDED"
+      },
+      {
+        "id": 16951,
+        "action": "ADDED"
+      },
+      {
+        "id": 16948,
+        "action": "ADDED"
+      },
+      {
+        "id": 16947,
+        "action": "ADDED"
+      },
+      {
+        "id": 16946,
+        "action": "ADDED"
+      }
+    ]
+  },
+  "coverage": {
+    "43004073523": {
+      "reads": 68,
+      "statuses": {
+        "read": 68
+      },
+      "first": "2026-11-11T10:30:10.916565+00:00",
+      "last": "2026-11-11T11:24:32.150008+00:00",
+      "maxGapSeconds": 157.331999
+    },
+    "43011784572": {
+      "reads": 65,
+      "statuses": {
+        "read": 65
+      },
+      "first": "2026-11-11T11:25:40.183176+00:00",
+      "last": "2026-11-11T12:20:09.439899+00:00",
+      "maxGapSeconds": 158.636572
+    }
+  },
+  "raw": {
+    "checks-43004073523": {
+      "path": "data/2026-11-11/sessions/43004073523-1/source-checks.jsonl",
+      "bytes": 10676,
+      "sha256": "feb014fe7ef66780d20f78caababc8d501b8f196e6e5b3207ede13c4950cff65"
+    },
+    "events-43004073523": {
+      "path": "data/2026-11-11/sessions/43004073523-1/events.jsonl",
+      "bytes": 326961,
+      "sha256": "e740c5bdf96d6a32fcbb9e69281bbf74885ba403127f96215b3c6d66b62a129a"
+    },
+    "checks-43011784572": {
+      "path": "data/2026-11-11/sessions/43011784572-1/source-checks.jsonl",
+      "bytes": 10205,
+      "sha256": "ec79d3ffffdc82a1f368c308d1da7e151a787c86c50b83e716eb1b97a04e429d"
+    },
+    "events-43011784572": {
+      "path": "data/2026-11-11/sessions/43011784572-1/events.jsonl",
+      "bytes": 333457,
+      "sha256": "70f7e8ba2895ba4b2ac664a896ee88c270c27a65f0c844275057aac2b09ac6a4"
+    }
+  },
+  "notYetPresentSession": {
+    "runId": 43019531181,
+    "checksHttpStatus": 404,
+    "eventsHttpStatus": 404,
+    "meaning": "Not in this immutable checkpoint; no collection claimed for this new run"
+  },
+  "handoffSeconds": 68.033168,
+  "newOriginals": [
+    {
+      "observedAt": "2026-11-11T11:18:13.526491+00:00",
+      "kind": "first_observation",
+      "event": {
+        "id": 16948,
+        "type": "SMART_FRESH",
+        "coin": "BTC",
+        "createdAt": "2026-11-11T11:18:02.200Z",
+        "occurredAt": "2026-11-11T11:18:00.356Z",
+        "payload": {
+          "side": "LONG",
+          "addPx": null,
+          "liqPx": 159802.69623450527,
+          "action": "ADDED",
+          "cohort": "SMART",
+          "wallet": "0x7d12ca15c85f0291631cfb9ab4ddc74f58322c18",
+          "entryPx": 76909.6,
+          "leverage": {
+            "type": "cross",
+            "value": 20
+          },
+          "marginUsd": 236357.048628,
+          "positionUsd": 5125455.89109,
+          "allTimePnlUsd": 22765191.767788,
+          "addedMarginUsd": 22714.029606800475
+        },
+        "tags": {
+          "0x7d12ca15c85f0291631cfb9ab4ddc74f58322c18": [
+            "WHALE"
+          ]
+        },
+        "perpPnl": 16676577.824837,
+        "allTimePnl": 16676577.824837,
+        "badges": {
+          "level": "smart-trader",
+          "secondary": [
+            "top-1000",
+            "mega-whale"
+          ]
+        },
+        "traderCard": {
+          "badges": [
+            "smart-trader",
+            "top-1000",
+            "mega-whale"
+          ],
+          "rank": 119,
+          "chips": [
+            {
+              "kind": "rank",
+              "label": "Trader Rank",
+              "value": "#119",
+              "url": "/trader/0x7d12ca15c85f0291631cfb9ab4ddc74f58322c18"
+            }
+          ],
+          "venue": "hyperliquid",
+          "pnl": {
+            "side": "long",
+            "entryPx": "76909.6",
+            "leverage": 20,
+            "sizeAbs": 109.34967,
+            "seedPx": "75968",
+            "live": true,
+            "sizeShrunk": false,
+            "frozen": null
+          }
+        }
+      },
+      "hash": "051ee07cf7f5e91a503e6d3a173ac907f3aae3321624ecf948469186bafb57c0"
+    },
+    {
+      "observedAt": "2026-11-11T11:31:04.529503+00:00",
+      "kind": "first_observation",
+      "event": {
+        "id": 16953,
+        "type": "SMART_FRESH",
+        "coin": "ETH",
+        "createdAt": "2026-11-11T11:29:02.151Z",
+        "occurredAt": "2026-11-11T11:29:00.253Z",
+        "payload": {
+          "side": "SHORT",
+          "addPx": 2060.3979187744726,
+          "liqPx": 10411.986228135213,
+          "action": "ADDED",
+          "cohort": "SMART",
+          "wallet": "0x4e41b13c878cfa39b6a3c33a6785dd87b595a78a",
+          "entryPx": 2085.4,
+          "leverage": {
+            "type": "cross",
+            "value": 20
+          },
+          "marginUsd": 192335.29456,
+          "positionUsd": 2549734.686949,
+          "allTimePnlUsd": 41002370.596878,
+          "addedMarginUsd": 16740.526527431797
+        },
+        "tags": {
+          "0x4e41b13c878cfa39b6a3c33a6785dd87b595a78a": [
+            "GIGA_WHALE"
+          ]
+        },
+        "perpPnl": 51232576.87774,
+        "allTimePnl": 51232576.87774,
+        "badges": {
+          "level": "smart-trader",
+          "secondary": [
+            "top-100",
+            "fund"
+          ]
+        },
+        "traderCard": {
+          "badges": [
+            "smart-trader",
+            "top-100",
+            "fund"
+          ],
+          "rank": 45,
+          "chips": [
+            {
+              "kind": "rank",
+              "label": "Trader Rank",
+              "value": "#45",
+              "url": "/trader/0x4e41b13c878cfa39b6a3c33a6785dd87b595a78a"
+            }
+          ],
+          "venue": "hyperliquid",
+          "pnl": {
+            "side": "short",
+            "entryPx": "2085.4",
+            "leverage": 20,
+            "sizeAbs": 2598.2071,
+            "seedPx": "2017",
+            "live": true,
+            "sizeShrunk": false,
+            "frozen": null
+          }
+        }
+      },
+      "hash": "211be3832f8719f4638c1813e345fb2a55a63db72342f12bfb2aff1e8d9eddb3"
+    },
+    {
+      "observedAt": "2026-11-11T11:31:04.529742+00:00",
+      "kind": "first_observation",
+      "event": {
+        "id": 16952,
+        "type": "SMART_FRESH",
+        "coin": "ZEC",
+        "createdAt": "2026-11-11T11:29:02.136Z",
+        "occurredAt": "2026-11-11T11:29:00.253Z",
+        "payload": {
+          "side": "SHORT",
+          "addPx": 954.9927272866454,
+          "liqPx": 12323.202669092127,
+          "action": "ADDED",
+          "cohort": "GENIUS",
+          "wallet": "0x656479bffc5ae168ff19c11c6ed6b8b2d90261fc",
+          "entryPx": 1024.7019,
+          "leverage": {
+            "type": "cross",
+            "value": 5
+          },
+          "marginUsd": 712618.46446,
+          "positionUsd": 2281335.7037,
+          "allTimePnlUsd": 184868153.530521,
+          "addedMarginUsd": 22653.862968301994
+        },
+        "tags": {
+          "0x656479bffc5ae168ff19c11c6ed6b8b2d90261fc": [
+            "VETERAN",
+            "GIGA_WHALE"
+          ]
+        },
+        "perpPnl": 267728162.518454,
+        "allTimePnl": 267728162.518454,
+        "badges": {
+          "level": "genius-trader",
+          "secondary": [
+            "top-100",
+            "fund",
+            "veteran",
+            "market-maker"
+          ]
+        },
+        "traderCard": {
+          "badges": [
+            "genius-trader",
+            "top-100",
+            "fund",
+            "veteran",
+            "market-maker"
+          ],
+          "rank": 3,
+          "chips": [
+            {
+              "kind": "rank",
+              "label": "Trader Rank",
+              "value": "#3",
+              "url": "/trader/0x656479bffc5ae168ff19c11c6ed6b8b2d90261fc"
+            }
+          ],
+          "venue": "hyperliquid",
+          "pnl": {
+            "side": "short",
+            "entryPx": "1024.7019",
+            "leverage": 5,
+            "sizeAbs": 2068.93,
+            "seedPx": "1001.76",
+            "live": true,
+            "sizeShrunk": false,
+            "frozen": null
+          }
+        }
+      },
+      "hash": "eba7bb29836501b6e79c86d0a23b826f26ed640407396543a5ea2e54aa886284"
+    },
+    {
+      "observedAt": "2026-11-11T11:31:04.529929+00:00",
+      "kind": "first_observation",
+      "event": {
+        "id": 16951,
+        "type": "SMART_FRESH",
+        "coin": "SOL",
+        "createdAt": "2026-11-11T11:29:02.076Z",
+        "occurredAt": "2026-11-11T11:29:00.253Z",
+        "payload": {
+          "side": "LONG",
+          "addPx": 83.36857782154418,
+          "liqPx": 239.80634735298582,
+          "action": "ADDED",
+          "cohort": "GENIUS",
+          "wallet": "0x4623f25b919105765874381af97721bc40fdc06e",
+          "entryPx": 85.124,
+          "leverage": {
+            "type": "cross",
+            "value": 20
+          },
+          "marginUsd": 55882.53001,
+          "positionUsd": 2597136.54074,
+          "allTimePnlUsd": 100550574.273682,
+          "addedMarginUsd": 20296.19487900653
+        },
+        "tags": {
+          "0x4623f25b919105765874381af97721bc40fdc06e": [
+            "VETERAN",
+            "WHALE"
+          ]
+        },
+        "perpPnl": 76743560.193335,
+        "allTimePnl": 76743560.193335,
+        "badges": {
+          "level": "genius-trader",
+          "secondary": [
+            "top-100",
+            "mega-whale",
+            "veteran"
+          ]
+        },
+        "traderCard": {
+          "badges": [
+            "genius-trader",
+            "top-100",
+            "mega-whale",
+            "veteran"
+          ],
+          "rank": 25,
+          "chips": [
+            {
+              "kind": "rank",
+              "label": "Trader Rank",
+              "value": "#25",
+              "url": "/trader/0x4623f25b919105765874381af97721bc40fdc06e"
+            }
+          ],
+          "venue": "hyperliquid",
+          "pnl": {
+            "side": "long",
+            "entryPx": "85.124",
+            "leverage": 20,
+            "sizeAbs": 29202.33,
+            "seedPx": "86.349",
+            "live": true,
+            "sizeShrunk": false,
+            "frozen": null
+          }
+        }
+      },
+      "hash": "d9dd8e0c57c4fe1744439f7254118f43f9c7e4f9ec3d510e0675e77440105ca0"
+    },
+    {
+      "observedAt": "2026-11-11T11:33:42.409025+00:00",
+      "kind": "first_observation",
+      "event": {
+        "id": 16954,
+        "type": "SMART_FRESH",
+        "coin": "BTC",
+        "createdAt": "2026-11-11T11:33:02.128Z",
+        "occurredAt": "2026-11-11T11:33:00.216Z",
+        "payload": {
+          "side": "LONG",
+          "addPx": 74012.07610786361,
+          "liqPx": 62997.130681847346,
+          "action": "ADDED",
+          "cohort": "GENIUS",
+          "wallet": "0xd4031b78f6721cfb24eb38f778d67be196fc8646",
+          "entryPx": 74676.2,
+          "leverage": {
+            "type": "cross",
+            "value": 30
+          },
+          "marginUsd": 24565.3568,
+          "positionUsd": 918417.47466,
+          "allTimePnlUsd": 169621.442865,
+          "addedMarginUsd": 14899.173381217966
+        },
+        "perpPnl": null,
+        "allTimePnl": null,
+        "badges": {
+          "level": "genius-trader",
+          "secondary": []
+        },
+        "traderCard": {
+          "badges": [
+            "genius-trader"
+          ],
+          "rank": 9095,
+          "chips": [
+            {
+              "kind": "rank",
+              "label": "Trader Rank",
+              "value": "#9,095",
+              "url": "/trader/0xd4031b78f6721cfb24eb38f778d67be196fc8646"
+            }
+          ],
+          "venue": "hyperliquid",
+          "pnl": {
+            "side": "long",
+            "entryPx": "74676.2",
+            "leverage": 30,
+            "sizeAbs": 22.21517,
+            "seedPx": "72046",
+            "live": true,
+            "sizeShrunk": false,
+            "frozen": null
+          }
+        }
+      },
+      "hash": "12a9be0426b816d97307de17c40d4f61f9f993a9da9f0b9875f879179fa34b19"
+    },
+    {
+      "observedAt": "2026-11-11T11:36:18.425073+00:00",
+      "kind": "first_observation",
+      "event": {
+        "id": 16956,
+        "type": "SMART_FRESH",
+        "coin": "XMR",
+        "createdAt": "2026-11-11T11:36:01.970Z",
+        "occurredAt": "2026-11-11T11:36:00.364Z",
+        "payload": {
+          "side": "LONG",
+          "addPx": 576.8595874778557,
+          "liqPx": 1901.1575727813695,
+          "action": "ADDED",
+          "cohort": "SMART",
+          "wallet": "0xeaac3e31aa732c1e378d2bb57e262d6caf9ad1d7",
+          "entryPx": 582.28,
+          "leverage": {
+            "type": "cross",
+            "value": 5
+          },
+          "marginUsd": 1784724.423452,
+          "positionUsd": 7106654.00834,
+          "allTimePnlUsd": 248265794.494448,
+          "addedMarginUsd": 42842.87414239626
+        },
+        "tags": {
+          "0xeaac3e31aa732c1e378d2bb57e262d6caf9ad1d7": [
+            "GIGA_WHALE"
+          ]
+        },
+        "perpPnl": 181545471.31483,
+        "allTimePnl": 181545471.31483,
+        "badges": {
+          "level": "smart-trader",
+          "secondary": [
+            "top-100",
+            "mega-whale"
+          ]
+        },
+        "traderCard": {
+          "badges": [
+            "smart-trader",
+            "top-100",
+            "mega-whale"
+          ],
+          "rank": 5,
+          "chips": [
+            {
+              "kind": "rank",
+              "label": "Trader Rank",
+              "value": "#5",
+              "url": "/trader/0xeaac3e31aa732c1e378d2bb57e262d6caf9ad1d7"
+            }
+          ],
+          "venue": "hyperliquid",
+          "pnl": {
+            "side": "long",
+            "entryPx": "582.28",
+            "leverage": 5,
+            "sizeAbs": 14583.766,
+            "seedPx": "565.385",
+            "live": true,
+            "sizeShrunk": false,
+            "frozen": null
+          }
+        }
+      },
+      "hash": "eabdda69082f7d0217b3196494192e0c2c2b56fa45752ac79c091a8fd860e6eb"
+    },
+    {
+      "observedAt": "2026-11-11T11:36:18.425257+00:00",
+      "kind": "first_observation",
+      "event": {
+        "id": 16955,
+        "type": "SMART_FRESH",
+        "coin": "HYPE",
+        "createdAt": "2026-11-11T11:36:01.959Z",
+        "occurredAt": "2026-11-11T11:36:00.364Z",
+        "payload": {
+          "side": "SHORT",
+          "addPx": 72.5272036534788,
+          "liqPx": 338.4754772226434,
+          "action": "ADDED",
+          "cohort": "SMART",
+          "wallet": "0x4e41b13c878cfa39b6a3c33a6785dd87b595a78a",
+          "entryPx": 75.5559,
+          "leverage": {
+            "type": "cross",
+            "value": 5
+          },
+          "marginUsd": 1121075.700726,
+          "positionUsd": 2313053.689996,
+          "allTimePnlUsd": 51427529.250834,
+          "addedMarginUsd": 48234.672649671964
+        },
+        "tags": {
+          "0x4e41b13c878cfa39b6a3c33a6785dd87b595a78a": [
+            "GIGA_WHALE"
+          ]
+        },
+        "perpPnl": 73249719.209925,
+        "allTimePnl": 73249719.209925,
+        "badges": {
+          "level": "smart-trader",
+          "secondary": [
+            "top-100",
+            "fund"
+          ]
+        },
+        "traderCard": {
+          "badges": [
+            "smart-trader",
+            "top-100",
+            "fund"
+          ],
+          "rank": 45,
+          "chips": [
+            {
+              "kind": "rank",
+              "label": "Trader Rank",
+              "value": "#45",
+              "url": "/trader/0x4e41b13c878cfa39b6a3c33a6785dd87b595a78a"
+            }
+          ],
+          "venue": "hyperliquid",
+          "pnl": {
+            "side": "short",
+            "entryPx": "75.5559",
+            "leverage": 5,
+            "sizeAbs": 67707.98,
+            "seedPx": "70.0541",
+            "live": true,
+            "sizeShrunk": false,
+            "frozen": null
+          }
+        }
+      },
+      "hash": "5d11bf1ea9f484f0f442965100e8e9bcff26a38bc8a2009ee4ac2a886a6eb6f9"
+    },
+    {
+      "observedAt": "2026-11-11T11:41:09.362550+00:00",
+      "kind": "first_observation",
+      "event": {
+        "id": 16957,
+        "type": "SMART_FRESH",
+        "coin": "BTC",
+        "createdAt": "2026-11-11T11:41:01.985Z",
+        "occurredAt": "2026-11-11T11:41:00.410Z",
+        "payload": {
+          "side": "SHORT",
+          "addPx": 73949.65753520784,
+          "liqPx": 87009.6516410949,
+          "action": "ADDED",
+          "cohort": "SMART",
+          "wallet": "0x5232a3f9ebcdbd9cc0e1867a89e646694deba9dc",
+          "entryPx": 71859.3,
+          "leverage": {
+            "type": "cross",
+            "value": 40
+          },
+          "marginUsd": 729340,
+          "positionUsd": 48940597,
+          "allTimePnlUsd": 20135434.323433,
+          "addedMarginUsd": 1378357.8142201474,
+          "flippedFrom": "LONG"
+        },
+        "tags": {
+          "0x5232a3f9ebcdbd9cc0e1867a89e646694deba9dc": [
+            "VETERAN",
+            "WHALE",
+            "HIGH_FREQUENCY"
+          ]
+        },
+        "perpPnl": 29992706.656227,
+        "allTimePnl": 29992706.656227,
+        "badges": {
+          "level": "smart-trader",
+          "secondary": [
+            "top-1000",
+            "whale",
+            "veteran"
+          ]
+        },
+        "traderCard": {
+          "badges": [
+            "smart-trader",
+            "top-1000",
+            "whale",
+            "veteran"
+          ],
+          "rank": 98,
+          "chips": [
+            {
+              "kind": "rank",
+              "label": "Trader Rank",
+              "value": "#98",
+              "url": "/trader/0x5232a3f9ebcdbd9cc0e1867a89e646694deba9dc"
+            }
+          ],
+          "venue": "hyperliquid",
+          "pnl": {
+            "side": "short",
+            "entryPx": "71859.3",
+            "leverage": 40,
+            "sizeAbs": 681,
+            "seedPx": "71757",
+            "live": true,
+            "sizeShrunk": false,
+            "frozen": null
+          }
+        }
+      },
+      "hash": "2f11a150f6c998b3dd89d041defa5b1307664fade8f999cc4c1dc31f476241a3"
+    },
+    {
+      "observedAt": "2026-11-11T11:43:20.267495+00:00",
+      "kind": "first_observation",
+      "event": {
+        "id": 16958,
+        "type": "SMART_FRESH",
+        "coin": "BTC",
+        "createdAt": "2026-11-11T11:43:02.862Z",
+        "occurredAt": "2026-11-11T11:43:00.428Z",
+        "payload": {
+          "side": "LONG",
+          "addPx": 73972.71227462126,
+          "liqPx": null,
+          "action": "ADDED",
+          "cohort": "GENIUS",
+          "wallet": "0x656479bffc5ae168ff19c11c6ed6b8b2d90261fc",
+          "entryPx": 72827.4,
+          "leverage": {
+            "type": "cross",
+            "value": 20
+          },
+          "marginUsd": 264002.03542,
+          "positionUsd": 8355337.11619,
+          "allTimePnlUsd": 230099086.067079,
+          "addedMarginUsd": 204262.43159223022
+        },
+        "tags": {
+          "0x656479bffc5ae168ff19c11c6ed6b8b2d90261fc": [
+            "VETERAN",
+            "GIGA_WHALE"
+          ]
+        },
+        "perpPnl": 327505391.542411,
+        "allTimePnl": 327505391.542411,
+        "badges": {
+          "level": "genius-trader",
+          "secondary": [
+            "top-100",
+            "fund",
+            "veteran",
+            "market-maker"
+          ]
+        },
+        "traderCard": {
+          "badges": [
+            "genius-trader",
+            "top-100",
+            "fund",
+            "veteran",
+            "market-maker"
+          ],
+          "rank": 5,
+          "chips": [
+            {
+              "kind": "rank",
+              "label": "Trader Rank",
+              "value": "#5",
+              "url": "/trader/0x656479bffc5ae168ff19c11c6ed6b8b2d90261fc"
+            }
+          ],
+          "venue": "hyperliquid",
+          "pnl": {
+            "side": "long",
+            "entryPx": "72827.4",
+            "leverage": 20,
+            "sizeAbs": 146.45921,
+            "seedPx": "75825",
+            "live": true,
+            "sizeShrunk": false,
+            "frozen": null
+          }
+        }
+      },
+      "hash": "c5f3f4af5cc1f11fe09a234e526aa913663e19fd2b749a0b2303c13a92a65a2a"
+    },
+    {
+      "observedAt": "2026-11-11T11:45:28.183060+00:00",
+      "kind": "first_observation",
+      "event": {
+        "id": 16959,
+        "type": "SMART_FRESH",
+        "coin": "BTC",
+        "createdAt": "2026-11-11T11:45:03.656Z",
+        "occurredAt": "2026-11-11T11:45:00.903Z",
+        "payload": {
+          "side": "LONG",
+          "addPx": 73941.67742339999,
+          "liqPx": 31774.919909652912,
+          "action": "ADDED",
+          "cohort": "SMART",
+          "wallet": "0xfef85d329791724d7878fe326aff183d66569f14",
+          "entryPx": 75228.4,
+          "leverage": {
+            "type": "cross",
+            "value": 26
+          },
+          "marginUsd": 107952.336709,
+          "positionUsd": 2098800.258337,
+          "allTimePnlUsd": 408149.72371,
+          "addedMarginUsd": 84005.77346695978
+        },
+        "perpPnl": null,
+        "allTimePnl": null,
+        "badges": {
+          "level": "smart-trader",
+          "secondary": [
+            "whale"
+          ]
+        },
+        "traderCard": {
+          "badges": [
+            "smart-trader",
+            "whale"
+          ],
+          "rank": 5908,
+          "chips": [
+            {
+              "kind": "rank",
+              "label": "Trader Rank",
+              "value": "#5,908",
+              "url": "/trader/0xfef85d329791724d7878fe326aff183d66569f14"
+            }
+          ],
+          "venue": "hyperliquid",
+          "pnl": {
+            "side": "long",
+            "entryPx": "75228.4",
+            "leverage": 26,
+            "sizeAbs": 34.84072,
+            "seedPx": "72625.2",
+            "live": true,
+            "sizeShrunk": false,
+            "frozen": null
+          }
+        }
+      },
+      "hash": "982b6bc7a56450abe94835b252c6d9d55e910fa700a9f88f841c8e9ad897cb75"
+    },
+    {
+      "observedAt": "2026-11-11T11:47:32.166778+00:00",
+      "kind": "first_observation",
+      "event": {
+        "id": 16960,
+        "type": "SMART_FRESH",
+        "coin": "HYPE",
+        "createdAt": "2026-11-11T11:47:01.912Z",
+        "occurredAt": "2026-11-11T11:47:00.261Z",
+        "payload": {
+          "side": "LONG",
+          "addPx": null,
+          "liqPx": null,
+          "action": "ADDED",
+          "cohort": "SMART",
+          "wallet": "0x3b8e9031ebc3458c27e78664b1fa7bd547f47659",
+          "entryPx": 75.11,
+          "leverage": {
+            "type": "cross",
+            "value": 6
+          },
+          "marginUsd": 122199.530859,
+          "positionUsd": 1070788.42588,
+          "allTimePnlUsd": 989304.3551,
+          "addedMarginUsd": 24300.886884305477
+        },
+        "tags": {
+          "0x3b8e9031ebc3458c27e78664b1fa7bd547f47659": [
+            "VETERAN"
+          ]
+        },
+        "perpPnl": 1067792.883065,
+        "allTimePnl": 1067792.883065,
+        "badges": {
+          "level": "smart-trader",
+          "secondary": [
+            "veteran"
+          ]
+        },
+        "traderCard": {
+          "badges": [
+            "smart-trader",
+            "veteran"
+          ],
+          "rank": 2629,
+          "chips": [
+            {
+              "kind": "rank",
+              "label": "Trader Rank",
+              "value": "#2,629",
+              "url": "/trader/0x3b8e9031ebc3458c27e78664b1fa7bd547f47659"
+            }
+          ],
+          "venue": "hyperliquid",
+          "pnl": {
+            "side": "long",
+            "entryPx": "75.11",
+            "leverage": 6,
+            "sizeAbs": 16877.27,
+            "seedPx": "70.339",
+            "live": true,
+            "sizeShrunk": false,
+            "frozen": null
+          }
+        }
+      },
+      "hash": "1ce720e681b5a97cc6fe544601799aaf899a734ab970a07469eb33c67a7978ba"
+    },
+    {
+      "observedAt": "2026-11-11T11:48:17.468688+00:00",
+      "kind": "first_observation",
+      "event": {
+        "id": 16961,
+        "type": "POSITION_CLOSED",
+        "coin": "NEAR",
+        "createdAt": "2026-11-11T11:48:02.073Z",
+        "occurredAt": "2026-11-11T11:48:00.251Z",
+        "payload": {
+          "side": "SHORT",
+          "action": "REDUCED",
+          "cohort": "SMART",
+          "exitPx": 3.6689,
+          "pnlUsd": -8643.698480373527,
+          "wallet": "0xc3717089edb81fd01b619f7cfa6baef95a6356ad",
+          "entryPx": 3.70069,
+          "leftUsd": 122717.29547,
+          "leverage": {
+            "type": "cross",
+            "value": 2
+          },
+          "pnlExact": false,
+          "closedPct": 78,
+          "closedUsd": 604529.5110655964,
+          "marginUsd": 534181.07613,
+          "allTimePnlUsd": 234258.216942
+        },
+        "perpPnl": 327253.161071,
+        "allTimePnl": 327253.161071,
+        "badges": {
+          "level": "smart-trader",
+          "secondary": []
+        },
+        "traderCard": {
+          "badges": [
+            "smart-trader"
+          ],
+          "rank": 2351,
+          "chips": [
+            {
+              "kind": "rank",
+              "label": "Trader Rank",
+              "value": "#2,351",
+              "url": "/trader/0xc3717089edb81fd01b619f7cfa6baef95a6356ad"
+            }
+          ],
+          "venue": "hyperliquid",
+          "pnl": {
+            "side": "short",
+            "entryPx": "3.70069",
+            "leverage": 2,
+            "sizeAbs": 25810.2,
+            "seedPx": "3.5913",
+            "live": true,
+            "sizeShrunk": true,
+            "frozen": null
+          }
+        }
+      },
+      "hash": "329f7f305b9835937f99fbdb040059e68f39d9440ea463875f46f26eed912415"
+    },
+    {
+      "observedAt": "2026-11-11T11:59:33.821493+00:00",
+      "kind": "first_observation",
+      "event": {
+        "id": 16963,
+        "type": "SMART_FRESH",
+        "coin": "HYPE",
+        "createdAt": "2026-11-11T11:59:02.174Z",
+        "occurredAt": "2026-11-11T11:59:00.498Z",
+        "payload": {
+          "side": "LONG",
+          "addPx": null,
+          "liqPx": 118.73386016216955,
+          "action": "ADDED",
+          "cohort": "SMART",
+          "wallet": "0xeaac3e31aa732c1e378d2bb57e262d6caf9ad1d7",
+          "entryPx": 81.5222,
+          "leverage": {
+            "type": "cross",
+            "value": 5
+          },
+          "marginUsd": 6278395.8598,
+          "positionUsd": 26483365.9694,
+          "allTimePnlUsd": 242003196.470209,
+          "addedMarginUsd": 23787.54535619768
+        },
+        "tags": {
+          "0xeaac3e31aa732c1e378d2bb57e262d6caf9ad1d7": [
+            "GIGA_WHALE"
+          ]
+        },
+        "perpPnl": 167785701.839667,
+        "allTimePnl": 167785701.839667,
+        "badges": {
+          "level": "smart-trader",
+          "secondary": [
+            "top-100",
+            "mega-whale"
+          ]
+        },
+        "traderCard": {
+          "badges": [
+            "smart-trader",
+            "top-100",
+            "mega-whale"
+          ],
+          "rank": 4,
+          "chips": [
+            {
+              "kind": "rank",
+              "label": "Trader Rank",
+              "value": "#4",
+              "url": "/trader/0xeaac3e31aa732c1e378d2bb57e262d6caf9ad1d7"
+            }
+          ],
+          "venue": "hyperliquid",
+          "pnl": {
+            "side": "long",
+            "entryPx": "81.5222",
+            "leverage": 5,
+            "sizeAbs": 321390.2,
+            "seedPx": "71.608",
+            "live": true,
+            "sizeShrunk": false,
+            "frozen": null
+          }
+        }
+      },
+      "hash": "4e3911f5a4d64c4773a42243be6aa52ddf2d6250e29ea95d28013de2545f07bd"
+    },
+    {
+      "observedAt": "2026-11-11T12:00:16.682264+00:00",
+      "kind": "first_observation",
+      "event": {
+        "id": 16965,
+        "type": "SMART_FRESH",
+        "coin": "HYPE",
+        "createdAt": "2026-11-11T12:00:03.142Z",
+        "occurredAt": "2026-11-11T12:00:00.501Z",
+        "payload": {
+          "side": "SHORT",
+          "addPx": 72.3179182365857,
+          "liqPx": null,
+          "action": "ADDED",
+          "cohort": "GENIUS",
+          "wallet": "0x628f303158bb4dc2f6e31acb6e0a1fb464626a08",
+          "entryPx": 70.914,
+          "leverage": {
+            "type": "cross",
+            "value": 3
+          },
+          "marginUsd": 47086.590453,
+          "positionUsd": 59281.83164,
+          "allTimePnlUsd": 22955616.974606,
+          "addedMarginUsd": 34437.30734131048
+        },
+        "tags": {
+          "0x628f303158bb4dc2f6e31acb6e0a1fb464626a08": [
+            "GIGA_WHALE"
+          ]
+        },
+        "perpPnl": 17283793.268707,
+        "allTimePnl": 17283793.268707,
+        "badges": {
+          "level": "genius-trader",
+          "secondary": [
+            "top-1000",
+            "mega-whale"
+          ]
+        },
+        "traderCard": {
+          "badges": [
+            "genius-trader",
+            "top-1000",
+            "mega-whale"
+          ],
+          "rank": 208,
+          "chips": [
+            {
+              "kind": "rank",
+              "label": "Trader Rank",
+              "value": "#208",
+              "url": "/trader/0x628f303158bb4dc2f6e31acb6e0a1fb464626a08"
+            }
+          ],
+          "venue": "hyperliquid",
+          "pnl": {
+            "side": "short",
+            "entryPx": "70.914",
+            "leverage": 3,
+            "sizeAbs": 1873.44,
+            "seedPx": "71.175",
+            "live": true,
+            "sizeShrunk": true,
+            "frozen": null
+          }
+        }
+      },
+      "hash": "cd858407863c9fc3759e5bc1980ef37513d8ace1b0e1733391cd3f26fc60f9c8"
+    },
+    {
+      "observedAt": "2026-11-11T12:03:06.725106+00:00",
+      "kind": "first_observation",
+      "event": {
+        "id": 16966,
+        "type": "SMART_FRESH",
+        "coin": "NEAR",
+        "createdAt": "2026-11-11T12:03:02.754Z",
+        "occurredAt": "2026-11-11T12:03:00.272Z",
+        "payload": {
+          "side": "SHORT",
+          "addPx": 3.657467916313754,
+          "liqPx": 12.98247650686688,
+          "action": "ADDED",
+          "cohort": "GENIUS",
+          "wallet": "0x4623f25b919105765874381af97721bc40fdc06e",
+          "entryPx": 3.53679,
+          "leverage": {
+            "type": "cross",
+            "value": 10
+          },
+          "marginUsd": 209374.948873,
+          "positionUsd": 1952572.072344,
+          "allTimePnlUsd": 63122699.531566,
+          "addedMarginUsd": 12986.857198363829
+        },
+        "tags": {
+          "0x4623f25b919105765874381af97721bc40fdc06e": [
+            "VETERAN",
+            "WHALE"
+          ]
+        },
+        "perpPnl": 41204744.376069,
+        "allTimePnl": 41204744.376069,
+        "badges": {
+          "level": "genius-trader",
+          "secondary": [
+            "top-100",
+            "mega-whale",
+            "veteran"
+          ]
+        },
+        "traderCard": {
+          "badges": [
+            "genius-trader",
+            "top-100",
+            "mega-whale",
+            "veteran"
+          ],
+          "rank": 43,
+          "chips": [
+            {
+              "kind": "rank",
+              "label": "Trader Rank",
+              "value": "#43",
+              "url": "/trader/0x4623f25b919105765874381af97721bc40fdc06e"
+            }
+          ],
+          "venue": "hyperliquid",
+          "pnl": {
+            "side": "short",
+            "entryPx": "3.53679",
+            "leverage": 10,
+            "sizeAbs": 416916.7,
+            "seedPx": "3.862",
+            "live": true,
+            "sizeShrunk": false,
+            "frozen": null
+          }
+        }
+      },
+      "hash": "558f76d69b30d1e397a18e9ea8897e4536575bed546096ca75aceb355c6e71e5"
+    },
+    {
+      "observedAt": "2026-11-11T12:04:35.042210+00:00",
+      "kind": "first_observation",
+      "event": {
+        "id": 16967,
+        "type": "SMART_FRESH",
+        "coin": "NEAR",
+        "createdAt": "2026-11-11T12:04:02.731Z",
+        "occurredAt": "2026-11-11T12:04:00.328Z",
+        "payload": {
+          "side": "LONG",
+          "addPx": 3.627056605006059,
+          "liqPx": 8.211366792889718,
+          "action": "ADDED",
+          "cohort": "SMART",
+          "wallet": "0x5a499efccd4e98778b32cc5cf20c97d46e0cc96d",
+          "entryPx": 3.66995,
+          "leverage": {
+            "type": "cross",
+            "value": 10
+          },
+          "marginUsd": 111737.074585,
+          "positionUsd": 1089210.93286,
+          "allTimePnlUsd": 23349704.622166,
+          "addedMarginUsd": 17195.521231729806,
+          "flippedFrom": "SHORT"
+        },
+        "tags": {
+          "0x5a499efccd4e98778b32cc5cf20c97d46e0cc96d": [
+            "VETERAN"
+          ]
+        },
+        "perpPnl": 42011487.209257,
+        "allTimePnl": 42011487.209257,
+        "badges": {
+          "level": "smart-trader",
+          "secondary": [
+            "top-100",
+            "whale",
+            "veteran"
+          ]
+        },
+        "traderCard": {
+          "badges": [
+            "smart-trader",
+            "top-100",
+            "whale",
+            "veteran"
+          ],
+          "rank": 63,
+          "chips": [
+            {
+              "kind": "rank",
+              "label": "Trader Rank",
+              "value": "#63",
+              "url": "/trader/0x5a499efccd4e98778b32cc5cf20c97d46e0cc96d"
+            }
+          ],
+          "venue": "hyperliquid",
+          "pnl": {
+            "side": "long",
+            "entryPx": "3.66995",
+            "leverage": 10,
+            "sizeAbs": 417500.6,
+            "seedPx": "3.908",
+            "live": true,
+            "sizeShrunk": false,
+            "frozen": null
+          }
+        }
+      },
+      "hash": "4273e9887d30e48e3b2c645bd213cdb322e0e00302d0125f9b6cd1d37dc54be8"
+    },
+    {
+      "observedAt": "2026-11-11T12:18:44.459838+00:00",
+      "kind": "first_observation",
+      "event": {
+        "id": 16969,
+        "type": "SMART_FRESH",
+        "coin": "BTC",
+        "createdAt": "2026-11-11T12:18:02.718Z",
+        "occurredAt": "2026-11-11T12:18:00.396Z",
+        "payload": {
+          "side": "SHORT",
+          "addPx": 73983.1966359731,
+          "liqPx": 156055.09687606033,
+          "action": "ADDED",
+          "cohort": "SMART",
+          "wallet": "0x7d12ca15c85f0291631cfb9ab4ddc74f58322c18",
+          "entryPx": 76211.6,
+          "leverage": {
+            "type": "cross",
+            "value": 20
+          },
+          "marginUsd": 271581.490483,
+          "positionUsd": 8190865.34516,
+          "allTimePnlUsd": 13075814.22506,
+          "addedMarginUsd": 65545.1401401732
+        },
+        "tags": {
+          "0x7d12ca15c85f0291631cfb9ab4ddc74f58322c18": [
+            "WHALE"
+          ]
+        },
+        "perpPnl": 29506745.706967,
+        "allTimePnl": 29506745.706967,
+        "badges": {
+          "level": "smart-trader",
+          "secondary": [
+            "top-1000",
+            "mega-whale"
+          ]
+        },
+        "traderCard": {
+          "badges": [
+            "smart-trader",
+            "top-1000",
+            "mega-whale"
+          ],
+          "rank": 229,
+          "chips": [
+            {
+              "kind": "rank",
+              "label": "Trader Rank",
+              "value": "#229",
+              "url": "/trader/0x7d12ca15c85f0291631cfb9ab4ddc74f58322c18"
+            }
+          ],
+          "venue": "hyperliquid",
+          "pnl": {
+            "side": "short",
+            "entryPx": "76211.6",
+            "leverage": 20,
+            "sizeAbs": 73.71814,
+            "seedPx": "71676",
+            "live": true,
+            "sizeShrunk": false,
+            "frozen": null
+          }
+        }
+      },
+      "hash": "e7fe3542bf4a24c9df53aa9e047803cec30d4e5e907cd011c43e27eb176b5afa"
+    },
+    {
+      "observedAt": "2026-11-11T12:19:26.575370+00:00",
+      "kind": "first_observation",
+      "event": {
+        "id": 16971,
+        "type": "SMART_FRESH",
+        "coin": "BTC",
+        "createdAt": "2026-11-11T12:19:01.898Z",
+        "occurredAt": "2026-11-11T12:19:00.275Z",
+        "payload": {
+          "side": "LONG",
+          "liqPx": 42246.03415945839,
+          "action": "OPENED",
+          "cohort": "GENIUS",
+          "wallet": "0xe9d1a3a94ac91084fda4d28cf780625fa15afc59",
+          "entryPx": 75618.1,
+          "leverage": {
+            "type": "cross",
+            "value": 20
+          },
+          "marginUsd": 44513.3,
+          "positionUsd": 500960,
+          "allTimePnlUsd": 3461179.064757,
+          "addedMarginUsd": null
+        },
+        "perpPnl": 4843735.550418,
+        "allTimePnl": 4843735.550418,
+        "badges": {
+          "level": "genius-trader",
+          "secondary": [
+            "top-1000"
+          ]
+        },
+        "traderCard": {
+          "badges": [
+            "genius-trader",
+            "top-1000"
+          ],
+          "rank": 436,
+          "chips": [
+            {
+              "kind": "rank",
+              "label": "Trader Rank",
+              "value": "#436",
+              "url": "/trader/0xe9d1a3a94ac91084fda4d28cf780625fa15afc59"
+            }
+          ],
+          "venue": "hyperliquid",
+          "pnl": {
+            "side": "long",
+            "entryPx": "75618.1",
+            "leverage": 20,
+            "sizeAbs": 13,
+            "seedPx": "75124",
+            "live": true,
+            "sizeShrunk": false,
+            "frozen": null
+          }
+        }
+      },
+      "hash": "2a29aabcfe735f646dd647e05b6dd8c08fe17276c9b7fc1c747fea3f0f33055c"
+    }
+  ],
+  "newCounts": {
+    "total": 18,
+    "actions": {
+      "ADDED": 16,
+      "REDUCED": 1,
+      "OPENED": 1
+    },
+    "tiers": {
+      "SMART": 11,
+      "GENIUS": 7
+    }
+  },
+  "latency": {
+    "n": 18,
+    "min": 3.971106,
+    "median": 24.602215,
+    "max": 122.453929,
+    "over120": 3
+  },
+  "newExitChecks": [
+    {
+      "eventId": 16961,
+      "matches": [],
+      "firstDecision": {
+        "eventId": 16961,
+        "action": "REDUCED",
+        "wallet": "0xc3717089edb81fd01b619f7cfa6baef95a6356ad",
+        "market": "NEAR",
+        "side": "SHORT",
+        "publication": "2026-11-11T11:48:02.073Z",
+        "observedAt": "2026-11-11T11:48:17.468822+00:00",
+        "sourceVenue": "hyperliquid",
+        "paperQuoteVenue": "hyperliquid",
+        "exitDiscoveryAt": "2026-11-11T11:48:18.244324+00:00",
+        "sourcePublicationAt": "2026-11-11T11:48:02.073Z",
+        "lateDiscovery": false,
+        "exitPolicy": "Current observed book; never backdated to source close",
+        "status": "skipped",
+        "reason": "No prospectively copied opening"
+      }
+    }
+  ],
+  "genius": {
+    "total": 57,
+    "open": 50,
+    "closed": 7,
+    "cash": 4981.144768331205,
+    "realized": 87.45476028331522,
+    "openPnl": 506.52206908899643,
+    "newLegs": 0,
+    "stats": {
+      "n": 7,
+      "wins": 6,
+      "losses": 1,
+      "winrate": 0.8571428571428571,
+      "expectancy": 12.493537183330746,
+      "profitFactor": 5.084867611165938,
+      "payoff": 0.8474779351943231
+    },
+    "concentration": {
+      "ZEC": 12,
+      "BTC": 19,
+      "UNI": 1,
+      "XMR": 1,
+      "HYPE": 4,
+      "LIT": 2,
+      "ETH": 6,
+      "XRP": 1,
+      "SOL": 3,
+      "kPEPE": 1
+    },
+    "qualitySeparateQuotes": {
+      "at": "2026-11-11T12:20:10.205882+00:00",
+      "status": "Unvalidated website-alert simulation; source holdings and funding incomplete",
+      "copyPerformanceEligible": false,
+      "activePaperExposures": 50,
+      "closureWarningPositionIds": [
+        10652,
+        10736,
+        10936,
+        11128,
+        11154,
+        11438,
+        11451,
+        11464,
+        11511,
+        11777,
+        11798,
+        11841,
+        11904,
+        11945,
+        11949,
+        11956,
+        11974,
+        11995,
+        12076,
+        12122,
+        12445,
+        12839,
+        13388,
+        14155
+      ],
+      "closureWarningCount": 24,
+      "sourceCardNoLongerLiveCount": 11,
+      "subsequentOpeningPositionIds": [
+        10652,
+        10736,
+        10936,
+        11128,
+        11154,
+        11438,
+        11464,
+        11511,
+        11777,
+        11798,
+        11841,
+        11904,
+        11945,
+        11949,
+        11974,
+        11995,
+        12076,
+        12122,
+        12445,
+        12839,
+        14155
+      ],
+      "subsequentOpeningWarningCount": 21,
+      "warningExposureModeledPnlBeforeFunding": 223.99768817714659,
+      "otherUnverifiedExposureModeledPnlBeforeFunding": 280.66721748566573,
+      "totalModeledPnlBeforeFunding": 504.6649056628123,
+      "interpretation": "Warning subtotal assumes continued exposure despite non-live source cards or subsequent openings; neither subtotal is verified copier performance."
+    },
+    "archive": {
+      "at": "2026-11-11T12:15:10.350554+00:00",
+      "scope": "Saved original exits and copied-card ending revisions; uncaptured source history unknown",
+      "files": 159,
+      "bytesRead": 9313,
+      "exitCardsReviewed": 0,
+      "endingRevisionRowsReviewed": 0,
+      "newCardWarningsRecovered": 0,
+      "matchingExitIds": [
+        16710,
+        16479,
+        15815,
+        15248,
+        15176,
+        13000,
+        12838
+      ],
+      "backlogRemaining": false,
+      "errors": []
+    }
+  },
+  "scalp": {
+    "protocolVersion": "split-v4",
+    "families": {
+      "fresh": {
+        "total": 329,
+        "open": 1,
+        "closed": 328,
+        "closedPnlBeforeFunding": -42.00767919221141,
+        "milestones": {
+          "notional": {
+            "5": 9,
+            "10": 0,
+            "20": 0
+          },
+          "margin": {
+            "5": 96,
+            "10": 48,
+            "20": 29
+          }
+        }
+      },
+      "add_scalp": {
+        "total": 2190,
+        "open": 11,
+        "closed": 2179,
+        "closedPnlBeforeFunding": -764.8054820469894,
+        "milestones": {
+          "notional": {
+            "5": 5,
+            "10": 1,
+            "20": 0
+          },
+          "margin": {
+            "5": 460,
+            "10": 233,
+            "20": 84
+          }
+        }
+      }
+    },
+    "study": "github-portfolio-v3",
+    "initialEquity": 1000,
+    "equity": 191.76598742269425,
+    "realizedBeforeFunding": -806.8131612392008,
+    "openCloseEstimateBeforeFunding": -1.4208513381049679,
+    "marginInUse": 66.1571442675,
+    "available": 125.60884315519425,
+    "openCount": 12,
+    "closedCount": 2507,
+    "totalCount": 2519,
+    "maxOpen": 20,
+    "targetNotional": 200,
+    "maxPositionNotional": 350,
+    "stalePositions": [],
+    "milestones": {
+      "notional": {
+        "5": {
+          "hit": 14,
+          "total": 2519,
+          "unconfirmed": 2505
+        },
+        "10": {
+          "hit": 1,
+          "total": 2519,
+          "unconfirmed": 2518
+        },
+        "20": {
+          "hit": 0,
+          "total": 2519,
+          "unconfirmed": 2519
+        }
+      },
+      "margin": {
+        "5": {
+          "hit": 556,
+          "total": 2519,
+          "unconfirmed": 1963
+        },
+        "10": {
+          "hit": 281,
+          "total": 2519,
+          "unconfirmed": 2238
+        },
+        "20": {
+          "hit": 113,
+          "total": 2519,
+          "unconfirmed": 2406
+        }
+      }
+    },
+    "feesAssumedBps": 4.5,
+    "fundingComplete": false,
+    "at": "2026-11-11T12:20:32.539703+00:00",
+    "maxDrawdownObserved": 0.8088388884479962,
+    "stats": {
+      "n": 2507,
+      "wins": 805,
+      "losses": 1702,
+      "winrate": 0.3211009174311927,
+      "expectancy": -0.32182415685648214,
+      "profitFactor": 0.4602871663935177,
+      "payoff": 0.9731785803748659
+    },
+    "newEntries": 13,
+    "newClasses": {
+      "add_scalp": 12,
+      "fresh": 1
+    },
+    "newClosures": 19,
+    "pathGaps": 2464
+  },
+  "fullCloseAudit": {
+    "wallet": "0x656479bffc5ae168ff19c11c6ed6b8b2d90261fc",
+    "positionId": 11154,
+    "scope": "All retained same-wallet BTC exit decisions, independently verifying both full-close originals in exact saved session archives. No claim of exhaustive external source history.",
+    "uniqueExitDecisions": [
+      {
+        "eventId": 14488,
+        "action": "REDUCED",
+        "wallet": "0x656479bffc5ae168ff19c11c6ed6b8b2d90261fc",
+        "market": "BTC",
+        "side": "LONG",
+        "publication": "2026-11-09T08:00:08.935Z",
+        "observedAt": "2026-11-09T08:00:39.507076+00:00",
+        "sourceVenue": "hyperliquid",
+        "paperQuoteVenue": "hyperliquid",
+        "exitDiscoveryAt": "2026-11-09T08:00:40.643694+00:00",
+        "sourcePublicationAt": "2026-11-09T08:00:08.935Z",
+        "lateDiscovery": false,
+        "exitPolicy": "Current observed book; never backdated to source close",
+        "status": "skipped",
+        "reason": "No prospectively copied opening"
+      },
+      {
+        "eventId": 14562,
+        "action": "REDUCED",
+        "wallet": "0x656479bffc5ae168ff19c11c6ed6b8b2d90261fc",
+        "market": "BTC",
+        "side": "LONG",
+        "publication": "2026-11-09T09:03:03.728Z",
+        "observedAt": "2026-11-09T09:03:31.881564+00:00",
+        "sourceVenue": "hyperliquid",
+        "paperQuoteVenue": "hyperliquid",
+        "exitDiscoveryAt": "2026-11-09T09:03:35.504937+00:00",
+        "sourcePublicationAt": "2026-11-09T09:03:03.728Z",
+        "lateDiscovery": false,
+        "exitPolicy": "Current observed book; never backdated to source close",
+        "status": "skipped",
+        "reason": "No prospectively copied opening"
+      },
+      {
+        "eventId": 14576,
+        "action": "CLOSED",
+        "wallet": "0x656479bffc5ae168ff19c11c6ed6b8b2d90261fc",
+        "market": "BTC",
+        "side": "LONG",
+        "publication": "2026-11-09T09:30:07.568Z",
+        "observedAt": "2026-11-09T09:30:22.501885+00:00",
+        "sourceVenue": "hyperliquid",
+        "paperQuoteVenue": "hyperliquid",
+        "exitDiscoveryAt": "2026-11-09T09:30:23.531502+00:00",
+        "sourcePublicationAt": "2026-11-09T09:30:07.568Z",
+        "lateDiscovery": false,
+        "exitPolicy": "Current observed book; never backdated to source close",
+        "status": "skipped",
+        "reason": "No prospectively copied opening"
+      },
+      {
+        "eventId": 15176,
+        "action": "REDUCED",
+        "wallet": "0x656479bffc5ae168ff19c11c6ed6b8b2d90261fc",
+        "market": "BTC",
+        "side": "SHORT",
+        "publication": "2026-11-10T00:00:05.958Z",
+        "observedAt": "2026-11-10T00:00:42.767390+00:00",
+        "sourceVenue": "hyperliquid",
+        "paperQuoteVenue": "hyperliquid",
+        "exitDiscoveryAt": "2026-11-10T00:00:43.548767+00:00",
+        "sourcePublicationAt": "2026-11-10T00:00:05.958Z",
+        "lateDiscovery": false,
+        "exitPolicy": "Current observed book; never backdated to source close",
+        "status": "skipped",
+        "reason": "Lifecycle unresolved or out of order",
+        "priorUnresolvedReason": "Source reported a side flip without a separately matched close",
+        "priorUnresolvedCategory": "unspecified"
+      },
+      {
+        "eventId": 15815,
+        "action": "REDUCED",
+        "wallet": "0x656479bffc5ae168ff19c11c6ed6b8b2d90261fc",
+        "market": "BTC",
+        "side": "SHORT",
+        "publication": "2026-11-10T15:35:04.722Z",
+        "observedAt": "2026-11-10T15:35:16.619454+00:00",
+        "sourceVenue": "hyperliquid",
+        "paperQuoteVenue": "hyperliquid",
+        "exitDiscoveryAt": "2026-11-10T15:35:17.482273+00:00",
+        "sourcePublicationAt": "2026-11-10T15:35:04.722Z",
+        "lateDiscovery": false,
+        "exitPolicy": "Current observed book; never backdated to source close",
+        "status": "skipped",
+        "reason": "Lifecycle unresolved or out of order",
+        "priorUnresolvedReason": "Source reported a side flip without a separately matched close",
+        "priorUnresolvedCategory": "unspecified"
+      },
+      {
+        "eventId": 16003,
+        "action": "CLOSED",
+        "wallet": "0x656479bffc5ae168ff19c11c6ed6b8b2d90261fc",
+        "market": "BTC",
+        "side": "LONG",
+        "publication": "2026-11-10T15:45:08.133Z",
+        "observedAt": "2026-11-10T15:45:26.231838+00:00",
+        "sourceVenue": "hyperliquid",
+        "paperQuoteVenue": "hyperliquid",
+        "exitDiscoveryAt": "2026-11-10T15:45:27.197982+00:00",
+        "sourcePublicationAt": "2026-11-10T15:45:08.133Z",
+        "lateDiscovery": false,
+        "exitPolicy": "Current observed book; never backdated to source close",
+        "status": "skipped",
+        "reason": "No prospectively copied opening"
+      },
+      {
+        "eventId": 16479,
+        "action": "REDUCED",
+        "wallet": "0x656479bffc5ae168ff19c11c6ed6b8b2d90261fc",
+        "market": "BTC",
+        "side": "SHORT",
+        "publication": "2026-11-10T20:20:04.194Z",
+        "observedAt": "2026-11-10T20:20:08.656401+00:00",
+        "sourceVenue": "hyperliquid",
+        "paperQuoteVenue": "hyperliquid",
+        "exitDiscoveryAt": "2026-11-10T20:20:09.421415+00:00",
+        "sourcePublicationAt": "2026-11-10T20:20:04.194Z",
+        "lateDiscovery": false,
+        "exitPolicy": "Current observed book; never backdated to source close",
+        "status": "skipped",
+        "reason": "Lifecycle unresolved or out of order",
+        "priorUnresolvedReason": "Source reported a side flip without a separately matched close",
+        "priorUnresolvedCategory": "unspecified"
+      },
+      {
+        "eventId": 16710,
+        "action": "REDUCED",
+        "wallet": "0x656479bffc5ae168ff19c11c6ed6b8b2d90261fc",
+        "market": "BTC",
+        "side": "SHORT",
+        "publication": "2026-11-11T02:55:04.074Z",
+        "observedAt": "2026-11-11T02:55:45.013518+00:00",
+        "sourceVenue": "hyperliquid",
+        "paperQuoteVenue": "hyperliquid",
+        "exitDiscoveryAt": "2026-11-11T02:55:45.751156+00:00",
+        "sourcePublicationAt": "2026-11-11T02:55:04.074Z",
+        "lateDiscovery": false,
+        "exitPolicy": "Current observed book; never backdated to source close",
+        "status": "skipped",
+        "reason": "Lifecycle unresolved or out of order",
+        "priorUnresolvedReason": "Source reported a side flip without a separately matched close",
+        "priorUnresolvedCategory": "unspecified"
+      }
+    ],
+    "rawFiles": [
+      {
+        "path": "data/2026-11-09/sessions/42590571398-1/events.jsonl",
+        "bytes": 474368,
+        "sha256": "f11fead6015a4fddf5a4d4ed35f0e76f9b2665176b99f4d89b0803a2c0ae31f8",
+        "targetEventId": 14576,
+        "rowCount": 13,
+        "originalCount": 1,
+        "revisionCount": 12,
+        "rowSummaries": [
+          {
+            "kind": "first_observation",
+            "observedAt": "2026-11-09T09:30:22.501800+00:00",
+            "hash": "27012267fbc8bd204d7c5ea9766c1f446440dc4ce75bf045c3fe2ebb105d8e4e",
+            "action": "CLOSED",
+            "side": "LONG"
+          },
+          {
+            "kind": "revision",
+            "observedAt": "2026-11-09T09:33:42.830797+00:00",
+            "hash": "a7954c82468ae69147fa5f809731996edfae2e8e07b32ad90958bd5d703eed96",
+            "action": "CLOSED",
+            "side": "LONG"
+          },
+          {
+            "kind": "revision",
+            "observedAt": "2026-11-09T09:34:22.901267+00:00",
+            "hash": "a28952f57c7daf4c4f06d961e12dba00a43bd435f88d8c06bed3aaca7f6534cc",
+            "action": "CLOSED",
+            "side": "LONG"
+          },
+          {
+            "kind": "revision",
+            "observedAt": "2026-11-09T09:37:04.112711+00:00",
+            "hash": "1d0dd50e8b2e4cd7e9791301f3b35e8916a3c776f00c1a3dca5b6147dee66ca5",
+            "action": "CLOSED",
+            "side": "LONG"
+          },
+          {
+            "kind": "revision",
+            "observedAt": "2026-11-09T09:38:26.838803+00:00",
+            "hash": "93646fed9bc9aee70151ad2d94c93e538bc76983558fd766b7e1373d106162bd",
+            "action": "CLOSED",
+            "side": "LONG"
+          },
+          {
+            "kind": "revision",
+            "observedAt": "2026-11-09T09:39:06.413849+00:00",
+            "hash": "aa4d9b4c024a4d131a2bd26bad961a001d7aae4a649e46c5b34328b270926e7a",
+            "action": "CLOSED",
+            "side": "LONG"
+          },
+          {
+            "kind": "revision",
+            "observedAt": "2026-11-09T09:44:30.815270+00:00",
+            "hash": "b5e17c8edba4f80b48c75d2013409090f0ff9c6290b5d39552d3ddc600bdf971",
+            "action": "CLOSED",
+            "side": "LONG"
+          },
+          {
+            "kind": "revision",
+            "observedAt": "2026-11-09T09:45:10.812029+00:00",
+            "hash": "54477dae1fe9babccbef9a64647402eb9b723b1d75042b9163b89574dfd85117",
+            "action": "CLOSED",
+            "side": "LONG"
+          },
+          {
+            "kind": "revision",
+            "observedAt": "2026-11-09T09:48:34.580826+00:00",
+            "hash": "9cdefc4f14ec13165f5d95850c40e9199b35e6b46046fc09842b701466fba4b5",
+            "action": "CLOSED",
+            "side": "LONG"
+          },
+          {
+            "kind": "revision",
+            "observedAt": "2026-11-09T09:53:19.551671+00:00",
+            "hash": "fea47589b6c439846358193415336cab37d8051ae9482e7d25a755a3efc8203b",
+            "action": "CLOSED",
+            "side": "LONG"
+          },
+          {
+            "kind": "revision",
+            "observedAt": "2026-11-09T09:54:03.426486+00:00",
+            "hash": "4db0242db5af5cf0c7208f70a6796f56020ac5d3772cbc175eb13d1e9ba42dd8",
+            "action": "CLOSED",
+            "side": "LONG"
+          },
+          {
+            "kind": "revision",
+            "observedAt": "2026-11-09T09:57:26.454198+00:00",
+            "hash": "5f9cecf76852491919df416fab43cd95012ad795831861eeea277d7e2f3c6cc7",
+            "action": "CLOSED",
+            "side": "LONG"
+          },
+          {
+            "kind": "revision",
+            "observedAt": "2026-11-09T09:59:30.913726+00:00",
+            "hash": "ef53ce14d02459b54fec25f7870c6216288a94e85862a593f86f8ca25d8257b2",
+            "action": "CLOSED",
+            "side": "LONG"
+          }
+        ],
+        "firstOriginal": {
+          "observedAt": "2026-11-09T09:30:22.501800+00:00",
+          "kind": "first_observation",
+          "event": {
+            "id": 14576,
+            "type": "POSITION_CLOSED",
+            "coin": "BTC",
+            "createdAt": "2026-11-09T09:30:07.568Z",
+            "occurredAt": "2026-11-09T09:30:03.040Z",
+            "payload": {
+              "side": "LONG",
+              "action": "CLOSED",
+              "cohort": "GENIUS",
+              "exitPx": 74289,
+              "pnlUsd": 11378.72792217243,
+              "wallet": "0x656479bffc5ae168ff19c11c6ed6b8b2d90261fc",
+              "entryPx": 72487.3,
+              "leftUsd": 0,
+              "leverage": {
+                "type": "cross",
+                "value": 20
+              },
+              "pnlExact": false,
+              "closedPct": 100,
+              "closedUsd": 3926770.20639,
+              "marginUsd": 144856.43724,
+              "allTimePnlUsd": 166569169.00392
+            },
+            "tags": {
+              "0x656479bffc5ae168ff19c11c6ed6b8b2d90261fc": [
+                "VETERAN",
+                "GIGA_WHALE"
+              ]
+            },
+            "perpPnl": 228737350.0719,
+            "allTimePnl": 228737350.0719,
+            "badges": {
+              "level": "genius-trader",
+              "secondary": [
+                "top-100",
+                "fund",
+                "veteran",
+                "market-maker"
+              ]
+            },
+            "traderCard": {
+              "badges": [
+                "genius-trader",
+                "top-100",
+                "fund",
+                "veteran",
+                "market-maker"
+              ],
+              "rank": 3,
+              "chips": [
+                {
+                  "kind": "rank",
+                  "label": "Trader Rank",
+                  "value": "#3",
+                  "url": "/trader/0x656479bffc5ae168ff19c11c6ed6b8b2d90261fc"
+                }
+              ],
+              "venue": "hyperliquid",
+              "pnl": null
+            }
+          },
+          "hash": "27012267fbc8bd204d7c5ea9766c1f446440dc4ce75bf045c3fe2ebb105d8e4e"
+        },
+        "latestRevision": {
+          "observedAt": "2026-11-09T09:59:30.913726+00:00",
+          "kind": "revision",
+          "event": {
+            "id": 14576,
+            "type": "POSITION_CLOSED",
+            "coin": "BTC",
+            "createdAt": "2026-11-09T09:30:07.568Z",
+            "occurredAt": "2026-11-09T09:30:03.040Z",
+            "payload": {
+              "side": "LONG",
+              "action": "CLOSED",
+              "cohort": "GENIUS",
+              "exitPx": 74289,
+              "pnlUsd": 19830.477432760108,
+              "wallet": "0x656479bffc5ae168ff19c11c6ed6b8b2d90261fc",
+              "entryPx": 72532.3,
+              "leftUsd": 0,
+              "leverage": {
+                "type": "cross",
+                "value": 20
+              },
+              "pnlExact": false,
+              "closedPct": 100,
+              "closedUsd": 3502537.38914,
+              "marginUsd": 132420.71012,
+              "allTimePnlUsd": 139003837.13543
+            },
+            "tags": {
+              "0x656479bffc5ae168ff19c11c6ed6b8b2d90261fc": [
+                "VETERAN",
+                "GIGA_WHALE"
+              ]
+            },
+            "perpPnl": 284240368.975702,
+            "allTimePnl": 284240368.975702,
+            "badges": {
+              "level": "genius-trader",
+              "secondary": [
+                "top-100",
+                "fund",
+                "veteran",
+                "market-maker"
+              ]
+            },
+            "traderCard": {
+              "badges": [
+                "genius-trader",
+                "top-100",
+                "fund",
+                "veteran",
+                "market-maker"
+              ],
+              "rank": 3,
+              "chips": [
+                {
+                  "kind": "rank",
+                  "label": "Trader Rank",
+                  "value": "#3",
+                  "url": "/trader/0x656479bffc5ae168ff19c11c6ed6b8b2d90261fc"
+                }
+              ],
+              "venue": "hyperliquid",
+              "pnl": null
+            }
+          },
+          "hash": "ef53ce14d02459b54fec25f7870c6216288a94e85862a593f86f8ca25d8257b2"
+        }
+      },
+      {
+        "path": "data/2026-11-10/sessions/42840229385-1/events.jsonl",
+        "bytes": 837942,
+        "sha256": "65be9f9aec69d0de34e83e22a22c52e71eaac67c372cd8c77eb8048bd1f7c6da",
+        "targetEventId": 16003,
+        "rowCount": 4,
+        "originalCount": 1,
+        "revisionCount": 3,
+        "rowSummaries": [
+          {
+            "kind": "first_observation",
+            "observedAt": "2026-11-10T15:45:26.231767+00:00",
+            "hash": "e9052f6b1f910afbfb367b5db815afce2d6c7f1aa71e1271753158931e1b36e4",
+            "action": "CLOSED",
+            "side": "LONG"
+          },
+          {
+            "kind": "revision",
+            "observedAt": "2026-11-10T15:46:09.953923+00:00",
+            "hash": "1b1a50849b28aed28a3b8d6e96e5be49881fabd47eb8f09733ed074514d95d45",
+            "action": "CLOSED",
+            "side": "LONG"
+          },
+          {
+            "kind": "revision",
+            "observedAt": "2026-11-10T15:48:20.904508+00:00",
+            "hash": "cf1d17e8a9d8b44090c7947e2cc480c6d030fbeaf1abac0157fb11bea665585b",
+            "action": "CLOSED",
+            "side": "LONG"
+          },
+          {
+            "kind": "revision",
+            "observedAt": "2026-11-10T15:49:44.637309+00:00",
+            "hash": "ff97bd7b2c72d8729bdef8e5da85debf9d459c12c58d818868195356dbb88ec8",
+            "action": "CLOSED",
+            "side": "LONG"
+          }
+        ],
+        "firstOriginal": {
+          "observedAt": "2026-11-10T15:45:26.231767+00:00",
+          "kind": "first_observation",
+          "event": {
+            "id": 16003,
+            "type": "POSITION_CLOSED",
+            "coin": "BTC",
+            "createdAt": "2026-11-10T15:45:08.133Z",
+            "occurredAt": "2026-11-10T15:45:00.323Z",
+            "payload": {
+              "side": "LONG",
+              "action": "CLOSED",
+              "cohort": "SMART",
+              "exitPx": 72873,
+              "pnlUsd": 93031.96264690928,
+              "wallet": "0x656479bffc5ae168ff19c11c6ed6b8b2d90261fc",
+              "entryPx": 72380.4,
+              "leftUsd": 0,
+              "leverage": {
+                "type": "cross",
+                "value": 20
+              },
+              "pnlExact": false,
+              "closedPct": 100,
+              "closedUsd": 4281992.152978072,
+              "marginUsd": 158705.381209,
+              "allTimePnlUsd": 217969304.029822
+            },
+            "tags": {
+              "0x656479bffc5ae168ff19c11c6ed6b8b2d90261fc": [
+                "VETERAN",
+                "GIGA_WHALE"
+              ]
+            },
+            "perpPnl": 292577012.642591,
+            "allTimePnl": 292577012.642591,
+            "badges": {
+              "level": "smart-trader",
+              "secondary": [
+                "top-100",
+                "fund",
+                "veteran",
+                "market-maker"
+              ]
+            },
+            "traderCard": {
+              "badges": [
+                "smart-trader",
+                "top-100",
+                "fund",
+                "veteran",
+                "market-maker"
+              ],
+              "rank": 6,
+              "chips": [
+                {
+                  "kind": "rank",
+                  "label": "Trader Rank",
+                  "value": "#6",
+                  "url": "/trader/0x656479bffc5ae168ff19c11c6ed6b8b2d90261fc"
+                }
+              ],
+              "venue": "hyperliquid",
+              "pnl": null
+            }
+          },
+          "hash": "e9052f6b1f910afbfb367b5db815afce2d6c7f1aa71e1271753158931e1b36e4"
+        },
+        "latestRevision": {
+          "observedAt": "2026-11-10T15:49:44.637309+00:00",
+          "kind": "revision",
+          "event": {
+            "id": 16003,
+            "type": "POSITION_CLOSED",
+            "coin": "BTC",
+            "createdAt": "2026-11-10T15:45:08.133Z",
+            "occurredAt": "2026-11-10T15:45:00.323Z",
+            "payload": {
+              "side": "LONG",
+              "action": "CLOSED",
+              "cohort": "SMART",
+              "exitPx": 72873,
+              "pnlUsd": 77574.12163441803,
+              "wallet": "0x656479bffc5ae168ff19c11c6ed6b8b2d90261fc",
+              "entryPx": 72540.6,
+              "leftUsd": 0,
+              "leverage": {
+                "type": "cross",
+                "value": 20
+              },
+              "pnlExact": false,
+              "closedPct": 100,
+              "closedUsd": 3114058.492571035,
+              "marginUsd": 271692.301621,
+              "allTimePnlUsd": 334315971.684403
+            },
+            "tags": {
+              "0x656479bffc5ae168ff19c11c6ed6b8b2d90261fc": [
+                "VETERAN",
+                "GIGA_WHALE"
+              ]
+            },
+            "perpPnl": 177654276.174563,
+            "allTimePnl": 177654276.174563,
+            "badges": {
+              "level": "smart-trader",
+              "secondary": [
+                "top-100",
+                "fund",
+                "veteran",
+                "market-maker"
+              ]
+            },
+            "traderCard": {
+              "badges": [
+                "smart-trader",
+                "top-100",
+                "fund",
+                "veteran",
+                "market-maker"
+              ],
+              "rank": 6,
+              "chips": [
+                {
+                  "kind": "rank",
+                  "label": "Trader Rank",
+                  "value": "#6",
+                  "url": "/trader/0x656479bffc5ae168ff19c11c6ed6b8b2d90261fc"
+                }
+              ],
+              "venue": "hyperliquid",
+              "pnl": null
+            }
+          },
+          "hash": "ff97bd7b2c72d8729bdef8e5da85debf9d459c12c58d818868195356dbb88ec8"
+        }
+      }
+    ],
+    "checks": [
+      {
+        "eventId": 14576,
+        "sourceSide": "LONG",
+        "position11154Side": "SHORT",
+        "exactHistoryMatches": [],
+        "noPaperExitLeg": true,
+        "sourcePublication": "2026-11-09T09:30:07.568Z",
+        "rawFirstObserved": "2026-11-09T09:30:22.501800+00:00",
+        "decisionFirstObserved": "2026-11-09T09:30:22.501885+00:00",
+        "rawDecisionObservationDeltaSeconds": 8.5e-05
+      },
+      {
+        "eventId": 16003,
+        "sourceSide": "LONG",
+        "position11154Side": "SHORT",
+        "exactHistoryMatches": [],
+        "noPaperExitLeg": true,
+        "sourcePublication": "2026-11-10T15:45:08.133Z",
+        "rawFirstObserved": "2026-11-10T15:45:26.231767+00:00",
+        "decisionFirstObserved": "2026-11-10T15:45:26.231838+00:00",
+        "rawDecisionObservationDeltaSeconds": 7.1e-05
+      }
+    ],
+    "position": {
+      "id": 11154,
+      "wallet": "0x656479bffc5ae168ff19c11c6ed6b8b2d90261fc",
+      "symbol": "BTC",
+      "direction": "short",
+      "sourceOpenedAt": "2026-11-05T15:17:04.884Z",
+      "sourceLeverage": {
+        "type": "cross",
+        "value": 20
+      },
+      "openedAt": "2026-11-05T15:17:12.112434+00:00",
+      "quantity": 0.00258,
+      "basis": 199.7629371,
+      "entryFees": 0.08989332169499999,
+      "realized": 0,
+      "legs": [
+        {
+          "eventId": 11154,
+          "action": "OPENED",
+          "wallet": "0x656479bffc5ae168ff19c11c6ed6b8b2d90261fc",
+          "market": "BTC",
+          "side": "SHORT",
+          "publication": "2026-11-05T15:17:04.884Z",
+          "observedAt": "2026-11-05T15:17:11.302531+00:00",
+          "status": "paper fill",
+          "quantity": 0.00258,
+          "price": 77427.495,
+          "fee": 0.08989332169499999,
+          "bookTime": 1793891826661,
+          "filledAt": "2026-11-05T15:17:12.112996+00:00"
+        }
+      ],
+      "openPnl": 8.452870184856012,
+      "unresolved": "Opposite source opening observed; prior copied exposure closure unverified",
+      "reconciliation": {
+        "at": "2026-11-11T12:15:10.390681+00:00",
+        "status": "unresolved source linkage/history",
+        "sourceOpeningCorroborated": false,
+        "venuePosition": null,
+        "matchingFills": 0,
+        "historyPossiblyTruncated": false,
+        "paperLeverage": 1,
+        "sourceLeverage": {
+          "type": "cross",
+          "value": 20
+        },
+        "leverageMatched": false
+      },
+      "closureVerification": "SUBSEQUENT SOURCE OPENING: prior lifecycle ending unverified",
+      "unresolvedDiagnostic": {
+        "firstRecordedAt": "2026-11-08T07:47:25.193687+00:00",
+        "reasonAtFirstRecord": "Side flip requires independently matched closing and opening legs",
+        "reasonSource": "preexisting flag",
+        "latestFailure": {
+          "at": "2026-11-11T12:15:14.262315+00:00",
+          "eventId": 16710,
+          "action": "REDUCED",
+          "reason": "Lifecycle unresolved or out of order"
+        }
+      },
+      "subsequentOpeningWarning": {
+        "positionId": 11154,
+        "eventId": 16528,
+        "sourcePublicationAt": "2026-11-10T21:11:04.299Z",
+        "discoveredAt": "2026-11-10T21:11:15.729325+00:00",
+        "reason": "subsequent_same_side_opening",
+        "wallet": "0x656479bffc5ae168ff19c11c6ed6b8b2d90261fc",
+        "sourceVenue": "hyperliquid",
+        "market": "BTC",
+        "side": "short",
+        "interpretation": "Later OPENED alert for an already tracked wallet/market/side; prior ending unverified. No exit fill inferred."
+      }
+    },
+    "result": "Both retained full closes are LONG. Copied11154 is SHORT. Wallet+market-only matching would close the wrong direction. Four SHORT reductions remain lifecycle blocked; no matching SHORT full close in retained decisions."
+  },
+  "limitations": [
+    "No ledger/rule/code changes",
+    "Source identity/tier timing and continuous lifecycle unverified",
+    "Modeled fees/slippage; funding/liquidation incomplete",
+    "Lawful US/PA access unverified; no real trades",
+    "Bounded source windows; full30/90day history and hypothetical fill-latency stress unavailable"
+  ]
+}
