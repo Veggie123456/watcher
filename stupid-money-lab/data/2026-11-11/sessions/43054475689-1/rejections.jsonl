@@ -5,3 +5,4 @@
 {"at":"2026-11-11T16:25:20.705183+00:00","eventId":17113,"reason":"20 open funded positions maximum"}
 {"at":"2026-11-11T16:33:08.879895+00:00","eventId":17119,"reason":"20 open funded positions maximum"}
 {"at":"2026-11-11T16:48:11.000370+00:00","eventId":17130,"reason":"Source leverage missing, unreadable or above venue limit; no matched-leverage fill"}
+{"at":"2026-11-11T16:51:05.709100+00:00","eventId":17132,"reason":"An add-alert scalp for this wallet/market/side is already open; no duplicate exposure"}
