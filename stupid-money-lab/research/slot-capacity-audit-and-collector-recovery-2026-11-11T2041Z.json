@@ -1,0 +1,2371 @@
+{
+  "stateCommit": "1f300346f7b2ef2c52ad7887254c53baa68d22f7",
+  "stateCutoff": "2026-11-11T20:41:22.879742+00:00",
+  "heartbeat": "2026-11-11T20:41:22.249627+00:00",
+  "sourceAt": "2026-11-11T20:40:59.580574+00:00",
+  "sourceStatus": "read",
+  "priorCutoff": "2026-11-11T20:15:49.431104+00:00",
+  "slotAudit": {
+    "sessionCount": 23,
+    "decisionRows": 398,
+    "reasons": {
+      "Fresh opening recorded": 50,
+      "History/stale alert; no backdated entry": 18,
+      "Add exceeds $350 or1% shared equity risk": 1,
+      "24h wallet/market cooldown": 17,
+      "Source leverage missing, unreadable or above venue limit; no matched-leverage fill": 1,
+      "Standalone add-alert scalp opened": 264,
+      "20 open independent scenarios maximum": 14,
+      "20 open funded positions maximum": 27,
+      "Alert expired before entry": 1,
+      "An add-alert scalp for this wallet/market/side is already open; no duplicate exposure": 5
+    },
+    "selected": [
+      {
+        "session": "42944052442-1",
+        "at": "2026-11-11T02:24:45.993959+00:00",
+        "eventId": 16690,
+        "action": "ADDED",
+        "tier": "SMART",
+        "coin": "NEAR",
+        "status": "skipped",
+        "reason": "20 open funded positions maximum"
+      },
+      {
+        "session": "42944052442-1",
+        "at": "2026-11-11T02:27:31.992627+00:00",
+        "eventId": 16692,
+        "action": "ADDED",
+        "tier": "SMART",
+        "coin": "ZEC",
+        "status": "skipped",
+        "reason": "20 open funded positions maximum"
+      },
+      {
+        "session": "42944052442-1",
+        "at": "2026-11-11T02:27:32.030737+00:00",
+        "eventId": 16693,
+        "action": "ADDED",
+        "tier": "GENIUS",
+        "coin": "NEAR",
+        "status": "skipped",
+        "reason": "20 open funded positions maximum"
+      },
+      {
+        "session": "42944052442-1",
+        "at": "2026-11-11T02:30:16.895600+00:00",
+        "eventId": 16695,
+        "action": "ADDED",
+        "tier": "SMART",
+        "coin": "NEAR",
+        "status": "skipped",
+        "reason": "20 open funded positions maximum"
+      },
+      {
+        "session": "42944052442-1",
+        "at": "2026-11-11T02:32:20.671812+00:00",
+        "eventId": 16697,
+        "action": "ADDED",
+        "tier": "SMART",
+        "coin": "BTC",
+        "status": "skipped",
+        "reason": "20 open funded positions maximum"
+      },
+      {
+        "session": "42944052442-1",
+        "at": "2026-11-11T02:32:20.704826+00:00",
+        "eventId": 16698,
+        "action": "ADDED",
+        "tier": "SMART",
+        "coin": "ETH",
+        "status": "skipped",
+        "reason": "20 open funded positions maximum"
+      },
+      {
+        "session": "42930310040-1",
+        "at": "2026-11-11T01:00:21.547773+00:00",
+        "eventId": 16643,
+        "action": "ADDED",
+        "tier": "SMART",
+        "coin": "kPEPE",
+        "status": "skipped",
+        "reason": "20 open funded positions maximum"
+      },
+      {
+        "session": "42930310040-1",
+        "at": "2026-11-11T01:04:36.218941+00:00",
+        "eventId": 16645,
+        "action": "OPENED",
+        "tier": "GENIUS",
+        "coin": "BTC",
+        "status": "skipped",
+        "reason": "20 open independent scenarios maximum"
+      },
+      {
+        "session": "42930310040-1",
+        "at": "2026-11-11T01:04:37.068178+00:00",
+        "eventId": 16646,
+        "action": "ADDED",
+        "tier": "GENIUS",
+        "coin": "ETH",
+        "status": "skipped",
+        "reason": "20 open funded positions maximum"
+      },
+      {
+        "session": "42930310040-1",
+        "at": "2026-11-11T01:05:18.236653+00:00",
+        "eventId": 16648,
+        "action": "ADDED",
+        "tier": "GENIUS",
+        "coin": "ZEC",
+        "status": "skipped",
+        "reason": "20 open funded positions maximum"
+      },
+      {
+        "session": "42930310040-1",
+        "at": "2026-11-11T01:07:21.058967+00:00",
+        "eventId": 16649,
+        "action": "OPENED",
+        "tier": "GENIUS",
+        "coin": "ZEC",
+        "status": "skipped",
+        "reason": "20 open independent scenarios maximum"
+      },
+      {
+        "session": "42930310040-1",
+        "at": "2026-11-11T01:10:09.267764+00:00",
+        "eventId": 16652,
+        "action": "OPENED",
+        "tier": "GENIUS",
+        "coin": "HYPE",
+        "status": "skipped",
+        "reason": "20 open independent scenarios maximum"
+      },
+      {
+        "session": "42981522696-1",
+        "at": "2026-11-11T08:02:10.735637+00:00",
+        "eventId": 16839,
+        "action": "ADDED",
+        "tier": "GENIUS",
+        "coin": "ZEC",
+        "status": "skipped",
+        "reason": "20 open funded positions maximum"
+      },
+      {
+        "session": "42981522696-1",
+        "at": "2026-11-11T08:21:36.749716+00:00",
+        "eventId": 16853,
+        "action": "ADDED",
+        "tier": "GENIUS",
+        "coin": "BTC",
+        "status": "skipped",
+        "reason": "20 open funded positions maximum"
+      },
+      {
+        "session": "43054475689-1",
+        "at": "2026-11-11T16:03:55.641661+00:00",
+        "eventId": 17107,
+        "action": "OPENED",
+        "tier": "SMART",
+        "coin": "HYPE",
+        "status": "skipped",
+        "reason": "20 open independent scenarios maximum"
+      },
+      {
+        "session": "43054475689-1",
+        "at": "2026-11-11T16:14:32.836820+00:00",
+        "eventId": 17111,
+        "action": "OPENED",
+        "tier": "GENIUS",
+        "coin": "ETH",
+        "status": "skipped",
+        "reason": "20 open independent scenarios maximum"
+      },
+      {
+        "session": "43054475689-1",
+        "at": "2026-11-11T16:14:36.489063+00:00",
+        "eventId": 17110,
+        "action": "ADDED",
+        "tier": "SMART",
+        "coin": "ZEC",
+        "status": "skipped",
+        "reason": "20 open funded positions maximum"
+      },
+      {
+        "session": "43054475689-1",
+        "at": "2026-11-11T16:24:29.304599+00:00",
+        "eventId": 17112,
+        "action": "OPENED",
+        "tier": "GENIUS",
+        "coin": "ZEC",
+        "status": "skipped",
+        "reason": "20 open independent scenarios maximum"
+      },
+      {
+        "session": "43054475689-1",
+        "at": "2026-11-11T16:25:20.705460+00:00",
+        "eventId": 17113,
+        "action": "ADDED",
+        "tier": "SMART",
+        "coin": "ETH",
+        "status": "skipped",
+        "reason": "20 open funded positions maximum"
+      },
+      {
+        "session": "43054475689-1",
+        "at": "2026-11-11T16:33:08.880155+00:00",
+        "eventId": 17119,
+        "action": "ADDED",
+        "tier": "SMART",
+        "coin": "NEAR",
+        "status": "skipped",
+        "reason": "20 open funded positions maximum"
+      },
+      {
+        "session": "43045252098-1",
+        "at": "2026-11-11T15:40:38.805847+00:00",
+        "eventId": 17087,
+        "action": "OPENED",
+        "tier": "GENIUS",
+        "coin": "BTC",
+        "status": "skipped",
+        "reason": "20 open independent scenarios maximum"
+      },
+      {
+        "session": "43045252098-1",
+        "at": "2026-11-11T15:46:24.535625+00:00",
+        "eventId": 17092,
+        "action": "OPENED",
+        "tier": "SMART",
+        "coin": "BTC",
+        "status": "skipped",
+        "reason": "20 open independent scenarios maximum"
+      },
+      {
+        "session": "43045252098-1",
+        "at": "2026-11-11T15:46:25.410172+00:00",
+        "eventId": 17093,
+        "action": "ADDED",
+        "tier": "GENIUS",
+        "coin": "HYPE",
+        "status": "skipped",
+        "reason": "20 open funded positions maximum"
+      },
+      {
+        "session": "43045252098-1",
+        "at": "2026-11-11T15:47:12.435525+00:00",
+        "eventId": 17094,
+        "action": "ADDED",
+        "tier": "GENIUS",
+        "coin": "BTC",
+        "status": "skipped",
+        "reason": "20 open funded positions maximum"
+      },
+      {
+        "session": "43045252098-1",
+        "at": "2026-11-11T15:59:42.668192+00:00",
+        "eventId": 17103,
+        "action": "ADDED",
+        "tier": "GENIUS",
+        "coin": "SOL",
+        "status": "skipped",
+        "reason": "20 open funded positions maximum"
+      },
+      {
+        "session": "43045252098-1",
+        "at": "2026-11-11T16:01:10.924882+00:00",
+        "eventId": 17104,
+        "action": "ADDED",
+        "tier": "SMART",
+        "coin": "ETH",
+        "status": "skipped",
+        "reason": "20 open funded positions maximum"
+      },
+      {
+        "session": "43063619699-1",
+        "at": "2026-11-11T17:17:03.218095+00:00",
+        "eventId": 17151,
+        "action": "OPENED",
+        "tier": "GENIUS",
+        "coin": "BTC",
+        "status": "skipped",
+        "reason": "20 open independent scenarios maximum"
+      },
+      {
+        "session": "43063619699-1",
+        "at": "2026-11-11T17:17:03.911653+00:00",
+        "eventId": 17150,
+        "action": "ADDED",
+        "tier": "GENIUS",
+        "coin": "ZEC",
+        "status": "skipped",
+        "reason": "20 open funded positions maximum"
+      },
+      {
+        "session": "43063619699-1",
+        "at": "2026-11-11T17:18:28.692045+00:00",
+        "eventId": 17153,
+        "action": "OPENED",
+        "tier": "SMART",
+        "coin": "ETH",
+        "status": "skipped",
+        "reason": "20 open independent scenarios maximum"
+      },
+      {
+        "session": "43063619699-1",
+        "at": "2026-11-11T17:18:31.633984+00:00",
+        "eventId": 17152,
+        "action": "ADDED",
+        "tier": "GENIUS",
+        "coin": "ZEC",
+        "status": "skipped",
+        "reason": "20 open funded positions maximum"
+      },
+      {
+        "session": "43063619699-1",
+        "at": "2026-11-11T17:20:36.527980+00:00",
+        "eventId": 17168,
+        "action": "OPENED",
+        "tier": "GENIUS",
+        "coin": "ETH",
+        "status": "skipped",
+        "reason": "20 open independent scenarios maximum"
+      },
+      {
+        "session": "43063619699-1",
+        "at": "2026-11-11T17:22:44.676871+00:00",
+        "eventId": 17170,
+        "action": "ADDED",
+        "tier": "SMART",
+        "coin": "ETH",
+        "status": "skipped",
+        "reason": "20 open funded positions maximum"
+      },
+      {
+        "session": "43063619699-1",
+        "at": "2026-11-11T17:22:44.713447+00:00",
+        "eventId": 17171,
+        "action": "ADDED",
+        "tier": "SMART",
+        "coin": "AVAX",
+        "status": "skipped",
+        "reason": "20 open funded positions maximum"
+      },
+      {
+        "session": "43063619699-1",
+        "at": "2026-11-11T17:25:33.880601+00:00",
+        "eventId": 17174,
+        "action": "ADDED",
+        "tier": "SMART",
+        "coin": "BTC",
+        "status": "skipped",
+        "reason": "20 open funded positions maximum"
+      },
+      {
+        "session": "43063619699-1",
+        "at": "2026-11-11T17:25:33.905744+00:00",
+        "eventId": 17175,
+        "action": "ADDED",
+        "tier": "SMART",
+        "coin": "ETH",
+        "status": "skipped",
+        "reason": "20 open funded positions maximum"
+      },
+      {
+        "session": "43063619699-1",
+        "at": "2026-11-11T17:27:39.335340+00:00",
+        "eventId": 17177,
+        "action": "OPENED",
+        "tier": "GENIUS",
+        "coin": "ETH",
+        "status": "skipped",
+        "reason": "20 open independent scenarios maximum"
+      },
+      {
+        "session": "43063619699-1",
+        "at": "2026-11-11T17:27:40.255463+00:00",
+        "eventId": 17178,
+        "action": "ADDED",
+        "tier": "GENIUS",
+        "coin": "ETH",
+        "status": "skipped",
+        "reason": "20 open funded positions maximum"
+      },
+      {
+        "session": "43063619699-1",
+        "at": "2026-11-11T17:34:05.526905+00:00",
+        "eventId": 17186,
+        "action": "OPENED",
+        "tier": "GENIUS",
+        "coin": "ZEC",
+        "status": "skipped",
+        "reason": "20 open independent scenarios maximum"
+      },
+      {
+        "session": "43063619699-1",
+        "at": "2026-11-11T17:34:06.121268+00:00",
+        "eventId": 17185,
+        "action": "ADDED",
+        "tier": "SMART",
+        "coin": "BTC",
+        "status": "skipped",
+        "reason": "20 open funded positions maximum"
+      },
+      {
+        "session": "43063619699-1",
+        "at": "2026-11-11T17:52:37.814760+00:00",
+        "eventId": 17198,
+        "action": "OPENED",
+        "tier": "SMART",
+        "coin": "ZEC",
+        "status": "skipped",
+        "reason": "20 open independent scenarios maximum"
+      },
+      {
+        "session": "43063619699-1",
+        "at": "2026-11-11T17:52:38.535515+00:00",
+        "eventId": 17199,
+        "action": "ADDED",
+        "tier": "SMART",
+        "coin": "BTC",
+        "status": "skipped",
+        "reason": "20 open funded positions maximum"
+      }
+    ],
+    "errors": [],
+    "joined": [
+      {
+        "session": "42944052442-1",
+        "at": "2026-11-11T02:24:45.993959+00:00",
+        "eventId": 16690,
+        "action": "ADDED",
+        "tier": "SMART",
+        "coin": "NEAR",
+        "status": "skipped",
+        "reason": "20 open funded positions maximum",
+        "priorSnapshotAt": "2026-11-11T02:24:26.050430+00:00",
+        "priorOpenCount": 20,
+        "endSnapshotAt": "2026-11-11T02:24:46.126945+00:00",
+        "endOpenCount": 20,
+        "sameCycleExits": [],
+        "laterExits": 0
+      },
+      {
+        "session": "42944052442-1",
+        "at": "2026-11-11T02:27:31.992627+00:00",
+        "eventId": 16692,
+        "action": "ADDED",
+        "tier": "SMART",
+        "coin": "ZEC",
+        "status": "skipped",
+        "reason": "20 open funded positions maximum",
+        "priorSnapshotAt": "2026-11-11T02:27:12.624856+00:00",
+        "priorOpenCount": 20,
+        "endSnapshotAt": "2026-11-11T02:27:32.069455+00:00",
+        "endOpenCount": 20,
+        "sameCycleExits": [],
+        "laterExits": 0
+      },
+      {
+        "session": "42944052442-1",
+        "at": "2026-11-11T02:27:32.030737+00:00",
+        "eventId": 16693,
+        "action": "ADDED",
+        "tier": "GENIUS",
+        "coin": "NEAR",
+        "status": "skipped",
+        "reason": "20 open funded positions maximum",
+        "priorSnapshotAt": "2026-11-11T02:27:12.624856+00:00",
+        "priorOpenCount": 20,
+        "endSnapshotAt": "2026-11-11T02:27:32.069455+00:00",
+        "endOpenCount": 20,
+        "sameCycleExits": [],
+        "laterExits": 0
+      },
+      {
+        "session": "42944052442-1",
+        "at": "2026-11-11T02:30:16.895600+00:00",
+        "eventId": 16695,
+        "action": "ADDED",
+        "tier": "SMART",
+        "coin": "NEAR",
+        "status": "skipped",
+        "reason": "20 open funded positions maximum",
+        "priorSnapshotAt": "2026-11-11T02:29:58.576680+00:00",
+        "priorOpenCount": 20,
+        "endSnapshotAt": "2026-11-11T02:30:16.924301+00:00",
+        "endOpenCount": 20,
+        "sameCycleExits": [],
+        "laterExits": 0
+      },
+      {
+        "session": "42944052442-1",
+        "at": "2026-11-11T02:32:20.671812+00:00",
+        "eventId": 16697,
+        "action": "ADDED",
+        "tier": "SMART",
+        "coin": "BTC",
+        "status": "skipped",
+        "reason": "20 open funded positions maximum",
+        "priorSnapshotAt": "2026-11-11T02:32:01.899117+00:00",
+        "priorOpenCount": 20,
+        "endSnapshotAt": "2026-11-11T02:32:20.734665+00:00",
+        "endOpenCount": 20,
+        "sameCycleExits": [],
+        "laterExits": 0
+      },
+      {
+        "session": "42944052442-1",
+        "at": "2026-11-11T02:32:20.704826+00:00",
+        "eventId": 16698,
+        "action": "ADDED",
+        "tier": "SMART",
+        "coin": "ETH",
+        "status": "skipped",
+        "reason": "20 open funded positions maximum",
+        "priorSnapshotAt": "2026-11-11T02:32:01.899117+00:00",
+        "priorOpenCount": 20,
+        "endSnapshotAt": "2026-11-11T02:32:20.734665+00:00",
+        "endOpenCount": 20,
+        "sameCycleExits": [],
+        "laterExits": 0
+      },
+      {
+        "session": "42930310040-1",
+        "at": "2026-11-11T01:00:21.547773+00:00",
+        "eventId": 16643,
+        "action": "ADDED",
+        "tier": "SMART",
+        "coin": "kPEPE",
+        "status": "skipped",
+        "reason": "20 open funded positions maximum",
+        "priorSnapshotAt": "2026-11-11T01:00:02.035013+00:00",
+        "priorOpenCount": 20,
+        "endSnapshotAt": "2026-11-11T01:00:21.563697+00:00",
+        "endOpenCount": 20,
+        "sameCycleExits": [],
+        "laterExits": 0
+      },
+      {
+        "session": "42930310040-1",
+        "at": "2026-11-11T01:04:36.218941+00:00",
+        "eventId": 16645,
+        "action": "OPENED",
+        "tier": "GENIUS",
+        "coin": "BTC",
+        "status": "skipped",
+        "reason": "20 open independent scenarios maximum",
+        "priorSnapshotAt": "2026-11-11T01:04:16.996731+00:00",
+        "priorOpenCount": 20,
+        "endSnapshotAt": "2026-11-11T01:04:37.083727+00:00",
+        "endOpenCount": 20,
+        "sameCycleExits": [],
+        "laterExits": 0
+      },
+      {
+        "session": "42930310040-1",
+        "at": "2026-11-11T01:04:37.068178+00:00",
+        "eventId": 16646,
+        "action": "ADDED",
+        "tier": "GENIUS",
+        "coin": "ETH",
+        "status": "skipped",
+        "reason": "20 open funded positions maximum",
+        "priorSnapshotAt": "2026-11-11T01:04:16.996731+00:00",
+        "priorOpenCount": 20,
+        "endSnapshotAt": "2026-11-11T01:04:37.083727+00:00",
+        "endOpenCount": 20,
+        "sameCycleExits": [],
+        "laterExits": 0
+      },
+      {
+        "session": "42930310040-1",
+        "at": "2026-11-11T01:05:18.236653+00:00",
+        "eventId": 16648,
+        "action": "ADDED",
+        "tier": "GENIUS",
+        "coin": "ZEC",
+        "status": "skipped",
+        "reason": "20 open funded positions maximum",
+        "priorSnapshotAt": "2026-11-11T01:04:59.093664+00:00",
+        "priorOpenCount": 20,
+        "endSnapshotAt": "2026-11-11T01:05:18.489432+00:00",
+        "endOpenCount": 20,
+        "sameCycleExits": [
+          {
+            "id": "github-portfolio-v3-16606",
+            "closedAt": "2026-11-11T01:05:17.739778+00:00",
+            "exitReason": "one-hour observed exit",
+            "afterRejection": false
+          }
+        ],
+        "laterExits": 0
+      },
+      {
+        "session": "42930310040-1",
+        "at": "2026-11-11T01:07:21.058967+00:00",
+        "eventId": 16649,
+        "action": "OPENED",
+        "tier": "GENIUS",
+        "coin": "ZEC",
+        "status": "skipped",
+        "reason": "20 open independent scenarios maximum",
+        "priorSnapshotAt": "2026-11-11T01:07:03.128441+00:00",
+        "priorOpenCount": 20,
+        "endSnapshotAt": "2026-11-11T01:07:21.871820+00:00",
+        "endOpenCount": 20,
+        "sameCycleExits": [],
+        "laterExits": 0
+      },
+      {
+        "session": "42930310040-1",
+        "at": "2026-11-11T01:10:09.267764+00:00",
+        "eventId": 16652,
+        "action": "OPENED",
+        "tier": "GENIUS",
+        "coin": "HYPE",
+        "status": "skipped",
+        "reason": "20 open independent scenarios maximum",
+        "priorSnapshotAt": "2026-11-11T01:09:51.204029+00:00",
+        "priorOpenCount": 20,
+        "endSnapshotAt": "2026-11-11T01:10:10.115992+00:00",
+        "endOpenCount": 20,
+        "sameCycleExits": [],
+        "laterExits": 0
+      },
+      {
+        "session": "42981522696-1",
+        "at": "2026-11-11T08:02:10.735637+00:00",
+        "eventId": 16839,
+        "action": "ADDED",
+        "tier": "GENIUS",
+        "coin": "ZEC",
+        "status": "skipped",
+        "reason": "20 open funded positions maximum",
+        "priorSnapshotAt": "2026-11-11T08:01:51.835920+00:00",
+        "priorOpenCount": 19,
+        "endSnapshotAt": "2026-11-11T08:02:10.767258+00:00",
+        "endOpenCount": 20,
+        "sameCycleExits": [],
+        "laterExits": 0
+      },
+      {
+        "session": "42981522696-1",
+        "at": "2026-11-11T08:21:36.749716+00:00",
+        "eventId": 16853,
+        "action": "ADDED",
+        "tier": "GENIUS",
+        "coin": "BTC",
+        "status": "skipped",
+        "reason": "20 open funded positions maximum",
+        "priorSnapshotAt": "2026-11-11T08:21:15.086709+00:00",
+        "priorOpenCount": 19,
+        "endSnapshotAt": "2026-11-11T08:21:36.780529+00:00",
+        "endOpenCount": 20,
+        "sameCycleExits": [],
+        "laterExits": 0
+      },
+      {
+        "session": "43054475689-1",
+        "at": "2026-11-11T16:03:55.641661+00:00",
+        "eventId": 17107,
+        "action": "OPENED",
+        "tier": "SMART",
+        "coin": "HYPE",
+        "status": "skipped",
+        "reason": "20 open independent scenarios maximum",
+        "priorSnapshotAt": null,
+        "priorOpenCount": null,
+        "endSnapshotAt": "2026-11-11T16:03:56.878785+00:00",
+        "endOpenCount": 20,
+        "sameCycleExits": [],
+        "laterExits": 0
+      },
+      {
+        "session": "43054475689-1",
+        "at": "2026-11-11T16:14:32.836820+00:00",
+        "eventId": 17111,
+        "action": "OPENED",
+        "tier": "GENIUS",
+        "coin": "ETH",
+        "status": "skipped",
+        "reason": "20 open independent scenarios maximum",
+        "priorSnapshotAt": "2026-11-11T16:12:20.553178+00:00",
+        "priorOpenCount": 20,
+        "endSnapshotAt": "2026-11-11T16:14:36.566239+00:00",
+        "endOpenCount": 20,
+        "sameCycleExits": [],
+        "laterExits": 0
+      },
+      {
+        "session": "43054475689-1",
+        "at": "2026-11-11T16:14:36.489063+00:00",
+        "eventId": 17110,
+        "action": "ADDED",
+        "tier": "SMART",
+        "coin": "ZEC",
+        "status": "skipped",
+        "reason": "20 open funded positions maximum",
+        "priorSnapshotAt": "2026-11-11T16:12:20.553178+00:00",
+        "priorOpenCount": 20,
+        "endSnapshotAt": "2026-11-11T16:14:36.566239+00:00",
+        "endOpenCount": 20,
+        "sameCycleExits": [],
+        "laterExits": 0
+      },
+      {
+        "session": "43054475689-1",
+        "at": "2026-11-11T16:24:29.304599+00:00",
+        "eventId": 17112,
+        "action": "OPENED",
+        "tier": "GENIUS",
+        "coin": "ZEC",
+        "status": "skipped",
+        "reason": "20 open independent scenarios maximum",
+        "priorSnapshotAt": "2026-11-11T16:24:11.040358+00:00",
+        "priorOpenCount": 20,
+        "endSnapshotAt": "2026-11-11T16:24:30.078426+00:00",
+        "endOpenCount": 20,
+        "sameCycleExits": [],
+        "laterExits": 0
+      },
+      {
+        "session": "43054475689-1",
+        "at": "2026-11-11T16:25:20.705460+00:00",
+        "eventId": 17113,
+        "action": "ADDED",
+        "tier": "SMART",
+        "coin": "ETH",
+        "status": "skipped",
+        "reason": "20 open funded positions maximum",
+        "priorSnapshotAt": "2026-11-11T16:24:52.642537+00:00",
+        "priorOpenCount": 20,
+        "endSnapshotAt": "2026-11-11T16:25:20.780037+00:00",
+        "endOpenCount": 20,
+        "sameCycleExits": [],
+        "laterExits": 0
+      },
+      {
+        "session": "43054475689-1",
+        "at": "2026-11-11T16:33:08.880155+00:00",
+        "eventId": 17119,
+        "action": "ADDED",
+        "tier": "SMART",
+        "coin": "NEAR",
+        "status": "skipped",
+        "reason": "20 open funded positions maximum",
+        "priorSnapshotAt": "2026-11-11T16:32:47.730631+00:00",
+        "priorOpenCount": 20,
+        "endSnapshotAt": "2026-11-11T16:33:08.946048+00:00",
+        "endOpenCount": 20,
+        "sameCycleExits": [],
+        "laterExits": 0
+      },
+      {
+        "session": "43045252098-1",
+        "at": "2026-11-11T15:40:38.805847+00:00",
+        "eventId": 17087,
+        "action": "OPENED",
+        "tier": "GENIUS",
+        "coin": "BTC",
+        "status": "skipped",
+        "reason": "20 open independent scenarios maximum",
+        "priorSnapshotAt": "2026-11-11T15:40:19.680356+00:00",
+        "priorOpenCount": 19,
+        "endSnapshotAt": "2026-11-11T15:40:40.304407+00:00",
+        "endOpenCount": 20,
+        "sameCycleExits": [
+          {
+            "id": "github-portfolio-v3-17027",
+            "closedAt": "2026-11-11T15:40:39.003795+00:00",
+            "exitReason": "one-hour observed exit",
+            "afterRejection": true
+          },
+          {
+            "id": "github-portfolio-v3-17028",
+            "closedAt": "2026-11-11T15:40:39.396822+00:00",
+            "exitReason": "one-hour observed exit",
+            "afterRejection": true
+          }
+        ],
+        "laterExits": 2
+      },
+      {
+        "session": "43045252098-1",
+        "at": "2026-11-11T15:46:24.535625+00:00",
+        "eventId": 17092,
+        "action": "OPENED",
+        "tier": "SMART",
+        "coin": "BTC",
+        "status": "skipped",
+        "reason": "20 open independent scenarios maximum",
+        "priorSnapshotAt": "2026-11-11T15:46:04.850665+00:00",
+        "priorOpenCount": 20,
+        "endSnapshotAt": "2026-11-11T15:46:25.434857+00:00",
+        "endOpenCount": 20,
+        "sameCycleExits": [],
+        "laterExits": 0
+      },
+      {
+        "session": "43045252098-1",
+        "at": "2026-11-11T15:46:25.410172+00:00",
+        "eventId": 17093,
+        "action": "ADDED",
+        "tier": "GENIUS",
+        "coin": "HYPE",
+        "status": "skipped",
+        "reason": "20 open funded positions maximum",
+        "priorSnapshotAt": "2026-11-11T15:46:04.850665+00:00",
+        "priorOpenCount": 20,
+        "endSnapshotAt": "2026-11-11T15:46:25.434857+00:00",
+        "endOpenCount": 20,
+        "sameCycleExits": [],
+        "laterExits": 0
+      },
+      {
+        "session": "43045252098-1",
+        "at": "2026-11-11T15:47:12.435525+00:00",
+        "eventId": 17094,
+        "action": "ADDED",
+        "tier": "GENIUS",
+        "coin": "BTC",
+        "status": "skipped",
+        "reason": "20 open funded positions maximum",
+        "priorSnapshotAt": "2026-11-11T15:46:47.870718+00:00",
+        "priorOpenCount": 20,
+        "endSnapshotAt": "2026-11-11T15:47:12.461747+00:00",
+        "endOpenCount": 20,
+        "sameCycleExits": [],
+        "laterExits": 0
+      },
+      {
+        "session": "43045252098-1",
+        "at": "2026-11-11T15:59:42.668192+00:00",
+        "eventId": 17103,
+        "action": "ADDED",
+        "tier": "GENIUS",
+        "coin": "SOL",
+        "status": "skipped",
+        "reason": "20 open funded positions maximum",
+        "priorSnapshotAt": "2026-11-11T15:59:22.094947+00:00",
+        "priorOpenCount": 20,
+        "endSnapshotAt": "2026-11-11T15:59:42.693317+00:00",
+        "endOpenCount": 20,
+        "sameCycleExits": [],
+        "laterExits": 0
+      },
+      {
+        "session": "43045252098-1",
+        "at": "2026-11-11T16:01:10.924882+00:00",
+        "eventId": 17104,
+        "action": "ADDED",
+        "tier": "SMART",
+        "coin": "ETH",
+        "status": "skipped",
+        "reason": "20 open funded positions maximum",
+        "priorSnapshotAt": "2026-11-11T16:00:48.807104+00:00",
+        "priorOpenCount": 20,
+        "endSnapshotAt": "2026-11-11T16:01:10.970295+00:00",
+        "endOpenCount": 20,
+        "sameCycleExits": [],
+        "laterExits": 0
+      },
+      {
+        "session": "43063619699-1",
+        "at": "2026-11-11T17:17:03.218095+00:00",
+        "eventId": 17151,
+        "action": "OPENED",
+        "tier": "GENIUS",
+        "coin": "BTC",
+        "status": "skipped",
+        "reason": "20 open independent scenarios maximum",
+        "priorSnapshotAt": "2026-11-11T17:16:43.955558+00:00",
+        "priorOpenCount": 20,
+        "endSnapshotAt": "2026-11-11T17:17:03.935326+00:00",
+        "endOpenCount": 20,
+        "sameCycleExits": [],
+        "laterExits": 0
+      },
+      {
+        "session": "43063619699-1",
+        "at": "2026-11-11T17:17:03.911653+00:00",
+        "eventId": 17150,
+        "action": "ADDED",
+        "tier": "GENIUS",
+        "coin": "ZEC",
+        "status": "skipped",
+        "reason": "20 open funded positions maximum",
+        "priorSnapshotAt": "2026-11-11T17:16:43.955558+00:00",
+        "priorOpenCount": 20,
+        "endSnapshotAt": "2026-11-11T17:17:03.935326+00:00",
+        "endOpenCount": 20,
+        "sameCycleExits": [],
+        "laterExits": 0
+      },
+      {
+        "session": "43063619699-1",
+        "at": "2026-11-11T17:18:28.692045+00:00",
+        "eventId": 17153,
+        "action": "OPENED",
+        "tier": "SMART",
+        "coin": "ETH",
+        "status": "skipped",
+        "reason": "20 open independent scenarios maximum",
+        "priorSnapshotAt": "2026-11-11T17:18:08.826922+00:00",
+        "priorOpenCount": 20,
+        "endSnapshotAt": "2026-11-11T17:18:31.689942+00:00",
+        "endOpenCount": 20,
+        "sameCycleExits": [],
+        "laterExits": 0
+      },
+      {
+        "session": "43063619699-1",
+        "at": "2026-11-11T17:18:31.633984+00:00",
+        "eventId": 17152,
+        "action": "ADDED",
+        "tier": "GENIUS",
+        "coin": "ZEC",
+        "status": "skipped",
+        "reason": "20 open funded positions maximum",
+        "priorSnapshotAt": "2026-11-11T17:18:08.826922+00:00",
+        "priorOpenCount": 20,
+        "endSnapshotAt": "2026-11-11T17:18:31.689942+00:00",
+        "endOpenCount": 20,
+        "sameCycleExits": [],
+        "laterExits": 0
+      },
+      {
+        "session": "43063619699-1",
+        "at": "2026-11-11T17:20:36.527980+00:00",
+        "eventId": 17168,
+        "action": "OPENED",
+        "tier": "GENIUS",
+        "coin": "ETH",
+        "status": "skipped",
+        "reason": "20 open independent scenarios maximum",
+        "priorSnapshotAt": "2026-11-11T17:20:16.974162+00:00",
+        "priorOpenCount": 20,
+        "endSnapshotAt": "2026-11-11T17:20:37.268734+00:00",
+        "endOpenCount": 20,
+        "sameCycleExits": [],
+        "laterExits": 0
+      },
+      {
+        "session": "43063619699-1",
+        "at": "2026-11-11T17:22:44.676871+00:00",
+        "eventId": 17170,
+        "action": "ADDED",
+        "tier": "SMART",
+        "coin": "ETH",
+        "status": "skipped",
+        "reason": "20 open funded positions maximum",
+        "priorSnapshotAt": "2026-11-11T17:22:24.791995+00:00",
+        "priorOpenCount": 20,
+        "endSnapshotAt": "2026-11-11T17:22:44.783099+00:00",
+        "endOpenCount": 20,
+        "sameCycleExits": [],
+        "laterExits": 0
+      },
+      {
+        "session": "43063619699-1",
+        "at": "2026-11-11T17:22:44.713447+00:00",
+        "eventId": 17171,
+        "action": "ADDED",
+        "tier": "SMART",
+        "coin": "AVAX",
+        "status": "skipped",
+        "reason": "20 open funded positions maximum",
+        "priorSnapshotAt": "2026-11-11T17:22:24.791995+00:00",
+        "priorOpenCount": 20,
+        "endSnapshotAt": "2026-11-11T17:22:44.783099+00:00",
+        "endOpenCount": 20,
+        "sameCycleExits": [],
+        "laterExits": 0
+      },
+      {
+        "session": "43063619699-1",
+        "at": "2026-11-11T17:25:33.880601+00:00",
+        "eventId": 17174,
+        "action": "ADDED",
+        "tier": "SMART",
+        "coin": "BTC",
+        "status": "skipped",
+        "reason": "20 open funded positions maximum",
+        "priorSnapshotAt": "2026-11-11T17:25:14.535552+00:00",
+        "priorOpenCount": 20,
+        "endSnapshotAt": "2026-11-11T17:25:33.928188+00:00",
+        "endOpenCount": 20,
+        "sameCycleExits": [],
+        "laterExits": 0
+      },
+      {
+        "session": "43063619699-1",
+        "at": "2026-11-11T17:25:33.905744+00:00",
+        "eventId": 17175,
+        "action": "ADDED",
+        "tier": "SMART",
+        "coin": "ETH",
+        "status": "skipped",
+        "reason": "20 open funded positions maximum",
+        "priorSnapshotAt": "2026-11-11T17:25:14.535552+00:00",
+        "priorOpenCount": 20,
+        "endSnapshotAt": "2026-11-11T17:25:33.928188+00:00",
+        "endOpenCount": 20,
+        "sameCycleExits": [],
+        "laterExits": 0
+      },
+      {
+        "session": "43063619699-1",
+        "at": "2026-11-11T17:27:39.335340+00:00",
+        "eventId": 17177,
+        "action": "OPENED",
+        "tier": "GENIUS",
+        "coin": "ETH",
+        "status": "skipped",
+        "reason": "20 open independent scenarios maximum",
+        "priorSnapshotAt": "2026-11-11T17:27:19.390991+00:00",
+        "priorOpenCount": 20,
+        "endSnapshotAt": "2026-11-11T17:27:40.278941+00:00",
+        "endOpenCount": 20,
+        "sameCycleExits": [],
+        "laterExits": 0
+      },
+      {
+        "session": "43063619699-1",
+        "at": "2026-11-11T17:27:40.255463+00:00",
+        "eventId": 17178,
+        "action": "ADDED",
+        "tier": "GENIUS",
+        "coin": "ETH",
+        "status": "skipped",
+        "reason": "20 open funded positions maximum",
+        "priorSnapshotAt": "2026-11-11T17:27:19.390991+00:00",
+        "priorOpenCount": 20,
+        "endSnapshotAt": "2026-11-11T17:27:40.278941+00:00",
+        "endOpenCount": 20,
+        "sameCycleExits": [],
+        "laterExits": 0
+      },
+      {
+        "session": "43063619699-1",
+        "at": "2026-11-11T17:34:05.526905+00:00",
+        "eventId": 17186,
+        "action": "OPENED",
+        "tier": "GENIUS",
+        "coin": "ZEC",
+        "status": "skipped",
+        "reason": "20 open independent scenarios maximum",
+        "priorSnapshotAt": "2026-11-11T17:33:46.003794+00:00",
+        "priorOpenCount": 20,
+        "endSnapshotAt": "2026-11-11T17:34:06.143262+00:00",
+        "endOpenCount": 20,
+        "sameCycleExits": [],
+        "laterExits": 0
+      },
+      {
+        "session": "43063619699-1",
+        "at": "2026-11-11T17:34:06.121268+00:00",
+        "eventId": 17185,
+        "action": "ADDED",
+        "tier": "SMART",
+        "coin": "BTC",
+        "status": "skipped",
+        "reason": "20 open funded positions maximum",
+        "priorSnapshotAt": "2026-11-11T17:33:46.003794+00:00",
+        "priorOpenCount": 20,
+        "endSnapshotAt": "2026-11-11T17:34:06.143262+00:00",
+        "endOpenCount": 20,
+        "sameCycleExits": [],
+        "laterExits": 0
+      },
+      {
+        "session": "43063619699-1",
+        "at": "2026-11-11T17:52:37.814760+00:00",
+        "eventId": 17198,
+        "action": "OPENED",
+        "tier": "SMART",
+        "coin": "ZEC",
+        "status": "skipped",
+        "reason": "20 open independent scenarios maximum",
+        "priorSnapshotAt": "2026-11-11T17:52:18.648778+00:00",
+        "priorOpenCount": 20,
+        "endSnapshotAt": "2026-11-11T17:52:38.581944+00:00",
+        "endOpenCount": 20,
+        "sameCycleExits": [],
+        "laterExits": 0
+      },
+      {
+        "session": "43063619699-1",
+        "at": "2026-11-11T17:52:38.535515+00:00",
+        "eventId": 17199,
+        "action": "ADDED",
+        "tier": "SMART",
+        "coin": "BTC",
+        "status": "skipped",
+        "reason": "20 open funded positions maximum",
+        "priorSnapshotAt": "2026-11-11T17:52:18.648778+00:00",
+        "priorOpenCount": 20,
+        "endSnapshotAt": "2026-11-11T17:52:38.581944+00:00",
+        "endOpenCount": 20,
+        "sameCycleExits": [],
+        "laterExits": 0
+      }
+    ],
+    "openedCount": 14,
+    "addedCount": 27,
+    "openedWithLaterCycleExit": [
+      {
+        "session": "43045252098-1",
+        "at": "2026-11-11T15:40:38.805847+00:00",
+        "eventId": 17087,
+        "action": "OPENED",
+        "tier": "GENIUS",
+        "coin": "BTC",
+        "status": "skipped",
+        "reason": "20 open independent scenarios maximum",
+        "priorSnapshotAt": "2026-11-11T15:40:19.680356+00:00",
+        "priorOpenCount": 19,
+        "endSnapshotAt": "2026-11-11T15:40:40.304407+00:00",
+        "endOpenCount": 20,
+        "sameCycleExits": [
+          {
+            "id": "github-portfolio-v3-17027",
+            "closedAt": "2026-11-11T15:40:39.003795+00:00",
+            "exitReason": "one-hour observed exit",
+            "afterRejection": true
+          },
+          {
+            "id": "github-portfolio-v3-17028",
+            "closedAt": "2026-11-11T15:40:39.396822+00:00",
+            "exitReason": "one-hour observed exit",
+            "afterRejection": true
+          }
+        ],
+        "laterExits": 2
+      }
+    ],
+    "interpretation": "Cycle inferred from adjacent end-of-cycle portfolio timestamps in same serial session. Exits after rejection and before next portfolio receipt demonstrate a slot freed later in that cycle, not that all other entry gates would pass or a profitable fill existed. No historical fills inserted.",
+    "sameCycleDetail": {
+      "startOpen": 19,
+      "exits": 2,
+      "entries": 3,
+      "endOpen": 20,
+      "filledEventIds": [
+        17086,
+        17088,
+        17089
+      ],
+      "rejectedEventId": 17087,
+      "conclusion": "One OPENED rejection precedes two exits, but three accepted entries use all available slots. No avoidable missed fill established; other gates and FIFO priority not replayed. One other OPENED rejection lacks prior same-session portfolio receipt."
+    }
+  },
+  "files": {
+    "analyze.py": {
+      "bytes": 4351,
+      "sha256": "b03ee16c58034ef435978aad2cc7b6f2c86b770578f6bb5b553540fd6212a75a"
+    },
+    "join_slots.py": {
+      "bytes": 2112,
+      "sha256": "6dad72eaf3c61e0365a8e2805eb42770845d0a8cdb07c3e6e2761b2c8fc1d693"
+    },
+    "43045252098-1_portfolio.jsonl": {
+      "bytes": 227114,
+      "sha256": "5447436fbf996306c76e525b5b847e21c1c566a45b90452f51153e92870f2f3e"
+    },
+    "42944052442-1_portfolio.jsonl": {
+      "bytes": 249687,
+      "sha256": "6908dd5f3903d105bc3ee5efcf79555a680f620b6d124615736ea61300902351"
+    },
+    "43045252098-1_fills.jsonl": {
+      "bytes": 225416,
+      "sha256": "63039fe7268f1864ead11172e03881f15e2ed8698e1a8b9c98b429354ded094f"
+    },
+    "43054475689-1_fills.jsonl": {
+      "bytes": 232926,
+      "sha256": "8ba4d599087a45796c617b16bc9cd6a37db87cfec9328fca7daa59be7fd8a7a2"
+    },
+    "43054475689-1_portfolio.jsonl": {
+      "bytes": 227031,
+      "sha256": "c8a1904c802321baf6f8107e1047a51d72eeea428968e8a133e39870cdabfef8"
+    },
+    "42944052442-1_fills.jsonl": {
+      "bytes": 163325,
+      "sha256": "e71937f8d480305366dbb5251c046d3c9f074fe6ffa219926a5b728b9132d85a"
+    },
+    "42930310040-1_fills.jsonl": {
+      "bytes": 198355,
+      "sha256": "0757d3903b1efdb5e2ad5b32ea84943ff60f3e2cec2541e37cd122f15d4f63a1"
+    },
+    "43063619699-1_portfolio.jsonl": {
+      "bytes": 244128,
+      "sha256": "0293249675d469f9b6b248934203cfd890007555a21f90413bc12eced440b94b"
+    },
+    "42930310040-1_portfolio.jsonl": {
+      "bytes": 242612,
+      "sha256": "4987debcf9339528ba8f8cb00c8c2e83acfa67545e863a299bd08cd4fb5fe0eb"
+    },
+    "42981522696-1_portfolio.jsonl": {
+      "bytes": 241230,
+      "sha256": "7b49343d6d3b107ef4fe499a87584928c4411a956eeb3035c5b31f5f4783533e"
+    },
+    "43063619699-1_fills.jsonl": {
+      "bytes": 193894,
+      "sha256": "5563bbfaba26df10096de4bc2422ae49d6e04a58311dfe73b0ff423dd23ef350"
+    },
+    "42981522696-1_fills.jsonl": {
+      "bytes": 225954,
+      "sha256": "df53d852aba115431cc2524d99b9a2df0f38dd0c7aa463e4204118bf5827307e"
+    },
+    "43063619699-1_signal-decisions.jsonl": {
+      "bytes": 5522,
+      "sha256": "c402680e84376c8d37373f17aac22045e60282ef60477de08918255edf5033e9"
+    },
+    "43072646340-1_signal-decisions.jsonl": {
+      "bytes": 2828,
+      "sha256": "c0c6425da00f2be70b80fb3484ae69aae9c252574ad42a2751a799f646b5a838"
+    },
+    "43045252098-1_signal-decisions.jsonl": {
+      "bytes": 4763,
+      "sha256": "c510690b84f2989256a02e6553a17199dff3fec9f2a9f25bf3442d22387dedd8"
+    },
+    "43036191551-1_signal-decisions.jsonl": {
+      "bytes": 2467,
+      "sha256": "ded930f42f26b6cfd42a55250b88426d5937b25a99b3f37109f63d66c3fefa8e"
+    },
+    "43054475689-1_signal-decisions.jsonl": {
+      "bytes": 3938,
+      "sha256": "3a7e8848012234250ea5d334b739671a4c43b886e808c5b4514af991c232f9c1"
+    },
+    "43081506740-1_signal-decisions.jsonl": {
+      "bytes": 2158,
+      "sha256": "bd43ce4ca18b5d71cee53b3b2af31ed6cf7701a8f734f87f8b6dd2777ea59687"
+    },
+    "43090220173-1_signal-decisions.jsonl": {
+      "bytes": 2321,
+      "sha256": "27b07c4f58644bc970b5128d70182596541b45c984fd82e967e669f3879486e9"
+    },
+    "42996270006-1_signal-decisions.jsonl": {
+      "bytes": 2492,
+      "sha256": "9c554334db2041a51a7c5c7c1a104f8f8367cc492f67aaa4304c451535eeba54"
+    },
+    "43011784572-1_signal-decisions.jsonl": {
+      "bytes": 2688,
+      "sha256": "35aed39a2c91920938b101f8cfa70a236929a9af98e2370f77cfa4e5650b067e"
+    },
+    "43027628850-1_signal-decisions.jsonl": {
+      "bytes": 3235,
+      "sha256": "b223af2758619557ffb5e30b2dc6829ffdc06d64c77528ee0193f2ef70ec4b5a"
+    },
+    "43019531181-1_signal-decisions.jsonl": {
+      "bytes": 1803,
+      "sha256": "fd3810fb5709329724e9c6870b957e6afbf6a6dd1b55b212fe06c681c5fbc630"
+    },
+    "42974893370-1_signal-decisions.jsonl": {
+      "bytes": 3001,
+      "sha256": "25895ec765c26d3854c20fe4625b50169eb5d323836b76ea924d874908dec377"
+    },
+    "43004073523-1_signal-decisions.jsonl": {
+      "bytes": 3655,
+      "sha256": "c67d3043c063fdac26cae710a0204fa69b6ac7d55bac769049f7297f32312e94"
+    },
+    "42981522696-1_signal-decisions.jsonl": {
+      "bytes": 3704,
+      "sha256": "36956ae8a118c56debdac5dddf7f679cab8aa8f88404c46e95c9e04817a5ab8a"
+    },
+    "42988643299-1_signal-decisions.jsonl": {
+      "bytes": 2530,
+      "sha256": "db31143d48bc29d4fd8cebeae016f46a532bc334835071a7a9b8659fa94a3dfe"
+    },
+    "42968519426-1_signal-decisions.jsonl": {
+      "bytes": 1654,
+      "sha256": "a38b0d4239b320c9bd5c131ef47dd9faaaf7307b29104182846b44ff07ea7af5"
+    },
+    "42956421737-1_signal-decisions.jsonl": {
+      "bytes": 1508,
+      "sha256": "bfe6730f229c6b38bc80915607b19787acaa1bfcd6a4affe99df39e6530e94f8"
+    },
+    "42930310040-1_signal-decisions.jsonl": {
+      "bytes": 4230,
+      "sha256": "c3bc04bd958ff41960bb7bb23a080cf84c78d90ec9fb10157c4e2d615a490695"
+    },
+    "42922908966-1_signal-decisions.jsonl": {
+      "bytes": 977,
+      "sha256": "fc0e1057821940368aa9499798578af8f35c37957b2769461a297ba0d379f705"
+    },
+    "42937428040-1_signal-decisions.jsonl": {
+      "bytes": 2817,
+      "sha256": "2128ce38dfa79c10e54484fc695588ed48c6c766d2f3ce9dc24975f661671326"
+    },
+    "42944052442-1_signal-decisions.jsonl": {
+      "bytes": 3306,
+      "sha256": "7ea4cf4b4de106bfb153731655c727c5e38e759df91c1631d8e9efacf774fe38"
+    },
+    "42950351643-1_signal-decisions.jsonl": {
+      "bytes": 3470,
+      "sha256": "73e7591d0352e0f13559adb97500387e18d4b56c0f969c5b46dd2750657b243b"
+    },
+    "42962452261-1_signal-decisions.jsonl": {
+      "bytes": 1331,
+      "sha256": "38c1c11892121b0fb0e74dbb3ddb2ae93ec6418b2ca8057c51262efab229f953"
+    },
+    "slot_audit.py": {
+      "bytes": 1595,
+      "sha256": "048b5caadc9dd45ce98ebeeb3ec588157dd602e7e771bf88bc11c0230ddf2f8b"
+    },
+    "library_file_transfer.py": {
+      "bytes": 16286,
+      "sha256": "acd44c7471495a240e4f2d97037fe6f83c48793ab98938801e5393f5584a029b"
+    },
+    "stupid-money-lab_data_2026-11-11_sessions_43090220173-1_fills.jsonl": {
+      "bytes": 164098,
+      "sha256": "b83d16df48b6633b4fa543523ae214dd8eccd1df5c3bff3865837a0d9daa73ce"
+    },
+    "stupid-money-lab_data_2026-11-11_sessions_43090220173-1_events.jsonl": {
+      "bytes": 282716,
+      "sha256": "6ba33c1b3ec1a894dc414bffe9493de69d2f3c8f3037fdd3a29a9a5af591ca88"
+    },
+    "stupid-money-lab_data_2026-11-11_sessions_43090220173-1_source-checks.jsonl": {
+      "bytes": 10205,
+      "sha256": "5745e303ef1bb2412af6c3af2c6c9afe28cde81132614ad8a25112e744cef170"
+    },
+    ".github_workflows_stupid-money-lab.yml": {
+      "bytes": 2519,
+      "sha256": "b583b37a4124022a3d154d036b1065b22352697c9762c21a65751b0f344d5753"
+    },
+    "stupid-money-lab_data_2026-11-11_sessions_43090220173-1_signal-decisions.jsonl": {
+      "bytes": 2321,
+      "sha256": "27b07c4f58644bc970b5128d70182596541b45c984fd82e967e669f3879486e9"
+    }
+  },
+  "newOriginals": [
+    {
+      "observedAt": "2026-11-11T20:16:09.123481+00:00",
+      "kind": "first_observation",
+      "event": {
+        "id": 17271,
+        "type": "SMART_FRESH",
+        "coin": "BTC",
+        "createdAt": "2026-11-11T20:16:01.917Z",
+        "occurredAt": "2026-11-11T20:16:00.416Z",
+        "payload": {
+          "side": "SHORT",
+          "addPx": 74452.80811759185,
+          "liqPx": null,
+          "action": "ADDED",
+          "cohort": "GENIUS",
+          "wallet": "0x628f303158bb4dc2f6e31acb6e0a1fb464626a08",
+          "entryPx": 76633.1,
+          "leverage": {
+            "type": "cross",
+            "value": 20
+          },
+          "marginUsd": 18846.828975,
+          "positionUsd": 634188.26338,
+          "allTimePnlUsd": 20944257.546867,
+          "addedMarginUsd": 17561.803274159876,
+          "flippedFrom": "LONG"
+        },
+        "tags": {
+          "0x628f303158bb4dc2f6e31acb6e0a1fb464626a08": [
+            "GIGA_WHALE"
+          ]
+        },
+        "perpPnl": 22027897.732153,
+        "allTimePnl": 22027897.732153,
+        "badges": {
+          "level": "genius-trader",
+          "secondary": [
+            "top-1000",
+            "mega-whale"
+          ]
+        },
+        "traderCard": {
+          "badges": [
+            "genius-trader",
+            "top-1000",
+            "mega-whale"
+          ],
+          "rank": 101,
+          "chips": [
+            {
+              "kind": "rank",
+              "label": "Trader Rank",
+              "value": "#101",
+              "url": "/trader/0x628f303158bb4dc2f6e31acb6e0a1fb464626a08"
+            }
+          ],
+          "venue": "hyperliquid",
+          "pnl": {
+            "side": "short",
+            "entryPx": "76633.1",
+            "leverage": 20,
+            "sizeAbs": 4.01425,
+            "seedPx": "76529",
+            "live": true,
+            "sizeShrunk": true,
+            "frozen": null
+          }
+        }
+      },
+      "hash": "1d980f4bb7d764a2b4a9c1af63950b8a4f4070fb7f3c90e24f97d78617f11463"
+    },
+    {
+      "observedAt": "2026-11-11T20:16:09.123619+00:00",
+      "kind": "first_observation",
+      "event": {
+        "id": 17270,
+        "type": "SMART_FRESH",
+        "coin": "XMR",
+        "createdAt": "2026-11-11T20:16:01.911Z",
+        "occurredAt": "2026-11-11T20:16:00.416Z",
+        "payload": {
+          "side": "SHORT",
+          "addPx": null,
+          "liqPx": 17205.789514029708,
+          "action": "ADDED",
+          "cohort": "SMART",
+          "wallet": "0x0062d1e3f66d7468003216d2d284cc2269f50269",
+          "entryPx": 592.7,
+          "leverage": {
+            "type": "cross",
+            "value": 5
+          },
+          "marginUsd": 24365.023142,
+          "positionUsd": 65289.45365,
+          "allTimePnlUsd": 38544370.419799,
+          "addedMarginUsd": 20488.497191
+        },
+        "tags": {
+          "0x0062d1e3f66d7468003216d2d284cc2269f50269": [
+            "WHALE"
+          ]
+        },
+        "perpPnl": 22591212.057904,
+        "allTimePnl": 22591212.057904,
+        "badges": {
+          "level": "smart-trader",
+          "secondary": [
+            "top-1000",
+            "whale"
+          ]
+        },
+        "traderCard": {
+          "badges": [
+            "smart-trader",
+            "top-1000",
+            "whale"
+          ],
+          "rank": 99,
+          "chips": [
+            {
+              "kind": "rank",
+              "label": "Trader Rank",
+              "value": "#99",
+              "url": "/trader/0x0062d1e3f66d7468003216d2d284cc2269f50269"
+            }
+          ],
+          "venue": "hyperliquid",
+          "pnl": {
+            "side": "short",
+            "entryPx": "592.7",
+            "leverage": 5,
+            "sizeAbs": 197.463,
+            "seedPx": "606",
+            "live": true,
+            "sizeShrunk": false,
+            "frozen": null
+          }
+        }
+      },
+      "hash": "3f0a5537b2d584fef41b94e30255a75354dca7a642f9195f13f6a830e9230bb3"
+    },
+    {
+      "observedAt": "2026-11-11T20:20:21.611169+00:00",
+      "kind": "first_observation",
+      "event": {
+        "id": 17272,
+        "type": "POSITION_CLOSED",
+        "coin": "PUMP",
+        "createdAt": "2026-11-11T20:20:02.692Z",
+        "occurredAt": "2026-11-11T20:19:36.186Z",
+        "payload": {
+          "side": "LONG",
+          "action": "REDUCED",
+          "cohort": "SMART",
+          "exitPx": 0.0035444846279491125,
+          "pnlUsd": 66733.02470366705,
+          "wallet": "0x5b5933d675c5b5adbaf1b21f33c2c48d06b995b9",
+          "entryPx": 0.004505,
+          "leftUsd": 458137.22534812824,
+          "leverage": {
+            "type": "cross",
+            "value": 5
+          },
+          "pnlExact": true,
+          "closedPct": 50.7,
+          "closedUsd": 263992.9255909692,
+          "marginUsd": 79947.5094,
+          "allTimePnlUsd": 201967555.352847
+        },
+        "tags": {
+          "0x5b5933d675c5b5adbaf1b21f33c2c48d06b995b9": [
+            "GIGA_WHALE"
+          ]
+        },
+        "perpPnl": 406711879.032032,
+        "allTimePnl": 406711879.032032,
+        "badges": {
+          "level": "smart-trader",
+          "secondary": [
+            "top-100",
+            "fund"
+          ]
+        },
+        "traderCard": {
+          "badges": [
+            "smart-trader",
+            "top-100",
+            "fund"
+          ],
+          "rank": 3,
+          "chips": [
+            {
+              "kind": "rank",
+              "label": "Trader Rank",
+              "value": "#3",
+              "url": "/trader/0x5b5933d675c5b5adbaf1b21f33c2c48d06b995b9"
+            }
+          ],
+          "venue": "hyperliquid",
+          "pnl": {
+            "side": "long",
+            "entryPx": "0.004505",
+            "leverage": 5,
+            "sizeAbs": 83357311,
+            "seedPx": "0.003653",
+            "live": true,
+            "sizeShrunk": false,
+            "frozen": null
+          }
+        }
+      },
+      "hash": "9334c6292bbc83877da12c0e7ed90372d90e3b263866069a4c22b69c94134e0b"
+    },
+    {
+      "observedAt": "2026-11-11T20:21:03.692579+00:00",
+      "kind": "first_observation",
+      "event": {
+        "id": 17274,
+        "type": "SMART_FRESH",
+        "coin": "kPEPE",
+        "createdAt": "2026-11-11T20:21:02.150Z",
+        "occurredAt": "2026-11-11T20:21:00.625Z",
+        "payload": {
+          "side": "SHORT",
+          "addPx": 0.0048167432480606745,
+          "liqPx": 0.00420348751141119,
+          "action": "ADDED",
+          "cohort": "GENIUS",
+          "wallet": "0x84efbcec7c5e8e1c7147aee2481aabc0f4717c45",
+          "entryPx": 0.004593,
+          "leverage": {
+            "type": "isolated",
+            "value": 4
+          },
+          "marginUsd": 991332.855328,
+          "positionUsd": 6230140.896686,
+          "allTimePnlUsd": 1264284.449949,
+          "addedMarginUsd": 29191.70844065933
+        },
+        "perpPnl": null,
+        "allTimePnl": null,
+        "badges": {
+          "level": "genius-trader",
+          "secondary": [
+            "whale"
+          ]
+        },
+        "traderCard": {
+          "badges": [
+            "genius-trader",
+            "whale"
+          ],
+          "rank": 4242,
+          "chips": [
+            {
+              "kind": "rank",
+              "label": "Trader Rank",
+              "value": "#4,242",
+              "url": "/trader/0x84efbcec7c5e8e1c7147aee2481aabc0f4717c45"
+            }
+          ],
+          "venue": "hyperliquid",
+          "pnl": {
+            "side": "short",
+            "entryPx": "0.004593",
+            "leverage": 4,
+            "sizeAbs": 708887808,
+            "seedPx": "0.004731",
+            "live": true,
+            "sizeShrunk": false,
+            "frozen": null
+          }
+        }
+      },
+      "hash": "903c10fc43137a50dfdde18f7ba21163486832183efa2434567531a67e7dba45"
+    },
+    {
+      "observedAt": "2026-11-11T20:22:31.239997+00:00",
+      "kind": "first_observation",
+      "event": {
+        "id": 17275,
+        "type": "SMART_FRESH",
+        "coin": "BTC",
+        "createdAt": "2026-11-11T20:22:02.501Z",
+        "occurredAt": "2026-11-11T20:22:00.419Z",
+        "payload": {
+          "side": "LONG",
+          "liqPx": 47946.775315416344,
+          "action": "OPENED",
+          "cohort": "SMART",
+          "wallet": "0xfa1ef6d87e86d34c0967dc6e06e99b08781074c0",
+          "entryPx": 72098.9,
+          "leverage": {
+            "type": "cross",
+            "value": 25
+          },
+          "marginUsd": 44172.618339,
+          "positionUsd": 1434320.78195,
+          "allTimePnlUsd": 771107.454229,
+          "addedMarginUsd": null
+        },
+        "perpPnl": 516642.640895,
+        "allTimePnl": 516642.640895,
+        "badges": {
+          "level": "smart-trader",
+          "secondary": []
+        },
+        "traderCard": {
+          "badges": [
+            "smart-trader"
+          ],
+          "rank": 2917,
+          "chips": [
+            {
+              "kind": "rank",
+              "label": "Trader Rank",
+              "value": "#2,917",
+              "url": "/trader/0xfa1ef6d87e86d34c0967dc6e06e99b08781074c0"
+            }
+          ],
+          "venue": "hyperliquid",
+          "pnl": {
+            "side": "long",
+            "entryPx": "72098.9",
+            "leverage": 25,
+            "sizeAbs": 19.1729,
+            "seedPx": "73145",
+            "live": true,
+            "sizeShrunk": false,
+            "frozen": null
+          }
+        }
+      },
+      "hash": "22b1e92ed5d765473c339fef86c9fbf7aee3e18049b006cb8f832b80b40bec65"
+    },
+    {
+      "observedAt": "2026-11-11T20:25:19.415027+00:00",
+      "kind": "first_observation",
+      "event": {
+        "id": 17277,
+        "type": "SMART_FRESH",
+        "coin": "XMR",
+        "createdAt": "2026-11-11T20:25:02.111Z",
+        "occurredAt": "2026-11-11T20:25:00.401Z",
+        "payload": {
+          "side": "SHORT",
+          "addPx": 588.3791827049151,
+          "liqPx": 11523.760392466416,
+          "action": "ADDED",
+          "cohort": "GENIUS",
+          "wallet": "0x9b9d28fa57d2ef2c14e0a15115f8ae9083b5c38f",
+          "entryPx": 593.35,
+          "leverage": {
+            "type": "cross",
+            "value": 3
+          },
+          "marginUsd": 1015623.3164,
+          "positionUsd": 2769889.3034,
+          "allTimePnlUsd": 141692208.176684,
+          "addedMarginUsd": 28934.58250058427
+        },
+        "tags": {
+          "0x9b9d28fa57d2ef2c14e0a15115f8ae9083b5c38f": [
+            "VETERAN",
+            "GIGA_WHALE"
+          ]
+        },
+        "perpPnl": 117710777.302952,
+        "allTimePnl": 117710777.302952,
+        "badges": {
+          "level": "genius-trader",
+          "secondary": [
+            "top-100",
+            "fund",
+            "veteran"
+          ]
+        },
+        "traderCard": {
+          "badges": [
+            "genius-trader",
+            "top-100",
+            "fund",
+            "veteran"
+          ],
+          "rank": 8,
+          "chips": [
+            {
+              "kind": "rank",
+              "label": "Trader Rank",
+              "value": "#8",
+              "url": "/trader/0x9b9d28fa57d2ef2c14e0a15115f8ae9083b5c38f"
+            }
+          ],
+          "venue": "hyperliquid",
+          "pnl": {
+            "side": "short",
+            "entryPx": "593.35",
+            "leverage": 3,
+            "sizeAbs": 5980.781,
+            "seedPx": "608.058",
+            "live": true,
+            "sizeShrunk": false,
+            "frozen": null
+          }
+        }
+      },
+      "hash": "f4fd601dadfe9b482e088cd77c1e3d4f11ced4863c72d6bb85c021120f7e5b3a"
+    },
+    {
+      "observedAt": "2026-11-11T20:25:19.415171+00:00",
+      "kind": "first_observation",
+      "event": {
+        "id": 17276,
+        "type": "SMART_FRESH",
+        "coin": "XMR",
+        "createdAt": "2026-11-11T20:25:02.105Z",
+        "occurredAt": "2026-11-11T20:25:00.401Z",
+        "payload": {
+          "side": "SHORT",
+          "addPx": 588.3805777806642,
+          "liqPx": 9609.091714814434,
+          "action": "ADDED",
+          "cohort": "SMART",
+          "wallet": "0x5b5933d675c5b5adbaf1b21f33c2c48d06b995b9",
+          "entryPx": 629.968,
+          "leverage": {
+            "type": "cross",
+            "value": 3
+          },
+          "marginUsd": 2435529.03005,
+          "positionUsd": 5721471.28093,
+          "allTimePnlUsd": 340903834.357292,
+          "addedMarginUsd": 20948.864358423583
+        },
+        "tags": {
+          "0x5b5933d675c5b5adbaf1b21f33c2c48d06b995b9": [
+            "GIGA_WHALE"
+          ]
+        },
+        "perpPnl": 341098320.243014,
+        "allTimePnl": 341098320.243014,
+        "badges": {
+          "level": "smart-trader",
+          "secondary": [
+            "top-100",
+            "fund"
+          ]
+        },
+        "traderCard": {
+          "badges": [
+            "smart-trader",
+            "top-100",
+            "fund"
+          ],
+          "rank": 2,
+          "chips": [
+            {
+              "kind": "rank",
+              "label": "Trader Rank",
+              "value": "#2",
+              "url": "/trader/0x5b5933d675c5b5adbaf1b21f33c2c48d06b995b9"
+            }
+          ],
+          "venue": "hyperliquid",
+          "pnl": {
+            "side": "short",
+            "entryPx": "629.968",
+            "leverage": 3,
+            "sizeAbs": 12998.484,
+            "seedPx": "580.243",
+            "live": true,
+            "sizeShrunk": false,
+            "frozen": null
+          }
+        }
+      },
+      "hash": "f5241c8c95b0b9a114104e90d2955cfb61ad81d7a7f0c661ca89689f58f1c4c7"
+    },
+    {
+      "observedAt": "2026-11-11T20:27:29.040607+00:00",
+      "kind": "first_observation",
+      "event": {
+        "id": 17279,
+        "type": "SMART_FRESH",
+        "coin": "AVAX",
+        "createdAt": "2026-11-11T20:27:02.495Z",
+        "occurredAt": "2026-11-11T20:27:00.352Z",
+        "payload": {
+          "side": "SHORT",
+          "addPx": 8.583156188206972,
+          "liqPx": 24.508787309861845,
+          "action": "ADDED",
+          "cohort": "SMART",
+          "wallet": "0x5d26cbe12cad98e13c482a93f16bbcfbd0100731",
+          "entryPx": 8.3801,
+          "leverage": {
+            "type": "cross",
+            "value": 10
+          },
+          "marginUsd": 205893.469946,
+          "positionUsd": 1364101.188717,
+          "allTimePnlUsd": 4496865.194603,
+          "addedMarginUsd": 24414.557135658488
+        },
+        "tags": {
+          "0x5d26cbe12cad98e13c482a93f16bbcfbd0100731": [
+            "VETERAN",
+            "WHALE"
+          ]
+        },
+        "perpPnl": 6705695.521768,
+        "allTimePnl": 6705695.521768,
+        "badges": {
+          "level": "smart-trader",
+          "secondary": [
+            "top-1000",
+            "whale",
+            "veteran"
+          ]
+        },
+        "traderCard": {
+          "badges": [
+            "smart-trader",
+            "top-1000",
+            "whale",
+            "veteran"
+          ],
+          "rank": 779,
+          "chips": [
+            {
+              "kind": "rank",
+              "label": "Trader Rank",
+              "value": "#779",
+              "url": "/trader/0x5d26cbe12cad98e13c482a93f16bbcfbd0100731"
+            }
+          ],
+          "venue": "hyperliquid",
+          "pnl": {
+            "side": "short",
+            "entryPx": "8.3801",
+            "leverage": 10,
+            "sizeAbs": 180731.75,
+            "seedPx": "8.8256",
+            "live": true,
+            "sizeShrunk": false,
+            "frozen": null
+          }
+        }
+      },
+      "hash": "90570407b77a5a34ddca24a46619ae6dca8ff9a9d996f936b65175bb46864aa9"
+    }
+  ],
+  "actions": {
+    "ADDED": 6,
+    "REDUCED": 1,
+    "OPENED": 1
+  },
+  "tiers": {
+    "GENIUS": 3,
+    "SMART": 5
+  },
+  "latency": {
+    "n": 8,
+    "min": 1.542579,
+    "median": 17.307099,
+    "max": 28.738997,
+    "over120": 0
+  },
+  "coverage": {
+    "run": 43090220173,
+    "attempt": 1,
+    "reads": 65,
+    "first": "2026-11-11T19:46:22.719649+00:00",
+    "last": "2026-11-11T20:40:59.580574+00:00",
+    "maxGapSeconds": 158.776838
+  },
+  "exitJoins": [
+    {
+      "event": {
+        "observedAt": "2026-11-11T20:20:21.611169+00:00",
+        "kind": "first_observation",
+        "event": {
+          "id": 17272,
+          "type": "POSITION_CLOSED",
+          "coin": "PUMP",
+          "createdAt": "2026-11-11T20:20:02.692Z",
+          "occurredAt": "2026-11-11T20:19:36.186Z",
+          "payload": {
+            "side": "LONG",
+            "action": "REDUCED",
+            "cohort": "SMART",
+            "exitPx": 0.0035444846279491125,
+            "pnlUsd": 66733.02470366705,
+            "wallet": "0x5b5933d675c5b5adbaf1b21f33c2c48d06b995b9",
+            "entryPx": 0.004505,
+            "leftUsd": 458137.22534812824,
+            "leverage": {
+              "type": "cross",
+              "value": 5
+            },
+            "pnlExact": true,
+            "closedPct": 50.7,
+            "closedUsd": 263992.9255909692,
+            "marginUsd": 79947.5094,
+            "allTimePnlUsd": 201967555.352847
+          },
+          "tags": {
+            "0x5b5933d675c5b5adbaf1b21f33c2c48d06b995b9": [
+              "GIGA_WHALE"
+            ]
+          },
+          "perpPnl": 406711879.032032,
+          "allTimePnl": 406711879.032032,
+          "badges": {
+            "level": "smart-trader",
+            "secondary": [
+              "top-100",
+              "fund"
+            ]
+          },
+          "traderCard": {
+            "badges": [
+              "smart-trader",
+              "top-100",
+              "fund"
+            ],
+            "rank": 3,
+            "chips": [
+              {
+                "kind": "rank",
+                "label": "Trader Rank",
+                "value": "#3",
+                "url": "/trader/0x5b5933d675c5b5adbaf1b21f33c2c48d06b995b9"
+              }
+            ],
+            "venue": "hyperliquid",
+            "pnl": {
+              "side": "long",
+              "entryPx": "0.004505",
+              "leverage": 5,
+              "sizeAbs": 83357311,
+              "seedPx": "0.003653",
+              "live": true,
+              "sizeShrunk": false,
+              "frozen": null
+            }
+          }
+        },
+        "hash": "9334c6292bbc83877da12c0e7ed90372d90e3b263866069a4c22b69c94134e0b"
+      },
+      "matchingCopiedEpisodes": [],
+      "firstDecision": [
+        {
+          "eventId": 17272,
+          "action": "REDUCED",
+          "wallet": "0x5b5933d675c5b5adbaf1b21f33c2c48d06b995b9",
+          "market": "PUMP",
+          "side": "LONG",
+          "publication": "2026-11-11T20:20:02.692Z",
+          "observedAt": "2026-11-11T20:20:21.611285+00:00",
+          "sourceVenue": "hyperliquid",
+          "paperQuoteVenue": "hyperliquid",
+          "exitDiscoveryAt": "2026-11-11T20:20:22.414241+00:00",
+          "sourcePublicationAt": "2026-11-11T20:20:02.692Z",
+          "lateDiscovery": false,
+          "exitPolicy": "Current observed book; never backdated to source close",
+          "status": "skipped",
+          "reason": "No prospectively copied opening"
+        }
+      ],
+      "lastDecision": [
+        {
+          "eventId": 17272,
+          "action": "REDUCED",
+          "wallet": "0x5b5933d675c5b5adbaf1b21f33c2c48d06b995b9",
+          "market": "PUMP",
+          "side": "LONG",
+          "publication": "2026-11-11T20:20:02.692Z",
+          "observedAt": "2026-11-11T20:20:21.611285+00:00",
+          "sourceVenue": "hyperliquid",
+          "paperQuoteVenue": "hyperliquid",
+          "exitDiscoveryAt": "2026-11-11T20:20:22.414241+00:00",
+          "sourcePublicationAt": "2026-11-11T20:20:02.692Z",
+          "lateDiscovery": false,
+          "exitPolicy": "Current observed book; never backdated to source close",
+          "status": "skipped",
+          "reason": "No prospectively copied opening"
+        }
+      ]
+    }
+  ],
+  "genius": {
+    "history": 58,
+    "open": 50,
+    "closed": 8,
+    "cash": 4980.43376828499,
+    "realized": 86.71125486420027,
+    "openPnl": 501.8500828171307,
+    "stats": {
+      "n": 8,
+      "wins": 6,
+      "losses": 2,
+      "winRate": 0.75,
+      "expectancy": 10.838906858025034,
+      "profitFactor": 4.914207448134561,
+      "payoffRatio": 1.6380691493781872
+    },
+    "concentration": {
+      "ZEC": 12,
+      "BTC": 19,
+      "UNI": 1,
+      "XMR": 1,
+      "HYPE": 4,
+      "LIT": 2,
+      "ETH": 6,
+      "XRP": 1,
+      "SOL": 3,
+      "kPEPE": 1
+    },
+    "newLegs": [],
+    "archive": {
+      "at": "2026-11-11T20:37:25.409308+00:00",
+      "scope": "Saved original exits and copied-card ending revisions; uncaptured source history unknown",
+      "files": 168,
+      "bytesRead": 0,
+      "exitCardsReviewed": 0,
+      "endingRevisionRowsReviewed": 0,
+      "newCardWarningsRecovered": 0,
+      "matchingExitIds": [
+        17036,
+        16710,
+        16479,
+        15815,
+        15248,
+        15176,
+        13000,
+        12838
+      ],
+      "backlogRemaining": false,
+      "errors": []
+    },
+    "quality": {
+      "at": "2026-11-11T20:41:00.589124+00:00",
+      "status": "Unvalidated website-alert simulation; source holdings and funding incomplete",
+      "copyPerformanceEligible": false,
+      "activePaperExposures": 50,
+      "closureWarningPositionIds": [
+        10652,
+        10736,
+        10936,
+        11128,
+        11154,
+        11438,
+        11451,
+        11464,
+        11511,
+        11777,
+        11798,
+        11841,
+        11904,
+        11945,
+        11949,
+        11956,
+        11974,
+        11995,
+        12076,
+        12122,
+        12445,
+        12839,
+        13388,
+        14155,
+        17053
+      ],
+      "closureWarningCount": 25,
+      "sourceCardNoLongerLiveCount": 12,
+      "subsequentOpeningPositionIds": [
+        10652,
+        10736,
+        10936,
+        11128,
+        11154,
+        11438,
+        11464,
+        11511,
+        11777,
+        11798,
+        11841,
+        11904,
+        11945,
+        11949,
+        11974,
+        11995,
+        12076,
+        12122,
+        12445,
+        12839,
+        14155
+      ],
+      "subsequentOpeningWarningCount": 21,
+      "warningExposureModeledPnlBeforeFunding": 211.9125876045606,
+      "otherUnverifiedExposureModeledPnlBeforeFunding": 291.5022108563435,
+      "totalModeledPnlBeforeFunding": 503.414798460904,
+      "interpretation": "Warning subtotal assumes continued exposure despite non-live source cards or subsequent openings; neither subtotal is verified copier performance."
+    }
+  },
+  "scalp": {
+    "portfolio": {
+      "protocolVersion": "split-v4",
+      "families": {
+        "fresh": {
+          "total": 349,
+          "open": 1,
+          "closed": 348,
+          "closedPnlBeforeFunding": -45.4775435300902,
+          "milestones": {
+            "notional": {
+              "5": 9,
+              "10": 0,
+              "20": 0
+            },
+            "margin": {
+              "5": 100,
+              "10": 50,
+              "20": 29
+            }
+          }
+        },
+        "add_scalp": {
+          "total": 2297,
+          "open": 14,
+          "closed": 2283,
+          "closedPnlBeforeFunding": -781.9556716904431,
+          "milestones": {
+            "notional": {
+              "5": 5,
+              "10": 1,
+              "20": 0
+            },
+            "margin": {
+              "5": 477,
+              "10": 241,
+              "20": 86
+            }
+          }
+        }
+      },
+      "study": "github-portfolio-v3",
+      "initialEquity": 1000,
+      "equity": 171.23515971777263,
+      "realizedBeforeFunding": -827.4332152205333,
+      "openCloseEstimateBeforeFunding": -1.3316250616941063,
+      "marginInUse": 103.93005524876666,
+      "available": 67.30510446900597,
+      "openCount": 15,
+      "closedCount": 2631,
+      "totalCount": 2646,
+      "maxOpen": 20,
+      "targetNotional": 200,
+      "maxPositionNotional": 350,
+      "stalePositions": [],
+      "milestones": {
+        "notional": {
+          "5": {
+            "hit": 14,
+            "total": 2646,
+            "unconfirmed": 2632
+          },
+          "10": {
+            "hit": 1,
+            "total": 2646,
+            "unconfirmed": 2645
+          },
+          "20": {
+            "hit": 0,
+            "total": 2646,
+            "unconfirmed": 2646
+          }
+        },
+        "margin": {
+          "5": {
+            "hit": 577,
+            "total": 2646,
+            "unconfirmed": 2069
+          },
+          "10": {
+            "hit": 291,
+            "total": 2646,
+            "unconfirmed": 2355
+          },
+          "20": {
+            "hit": 115,
+            "total": 2646,
+            "unconfirmed": 2531
+          }
+        }
+      },
+      "feesAssumedBps": 4.5,
+      "fundingComplete": false,
+      "at": "2026-11-11T20:41:22.879532+00:00",
+      "maxDrawdownObserved": 0.8298059551241322
+    },
+    "stats": {
+      "n": 2631,
+      "wins": 839,
+      "losses": 1792,
+      "winRate": 0.31889015583428354,
+      "expectancy": -0.3144938104220955,
+      "profitFactor": 0.4560271679982539,
+      "payoffRatio": 0.9740175030427545
+    },
+    "closedGapFlags": 2588,
+    "newEntries": 7,
+    "newClosures": 6
+  },
+  "limitations": [
+    "Failed successor run has no jobs; diagnostic endpoint unsupported and job logs unavailable with404. Root cancellation/failure cause unverified. One recovery attempt requested.",
+    "Pre-refresh slot audit covers23 saved Nov11 UTC sessions through20:41 checkpoint, not full history. No avoidable missed fill or profitable counterfactual established.",
+    "No historical source prices, missed exits or outage fills invented. Funding/identity/classification timing/lawfulUSPAaccess/liquidation and complete capture unverified."
+  ],
+  "scan": {
+    "page": {
+      "at": "2026-11-11T21:18:45.690Z",
+      "status": "page_read",
+      "httpStatus": 200,
+      "hash": "1d2c5a0ecbdd46ab3e3cf2f06abcb0c4c700093f15cbd5cbbc843396c8b680b4"
+    },
+    "live": {
+      "at": "2026-11-11T21:18:47.669Z",
+      "status": "page_read",
+      "eventCount": 19
+    }
+  },
+  "failedSuccessor": {
+    "id": 43090387943,
+    "conclusion": "failure",
+    "jobs": [],
+    "createdAt": "2026-11-11T19:47:00Z",
+    "updatedAt": "2026-11-11T21:02:15Z"
+  },
+  "recovery": {
+    "run": 43090220173,
+    "job": 130795685294,
+    "rerunRequested": true,
+    "jobStatus": {
+      "jobs": [
+        {
+          "id": 130795685294,
+          "name": "observe",
+          "status": "in_progress",
+          "conclusion": null,
+          "run_id": 43090220173,
+          "logs_url": null,
+          "steps": [
+            {
+              "name": "Set up job",
+              "status": "completed",
+              "conclusion": "success",
+              "number": 1
+            },
+            {
+              "name": "Run actions/checkout@v4",
+              "status": "completed",
+              "conclusion": "success",
+              "number": 2
+            },
+            {
+              "name": "Run actions/setup-python@v5",
+              "status": "completed",
+              "conclusion": "success",
+              "number": 3
+            },
+            {
+              "name": "Verify paper math",
+              "status": "completed",
+              "conclusion": "success",
+              "number": 4
+            },
+            {
+              "name": "Collect public events and paper quotes",
+              "status": "in_progress",
+              "conclusion": null,
+              "number": 5
+            },
+            {
+              "name": "Persist public evidence",
+              "status": "pending",
+              "conclusion": null,
+              "number": 6
+            },
+            {
+              "name": "Preserve evidence artifact even if commit fails",
+              "status": "pending",
+              "conclusion": null,
+              "number": 7
+            },
+            {
+              "name": "Hand off to next bounded collector window",
+              "status": "pending",
+              "conclusion": null,
+              "number": 8
+            },
+            {
+              "name": "Post Run actions/setup-python@v5",
+              "status": "pending",
+              "conclusion": null,
+              "number": 15
+            },
+            {
+              "name": "Post Run actions/checkout@v4",
+              "status": "pending",
+              "conclusion": null,
+              "number": 16
+            }
+          ]
+        }
+      ]
+    },
+    "sourceCheckpointVerified": false,
+    "lastPersistedCommit": "1f300346f7b2ef2c52ad7887254c53baa68d22f7",
+    "interpretation": "Recovery job started and math step passed; no fresh persisted source heartbeat found by final check. Restoration remains pending."
+  },
+  "nextTest": "Verify fresh persisted recovery heartbeat and source/exit observations; assess cancellation and successor queue failure without inventing missed fills.",
+  "cancelledJobTiming": {
+    "id": 130765021381,
+    "status": "completed",
+    "conclusion": "cancelled",
+    "started_at": "2026-11-11T19:45:57Z",
+    "completed_at": "2026-11-11T20:50:58Z"
+  },
+  "finalCheckpointCheckAt": "2026-11-11T21:22:37.876332+00:00"
+}
