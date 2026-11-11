@@ -15,3 +15,4 @@
 {"at":"2026-11-11T00:52:07.700360+00:00","eventId":16638,"action":"OPENED","tier":"GENIUS","coin":"ZEC","status":"filled","reason":"Fresh opening recorded"}
 {"at":"2026-11-11T00:53:29.565125+00:00","eventId":16639,"action":"OPENED","tier":"SMART","coin":"NEAR","status":"filled","reason":"Fresh opening recorded"}
 {"at":"2026-11-11T00:59:39.872841+00:00","eventId":16642,"action":"ADDED","tier":"SMART","coin":"ETH","status":"filled","reason":"Standalone add-alert scalp opened"}
+{"at":"2026-11-11T01:00:21.547773+00:00","eventId":16643,"action":"ADDED","tier":"SMART","coin":"kPEPE","status":"skipped","reason":"20 open funded positions maximum"}
