@@ -202,14 +202,19 @@ def excursion_update(state,quotes,events):
 
 
 def cycle(state, fetch_source=True):
-    excursion_seed(state)
+    if state.get('activeProtocol') != 'genius-only-reset-v1':
+        state.setdefault('archivedRuns', []).append({'at':stamp(),'reason':'User requested Genius-only bankroll restart','geniusCopy':state.pop('geniusCopy',{}),'studies':state.get('studies',[]),'lifecycleTracks':state.get('lifecycleTracks',{}),'portfolio':state.get('portfolio',{})})
+        state['studies']=[];state['lifecycleTracks']={};state['pendingSignals']={}
+        state['activeProtocol']='genius-only-reset-v1'
+        state['resetAt']=stamp()
+    state['pendingSignals']={}
     previous_heartbeat=state.get('heartbeatAt');state['heartbeatAt']=stamp();state['study']=VERSION
     if previous_heartbeat and millis(state['heartbeatAt'])-millis(previous_heartbeat)>30000:
         append('coverage-gaps',{'from':previous_heartbeat,'to':state['heartbeatAt'],'seconds':(millis(state['heartbeatAt'])-millis(previous_heartbeat))/1000})
     for s in state['studies']:
         if s.get('study')!=VERSION: s['legacy']=True;s['entryCopyEligible']=False
     state['sourcePollSeconds']=30;state['quotePollSeconds']=10
-    state['limitations']=['Exploratory source-alert scenarios; wallet/tier identity unverified. Not frozen Genius research.','One $1000 shared account with separate Fresh and Add-alert scalp sections. $200 target notional, tracked fresh-position adds up to $350. Source leverage matched only when readable and within venue limits; collateral/liquidation unverified.20 total slots; cash and risk gates apply.','4.5bps/side assumed fees, 10bps/side adverse slippage; funding excluded.','Stops sampled at observed books; gaps can exceed risk. No invented fills or historical entries.','GitHub scheduled jobs can be late or skipped; not guaranteed nonstop. Telegram not connected.']
+    state['limitations']=['Genius-only reset: $10000 simulated, 50 slots, fixed5x; source labels and lifecycle unverified. Prior ledgers archived; no other paper lanes active.','Exploratory source-alert scenarios; wallet/tier identity unverified. Not frozen Genius research.','One $1000 shared account with separate Fresh and Add-alert scalp sections. $200 target notional, tracked fresh-position adds up to $350. Source leverage matched only when readable and within venue limits; collateral/liquidation unverified.20 total slots; cash and risk gates apply.','4.5bps/side assumed fees, 10bps/side adverse slippage; funding excluded.','Stops sampled at observed books; gaps can exceed risk. No invented fills or historical entries.','GitHub scheduled jobs can be late or skipped; not guaranteed nonstop. Telegram not connected.']
     state.setdefault('pendingSignals',{})
     state.setdefault('signalCoverage',{'since':stamp(),'OPENED':{'observed':0,'SMART':0,'GENIUS':0},'ADDED':{'observed':0,'SMART':0,'GENIUS':0}})
     previous_events=state.get("events", [])
@@ -233,7 +238,7 @@ def cycle(state, fetch_source=True):
                 unseen.append(e)
                 action=e['payload'].get('action');tier=e['payload'].get('cohort')
                 if action in ('OPENED','ADDED'):
-                    state['pendingSignals'][key]=e
+                    pass # Other paper-study lanes retired; raw source evidence retained
                     state['signalCoverage'][action]['observed']+=1
                     state['signalCoverage'][action][tier]+=1
             state['seen'][key]={'hash':h,'firstObservedAt':old['firstObservedAt'] if old else stamp()}
@@ -308,8 +313,7 @@ def cycle(state, fetch_source=True):
                     decision(state,e,'retrying',reason+'; retry only inside original120s eligibility window')
                 else:
                     reject(state,e,reason);decision(state,e,'skipped',reason);state['pendingSignals'].pop(str(e['id']),None)
-    excursion_seed(state)
-    excursion_update(state,quotes,unseen)
+    # Retired separate scalp and excursion simulations.
     for closed in [s for s in state['studies'] if s.get('study')==VERSION and s.get('closedAt') and not s.get('candleAudit')][:3]:
         try:
             candles=info({'type':'candleSnapshot','req':{'coin':closed['symbol'],'interval':'1m','startTime':int(millis(closed['openedAt'])//60000)*60000,'endTime':int(millis(closed['closedAt']))}})
@@ -320,7 +324,7 @@ def cycle(state, fetch_source=True):
     state['portfolio']['maxDrawdownObserved']=state['portfolioDrawdown'];append('portfolio',state['portfolio'])
     state['updatedAt']=stamp()
     tmp=ROOT/'state.tmp';tmp.write_text(json.dumps(state,separators=(',',':')));tmp.replace(ROOT/'state.json')
-    slim={k:v for k,v in state.items() if k not in ('seen','studies','pendingSignals')}
+    slim={k:v for k,v in state.items() if k not in ('seen','studies','pendingSignals','archivedRuns')}
     copy=state['geniusCopy']
     slim['geniusCopy']={k:v for k,v in copy.items() if k not in ('positions','history','decisions')}
     slim['geniusCopy'].update(history=copy.get('history',[]),decisions=copy['decisions'][-50:])
