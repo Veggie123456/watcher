@@ -86,7 +86,8 @@ def update(state, events, quotes, metadata, stamp, millis, fresh, price, append,
         position = positions.get(key)
         active = position and not position.get('closedAt')
         receipt = {'eventId': event['id'], 'action': action, 'wallet': wallet, 'market': coin,
-                   'side': side, 'publication': event['createdAt'], 'observedAt': state.get('seen', {}).get(str(event['id']), {}).get('firstObservedAt', now)}
+                   'side': side, 'publication': event.get('publishedAt',event['createdAt']), 'sourceEventTime':event['createdAt'],
+                   'origin':event.get('origin','website_alert'), 'observedAt': state.get('seen', {}).get(str(event['id']), {}).get('firstObservedAt', now)}
         try:
             if action == 'OPENED' and not target_wallet:
                 rank = (event.get('traderCard') or {}).get('rank')
