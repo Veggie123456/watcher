@@ -1,0 +1,235 @@
+import json
+import pathlib
+import subprocess
+import tempfile
+import threading
+import time
+import unittest
+import checkpoint_publisher as cp
+import watcher
+from unittest.mock import patch
+
+
+class PublisherTests(unittest.TestCase):
+    def setUp(self):
+        self.temp = tempfile.TemporaryDirectory()
+        self.repo = pathlib.Path(self.temp.name)
+        self.root = self.repo / 'stupid-money-lab'
+        (self.root / 'data').mkdir(parents=True)
+        self.raw = self.root / 'data' / 'events.jsonl'
+        self.raw.write_text('{"loss":1}\n')
+        self.write(1)
+
+    def tearDown(self):
+        self.temp.cleanup()
+
+    def write(self, generation):
+        value = json.dumps({'updatedAt': str(generation), 'balance': 1000 - generation})
+        for name in ('state.json', 'dashboard.json'):
+            (self.root / name).write_text(value)
+
+    def test_prefix_excludes_later_rows_and_state_generation_is_frozen(self):
+        first = cp.capture(self.root)
+        self.write(2)
+        with self.raw.open('a') as f:
+            f.write('{"loss":2}\n')
+        target = self.repo / 'frozen'
+        cp.freeze_prefix(self.repo, first.prefixes[0], target)
+        self.assertEqual(target.read_text(), '{"loss":1}\n')
+        self.assertEqual(json.loads(first.state), json.loads(first.dashboard))
+        self.assertEqual(json.loads(first.state)['updatedAt'], '1')
+
+    def test_capture_waits_for_complete_concurrent_raw_row(self):
+        entered, release = threading.Event(), threading.Event()
+        def writer():
+            with watcher.EVIDENCE_LOCK:
+                with self.raw.open('a') as stream:
+                    stream.write('{"loss":'); stream.flush(); entered.set()
+                    release.wait(1)
+                    stream.write('2}\n')
+        thread = threading.Thread(target=writer)
+        thread.start(); self.assertTrue(entered.wait(1))
+        timer = threading.Timer(.02, release.set); timer.start()
+        try:
+            with patch.object(watcher, 'ROOT', self.root):
+                snapshot = watcher.capture_checkpoint()
+            target = self.repo / 'frozen'
+            cp.freeze_prefix(self.repo, snapshot.prefixes[0], target)
+            self.assertEqual([json.loads(row)['loss'] for row in target.read_text().splitlines()], [1, 2])
+        finally:
+            release.set(); thread.join(1); timer.cancel()
+
+    def test_generation_mismatch_is_rejected(self):
+        (self.root / 'dashboard.json').write_text('{"updatedAt":"other"}')
+        with self.assertRaisesRegex(ValueError, 'generation mismatch'):
+            cp.capture(self.root)
+
+    def test_truncation_and_rewrite_at_boundary_are_rejected(self):
+        snapshot = cp.capture(self.root)
+        self.raw.write_text('')
+        with self.assertRaisesRegex(ValueError, 'truncated'):
+            cp.freeze_prefix(self.repo, snapshot.prefixes[0], self.repo / 'frozen')
+        self.raw.write_text('{"loss":9}\n')
+        with self.assertRaisesRegex(ValueError, 'boundary changed'):
+            cp.freeze_prefix(self.repo, snapshot.prefixes[0], self.repo / 'frozen')
+
+    def test_blocked_git_does_not_block_cycles_and_coalescing_retains_losses(self):
+        entered, release = threading.Event(), threading.Event()
+        calls, active = [], []
+        def publish(snapshot, cancel):
+            active.append(snapshot.generation)
+            self.assertEqual(len(active), 1)
+            entered.set()
+            while not release.wait(.005):
+                if cancel.is_set():
+                    raise RuntimeError('cancelled')
+            calls.append(snapshot)
+            active.pop()
+            return {'commit': 'test'}
+        publisher = cp.BackgroundPublisher(publish)
+        try:
+            publisher.submit(cp.capture(self.root))
+            self.assertTrue(entered.wait(1))
+            book = {'time':100000,'observedAt':'1970-01-01T00:01:40+00:00',
+                    'levels':[[{'px':'99.9','sz':'10'}],[{'px':'100.1','sz':'10'}]]}
+            event = {'id':1,'coin':'BTC','createdAt':'1970-01-01T00:01:00+00:00',
+                     'payload':{'cohort':'GENIUS','side':'LONG','wallet':'0x'+'1'*40,
+                                'action':'OPENED','leverage':{'value':1,'type':'cross'}}}
+            scenario = watcher.create(event, book, 5)
+            quote_receipts = []
+            start = time.monotonic()
+            for generation in range(2, 22):
+                book['time'] += 10000
+                with patch.object(watcher, 'append', side_effect=lambda kind, row: quote_receipts.append((kind, row))):
+                    watcher.update(scenario, book)
+                self.write(generation)
+                with self.raw.open('a') as f:
+                    f.write(json.dumps({'loss': generation}) + '\n')
+                publisher.submit(cp.capture(self.root))
+            self.assertLess(time.monotonic() - start, 1)
+            self.assertEqual(len(quote_receipts), 20)
+            self.assertEqual(publisher.status()['pending'], '21')
+            self.assertIsNone(publisher.status()['latestPublished'])
+            release.set()
+            publisher.close(2)
+            self.assertEqual([s.generation for s in calls], ['1', '21'])
+            target = self.repo / 'frozen'
+            cp.freeze_prefix(self.repo, calls[-1].prefixes[0], target)
+            self.assertEqual(len(target.read_text().splitlines()), 21)
+            self.assertEqual(publisher.status()['latestPublished'], '21')
+        finally:
+            release.set()
+            publisher.close(1)
+
+    def test_failure_is_unpublished_retry_and_bounded_shutdown_retain_evidence(self):
+        entered = threading.Event()
+        def blocked(snapshot, cancel):
+            entered.set()
+            cancel.wait()
+            raise RuntimeError('cancelled checkpoint')
+        publisher = cp.BackgroundPublisher(blocked)
+        publisher.submit(cp.capture(self.root))
+        self.assertTrue(entered.wait(1))
+        start = time.monotonic()
+        status = publisher.close(.01)
+        self.assertLess(time.monotonic() - start, 1)
+        self.assertIsNone(status['latestPublished'])
+        self.assertEqual(status['latestObserved'], '1')
+        self.assertFalse(publisher.drain_receipts()[0]['published'])
+        self.assertEqual(self.raw.read_text(), '{"loss":1}\n')
+        retry = cp.BackgroundPublisher(lambda snapshot, cancel: {'commit': 'retry'})
+        retry.submit(cp.capture(self.root))
+        retry.close(1)
+        self.assertEqual(retry.status()['latestPublished'], '1')
+
+    def test_coalescing_rejects_missing_raw_file(self):
+        entered = threading.Event()
+        def blocked(snapshot, cancel):
+            entered.set()
+            cancel.wait()
+            raise RuntimeError('cancelled')
+        publisher = cp.BackgroundPublisher(blocked)
+        publisher.submit(cp.capture(self.root))
+        self.assertTrue(entered.wait(1))
+        self.raw.unlink()
+        with self.assertRaisesRegex(ValueError, 'drop raw evidence'):
+            publisher.submit(cp.capture(self.root))
+        publisher.close(0)
+
+    def test_real_git_preserves_unrelated_paths_and_freezes_generation(self):
+        def git(where, *args):
+            return subprocess.check_output(['git', '-c', 'user.name=Test', '-c',
+                'user.email=test@example.invalid', *args], cwd=where, stderr=subprocess.DEVNULL).decode().strip()
+        bare = self.repo / 'remote.git'
+        git(self.repo, 'init', '--bare', str(bare))
+        git(self.repo, 'init', '-b', 'main')
+        (self.repo / 'unrelated.txt').write_text('preserve')
+        git(self.repo, 'add', 'unrelated.txt', 'stupid-money-lab')
+        git(self.repo, 'commit', '-m', 'initial')
+        git(self.repo, 'remote', 'add', 'origin', str(bare))
+        git(self.repo, 'push', 'origin', 'main')
+        original_head = git(self.repo, 'rev-parse', 'HEAD')
+        snapshot = cp.capture(self.root)
+        self.write(99)
+        with self.raw.open('a') as f:
+            f.write('{"loss":99}\n')
+        result = cp.GitPublisher(self.root)(snapshot, threading.Event())
+        self.assertTrue(result['commit'])
+        self.assertEqual(git(bare, 'show', 'main:unrelated.txt'), 'preserve')
+        self.assertEqual(json.loads(git(bare, 'show', 'main:stupid-money-lab/state.json'))['updatedAt'], '1')
+        self.assertEqual(git(bare, 'show', 'main:stupid-money-lab/data/events.jsonl'), '{"loss":1}')
+        self.assertEqual(git(self.repo, 'rev-parse', 'HEAD'), original_head)
+        self.assertEqual(json.loads(git(bare, 'show', 'main:stupid-money-lab/checkpoint-manifest.json'))['observedGeneration'], '1')
+
+    def test_non_fast_forward_retry_keeps_new_unrelated_commit(self):
+        def git(where, *args):
+            return subprocess.check_output(['git', '-c', 'user.name=Test', '-c',
+                'user.email=test@example.invalid', *args], cwd=where, stderr=subprocess.DEVNULL).decode().strip()
+        bare, editor = self.repo / 'remote.git', self.repo / 'editor'
+        git(self.repo, 'init', '--bare', str(bare))
+        git(self.repo, 'init', '-b', 'main')
+        (self.repo / 'unrelated.txt').write_text('old')
+        git(self.repo, 'add', 'unrelated.txt', 'stupid-money-lab')
+        git(self.repo, 'commit', '-m', 'initial')
+        git(self.repo, 'remote', 'add', 'origin', str(bare)); git(self.repo, 'push', 'origin', 'main')
+        git(self.repo, 'clone', '-b', 'main', str(bare), str(editor))
+        class ConcurrentPublisher(cp.GitPublisher):
+            pushes = 0
+            def run(self, args, cancel, env=None, data=None):
+                if args[0] == 'push':
+                    self.pushes += 1
+                    if self.pushes == 1:
+                        (editor / 'unrelated.txt').write_text('concurrent change')
+                        git(editor, 'add', 'unrelated.txt'); git(editor, 'commit', '-m', 'concurrent')
+                        git(editor, 'push', 'origin', 'main')
+                return super().run(args, cancel, env, data)
+        publisher = ConcurrentPublisher(self.root)
+        result = publisher(cp.capture(self.root), threading.Event())
+        self.assertTrue(result['commit']); self.assertEqual(publisher.pushes, 2)
+        self.assertEqual(git(bare, 'show', 'main:unrelated.txt'), 'concurrent change')
+        self.assertEqual(json.loads(git(bare, 'show', 'main:stupid-money-lab/state.json'))['updatedAt'], '1')
+
+    def test_git_timeout_and_cancellation_kill_child_group(self):
+        # Real local Git hook stalls push, exercising cancellation below Popen.
+        bare = self.repo / 'remote.git'
+        subprocess.run(['git', 'init', '--bare', str(bare)], check=True, capture_output=True)
+        hook = bare / 'hooks' / 'pre-receive'
+        hook.write_text('#!/bin/sh\nsleep 30\n')
+        hook.chmod(0o755)
+        subprocess.run(['git', 'init', '-b', 'main'], cwd=self.repo, check=True, capture_output=True)
+        subprocess.run(['git', 'remote', 'add', 'origin', str(bare)], cwd=self.repo, check=True)
+        # run a hung Git command directly; no remote branch/credentials required.
+        cancel = threading.Event()
+        timer = threading.Timer(.05, cancel.set)
+        timer.start()
+        start = time.monotonic()
+        try:
+            with self.assertRaises(RuntimeError):
+                cp.GitPublisher(self.root).run(['-c', 'alias.stall=!sleep 30', 'stall'], cancel)
+            self.assertLess(time.monotonic() - start, 2)
+        finally:
+            timer.cancel()
+
+
+if __name__ == '__main__':
+    unittest.main()
