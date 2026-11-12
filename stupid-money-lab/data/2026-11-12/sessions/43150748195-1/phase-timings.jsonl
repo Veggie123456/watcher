@@ -1,0 +1,12 @@
+{"protocol":"collector-phase-v1","phase":"reconciliation","startedAt":"2026-11-12T03:50:02.800911+00:00","endedAt":"2026-11-12T03:50:05.650518+00:00","durationSeconds":2.849609767000004,"outcome":"returned"}
+{"protocol":"collector-phase-v1","phase":"reconciliation","startedAt":"2026-11-12T03:50:39.850778+00:00","endedAt":"2026-11-12T03:50:39.850791+00:00","durationSeconds":1.2028000000441352e-05,"outcome":"returned"}
+{"protocol":"collector-phase-v1","phase":"checkpoint_publish","startedAt":"2026-11-12T03:50:41.114542+00:00","endedAt":"2026-11-12T03:52:42.490521+00:00","durationSeconds":121.375981699,"outcome":"returned_false"}
+{"protocol":"collector-phase-v1","phase":"reconciliation","startedAt":"2026-11-12T03:52:52.790016+00:00","endedAt":"2026-11-12T03:52:52.790028+00:00","durationSeconds":1.0795999997981198e-05,"outcome":"returned"}
+{"protocol":"collector-phase-v1","phase":"checkpoint_publish","startedAt":"2026-11-12T03:53:16.951998+00:00","endedAt":"2026-11-12T03:55:18.382216+00:00","durationSeconds":121.43021999499999,"outcome":"returned_false"}
+{"protocol":"collector-phase-v1","phase":"reconciliation","startedAt":"2026-11-12T03:55:28.550831+00:00","endedAt":"2026-11-12T03:55:31.435130+00:00","durationSeconds":2.884304296000039,"outcome":"returned"}
+{"protocol":"collector-phase-v1","phase":"checkpoint_publish","startedAt":"2026-11-12T03:55:55.040697+00:00","endedAt":"2026-11-12T03:57:56.506538+00:00","durationSeconds":121.46584236900003,"outcome":"returned_false"}
+{"protocol":"collector-phase-v1","phase":"reconciliation","startedAt":"2026-11-12T03:58:06.757873+00:00","endedAt":"2026-11-12T03:58:06.757885+00:00","durationSeconds":1.1397000093893439e-05,"outcome":"returned"}
+{"protocol":"collector-phase-v1","phase":"checkpoint_publish","startedAt":"2026-11-12T03:58:31.324314+00:00","endedAt":"2026-11-12T04:00:32.825192+00:00","durationSeconds":121.50088076300005,"outcome":"returned_false"}
+{"protocol":"collector-phase-v1","phase":"reconciliation","startedAt":"2026-11-12T04:00:43.269646+00:00","endedAt":"2026-11-12T04:00:45.809643+00:00","durationSeconds":2.539999175999924,"outcome":"returned"}
+{"protocol":"collector-phase-v1","phase":"checkpoint_publish","startedAt":"2026-11-12T04:01:09.626730+00:00","endedAt":"2026-11-12T04:03:11.195687+00:00","durationSeconds":121.56895872599989,"outcome":"returned_false"}
+{"protocol":"collector-phase-v1","phase":"reconciliation","startedAt":"2026-11-12T04:03:21.889026+00:00","endedAt":"2026-11-12T04:03:21.889042+00:00","durationSeconds":1.412100004927197e-05,"outcome":"returned"}
