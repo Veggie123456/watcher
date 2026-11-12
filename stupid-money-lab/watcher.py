@@ -5,7 +5,7 @@ import genius_copy
 import evidence_audit
 import oracle_capture
 import checkpoint_publisher
-import subprocess, tempfile, threading
+import subprocess, tempfile, threading, signal
 import argparse, datetime as dt, hashlib, json, math, os, pathlib, re, time, urllib.request
 ROOT = pathlib.Path(__file__).resolve().parent
 EVIDENCE_LOCK = threading.RLock()
@@ -357,23 +357,30 @@ if __name__=='__main__':
     end=float('inf') if args.continuous else time.monotonic()+min(max(args.seconds,0),3300);source_due=0;publish_due=time.monotonic()+max(args.publish_every,1)
     oracle = oracle_capture.BackgroundCollector(deadline=end)
     publisher = checkpoint_publisher.BackgroundPublisher(checkpoint_publisher.GitPublisher(ROOT)) if args.publish_every else None
-    while True:
-        now=time.monotonic();source=now>=source_due
-        if publisher:
-            for receipt in publisher.drain_receipts(): append('checkpoint-publications', receipt)
-            state['checkpointPublisher'] = publisher.status()
-        cycle(state,source)
-        oracle.step(state, append)  # Publish immutable market snapshot; sampler has its own clock.
-        if args.publish_every and time.monotonic()>=publish_due:
-            try: publisher.submit(capture_checkpoint())
-            except Exception as ex: append('errors',{'at':stamp(),'error':'Snapshot not submitted: '+str(ex)})
-            publish_due=time.monotonic()+args.publish_every
-        if source: source_due=now+(300 if state.get('sourceStatus')=='blocked_or_error' else 30)
-        if time.monotonic()+10>end: break
-        time.sleep(10)
+    def stop_window(signum, frame):
+        raise SystemExit(128 + signum)
+    signal.signal(signal.SIGTERM, stop_window)
+    try:
+        while True:
+            now=time.monotonic();source=now>=source_due
+            if publisher:
+                for receipt in publisher.drain_receipts(): append('checkpoint-publications', receipt)
+                state['checkpointPublisher'] = publisher.status()
+            cycle(state,source)
+            oracle.step(state, append)  # Publish immutable market snapshot; sampler has its own clock.
+            if args.publish_every and time.monotonic()>=publish_due:
+                try: publisher.submit(capture_checkpoint())
+                except Exception as ex: append('errors',{'at':stamp(),'error':'Snapshot not submitted: '+str(ex)})
+                publish_due=time.monotonic()+args.publish_every
+            if source: source_due=now+(300 if state.get('sourceStatus')=='blocked_or_error' else 30)
+            if time.monotonic()+10>end: break
+            time.sleep(10)
 
-    oracle.close(append)
-    if publisher:
-        status = publisher.close(drain_seconds=5)
-        for receipt in publisher.drain_receipts(): append('checkpoint-publications', receipt)
-        append('checkpoint-publications', {'at':stamp(),'kind':'shutdown',**status})
+    finally:
+        try:
+            oracle.close(append)
+        finally:
+            if publisher:
+                status = publisher.close(drain_seconds=5)
+                for receipt in publisher.drain_receipts(): append('checkpoint-publications', receipt)
+                append('checkpoint-publications', {'at':stamp(),'kind':'shutdown',**status})
