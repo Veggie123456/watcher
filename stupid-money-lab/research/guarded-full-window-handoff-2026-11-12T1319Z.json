@@ -1,0 +1,1201 @@
+{
+  "run": 65,
+  "checkpoint": "c9d80cf2a1ab8d8528fe759535f375b3946996b1",
+  "cutoff": "2026-11-12T13:19:15.362094+00:00",
+  "priorCutoff": "2026-11-12T12:19:46.932733+00:00",
+  "heartbeat": "2026-11-12T13:19:13.427337+00:00",
+  "sourceCheckedAt": "2026-11-12T13:19:14.304442+00:00",
+  "sourceStatus": "read",
+  "snapshotHashesVerified": true,
+  "sourceCoverage": [
+    {
+      "run": "43215604983",
+      "count": 95,
+      "first": {
+        "sourceStatus": "read",
+        "sourceCheckedAt": "2026-11-12T12:11:42.373129+00:00",
+        "sourceHash": "099f6ce709c41d9cb7fe5e14c3b21fea1c93c00bae6259521ad7e0d4873762f4"
+      },
+      "last": {
+        "sourceStatus": "read",
+        "sourceCheckedAt": "2026-11-12T13:06:11.774589+00:00",
+        "sourceHash": "93506962c34cab090baae075eb69e58a1b6dcda4951e93784e9c686bc5d58b37"
+      },
+      "medianSpacingSeconds": 34.605266,
+      "maxSpacingSeconds": 37.56099
+    },
+    {
+      "run": "43224186004",
+      "count": 21,
+      "first": {
+        "sourceStatus": "read",
+        "sourceCheckedAt": "2026-11-12T13:07:33.821771+00:00",
+        "sourceHash": "4f0a8c28ac4243ecbcdcfb5d9b46f574c7d2c127455c0719c4e5d788192b1ec2"
+      },
+      "last": {
+        "sourceStatus": "read",
+        "sourceCheckedAt": "2026-11-12T13:19:14.304442+00:00",
+        "sourceHash": "aa9a3dcde3145bc5ece20499ba74d9f686159df2543cbe49c2ba36f35a04a128"
+      },
+      "medianSpacingSeconds": 34.500391,
+      "maxSpacingSeconds": 38.183552
+    }
+  ],
+  "sourceBoundarySeconds": 82.047182,
+  "incrementalKinds": {
+    "revision": 417,
+    "first_observation": 41
+  },
+  "newOriginalSignals": 41,
+  "originalActions": {
+    "ADDED": 28,
+    "OPENED": 6,
+    "REDUCED": 5,
+    "CLOSED": 2
+  },
+  "originalIds": [
+    17761,
+    17764,
+    17768,
+    17771,
+    17770,
+    17773,
+    17774,
+    17777,
+    17779,
+    17778,
+    17780,
+    17781,
+    17784,
+    17783,
+    17786,
+    17790,
+    17787,
+    17820,
+    17818,
+    17816,
+    17815,
+    17814,
+    17813,
+    17812,
+    17804,
+    17803,
+    17859,
+    17858,
+    17857,
+    17855,
+    17854,
+    17904,
+    17906,
+    17905,
+    17909,
+    17913,
+    17915,
+    17920,
+    17919,
+    17918,
+    17924
+  ],
+  "publicationObservationLatency": {
+    "median": 19.409071,
+    "max": 32.580167
+  },
+  "exits": [
+    {
+      "eventId": 17783,
+      "action": "REDUCED",
+      "market": "ETH",
+      "wallet": "0xa4fda467ea45530b92cb0b4967811885e9317719",
+      "matchingMainPositions": [],
+      "decisions": [
+        {
+          "eventId": 17783,
+          "action": "REDUCED",
+          "wallet": "0xa4fda467ea45530b92cb0b4967811885e9317719",
+          "market": "ETH",
+          "side": "SHORT",
+          "publication": "2026-11-12T13:03:03.550Z",
+          "observedAt": "2026-11-12T13:03:19.624206+00:00",
+          "sourceVenue": "hyperliquid",
+          "paperQuoteVenue": "hyperliquid",
+          "exitDiscoveryAt": "2026-11-12T13:03:20.347735+00:00",
+          "sourcePublicationAt": "2026-11-12T13:03:03.550Z",
+          "lateDiscovery": false,
+          "exitPolicy": "Current observed book; never backdated to source close",
+          "status": "skipped",
+          "reason": "No prospectively copied opening"
+        }
+      ]
+    },
+    {
+      "eventId": 17787,
+      "action": "REDUCED",
+      "market": "ETH",
+      "wallet": "0x4e41b13c878cfa39b6a3c33a6785dd87b595a78a",
+      "matchingMainPositions": [],
+      "decisions": [
+        {
+          "eventId": 17787,
+          "action": "REDUCED",
+          "wallet": "0x4e41b13c878cfa39b6a3c33a6785dd87b595a78a",
+          "market": "ETH",
+          "side": "LONG",
+          "publication": "2026-11-12T13:09:05.256Z",
+          "observedAt": "2026-11-12T13:09:19.217710+00:00",
+          "sourceVenue": "hyperliquid",
+          "paperQuoteVenue": "hyperliquid",
+          "exitDiscoveryAt": "2026-11-12T13:09:19.971038+00:00",
+          "sourcePublicationAt": "2026-11-12T13:09:05.256Z",
+          "lateDiscovery": false,
+          "exitPolicy": "Current observed book; never backdated to source close",
+          "status": "skipped",
+          "reason": "No prospectively copied opening"
+        }
+      ]
+    },
+    {
+      "eventId": 17804,
+      "action": "REDUCED",
+      "market": "ETH",
+      "wallet": "0x5a499efccd4e98778b32cc5cf20c97d46e0cc96d",
+      "matchingMainPositions": [],
+      "decisions": [
+        {
+          "eventId": 17804,
+          "action": "REDUCED",
+          "wallet": "0x5a499efccd4e98778b32cc5cf20c97d46e0cc96d",
+          "market": "ETH",
+          "side": "SHORT",
+          "publication": "2026-11-12T13:10:08.129Z",
+          "observedAt": "2026-11-12T13:10:27.840378+00:00",
+          "sourceVenue": "hyperliquid",
+          "paperQuoteVenue": "hyperliquid",
+          "exitDiscoveryAt": "2026-11-12T13:10:28.499013+00:00",
+          "sourcePublicationAt": "2026-11-12T13:10:08.129Z",
+          "lateDiscovery": false,
+          "exitPolicy": "Current observed book; never backdated to source close",
+          "status": "skipped",
+          "reason": "No prospectively copied opening"
+        }
+      ]
+    },
+    {
+      "eventId": 17803,
+      "action": "CLOSED",
+      "market": "HYPE",
+      "wallet": "0x44f2b4405eb992b3065b483a20aa2cfd21628fc0",
+      "matchingMainPositions": [],
+      "decisions": [
+        {
+          "eventId": 17803,
+          "action": "CLOSED",
+          "wallet": "0x44f2b4405eb992b3065b483a20aa2cfd21628fc0",
+          "market": "HYPE",
+          "side": "LONG",
+          "publication": "2026-11-12T13:10:08.124Z",
+          "observedAt": "2026-11-12T13:10:27.840438+00:00",
+          "sourceVenue": "hyperliquid",
+          "paperQuoteVenue": "hyperliquid",
+          "exitDiscoveryAt": "2026-11-12T13:10:28.499013+00:00",
+          "sourcePublicationAt": "2026-11-12T13:10:08.124Z",
+          "lateDiscovery": false,
+          "exitPolicy": "Current observed book; never backdated to source close",
+          "status": "skipped",
+          "reason": "No prospectively copied opening"
+        }
+      ]
+    },
+    {
+      "eventId": 17904,
+      "action": "CLOSED",
+      "market": "ZRO",
+      "wallet": "0x51ea2134defff9597b66fc7addcf787a0ab69def",
+      "matchingMainPositions": [],
+      "decisions": [
+        {
+          "eventId": 17904,
+          "action": "CLOSED",
+          "wallet": "0x51ea2134defff9597b66fc7addcf787a0ab69def",
+          "market": "ZRO",
+          "side": "SHORT",
+          "publication": "2026-11-12T13:12:03.943Z",
+          "observedAt": "2026-11-12T13:12:11.709358+00:00",
+          "sourceVenue": "hyperliquid",
+          "paperQuoteVenue": "hyperliquid",
+          "exitDiscoveryAt": "2026-11-12T13:12:12.426247+00:00",
+          "sourcePublicationAt": "2026-11-12T13:12:03.943Z",
+          "lateDiscovery": false,
+          "exitPolicy": "Current observed book; never backdated to source close",
+          "status": "skipped",
+          "reason": "No prospectively copied opening"
+        }
+      ]
+    },
+    {
+      "eventId": 17905,
+      "action": "REDUCED",
+      "market": "UNI",
+      "wallet": "0x6e5d6ecc7ca867f4cc3c1f9e663490abdacd3861",
+      "matchingMainPositions": [],
+      "decisions": [
+        {
+          "eventId": 17905,
+          "action": "REDUCED",
+          "wallet": "0x6e5d6ecc7ca867f4cc3c1f9e663490abdacd3861",
+          "market": "UNI",
+          "side": "SHORT",
+          "publication": "2026-11-12T13:13:05.349Z",
+          "observedAt": "2026-11-12T13:13:20.567120+00:00",
+          "sourceVenue": "hyperliquid",
+          "paperQuoteVenue": "hyperliquid",
+          "exitDiscoveryAt": "2026-11-12T13:13:23.969374+00:00",
+          "sourcePublicationAt": "2026-11-12T13:13:05.349Z",
+          "lateDiscovery": false,
+          "exitPolicy": "Current observed book; never backdated to source close",
+          "status": "skipped",
+          "reason": "No prospectively copied opening"
+        }
+      ]
+    },
+    {
+      "eventId": 17915,
+      "action": "REDUCED",
+      "market": "ZEC",
+      "wallet": "0x5a48c6bf04708b6768abfef57edb71622c2e63c6",
+      "matchingMainPositions": [],
+      "decisions": [
+        {
+          "eventId": 17915,
+          "action": "REDUCED",
+          "wallet": "0x5a48c6bf04708b6768abfef57edb71622c2e63c6",
+          "market": "ZEC",
+          "side": "LONG",
+          "publication": "2026-11-12T13:17:04.352Z",
+          "observedAt": "2026-11-12T13:17:27.250243+00:00",
+          "sourceVenue": "hyperliquid",
+          "paperQuoteVenue": "hyperliquid",
+          "exitDiscoveryAt": "2026-11-12T13:17:27.971296+00:00",
+          "sourcePublicationAt": "2026-11-12T13:17:04.352Z",
+          "lateDiscovery": false,
+          "exitPolicy": "Current observed book; never backdated to source close",
+          "status": "skipped",
+          "reason": "No prospectively copied opening"
+        }
+      ]
+    }
+  ],
+  "publisher": {
+    "43215604983": {
+      "receipts": 94,
+      "success": 94,
+      "failed": 0,
+      "medianSeconds": 9.032640570000012,
+      "maxSeconds": 13.233142369000007,
+      "first": {
+        "protocol": "immutable-checkpoint-v1",
+        "generation": "2026-11-12T12:12:17.689722+00:00",
+        "startedAt": "2026-11-12T12:12:18.691147+00:00",
+        "published": true,
+        "commit": "b8e8fca60e70f50d0fd629d19511585c4cd89805",
+        "unchanged": false,
+        "attemptDiagnostics": [],
+        "endedAt": "2026-11-12T12:12:28.109115+00:00",
+        "durationSeconds": 9.417975487999996
+      },
+      "last": {
+        "protocol": "immutable-checkpoint-v1",
+        "generation": "2026-11-12T13:06:12.437934+00:00",
+        "startedAt": "2026-11-12T13:06:13.465581+00:00",
+        "published": true,
+        "commit": "e6682f08ac9c2c7646fe9514219749380447d6fa",
+        "unchanged": false,
+        "attemptDiagnostics": [],
+        "endedAt": "2026-11-12T13:06:23.538711+00:00",
+        "durationSeconds": 10.07312928600004
+      },
+      "otherRows": [
+        {
+          "at": "2026-11-12T13:06:35.777093+00:00",
+          "kind": "shutdown",
+          "protocol": "immutable-checkpoint-v1",
+          "latestObserved": "2026-11-12T13:06:12.437934+00:00",
+          "latestPublished": "2026-11-12T13:06:12.437934+00:00",
+          "inflight": null,
+          "pending": null
+        }
+      ],
+      "diagnostics": []
+    },
+    "43224186004": {
+      "receipts": 19,
+      "success": 19,
+      "failed": 0,
+      "medianSeconds": 8.104994991000012,
+      "maxSeconds": 11.219656765999957,
+      "first": {
+        "protocol": "immutable-checkpoint-v1",
+        "generation": "2026-11-12T13:08:10.627461+00:00",
+        "startedAt": "2026-11-12T13:08:11.467172+00:00",
+        "published": true,
+        "commit": "3a6bc076362d98a1d4d4f71c3b3479dea985ef79",
+        "unchanged": false,
+        "attemptDiagnostics": [],
+        "endedAt": "2026-11-12T13:08:19.807056+00:00",
+        "durationSeconds": 8.339871397000024
+      },
+      "last": {
+        "protocol": "immutable-checkpoint-v1",
+        "generation": "2026-11-12T13:18:40.386802+00:00",
+        "startedAt": "2026-11-12T13:18:41.367698+00:00",
+        "published": true,
+        "commit": "c8b15ba699ec1ce12f5d90d7f2be57912daf31a8",
+        "unchanged": false,
+        "attemptDiagnostics": [],
+        "endedAt": "2026-11-12T13:18:49.374625+00:00",
+        "durationSeconds": 8.006926246000035
+      },
+      "otherRows": [],
+      "diagnostics": []
+    }
+  },
+  "zecBookCoverage": {
+    "43215604983": {
+      "count": 285,
+      "first": "2026-11-12T12:11:43.301326+00:00",
+      "last": "2026-11-12T13:06:35.002433+00:00",
+      "maxSpacingSeconds": 14.431828,
+      "medianSpacingSeconds": 11.600722000000001
+    },
+    "43224186004": {
+      "count": 61,
+      "first": "2026-11-12T13:07:34.399957+00:00",
+      "last": "2026-11-12T13:19:14.799540+00:00",
+      "maxSpacingSeconds": 14.971747,
+      "medianSpacingSeconds": 11.672891499999999
+    }
+  },
+  "main": {
+    "total": 58,
+    "open": 50,
+    "closed": 8,
+    "cash": 4980.43376828499,
+    "realizedBeforeFunding": 86.71125486420027,
+    "openPnlBeforeFunding": 586.3751960791516,
+    "newLegs": [],
+    "statistics": {
+      "count": 8,
+      "wins": 6,
+      "losses": 2,
+      "winRate": 0.75,
+      "expectancy": 10.838906858025034,
+      "profitFactor": 4.914207448134561,
+      "payoffRatio": 1.6380691493781872
+    },
+    "concentration": {
+      "ZEC": 12,
+      "BTC": 19,
+      "UNI": 1,
+      "XMR": 1,
+      "HYPE": 4,
+      "LIT": 2,
+      "ETH": 6,
+      "XRP": 1,
+      "SOL": 3,
+      "kPEPE": 1
+    },
+    "valuationQuality": {
+      "at": "2026-11-12T13:19:15.155548+00:00",
+      "status": "Unvalidated website-alert simulation; source holdings and funding incomplete",
+      "copyPerformanceEligible": false,
+      "activePaperExposures": 50,
+      "closureWarningPositionIds": [
+        10652,
+        10736,
+        10936,
+        11128,
+        11154,
+        11438,
+        11451,
+        11464,
+        11511,
+        11777,
+        11798,
+        11841,
+        11904,
+        11945,
+        11949,
+        11956,
+        11974,
+        11995,
+        12076,
+        12122,
+        12445,
+        12839,
+        13388,
+        14155,
+        17053
+      ],
+      "closureWarningCount": 25,
+      "sourceCardNoLongerLiveCount": 12,
+      "subsequentOpeningPositionIds": [
+        10652,
+        10736,
+        10936,
+        11128,
+        11154,
+        11438,
+        11464,
+        11511,
+        11777,
+        11798,
+        11841,
+        11904,
+        11945,
+        11949,
+        11974,
+        11995,
+        12076,
+        12122,
+        12445,
+        12839,
+        14155
+      ],
+      "subsequentOpeningWarningCount": 21,
+      "warningExposureModeledPnlBeforeFunding": 270.27497350525,
+      "otherUnverifiedExposureModeledPnlBeforeFunding": 316.10022257390153,
+      "totalModeledPnlBeforeFunding": 586.3751960791516,
+      "interpretation": "Warning subtotal assumes continued exposure despite non-live source cards or subsequent openings; neither subtotal is verified copier performance."
+    },
+    "drawdown": "Unavailable; unresolved source lifecycle and mixed valuation times",
+    "newSignalDecisions": [
+      {
+        "eventId": 17768,
+        "action": "ADDED",
+        "wallet": "0x4ff721407ab013f8b094391228a2d04074252ff8",
+        "market": "XMR",
+        "side": "LONG",
+        "publication": "2026-11-12T12:32:04.629Z",
+        "observedAt": "2026-11-12T12:32:33.148707+00:00",
+        "sourceVenue": "hyperliquid",
+        "paperQuoteVenue": "hyperliquid",
+        "status": "skipped",
+        "reason": "No prospectively copied opening"
+      },
+      {
+        "eventId": 17770,
+        "action": "ADDED",
+        "wallet": "0x628f303158bb4dc2f6e31acb6e0a1fb464626a08",
+        "market": "HYPE",
+        "side": "SHORT",
+        "publication": "2026-11-12T12:34:03.808Z",
+        "observedAt": "2026-11-12T12:34:17.328921+00:00",
+        "sourceVenue": "hyperliquid",
+        "paperQuoteVenue": "hyperliquid",
+        "status": "skipped",
+        "reason": "No prospectively copied opening"
+      },
+      {
+        "eventId": 17771,
+        "action": "ADDED",
+        "wallet": "0x3c9ef394edc178e827f772fc41a1b064e1c0224d",
+        "market": "HYPE",
+        "side": "LONG",
+        "publication": "2026-11-12T12:34:03.817Z",
+        "observedAt": "2026-11-12T12:34:17.328807+00:00",
+        "sourceVenue": "hyperliquid",
+        "paperQuoteVenue": "hyperliquid",
+        "status": "skipped",
+        "reason": "Side flip requires independently matched closing and opening legs"
+      },
+      {
+        "eventId": 17773,
+        "action": "ADDED",
+        "wallet": "0x39c56cef8b8504ef8ed2c1827597c6a850bee6cc",
+        "market": "MON",
+        "side": "LONG",
+        "publication": "2026-11-12T12:38:04.128Z",
+        "observedAt": "2026-11-12T12:38:23.030229+00:00",
+        "sourceVenue": "hyperliquid",
+        "paperQuoteVenue": "hyperliquid",
+        "status": "skipped",
+        "reason": "No prospectively copied opening"
+      },
+      {
+        "eventId": 17779,
+        "action": "ADDED",
+        "wallet": "0x4ff721407ab013f8b094391228a2d04074252ff8",
+        "market": "AVAX",
+        "side": "SHORT",
+        "publication": "2026-11-12T12:51:03.595Z",
+        "observedAt": "2026-11-12T12:51:08.711883+00:00",
+        "sourceVenue": "hyperliquid",
+        "paperQuoteVenue": "hyperliquid",
+        "status": "skipped",
+        "reason": "No prospectively copied opening"
+      },
+      {
+        "eventId": 17780,
+        "action": "OPENED",
+        "wallet": "0xd60b7f7b35817dde9b6fb5bff60eb94c851f9cfb",
+        "market": "BTC",
+        "side": "SHORT",
+        "publication": "2026-11-12T12:59:04.234Z",
+        "observedAt": "2026-11-12T12:59:17.018738+00:00",
+        "sourceVenue": "hyperliquid",
+        "paperQuoteVenue": "hyperliquid",
+        "status": "skipped",
+        "reason": "50 open paper position limit"
+      },
+      {
+        "eventId": 17784,
+        "action": "ADDED",
+        "wallet": "0x4623f25b919105765874381af97721bc40fdc06e",
+        "market": "ETH",
+        "side": "SHORT",
+        "publication": "2026-11-12T13:03:03.580Z",
+        "observedAt": "2026-11-12T13:03:19.624092+00:00",
+        "sourceVenue": "hyperliquid",
+        "paperQuoteVenue": "hyperliquid",
+        "status": "skipped",
+        "reason": "No prospectively copied opening"
+      },
+      {
+        "eventId": 17786,
+        "action": "ADDED",
+        "wallet": "0x628f303158bb4dc2f6e31acb6e0a1fb464626a08",
+        "market": "ETH",
+        "side": "SHORT",
+        "publication": "2026-11-12T13:08:06.467Z",
+        "observedAt": "2026-11-12T13:08:07.655283+00:00",
+        "sourceVenue": "hyperliquid",
+        "paperQuoteVenue": "hyperliquid",
+        "status": "skipped",
+        "reason": "No prospectively copied opening"
+      },
+      {
+        "eventId": 17790,
+        "action": "OPENED",
+        "wallet": "0x4fe8c13f70fba3081be9953869ae8f2ca3c3ba7a",
+        "market": "SUI",
+        "side": "SHORT",
+        "publication": "2026-11-12T13:09:05.467Z",
+        "observedAt": "2026-11-12T13:09:19.217618+00:00",
+        "sourceVenue": "hyperliquid",
+        "paperQuoteVenue": "hyperliquid",
+        "status": "skipped",
+        "reason": "50 open paper position limit"
+      },
+      {
+        "eventId": 17812,
+        "action": "OPENED",
+        "wallet": "0x4fe8c13f70fba3081be9953869ae8f2ca3c3ba7a",
+        "market": "TAO",
+        "side": "SHORT",
+        "publication": "2026-11-12T13:10:08.412Z",
+        "observedAt": "2026-11-12T13:10:27.840310+00:00",
+        "sourceVenue": "hyperliquid",
+        "paperQuoteVenue": "hyperliquid",
+        "status": "skipped",
+        "reason": "50 open paper position limit"
+      },
+      {
+        "eventId": 17815,
+        "action": "ADDED",
+        "wallet": "0x842310454b9d3f25ea62d7a10637a65739c9cc51",
+        "market": "HYPE",
+        "side": "LONG",
+        "publication": "2026-11-12T13:10:08.431Z",
+        "observedAt": "2026-11-12T13:10:27.840120+00:00",
+        "sourceVenue": "hyperliquid",
+        "paperQuoteVenue": "hyperliquid",
+        "status": "skipped",
+        "reason": "Side flip requires independently matched closing and opening legs"
+      },
+      {
+        "eventId": 17816,
+        "action": "ADDED",
+        "wallet": "0x4fe8c13f70fba3081be9953869ae8f2ca3c3ba7a",
+        "market": "ETH",
+        "side": "SHORT",
+        "publication": "2026-11-12T13:10:08.436Z",
+        "observedAt": "2026-11-12T13:10:27.840055+00:00",
+        "sourceVenue": "hyperliquid",
+        "paperQuoteVenue": "hyperliquid",
+        "status": "skipped",
+        "reason": "No prospectively copied opening"
+      },
+      {
+        "eventId": 17820,
+        "action": "ADDED",
+        "wallet": "0x4b3a3410a37801647d521744d1f60dfb51765beb",
+        "market": "HYPE",
+        "side": "LONG",
+        "publication": "2026-11-12T13:10:08.463Z",
+        "observedAt": "2026-11-12T13:10:27.839905+00:00",
+        "sourceVenue": "hyperliquid",
+        "paperQuoteVenue": "hyperliquid",
+        "status": "skipped",
+        "reason": "No prospectively copied opening"
+      },
+      {
+        "eventId": 17858,
+        "action": "ADDED",
+        "wallet": "0xa9059a0756917f1f44542689cd52f96c28b3d29c",
+        "market": "BTC",
+        "side": "LONG",
+        "publication": "2026-11-12T13:11:06.748Z",
+        "observedAt": "2026-11-12T13:11:36.426593+00:00",
+        "sourceVenue": "hyperliquid",
+        "paperQuoteVenue": "hyperliquid",
+        "status": "skipped",
+        "reason": "Side flip requires independently matched closing and opening legs"
+      },
+      {
+        "eventId": 17859,
+        "action": "ADDED",
+        "wallet": "0x628f303158bb4dc2f6e31acb6e0a1fb464626a08",
+        "market": "BTC",
+        "side": "SHORT",
+        "publication": "2026-11-12T13:11:06.755Z",
+        "observedAt": "2026-11-12T13:11:36.426512+00:00",
+        "sourceVenue": "hyperliquid",
+        "paperQuoteVenue": "hyperliquid",
+        "status": "skipped",
+        "reason": "No prospectively copied opening"
+      },
+      {
+        "eventId": 17906,
+        "action": "ADDED",
+        "wallet": "0x3c9ef394edc178e827f772fc41a1b064e1c0224d",
+        "market": "UNI",
+        "side": "LONG",
+        "publication": "2026-11-12T13:13:05.354Z",
+        "observedAt": "2026-11-12T13:13:20.567041+00:00",
+        "sourceVenue": "hyperliquid",
+        "paperQuoteVenue": "hyperliquid",
+        "status": "skipped",
+        "reason": "No prospectively copied opening"
+      },
+      {
+        "eventId": 17913,
+        "action": "ADDED",
+        "wallet": "0xff05e1e7d565a8865b03aa384dddc7bcea23d9e4",
+        "market": "ZEC",
+        "side": "SHORT",
+        "publication": "2026-11-12T13:16:04.967Z",
+        "observedAt": "2026-11-12T13:16:17.835910+00:00",
+        "sourceVenue": "hyperliquid",
+        "paperQuoteVenue": "hyperliquid",
+        "status": "skipped",
+        "reason": "Lifecycle unresolved or out of order",
+        "priorUnresolvedReason": "Public alert windows did not overlap",
+        "priorUnresolvedCategory": "coverage_gap"
+      },
+      {
+        "eventId": 17918,
+        "action": "ADDED",
+        "wallet": "0x4623f25b919105765874381af97721bc40fdc06e",
+        "market": "BTC",
+        "side": "SHORT",
+        "publication": "2026-11-12T13:18:04.667Z",
+        "observedAt": "2026-11-12T13:18:37.247256+00:00",
+        "sourceVenue": "hyperliquid",
+        "paperQuoteVenue": "hyperliquid",
+        "status": "skipped",
+        "reason": "No prospectively copied opening"
+      },
+      {
+        "eventId": 17920,
+        "action": "ADDED",
+        "wallet": "0xc6f3978cc71bce69c3971967aceca128e144e858",
+        "market": "XMR",
+        "side": "LONG",
+        "publication": "2026-11-12T13:18:04.680Z",
+        "observedAt": "2026-11-12T13:18:37.247065+00:00",
+        "sourceVenue": "hyperliquid",
+        "paperQuoteVenue": "hyperliquid",
+        "status": "skipped",
+        "reason": "No prospectively copied opening"
+      }
+    ],
+    "newDecisionReasons": [
+      {
+        "action": "ADDED",
+        "status": "skipped",
+        "reason": "No prospectively copied opening",
+        "count": 12
+      },
+      {
+        "action": "ADDED",
+        "status": "skipped",
+        "reason": "Side flip requires independently matched closing and opening legs",
+        "count": 3
+      },
+      {
+        "action": "OPENED",
+        "status": "skipped",
+        "reason": "50 open paper position limit",
+        "count": 3
+      },
+      {
+        "action": "ADDED",
+        "status": "skipped",
+        "reason": "Lifecycle unresolved or out of order",
+        "count": 1
+      }
+    ]
+  },
+  "scalp": {
+    "protocolVersion": "split-v4",
+    "families": {
+      "fresh": {
+        "total": 374,
+        "open": 5,
+        "closed": 369,
+        "closedPnlBeforeFunding": -51.060493789069604,
+        "milestones": {
+          "notional": {
+            "5": 9,
+            "10": 0,
+            "20": 0
+          },
+          "margin": {
+            "5": 106,
+            "10": 54,
+            "20": 31
+          }
+        }
+      },
+      "add_scalp": {
+        "total": 2489,
+        "open": 15,
+        "closed": 2474,
+        "closedPnlBeforeFunding": -797.5772908337169,
+        "milestones": {
+          "notional": {
+            "5": 5,
+            "10": 1,
+            "20": 0
+          },
+          "margin": {
+            "5": 515,
+            "10": 259,
+            "20": 92
+          }
+        }
+      }
+    },
+    "study": "github-portfolio-v3",
+    "initialEquity": 1000,
+    "equity": 150.90376360901442,
+    "realizedBeforeFunding": -848.6377846227865,
+    "openCloseEstimateBeforeFunding": -0.4584517681990731,
+    "marginInUse": 102.37881805938332,
+    "available": 48.5249455496311,
+    "openCount": 20,
+    "closedCount": 2843,
+    "totalCount": 2863,
+    "maxOpen": 20,
+    "targetNotional": 200,
+    "maxPositionNotional": 350,
+    "stalePositions": [],
+    "milestones": {
+      "notional": {
+        "5": {
+          "hit": 14,
+          "total": 2863,
+          "unconfirmed": 2849
+        },
+        "10": {
+          "hit": 1,
+          "total": 2863,
+          "unconfirmed": 2862
+        },
+        "20": {
+          "hit": 0,
+          "total": 2863,
+          "unconfirmed": 2863
+        }
+      },
+      "margin": {
+        "5": {
+          "hit": 621,
+          "total": 2863,
+          "unconfirmed": 2242
+        },
+        "10": {
+          "hit": 313,
+          "total": 2863,
+          "unconfirmed": 2550
+        },
+        "20": {
+          "hit": 123,
+          "total": 2863,
+          "unconfirmed": 2740
+        }
+      }
+    },
+    "feesAssumedBps": 4.5,
+    "fundingComplete": false,
+    "at": "2026-11-12T13:19:15.361814+00:00",
+    "maxDrawdownObserved": 0.8496868642586007,
+    "statistics": {
+      "count": 2843,
+      "wins": 904,
+      "losses": 1939,
+      "winRate": 0.31797397115722825,
+      "expectancy": -0.29850080359577436,
+      "profitFactor": 0.455289968045366,
+      "payoffRatio": 0.9765566903096955
+    },
+    "newEntries": 22,
+    "newCloses": 22
+  },
+  "archiveExitScan": {
+    "at": "2026-11-12T13:18:37.249736+00:00",
+    "scope": "Saved original exits and copied-card ending revisions; uncaptured source history unknown",
+    "files": 187,
+    "bytesRead": 87953,
+    "exitCardsReviewed": 1,
+    "endingRevisionRowsReviewed": 0,
+    "newCardWarningsRecovered": 0,
+    "matchingExitIds": [
+      17036,
+      16710,
+      16479,
+      15815,
+      15248,
+      15176,
+      13000,
+      12838
+    ],
+    "backlogRemaining": false,
+    "errors": []
+  },
+  "pendingExitIds": [
+    "17036",
+    "16710",
+    "16479",
+    "15815",
+    "15248",
+    "15176",
+    "13000",
+    "12838"
+  ],
+  "rawIntegrity": [
+    {
+      "path": "stupid-money-lab/data/2026-11-12/sessions/43224186004-1/archive-exit-audits.jsonl",
+      "bytes": 1075,
+      "sha256": "600b4e0cb4ea349cef30c0d221216b4803f26c97ebfa89917fd6ff04dfc9969f"
+    },
+    {
+      "path": "stupid-money-lab/data/2026-11-12/sessions/43224186004-1/books.jsonl",
+      "bytes": 1295838,
+      "sha256": "915a6ca9c2001949a419c6430adfb778879c31d79eb897ba03f44fe7d047dfff"
+    },
+    {
+      "path": "stupid-money-lab/data/2026-11-12/sessions/43224186004-1/candle-audits.jsonl",
+      "bytes": 25970,
+      "sha256": "ccf951277e2b79a9e54c23dac4b5258cd40bc70f6cf931f1c872167183f85280"
+    },
+    {
+      "path": "stupid-money-lab/data/2026-11-12/sessions/43224186004-1/checkpoint-publications.jsonl",
+      "bytes": 6195,
+      "sha256": "e70f44d547b6731ad3838701893dfc156b5663774833c7d1045e0dfed3feaa1c"
+    },
+    {
+      "path": "stupid-money-lab/data/2026-11-12/sessions/43224186004-1/coverage-gaps.jsonl",
+      "bytes": 111,
+      "sha256": "24da6146e9473d2f9b38930028a1ce301278787e39761ab32360ae3634a17c69"
+    },
+    {
+      "path": "stupid-money-lab/data/2026-11-12/sessions/43224186004-1/events.jsonl",
+      "bytes": 250738,
+      "sha256": "aec9c5dac840529083bdca727c56e19671c8ec610c6368ea6235bcb3659f2201"
+    },
+    {
+      "path": "stupid-money-lab/data/2026-11-12/sessions/43224186004-1/fills.jsonl",
+      "bytes": 88820,
+      "sha256": "eda36429e2e5bff41e6bb623c402924707ce1238b1aa3b5408ffbba44f88883b"
+    },
+    {
+      "path": "stupid-money-lab/data/2026-11-12/sessions/43224186004-1/genius-copy.jsonl",
+      "bytes": 101846,
+      "sha256": "16583a9fe4a8fbad772cecef812362c131ad104546fb4f78b20d3f865078fcde"
+    },
+    {
+      "path": "stupid-money-lab/data/2026-11-12/sessions/43224186004-1/lifecycle-events.jsonl",
+      "bytes": 10514,
+      "sha256": "d6cf78c89657fe8ebdde89d65b81253e6633af2f9689847aa90e76ef628f0d35"
+    },
+    {
+      "path": "stupid-money-lab/data/2026-11-12/sessions/43224186004-1/lifecycle-quotes.jsonl",
+      "bytes": 1321943,
+      "sha256": "259a7f263d839b43a5e4098723ebcbb6bf12e6fcef63d01a8a0df5da0cad8935"
+    },
+    {
+      "path": "stupid-money-lab/data/2026-11-12/sessions/43224186004-1/oracle-contexts.jsonl",
+      "bytes": 1770469,
+      "sha256": "8b159b2d06ffef3726cc9dda3a8120f4cf4ac032a5540b98d5d0b4217a71ce00"
+    },
+    {
+      "path": "stupid-money-lab/data/2026-11-12/sessions/43224186004-1/phase-timings.jsonl",
+      "bytes": 4453,
+      "sha256": "5ee80ad084fefd2cfe167a23faf9ddffc4b103a04f1d3a675dfd9b728f9359f3"
+    },
+    {
+      "path": "stupid-money-lab/data/2026-11-12/sessions/43224186004-1/portfolio.jsonl",
+      "bytes": 74213,
+      "sha256": "7652ae0f8210539a6884906430bc4bf5dde1dca614c21612f1de9a1e2d4a947b"
+    },
+    {
+      "path": "stupid-money-lab/data/2026-11-12/sessions/43224186004-1/quotes.jsonl",
+      "bytes": 262573,
+      "sha256": "4d23233ce566bcade39e2637a6094c7e55031d2922451c6bc5aca3d8b00161cd"
+    },
+    {
+      "path": "stupid-money-lab/data/2026-11-12/sessions/43224186004-1/rejections.jsonl",
+      "bytes": 1127,
+      "sha256": "a6c390e5b8240d63e1a6349e0b2e37572b8439463a8da75ba34993ac4cd51fa5"
+    },
+    {
+      "path": "stupid-money-lab/data/2026-11-12/sessions/43224186004-1/signal-decisions.jsonl",
+      "bytes": 3472,
+      "sha256": "acb864bf59f08b3e201cadd968478efa148df19dc2d2f8043914429a1dc42cb7"
+    },
+    {
+      "path": "stupid-money-lab/data/2026-11-12/sessions/43224186004-1/source-checks.jsonl",
+      "bytes": 3297,
+      "sha256": "5bbb2e866a9380e6141eb05a89d90e1bbd7b191c5cd401dec8595cfd33471e09"
+    },
+    {
+      "path": "stupid-money-lab/data/2026-11-12/sessions/43224186004-1/wallet-reconciliation.jsonl",
+      "bytes": 51060,
+      "sha256": "a6e986fe3a0174262860f04b9fa06a5225e18b9160933eca09bb3731bbdc1aea"
+    },
+    {
+      "path": "stupid-money-lab/data/2026-11-12/sessions/43215604983-1/events.jsonl",
+      "bytes": 376801,
+      "sha256": "81829cff6537b250a40afef427217c0414afa46844c4cec42d3d531ed842d702"
+    },
+    {
+      "path": "stupid-money-lab/data/2026-11-12/sessions/43215604983-1/source-checks.jsonl",
+      "bytes": 14915,
+      "sha256": "67ed6db179465be813894c2055574fb2dc153d24696727ac91b3c181fe1df964"
+    },
+    {
+      "path": "stupid-money-lab/data/2026-11-12/sessions/43215604983-1/checkpoint-publications.jsonl",
+      "bytes": 30844,
+      "sha256": "3b15006d88ea54ab728020c523baa12fae022fdc32128fe1e4311dfc8d24c084"
+    },
+    {
+      "path": "stupid-money-lab/data/2026-11-12/sessions/43215604983-1/books.jsonl",
+      "bytes": 5874925,
+      "sha256": "53b032d918786a6de36e286c2f2b5440cd6aff48461e0ddb05517d164fde6ec0"
+    }
+  ],
+  "limits": [
+    "One completed guarded window plus successor prefix; long-term reliability not guaranteed",
+    "Source windows/bursts can miss signals; no complete capture proof",
+    "Identity/tier timing and source lifecycle unresolved",
+    "Funding excluded; modeled fees/slippage; liquidation incomplete",
+    "No validated OOS copier edge or verified lawful access; delayed-book latency stress unavailable"
+  ],
+  "runningSourceVerified": [
+    {
+      "head": "06d6f3b8adddf4dd9adb94f23cd0b80ca5c7568b",
+      "publisherSha256": "5a2724f851d840c2ca98af5dbf92ff8ab99d549e1e783a8811da898c006c96a4"
+    },
+    {
+      "head": "5c60e3fd35c5d70225c1be6be79977618d1267d1",
+      "publisherSha256": "5a2724f851d840c2ca98af5dbf92ff8ab99d549e1e783a8811da898c006c96a4"
+    }
+  ],
+  "boundaryReceiptManifests": [
+    {
+      "commit": "e6682f08ac9c2c7646fe9514219749380447d6fa",
+      "generation": "2026-11-12T13:06:12.437934+00:00",
+      "policy": "remote-parent+verified-frozen-blobs-v1"
+    },
+    {
+      "commit": "3a6bc076362d98a1d4d4f71c3b3479dea985ef79",
+      "generation": "2026-11-12T13:08:10.627461+00:00",
+      "policy": "remote-parent+verified-frozen-blobs-v1"
+    },
+    {
+      "commit": "c8b15ba699ec1ce12f5d90d7f2be57912daf31a8",
+      "generation": "2026-11-12T13:18:40.386802+00:00",
+      "policy": "remote-parent+verified-frozen-blobs-v1"
+    }
+  ],
+  "scan": {
+    "page": {
+      "at": "2026-11-12T13:19:53.196Z",
+      "status": "page_read",
+      "httpStatus": 200,
+      "hash": "cada42d878ff212938dc671dd0421b435dfdca2eea33d89e483f370adeb92eeb"
+    },
+    "live": {
+      "at": "2026-11-12T13:19:54.381Z",
+      "status": "page_read",
+      "eventCount": 19,
+      "sourceHash": "ed5d2cb6e38177130d55bdb8a5770379e0aa2936f3264de33e1c75cd90d9cf08"
+    }
+  },
+  "completedJob": {
+    "jobs": [
+      {
+        "id": 131173946990,
+        "name": "observe",
+        "status": "completed",
+        "conclusion": "success",
+        "run_id": 43215604983,
+        "logs_url": null,
+        "steps": [
+          {
+            "name": "Set up job",
+            "status": "completed",
+            "conclusion": "success",
+            "number": 1
+          },
+          {
+            "name": "Run actions/checkout@v4",
+            "status": "completed",
+            "conclusion": "success",
+            "number": 2
+          },
+          {
+            "name": "Run actions/setup-python@v5",
+            "status": "completed",
+            "conclusion": "success",
+            "number": 3
+          },
+          {
+            "name": "Verify paper math",
+            "status": "completed",
+            "conclusion": "success",
+            "number": 4
+          },
+          {
+            "name": "Collect public events and paper quotes",
+            "status": "completed",
+            "conclusion": "success",
+            "number": 5
+          },
+          {
+            "name": "Persist public evidence",
+            "status": "completed",
+            "conclusion": "success",
+            "number": 6
+          },
+          {
+            "name": "Preserve evidence artifact even if commit fails",
+            "status": "completed",
+            "conclusion": "success",
+            "number": 7
+          },
+          {
+            "name": "Hand off to next bounded collector window",
+            "status": "completed",
+            "conclusion": "success",
+            "number": 8
+          },
+          {
+            "name": "Post Run actions/setup-python@v5",
+            "status": "completed",
+            "conclusion": "success",
+            "number": 15
+          },
+          {
+            "name": "Post Run actions/checkout@v4",
+            "status": "completed",
+            "conclusion": "success",
+            "number": 16
+          },
+          {
+            "name": "Complete job",
+            "status": "completed",
+            "conclusion": "success",
+            "number": 17
+          }
+        ]
+      }
+    ]
+  },
+  "currentJob": {
+    "jobs": [
+      {
+        "id": 131203046258,
+        "name": "observe",
+        "status": "in_progress",
+        "conclusion": null,
+        "run_id": 43224186004,
+        "logs_url": null,
+        "steps": [
+          {
+            "name": "Set up job",
+            "status": "completed",
+            "conclusion": "success",
+            "number": 1
+          },
+          {
+            "name": "Run actions/checkout@v4",
+            "status": "completed",
+            "conclusion": "success",
+            "number": 2
+          },
+          {
+            "name": "Run actions/setup-python@v5",
+            "status": "completed",
+            "conclusion": "success",
+            "number": 3
+          },
+          {
+            "name": "Verify paper math",
+            "status": "completed",
+            "conclusion": "success",
+            "number": 4
+          },
+          {
+            "name": "Collect public events and paper quotes",
+            "status": "in_progress",
+            "conclusion": null,
+            "number": 5
+          },
+          {
+            "name": "Persist public evidence",
+            "status": "pending",
+            "conclusion": null,
+            "number": 6
+          },
+          {
+            "name": "Preserve evidence artifact even if commit fails",
+            "status": "pending",
+            "conclusion": null,
+            "number": 7
+          },
+          {
+            "name": "Hand off to next bounded collector window",
+            "status": "pending",
+            "conclusion": null,
+            "number": 8
+          },
+          {
+            "name": "Post Run actions/setup-python@v5",
+            "status": "pending",
+            "conclusion": null,
+            "number": 15
+          },
+          {
+            "name": "Post Run actions/checkout@v4",
+            "status": "pending",
+            "conclusion": null,
+            "number": 16
+          }
+        ]
+      }
+    ]
+  },
+  "runAtAmericaNewYork": "2026-11-12T08:22:16.295053-05:00",
+  "nextTest": "Inspect original lifecycle evidence for warning exposures blocking slots; never free slots or invent exits without corroborated lifecycle and current observed fill."
+}
