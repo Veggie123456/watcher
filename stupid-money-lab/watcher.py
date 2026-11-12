@@ -4,9 +4,11 @@ import portfolio
 import genius_copy
 import evidence_audit
 import oracle_capture
-import subprocess, tempfile
+import checkpoint_publisher
+import subprocess, tempfile, threading
 import argparse, datetime as dt, hashlib, json, math, os, pathlib, re, time, urllib.request
 ROOT = pathlib.Path(__file__).resolve().parent
+EVIDENCE_LOCK = threading.RLock()
 SOURCE = 'https://www.stupidmoney.io/live?money=smart'
 API = 'https://api.hyperliquid.xyz/info'
 VERSION = portfolio.STUDY
@@ -49,7 +51,8 @@ def append(kind, value):
     day=dt.datetime.now(dt.timezone.utc).strftime('%Y-%m-%d')
     session=os.getenv('GITHUB_RUN_ID', 'local')+'-'+os.getenv('GITHUB_RUN_ATTEMPT', str(os.getpid()))
     dest=ROOT/'data'/day/'sessions'/session/f'{kind}.jsonl';dest.parent.mkdir(parents=True,exist_ok=True)
-    with dest.open('a') as f: f.write(json.dumps(value,separators=(',',':'))+'\n')
+    with EVIDENCE_LOCK:
+        with dest.open('a') as f: f.write(json.dumps(value,separators=(',',':'))+'\n')
 
 def measured_phase(name, operation):
     """Record wall timestamps and monotonic duration without altering results."""
@@ -328,28 +331,20 @@ def cycle(state, fetch_source=True):
         slim['studies'].append(item)
     (ROOT/'dashboard.json').write_text(json.dumps(slim,separators=(',',':')))
 
+def capture_checkpoint():
+    # The independent read-only oracle also appends receipts; freeze boundaries
+    # under the same lock so no captured prefix ends inside a JSONL row.
+    with EVIDENCE_LOCK:
+        return checkpoint_publisher.capture(ROOT)
+
 def _publish_checkpoint():
-    # A separate index builds a data-only commit atop current main. Never rebase
-    # the running checkout or overwrite unrelated code/scanner files.
-    paths=['stupid-money-lab/state.json','stupid-money-lab/dashboard.json'] + [str(p.relative_to(ROOT.parent)) for p in (ROOT/'data').rglob('*') if p.is_file()]
-    identity=['git','-c','user.name=Stupid Money research collector','-c','user.email=41898282+github-actions[bot]@users.noreply.github.com']
-    def run(args,env=None):
-        r=subprocess.run(args,cwd=ROOT.parent,env=env,stdout=subprocess.PIPE,stderr=subprocess.PIPE,timeout=60)
-        if r.returncode: raise RuntimeError('Checkpoint git '+args[1]+' failed (exit '+str(r.returncode)+')')
-        return r.stdout.decode().strip()
-    for attempt in range(2):
-        try:
-            run(['git','fetch','--depth=1','origin','main']);parent=run(['git','rev-parse','FETCH_HEAD'])
-            with tempfile.TemporaryDirectory() as td:
-                env={**os.environ,'GIT_INDEX_FILE':str(pathlib.Path(td)/'index')}
-                run(['git','read-tree',parent],env);run(['git','add','--sparse','--',*paths],env);tree=run(['git','write-tree'],env)
-                if tree==run(['git','rev-parse',parent+'^{tree}']): return True
-                commit=run(identity+['commit-tree',tree,'-p',parent,'-m','Record public paper checkpoint [skip ci]'],env)
-                run(['git','push','origin',commit+':refs/heads/main'])
-            return True
-        except Exception as ex:
-            if attempt==1:append('errors',{'at':stamp(),'error':str(ex)+'; local evidence/artifact retained, no upload assumed.'})
-    return False
+    # Synchronous final fallback is used only after the background worker exits.
+    try:
+        checkpoint_publisher.GitPublisher(ROOT)(capture_checkpoint(), threading.Event())
+        return True
+    except Exception as ex:
+        append('errors',{'at':stamp(),'error':str(ex)+'; local evidence/artifact retained, no upload assumed.'})
+        return False
 
 def publish_checkpoint():
     return measured_phase('checkpoint_publish', _publish_checkpoint)
@@ -361,14 +356,24 @@ if __name__=='__main__':
     state=json.loads(path.read_text()) if path.exists() else {'seen':{},'studies':[]}
     end=float('inf') if args.continuous else time.monotonic()+min(max(args.seconds,0),3300);source_due=0;publish_due=time.monotonic()+max(args.publish_every,1)
     oracle = oracle_capture.BackgroundCollector(deadline=end)
+    publisher = checkpoint_publisher.BackgroundPublisher(checkpoint_publisher.GitPublisher(ROOT)) if args.publish_every else None
     while True:
         now=time.monotonic();source=now>=source_due
+        if publisher:
+            for receipt in publisher.drain_receipts(): append('checkpoint-publications', receipt)
+            state['checkpointPublisher'] = publisher.status()
         cycle(state,source)
         oracle.step(state, append)  # Publish immutable market snapshot; sampler has its own clock.
         if args.publish_every and time.monotonic()>=publish_due:
-            publish_checkpoint();publish_due=time.monotonic()+args.publish_every
+            try: publisher.submit(capture_checkpoint())
+            except Exception as ex: append('errors',{'at':stamp(),'error':'Snapshot not submitted: '+str(ex)})
+            publish_due=time.monotonic()+args.publish_every
         if source: source_due=now+(300 if state.get('sourceStatus')=='blocked_or_error' else 30)
         if time.monotonic()+10>end: break
         time.sleep(10)
 
     oracle.close(append)
+    if publisher:
+        status = publisher.close(drain_seconds=5)
+        for receipt in publisher.drain_receipts(): append('checkpoint-publications', receipt)
+        append('checkpoint-publications', {'at':stamp(),'kind':'shutdown',**status})
