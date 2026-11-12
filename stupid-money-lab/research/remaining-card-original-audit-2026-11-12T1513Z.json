@@ -1,0 +1,2192 @@
+{
+  "run": 67,
+  "checkpoint": "fae8e86721f3c309f2c479d9ca40f39d22e9d796",
+  "cutoff": "2026-11-12T15:13:22.337141+00:00",
+  "priorCutoff": "2026-11-12T14:20:24.675998+00:00",
+  "heartbeat": "2026-11-12T15:13:21.131447+00:00",
+  "sourceCheckedAt": "2026-11-12T15:13:21.503300+00:00",
+  "snapshotHashesVerified": true,
+  "policy": "remote-parent+verified-frozen-blobs-v1",
+  "sourceCoverage": [
+    {
+      "run": "43233157848",
+      "count": 95,
+      "first": {
+        "sourceStatus": "read",
+        "sourceCheckedAt": "2026-11-12T14:03:21.547759+00:00",
+        "sourceHash": "ce84589934b9532a3ec8eec69b981a46378eb5465e9714fd826f6fa87e298e3c"
+      },
+      "last": {
+        "sourceStatus": "read",
+        "sourceCheckedAt": "2026-11-12T14:58:18.844118+00:00",
+        "sourceHash": "b702e457835698624ed8daa9cf18fb17eb2aa6ee8c5a3244f2ff45a25d3e2929"
+      },
+      "medianSeconds": 34.798598,
+      "maxSeconds": 37.930436
+    },
+    {
+      "run": "43242796652",
+      "count": 25,
+      "first": {
+        "sourceStatus": "read",
+        "sourceCheckedAt": "2026-11-12T14:59:15.458784+00:00",
+        "sourceHash": "1b3835d03496e2c6e401d4d131f52b333202d47c119812db598650c05ae32440"
+      },
+      "last": {
+        "sourceStatus": "read",
+        "sourceCheckedAt": "2026-11-12T15:13:21.503300+00:00",
+        "sourceHash": "1c17de5637b448421bcbad81fa61df9302b481c17da75c559ad8bafd2421b29d"
+      },
+      "medianSeconds": 35.0457325,
+      "maxSeconds": 38.108568
+    }
+  ],
+  "boundarySeconds": 56.614666,
+  "publisher": {
+    "43233157848": {
+      "receipts": 94,
+      "success": 93,
+      "failed": 1,
+      "medianSeconds": 9.285043446499913,
+      "maxSeconds": 12.35538961300017,
+      "last": {
+        "protocol": "immutable-checkpoint-v1",
+        "generation": "2026-11-12T14:58:22.457209+00:00",
+        "startedAt": "2026-11-12T14:58:23.292811+00:00",
+        "published": false,
+        "error": "Checkpoint git push cancelled (exit -9)",
+        "attemptDiagnostics": [
+          {
+            "attempt": 1,
+            "command": {
+              "protocol": "git-command-diagnostic-v1",
+              "stage": "push",
+              "startedAt": "2026-11-12T14:58:24.345934+00:00",
+              "endedAt": "2026-11-12T14:58:28.353576+00:00",
+              "durationSeconds": 4.007015895000222,
+              "result": "cancelled",
+              "returnCode": -9,
+              "stderrBytes": 0,
+              "stderrInspectedBytes": 0,
+              "stderrInspectionTruncated": false,
+              "stderrClasses": [
+                "unclassified"
+              ]
+            }
+          }
+        ],
+        "endedAt": "2026-11-12T14:58:28.364002+00:00",
+        "durationSeconds": 5.071179368999765
+      },
+      "otherRows": [
+        {
+          "at": "2026-11-12T14:58:28.364294+00:00",
+          "kind": "shutdown",
+          "protocol": "immutable-checkpoint-v1",
+          "latestObserved": "2026-11-12T14:58:22.457209+00:00",
+          "latestPublished": "2026-11-12T14:57:44.590497+00:00",
+          "inflight": null,
+          "pending": null
+        }
+      ]
+    },
+    "43242796652": {
+      "receipts": 23,
+      "success": 23,
+      "failed": 0,
+      "medianSeconds": 8.979156246999992,
+      "maxSeconds": 14.148015091000048,
+      "last": {
+        "protocol": "immutable-checkpoint-v1",
+        "generation": "2026-11-12T15:12:47.594430+00:00",
+        "startedAt": "2026-11-12T15:12:48.699809+00:00",
+        "published": true,
+        "commit": "7669ef6bfc17cd33d87c6c3397547a74f64cbec1",
+        "unchanged": false,
+        "attemptDiagnostics": [],
+        "endedAt": "2026-11-12T15:13:01.099552+00:00",
+        "durationSeconds": 12.399738309999975
+      },
+      "otherRows": []
+    }
+  },
+  "incrementalKinds": {
+    "first_observation": 45,
+    "revision": 623
+  },
+  "newOriginalSignals": 45,
+  "actions": {
+    "OPENED": 13,
+    "ADDED": 29,
+    "REDUCED": 2,
+    "CLOSED": 1
+  },
+  "publicationLag": {
+    "medianSeconds": 14.882068,
+    "maxSeconds": 33.415031
+  },
+  "exits": [
+    {
+      "eventId": 18072,
+      "action": "REDUCED",
+      "market": "TAO",
+      "matchingMainPositions": [],
+      "decisions": [
+        {
+          "eventId": 18072,
+          "action": "REDUCED",
+          "wallet": "0x7d12ca15c85f0291631cfb9ab4ddc74f58322c18",
+          "market": "TAO",
+          "side": "SHORT",
+          "publication": "2026-11-12T14:33:04.941Z",
+          "observedAt": "2026-11-12T14:33:14.145684+00:00",
+          "sourceVenue": "hyperliquid",
+          "paperQuoteVenue": "hyperliquid",
+          "exitDiscoveryAt": "2026-11-12T14:33:15.155710+00:00",
+          "sourcePublicationAt": "2026-11-12T14:33:04.941Z",
+          "lateDiscovery": false,
+          "exitPolicy": "Current observed book; never backdated to source close",
+          "status": "skipped",
+          "reason": "No prospectively copied opening"
+        }
+      ]
+    },
+    {
+      "eventId": 18078,
+      "action": "REDUCED",
+      "market": "ZEC",
+      "matchingMainPositions": [],
+      "decisions": [
+        {
+          "eventId": 18078,
+          "action": "REDUCED",
+          "wallet": "0x2dfe69fc6f1464e2d9905e0321aff8f98065fee7",
+          "market": "ZEC",
+          "side": "SHORT",
+          "publication": "2026-11-12T14:36:04.140Z",
+          "observedAt": "2026-11-12T14:36:08.149016+00:00",
+          "sourceVenue": "hyperliquid",
+          "paperQuoteVenue": "hyperliquid",
+          "exitDiscoveryAt": "2026-11-12T14:36:09.173406+00:00",
+          "sourcePublicationAt": "2026-11-12T14:36:04.140Z",
+          "lateDiscovery": false,
+          "exitPolicy": "Current observed book; never backdated to source close",
+          "status": "skipped",
+          "reason": "No prospectively copied opening"
+        }
+      ]
+    },
+    {
+      "eventId": 18180,
+      "action": "CLOSED",
+      "market": "ETH",
+      "matchingMainPositions": [],
+      "decisions": [
+        {
+          "eventId": 18180,
+          "action": "CLOSED",
+          "wallet": "0x4fe8c13f70fba3081be9953869ae8f2ca3c3ba7a",
+          "market": "ETH",
+          "side": "LONG",
+          "publication": "2026-11-12T14:58:04.759Z",
+          "observedAt": "2026-11-12T14:58:18.844542+00:00",
+          "sourceVenue": "hyperliquid",
+          "paperQuoteVenue": "hyperliquid",
+          "exitDiscoveryAt": "2026-11-12T14:58:22.434374+00:00",
+          "sourcePublicationAt": "2026-11-12T14:58:04.759Z",
+          "lateDiscovery": false,
+          "exitPolicy": "Current observed book; never backdated to source close",
+          "status": "skipped",
+          "reason": "No prospectively copied opening"
+        }
+      ]
+    }
+  ],
+  "main": {
+    "total": 58,
+    "open": 50,
+    "closed": 8,
+    "cash": 4980.43376828499,
+    "realizedBeforeFunding": 86.71125486420027,
+    "openPnlBeforeFunding": 574.5243800703936,
+    "newLegs": [],
+    "statistics": {
+      "n": 8,
+      "wins": 6,
+      "losses": 2,
+      "winRate": 0.75,
+      "expectancy": 10.838906858025034,
+      "profitFactor": 4.914207448134561,
+      "payoffRatio": 1.6380691493781872
+    },
+    "concentration": {
+      "ZEC": 12,
+      "BTC": 19,
+      "UNI": 1,
+      "XMR": 1,
+      "HYPE": 4,
+      "LIT": 2,
+      "ETH": 6,
+      "XRP": 1,
+      "SOL": 3,
+      "kPEPE": 1
+    },
+    "quality": {
+      "at": "2026-11-12T15:13:22.268734+00:00",
+      "status": "Unvalidated website-alert simulation; source holdings and funding incomplete",
+      "copyPerformanceEligible": false,
+      "activePaperExposures": 50,
+      "closureWarningPositionIds": [
+        10652,
+        10736,
+        10936,
+        11128,
+        11154,
+        11438,
+        11451,
+        11464,
+        11511,
+        11777,
+        11798,
+        11841,
+        11904,
+        11945,
+        11949,
+        11956,
+        11974,
+        11995,
+        12076,
+        12122,
+        12445,
+        12839,
+        13388,
+        14155,
+        17053
+      ],
+      "closureWarningCount": 25,
+      "sourceCardNoLongerLiveCount": 12,
+      "subsequentOpeningPositionIds": [
+        10652,
+        10736,
+        10936,
+        11128,
+        11154,
+        11438,
+        11464,
+        11511,
+        11777,
+        11798,
+        11841,
+        11904,
+        11945,
+        11949,
+        11974,
+        11995,
+        12076,
+        12122,
+        12445,
+        12839,
+        14155,
+        17053
+      ],
+      "subsequentOpeningWarningCount": 22,
+      "warningExposureModeledPnlBeforeFunding": 277.70452151693974,
+      "otherUnverifiedExposureModeledPnlBeforeFunding": 296.8198585534539,
+      "totalModeledPnlBeforeFunding": 574.5243800703936,
+      "interpretation": "Warning subtotal assumes continued exposure despite non-live source cards or subsequent openings; neither subtotal is verified copier performance."
+    }
+  },
+  "scalp": {
+    "protocolVersion": "split-v4",
+    "families": {
+      "fresh": {
+        "total": 380,
+        "open": 5,
+        "closed": 375,
+        "closedPnlBeforeFunding": -51.892926031267216,
+        "milestones": {
+          "notional": {
+            "5": 9,
+            "10": 0,
+            "20": 0
+          },
+          "margin": {
+            "5": 108,
+            "10": 55,
+            "20": 31
+          }
+        }
+      },
+      "add_scalp": {
+        "total": 2514,
+        "open": 15,
+        "closed": 2499,
+        "closedPnlBeforeFunding": -802.5461441153999,
+        "milestones": {
+          "notional": {
+            "5": 5,
+            "10": 1,
+            "20": 0
+          },
+          "margin": {
+            "5": 523,
+            "10": 262,
+            "20": 94
+          }
+        }
+      }
+    },
+    "study": "github-portfolio-v3",
+    "initialEquity": 1000,
+    "equity": 142.84075898583484,
+    "realizedBeforeFunding": -854.4390701466671,
+    "openCloseEstimateBeforeFunding": -2.720170867498096,
+    "marginInUse": 77.91649082681428,
+    "available": 64.92426815902056,
+    "openCount": 20,
+    "closedCount": 2874,
+    "totalCount": 2894,
+    "maxOpen": 20,
+    "targetNotional": 200,
+    "maxPositionNotional": 350,
+    "stalePositions": [],
+    "milestones": {
+      "notional": {
+        "5": {
+          "hit": 14,
+          "total": 2894,
+          "unconfirmed": 2880
+        },
+        "10": {
+          "hit": 1,
+          "total": 2894,
+          "unconfirmed": 2893
+        },
+        "20": {
+          "hit": 0,
+          "total": 2894,
+          "unconfirmed": 2894
+        }
+      },
+      "margin": {
+        "5": {
+          "hit": 631,
+          "total": 2894,
+          "unconfirmed": 2263
+        },
+        "10": {
+          "hit": 317,
+          "total": 2894,
+          "unconfirmed": 2577
+        },
+        "20": {
+          "hit": 125,
+          "total": 2894,
+          "unconfirmed": 2769
+        }
+      }
+    },
+    "feesAssumedBps": 4.5,
+    "fundingComplete": false,
+    "at": "2026-11-12T15:13:22.336982+00:00",
+    "maxDrawdownObserved": 0.8580732678379706,
+    "statistics": {
+      "n": 2874,
+      "wins": 918,
+      "losses": 1956,
+      "winRate": 0.31941544885177453,
+      "expectancy": -0.29729960687079576,
+      "profitFactor": 0.4540188591538407,
+      "payoffRatio": 0.9673865887853078
+    },
+    "newEntries": 16,
+    "newCloses": 11
+  },
+  "archiveExitScan": {
+    "at": "2026-11-12T15:08:39.144609+00:00",
+    "scope": "Saved original exits and copied-card ending revisions; uncaptured source history unknown",
+    "files": 189,
+    "bytesRead": 23451,
+    "exitCardsReviewed": 0,
+    "endingRevisionRowsReviewed": 0,
+    "newCardWarningsRecovered": 0,
+    "matchingExitIds": [
+      17036,
+      16710,
+      16479,
+      15815,
+      15248,
+      15176,
+      13000,
+      12838
+    ],
+    "backlogRemaining": false,
+    "errors": []
+  },
+  "pendingExitIds": [
+    "17036",
+    "16710",
+    "16479",
+    "15815",
+    "15248",
+    "15176",
+    "13000",
+    "12838"
+  ],
+  "remainingCardForensics": [
+    {
+      "positionId": 11945,
+      "openedAt": "2026-11-06T03:57:12.901758+00:00",
+      "sourceOpenedAt": "2026-11-06T03:57:02.623Z",
+      "wallet": "0x693b77eb4946bd1e12d5f34fea57b503b7c0d5f7",
+      "market": "BTC",
+      "direction": "long",
+      "warning": {
+        "positionId": 11945,
+        "eventId": 11945,
+        "sourceFrozenAt": "2026-11-06T04:41:42.134Z",
+        "discoveredAt": "2026-11-06T04:41:43.508352+00:00",
+        "reason": "gone",
+        "sourceCard": {
+          "side": "long",
+          "entryPx": "76199.6",
+          "leverage": 40,
+          "sizeAbs": 68,
+          "seedPx": "76606",
+          "live": false,
+          "sizeShrunk": false,
+          "frozen": {
+            "reason": "gone",
+            "at": "2026-11-06T04:41:42.134Z",
+            "price": null,
+            "roePct": null,
+            "upnlUsd": null
+          }
+        },
+        "interpretation": "Source card no longer live; closure requires verification. No exit fill inferred."
+      },
+      "firstOriginal": {
+        "path": "stupid-money-lab/data/2026-11-06/sessions/42156486447-1/events.jsonl",
+        "row": {
+          "observedAt": "2026-11-06T03:57:12.485128+00:00",
+          "kind": "first_observation",
+          "event": {
+            "id": 11945,
+            "type": "SMART_FRESH",
+            "coin": "BTC",
+            "createdAt": "2026-11-06T03:57:02.623Z",
+            "occurredAt": "2026-11-06T03:57:00.325Z",
+            "payload": {
+              "side": "LONG",
+              "liqPx": 77308.87324325189,
+              "action": "OPENED",
+              "cohort": "GENIUS",
+              "wallet": "0x693b77eb4946bd1e12d5f34fea57b503b7c0d5f7",
+              "entryPx": 73660.4,
+              "leverage": {
+                "type": "cross",
+                "value": 40
+              },
+              "marginUsd": 84399,
+              "positionUsd": 4585207,
+              "allTimePnlUsd": 371702.517407,
+              "addedMarginUsd": null
+            },
+            "tags": {
+              "0x693b77eb4946bd1e12d5f34fea57b503b7c0d5f7": [
+                "HIGH_FREQUENCY"
+              ]
+            },
+            "perpPnl": null,
+            "allTimePnl": null,
+            "badges": {
+              "level": "genius-trader",
+              "secondary": []
+            },
+            "traderCard": {
+              "badges": [
+                "genius-trader"
+              ],
+              "rank": 4277,
+              "chips": [
+                {
+                  "kind": "rank",
+                  "label": "Trader Rank",
+                  "value": "#4,277",
+                  "url": "/trader/0x693b77eb4946bd1e12d5f34fea57b503b7c0d5f7"
+                }
+              ],
+              "venue": "hyperliquid",
+              "pnl": {
+                "side": "long",
+                "entryPx": "73660.4",
+                "leverage": 40,
+                "sizeAbs": 68,
+                "seedPx": "76606",
+                "live": true,
+                "sizeShrunk": false,
+                "frozen": null
+              }
+            }
+          },
+          "hash": "4932a64764ef136829f756969f5c5b05b49ce64c9347ada32d0904acf5de8adc"
+        }
+      },
+      "originalAlreadyNonlive": false,
+      "originalFrozenAt": null,
+      "matchingEndingRows": [
+        {
+          "path": "stupid-money-lab/data/2026-11-06/sessions/42161961189-1/events.jsonl",
+          "row": {
+            "observedAt": "2026-11-06T04:41:43.042458+00:00",
+            "kind": "revision",
+            "event": {
+              "id": 11945,
+              "type": "SMART_FRESH",
+              "coin": "BTC",
+              "createdAt": "2026-11-06T03:57:02.623Z",
+              "occurredAt": "2026-11-06T03:57:00.325Z",
+              "payload": {
+                "side": "LONG",
+                "liqPx": 78027.17335830885,
+                "action": "OPENED",
+                "cohort": "GENIUS",
+                "wallet": "0x693b77eb4946bd1e12d5f34fea57b503b7c0d5f7",
+                "entryPx": 76199.6,
+                "leverage": {
+                  "type": "cross",
+                  "value": 40
+                },
+                "marginUsd": 129876,
+                "positionUsd": 2664921,
+                "allTimePnlUsd": 255176.329441,
+                "addedMarginUsd": null
+              },
+              "tags": {
+                "0x693b77eb4946bd1e12d5f34fea57b503b7c0d5f7": [
+                  "HIGH_FREQUENCY"
+                ]
+              },
+              "perpPnl": null,
+              "allTimePnl": null,
+              "badges": {
+                "level": "genius-trader",
+                "secondary": []
+              },
+              "traderCard": {
+                "badges": [
+                  "genius-trader"
+                ],
+                "rank": 4279,
+                "chips": [
+                  {
+                    "kind": "rank",
+                    "label": "Trader Rank",
+                    "value": "#4,279",
+                    "url": "/trader/0x693b77eb4946bd1e12d5f34fea57b503b7c0d5f7"
+                  }
+                ],
+                "venue": "hyperliquid",
+                "pnl": {
+                  "side": "long",
+                  "entryPx": "76199.6",
+                  "leverage": 40,
+                  "sizeAbs": 68,
+                  "seedPx": "76606",
+                  "live": false,
+                  "sizeShrunk": false,
+                  "frozen": {
+                    "reason": "gone",
+                    "at": "2026-11-06T04:41:42.134Z",
+                    "price": null,
+                    "roePct": null,
+                    "upnlUsd": null
+                  }
+                }
+              }
+            },
+            "hash": "5b0f0110a4b834634dd9c5920722b3c08fee1598cd571176ffb59fa602810112"
+          }
+        }
+      ],
+      "endingRowsCount": 1,
+      "originalExitCandidatesAcrossInspectedDates": [],
+      "reconciliation": {
+        "at": "2026-11-12T15:08:39.296782+00:00",
+        "status": "unresolved source linkage/history",
+        "sourceOpeningCorroborated": false,
+        "venuePosition": null,
+        "matchingFills": 0,
+        "historyPossiblyTruncated": false,
+        "paperLeverage": 5,
+        "sourceLeverage": {
+          "type": "cross",
+          "value": 40
+        },
+        "leverageMatched": false
+      }
+    },
+    {
+      "positionId": 11956,
+      "openedAt": "2026-11-06T04:10:37.045224+00:00",
+      "sourceOpenedAt": "2026-11-06T04:10:03.636Z",
+      "wallet": "0xff05e1e7d565a8865b03aa384dddc7bcea23d9e4",
+      "market": "BTC",
+      "direction": "long",
+      "warning": {
+        "positionId": 11956,
+        "eventId": 11956,
+        "sourceFrozenAt": "2026-11-06T05:14:02.091Z",
+        "discoveredAt": "2026-11-06T05:14:12.664962+00:00",
+        "reason": "gone",
+        "sourceCard": {
+          "side": "long",
+          "entryPx": "74403",
+          "leverage": 40,
+          "sizeAbs": 15,
+          "seedPx": "76794",
+          "live": false,
+          "sizeShrunk": false,
+          "frozen": {
+            "reason": "gone",
+            "at": "2026-11-06T05:14:02.091Z",
+            "price": null,
+            "roePct": null,
+            "upnlUsd": null
+          }
+        },
+        "interpretation": "Source card no longer live; closure requires verification. No exit fill inferred."
+      },
+      "firstOriginal": {
+        "path": "stupid-money-lab/data/2026-11-06/sessions/42156486447-1/events.jsonl",
+        "row": {
+          "observedAt": "2026-11-06T04:10:36.474504+00:00",
+          "kind": "first_observation",
+          "event": {
+            "id": 11956,
+            "type": "SMART_FRESH",
+            "coin": "BTC",
+            "createdAt": "2026-11-06T04:10:03.636Z",
+            "occurredAt": "2026-11-06T04:10:00.786Z",
+            "payload": {
+              "side": "LONG",
+              "liqPx": 75306.97073432915,
+              "action": "OPENED",
+              "cohort": "GENIUS",
+              "wallet": "0xff05e1e7d565a8865b03aa384dddc7bcea23d9e4",
+              "entryPx": 76366,
+              "leverage": {
+                "type": "isolated",
+                "value": 40
+              },
+              "marginUsd": 28113.22,
+              "positionUsd": 1536033,
+              "allTimePnlUsd": 805126.813304,
+              "addedMarginUsd": null
+            },
+            "tags": {
+              "0xff05e1e7d565a8865b03aa384dddc7bcea23d9e4": [
+                "HIGH_FREQUENCY"
+              ]
+            },
+            "perpPnl": null,
+            "allTimePnl": null,
+            "badges": {
+              "level": "genius-trader",
+              "secondary": []
+            },
+            "traderCard": {
+              "badges": [
+                "genius-trader"
+              ],
+              "rank": 1196,
+              "chips": [
+                {
+                  "kind": "rank",
+                  "label": "Trader Rank",
+                  "value": "#1,196",
+                  "url": "/trader/0xff05e1e7d565a8865b03aa384dddc7bcea23d9e4"
+                }
+              ],
+              "venue": "hyperliquid",
+              "pnl": {
+                "side": "long",
+                "entryPx": "76366",
+                "leverage": 40,
+                "sizeAbs": 15,
+                "seedPx": "76794",
+                "live": true,
+                "sizeShrunk": false,
+                "frozen": null
+              }
+            }
+          },
+          "hash": "251ba6ef87b8ea5d8e261c02df1dfb528c9eef4009862dfa0a215dabf4e7859c"
+        }
+      },
+      "originalAlreadyNonlive": false,
+      "originalFrozenAt": null,
+      "matchingEndingRows": [
+        {
+          "path": "stupid-money-lab/data/2026-11-06/sessions/42161961189-1/events.jsonl",
+          "row": {
+            "observedAt": "2026-11-06T05:14:12.010973+00:00",
+            "kind": "revision",
+            "event": {
+              "id": 11956,
+              "type": "SMART_FRESH",
+              "coin": "BTC",
+              "createdAt": "2026-11-06T04:10:03.636Z",
+              "occurredAt": "2026-11-06T04:10:00.786Z",
+              "payload": {
+                "side": "LONG",
+                "liqPx": 75036.75846171373,
+                "action": "OPENED",
+                "cohort": "GENIUS",
+                "wallet": "0xff05e1e7d565a8865b03aa384dddc7bcea23d9e4",
+                "entryPx": 74403,
+                "leverage": {
+                  "type": "isolated",
+                  "value": 40
+                },
+                "marginUsd": 33648.592,
+                "positionUsd": 1143653,
+                "allTimePnlUsd": 709555.994628,
+                "addedMarginUsd": null
+              },
+              "tags": {
+                "0xff05e1e7d565a8865b03aa384dddc7bcea23d9e4": [
+                  "HIGH_FREQUENCY"
+                ]
+              },
+              "perpPnl": null,
+              "allTimePnl": null,
+              "badges": {
+                "level": "genius-trader",
+                "secondary": []
+              },
+              "traderCard": {
+                "badges": [
+                  "genius-trader"
+                ],
+                "rank": 1237,
+                "chips": [
+                  {
+                    "kind": "rank",
+                    "label": "Trader Rank",
+                    "value": "#1,237",
+                    "url": "/trader/0xff05e1e7d565a8865b03aa384dddc7bcea23d9e4"
+                  }
+                ],
+                "venue": "hyperliquid",
+                "pnl": {
+                  "side": "long",
+                  "entryPx": "74403",
+                  "leverage": 40,
+                  "sizeAbs": 15,
+                  "seedPx": "76794",
+                  "live": false,
+                  "sizeShrunk": false,
+                  "frozen": {
+                    "reason": "gone",
+                    "at": "2026-11-06T05:14:02.091Z",
+                    "price": null,
+                    "roePct": null,
+                    "upnlUsd": null
+                  }
+                }
+              }
+            },
+            "hash": "78f630b71b5dd584d108bcc9eb37db69c4efebe68394fdcece9a84b527314cb2"
+          }
+        }
+      ],
+      "endingRowsCount": 1,
+      "originalExitCandidatesAcrossInspectedDates": [],
+      "reconciliation": {
+        "at": "2026-11-12T15:08:39.296782+00:00",
+        "status": "unresolved source linkage/history",
+        "sourceOpeningCorroborated": false,
+        "venuePosition": null,
+        "matchingFills": 0,
+        "historyPossiblyTruncated": false,
+        "paperLeverage": 5,
+        "sourceLeverage": {
+          "type": "isolated",
+          "value": 40
+        },
+        "leverageMatched": false
+      }
+    },
+    {
+      "positionId": 11974,
+      "openedAt": "2026-11-06T04:42:19.602756+00:00",
+      "sourceOpenedAt": "2026-11-06T04:42:02.568Z",
+      "wallet": "0x693b77eb4946bd1e12d5f34fea57b503b7c0d5f7",
+      "market": "ZEC",
+      "direction": "short",
+      "warning": {
+        "positionId": 11974,
+        "eventId": 11974,
+        "sourceFrozenAt": "2026-11-06T05:14:48.647Z",
+        "discoveredAt": "2026-11-06T05:14:49.218564+00:00",
+        "reason": "gone",
+        "sourceCard": {
+          "side": "short",
+          "entryPx": "1312.9177",
+          "leverage": 10,
+          "sizeAbs": 1018.06,
+          "seedPx": "1240.1",
+          "live": false,
+          "sizeShrunk": false,
+          "frozen": {
+            "reason": "gone",
+            "at": "2026-11-06T05:14:48.647Z",
+            "price": null,
+            "roePct": null,
+            "upnlUsd": null
+          }
+        },
+        "interpretation": "Source card no longer live; closure requires verification. No exit fill inferred."
+      },
+      "firstOriginal": {
+        "path": "stupid-money-lab/data/2026-11-06/sessions/42161961189-1/events.jsonl",
+        "row": {
+          "observedAt": "2026-11-06T04:42:18.943959+00:00",
+          "kind": "first_observation",
+          "event": {
+            "id": 11974,
+            "type": "SMART_FRESH",
+            "coin": "ZEC",
+            "createdAt": "2026-11-06T04:42:02.568Z",
+            "occurredAt": "2026-11-06T04:42:00.270Z",
+            "payload": {
+              "side": "SHORT",
+              "liqPx": 1194.5301628962306,
+              "action": "OPENED",
+              "cohort": "GENIUS",
+              "wallet": "0x693b77eb4946bd1e12d5f34fea57b503b7c0d5f7",
+              "entryPx": 1314.4983,
+              "leverage": {
+                "type": "cross",
+                "value": 10
+              },
+              "marginUsd": 103897.7608,
+              "positionUsd": 720552.61,
+              "allTimePnlUsd": 489340.517844,
+              "addedMarginUsd": null
+            },
+            "tags": {
+              "0x693b77eb4946bd1e12d5f34fea57b503b7c0d5f7": [
+                "HIGH_FREQUENCY"
+              ]
+            },
+            "perpPnl": null,
+            "allTimePnl": null,
+            "badges": {
+              "level": "genius-trader",
+              "secondary": []
+            },
+            "traderCard": {
+              "badges": [
+                "genius-trader"
+              ],
+              "rank": 2872,
+              "chips": [
+                {
+                  "kind": "rank",
+                  "label": "Trader Rank",
+                  "value": "#2,872",
+                  "url": "/trader/0x693b77eb4946bd1e12d5f34fea57b503b7c0d5f7"
+                }
+              ],
+              "venue": "hyperliquid",
+              "pnl": {
+                "side": "short",
+                "entryPx": "1314.4983",
+                "leverage": 10,
+                "sizeAbs": 1018.06,
+                "seedPx": "1240.1",
+                "live": true,
+                "sizeShrunk": false,
+                "frozen": null
+              }
+            }
+          },
+          "hash": "10d361a9a883659aa6ab2e3c13ea00485ef0b5bc4701cb2bcd7f77ad8fd04a5b"
+        }
+      },
+      "originalAlreadyNonlive": false,
+      "originalFrozenAt": null,
+      "matchingEndingRows": [
+        {
+          "path": "stupid-money-lab/data/2026-11-06/sessions/42161961189-1/events.jsonl",
+          "row": {
+            "observedAt": "2026-11-06T05:14:48.799626+00:00",
+            "kind": "revision",
+            "event": {
+              "id": 11974,
+              "type": "SMART_FRESH",
+              "coin": "ZEC",
+              "createdAt": "2026-11-06T04:42:02.568Z",
+              "occurredAt": "2026-11-06T04:42:00.270Z",
+              "payload": {
+                "side": "SHORT",
+                "liqPx": 1174.6277673401864,
+                "action": "OPENED",
+                "cohort": "GENIUS",
+                "wallet": "0x693b77eb4946bd1e12d5f34fea57b503b7c0d5f7",
+                "entryPx": 1312.9177,
+                "leverage": {
+                  "type": "cross",
+                  "value": 10
+                },
+                "marginUsd": 86578.5947,
+                "positionUsd": 1618014.306,
+                "allTimePnlUsd": 191985.163955,
+                "addedMarginUsd": null
+              },
+              "tags": {
+                "0x693b77eb4946bd1e12d5f34fea57b503b7c0d5f7": [
+                  "HIGH_FREQUENCY"
+                ]
+              },
+              "perpPnl": null,
+              "allTimePnl": null,
+              "badges": {
+                "level": "genius-trader",
+                "secondary": []
+              },
+              "traderCard": {
+                "badges": [
+                  "genius-trader"
+                ],
+                "rank": 2716,
+                "chips": [
+                  {
+                    "kind": "rank",
+                    "label": "Trader Rank",
+                    "value": "#2,716",
+                    "url": "/trader/0x693b77eb4946bd1e12d5f34fea57b503b7c0d5f7"
+                  }
+                ],
+                "venue": "hyperliquid",
+                "pnl": {
+                  "side": "short",
+                  "entryPx": "1312.9177",
+                  "leverage": 10,
+                  "sizeAbs": 1018.06,
+                  "seedPx": "1240.1",
+                  "live": false,
+                  "sizeShrunk": false,
+                  "frozen": {
+                    "reason": "gone",
+                    "at": "2026-11-06T05:14:48.647Z",
+                    "price": null,
+                    "roePct": null,
+                    "upnlUsd": null
+                  }
+                }
+              }
+            },
+            "hash": "00aae74116d106aa6c768d8506cbbce633212f9251a11ee72c6b9c7890f5fcbb"
+          }
+        }
+      ],
+      "endingRowsCount": 1,
+      "originalExitCandidatesAcrossInspectedDates": [],
+      "reconciliation": {
+        "at": "2026-11-12T15:08:39.296782+00:00",
+        "status": "unresolved source linkage/history",
+        "sourceOpeningCorroborated": false,
+        "venuePosition": null,
+        "matchingFills": 0,
+        "historyPossiblyTruncated": false,
+        "paperLeverage": 5,
+        "sourceLeverage": {
+          "type": "cross",
+          "value": 10
+        },
+        "leverageMatched": false
+      }
+    },
+    {
+      "positionId": 13388,
+      "openedAt": "2026-11-08T21:56:46.887658+00:00",
+      "sourceOpenedAt": "2026-11-08T21:56:09.485Z",
+      "wallet": "0x8af97416623cd3ba56ba8691a5523ed1b65a3694",
+      "market": "ETH",
+      "direction": "long",
+      "warning": {
+        "positionId": 13388,
+        "eventId": 13388,
+        "sourceFrozenAt": "2026-11-08T21:56:45.844Z",
+        "discoveredAt": "2026-11-08T21:56:46.889466+00:00",
+        "reason": "gone",
+        "sourceCard": {
+          "side": "long",
+          "entryPx": "2141.13",
+          "leverage": 20,
+          "sizeAbs": 388.8547,
+          "seedPx": "2161.3",
+          "live": false,
+          "sizeShrunk": false,
+          "frozen": {
+            "reason": "gone",
+            "at": "2026-11-08T21:56:45.844Z",
+            "price": null,
+            "roePct": null,
+            "upnlUsd": null
+          }
+        },
+        "interpretation": "Source card no longer live; closure requires verification. No exit fill inferred."
+      },
+      "firstOriginal": {
+        "path": "stupid-money-lab/data/2026-11-08/sessions/42523301143-1/events.jsonl",
+        "row": {
+          "observedAt": "2026-11-08T21:56:46.023965+00:00",
+          "kind": "first_observation",
+          "event": {
+            "id": 13388,
+            "type": "SMART_FRESH",
+            "coin": "ETH",
+            "createdAt": "2026-11-08T21:56:09.485Z",
+            "occurredAt": "2026-11-08T21:56:00.220Z",
+            "payload": {
+              "side": "LONG",
+              "liqPx": 2073.7552071782543,
+              "action": "OPENED",
+              "cohort": "GENIUS",
+              "wallet": "0x8af97416623cd3ba56ba8691a5523ed1b65a3694",
+              "entryPx": 2141.13,
+              "leverage": {
+                "type": "isolated",
+                "value": 20
+              },
+              "marginUsd": 25988.61657,
+              "positionUsd": 741419.7452,
+              "allTimePnlUsd": 1306789.296868,
+              "addedMarginUsd": null
+            },
+            "tags": {
+              "0x8af97416623cd3ba56ba8691a5523ed1b65a3694": [
+                "VETERAN"
+              ]
+            },
+            "perpPnl": null,
+            "allTimePnl": null,
+            "badges": {
+              "level": "genius-trader",
+              "secondary": [
+                "whale",
+                "veteran"
+              ]
+            },
+            "traderCard": {
+              "badges": [
+                "genius-trader",
+                "whale",
+                "veteran"
+              ],
+              "rank": 1201,
+              "chips": [
+                {
+                  "kind": "rank",
+                  "label": "Trader Rank",
+                  "value": "#1,201",
+                  "url": "/trader/0x8af97416623cd3ba56ba8691a5523ed1b65a3694"
+                }
+              ],
+              "venue": "hyperliquid",
+              "pnl": {
+                "side": "long",
+                "entryPx": "2141.13",
+                "leverage": 20,
+                "sizeAbs": 388.8547,
+                "seedPx": "2161.3",
+                "live": false,
+                "sizeShrunk": false,
+                "frozen": {
+                  "reason": "gone",
+                  "at": "2026-11-08T21:56:45.844Z",
+                  "price": null,
+                  "roePct": null,
+                  "upnlUsd": null
+                }
+              }
+            }
+          },
+          "hash": "988e19c333981fa7338737062ff2d28cd71fa0136715f0ca336bb54f46ae52c9"
+        }
+      },
+      "originalAlreadyNonlive": true,
+      "originalFrozenAt": "2026-11-08T21:56:45.844Z",
+      "matchingEndingRows": [
+        {
+          "path": "stupid-money-lab/data/2026-11-08/sessions/42523301143-1/events.jsonl",
+          "row": {
+            "observedAt": "2026-11-08T21:56:46.023965+00:00",
+            "kind": "first_observation",
+            "event": {
+              "id": 13388,
+              "type": "SMART_FRESH",
+              "coin": "ETH",
+              "createdAt": "2026-11-08T21:56:09.485Z",
+              "occurredAt": "2026-11-08T21:56:00.220Z",
+              "payload": {
+                "side": "LONG",
+                "liqPx": 2073.7552071782543,
+                "action": "OPENED",
+                "cohort": "GENIUS",
+                "wallet": "0x8af97416623cd3ba56ba8691a5523ed1b65a3694",
+                "entryPx": 2141.13,
+                "leverage": {
+                  "type": "isolated",
+                  "value": 20
+                },
+                "marginUsd": 25988.61657,
+                "positionUsd": 741419.7452,
+                "allTimePnlUsd": 1306789.296868,
+                "addedMarginUsd": null
+              },
+              "tags": {
+                "0x8af97416623cd3ba56ba8691a5523ed1b65a3694": [
+                  "VETERAN"
+                ]
+              },
+              "perpPnl": null,
+              "allTimePnl": null,
+              "badges": {
+                "level": "genius-trader",
+                "secondary": [
+                  "whale",
+                  "veteran"
+                ]
+              },
+              "traderCard": {
+                "badges": [
+                  "genius-trader",
+                  "whale",
+                  "veteran"
+                ],
+                "rank": 1201,
+                "chips": [
+                  {
+                    "kind": "rank",
+                    "label": "Trader Rank",
+                    "value": "#1,201",
+                    "url": "/trader/0x8af97416623cd3ba56ba8691a5523ed1b65a3694"
+                  }
+                ],
+                "venue": "hyperliquid",
+                "pnl": {
+                  "side": "long",
+                  "entryPx": "2141.13",
+                  "leverage": 20,
+                  "sizeAbs": 388.8547,
+                  "seedPx": "2161.3",
+                  "live": false,
+                  "sizeShrunk": false,
+                  "frozen": {
+                    "reason": "gone",
+                    "at": "2026-11-08T21:56:45.844Z",
+                    "price": null,
+                    "roePct": null,
+                    "upnlUsd": null
+                  }
+                }
+              }
+            },
+            "hash": "988e19c333981fa7338737062ff2d28cd71fa0136715f0ca336bb54f46ae52c9"
+          }
+        }
+      ],
+      "endingRowsCount": 1,
+      "originalExitCandidatesAcrossInspectedDates": [],
+      "reconciliation": {
+        "at": "2026-11-12T15:08:39.296782+00:00",
+        "status": "unresolved source linkage/history",
+        "sourceOpeningCorroborated": false,
+        "venuePosition": null,
+        "matchingFills": 0,
+        "historyPossiblyTruncated": false,
+        "paperLeverage": 5,
+        "sourceLeverage": {
+          "type": "isolated",
+          "value": 20
+        },
+        "leverageMatched": false
+      }
+    },
+    {
+      "positionId": 17053,
+      "openedAt": "2026-11-11T15:34:09.884241+00:00",
+      "sourceOpenedAt": "2026-11-11T15:34:03.622Z",
+      "wallet": "0x4fe8c13f70fba3081be9953869ae8f2ca3c3ba7a",
+      "market": "BTC",
+      "direction": "long",
+      "warning": {
+        "positionId": 17053,
+        "eventId": 17053,
+        "sourceFrozenAt": "2026-11-11T15:35:33.541Z",
+        "discoveredAt": "2026-11-11T15:35:35.493871+00:00",
+        "reason": "reopened",
+        "sourceCard": {
+          "side": "long",
+          "entryPx": "73183",
+          "leverage": 40,
+          "sizeAbs": 8.05139,
+          "seedPx": "75116",
+          "live": false,
+          "sizeShrunk": false,
+          "frozen": {
+            "reason": "reopened",
+            "at": "2026-11-11T15:35:33.541Z",
+            "price": null,
+            "roePct": null,
+            "upnlUsd": null
+          }
+        },
+        "interpretation": "Source card no longer live; closure requires verification. No exit fill inferred."
+      },
+      "firstOriginal": {
+        "path": "stupid-money-lab/data/2026-11-11/sessions/43045252098-1/events.jsonl",
+        "row": {
+          "observedAt": "2026-11-11T15:34:08.929556+00:00",
+          "kind": "first_observation",
+          "event": {
+            "id": 17053,
+            "type": "SMART_FRESH",
+            "coin": "BTC",
+            "createdAt": "2026-11-11T15:34:03.622Z",
+            "occurredAt": "2026-11-11T15:34:00.354Z",
+            "payload": {
+              "side": "LONG",
+              "liqPx": 551587.0295006152,
+              "action": "OPENED",
+              "cohort": "GENIUS",
+              "wallet": "0x4fe8c13f70fba3081be9953869ae8f2ca3c3ba7a",
+              "entryPx": 74618.7,
+              "leverage": {
+                "type": "cross",
+                "value": 40
+              },
+              "marginUsd": 9760.099594,
+              "positionUsd": 538911.64704,
+              "allTimePnlUsd": 10457139.479531,
+              "addedMarginUsd": null
+            },
+            "tags": {
+              "0x4fe8c13f70fba3081be9953869ae8f2ca3c3ba7a": [
+                "VETERAN",
+                "WHALE",
+                "HIGH_FREQUENCY"
+              ]
+            },
+            "perpPnl": 9589702.224845,
+            "allTimePnl": 9589702.224845,
+            "badges": {
+              "level": "genius-trader",
+              "secondary": [
+                "top-1000",
+                "mega-whale",
+                "veteran"
+              ]
+            },
+            "traderCard": {
+              "badges": [
+                "genius-trader",
+                "top-1000",
+                "mega-whale",
+                "veteran"
+              ],
+              "rank": 176,
+              "chips": [
+                {
+                  "kind": "rank",
+                  "label": "Trader Rank",
+                  "value": "#176",
+                  "url": "/trader/0x4fe8c13f70fba3081be9953869ae8f2ca3c3ba7a"
+                }
+              ],
+              "venue": "hyperliquid",
+              "pnl": {
+                "side": "long",
+                "entryPx": "74618.7",
+                "leverage": 40,
+                "sizeAbs": 8.05139,
+                "seedPx": "75116",
+                "live": true,
+                "sizeShrunk": false,
+                "frozen": null
+              }
+            }
+          },
+          "hash": "7684c7a0b8de46af05f8d089d3d3e1067ba044f33085e8b8cb914eda000e65a1"
+        }
+      },
+      "originalAlreadyNonlive": false,
+      "originalFrozenAt": null,
+      "matchingEndingRows": [
+        {
+          "path": "stupid-money-lab/data/2026-11-11/sessions/43045252098-1/events.jsonl",
+          "row": {
+            "observedAt": "2026-11-11T15:35:34.562661+00:00",
+            "kind": "revision",
+            "event": {
+              "id": 17053,
+              "type": "SMART_FRESH",
+              "coin": "BTC",
+              "createdAt": "2026-11-11T15:34:03.622Z",
+              "occurredAt": "2026-11-11T15:34:00.354Z",
+              "payload": {
+                "side": "LONG",
+                "liqPx": 523741.0607902546,
+                "action": "OPENED",
+                "cohort": "GENIUS",
+                "wallet": "0x4fe8c13f70fba3081be9953869ae8f2ca3c3ba7a",
+                "entryPx": 73183,
+                "leverage": {
+                  "type": "cross",
+                  "value": 40
+                },
+                "marginUsd": 9742.916281,
+                "positionUsd": 452335.74379,
+                "allTimePnlUsd": 7222677.568865,
+                "addedMarginUsd": null
+              },
+              "tags": {
+                "0x4fe8c13f70fba3081be9953869ae8f2ca3c3ba7a": [
+                  "VETERAN",
+                  "WHALE",
+                  "HIGH_FREQUENCY"
+                ]
+              },
+              "perpPnl": 6262817.24102,
+              "allTimePnl": 6262817.24102,
+              "badges": {
+                "level": "genius-trader",
+                "secondary": [
+                  "top-1000",
+                  "mega-whale",
+                  "veteran"
+                ]
+              },
+              "traderCard": {
+                "badges": [
+                  "genius-trader",
+                  "top-1000",
+                  "mega-whale",
+                  "veteran"
+                ],
+                "rank": 176,
+                "chips": [
+                  {
+                    "kind": "rank",
+                    "label": "Trader Rank",
+                    "value": "#176",
+                    "url": "/trader/0x4fe8c13f70fba3081be9953869ae8f2ca3c3ba7a"
+                  }
+                ],
+                "venue": "hyperliquid",
+                "pnl": {
+                  "side": "long",
+                  "entryPx": "73183",
+                  "leverage": 40,
+                  "sizeAbs": 8.05139,
+                  "seedPx": "75116",
+                  "live": false,
+                  "sizeShrunk": false,
+                  "frozen": {
+                    "reason": "reopened",
+                    "at": "2026-11-11T15:35:33.541Z",
+                    "price": null,
+                    "roePct": null,
+                    "upnlUsd": null
+                  }
+                }
+              }
+            },
+            "hash": "9029473d04fbdb6f74f7ba27045aca00a90c61c4067675b56508dc13490b0305"
+          }
+        }
+      ],
+      "endingRowsCount": 1,
+      "originalExitCandidatesAcrossInspectedDates": [],
+      "reconciliation": {
+        "at": "2026-11-12T15:08:39.296782+00:00",
+        "status": "unresolved source linkage/history",
+        "sourceOpeningCorroborated": false,
+        "venuePosition": null,
+        "matchingFills": 0,
+        "historyPossiblyTruncated": false,
+        "paperLeverage": 5,
+        "sourceLeverage": {
+          "type": "cross",
+          "value": 40
+        },
+        "leverageMatched": false
+      }
+    }
+  ],
+  "rawIntegrity": [
+    {
+      "path": "stupid-money-lab/data/2026-11-06/sessions/42124534832-1/events.jsonl",
+      "bytes": 216597,
+      "sha256": "2b8d76bff28ead3a06c34f17f85589d948199990f63117d8af5799859c99d5fb"
+    },
+    {
+      "path": "stupid-money-lab/data/2026-11-06/sessions/42136128495-1/events.jsonl",
+      "bytes": 439349,
+      "sha256": "10709e3ccb16d11412da2d6f4e3083edf6721c586f9b8424b9785909f2267258"
+    },
+    {
+      "path": "stupid-money-lab/data/2026-11-06/sessions/42142637512-1/events.jsonl",
+      "bytes": 361737,
+      "sha256": "4ec47e6773e2cfa819882d3bacfdcbefec3b9c642a74420ba1a966aaee31ed2d"
+    },
+    {
+      "path": "stupid-money-lab/data/2026-11-06/sessions/42148663335-1/events.jsonl",
+      "bytes": 45727,
+      "sha256": "74974fa136843482d9dfa0b1d67e82709b5ab4e579379788804de0848cfee894"
+    },
+    {
+      "path": "stupid-money-lab/data/2026-11-06/sessions/42149288224-1/events.jsonl",
+      "bytes": 25876,
+      "sha256": "f5b28816f3418e00cd0be90f497ae38dd5c4344a71722f791760b9e1b0a07c36"
+    },
+    {
+      "path": "stupid-money-lab/data/2026-11-06/sessions/42149680356-1/events.jsonl",
+      "bytes": 316701,
+      "sha256": "ce2dc09a3c8a32bd54c69f40c7070b04cdcb53ca67bb6a24cc7168ad3417c3a7"
+    },
+    {
+      "path": "stupid-money-lab/data/2026-11-06/sessions/42155427386-1/events.jsonl",
+      "bytes": 67394,
+      "sha256": "03571c3bfcd02b1ff8b38cb85e44fd9201bcefa2d4fc96d913cd9af4327e5738"
+    },
+    {
+      "path": "stupid-money-lab/data/2026-11-06/sessions/42156160980-1/events.jsonl",
+      "bytes": 22214,
+      "sha256": "c10db8827af19cfb90eb264d6069fc5c4b3268b03979ae5ad9cd274368884eed"
+    },
+    {
+      "path": "stupid-money-lab/data/2026-11-06/sessions/42156486447-1/events.jsonl",
+      "bytes": 393015,
+      "sha256": "023afe4784b21aff5a1ea8fbc24586ed18b09d6f25d88486633bf1db91a72750"
+    },
+    {
+      "path": "stupid-money-lab/data/2026-11-06/sessions/42161961189-1/events.jsonl",
+      "bytes": 308874,
+      "sha256": "02e6ffe1128bd8943e3d12f9de57dbe5ab6d58896487a61eb2a89a0165e09580"
+    },
+    {
+      "path": "stupid-money-lab/data/2026-11-06/sessions/42167416268-1/events.jsonl",
+      "bytes": 239540,
+      "sha256": "28756d951113fcb865d7893eba4113ff04496428ccba131303e1f4f66a4dbbb3"
+    },
+    {
+      "path": "stupid-money-lab/data/2026-11-06/sessions/42172862907-1/events.jsonl",
+      "bytes": 215544,
+      "sha256": "a6685a4b7aabdfded457b595d98b3c48a3cac86e98a419e85cb10a207a7c93e1"
+    },
+    {
+      "path": "stupid-money-lab/data/2026-11-06/sessions/42178700194-1/events.jsonl",
+      "bytes": 96840,
+      "sha256": "498f5283471957450cea78682562b622a8bd7997e36e7624f64d49d278f48ab8"
+    },
+    {
+      "path": "stupid-money-lab/data/2026-11-06/sessions/42180556093-1/events.jsonl",
+      "bytes": 305771,
+      "sha256": "962b29bd9c9106776fbe48d27372a6472ce1ae569e4d2b1e271fde0c84babff3"
+    },
+    {
+      "path": "stupid-money-lab/data/2026-11-06/sessions/42186774668-1/events.jsonl",
+      "bytes": 187851,
+      "sha256": "736d2c5b27109d87b0b629bc2e3f18b23a073d518c9797b56da0bf88898726d8"
+    },
+    {
+      "path": "stupid-money-lab/data/2026-11-06/sessions/42193494351-1/events.jsonl",
+      "bytes": 128308,
+      "sha256": "3f897be27d205423360d2a66c390c2e9c1be0484a7063e145c191505029efee1"
+    },
+    {
+      "path": "stupid-money-lab/data/2026-11-06/sessions/42201386578-1/events.jsonl",
+      "bytes": 43619,
+      "sha256": "2e249deac795ad7e7d9bbd5765e19cfe1417ed2f250930e846622cd55aa9093c"
+    },
+    {
+      "path": "stupid-money-lab/data/2026-11-06/sessions/42201668015-1/events.jsonl",
+      "bytes": 21856,
+      "sha256": "1f53b83b7920d3a0eb29002f3a09818017b7dcf27a4458e1aef0635af342a431"
+    },
+    {
+      "path": "stupid-money-lab/data/2026-11-06/sessions/42202332735-1/events.jsonl",
+      "bytes": 155858,
+      "sha256": "48e2502889f349b3234cc7ccebe5558d0dcd3905dd482f848eaaece37951b830"
+    },
+    {
+      "path": "stupid-money-lab/data/2026-11-06/sessions/42209335703-1/events.jsonl",
+      "bytes": 217020,
+      "sha256": "7fcbebb9ad6b12710f1d7f44544bc5cc0e5d8a6de4308f10bc824c22891272fa"
+    },
+    {
+      "path": "stupid-money-lab/data/2026-11-06/sessions/42216109093-1/events.jsonl",
+      "bytes": 286274,
+      "sha256": "e9923362618823a4cc26904ea756d723c8e58bfe992146500d7b2d6cea7eb70e"
+    },
+    {
+      "path": "stupid-money-lab/data/2026-11-06/sessions/42223227835-1/events.jsonl",
+      "bytes": 411177,
+      "sha256": "d947aaaf8d12c15cee9edd0ac8dfb4818a31112a51080dc460b27ddfbe044171"
+    },
+    {
+      "path": "stupid-money-lab/data/2026-11-06/sessions/42230725074-1/events.jsonl",
+      "bytes": 115578,
+      "sha256": "9024c545dedcf06fc51cac6364603ce210b7e528c08b813be48783d6756737b1"
+    },
+    {
+      "path": "stupid-money-lab/data/2026-11-06/sessions/42233019683-1/events.jsonl",
+      "bytes": 22426,
+      "sha256": "61071d6bb413573ef5f58eb957c18eae1f1cf47f9cc81535c5e3425aa15e4054"
+    },
+    {
+      "path": "stupid-money-lab/data/2026-11-06/sessions/42233605483-1/events.jsonl",
+      "bytes": 30930,
+      "sha256": "b21c88f0c3716f319e7939932c146e9a38b42cf2404c6ff54914c1907b9ded51"
+    },
+    {
+      "path": "stupid-money-lab/data/2026-11-06/sessions/42234360317-1/events.jsonl",
+      "bytes": 814505,
+      "sha256": "4a3d80801b9fad4f90d41108e820838e8231c69f9dd24307307a4dead50a060d"
+    },
+    {
+      "path": "stupid-money-lab/data/2026-11-06/sessions/42242790194-1/events.jsonl",
+      "bytes": 50541,
+      "sha256": "1edc6faf845e10270fb6a988187bb29bd07a7cb682722edd63d5d679666f7187"
+    },
+    {
+      "path": "stupid-money-lab/data/2026-11-06/sessions/42243769436-1/events.jsonl",
+      "bytes": 21827,
+      "sha256": "b38f2f52d282e340bc5cf1212b3ead010cf94db02f5430aba2a156939338c886"
+    },
+    {
+      "path": "stupid-money-lab/data/2026-11-06/sessions/42244637275-1/events.jsonl",
+      "bytes": 511535,
+      "sha256": "fd6c9dcacd78a1fc36c8f75309e3b7e8e7a9c4ed39fdba63d3aa7db695106548"
+    },
+    {
+      "path": "stupid-money-lab/data/2026-11-06/sessions/42253245172-1/events.jsonl",
+      "bytes": 346462,
+      "sha256": "b4b5d1882af464d1c477c96bd4916ca0de3777d7fd6ee7183e2f0f0bec694e30"
+    },
+    {
+      "path": "stupid-money-lab/data/2026-11-06/sessions/42261753708-1/events.jsonl",
+      "bytes": 235682,
+      "sha256": "d936917b768c9811f46de91841ee3de8e8957aa0977c3d205444222550dd9a66"
+    },
+    {
+      "path": "stupid-money-lab/data/2026-11-06/sessions/42270095715-1/events.jsonl",
+      "bytes": 43472,
+      "sha256": "567770f30495b21cc39d31775a200fec74e726b19c7e852611db923390be0ee4"
+    },
+    {
+      "path": "stupid-money-lab/data/2026-11-06/sessions/42278358232-1/events.jsonl",
+      "bytes": 163859,
+      "sha256": "30eed27d8bbfbcac436dac22803dd609afe0890d57adfee720fc60d8c6b6c0af"
+    },
+    {
+      "path": "stupid-money-lab/data/2026-11-06/sessions/42286428657-1/events.jsonl",
+      "bytes": 205019,
+      "sha256": "fa426c98fec4760379db5cca61157c8a6cd44471e48b41df19e73e5bb631204f"
+    },
+    {
+      "path": "stupid-money-lab/data/2026-11-06/sessions/42294224600-1/events.jsonl",
+      "bytes": 107547,
+      "sha256": "169a50d7f79c13c0251251c6f31058ffbba95deda0c69cc3e1f23a65e8160bc3"
+    },
+    {
+      "path": "stupid-money-lab/data/2026-11-06/sessions/42301720462-1/events.jsonl",
+      "bytes": 150996,
+      "sha256": "545cdd2be28295edd69bf2bdc05234b30db96c63f37bbe5dac2a73347d3ed574"
+    },
+    {
+      "path": "stupid-money-lab/data/2026-11-06/sessions/42308665149-1/events.jsonl",
+      "bytes": 84267,
+      "sha256": "5864b457501c0a14256d7ef447675c9e8e8b6a5e33a4bb132169568fcd2f65f2"
+    },
+    {
+      "path": "stupid-money-lab/data/2026-11-08/sessions/42427151742-1/events.jsonl",
+      "bytes": 206025,
+      "sha256": "526fc8f489654007f5db7a95a52bb4fbb11b5fdab3f2e0acc0c86c1c435044e0"
+    },
+    {
+      "path": "stupid-money-lab/data/2026-11-08/sessions/42431343605-1/events.jsonl",
+      "bytes": 112426,
+      "sha256": "444d833fb1d96f8207299a918d73acec488dbb63365d18b959a8ca5b5b1b2b2d"
+    },
+    {
+      "path": "stupid-money-lab/data/2026-11-08/sessions/42435409564-1/events.jsonl",
+      "bytes": 204857,
+      "sha256": "ae262cd233ca33cab501f9e012ea0ffef89921a30a87bb275dfe3bd78db67a6c"
+    },
+    {
+      "path": "stupid-money-lab/data/2026-11-08/sessions/42439350474-1/events.jsonl",
+      "bytes": 171221,
+      "sha256": "43b844ee785c1fd2a51d5afc048c7c5b02e9a83357c44077f5d30efe49d5b51c"
+    },
+    {
+      "path": "stupid-money-lab/data/2026-11-08/sessions/42443190428-1/events.jsonl",
+      "bytes": 182551,
+      "sha256": "70e12a76e65a210d6e7c28bc2969a2eeb7e0af3384ee84579a89b758c75ba747"
+    },
+    {
+      "path": "stupid-money-lab/data/2026-11-08/sessions/42446946091-1/events.jsonl",
+      "bytes": 223671,
+      "sha256": "974f4fde8e5a3c6a71e0f3e0da56e1127cc52c01410fcff17d1641937e10e5b3"
+    },
+    {
+      "path": "stupid-money-lab/data/2026-11-08/sessions/42450599053-1/events.jsonl",
+      "bytes": 203422,
+      "sha256": "7142fe2bca65b89aea2c98649125510b149877871a9904993f9ea6b96df079d0"
+    },
+    {
+      "path": "stupid-money-lab/data/2026-11-08/sessions/42454228796-1/events.jsonl",
+      "bytes": 168973,
+      "sha256": "73fc27d9323638898f969d352c425309e232020dc50254bcf7ab2daf9abf7584"
+    },
+    {
+      "path": "stupid-money-lab/data/2026-11-08/sessions/42457962342-1/events.jsonl",
+      "bytes": 100583,
+      "sha256": "b38c44f83b0b575a2b6d00e947b00ac73d8601df38a0dfdbae1a627c7c018d81"
+    },
+    {
+      "path": "stupid-money-lab/data/2026-11-08/sessions/42461731629-1/events.jsonl",
+      "bytes": 93490,
+      "sha256": "68ee25447e1c771b6a1769fa6151be57bcc3c4d3de7d7b6e09aba7841feaed91"
+    },
+    {
+      "path": "stupid-money-lab/data/2026-11-08/sessions/42464839808-1/events.jsonl",
+      "bytes": 173045,
+      "sha256": "77096259efb14e852f850638f3bfd139f3c77c09235f8dc4051851c411354c02"
+    },
+    {
+      "path": "stupid-money-lab/data/2026-11-08/sessions/42469540623-1/events.jsonl",
+      "bytes": 152413,
+      "sha256": "d99653f3b026d10ab94636ca59e4a20cf7c416f183e67525a4afdac3471c0cfb"
+    },
+    {
+      "path": "stupid-money-lab/data/2026-11-08/sessions/42473482429-1/events.jsonl",
+      "bytes": 210362,
+      "sha256": "1ca199f8683678584a9bdcf904b40d3c70a6f7bd8163b774132174074cb7076f"
+    },
+    {
+      "path": "stupid-money-lab/data/2026-11-08/sessions/42477537626-1/events.jsonl",
+      "bytes": 351660,
+      "sha256": "9c3b6556e3f7ed2b4338948e113084b4074ff13fd778a5489ca00e1565915c42"
+    },
+    {
+      "path": "stupid-money-lab/data/2026-11-08/sessions/42481794231-1/events.jsonl",
+      "bytes": 363025,
+      "sha256": "75ac1db5862cea82cba4fed77b2bcd7694aab10b440871700fca39c844e5ec90"
+    },
+    {
+      "path": "stupid-money-lab/data/2026-11-08/sessions/42486158998-1/events.jsonl",
+      "bytes": 197963,
+      "sha256": "ba70840b8be08ddd2be1ef9c568f5c91231f6cff723d4c25856b56c5738d91c4"
+    },
+    {
+      "path": "stupid-money-lab/data/2026-11-08/sessions/42490667610-1/events.jsonl",
+      "bytes": 269895,
+      "sha256": "2b026d994cfbb8d0d9d8010f03444602915e01bdb2171c62ce5b7d525d81888d"
+    },
+    {
+      "path": "stupid-money-lab/data/2026-11-08/sessions/42495290746-1/events.jsonl",
+      "bytes": 269629,
+      "sha256": "7ba45a8d1d684ad09726fd180784b3353942220dab73bfc650b45f71fca6d146"
+    },
+    {
+      "path": "stupid-money-lab/data/2026-11-08/sessions/42499973147-1/events.jsonl",
+      "bytes": 182085,
+      "sha256": "972b7361e373a5a02db2f667b3332436ffc8a20d39d4df3a0c914f3e2ff5e0ad"
+    },
+    {
+      "path": "stupid-money-lab/data/2026-11-08/sessions/42504665014-1/events.jsonl",
+      "bytes": 338839,
+      "sha256": "e3b57c491fa97323147cd056aec53d8b4c647282b2cca97527a5164398dcea00"
+    },
+    {
+      "path": "stupid-money-lab/data/2026-11-08/sessions/42509302271-1/events.jsonl",
+      "bytes": 327914,
+      "sha256": "067908d6e0d4b6d2379d7671fd3609f2c6db34e470bc6fffcc1e44bfd2b15dda"
+    },
+    {
+      "path": "stupid-money-lab/data/2026-11-08/sessions/42513950101-1/events.jsonl",
+      "bytes": 194881,
+      "sha256": "a622078ce689de179b41cc681e7a906345049ce276afa7585018e6e4d92bb58f"
+    },
+    {
+      "path": "stupid-money-lab/data/2026-11-08/sessions/42518608394-1/events.jsonl",
+      "bytes": 302472,
+      "sha256": "667439b60296f7fea37e1f933e886e00691991178c56837d84682ac91160f6d8"
+    },
+    {
+      "path": "stupid-money-lab/data/2026-11-08/sessions/42523301143-1/events.jsonl",
+      "bytes": 634524,
+      "sha256": "705480e1f884ddeb53d8f0b9483a770bf04712d705452d88cb0da0fb9fb3eba5"
+    },
+    {
+      "path": "stupid-money-lab/data/2026-11-08/sessions/42527922531-1/events.jsonl",
+      "bytes": 715629,
+      "sha256": "c428be259d041f8c0997d8fbadad328cf32cd06c9fa99f0506fcb418b02dd999"
+    },
+    {
+      "path": "stupid-money-lab/data/2026-11-08/sessions/42532565782-1/events.jsonl",
+      "bytes": 705229,
+      "sha256": "19bb7029c219748292dcc6b37226cf763ba1fbb49d88925f494bd38e9e4005d8"
+    },
+    {
+      "path": "stupid-money-lab/data/2026-11-08/sessions/42537060372-1/events.jsonl",
+      "bytes": 175291,
+      "sha256": "d3ed23e908dea310e811d2c915908157f5e46344c4b94e2d9683636e60b08062"
+    },
+    {
+      "path": "stupid-money-lab/data/2026-11-11/sessions/42922908966-1/events.jsonl",
+      "bytes": 256909,
+      "sha256": "395f39be689a779a770de39ae1d3084943a96790ce397b1360c28dc3798e7717"
+    },
+    {
+      "path": "stupid-money-lab/data/2026-11-11/sessions/42930310040-1/events.jsonl",
+      "bytes": 452854,
+      "sha256": "025093bd16e5672f2a82604741d2601b1970948955b70e252af140a48e926640"
+    },
+    {
+      "path": "stupid-money-lab/data/2026-11-11/sessions/42937428040-1/events.jsonl",
+      "bytes": 334456,
+      "sha256": "a11e2909c6c26e6ffcdf3c74d3b300d65a9c7e5608bd90fad2ed2807e1c476b7"
+    },
+    {
+      "path": "stupid-money-lab/data/2026-11-11/sessions/42944052442-1/events.jsonl",
+      "bytes": 332309,
+      "sha256": "4f04f1295933e5b7b51c52c7062e78a385eaff97eadaa534420ee88c7d206742"
+    },
+    {
+      "path": "stupid-money-lab/data/2026-11-11/sessions/42950351643-1/events.jsonl",
+      "bytes": 430045,
+      "sha256": "eec3024f56c5ed85cf5758e4a025a7d37cb50b180c9582c54325d5913eb2843e"
+    },
+    {
+      "path": "stupid-money-lab/data/2026-11-11/sessions/42956421737-1/events.jsonl",
+      "bytes": 223823,
+      "sha256": "ae13aa35bd08541fd639d74278ad55361b41356b8def7029acd05731fee1b618"
+    },
+    {
+      "path": "stupid-money-lab/data/2026-11-11/sessions/42962452261-1/events.jsonl",
+      "bytes": 128974,
+      "sha256": "144da0ac2008f38871e6c49ce8f66984c955ed83d57cfe580d18f33a37446296"
+    },
+    {
+      "path": "stupid-money-lab/data/2026-11-11/sessions/42968519426-1/events.jsonl",
+      "bytes": 240797,
+      "sha256": "14abfc7338c0b0b951c122ce54b97a3ab90a721fff9aeb95cbd821eaf2cc9227"
+    },
+    {
+      "path": "stupid-money-lab/data/2026-11-11/sessions/42974893370-1/events.jsonl",
+      "bytes": 343766,
+      "sha256": "1c9beb52b6d88c1cb6affb6ff7e9465decbd09db1eed84822879685b0cb45759"
+    },
+    {
+      "path": "stupid-money-lab/data/2026-11-11/sessions/42981522696-1/events.jsonl",
+      "bytes": 438511,
+      "sha256": "f8a7ce8522d70d8da327c40015fbf395031f7018f1b8f7bfb55db72c87d33f58"
+    },
+    {
+      "path": "stupid-money-lab/data/2026-11-11/sessions/42988643299-1/events.jsonl",
+      "bytes": 342681,
+      "sha256": "4d697ab7688528b9fc72c8c3f34f4c4867ef68a05810d6dbb95af9b7d819d9b4"
+    },
+    {
+      "path": "stupid-money-lab/data/2026-11-11/sessions/42996270006-1/events.jsonl",
+      "bytes": 293272,
+      "sha256": "b8e3238f393ec7db6a76481f3e636eb80925c90c22ef3cd721edcb246f544823"
+    },
+    {
+      "path": "stupid-money-lab/data/2026-11-11/sessions/43004073523-1/events.jsonl",
+      "bytes": 326961,
+      "sha256": "e740c5bdf96d6a32fcbb9e69281bbf74885ba403127f96215b3c6d66b62a129a"
+    },
+    {
+      "path": "stupid-money-lab/data/2026-11-11/sessions/43011784572-1/events.jsonl",
+      "bytes": 333457,
+      "sha256": "70f7e8ba2895ba4b2ac664a896ee88c270c27a65f0c844275057aac2b09ac6a4"
+    },
+    {
+      "path": "stupid-money-lab/data/2026-11-11/sessions/43019531181-1/events.jsonl",
+      "bytes": 239428,
+      "sha256": "1439df639ba893f4e0903c46cfe3b3a6f2a24a742892b8fc3f6e3f05aa9a493d"
+    },
+    {
+      "path": "stupid-money-lab/data/2026-11-11/sessions/43027628850-1/events.jsonl",
+      "bytes": 334402,
+      "sha256": "5c511f2a1bc12c8c86993a2a8c4bdbc59b318059c57c5e1c724cf3d58518cb93"
+    },
+    {
+      "path": "stupid-money-lab/data/2026-11-11/sessions/43036191551-1/events.jsonl",
+      "bytes": 342483,
+      "sha256": "805ca1248486f2df024863d37505ef2e7b76837569a482a1db7e088024f2a773"
+    },
+    {
+      "path": "stupid-money-lab/data/2026-11-11/sessions/43045252098-1/events.jsonl",
+      "bytes": 431928,
+      "sha256": "e298a84a482cced5b4ff89d3ccdf436a1af551cb0716cec5d7ac2d46a9b4fca0"
+    },
+    {
+      "path": "stupid-money-lab/data/2026-11-11/sessions/43054475689-1/events.jsonl",
+      "bytes": 464643,
+      "sha256": "7aabba09ca25c6db01221f2ce47f4eb349787e19a57a71457ad42534b3ec9eb2"
+    },
+    {
+      "path": "stupid-money-lab/data/2026-11-11/sessions/43063619699-1/events.jsonl",
+      "bytes": 511896,
+      "sha256": "3478106846e65065c16baf631151ada3fef01ceae07219c270e22765bca8a6bb"
+    },
+    {
+      "path": "stupid-money-lab/data/2026-11-11/sessions/43072646340-1/events.jsonl",
+      "bytes": 308726,
+      "sha256": "a6a290dc504271a0b4c2e1d69d00b836fab3043093f9b628faa259663d44a526"
+    },
+    {
+      "path": "stupid-money-lab/data/2026-11-11/sessions/43081506740-1/events.jsonl",
+      "bytes": 321115,
+      "sha256": "46719b0c483e1e495e9ffbbd68df0afe98c9e30005a5af81816a6ad366666062"
+    },
+    {
+      "path": "stupid-money-lab/data/2026-11-11/sessions/43090220173-1/events.jsonl",
+      "bytes": 282716,
+      "sha256": "6ba33c1b3ec1a894dc414bffe9493de69d2f3c8f3037fdd3a29a9a5af591ca88"
+    },
+    {
+      "path": "stupid-money-lab/data/2026-11-11/sessions/43090220173-2/events.jsonl",
+      "bytes": 342073,
+      "sha256": "1ebc55da66f4bd968635f7c347722c4484a2cac17d8380cbaa665fa242bd3e21"
+    },
+    {
+      "path": "stupid-money-lab/data/2026-11-11/sessions/43110161866-1/events.jsonl",
+      "bytes": 519173,
+      "sha256": "f27971d3553011367cc6925b0e610b606c5187899e1aebdaadebb8665e3eff5b"
+    },
+    {
+      "path": "stupid-money-lab/data/2026-11-11/sessions/43117824762-1/events.jsonl",
+      "bytes": 455677,
+      "sha256": "53558b818c2825c41667041dac8d251affae2cfe65f7ce8b895cee1d72808426"
+    },
+    {
+      "path": "stupid-money-lab/data/2026-11-12/sessions/43242796652-1/archive-exit-audits.jsonl",
+      "bytes": 716,
+      "sha256": "37d883409b9ea74d23b10edec6f0f3b2a44f74666c3b04844a90340bbf1e7f4c"
+    },
+    {
+      "path": "stupid-money-lab/data/2026-11-12/sessions/43242796652-1/books.jsonl",
+      "bytes": 1604365,
+      "sha256": "010bfab003ae563667de25748acb27da8a1269698f3b771ee7cc8cae2e818929"
+    },
+    {
+      "path": "stupid-money-lab/data/2026-11-12/sessions/43242796652-1/candle-audits.jsonl",
+      "bytes": 25848,
+      "sha256": "8aa4cd1451cc079e3bc1fa9ea945f6489a623e5eb3cd47f460a7c29b0e3b7158"
+    },
+    {
+      "path": "stupid-money-lab/data/2026-11-12/sessions/43242796652-1/checkpoint-publications.jsonl",
+      "bytes": 7497,
+      "sha256": "996f534317db4d37ba3bb0a5b91b509343d5d6cdd2d414aa3f92f6d746dcd97a"
+    },
+    {
+      "path": "stupid-money-lab/data/2026-11-12/sessions/43242796652-1/coverage-gaps.jsonl",
+      "bytes": 113,
+      "sha256": "c7a63e28d436581bc5fa6911b677cca47787f7bd885d115dc883aad9ffd6cb6b"
+    },
+    {
+      "path": "stupid-money-lab/data/2026-11-12/sessions/43242796652-1/events.jsonl",
+      "bytes": 179202,
+      "sha256": "f773a564a3a81cb9169b377706f7e031ff8db0c251d74f7a4e2ea486e38c5312"
+    },
+    {
+      "path": "stupid-money-lab/data/2026-11-12/sessions/43242796652-1/fills.jsonl",
+      "bytes": 39274,
+      "sha256": "f1a89fba9a4c46f9359d49ecbd068c9154bde40da2b9df87562117f637619ea7"
+    },
+    {
+      "path": "stupid-money-lab/data/2026-11-12/sessions/43242796652-1/genius-copy.jsonl",
+      "bytes": 47557,
+      "sha256": "fce3d1479b9ea3cfb22d676b74024f64351f4f0e7725599ca60ac1ed20b9b5f6"
+    },
+    {
+      "path": "stupid-money-lab/data/2026-11-12/sessions/43242796652-1/lifecycle-events.jsonl",
+      "bytes": 4370,
+      "sha256": "1c6d097e03598d8db010c76673e50761dece53cac8a49c95607beb3c469c505f"
+    },
+    {
+      "path": "stupid-money-lab/data/2026-11-12/sessions/43242796652-1/lifecycle-quotes.jsonl",
+      "bytes": 1595683,
+      "sha256": "92de208a5e3e7187ca530bff5f13211a9fe80ff92dfe09eab374f184431afbb6"
+    },
+    {
+      "path": "stupid-money-lab/data/2026-11-12/sessions/43242796652-1/oracle-contexts.jsonl",
+      "bytes": 2137932,
+      "sha256": "d59db1f58b127f74b76ee0437aaa0855149bf8e5f385eeb69ea88eba66c56fcb"
+    },
+    {
+      "path": "stupid-money-lab/data/2026-11-12/sessions/43242796652-1/phase-timings.jsonl",
+      "bytes": 5311,
+      "sha256": "4471df5a3a350fb67e8df313147589ef17e8554f4506167eb1ec24bfd28e4ed7"
+    },
+    {
+      "path": "stupid-money-lab/data/2026-11-12/sessions/43242796652-1/portfolio.jsonl",
+      "bytes": 88690,
+      "sha256": "bdddb776bb566fa07453e9ccf86ec0c346ec6ba146f252612ad164f377c6b07a"
+    },
+    {
+      "path": "stupid-money-lab/data/2026-11-12/sessions/43242796652-1/quotes.jsonl",
+      "bytes": 336877,
+      "sha256": "6eecc85df739b70e64b6711875fe2ebc531db5eca53fdf6585491b4367d91f75"
+    },
+    {
+      "path": "stupid-money-lab/data/2026-11-12/sessions/43242796652-1/rejections.jsonl",
+      "bytes": 670,
+      "sha256": "6c1b41942563cf954b2fc02b287b39a932813f442b461f2d091d0ae0c06397f2"
+    },
+    {
+      "path": "stupid-money-lab/data/2026-11-12/sessions/43242796652-1/signal-decisions.jsonl",
+      "bytes": 1557,
+      "sha256": "e59221126347a1064a2e86de3362d5f00833ecc25755ddca1e8bfd33002b1fb2"
+    },
+    {
+      "path": "stupid-money-lab/data/2026-11-12/sessions/43242796652-1/source-checks.jsonl",
+      "bytes": 3925,
+      "sha256": "0773ec422907797a0dfbc733fab3a5658493eaf82775b9c4ec4dc3cacdfef638"
+    },
+    {
+      "path": "stupid-money-lab/data/2026-11-12/sessions/43242796652-1/wallet-reconciliation.jsonl",
+      "bytes": 34040,
+      "sha256": "f13e2bfc4dc15f6ce95740bb9e887aadad28e0ba20b436a7349c2fb229503681"
+    },
+    {
+      "path": "stupid-money-lab/data/2026-11-12/sessions/43233157848-1/events.jsonl",
+      "bytes": 752038,
+      "sha256": "0939349f0c9f29ff4c046c366e59d9217459ddeea670605f9e938eaef8f28d4b"
+    },
+    {
+      "path": "stupid-money-lab/data/2026-11-12/sessions/43233157848-1/source-checks.jsonl",
+      "bytes": 14915,
+      "sha256": "3e26046fdb363968a9d26543c36c3ebdb571e81df9177b528791a6fd6722903f"
+    },
+    {
+      "path": "stupid-money-lab/data/2026-11-12/sessions/43233157848-1/checkpoint-publications.jsonl",
+      "bytes": 31206,
+      "sha256": "ef8d8acb04f4af2fd1d41dcbda86d72e20771138373ac6e4a2308c856537ef72"
+    }
+  ],
+  "limitations": [
+    "Three-date archive search is not complete historical absence proof",
+    "A card ending supplies no executable historical paper fill",
+    "Funding excluded; fee/slippage modeled; liquidation incomplete",
+    "Main drawdown/latency stress unavailable; source identity/tier/lifecycle and lawful real access unverified",
+    "No validated profitable copier edge"
+  ],
+  "finalFallbackVerification": {
+    "successorHead": "640663f0bfbeecbf83129ca53a053a48d65e4439",
+    "stateUpdatedAt": "2026-11-12T14:58:22.457209+00:00",
+    "heartbeat": "2026-11-12T14:58:17.915323+00:00",
+    "stateSha256": "67d6e5fe5a8c1cbb6c057c157472426fae643413d72a549541027b3f9eba211b",
+    "manifestGeneration": "2026-11-12T14:58:22.457209+00:00",
+    "manifestStateHashMatches": true,
+    "interpretation": "Final observed generation persisted at successor head with matching manifest and state SHA256 despite cancelled background receipt"
+  },
+  "scan": {
+    "page": {
+      "at": "2026-11-12T15:14:34.200Z",
+      "status": "page_read",
+      "httpStatus": 200,
+      "hash": "998f95507d69f32ae87b71603c009ab1c63cb9deaaa688c5f7108a537fc17894"
+    },
+    "live": {
+      "at": "2026-11-12T15:14:35.931Z",
+      "status": "page_read",
+      "eventCount": 20,
+      "sourceHash": "a45bee2c10187a825a4656b5348b4d120d4a0512800c8095124556c29a08d7d4"
+    }
+  },
+  "completedJob": {
+    "jobs": [
+      {
+        "id": 131233498254,
+        "name": "observe",
+        "status": "completed",
+        "conclusion": "success",
+        "run_id": 43233157848,
+        "logs_url": null,
+        "steps": [
+          {
+            "name": "Set up job",
+            "status": "completed",
+            "conclusion": "success",
+            "number": 1
+          },
+          {
+            "name": "Run actions/checkout@v4",
+            "status": "completed",
+            "conclusion": "success",
+            "number": 2
+          },
+          {
+            "name": "Run actions/setup-python@v5",
+            "status": "completed",
+            "conclusion": "success",
+            "number": 3
+          },
+          {
+            "name": "Verify paper math",
+            "status": "completed",
+            "conclusion": "success",
+            "number": 4
+          },
+          {
+            "name": "Collect public events and paper quotes",
+            "status": "completed",
+            "conclusion": "success",
+            "number": 5
+          },
+          {
+            "name": "Persist public evidence",
+            "status": "completed",
+            "conclusion": "success",
+            "number": 6
+          },
+          {
+            "name": "Preserve evidence artifact even if commit fails",
+            "status": "completed",
+            "conclusion": "success",
+            "number": 7
+          },
+          {
+            "name": "Hand off to next bounded collector window",
+            "status": "completed",
+            "conclusion": "success",
+            "number": 8
+          },
+          {
+            "name": "Post Run actions/setup-python@v5",
+            "status": "completed",
+            "conclusion": "success",
+            "number": 15
+          },
+          {
+            "name": "Post Run actions/checkout@v4",
+            "status": "completed",
+            "conclusion": "success",
+            "number": 16
+          },
+          {
+            "name": "Complete job",
+            "status": "completed",
+            "conclusion": "success",
+            "number": 17
+          }
+        ]
+      }
+    ]
+  },
+  "currentJob": {
+    "jobs": [
+      {
+        "id": 131267489732,
+        "name": "observe",
+        "status": "in_progress",
+        "conclusion": null,
+        "run_id": 43242796652,
+        "logs_url": null,
+        "steps": [
+          {
+            "name": "Set up job",
+            "status": "completed",
+            "conclusion": "success",
+            "number": 1
+          },
+          {
+            "name": "Run actions/checkout@v4",
+            "status": "completed",
+            "conclusion": "success",
+            "number": 2
+          },
+          {
+            "name": "Run actions/setup-python@v5",
+            "status": "completed",
+            "conclusion": "success",
+            "number": 3
+          },
+          {
+            "name": "Verify paper math",
+            "status": "completed",
+            "conclusion": "success",
+            "number": 4
+          },
+          {
+            "name": "Collect public events and paper quotes",
+            "status": "in_progress",
+            "conclusion": null,
+            "number": 5
+          },
+          {
+            "name": "Persist public evidence",
+            "status": "pending",
+            "conclusion": null,
+            "number": 6
+          },
+          {
+            "name": "Preserve evidence artifact even if commit fails",
+            "status": "pending",
+            "conclusion": null,
+            "number": 7
+          },
+          {
+            "name": "Hand off to next bounded collector window",
+            "status": "pending",
+            "conclusion": null,
+            "number": 8
+          },
+          {
+            "name": "Post Run actions/setup-python@v5",
+            "status": "pending",
+            "conclusion": null,
+            "number": 15
+          },
+          {
+            "name": "Post Run actions/checkout@v4",
+            "status": "pending",
+            "conclusion": null,
+            "number": 16
+          }
+        ]
+      }
+    ]
+  },
+  "runAtAmericaNewYork": "2026-11-12T10:17:47.173718-05:00",
+  "forensicSummary": {
+    "remainingNonliveCards": 5,
+    "allOriginalAndEndingRowsFound": true,
+    "originalAlreadyNonliveIds": [
+      13388
+    ],
+    "liveInitiallyIds": [
+      11945,
+      11956,
+      11974,
+      17053
+    ],
+    "matchingOriginalExitCandidatesAcrossInspectedDates": 0,
+    "scope": "90 event archives across Nov6/8/11; not full historical absence proof",
+    "legacyResultsUnchanged": true,
+    "prospectiveGuardStatus": "Explicit non-live initial OPENED card rejection requires separate tested implementation; not deployed in this run"
+  },
+  "nextTest": "Implement and verify prospective rejection of explicitly non-live initial OPENED cards, preserving legacy record13388 and all existing outcomes; do not infer a close or free slots."
+}
