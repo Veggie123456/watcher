@@ -1,0 +1,3326 @@
+{
+  "protocol": "deployed-immutable-publisher-verification-v1",
+  "runAt": "2026-11-12T05:21:12.284771+00:00",
+  "previousCutoff": "2026-11-12T04:17:51.126855Z",
+  "cutoff": "2026-11-12T05:16:52.665899+00:00",
+  "immutableCheckpoint": "a27f8a727e78e4ad11cefa59c46ef37f1b384692",
+  "heartbeatAt": "2026-11-12T05:16:51.238090+00:00",
+  "sourceCheckedAt": "2026-11-12T05:16:51.808914+00:00",
+  "sourceStatus": "read",
+  "coverage": {
+    "43150748195-1-source-checks.jsonl": {
+      "n": 66,
+      "first": "2026-11-12T03:50:02.767386+00:00",
+      "last": "2026-11-12T04:44:54.947925+00:00",
+      "medianIntervalSeconds": 41.811263,
+      "maxIntervalSeconds": 158.649913
+    },
+    "43156834042-1-source-checks.jsonl": {
+      "n": 55,
+      "first": "2026-11-12T04:45:41.602570+00:00",
+      "last": "2026-11-12T05:16:51.808914+00:00",
+      "medianIntervalSeconds": 34.3837255,
+      "maxIntervalSeconds": 36.863803
+    }
+  },
+  "sourceHandoffSeconds": 46.654645,
+  "newOriginals": [
+    {
+      "observedAt": "2026-11-12T04:33:38.342205+00:00",
+      "kind": "first_observation",
+      "event": {
+        "id": 17523,
+        "type": "SMART_FRESH",
+        "coin": "HYPE",
+        "createdAt": "2026-11-12T04:33:08.844Z",
+        "occurredAt": "2026-11-12T04:33:00.400Z",
+        "payload": {
+          "side": "LONG",
+          "addPx": 71.96680177671854,
+          "liqPx": 187.83078730776415,
+          "action": "ADDED",
+          "cohort": "SMART",
+          "wallet": "0x83be5a269a9a435bcd57d542bada53516ffb5092",
+          "entryPx": 75.6969,
+          "leverage": {
+            "type": "cross",
+            "value": 10
+          },
+          "marginUsd": 217889.512811,
+          "positionUsd": 1163771.5332,
+          "allTimePnlUsd": 1324105.93533,
+          "addedMarginUsd": 62961.334104671856
+        },
+        "perpPnl": 819708.666765,
+        "allTimePnl": 819708.666765,
+        "badges": {
+          "level": "smart-trader",
+          "secondary": [
+            "whale"
+          ]
+        },
+        "traderCard": {
+          "badges": [
+            "smart-trader",
+            "whale"
+          ],
+          "rank": 3410,
+          "chips": [
+            {
+              "kind": "rank",
+              "label": "Trader Rank",
+              "value": "#3,410",
+              "url": "/trader/0x83be5a269a9a435bcd57d542bada53516ffb5092"
+            }
+          ],
+          "venue": "hyperliquid",
+          "pnl": {
+            "side": "long",
+            "entryPx": "75.6969",
+            "leverage": 10,
+            "sizeAbs": 20666.14,
+            "seedPx": "71.161",
+            "live": true,
+            "sizeShrunk": false,
+            "frozen": null
+          }
+        }
+      },
+      "hash": "58a2812f6bf002332914acad010795e14f71461e9e040f4199e92dced3cc2042"
+    },
+    {
+      "observedAt": "2026-11-12T04:34:22.485907+00:00",
+      "kind": "first_observation",
+      "event": {
+        "id": 17524,
+        "type": "SMART_FRESH",
+        "coin": "XMR",
+        "createdAt": "2026-11-12T04:34:03.887Z",
+        "occurredAt": "2026-11-12T04:34:00.471Z",
+        "payload": {
+          "side": "SHORT",
+          "addPx": 578.9954928128822,
+          "liqPx": 1235.701299041491,
+          "action": "ADDED",
+          "cohort": "GENIUS",
+          "wallet": "0x72d19ef1f9e11256eccb1edd3e1766fdf7596241",
+          "entryPx": 586.567,
+          "leverage": {
+            "type": "cross",
+            "value": 5
+          },
+          "marginUsd": 284633.696999,
+          "positionUsd": 603193.464861,
+          "allTimePnlUsd": 9102798.871919,
+          "addedMarginUsd": 16336.271087363473
+        },
+        "tags": {
+          "0x72d19ef1f9e11256eccb1edd3e1766fdf7596241": [
+            "WHALE"
+          ]
+        },
+        "perpPnl": 10362005.888249,
+        "allTimePnl": 10362005.888249,
+        "badges": {
+          "level": "genius-trader",
+          "secondary": [
+            "top-1000",
+            "whale"
+          ]
+        },
+        "traderCard": {
+          "badges": [
+            "genius-trader",
+            "top-1000",
+            "whale"
+          ],
+          "rank": 543,
+          "chips": [
+            {
+              "kind": "rank",
+              "label": "Trader Rank",
+              "value": "#543",
+              "url": "/trader/0x72d19ef1f9e11256eccb1edd3e1766fdf7596241"
+            }
+          ],
+          "venue": "hyperliquid",
+          "pnl": {
+            "side": "short",
+            "entryPx": "586.567",
+            "leverage": 5,
+            "sizeAbs": 2265.739,
+            "seedPx": "554.469",
+            "live": true,
+            "sizeShrunk": false,
+            "frozen": null
+          }
+        }
+      },
+      "hash": "2cca36acc378cbc12805d7bf30494a71372d2ef5877da3052815ca21e7aa9515"
+    },
+    {
+      "observedAt": "2026-11-12T04:35:45.873372+00:00",
+      "kind": "first_observation",
+      "event": {
+        "id": 17525,
+        "type": "SMART_FRESH",
+        "coin": "XMR",
+        "createdAt": "2026-11-12T04:35:07.224Z",
+        "occurredAt": "2026-11-12T04:35:00.289Z",
+        "payload": {
+          "side": "SHORT",
+          "addPx": 572.4457469391012,
+          "liqPx": 102356.14531462932,
+          "action": "ADDED",
+          "cohort": "GENIUS",
+          "wallet": "0x4ff721407ab013f8b094391228a2d04074252ff8",
+          "entryPx": 566.895,
+          "leverage": {
+            "type": "cross",
+            "value": 5
+          },
+          "marginUsd": 12853.7436,
+          "positionUsd": 72149.9661,
+          "allTimePnlUsd": 86434279.876647,
+          "addedMarginUsd": 11045.67789
+        },
+        "perpPnl": 65338999.778093,
+        "allTimePnl": 65338999.778093,
+        "badges": {
+          "level": "genius-trader",
+          "secondary": [
+            "top-100",
+            "mega-whale"
+          ]
+        },
+        "traderCard": {
+          "badges": [
+            "genius-trader",
+            "top-100",
+            "mega-whale"
+          ],
+          "rank": 44,
+          "chips": [
+            {
+              "kind": "rank",
+              "label": "Trader Rank",
+              "value": "#44",
+              "url": "/trader/0x4ff721407ab013f8b094391228a2d04074252ff8"
+            }
+          ],
+          "venue": "hyperliquid",
+          "pnl": {
+            "side": "short",
+            "entryPx": "566.895",
+            "leverage": 5,
+            "sizeAbs": 212.08,
+            "seedPx": "566.46",
+            "live": true,
+            "sizeShrunk": false,
+            "frozen": null
+          }
+        }
+      },
+      "hash": "f0e0ea111a993c5d979ca03f6ae3923878de8f8ff96f5949d59604f043845226"
+    },
+    {
+      "observedAt": "2026-11-12T04:39:13.394309+00:00",
+      "kind": "first_observation",
+      "event": {
+        "id": 17527,
+        "type": "SMART_FRESH",
+        "coin": "NEAR",
+        "createdAt": "2026-11-12T04:39:02.879Z",
+        "occurredAt": "2026-11-12T04:39:00.364Z",
+        "payload": {
+          "side": "LONG",
+          "addPx": 3.5598537916114212,
+          "liqPx": 72.1335665824071,
+          "action": "ADDED",
+          "cohort": "GENIUS",
+          "wallet": "0xeaac3e31aa732c1e378d2bb57e262d6caf9ad1d7",
+          "entryPx": 3.53511,
+          "leverage": {
+            "type": "cross",
+            "value": 10
+          },
+          "marginUsd": 97924.11802,
+          "positionUsd": 589157.2958,
+          "allTimePnlUsd": 177198852.51614,
+          "addedMarginUsd": 24900.73700827179
+        },
+        "tags": {
+          "0xeaac3e31aa732c1e378d2bb57e262d6caf9ad1d7": [
+            "GIGA_WHALE"
+          ]
+        },
+        "perpPnl": 264397327.46452,
+        "allTimePnl": 264397327.46452,
+        "badges": {
+          "level": "genius-trader",
+          "secondary": [
+            "top-100",
+            "mega-whale"
+          ]
+        },
+        "traderCard": {
+          "badges": [
+            "genius-trader",
+            "top-100",
+            "mega-whale"
+          ],
+          "rank": 3,
+          "chips": [
+            {
+              "kind": "rank",
+              "label": "Trader Rank",
+              "value": "#3",
+              "url": "/trader/0xeaac3e31aa732c1e378d2bb57e262d6caf9ad1d7"
+            }
+          ],
+          "venue": "hyperliquid",
+          "pnl": {
+            "side": "long",
+            "entryPx": "3.53511",
+            "leverage": 10,
+            "sizeAbs": 333717.4,
+            "seedPx": "3.4593",
+            "live": true,
+            "sizeShrunk": false,
+            "frozen": null
+          }
+        }
+      },
+      "hash": "3959f5bc5c494fe4ffc32a00c459eec575c9ecc678c4cf85fa646fbd860ca730"
+    },
+    {
+      "observedAt": "2026-11-12T04:41:21.431446+00:00",
+      "kind": "first_observation",
+      "event": {
+        "id": 17528,
+        "type": "SMART_FRESH",
+        "coin": "BTC",
+        "createdAt": "2026-11-12T04:41:03.625Z",
+        "occurredAt": "2026-11-12T04:41:00.267Z",
+        "payload": {
+          "side": "SHORT",
+          "addPx": 73660.13469185073,
+          "liqPx": null,
+          "action": "ADDED",
+          "cohort": "SMART",
+          "wallet": "0x656479bffc5ae168ff19c11c6ed6b8b2d90261fc",
+          "entryPx": 72220.5,
+          "leverage": {
+            "type": "cross",
+            "value": 20
+          },
+          "marginUsd": 690976.855155,
+          "positionUsd": 16861857.17137,
+          "allTimePnlUsd": 325349824.637,
+          "addedMarginUsd": 40373.24778577868
+        },
+        "tags": {
+          "0x656479bffc5ae168ff19c11c6ed6b8b2d90261fc": [
+            "GIGA_WHALE"
+          ]
+        },
+        "perpPnl": 141634874.498152,
+        "allTimePnl": 141634874.498152,
+        "badges": {
+          "level": "smart-trader",
+          "secondary": [
+            "top-100",
+            "fund",
+            "market-maker"
+          ]
+        },
+        "traderCard": {
+          "badges": [
+            "smart-trader",
+            "top-100",
+            "fund",
+            "market-maker"
+          ],
+          "rank": 4,
+          "chips": [
+            {
+              "kind": "rank",
+              "label": "Trader Rank",
+              "value": "#4",
+              "url": "/trader/0x656479bffc5ae168ff19c11c6ed6b8b2d90261fc"
+            }
+          ],
+          "venue": "hyperliquid",
+          "pnl": {
+            "side": "short",
+            "entryPx": "72220.5",
+            "leverage": 20,
+            "sizeAbs": 176.63942,
+            "seedPx": "71313",
+            "live": true,
+            "sizeShrunk": false,
+            "frozen": null
+          }
+        }
+      },
+      "hash": "0ff72cd26104c334f10c3fc7edf1e0bca4b1aa69d3a0c83ff5f503cb8c659f86"
+    },
+    {
+      "observedAt": "2026-11-12T04:43:30.198863+00:00",
+      "kind": "first_observation",
+      "event": {
+        "id": 17530,
+        "type": "POSITION_CLOSED",
+        "coin": "SOL",
+        "createdAt": "2026-11-12T04:43:04.865Z",
+        "occurredAt": "2026-11-12T04:43:00.753Z",
+        "payload": {
+          "side": "LONG",
+          "action": "REDUCED",
+          "cohort": "GENIUS",
+          "exitPx": 82.9211,
+          "pnlUsd": 273958.82610099233,
+          "wallet": "0x7d12ca15c85f0291631cfb9ab4ddc74f58322c18",
+          "entryPx": 104.8079,
+          "leftUsd": 301350.2111008439,
+          "leverage": {
+            "type": "cross",
+            "value": 20
+          },
+          "pnlExact": false,
+          "closedPct": 72.1,
+          "closedUsd": 606869.7548943328,
+          "marginUsd": 73632.62692,
+          "allTimePnlUsd": 29281876.231932
+        },
+        "tags": {
+          "0x7d12ca15c85f0291631cfb9ab4ddc74f58322c18": [
+            "WHALE"
+          ]
+        },
+        "perpPnl": 22814658.765046,
+        "allTimePnl": 22814658.765046,
+        "badges": {
+          "level": "genius-trader",
+          "secondary": [
+            "top-1000",
+            "mega-whale"
+          ]
+        },
+        "traderCard": {
+          "badges": [
+            "genius-trader",
+            "top-1000",
+            "mega-whale"
+          ],
+          "rank": 175,
+          "chips": [
+            {
+              "kind": "rank",
+              "label": "Trader Rank",
+              "value": "#175",
+              "url": "/trader/0x7d12ca15c85f0291631cfb9ab4ddc74f58322c18"
+            }
+          ],
+          "venue": "hyperliquid",
+          "pnl": {
+            "side": "long",
+            "entryPx": "104.8079",
+            "leverage": 20,
+            "sizeAbs": 3640.8,
+            "seedPx": "85.4093",
+            "live": true,
+            "sizeShrunk": false,
+            "frozen": null
+          }
+        }
+      },
+      "hash": "0af60cb7423ca7ef9cabc1f50db94bbc70f914c914031d7d24ee24569fc7214a"
+    },
+    {
+      "observedAt": "2026-11-12T05:02:25.490172+00:00",
+      "kind": "first_observation",
+      "event": {
+        "id": 17534,
+        "type": "SMART_FRESH",
+        "coin": "XMR",
+        "createdAt": "2026-11-12T05:02:03.506Z",
+        "occurredAt": "2026-11-12T05:02:00.203Z",
+        "payload": {
+          "side": "SHORT",
+          "addPx": 571.0507855435588,
+          "liqPx": null,
+          "action": "ADDED",
+          "cohort": "GENIUS",
+          "wallet": "0x3c9ef394edc178e827f772fc41a1b064e1c0224d",
+          "entryPx": 594.083,
+          "leverage": {
+            "type": "cross",
+            "value": 5
+          },
+          "marginUsd": 72927.22536,
+          "positionUsd": 727798.9087,
+          "allTimePnlUsd": 24757327.491649,
+          "addedMarginUsd": 58532.438491
+        },
+        "tags": {
+          "0x3c9ef394edc178e827f772fc41a1b064e1c0224d": [
+            "VETERAN",
+            "WHALE"
+          ]
+        },
+        "perpPnl": 23703442.696522,
+        "allTimePnl": 23703442.696522,
+        "badges": {
+          "level": "genius-trader",
+          "secondary": [
+            "top-1000",
+            "whale",
+            "veteran"
+          ]
+        },
+        "traderCard": {
+          "badges": [
+            "genius-trader",
+            "top-1000",
+            "whale",
+            "veteran"
+          ],
+          "rank": 145,
+          "chips": [
+            {
+              "kind": "rank",
+              "label": "Trader Rank",
+              "value": "#145",
+              "url": "/trader/0x3c9ef394edc178e827f772fc41a1b064e1c0224d"
+            }
+          ],
+          "venue": "hyperliquid",
+          "pnl": {
+            "side": "short",
+            "entryPx": "594.083",
+            "leverage": 5,
+            "sizeAbs": 757.2,
+            "seedPx": "551.792",
+            "live": true,
+            "sizeShrunk": false,
+            "frozen": null
+          }
+        }
+      },
+      "hash": "1ee1ad2dba8f2145fe12cf2b7b68d1f701c51ddbad4942374b5ceb93ca13e385"
+    },
+    {
+      "observedAt": "2026-11-12T05:07:37.184518+00:00",
+      "kind": "first_observation",
+      "event": {
+        "id": 17535,
+        "type": "SMART_FRESH",
+        "coin": "XMR",
+        "createdAt": "2026-11-12T05:07:03.582Z",
+        "occurredAt": "2026-11-12T05:07:00.334Z",
+        "payload": {
+          "side": "SHORT",
+          "addPx": 570.1302338193769,
+          "liqPx": null,
+          "action": "ADDED",
+          "cohort": "GENIUS",
+          "wallet": "0x4623f25b919105765874381af97721bc40fdc06e",
+          "entryPx": 563.401,
+          "leverage": {
+            "type": "cross",
+            "value": 5
+          },
+          "marginUsd": 47899.404934,
+          "positionUsd": 415066.68883,
+          "allTimePnlUsd": 41611714.87447,
+          "addedMarginUsd": 36106.349719
+        },
+        "tags": {
+          "0x4623f25b919105765874381af97721bc40fdc06e": [
+            "VETERAN",
+            "WHALE"
+          ]
+        },
+        "perpPnl": 47107667.56664,
+        "allTimePnl": 47107667.56664,
+        "badges": {
+          "level": "genius-trader",
+          "secondary": [
+            "top-100",
+            "mega-whale",
+            "veteran"
+          ]
+        },
+        "traderCard": {
+          "badges": [
+            "genius-trader",
+            "top-100",
+            "mega-whale",
+            "veteran"
+          ],
+          "rank": 46,
+          "chips": [
+            {
+              "kind": "rank",
+              "label": "Trader Rank",
+              "value": "#46",
+              "url": "/trader/0x4623f25b919105765874381af97721bc40fdc06e"
+            }
+          ],
+          "venue": "hyperliquid",
+          "pnl": {
+            "side": "short",
+            "entryPx": "563.401",
+            "leverage": 5,
+            "sizeAbs": 851.712,
+            "seedPx": "562.17",
+            "live": true,
+            "sizeShrunk": false,
+            "frozen": null
+          }
+        }
+      },
+      "hash": "05782adc37a7a61d919e42f287ac47371ea2eab7e6b6162bedc4130a6e010086"
+    },
+    {
+      "observedAt": "2026-11-12T05:14:31.421049+00:00",
+      "kind": "first_observation",
+      "event": {
+        "id": 17536,
+        "type": "SMART_FRESH",
+        "coin": "BTC",
+        "createdAt": "2026-11-12T05:14:03.441Z",
+        "occurredAt": "2026-11-12T05:14:00.447Z",
+        "payload": {
+          "side": "SHORT",
+          "addPx": 73617.53191489364,
+          "liqPx": null,
+          "action": "ADDED",
+          "cohort": "GENIUS",
+          "wallet": "0x628f303158bb4dc2f6e31acb6e0a1fb464626a08",
+          "entryPx": 75259,
+          "leverage": {
+            "type": "cross",
+            "value": 20
+          },
+          "marginUsd": 59148.77501,
+          "positionUsd": 1882843.0199,
+          "allTimePnlUsd": 10909355.418015,
+          "addedMarginUsd": 18853.1675
+        },
+        "tags": {
+          "0x628f303158bb4dc2f6e31acb6e0a1fb464626a08": [
+            "GIGA_WHALE"
+          ]
+        },
+        "perpPnl": 26118501.990246,
+        "allTimePnl": 26118501.990246,
+        "badges": {
+          "level": "genius-trader",
+          "secondary": [
+            "top-1000",
+            "mega-whale"
+          ]
+        },
+        "traderCard": {
+          "badges": [
+            "genius-trader",
+            "top-1000",
+            "mega-whale"
+          ],
+          "rank": 168,
+          "chips": [
+            {
+              "kind": "rank",
+              "label": "Trader Rank",
+              "value": "#168",
+              "url": "/trader/0x628f303158bb4dc2f6e31acb6e0a1fb464626a08"
+            }
+          ],
+          "venue": "hyperliquid",
+          "pnl": {
+            "side": "short",
+            "entryPx": "75259",
+            "leverage": 20,
+            "sizeAbs": 31.9167,
+            "seedPx": "71040.7",
+            "live": true,
+            "sizeShrunk": false,
+            "frozen": null
+          }
+        }
+      },
+      "hash": "90404fd83bec97b9b763ab6f8a86a8ad529191a43790d63341c545b79162e0a0"
+    },
+    {
+      "observedAt": "2026-11-12T05:16:15.360172+00:00",
+      "kind": "first_observation",
+      "event": {
+        "id": 17538,
+        "type": "SMART_FRESH",
+        "coin": "BTC",
+        "createdAt": "2026-11-12T05:16:03.427Z",
+        "occurredAt": "2026-11-12T05:16:00.299Z",
+        "payload": {
+          "side": "LONG",
+          "addPx": 73539.97481497393,
+          "liqPx": 56680.48600731821,
+          "action": "ADDED",
+          "cohort": "GENIUS",
+          "wallet": "0xb4b09d41bd6bbcd5769d92251cfe04e2d4bc655d",
+          "entryPx": 71279.8,
+          "leverage": {
+            "type": "isolated",
+            "value": 4
+          },
+          "marginUsd": 1910863.519149,
+          "positionUsd": 3438847.133,
+          "allTimePnlUsd": 2306244.460618,
+          "addedMarginUsd": 298208.73652474827
+        },
+        "perpPnl": 3002776.358142,
+        "allTimePnl": 3002776.358142,
+        "badges": {
+          "level": "genius-trader",
+          "secondary": [
+            "top-1000",
+            "whale"
+          ]
+        },
+        "traderCard": {
+          "badges": [
+            "genius-trader",
+            "top-1000",
+            "whale"
+          ],
+          "rank": 611,
+          "chips": [
+            {
+              "kind": "rank",
+              "label": "Trader Rank",
+              "value": "#611",
+              "url": "/trader/0xb4b09d41bd6bbcd5769d92251cfe04e2d4bc655d"
+            }
+          ],
+          "venue": "hyperliquid",
+          "pnl": {
+            "side": "long",
+            "entryPx": "71279.8",
+            "leverage": 4,
+            "sizeAbs": 126.64981,
+            "seedPx": "74608",
+            "live": true,
+            "sizeShrunk": false,
+            "frozen": null
+          }
+        }
+      },
+      "hash": "ac8088d66cefaecf4885c6e59db46bfcc5ac35717014b2769d864f71a4a4ed6f"
+    },
+    {
+      "observedAt": "2026-11-12T05:16:15.360308+00:00",
+      "kind": "first_observation",
+      "event": {
+        "id": 17537,
+        "type": "SMART_FRESH",
+        "coin": "ZEC",
+        "createdAt": "2026-11-12T05:16:03.401Z",
+        "occurredAt": "2026-11-12T05:16:00.299Z",
+        "payload": {
+          "side": "SHORT",
+          "addPx": 977.5044652646164,
+          "liqPx": null,
+          "action": "ADDED",
+          "cohort": "SMART",
+          "wallet": "0x5a499efccd4e98778b32cc5cf20c97d46e0cc96d",
+          "entryPx": 962.453,
+          "leverage": {
+            "type": "cross",
+            "value": 10
+          },
+          "marginUsd": 13521.61299,
+          "positionUsd": 312481.5269,
+          "allTimePnlUsd": 26380278.593996,
+          "addedMarginUsd": 23458.9661
+        },
+        "tags": {
+          "0x5a499efccd4e98778b32cc5cf20c97d46e0cc96d": [
+            "VETERAN",
+            "WHALE"
+          ]
+        },
+        "perpPnl": 42854752.121042,
+        "allTimePnl": 42854752.121042,
+        "badges": {
+          "level": "smart-trader",
+          "secondary": [
+            "top-100",
+            "whale",
+            "veteran"
+          ]
+        },
+        "traderCard": {
+          "badges": [
+            "smart-trader",
+            "top-100",
+            "whale",
+            "veteran"
+          ],
+          "rank": 91,
+          "chips": [
+            {
+              "kind": "rank",
+              "label": "Trader Rank",
+              "value": "#91",
+              "url": "/trader/0x5a499efccd4e98778b32cc5cf20c97d46e0cc96d"
+            }
+          ],
+          "venue": "hyperliquid",
+          "pnl": {
+            "side": "short",
+            "entryPx": "962.453",
+            "leverage": 10,
+            "sizeAbs": 160.29,
+            "seedPx": "966.3",
+            "live": true,
+            "sizeShrunk": false,
+            "frozen": null
+          }
+        }
+      },
+      "hash": "56687103e03e1874f36bca591953c82cb00ae54eec3554697f45929d206ca5e2"
+    }
+  ],
+  "originalActionCounts": {
+    "ADDED": 10,
+    "REDUCED": 1
+  },
+  "originalTierCounts": {
+    "SMART": 3,
+    "GENIUS": 8
+  },
+  "revisionRows": 208,
+  "publicationLagSeconds": {
+    "n": 11,
+    "min": 10.515309,
+    "median": 21.984172,
+    "p90NearestRank": 33.602518,
+    "max": 38.649372
+  },
+  "sourceExitJoins": [
+    {
+      "original": {
+        "observedAt": "2026-11-12T04:43:30.198863+00:00",
+        "kind": "first_observation",
+        "event": {
+          "id": 17530,
+          "type": "POSITION_CLOSED",
+          "coin": "SOL",
+          "createdAt": "2026-11-12T04:43:04.865Z",
+          "occurredAt": "2026-11-12T04:43:00.753Z",
+          "payload": {
+            "side": "LONG",
+            "action": "REDUCED",
+            "cohort": "GENIUS",
+            "exitPx": 82.9211,
+            "pnlUsd": 273958.82610099233,
+            "wallet": "0x7d12ca15c85f0291631cfb9ab4ddc74f58322c18",
+            "entryPx": 104.8079,
+            "leftUsd": 301350.2111008439,
+            "leverage": {
+              "type": "cross",
+              "value": 20
+            },
+            "pnlExact": false,
+            "closedPct": 72.1,
+            "closedUsd": 606869.7548943328,
+            "marginUsd": 73632.62692,
+            "allTimePnlUsd": 29281876.231932
+          },
+          "tags": {
+            "0x7d12ca15c85f0291631cfb9ab4ddc74f58322c18": [
+              "WHALE"
+            ]
+          },
+          "perpPnl": 22814658.765046,
+          "allTimePnl": 22814658.765046,
+          "badges": {
+            "level": "genius-trader",
+            "secondary": [
+              "top-1000",
+              "mega-whale"
+            ]
+          },
+          "traderCard": {
+            "badges": [
+              "genius-trader",
+              "top-1000",
+              "mega-whale"
+            ],
+            "rank": 175,
+            "chips": [
+              {
+                "kind": "rank",
+                "label": "Trader Rank",
+                "value": "#175",
+                "url": "/trader/0x7d12ca15c85f0291631cfb9ab4ddc74f58322c18"
+              }
+            ],
+            "venue": "hyperliquid",
+            "pnl": {
+              "side": "long",
+              "entryPx": "104.8079",
+              "leverage": 20,
+              "sizeAbs": 3640.8,
+              "seedPx": "85.4093",
+              "live": true,
+              "sizeShrunk": false,
+              "frozen": null
+            }
+          }
+        },
+        "hash": "0af60cb7423ca7ef9cabc1f50db94bbc70f914c914031d7d24ee24569fc7214a"
+      },
+      "eligibleOpeningIds": [],
+      "savedDecisions": [
+        {
+          "eventId": 17530,
+          "action": "REDUCED",
+          "wallet": "0x7d12ca15c85f0291631cfb9ab4ddc74f58322c18",
+          "market": "SOL",
+          "side": "LONG",
+          "publication": "2026-11-12T04:43:04.865Z",
+          "observedAt": "2026-11-12T04:43:30.198982+00:00",
+          "sourceVenue": "hyperliquid",
+          "paperQuoteVenue": "hyperliquid",
+          "exitDiscoveryAt": "2026-11-12T04:43:30.921173+00:00",
+          "sourcePublicationAt": "2026-11-12T04:43:04.865Z",
+          "lateDiscovery": false,
+          "exitPolicy": "Current observed book; never backdated to source close",
+          "status": "skipped",
+          "reason": "No prospectively copied opening"
+        }
+      ]
+    }
+  ],
+  "newGeniusLegs": [],
+  "manifest": {
+    "protocol": "immutable-checkpoint-v1",
+    "observedGeneration": "2026-11-12T05:16:52.665899+00:00",
+    "stateHash": "8070eebf8fb6fb3021af3dda6b86d8d95bf6ac09a43908d59f9be7f01e557e21",
+    "dashboardHash": "10932913c5f2a66bc6e042c194421248f2c9b2a220713f05bcaba8f8dfe999aa",
+    "rawPrefixes": {
+      "stupid-money-lab/data/2026-10-31/events.jsonl": 2703552,
+      "stupid-money-lab/data/2026-11-01/events.jsonl": 2246605,
+      "stupid-money-lab/data/2026-11-02/events.jsonl": 1847001,
+      "stupid-money-lab/data/2026-11-03/events.jsonl": 984181,
+      "stupid-money-lab/data/2026-11-04/events.jsonl": 2718758,
+      "stupid-money-lab/data/2026-11-05/events.jsonl": 5398389,
+      "stupid-money-lab/data/2026-11-05/sessions/42121487409-1/events.jsonl": 22602,
+      "stupid-money-lab/data/2026-11-05/sessions/42122004257-1/events.jsonl": 313268,
+      "stupid-money-lab/data/2026-11-05/sessions/42124534832-1/events.jsonl": 225918,
+      "stupid-money-lab/data/2026-11-06/sessions/42124534832-1/events.jsonl": 216597,
+      "stupid-money-lab/data/2026-11-06/sessions/42136128495-1/events.jsonl": 439349,
+      "stupid-money-lab/data/2026-11-06/sessions/42142637512-1/events.jsonl": 361737,
+      "stupid-money-lab/data/2026-11-06/sessions/42148663335-1/events.jsonl": 45727,
+      "stupid-money-lab/data/2026-11-06/sessions/42149288224-1/events.jsonl": 25876,
+      "stupid-money-lab/data/2026-11-06/sessions/42149680356-1/events.jsonl": 316701,
+      "stupid-money-lab/data/2026-11-06/sessions/42155427386-1/events.jsonl": 67394,
+      "stupid-money-lab/data/2026-11-06/sessions/42156160980-1/events.jsonl": 22214,
+      "stupid-money-lab/data/2026-11-06/sessions/42156486447-1/events.jsonl": 393015,
+      "stupid-money-lab/data/2026-11-06/sessions/42161961189-1/events.jsonl": 308874,
+      "stupid-money-lab/data/2026-11-06/sessions/42167416268-1/events.jsonl": 239540,
+      "stupid-money-lab/data/2026-11-06/sessions/42172862907-1/events.jsonl": 215544,
+      "stupid-money-lab/data/2026-11-06/sessions/42178700194-1/events.jsonl": 96840,
+      "stupid-money-lab/data/2026-11-06/sessions/42180556093-1/events.jsonl": 305771,
+      "stupid-money-lab/data/2026-11-06/sessions/42186774668-1/events.jsonl": 187851,
+      "stupid-money-lab/data/2026-11-06/sessions/42193494351-1/events.jsonl": 128308,
+      "stupid-money-lab/data/2026-11-06/sessions/42201386578-1/events.jsonl": 43619,
+      "stupid-money-lab/data/2026-11-06/sessions/42201668015-1/events.jsonl": 21856,
+      "stupid-money-lab/data/2026-11-06/sessions/42202332735-1/events.jsonl": 155858,
+      "stupid-money-lab/data/2026-11-06/sessions/42209335703-1/events.jsonl": 217020,
+      "stupid-money-lab/data/2026-11-06/sessions/42216109093-1/events.jsonl": 286274,
+      "stupid-money-lab/data/2026-11-06/sessions/42223227835-1/events.jsonl": 411177,
+      "stupid-money-lab/data/2026-11-06/sessions/42230725074-1/events.jsonl": 115578,
+      "stupid-money-lab/data/2026-11-06/sessions/42233019683-1/events.jsonl": 22426,
+      "stupid-money-lab/data/2026-11-06/sessions/42233605483-1/events.jsonl": 30930,
+      "stupid-money-lab/data/2026-11-06/sessions/42234360317-1/events.jsonl": 814505,
+      "stupid-money-lab/data/2026-11-06/sessions/42242790194-1/events.jsonl": 50541,
+      "stupid-money-lab/data/2026-11-06/sessions/42243769436-1/events.jsonl": 21827,
+      "stupid-money-lab/data/2026-11-06/sessions/42244637275-1/events.jsonl": 511535,
+      "stupid-money-lab/data/2026-11-06/sessions/42253245172-1/events.jsonl": 346462,
+      "stupid-money-lab/data/2026-11-06/sessions/42261753708-1/events.jsonl": 235682,
+      "stupid-money-lab/data/2026-11-06/sessions/42270095715-1/events.jsonl": 43472,
+      "stupid-money-lab/data/2026-11-06/sessions/42278358232-1/events.jsonl": 163859,
+      "stupid-money-lab/data/2026-11-06/sessions/42286428657-1/events.jsonl": 205019,
+      "stupid-money-lab/data/2026-11-06/sessions/42294224600-1/events.jsonl": 107547,
+      "stupid-money-lab/data/2026-11-06/sessions/42301720462-1/events.jsonl": 150996,
+      "stupid-money-lab/data/2026-11-06/sessions/42308665149-1/events.jsonl": 84267,
+      "stupid-money-lab/data/2026-11-07/sessions/42314885094-1/events.jsonl": 182619,
+      "stupid-money-lab/data/2026-11-07/sessions/42320570297-1/events.jsonl": 110516,
+      "stupid-money-lab/data/2026-11-07/sessions/42325691805-1/events.jsonl": 128913,
+      "stupid-money-lab/data/2026-11-07/sessions/42330365166-1/events.jsonl": 126303,
+      "stupid-money-lab/data/2026-11-07/sessions/42334704726-1/events.jsonl": 123410,
+      "stupid-money-lab/data/2026-11-07/sessions/42338779869-1/events.jsonl": 121766,
+      "stupid-money-lab/data/2026-11-07/sessions/42342717269-1/events.jsonl": 108788,
+      "stupid-money-lab/data/2026-11-07/sessions/42346650807-1/events.jsonl": 54005,
+      "stupid-money-lab/data/2026-11-07/sessions/42350609223-1/events.jsonl": 59461,
+      "stupid-money-lab/data/2026-11-07/sessions/42354449951-1/events.jsonl": 62781,
+      "stupid-money-lab/data/2026-11-07/sessions/42358368171-1/events.jsonl": 75187,
+      "stupid-money-lab/data/2026-11-07/sessions/42362251166-1/events.jsonl": 44512,
+      "stupid-money-lab/data/2026-11-07/sessions/42366147028-1/events.jsonl": 47306,
+      "stupid-money-lab/data/2026-11-07/sessions/42370066531-1/events.jsonl": 135728,
+      "stupid-money-lab/data/2026-11-07/sessions/42374119464-1/events.jsonl": 147372,
+      "stupid-money-lab/data/2026-11-07/sessions/42378298027-1/events.jsonl": 213479,
+      "stupid-money-lab/data/2026-11-07/sessions/42382599197-1/events.jsonl": 113854,
+      "stupid-money-lab/data/2026-11-07/sessions/42387027057-1/events.jsonl": 237556,
+      "stupid-money-lab/data/2026-11-07/sessions/42391550391-1/events.jsonl": 137779,
+      "stupid-money-lab/data/2026-11-07/sessions/42396184556-1/events.jsonl": 94375,
+      "stupid-money-lab/data/2026-11-07/sessions/42400766009-1/events.jsonl": 70040,
+      "stupid-money-lab/data/2026-11-07/sessions/42405303120-1/events.jsonl": 127995,
+      "stupid-money-lab/data/2026-11-07/sessions/42409772615-1/events.jsonl": 148917,
+      "stupid-money-lab/data/2026-11-07/sessions/42414205760-1/events.jsonl": 121465,
+      "stupid-money-lab/data/2026-11-07/sessions/42418591952-1/events.jsonl": 99419,
+      "stupid-money-lab/data/2026-11-07/sessions/42422938389-1/events.jsonl": 105271,
+      "stupid-money-lab/data/2026-11-07/sessions/42427151742-1/events.jsonl": 1113,
+      "stupid-money-lab/data/2026-11-08/sessions/42427151742-1/events.jsonl": 206025,
+      "stupid-money-lab/data/2026-11-08/sessions/42431343605-1/events.jsonl": 112426,
+      "stupid-money-lab/data/2026-11-08/sessions/42435409564-1/events.jsonl": 204857,
+      "stupid-money-lab/data/2026-11-08/sessions/42439350474-1/events.jsonl": 171221,
+      "stupid-money-lab/data/2026-11-08/sessions/42443190428-1/events.jsonl": 182551,
+      "stupid-money-lab/data/2026-11-08/sessions/42446946091-1/events.jsonl": 223671,
+      "stupid-money-lab/data/2026-11-08/sessions/42450599053-1/events.jsonl": 203422,
+      "stupid-money-lab/data/2026-11-08/sessions/42454228796-1/events.jsonl": 168973,
+      "stupid-money-lab/data/2026-11-08/sessions/42457962342-1/events.jsonl": 100583,
+      "stupid-money-lab/data/2026-11-08/sessions/42461731629-1/events.jsonl": 93490,
+      "stupid-money-lab/data/2026-11-08/sessions/42464839808-1/events.jsonl": 173045,
+      "stupid-money-lab/data/2026-11-08/sessions/42469540623-1/events.jsonl": 152413,
+      "stupid-money-lab/data/2026-11-08/sessions/42473482429-1/events.jsonl": 210362,
+      "stupid-money-lab/data/2026-11-08/sessions/42477537626-1/events.jsonl": 351660,
+      "stupid-money-lab/data/2026-11-08/sessions/42481794231-1/events.jsonl": 363025,
+      "stupid-money-lab/data/2026-11-08/sessions/42486158998-1/events.jsonl": 197963,
+      "stupid-money-lab/data/2026-11-08/sessions/42490667610-1/events.jsonl": 269895,
+      "stupid-money-lab/data/2026-11-08/sessions/42495290746-1/events.jsonl": 269629,
+      "stupid-money-lab/data/2026-11-08/sessions/42499973147-1/events.jsonl": 182085,
+      "stupid-money-lab/data/2026-11-08/sessions/42504665014-1/events.jsonl": 338839,
+      "stupid-money-lab/data/2026-11-08/sessions/42509302271-1/events.jsonl": 327914,
+      "stupid-money-lab/data/2026-11-08/sessions/42513950101-1/events.jsonl": 194881,
+      "stupid-money-lab/data/2026-11-08/sessions/42518608394-1/events.jsonl": 302472,
+      "stupid-money-lab/data/2026-11-08/sessions/42523301143-1/events.jsonl": 634524,
+      "stupid-money-lab/data/2026-11-08/sessions/42527922531-1/events.jsonl": 715629,
+      "stupid-money-lab/data/2026-11-08/sessions/42532565782-1/events.jsonl": 705229,
+      "stupid-money-lab/data/2026-11-08/sessions/42537060372-1/events.jsonl": 175291,
+      "stupid-money-lab/data/2026-11-09/sessions/42537060372-1/events.jsonl": 525772,
+      "stupid-money-lab/data/2026-11-09/sessions/42541910894-1/events.jsonl": 496379,
+      "stupid-money-lab/data/2026-11-09/sessions/42546855911-1/events.jsonl": 340482,
+      "stupid-money-lab/data/2026-11-09/sessions/42551870551-1/events.jsonl": 354406,
+      "stupid-money-lab/data/2026-11-09/sessions/42556895920-1/events.jsonl": 316062,
+      "stupid-money-lab/data/2026-11-09/sessions/42561903413-1/events.jsonl": 203163,
+      "stupid-money-lab/data/2026-11-09/sessions/42566957241-1/events.jsonl": 405094,
+      "stupid-money-lab/data/2026-11-09/sessions/42572191060-1/events.jsonl": 577653,
+      "stupid-money-lab/data/2026-11-09/sessions/42577951125-1/events.jsonl": 713216,
+      "stupid-money-lab/data/2026-11-09/sessions/42583854762-1/events.jsonl": 558311,
+      "stupid-money-lab/data/2026-11-09/sessions/42590571398-1/events.jsonl": 474368,
+      "stupid-money-lab/data/2026-11-09/sessions/42597592963-1/events.jsonl": 333398,
+      "stupid-money-lab/data/2026-11-09/sessions/42604813603-1/events.jsonl": 460612,
+      "stupid-money-lab/data/2026-11-09/sessions/42612235207-1/events.jsonl": 414626,
+      "stupid-money-lab/data/2026-11-09/sessions/42619798300-1/events.jsonl": 550411,
+      "stupid-money-lab/data/2026-11-09/sessions/42627746677-1/events.jsonl": 508400,
+      "stupid-money-lab/data/2026-11-09/sessions/42636487769-1/events.jsonl": 701016,
+      "stupid-money-lab/data/2026-11-09/sessions/42645768620-1/events.jsonl": 677382,
+      "stupid-money-lab/data/2026-11-09/sessions/42655128849-1/events.jsonl": 660602,
+      "stupid-money-lab/data/2026-11-09/sessions/42664223523-1/events.jsonl": 458721,
+      "stupid-money-lab/data/2026-11-09/sessions/42702612402-1/events.jsonl": 335087,
+      "stupid-money-lab/data/2026-11-09/sessions/42711316626-1/events.jsonl": 244135,
+      "stupid-money-lab/data/2026-11-09/sessions/42719343725-1/events.jsonl": 241550,
+      "stupid-money-lab/data/2026-11-10/sessions/42719343725-1/events.jsonl": 127018,
+      "stupid-money-lab/data/2026-11-10/sessions/42726666894-1/events.jsonl": 245151,
+      "stupid-money-lab/data/2026-11-10/sessions/42733686309-1/events.jsonl": 99385,
+      "stupid-money-lab/data/2026-11-10/sessions/42740227568-1/events.jsonl": 323942,
+      "stupid-money-lab/data/2026-11-10/sessions/42746531814-1/events.jsonl": 319157,
+      "stupid-money-lab/data/2026-11-10/sessions/42752559468-1/events.jsonl": 179825,
+      "stupid-money-lab/data/2026-11-10/sessions/42758438405-1/events.jsonl": 221810,
+      "stupid-money-lab/data/2026-11-10/sessions/42764226264-1/events.jsonl": 221889,
+      "stupid-money-lab/data/2026-11-10/sessions/42770273947-1/events.jsonl": 284773,
+      "stupid-money-lab/data/2026-11-10/sessions/42776602622-1/events.jsonl": 293410,
+      "stupid-money-lab/data/2026-11-10/sessions/42783510439-1/events.jsonl": 205393,
+      "stupid-money-lab/data/2026-11-10/sessions/42791015904-1/events.jsonl": 378649,
+      "stupid-money-lab/data/2026-11-10/sessions/42798832144-1/events.jsonl": 380618,
+      "stupid-money-lab/data/2026-11-10/sessions/42806560801-1/events.jsonl": 214081,
+      "stupid-money-lab/data/2026-11-10/sessions/42814202798-1/events.jsonl": 349309,
+      "stupid-money-lab/data/2026-11-10/sessions/42822191638-1/events.jsonl": 584548,
+      "stupid-money-lab/data/2026-11-10/sessions/42830825710-1/events.jsonl": 714843,
+      "stupid-money-lab/data/2026-11-10/sessions/42840229385-1/events.jsonl": 837942,
+      "stupid-money-lab/data/2026-11-10/sessions/42849915619-1/events.jsonl": 801150,
+      "stupid-money-lab/data/2026-11-10/sessions/42859244216-1/events.jsonl": 774661,
+      "stupid-money-lab/data/2026-11-10/sessions/42868885584-1/events.jsonl": 583852,
+      "stupid-money-lab/data/2026-11-10/sessions/42878363804-1/events.jsonl": 387032,
+      "stupid-money-lab/data/2026-11-10/sessions/42887663387-1/events.jsonl": 461247,
+      "stupid-money-lab/data/2026-11-10/sessions/42896927915-1/events.jsonl": 579076,
+      "stupid-money-lab/data/2026-11-10/sessions/42905938593-1/events.jsonl": 447803,
+      "stupid-money-lab/data/2026-11-10/sessions/42914721731-1/events.jsonl": 263962,
+      "stupid-money-lab/data/2026-11-10/sessions/42922908966-1/events.jsonl": 186170,
+      "stupid-money-lab/data/2026-11-11/sessions/42922908966-1/events.jsonl": 256909,
+      "stupid-money-lab/data/2026-11-11/sessions/42930310040-1/events.jsonl": 452854,
+      "stupid-money-lab/data/2026-11-11/sessions/42937428040-1/events.jsonl": 334456,
+      "stupid-money-lab/data/2026-11-11/sessions/42944052442-1/events.jsonl": 332309,
+      "stupid-money-lab/data/2026-11-11/sessions/42950351643-1/events.jsonl": 430045,
+      "stupid-money-lab/data/2026-11-11/sessions/42956421737-1/events.jsonl": 223823,
+      "stupid-money-lab/data/2026-11-11/sessions/42962452261-1/events.jsonl": 128974,
+      "stupid-money-lab/data/2026-11-11/sessions/42968519426-1/events.jsonl": 240797,
+      "stupid-money-lab/data/2026-11-11/sessions/42974893370-1/events.jsonl": 343766,
+      "stupid-money-lab/data/2026-11-11/sessions/42981522696-1/events.jsonl": 438511,
+      "stupid-money-lab/data/2026-11-11/sessions/42988643299-1/events.jsonl": 342681,
+      "stupid-money-lab/data/2026-11-11/sessions/42996270006-1/events.jsonl": 293272,
+      "stupid-money-lab/data/2026-11-11/sessions/43004073523-1/events.jsonl": 326961,
+      "stupid-money-lab/data/2026-11-11/sessions/43011784572-1/events.jsonl": 333457,
+      "stupid-money-lab/data/2026-11-11/sessions/43019531181-1/events.jsonl": 239428,
+      "stupid-money-lab/data/2026-11-11/sessions/43027628850-1/events.jsonl": 334402,
+      "stupid-money-lab/data/2026-11-11/sessions/43036191551-1/events.jsonl": 342483,
+      "stupid-money-lab/data/2026-11-11/sessions/43045252098-1/events.jsonl": 431928,
+      "stupid-money-lab/data/2026-11-11/sessions/43054475689-1/events.jsonl": 464643,
+      "stupid-money-lab/data/2026-11-11/sessions/43063619699-1/events.jsonl": 511896,
+      "stupid-money-lab/data/2026-11-11/sessions/43072646340-1/events.jsonl": 308726,
+      "stupid-money-lab/data/2026-11-11/sessions/43081506740-1/events.jsonl": 321115,
+      "stupid-money-lab/data/2026-11-11/sessions/43090220173-1/events.jsonl": 282716,
+      "stupid-money-lab/data/2026-11-11/sessions/43090220173-2/events.jsonl": 342073,
+      "stupid-money-lab/data/2026-11-11/sessions/43110161866-1/events.jsonl": 519173,
+      "stupid-money-lab/data/2026-11-11/sessions/43117824762-1/events.jsonl": 455677,
+      "stupid-money-lab/data/2026-11-12/sessions/43117824762-1/events.jsonl": 71289,
+      "stupid-money-lab/data/2026-11-12/sessions/43124862548-1/events.jsonl": 367690,
+      "stupid-money-lab/data/2026-11-12/sessions/43131669457-1/events.jsonl": 221518,
+      "stupid-money-lab/data/2026-11-12/sessions/43138096634-1/events.jsonl": 223705,
+      "stupid-money-lab/data/2026-11-12/sessions/43144522905-1/events.jsonl": 179954,
+      "stupid-money-lab/data/2026-11-12/sessions/43150748195-1/events.jsonl": 208698,
+      "stupid-money-lab/data/2026-11-12/sessions/43156834042-1/archive-exit-audits.jsonl": 2142,
+      "stupid-money-lab/data/2026-11-12/sessions/43156834042-1/books.jsonl": 3131223,
+      "stupid-money-lab/data/2026-11-12/sessions/43156834042-1/candle-audits.jsonl": 8328,
+      "stupid-money-lab/data/2026-11-12/sessions/43156834042-1/checkpoint-publications.jsonl": 10180,
+      "stupid-money-lab/data/2026-11-12/sessions/43156834042-1/coverage-gaps.jsonl": 112,
+      "stupid-money-lab/data/2026-11-12/sessions/43156834042-1/events.jsonl": 99771,
+      "stupid-money-lab/data/2026-11-12/sessions/43156834042-1/fills.jsonl": 37224,
+      "stupid-money-lab/data/2026-11-12/sessions/43156834042-1/genius-copy.jsonl": 132510,
+      "stupid-money-lab/data/2026-11-12/sessions/43156834042-1/lifecycle-events.jsonl": 3352,
+      "stupid-money-lab/data/2026-11-12/sessions/43156834042-1/lifecycle-quotes.jsonl": 3314045,
+      "stupid-money-lab/data/2026-11-12/sessions/43156834042-1/oracle-contexts.jsonl": 4647453,
+      "stupid-money-lab/data/2026-11-12/sessions/43156834042-1/phase-timings.jsonl": 11678,
+      "stupid-money-lab/data/2026-11-12/sessions/43156834042-1/portfolio.jsonl": 197405,
+      "stupid-money-lab/data/2026-11-12/sessions/43156834042-1/quotes.jsonl": 247665,
+      "stupid-money-lab/data/2026-11-12/sessions/43156834042-1/signal-decisions.jsonl": 834,
+      "stupid-money-lab/data/2026-11-12/sessions/43156834042-1/source-checks.jsonl": 8635,
+      "stupid-money-lab/data/2026-11-12/sessions/43156834042-1/wallet-reconciliation.jsonl": 102120
+    }
+  },
+  "statePublisherStatusAtGeneration": {
+    "protocol": "immutable-checkpoint-v1",
+    "latestObserved": "2026-11-12T05:16:18.258981+00:00",
+    "latestPublished": "2026-11-12T05:16:18.258981+00:00",
+    "inflight": null,
+    "pending": null
+  },
+  "publicationJoins": [
+    {
+      "publication": {
+        "protocol": "immutable-checkpoint-v1",
+        "generation": "2026-11-12T04:46:16.573880+00:00",
+        "startedAt": "2026-11-12T04:46:17.575289+00:00",
+        "published": false,
+        "error": "Checkpoint git read-tree failed (exit 128)",
+        "endedAt": "2026-11-12T04:47:19.199180+00:00",
+        "durationSeconds": 61.62389360300001
+      },
+      "zecBooksDuring": 5,
+      "zecDuringReceipts": [
+        {
+          "bookHash": "cfb59560d8111dfe41a72b9d3315fbdc81372fd5245415b7cc81bbb89c447de7",
+          "observedAt": "2026-11-12T04:46:27.986232+00:00",
+          "quoteTime": 1794458787511
+        },
+        {
+          "bookHash": "e9e7849168f06c903cb4cbbad32800f2bb1950ced6a8ab913dabde68eb05e944",
+          "observedAt": "2026-11-12T04:46:38.931017+00:00",
+          "quoteTime": 1794458798445
+        },
+        {
+          "bookHash": "67deba45e9fa79886823a381130aecf94182c1f50006e75e9823485234dac8a5",
+          "observedAt": "2026-11-12T04:46:50.698758+00:00",
+          "quoteTime": 1794458810111
+        },
+        {
+          "bookHash": "2d947e618631908613e495e6b03727b3a5ec05c7a0c62dd4501a8f76a7d8a5ce",
+          "observedAt": "2026-11-12T04:47:02.429332+00:00",
+          "quoteTime": 1794458822096
+        },
+        {
+          "bookHash": "95969c62d97d78a35b0f2464249d355a8d91336b5942f4790cc09eebd7c35b1f",
+          "observedAt": "2026-11-12T04:47:13.380645+00:00",
+          "quoteTime": 1794458832613
+        }
+      ],
+      "sourceReadsDuring": 1,
+      "bracketBefore": {
+        "bookHash": "9d3429c51a27e8c48546320cdfae4c64a3a13752bfa93c8a95e15c1b7ae38cba",
+        "observedAt": "2026-11-12T04:46:16.401647+00:00"
+      },
+      "bracketAfter": {
+        "bookHash": "f50ab80a0d3a1f2bb926214fbbaa991bdac1e78f847e50aab0f5ce422a07b460",
+        "observedAt": "2026-11-12T04:47:25.169432+00:00"
+      },
+      "observedGenerationToPublishEndSeconds": 62.6253
+    },
+    {
+      "publication": {
+        "protocol": "immutable-checkpoint-v1",
+        "generation": "2026-11-12T04:46:51.049622+00:00",
+        "startedAt": "2026-11-12T04:47:19.199217+00:00",
+        "published": false,
+        "error": "Checkpoint git read-tree failed (exit 128)",
+        "endedAt": "2026-11-12T04:48:20.883032+00:00",
+        "durationSeconds": 61.68383174599998
+      },
+      "zecBooksDuring": 5,
+      "zecDuringReceipts": [
+        {
+          "bookHash": "f50ab80a0d3a1f2bb926214fbbaa991bdac1e78f847e50aab0f5ce422a07b460",
+          "observedAt": "2026-11-12T04:47:25.169432+00:00",
+          "quoteTime": 1794458844446
+        },
+        {
+          "bookHash": "0fb49f4bf5431f62d867d0982472986692ff909eff0721ac64f442352349f5c9",
+          "observedAt": "2026-11-12T04:47:36.811635+00:00",
+          "quoteTime": 1794458856070
+        },
+        {
+          "bookHash": "09fdc38a4508771148ab955e13f10e811ce435835c30be89c7023fcfdb070bfe",
+          "observedAt": "2026-11-12T04:47:47.805143+00:00",
+          "quoteTime": 1794458867460
+        },
+        {
+          "bookHash": "dfc7cb1c5a39d730790af8f91c6930cec3bc1a135815083f3deab2555c412433",
+          "observedAt": "2026-11-12T04:47:59.347015+00:00",
+          "quoteTime": 1794458878692
+        },
+        {
+          "bookHash": "f6c21809eed6891ae9bd67e186306fc3b20a542f641cc373309b1bb731d19831",
+          "observedAt": "2026-11-12T04:48:11.429795+00:00",
+          "quoteTime": 1794458890640
+        }
+      ],
+      "sourceReadsDuring": 2,
+      "bracketBefore": {
+        "bookHash": "95969c62d97d78a35b0f2464249d355a8d91336b5942f4790cc09eebd7c35b1f",
+        "observedAt": "2026-11-12T04:47:13.380645+00:00"
+      },
+      "bracketAfter": {
+        "bookHash": "9953f87876133de0db6b9eda0670b61a5031aafc35abf5ec7eab3f75a3ddeb96",
+        "observedAt": "2026-11-12T04:48:22.436001+00:00"
+      },
+      "observedGenerationToPublishEndSeconds": 89.83341
+    },
+    {
+      "publication": {
+        "protocol": "immutable-checkpoint-v1",
+        "generation": "2026-11-12T04:47:59.963472+00:00",
+        "startedAt": "2026-11-12T04:48:20.883068+00:00",
+        "published": false,
+        "error": "Checkpoint git read-tree failed (exit 128)",
+        "endedAt": "2026-11-12T04:49:22.559165+00:00",
+        "durationSeconds": 61.67611060500002
+      },
+      "zecBooksDuring": 6,
+      "zecDuringReceipts": [
+        {
+          "bookHash": "9953f87876133de0db6b9eda0670b61a5031aafc35abf5ec7eab3f75a3ddeb96",
+          "observedAt": "2026-11-12T04:48:22.436001+00:00",
+          "quoteTime": 1794458902011
+        },
+        {
+          "bookHash": "ab7b555dfd1b7f1c4d374f4f2ca760d8b6b19b04ea235a5ff8cd5b33ed62bc0a",
+          "observedAt": "2026-11-12T04:48:34.115379+00:00",
+          "quoteTime": 1794458913570
+        },
+        {
+          "bookHash": "f0a0c545e960e61b9fb7c3c235d1abce5ef7434d537e1110156290fba9666a01",
+          "observedAt": "2026-11-12T04:48:45.645399+00:00",
+          "quoteTime": 1794458925022
+        },
+        {
+          "bookHash": "2b60f960fdeb6cd5b51bda0d035a30add8af5a96c84a34fbd5ae3d2cb52a321c",
+          "observedAt": "2026-11-12T04:48:56.734326+00:00",
+          "quoteTime": 1794458936274
+        },
+        {
+          "bookHash": "8872f091d191760fdd6cf85bca5e9e1067aa09df6d9b090dfdea354f6893a9ac",
+          "observedAt": "2026-11-12T04:49:08.308518+00:00",
+          "quoteTime": 1794458947878
+        },
+        {
+          "bookHash": "f2f7f93ca1d57128bb35a3c990ed8e5ae2d4485833959a06e4d3cc9967ac3b50",
+          "observedAt": "2026-11-12T04:49:19.987402+00:00",
+          "quoteTime": 1794458959384
+        }
+      ],
+      "sourceReadsDuring": 2,
+      "bracketBefore": {
+        "bookHash": "f6c21809eed6891ae9bd67e186306fc3b20a542f641cc373309b1bb731d19831",
+        "observedAt": "2026-11-12T04:48:11.429795+00:00"
+      },
+      "bracketAfter": {
+        "bookHash": "65a6f9b7ccef17d9631ef05c39543e1f2b09997ba7aea025cc13fe7d7b88d417",
+        "observedAt": "2026-11-12T04:49:30.914145+00:00"
+      },
+      "observedGenerationToPublishEndSeconds": 82.595693
+    },
+    {
+      "publication": {
+        "protocol": "immutable-checkpoint-v1",
+        "generation": "2026-11-12T04:49:08.501585+00:00",
+        "startedAt": "2026-11-12T04:49:22.559194+00:00",
+        "published": false,
+        "error": "Checkpoint git read-tree failed (exit 128)",
+        "endedAt": "2026-11-12T04:50:24.282326+00:00",
+        "durationSeconds": 61.723149998
+      },
+      "zecBooksDuring": 5,
+      "zecDuringReceipts": [
+        {
+          "bookHash": "65a6f9b7ccef17d9631ef05c39543e1f2b09997ba7aea025cc13fe7d7b88d417",
+          "observedAt": "2026-11-12T04:49:30.914145+00:00",
+          "quoteTime": 1794458970183
+        },
+        {
+          "bookHash": "b682ee5c35f6a3d3097c5d9520446d7876ce1ce90df3518d8edaa729702a9bac",
+          "observedAt": "2026-11-12T04:49:42.572066+00:00",
+          "quoteTime": 1794458982152
+        },
+        {
+          "bookHash": "4f1f6208af949fbb2ef5fafd16aa14802553e39d92eea1b7fd749ff9a8447aa3",
+          "observedAt": "2026-11-12T04:49:54.224607+00:00",
+          "quoteTime": 1794458993485
+        },
+        {
+          "bookHash": "d2f529592510e0c94a2c0776f868623a29dbf3be5080ab80a1c7d6397d652cb7",
+          "observedAt": "2026-11-12T04:50:05.114054+00:00",
+          "quoteTime": 1794459004306
+        },
+        {
+          "bookHash": "a4ef02cd28beedb01b6e3fa53d6d8e8e24b37f12a2fbd99ae1a488b813ad6bac",
+          "observedAt": "2026-11-12T04:50:18.855250+00:00",
+          "quoteTime": 1794459018095
+        }
+      ],
+      "sourceReadsDuring": 2,
+      "bracketBefore": {
+        "bookHash": "f2f7f93ca1d57128bb35a3c990ed8e5ae2d4485833959a06e4d3cc9967ac3b50",
+        "observedAt": "2026-11-12T04:49:19.987402+00:00"
+      },
+      "bracketAfter": {
+        "bookHash": "50df308ceb5aadd2e70a23b11f76ed3a90361437529f4971fa1a3d1e50f61c33",
+        "observedAt": "2026-11-12T04:50:30.621507+00:00"
+      },
+      "observedGenerationToPublishEndSeconds": 75.780741
+    },
+    {
+      "publication": {
+        "protocol": "immutable-checkpoint-v1",
+        "generation": "2026-11-12T04:50:19.124919+00:00",
+        "startedAt": "2026-11-12T04:50:24.282362+00:00",
+        "published": false,
+        "error": "Checkpoint git read-tree failed (exit 128)",
+        "endedAt": "2026-11-12T04:51:25.877990+00:00",
+        "durationSeconds": 61.595644521999986
+      },
+      "zecBooksDuring": 5,
+      "zecDuringReceipts": [
+        {
+          "bookHash": "50df308ceb5aadd2e70a23b11f76ed3a90361437529f4971fa1a3d1e50f61c33",
+          "observedAt": "2026-11-12T04:50:30.621507+00:00",
+          "quoteTime": 1794459029935
+        },
+        {
+          "bookHash": "581378bcf8b5ae12f69f2f836e6f828bb4d8bbc2c11798a9f298edcf0d91f678",
+          "observedAt": "2026-11-12T04:50:41.595889+00:00",
+          "quoteTime": 1794459040835
+        },
+        {
+          "bookHash": "585069f26f688c38cfa798061b460db8dede275fbbc94fe61bd3b459d615e0cd",
+          "observedAt": "2026-11-12T04:50:53.277327+00:00",
+          "quoteTime": 1794459052771
+        },
+        {
+          "bookHash": "103f4cfcee73b8f07caf3c6bb2665f13fd1ec21679e5f2f2a5241ff0e07256c1",
+          "observedAt": "2026-11-12T04:51:05.000415+00:00",
+          "quoteTime": 1794459064654
+        },
+        {
+          "bookHash": "badc1097e37607d7f00608675b61d633b9cb7bb13b74ca253075af2df39bb194",
+          "observedAt": "2026-11-12T04:51:16.485078+00:00",
+          "quoteTime": 1794459075917
+        }
+      ],
+      "sourceReadsDuring": 1,
+      "bracketBefore": {
+        "bookHash": "a4ef02cd28beedb01b6e3fa53d6d8e8e24b37f12a2fbd99ae1a488b813ad6bac",
+        "observedAt": "2026-11-12T04:50:18.855250+00:00"
+      },
+      "bracketAfter": {
+        "bookHash": "4c83ce375bddc2481f41365ef891af0926862ff4b8ccd7c60dd677e4f3b58dbc",
+        "observedAt": "2026-11-12T04:51:28.066083+00:00"
+      },
+      "observedGenerationToPublishEndSeconds": 66.753071
+    },
+    {
+      "publication": {
+        "protocol": "immutable-checkpoint-v1",
+        "generation": "2026-11-12T04:50:53.586763+00:00",
+        "startedAt": "2026-11-12T04:51:25.878024+00:00",
+        "published": false,
+        "error": "Checkpoint git read-tree failed (exit 128)",
+        "endedAt": "2026-11-12T04:52:27.585873+00:00",
+        "durationSeconds": 61.707865982000044
+      },
+      "zecBooksDuring": 6,
+      "zecDuringReceipts": [
+        {
+          "bookHash": "4c83ce375bddc2481f41365ef891af0926862ff4b8ccd7c60dd677e4f3b58dbc",
+          "observedAt": "2026-11-12T04:51:28.066083+00:00",
+          "quoteTime": 1794459087519
+        },
+        {
+          "bookHash": "f4875230340274ff18ed06f94b937d87f206931ce28dde9baf3832feb13533a8",
+          "observedAt": "2026-11-12T04:51:39.707620+00:00",
+          "quoteTime": 1794459099284
+        },
+        {
+          "bookHash": "e1d6ee26a55bffe75b17a3b4e496840dcc8ec6e5d55df131bcd1b7c77844df61",
+          "observedAt": "2026-11-12T04:51:50.706502+00:00",
+          "quoteTime": 1794459110002
+        },
+        {
+          "bookHash": "5ad70da7c38e265b9ca037c180a89c4c7a86df17ae3989ce77d9f8baa871e8b0",
+          "observedAt": "2026-11-12T04:52:02.475669+00:00",
+          "quoteTime": 1794459122125
+        },
+        {
+          "bookHash": "83e06a1c37319df5acbffc02c77bc7e6f37e4ad7217dda6685194f934482e63b",
+          "observedAt": "2026-11-12T04:52:14.109902+00:00",
+          "quoteTime": 1794459133594
+        },
+        {
+          "bookHash": "ad29a630c4382ab333cad8fac2c5b5c4c6e94c459e7fc95663ee56112308d670",
+          "observedAt": "2026-11-12T04:52:25.162675+00:00",
+          "quoteTime": 1794459144400
+        }
+      ],
+      "sourceReadsDuring": 2,
+      "bracketBefore": {
+        "bookHash": "badc1097e37607d7f00608675b61d633b9cb7bb13b74ca253075af2df39bb194",
+        "observedAt": "2026-11-12T04:51:16.485078+00:00"
+      },
+      "bracketAfter": {
+        "bookHash": "9d8755bccc96b628cd935eb0218b7fc6477ce4c767095c0aedc8ea193e242b20",
+        "observedAt": "2026-11-12T04:52:36.561421+00:00"
+      },
+      "observedGenerationToPublishEndSeconds": 93.99911
+    },
+    {
+      "publication": {
+        "protocol": "immutable-checkpoint-v1",
+        "generation": "2026-11-12T04:52:02.711196+00:00",
+        "startedAt": "2026-11-12T04:52:27.585908+00:00",
+        "published": false,
+        "error": "Checkpoint git read-tree failed (exit 128)",
+        "endedAt": "2026-11-12T04:53:29.299532+00:00",
+        "durationSeconds": 61.71364667900002
+      },
+      "zecBooksDuring": 5,
+      "zecDuringReceipts": [
+        {
+          "bookHash": "9d8755bccc96b628cd935eb0218b7fc6477ce4c767095c0aedc8ea193e242b20",
+          "observedAt": "2026-11-12T04:52:36.561421+00:00",
+          "quoteTime": 1794459155809
+        },
+        {
+          "bookHash": "fa6a8d02ed668f58683d9ea5a59d909424faf5d8ac67dc8d9c8bb162db9632cf",
+          "observedAt": "2026-11-12T04:52:48.355638+00:00",
+          "quoteTime": 1794459167590
+        },
+        {
+          "bookHash": "2b5ce79f918a1487699815aab4b8b3af8ed6b3852881eb9b5c4e8a0f96821086",
+          "observedAt": "2026-11-12T04:52:59.337872+00:00",
+          "quoteTime": 1794459178996
+        },
+        {
+          "bookHash": "cc457d82c3b9759b0d45b17f49afa6dbfbe4c520fd36e1003bf895a132eaea4c",
+          "observedAt": "2026-11-12T04:53:11.034013+00:00",
+          "quoteTime": 1794459190403
+        },
+        {
+          "bookHash": "38da72229fe9d840f3b08315682b6468546c656bb401cca03c9197d42126ecc3",
+          "observedAt": "2026-11-12T04:53:22.709409+00:00",
+          "quoteTime": 1794459201936
+        }
+      ],
+      "sourceReadsDuring": 2,
+      "bracketBefore": {
+        "bookHash": "ad29a630c4382ab333cad8fac2c5b5c4c6e94c459e7fc95663ee56112308d670",
+        "observedAt": "2026-11-12T04:52:25.162675+00:00"
+      },
+      "bracketAfter": {
+        "bookHash": "8d98f72a54a4bc0b22c3fdf249bf4cb4551ff6d51144c897d6d2b71799c26d21",
+        "observedAt": "2026-11-12T04:53:33.709931+00:00"
+      },
+      "observedGenerationToPublishEndSeconds": 86.588336
+    },
+    {
+      "publication": {
+        "protocol": "immutable-checkpoint-v1",
+        "generation": "2026-11-12T04:53:11.330300+00:00",
+        "startedAt": "2026-11-12T04:53:29.299570+00:00",
+        "published": false,
+        "error": "Checkpoint git read-tree failed (exit 128)",
+        "endedAt": "2026-11-12T04:54:30.963858+00:00",
+        "durationSeconds": 61.66430162200004
+      },
+      "zecBooksDuring": 5,
+      "zecDuringReceipts": [
+        {
+          "bookHash": "8d98f72a54a4bc0b22c3fdf249bf4cb4551ff6d51144c897d6d2b71799c26d21",
+          "observedAt": "2026-11-12T04:53:33.709931+00:00",
+          "quoteTime": 1794459213264
+        },
+        {
+          "bookHash": "5814c4a1c5aafda16647d1dec30e61e0e5a39d7b7a6cb31d627c3b259dabb9c9",
+          "observedAt": "2026-11-12T04:53:45.795984+00:00",
+          "quoteTime": 1794459225072
+        },
+        {
+          "bookHash": "aaa2b35ebe418230c91c5dc00a445282e06163431d49af0660413233b169c621",
+          "observedAt": "2026-11-12T04:53:57.624605+00:00",
+          "quoteTime": 1794459237134
+        },
+        {
+          "bookHash": "e9912d697090102a5c750c306185ad2cae3fb8d1e96f150713509734442a56df",
+          "observedAt": "2026-11-12T04:54:08.602306+00:00",
+          "quoteTime": 1794459247952
+        },
+        {
+          "bookHash": "819fd84439aa2ff5b2aa23171c125cf00eadb8785d0fd31d807a3a2c02b6a033",
+          "observedAt": "2026-11-12T04:54:20.621361+00:00",
+          "quoteTime": 1794459260287
+        }
+      ],
+      "sourceReadsDuring": 2,
+      "bracketBefore": {
+        "bookHash": "38da72229fe9d840f3b08315682b6468546c656bb401cca03c9197d42126ecc3",
+        "observedAt": "2026-11-12T04:53:22.709409+00:00"
+      },
+      "bracketAfter": {
+        "bookHash": "a223b9e5f1a3c49f97e447b83af1b6113cee598f77e0ef0e87d07d517260690b",
+        "observedAt": "2026-11-12T04:54:32.225052+00:00"
+      },
+      "observedGenerationToPublishEndSeconds": 79.633558
+    },
+    {
+      "publication": {
+        "protocol": "immutable-checkpoint-v1",
+        "generation": "2026-11-12T04:54:20.810660+00:00",
+        "startedAt": "2026-11-12T04:54:30.963886+00:00",
+        "published": false,
+        "error": "Checkpoint git read-tree failed (exit 128)",
+        "endedAt": "2026-11-12T04:55:32.605676+00:00",
+        "durationSeconds": 61.641809201
+      },
+      "zecBooksDuring": 6,
+      "zecDuringReceipts": [
+        {
+          "bookHash": "a223b9e5f1a3c49f97e447b83af1b6113cee598f77e0ef0e87d07d517260690b",
+          "observedAt": "2026-11-12T04:54:32.225052+00:00",
+          "quoteTime": 1794459271599
+        },
+        {
+          "bookHash": "8abbfad8307d27d1a7a89ae5a2f1d0ecea3a86ae40ff166ee364dff164130131",
+          "observedAt": "2026-11-12T04:54:43.155282+00:00",
+          "quoteTime": 1794459282394
+        },
+        {
+          "bookHash": "9d2d04507a590ee842e5bbe31362443180f96243ed6f34317c369e3ec98806bc",
+          "observedAt": "2026-11-12T04:54:54.977009+00:00",
+          "quoteTime": 1794459294264
+        },
+        {
+          "bookHash": "c8ea98e8ba0cdc3d5dbd05059475f6e52040976f191be41ff128b33a8745b4b6",
+          "observedAt": "2026-11-12T04:55:06.850816+00:00",
+          "quoteTime": 1794459306198
+        },
+        {
+          "bookHash": "321c62b11e8a913cb9d2995cb9ae4e2478b8551d80db3f339316aec1be5baed9",
+          "observedAt": "2026-11-12T04:55:17.787871+00:00",
+          "quoteTime": 1794459317099
+        },
+        {
+          "bookHash": "9ab581ac364fe8e86f38e6a098dba3111dde077491a47d013c36121830413bec",
+          "observedAt": "2026-11-12T04:55:31.439766+00:00",
+          "quoteTime": 1794459330713
+        }
+      ],
+      "sourceReadsDuring": 2,
+      "bracketBefore": {
+        "bookHash": "819fd84439aa2ff5b2aa23171c125cf00eadb8785d0fd31d807a3a2c02b6a033",
+        "observedAt": "2026-11-12T04:54:20.621361+00:00"
+      },
+      "bracketAfter": {
+        "bookHash": "84a6a0e2e609dfa1628910f6212ff2313f9d298b97c84cc8edafac22124abe0a",
+        "observedAt": "2026-11-12T04:55:43.039962+00:00"
+      },
+      "observedGenerationToPublishEndSeconds": 71.795016
+    },
+    {
+      "publication": {
+        "protocol": "immutable-checkpoint-v1",
+        "generation": "2026-11-12T04:55:31.618585+00:00",
+        "startedAt": "2026-11-12T04:55:32.605715+00:00",
+        "published": false,
+        "error": "Checkpoint git read-tree failed (exit 128)",
+        "endedAt": "2026-11-12T04:56:34.303062+00:00",
+        "durationSeconds": 61.697365583999954
+      },
+      "zecBooksDuring": 5,
+      "zecDuringReceipts": [
+        {
+          "bookHash": "84a6a0e2e609dfa1628910f6212ff2313f9d298b97c84cc8edafac22124abe0a",
+          "observedAt": "2026-11-12T04:55:43.039962+00:00",
+          "quoteTime": 1794459342734
+        },
+        {
+          "bookHash": "0c916e0d1e857aeaa3aa46b4a2c5764e50635fb86315a690f01de844d2ff9b43",
+          "observedAt": "2026-11-12T04:55:54.017770+00:00",
+          "quoteTime": 1794459353583
+        },
+        {
+          "bookHash": "46743fb4979d33aead8aed19f7e5f802ace5b6b9703ef278bff0712bddd6cd24",
+          "observedAt": "2026-11-12T04:56:06.070884+00:00",
+          "quoteTime": 1794459365452
+        },
+        {
+          "bookHash": "9d154a3d4fd4db4da0685662139f0acbbe66785b1924439ee26637ef52825f4d",
+          "observedAt": "2026-11-12T04:56:17.736196+00:00",
+          "quoteTime": 1794459377339
+        },
+        {
+          "bookHash": "f42b58605484f5b8115250923ab8c3d11bd9d27acb40ca6b2e06888f2f1f4aef",
+          "observedAt": "2026-11-12T04:56:28.873941+00:00",
+          "quoteTime": 1794459388210
+        }
+      ],
+      "sourceReadsDuring": 1,
+      "bracketBefore": {
+        "bookHash": "9ab581ac364fe8e86f38e6a098dba3111dde077491a47d013c36121830413bec",
+        "observedAt": "2026-11-12T04:55:31.439766+00:00"
+      },
+      "bracketAfter": {
+        "bookHash": "4f0f4ac6e7994d94d75b66e138cb9c4714f3347b7114ec7e954199b36e7857a8",
+        "observedAt": "2026-11-12T04:56:40.366199+00:00"
+      },
+      "observedGenerationToPublishEndSeconds": 62.684477
+    },
+    {
+      "publication": {
+        "protocol": "immutable-checkpoint-v1",
+        "generation": "2026-11-12T04:56:06.276268+00:00",
+        "startedAt": "2026-11-12T04:56:34.303099+00:00",
+        "published": false,
+        "error": "Checkpoint git read-tree failed (exit 128)",
+        "endedAt": "2026-11-12T04:57:35.957351+00:00",
+        "durationSeconds": 61.654271292999965
+      },
+      "zecBooksDuring": 5,
+      "zecDuringReceipts": [
+        {
+          "bookHash": "4f0f4ac6e7994d94d75b66e138cb9c4714f3347b7114ec7e954199b36e7857a8",
+          "observedAt": "2026-11-12T04:56:40.366199+00:00",
+          "quoteTime": 1794459399726
+        },
+        {
+          "bookHash": "8da535ace4632d201b8cb07115fa269f57a932051e05c5b4836e1a3e49a6479a",
+          "observedAt": "2026-11-12T04:56:51.954565+00:00",
+          "quoteTime": 1794459411254
+        },
+        {
+          "bookHash": "7dd80c8daa9f730a34ec0ffbd2e14a1eda6bc7de809cfdb9cfca440dce550f8c",
+          "observedAt": "2026-11-12T04:57:02.933471+00:00",
+          "quoteTime": 1794459422320
+        },
+        {
+          "bookHash": "552dde57673c36ec2b5a9a0aa7e2c7cc8ec6f667a83548520502543e93fc9589",
+          "observedAt": "2026-11-12T04:57:14.420060+00:00",
+          "quoteTime": 1794459433868
+        },
+        {
+          "bookHash": "4197da750eae103fd209b623c0b1d443c977de980f13b7f2830b7296a4a2a2ac",
+          "observedAt": "2026-11-12T04:57:26.130108+00:00",
+          "quoteTime": 1794459445797
+        }
+      ],
+      "sourceReadsDuring": 2,
+      "bracketBefore": {
+        "bookHash": "f42b58605484f5b8115250923ab8c3d11bd9d27acb40ca6b2e06888f2f1f4aef",
+        "observedAt": "2026-11-12T04:56:28.873941+00:00"
+      },
+      "bracketAfter": {
+        "bookHash": "a326723adc8e556b7891c445331f4e588df5dc786c12c6c03c1b84cf1030601c",
+        "observedAt": "2026-11-12T04:57:37.116931+00:00"
+      },
+      "observedGenerationToPublishEndSeconds": 89.681083
+    },
+    {
+      "publication": {
+        "protocol": "immutable-checkpoint-v1",
+        "generation": "2026-11-12T04:57:14.741391+00:00",
+        "startedAt": "2026-11-12T04:57:35.957390+00:00",
+        "published": false,
+        "error": "Checkpoint git read-tree failed (exit 128)",
+        "endedAt": "2026-11-12T04:58:37.541914+00:00",
+        "durationSeconds": 61.584542913000064
+      },
+      "zecBooksDuring": 6,
+      "zecDuringReceipts": [
+        {
+          "bookHash": "a326723adc8e556b7891c445331f4e588df5dc786c12c6c03c1b84cf1030601c",
+          "observedAt": "2026-11-12T04:57:37.116931+00:00",
+          "quoteTime": 1794459456615
+        },
+        {
+          "bookHash": "fdebbac6c8055c7ac535b39c4eea158677e7914bfd8dd8b43025133c26a83080",
+          "observedAt": "2026-11-12T04:57:48.745889+00:00",
+          "quoteTime": 1794459468325
+        },
+        {
+          "bookHash": "fc86f3fbf3494f7799f19eb863e15046a495ba5aebfc3f86e958c11871fa7245",
+          "observedAt": "2026-11-12T04:58:00.296955+00:00",
+          "quoteTime": 1794459479805
+        },
+        {
+          "bookHash": "05d9005d066a47e8a5e7e25860b877a43423c2c2af85c32fff0fe6ff4fcbfe86",
+          "observedAt": "2026-11-12T04:58:11.282509+00:00",
+          "quoteTime": 1794459490465
+        },
+        {
+          "bookHash": "0ebacef164bd3e51396dab9a2d0b91f65d1549476346a96aeffef3935b67afb3",
+          "observedAt": "2026-11-12T04:58:23.036217+00:00",
+          "quoteTime": 1794459502627
+        },
+        {
+          "bookHash": "5717a7178a8fbb0d3a4db9da012ffc4fc256a1e6e573ccfca5841308d43522cb",
+          "observedAt": "2026-11-12T04:58:34.755920+00:00",
+          "quoteTime": 1794459514100
+        }
+      ],
+      "sourceReadsDuring": 2,
+      "bracketBefore": {
+        "bookHash": "4197da750eae103fd209b623c0b1d443c977de980f13b7f2830b7296a4a2a2ac",
+        "observedAt": "2026-11-12T04:57:26.130108+00:00"
+      },
+      "bracketAfter": {
+        "bookHash": "9eaea2769412bad5a14a60ab6c3b7f71f5b451d9a29a1779060b1e1bc8767f95",
+        "observedAt": "2026-11-12T04:58:45.833797+00:00"
+      },
+      "observedGenerationToPublishEndSeconds": 82.800523
+    },
+    {
+      "publication": {
+        "protocol": "immutable-checkpoint-v1",
+        "generation": "2026-11-12T04:58:23.353445+00:00",
+        "startedAt": "2026-11-12T04:58:37.541955+00:00",
+        "published": false,
+        "error": "Checkpoint git read-tree failed (exit 128)",
+        "endedAt": "2026-11-12T04:59:39.180672+00:00",
+        "durationSeconds": 61.638735913999994
+      },
+      "zecBooksDuring": 5,
+      "zecDuringReceipts": [
+        {
+          "bookHash": "9eaea2769412bad5a14a60ab6c3b7f71f5b451d9a29a1779060b1e1bc8767f95",
+          "observedAt": "2026-11-12T04:58:45.833797+00:00",
+          "quoteTime": 1794459525414
+        },
+        {
+          "bookHash": "caa7b69026c163844a8fb876eacb38b9d3dcebbaf92a93c376182070bb396735",
+          "observedAt": "2026-11-12T04:58:57.553754+00:00",
+          "quoteTime": 1794459536767
+        },
+        {
+          "bookHash": "e016df6b487a4f5353c6d263540a8a8d4604191656141cd5cf94b8df584849e0",
+          "observedAt": "2026-11-12T04:59:09.267664+00:00",
+          "quoteTime": 1794459548698
+        },
+        {
+          "bookHash": "2d48aa0b0f3f6a90c62647e6e486be7f32fe3649dcee4d987772948f50709f8a",
+          "observedAt": "2026-11-12T04:59:20.203278+00:00",
+          "quoteTime": 1794459559511
+        },
+        {
+          "bookHash": "d93bbd0267ebfe3379be394f6e85bb5bc99a07a3105040d6e78598160a504b60",
+          "observedAt": "2026-11-12T04:59:31.835892+00:00",
+          "quoteTime": 1794459571374
+        }
+      ],
+      "sourceReadsDuring": 2,
+      "bracketBefore": {
+        "bookHash": "5717a7178a8fbb0d3a4db9da012ffc4fc256a1e6e573ccfca5841308d43522cb",
+        "observedAt": "2026-11-12T04:58:34.755920+00:00"
+      },
+      "bracketAfter": {
+        "bookHash": "0c20693f1fec3cbb6115af10fe269db41d94c0df4727ed069829f3bdc90cb0d0",
+        "observedAt": "2026-11-12T04:59:43.470146+00:00"
+      },
+      "observedGenerationToPublishEndSeconds": 75.827227
+    },
+    {
+      "publication": {
+        "protocol": "immutable-checkpoint-v1",
+        "generation": "2026-11-12T04:59:32.038544+00:00",
+        "startedAt": "2026-11-12T04:59:39.180711+00:00",
+        "published": false,
+        "error": "Checkpoint git read-tree failed (exit 128)",
+        "endedAt": "2026-11-12T05:00:40.825050+00:00",
+        "durationSeconds": 61.64435003699998
+      },
+      "zecBooksDuring": 5,
+      "zecDuringReceipts": [
+        {
+          "bookHash": "0c20693f1fec3cbb6115af10fe269db41d94c0df4727ed069829f3bdc90cb0d0",
+          "observedAt": "2026-11-12T04:59:43.470146+00:00",
+          "quoteTime": 1794459582731
+        },
+        {
+          "bookHash": "6688511aba2da2162d00c681f5500f0074df64c8cd7717893bce23a823809ba3",
+          "observedAt": "2026-11-12T04:59:54.417467+00:00",
+          "quoteTime": 1794459594063
+        },
+        {
+          "bookHash": "cb30426ffc6f75395510883f7f7143082555767200e40c07fdaa1fe7adebd667",
+          "observedAt": "2026-11-12T05:00:06.500059+00:00",
+          "quoteTime": 1794459605892
+        },
+        {
+          "bookHash": "3fa935ce197230015d415ac56144e4931b85f66c32f5b458ea596de537796cc6",
+          "observedAt": "2026-11-12T05:00:18.295347+00:00",
+          "quoteTime": 1794459617531
+        },
+        {
+          "bookHash": "2053de867cdad466da46c5ed91ecc6d983455a21f49311de0e0bb30852a00ea6",
+          "observedAt": "2026-11-12T05:00:29.220039+00:00",
+          "quoteTime": 1794459628727
+        }
+      ],
+      "sourceReadsDuring": 2,
+      "bracketBefore": {
+        "bookHash": "d93bbd0267ebfe3379be394f6e85bb5bc99a07a3105040d6e78598160a504b60",
+        "observedAt": "2026-11-12T04:59:31.835892+00:00"
+      },
+      "bracketAfter": {
+        "bookHash": "009581b05b11981342cbc70c20c23171dba611b21a770d5acfb50f22e330c6b9",
+        "observedAt": "2026-11-12T05:00:42.844058+00:00"
+      },
+      "observedGenerationToPublishEndSeconds": 68.786506
+    },
+    {
+      "publication": {
+        "protocol": "immutable-checkpoint-v1",
+        "generation": "2026-11-12T05:00:06.929196+00:00",
+        "startedAt": "2026-11-12T05:00:40.825076+00:00",
+        "published": false,
+        "error": "Checkpoint git read-tree failed (exit 128)",
+        "endedAt": "2026-11-12T05:01:42.437630+00:00",
+        "durationSeconds": 61.612572674000035
+      },
+      "zecBooksDuring": 6,
+      "zecDuringReceipts": [
+        {
+          "bookHash": "009581b05b11981342cbc70c20c23171dba611b21a770d5acfb50f22e330c6b9",
+          "observedAt": "2026-11-12T05:00:42.844058+00:00",
+          "quoteTime": 1794459642180
+        },
+        {
+          "bookHash": "4fb7adfdbf8533dbe90c0c8a035b988d44c307d258f0865b490667b39259aff4",
+          "observedAt": "2026-11-12T05:00:54.666584+00:00",
+          "quoteTime": 1794459653998
+        },
+        {
+          "bookHash": "da2c8362119763e3ea74ab36487253110ac178a34029a8d1b9af3ad7363e4bd3",
+          "observedAt": "2026-11-12T05:01:05.643144+00:00",
+          "quoteTime": 1794459664988
+        },
+        {
+          "bookHash": "aeb5b974c05c7ff85625f6c7093020021446205dc326ee366f3f5acbf1fc54f0",
+          "observedAt": "2026-11-12T05:01:17.377739+00:00",
+          "quoteTime": 1794459676923
+        },
+        {
+          "bookHash": "840eb8a1fc4cfbbb19cd78bc20160f4549aa7ff2fbd0277e0298d2169fb58f1a",
+          "observedAt": "2026-11-12T05:01:28.894743+00:00",
+          "quoteTime": 1794459688339
+        },
+        {
+          "bookHash": "988d11bb229e07ac6ece7fe201b9c61b83c52a0713c5ace2005618d0c01ca4e4",
+          "observedAt": "2026-11-12T05:01:39.860018+00:00",
+          "quoteTime": 1794459699160
+        }
+      ],
+      "sourceReadsDuring": 1,
+      "bracketBefore": {
+        "bookHash": "2053de867cdad466da46c5ed91ecc6d983455a21f49311de0e0bb30852a00ea6",
+        "observedAt": "2026-11-12T05:00:29.220039+00:00"
+      },
+      "bracketAfter": {
+        "bookHash": "d2c042c509d54e4556e9283c52608c4464e217ffb9abd0d0a49e8318e1f3a405",
+        "observedAt": "2026-11-12T05:01:51.541047+00:00"
+      },
+      "observedGenerationToPublishEndSeconds": 95.508434
+    },
+    {
+      "publication": {
+        "protocol": "immutable-checkpoint-v1",
+        "generation": "2026-11-12T05:01:17.552650+00:00",
+        "startedAt": "2026-11-12T05:01:42.437667+00:00",
+        "published": false,
+        "error": "Checkpoint git read-tree failed (exit 128)",
+        "endedAt": "2026-11-12T05:02:44.195585+00:00",
+        "durationSeconds": 61.757931117
+      },
+      "zecBooksDuring": 5,
+      "zecDuringReceipts": [
+        {
+          "bookHash": "d2c042c509d54e4556e9283c52608c4464e217ffb9abd0d0a49e8318e1f3a405",
+          "observedAt": "2026-11-12T05:01:51.541047+00:00",
+          "quoteTime": 1794459711153
+        },
+        {
+          "bookHash": "bd1d4e285f9a9f10276e9fae0b9ebdcb02d0b501ee65107c660339af617f4d18",
+          "observedAt": "2026-11-12T05:02:03.254505+00:00",
+          "quoteTime": 1794459722592
+        },
+        {
+          "bookHash": "d69dec9cecdc796df2e4b5b08c512fcd07119c6cbbea6a6d43f4a527c3a7d236",
+          "observedAt": "2026-11-12T05:02:14.233883+00:00",
+          "quoteTime": 1794459733881
+        },
+        {
+          "bookHash": "71eabf56190e6fb1cdf9bdaee587c742d9a3718ec52095e8b9bc6769cafeb48b",
+          "observedAt": "2026-11-12T05:02:26.030199+00:00",
+          "quoteTime": 1794459745697
+        },
+        {
+          "bookHash": "12ee8dad45fe7605dc7d5487da4a80c8a1d30ba46f503c6d8aacea6c46b08cc5",
+          "observedAt": "2026-11-12T05:02:37.758940+00:00",
+          "quoteTime": 1794459756981
+        }
+      ],
+      "sourceReadsDuring": 2,
+      "bracketBefore": {
+        "bookHash": "988d11bb229e07ac6ece7fe201b9c61b83c52a0713c5ace2005618d0c01ca4e4",
+        "observedAt": "2026-11-12T05:01:39.860018+00:00"
+      },
+      "bracketAfter": {
+        "bookHash": "090c97a3c7da098d0cf488b192d1ed6a7de7d769225db59491d74560046a04d3",
+        "observedAt": "2026-11-12T05:02:48.798025+00:00"
+      },
+      "observedGenerationToPublishEndSeconds": 86.642935
+    },
+    {
+      "publication": {
+        "protocol": "immutable-checkpoint-v1",
+        "generation": "2026-11-12T05:02:26.339878+00:00",
+        "startedAt": "2026-11-12T05:02:44.195613+00:00",
+        "published": false,
+        "error": "Checkpoint git read-tree failed (exit 128)",
+        "endedAt": "2026-11-12T05:03:45.939144+00:00",
+        "durationSeconds": 61.743547028000194
+      },
+      "zecBooksDuring": 5,
+      "zecDuringReceipts": [
+        {
+          "bookHash": "090c97a3c7da098d0cf488b192d1ed6a7de7d769225db59491d74560046a04d3",
+          "observedAt": "2026-11-12T05:02:48.798025+00:00",
+          "quoteTime": 1794459768366
+        },
+        {
+          "bookHash": "2e34cb14f269c0cf6a1cdc16aa07b09f0eaa267b4b798beda76c6fe50550763c",
+          "observedAt": "2026-11-12T05:03:00.231732+00:00",
+          "quoteTime": 1794459779857
+        },
+        {
+          "bookHash": "4b59cd35f0b61becfbbb3780a0afbdd8059afff86bc8b98209faa780445f3946",
+          "observedAt": "2026-11-12T05:03:12.052327+00:00",
+          "quoteTime": 1794459791739
+        },
+        {
+          "bookHash": "4271213cf598931ba083adeb54aecea3a8f6fe63d97eac7e7bc1c91bc283e1ef",
+          "observedAt": "2026-11-12T05:03:23.095967+00:00",
+          "quoteTime": 1794459802446
+        },
+        {
+          "bookHash": "5a5ab2d341cb299a6de2f3a3c271492e26c1ba9fe801226e604d6c589a3c554b",
+          "observedAt": "2026-11-12T05:03:34.957349+00:00",
+          "quoteTime": 1794459814290
+        }
+      ],
+      "sourceReadsDuring": 2,
+      "bracketBefore": {
+        "bookHash": "12ee8dad45fe7605dc7d5487da4a80c8a1d30ba46f503c6d8aacea6c46b08cc5",
+        "observedAt": "2026-11-12T05:02:37.758940+00:00"
+      },
+      "bracketAfter": {
+        "bookHash": "598293409b838106e596e9ed0a7afd4d96f19cb020ed29d1718e6f1f51b7c299",
+        "observedAt": "2026-11-12T05:03:46.692767+00:00"
+      },
+      "observedGenerationToPublishEndSeconds": 79.599266
+    },
+    {
+      "publication": {
+        "protocol": "immutable-checkpoint-v1",
+        "generation": "2026-11-12T05:03:35.248352+00:00",
+        "startedAt": "2026-11-12T05:03:45.939176+00:00",
+        "published": false,
+        "error": "Checkpoint git read-tree failed (exit 128)",
+        "endedAt": "2026-11-12T05:04:47.795466+00:00",
+        "durationSeconds": 61.856311157999926
+      },
+      "zecBooksDuring": 6,
+      "zecDuringReceipts": [
+        {
+          "bookHash": "598293409b838106e596e9ed0a7afd4d96f19cb020ed29d1718e6f1f51b7c299",
+          "observedAt": "2026-11-12T05:03:46.692767+00:00",
+          "quoteTime": 1794459826155
+        },
+        {
+          "bookHash": "d87dfddf7a6af058f7519e66b1d1f9f1d5c0801e24bef26aaec40dc002cbb2bb",
+          "observedAt": "2026-11-12T05:03:57.839587+00:00",
+          "quoteTime": 1794459837412
+        },
+        {
+          "bookHash": "34b4c7ffdc76c6cf37e6f8f8cdff4ce67b172c2faca4fc3c227c0a387cd210fe",
+          "observedAt": "2026-11-12T05:04:09.421975+00:00",
+          "quoteTime": 1794459848979
+        },
+        {
+          "bookHash": "fc3f471675ee30ff2e7657f83df6c8f8db7351c184870b15c373843e2ec0cf6a",
+          "observedAt": "2026-11-12T05:04:21.012125+00:00",
+          "quoteTime": 1794459860476
+        },
+        {
+          "bookHash": "696e49fb4d40eefa01f5f5f327948d7bbab1565b51d1d9889fb0b317c6f38057",
+          "observedAt": "2026-11-12T05:04:31.916650+00:00",
+          "quoteTime": 1794459871492
+        },
+        {
+          "bookHash": "ae904069d9e0b3ae09fef89c9d74d9aac3b4d18bfdb01496a8652cad5422977e",
+          "observedAt": "2026-11-12T05:04:43.813816+00:00",
+          "quoteTime": 1794459883419
+        }
+      ],
+      "sourceReadsDuring": 2,
+      "bracketBefore": {
+        "bookHash": "5a5ab2d341cb299a6de2f3a3c271492e26c1ba9fe801226e604d6c589a3c554b",
+        "observedAt": "2026-11-12T05:03:34.957349+00:00"
+      },
+      "bracketAfter": {
+        "bookHash": "7b588addda15ca10ac2531cf33f796d355e15fef7a641bfed0efd3766aff68c2",
+        "observedAt": "2026-11-12T05:04:55.500867+00:00"
+      },
+      "observedGenerationToPublishEndSeconds": 72.547114
+    },
+    {
+      "publication": {
+        "protocol": "immutable-checkpoint-v1",
+        "generation": "2026-11-12T05:04:44.067531+00:00",
+        "startedAt": "2026-11-12T05:04:47.795508+00:00",
+        "published": false,
+        "error": "Checkpoint git read-tree failed (exit 128)",
+        "endedAt": "2026-11-12T05:05:49.598398+00:00",
+        "durationSeconds": 61.80290497500005
+      },
+      "zecBooksDuring": 5,
+      "zecDuringReceipts": [
+        {
+          "bookHash": "7b588addda15ca10ac2531cf33f796d355e15fef7a641bfed0efd3766aff68c2",
+          "observedAt": "2026-11-12T05:04:55.500867+00:00",
+          "quoteTime": 1794459894860
+        },
+        {
+          "bookHash": "5d9b92b608df62f946fea77c693078590c4c89555de77e4b64c1ea2a0f9e6245",
+          "observedAt": "2026-11-12T05:05:06.485061+00:00",
+          "quoteTime": 1794459906065
+        },
+        {
+          "bookHash": "2cdeacdaaa844818171754cf5eb03aae3560a5fd88ff98e77e9ca068fd0e0bad",
+          "observedAt": "2026-11-12T05:05:17.970715+00:00",
+          "quoteTime": 1794459917390
+        },
+        {
+          "bookHash": "b67500c0d9010b4b7941ed5691b676036d55da0136e4716ea1b7a2bfbfeb8c27",
+          "observedAt": "2026-11-12T05:05:29.783663+00:00",
+          "quoteTime": 1794459929128
+        },
+        {
+          "bookHash": "1111b598a84b9d0bc176d7fc02c97080606aad77c8cb7c9bd388163c264d0d40",
+          "observedAt": "2026-11-12T05:05:40.797720+00:00",
+          "quoteTime": 1794459940475
+        }
+      ],
+      "sourceReadsDuring": 1,
+      "bracketBefore": {
+        "bookHash": "ae904069d9e0b3ae09fef89c9d74d9aac3b4d18bfdb01496a8652cad5422977e",
+        "observedAt": "2026-11-12T05:04:43.813816+00:00"
+      },
+      "bracketAfter": {
+        "bookHash": "6486f347ffdc4ec0beb0bc26a62d346d567547ed0d40ba6c59e42fd2c60e452e",
+        "observedAt": "2026-11-12T05:05:54.391174+00:00"
+      },
+      "observedGenerationToPublishEndSeconds": 65.530867
+    },
+    {
+      "publication": {
+        "protocol": "immutable-checkpoint-v1",
+        "generation": "2026-11-12T05:05:18.263607+00:00",
+        "startedAt": "2026-11-12T05:05:49.598429+00:00",
+        "published": false,
+        "error": "Checkpoint git read-tree failed (exit 128)",
+        "endedAt": "2026-11-12T05:06:51.340336+00:00",
+        "durationSeconds": 61.74192596700004
+      },
+      "zecBooksDuring": 5,
+      "zecDuringReceipts": [
+        {
+          "bookHash": "6486f347ffdc4ec0beb0bc26a62d346d567547ed0d40ba6c59e42fd2c60e452e",
+          "observedAt": "2026-11-12T05:05:54.391174+00:00",
+          "quoteTime": 1794459953917
+        },
+        {
+          "bookHash": "c484f3df47728a7bfdc5dcba0d6f136e2b120adc66307626dcea71bf99849af2",
+          "observedAt": "2026-11-12T05:06:05.949689+00:00",
+          "quoteTime": 1794459965524
+        },
+        {
+          "bookHash": "b73da83b9deebc005d8c363426746f4fde0a84ad7e018a6bc9aac09f0b0a3f59",
+          "observedAt": "2026-11-12T05:06:17.017942+00:00",
+          "quoteTime": 1794459976478
+        },
+        {
+          "bookHash": "1dbc7f79cb39abbb79afb6506c158182137849c36b74c0b7dc12ea3996cf2a38",
+          "observedAt": "2026-11-12T05:06:28.629615+00:00",
+          "quoteTime": 1794459988302
+        },
+        {
+          "bookHash": "02f4dc1832282226b590d848372f0df3a002e20e87d0f84619c340d4faabe57b",
+          "observedAt": "2026-11-12T05:06:40.375333+00:00",
+          "quoteTime": 1794459999666
+        }
+      ],
+      "sourceReadsDuring": 2,
+      "bracketBefore": {
+        "bookHash": "1111b598a84b9d0bc176d7fc02c97080606aad77c8cb7c9bd388163c264d0d40",
+        "observedAt": "2026-11-12T05:05:40.797720+00:00"
+      },
+      "bracketAfter": {
+        "bookHash": "45d126fbc775ad21135059112ad2ab366917189f596a7c44bffdf759a3336ea1",
+        "observedAt": "2026-11-12T05:06:51.404404+00:00"
+      },
+      "observedGenerationToPublishEndSeconds": 93.076729
+    },
+    {
+      "publication": {
+        "protocol": "immutable-checkpoint-v1",
+        "generation": "2026-11-12T05:06:28.976034+00:00",
+        "startedAt": "2026-11-12T05:06:51.340375+00:00",
+        "published": false,
+        "error": "Checkpoint git read-tree failed (exit 128)",
+        "endedAt": "2026-11-12T05:07:53.077569+00:00",
+        "durationSeconds": 61.737212823999926
+      },
+      "zecBooksDuring": 6,
+      "zecDuringReceipts": [
+        {
+          "bookHash": "45d126fbc775ad21135059112ad2ab366917189f596a7c44bffdf759a3336ea1",
+          "observedAt": "2026-11-12T05:06:51.404404+00:00",
+          "quoteTime": 1794460010726
+        },
+        {
+          "bookHash": "238e3bc12ac78901a85a872d0349e8389108c51a080eff60157c12c84059a09b",
+          "observedAt": "2026-11-12T05:07:02.944679+00:00",
+          "quoteTime": 1794460022279
+        },
+        {
+          "bookHash": "fe7dc068ed2e2514f3f3427932599c2f97612071ce586072406a3687913cea78",
+          "observedAt": "2026-11-12T05:07:15.087261+00:00",
+          "quoteTime": 1794460034751
+        },
+        {
+          "bookHash": "7b13bb35b4aa44b0ec0773ca4945d5f99b947b067800c672f954be13d3c7b7ca",
+          "observedAt": "2026-11-12T05:07:26.182707+00:00",
+          "quoteTime": 1794460045787
+        },
+        {
+          "bookHash": "fb6bcf5659ba359a3b8c016f61c2c072c630f7c6db43c7725bb28451310736cc",
+          "observedAt": "2026-11-12T05:07:37.627018+00:00",
+          "quoteTime": 1794460057043
+        },
+        {
+          "bookHash": "ecc1f580dd5da247f89857da4332830618ac791d82bb81d2f8282ffb840f5377",
+          "observedAt": "2026-11-12T05:07:49.501873+00:00",
+          "quoteTime": 1794460068973
+        }
+      ],
+      "sourceReadsDuring": 2,
+      "bracketBefore": {
+        "bookHash": "02f4dc1832282226b590d848372f0df3a002e20e87d0f84619c340d4faabe57b",
+        "observedAt": "2026-11-12T05:06:40.375333+00:00"
+      },
+      "bracketAfter": {
+        "bookHash": "75a7088d692f366b6a5b3d063941e85586d7f073f5691525fdbfa8cf316059f8",
+        "observedAt": "2026-11-12T05:08:00.456179+00:00"
+      },
+      "observedGenerationToPublishEndSeconds": 84.101535
+    },
+    {
+      "publication": {
+        "protocol": "immutable-checkpoint-v1",
+        "generation": "2026-11-12T05:07:38.044775+00:00",
+        "startedAt": "2026-11-12T05:07:53.077608+00:00",
+        "published": false,
+        "error": "Checkpoint git read-tree failed (exit 128)",
+        "endedAt": "2026-11-12T05:08:54.758217+00:00",
+        "durationSeconds": 61.68062467899995
+      },
+      "zecBooksDuring": 5,
+      "zecDuringReceipts": [
+        {
+          "bookHash": "75a7088d692f366b6a5b3d063941e85586d7f073f5691525fdbfa8cf316059f8",
+          "observedAt": "2026-11-12T05:08:00.456179+00:00",
+          "quoteTime": 1794460079827
+        },
+        {
+          "bookHash": "bbe38668991b9c28964d8593e919981ed8ef705fc7621ad4804772d8c688560d",
+          "observedAt": "2026-11-12T05:08:11.817284+00:00",
+          "quoteTime": 1794460091058
+        },
+        {
+          "bookHash": "b467b87d37ae6259b4b0856d0cc03d6ba0852175d16adf691daf423b8ecd41e0",
+          "observedAt": "2026-11-12T05:08:23.420303+00:00",
+          "quoteTime": 1794460102907
+        },
+        {
+          "bookHash": "a157639c35b83d09548762bdff6d7cdcd4803917aef7b08fa0f80fc0de5db18b",
+          "observedAt": "2026-11-12T05:08:34.628511+00:00",
+          "quoteTime": 1794460114132
+        },
+        {
+          "bookHash": "ec49ac56e12449ae1f4d2032227080c152910581267c3e5e6d0e0d0085d61c53",
+          "observedAt": "2026-11-12T05:08:46.046014+00:00",
+          "quoteTime": 1794460125402
+        }
+      ],
+      "sourceReadsDuring": 2,
+      "bracketBefore": {
+        "bookHash": "ecc1f580dd5da247f89857da4332830618ac791d82bb81d2f8282ffb840f5377",
+        "observedAt": "2026-11-12T05:07:49.501873+00:00"
+      },
+      "bracketAfter": {
+        "bookHash": "294b5a47d028338f6eb26ab8034c59b1360af1bb4b9d33c1db06983b9dbb3987",
+        "observedAt": "2026-11-12T05:08:57.654001+00:00"
+      },
+      "observedGenerationToPublishEndSeconds": 76.713442
+    },
+    {
+      "publication": {
+        "protocol": "immutable-checkpoint-v1",
+        "generation": "2026-11-12T05:08:46.246418+00:00",
+        "startedAt": "2026-11-12T05:08:54.758247+00:00",
+        "published": false,
+        "error": "Checkpoint git read-tree failed (exit 128)",
+        "endedAt": "2026-11-12T05:09:56.426468+00:00",
+        "durationSeconds": 61.66823557399994
+      },
+      "zecBooksDuring": 6,
+      "zecDuringReceipts": [
+        {
+          "bookHash": "294b5a47d028338f6eb26ab8034c59b1360af1bb4b9d33c1db06983b9dbb3987",
+          "observedAt": "2026-11-12T05:08:57.654001+00:00",
+          "quoteTime": 1794460136909
+        },
+        {
+          "bookHash": "28022ee67d431b730f62dae182a7f2074b5d5edd33e14aa099d811a539b3f93d",
+          "observedAt": "2026-11-12T05:09:08.659779+00:00",
+          "quoteTime": 1794460148306
+        },
+        {
+          "bookHash": "fcfd7f458e9aac0fb03fa5e293db3ff752a48c37c0cf1b4bf6879c825291d8e7",
+          "observedAt": "2026-11-12T05:09:20.443698+00:00",
+          "quoteTime": 1794460159878
+        },
+        {
+          "bookHash": "e77b00343690fcecfcc0b25e1a8aa24252a168dc814233d8c8a44ad7c52e35f0",
+          "observedAt": "2026-11-12T05:09:32.017492+00:00",
+          "quoteTime": 1794460171187
+        },
+        {
+          "bookHash": "653516d28effeace6a9a0cd5b404b46265d2656a33cd65d5183b316a1f6992b2",
+          "observedAt": "2026-11-12T05:09:43.032518+00:00",
+          "quoteTime": 1794460182681
+        },
+        {
+          "bookHash": "48b1d23cccb6ed554242539248e311f01354a2d2ebb6beaf7efc7e56c91caf29",
+          "observedAt": "2026-11-12T05:09:55.053705+00:00",
+          "quoteTime": 1794460194688
+        }
+      ],
+      "sourceReadsDuring": 2,
+      "bracketBefore": {
+        "bookHash": "ec49ac56e12449ae1f4d2032227080c152910581267c3e5e6d0e0d0085d61c53",
+        "observedAt": "2026-11-12T05:08:46.046014+00:00"
+      },
+      "bracketAfter": {
+        "bookHash": "c8ea759b340d34f0d393aef9c0f690ac7d864a2ced0d8c564f9f4032f80b44e7",
+        "observedAt": "2026-11-12T05:10:06.841568+00:00"
+      },
+      "observedGenerationToPublishEndSeconds": 70.18005
+    },
+    {
+      "publication": {
+        "protocol": "immutable-checkpoint-v1",
+        "generation": "2026-11-12T05:09:55.381837+00:00",
+        "startedAt": "2026-11-12T05:09:56.426497+00:00",
+        "published": false,
+        "error": "Checkpoint git read-tree failed (exit 128)",
+        "endedAt": "2026-11-12T05:10:58.026010+00:00",
+        "durationSeconds": 61.59952588400006
+      },
+      "zecBooksDuring": 5,
+      "zecDuringReceipts": [
+        {
+          "bookHash": "c8ea759b340d34f0d393aef9c0f690ac7d864a2ced0d8c564f9f4032f80b44e7",
+          "observedAt": "2026-11-12T05:10:06.841568+00:00",
+          "quoteTime": 1794460206049
+        },
+        {
+          "bookHash": "0e894a38e1804218fc7470f9c01630286cd52617347e6754bddf4ead65e5b9bc",
+          "observedAt": "2026-11-12T05:10:17.857374+00:00",
+          "quoteTime": 1794460217443
+        },
+        {
+          "bookHash": "970a1a474b0581bd6e49eb026450c8e4f138a878a5a22e1315093702b8f895df",
+          "observedAt": "2026-11-12T05:10:29.263448+00:00",
+          "quoteTime": 1794460228605
+        },
+        {
+          "bookHash": "a045d66313fa65cab970413ca95003a0e501b29c6618b419009acad225a68840",
+          "observedAt": "2026-11-12T05:10:41.078518+00:00",
+          "quoteTime": 1794460240357
+        },
+        {
+          "bookHash": "a0731ba1ce13726b24e0b45cedb4cbd8a0a9bb6c8cb1edb5358d75df5cecd801",
+          "observedAt": "2026-11-12T05:10:52.046683+00:00",
+          "quoteTime": 1794460251373
+        }
+      ],
+      "sourceReadsDuring": 1,
+      "bracketBefore": {
+        "bookHash": "48b1d23cccb6ed554242539248e311f01354a2d2ebb6beaf7efc7e56c91caf29",
+        "observedAt": "2026-11-12T05:09:55.053705+00:00"
+      },
+      "bracketAfter": {
+        "bookHash": "33a1102d9b2f66aac191666a5aed43b34ed2636c405fec8ceb171e26de504c31",
+        "observedAt": "2026-11-12T05:11:05.898505+00:00"
+      },
+      "observedGenerationToPublishEndSeconds": 62.644173
+    },
+    {
+      "publication": {
+        "protocol": "immutable-checkpoint-v1",
+        "generation": "2026-11-12T05:10:29.629663+00:00",
+        "startedAt": "2026-11-12T05:10:58.026038+00:00",
+        "published": true,
+        "commit": "dd2eb75b3790dadbb8696f4b91135fcfa4ad739b",
+        "unchanged": false,
+        "endedAt": "2026-11-12T05:11:20.690650+00:00",
+        "durationSeconds": 22.664624151999988
+      },
+      "zecBooksDuring": 2,
+      "zecDuringReceipts": [
+        {
+          "bookHash": "33a1102d9b2f66aac191666a5aed43b34ed2636c405fec8ceb171e26de504c31",
+          "observedAt": "2026-11-12T05:11:05.898505+00:00",
+          "quoteTime": 1794460265369
+        },
+        {
+          "bookHash": "a0b1ab17820f175fdbbe9c2017c8d00b2de514c822c499a91df52d9bb6e4efe4",
+          "observedAt": "2026-11-12T05:11:17.556408+00:00",
+          "quoteTime": 1794460277247
+        }
+      ],
+      "sourceReadsDuring": 1,
+      "bracketBefore": {
+        "bookHash": "a0731ba1ce13726b24e0b45cedb4cbd8a0a9bb6c8cb1edb5358d75df5cecd801",
+        "observedAt": "2026-11-12T05:10:52.046683+00:00"
+      },
+      "bracketAfter": {
+        "bookHash": "cd8f94840691889c1df84b30eefe2ab10f72d6b6b540ee0b092c26cffe9559f7",
+        "observedAt": "2026-11-12T05:11:28.533593+00:00"
+      },
+      "observedGenerationToPublishEndSeconds": 51.060987
+    },
+    {
+      "publication": {
+        "protocol": "immutable-checkpoint-v1",
+        "generation": "2026-11-12T05:11:06.164137+00:00",
+        "startedAt": "2026-11-12T05:11:20.692864+00:00",
+        "published": true,
+        "commit": "f0abc090fdca547b3d1af43563ba85ce60a418f1",
+        "unchanged": false,
+        "endedAt": "2026-11-12T05:11:28.508430+00:00",
+        "durationSeconds": 7.815575149000097
+      },
+      "zecBooksDuring": 0,
+      "zecDuringReceipts": [],
+      "sourceReadsDuring": 0,
+      "bracketBefore": {
+        "bookHash": "a0b1ab17820f175fdbbe9c2017c8d00b2de514c822c499a91df52d9bb6e4efe4",
+        "observedAt": "2026-11-12T05:11:17.556408+00:00"
+      },
+      "bracketAfter": {
+        "bookHash": "cd8f94840691889c1df84b30eefe2ab10f72d6b6b540ee0b092c26cffe9559f7",
+        "observedAt": "2026-11-12T05:11:28.533593+00:00"
+      },
+      "observedGenerationToPublishEndSeconds": 22.344293
+    },
+    {
+      "publication": {
+        "protocol": "immutable-checkpoint-v1",
+        "generation": "2026-11-12T05:11:40.432944+00:00",
+        "startedAt": "2026-11-12T05:11:41.367872+00:00",
+        "published": true,
+        "commit": "dd6dce65279607f354ee4c9f1203e59db7f14b57",
+        "unchanged": false,
+        "endedAt": "2026-11-12T05:11:49.295065+00:00",
+        "durationSeconds": 7.927194636000195
+      },
+      "zecBooksDuring": 0,
+      "zecDuringReceipts": [],
+      "sourceReadsDuring": 0,
+      "bracketBefore": {
+        "bookHash": "fbe979f2f6bf308e5a3f9d9b0e74bde76ad3b462698332026e9ae079c9705ff7",
+        "observedAt": "2026-11-12T05:11:40.197471+00:00"
+      },
+      "bracketAfter": {
+        "bookHash": "4dbde60a6cbf0f988f9fa8e5caf78988e187ac1c855709e8d6bce71e6621bc8a",
+        "observedAt": "2026-11-12T05:11:51.783452+00:00"
+      },
+      "observedGenerationToPublishEndSeconds": 8.862121
+    },
+    {
+      "publication": {
+        "protocol": "immutable-checkpoint-v1",
+        "generation": "2026-11-12T05:12:15.159825+00:00",
+        "startedAt": "2026-11-12T05:12:16.161238+00:00",
+        "published": true,
+        "commit": "e2d782d410813a1e71d0bde1a5d3f01c9f5e4c4f",
+        "unchanged": false,
+        "endedAt": "2026-11-12T05:12:24.545751+00:00",
+        "durationSeconds": 8.384510298000123
+      },
+      "zecBooksDuring": 0,
+      "zecDuringReceipts": [],
+      "sourceReadsDuring": 0,
+      "bracketBefore": {
+        "bookHash": "7eadf106bdc7b5769821faa112006b06d788c58a460b53ebac8ead2236128da8",
+        "observedAt": "2026-11-12T05:12:14.877961+00:00"
+      },
+      "bracketAfter": {
+        "bookHash": "23be54442e522f11867e34f6c3630121558a43d6022b3db1ba7c8c596a1d158b",
+        "observedAt": "2026-11-12T05:12:26.627159+00:00"
+      },
+      "observedGenerationToPublishEndSeconds": 9.385926
+    },
+    {
+      "publication": {
+        "protocol": "immutable-checkpoint-v1",
+        "generation": "2026-11-12T05:12:49.479363+00:00",
+        "startedAt": "2026-11-12T05:12:50.449985+00:00",
+        "published": true,
+        "commit": "8bf8e7b27e95e440632861e57b30b8523c282e94",
+        "unchanged": false,
+        "endedAt": "2026-11-12T05:12:58.395397+00:00",
+        "durationSeconds": 7.945411171999922
+      },
+      "zecBooksDuring": 0,
+      "zecDuringReceipts": [],
+      "sourceReadsDuring": 0,
+      "bracketBefore": {
+        "bookHash": "fd37483f4b3df4eca04260e3a6116d4d0f35632746dfd1c017eee9a4e0144b94",
+        "observedAt": "2026-11-12T05:12:49.193745+00:00"
+      },
+      "bracketAfter": {
+        "bookHash": "820d7f35fb6731dd778f10c8d78689e053e5edfdacdd3f5a1dc61a931ee2c2a6",
+        "observedAt": "2026-11-12T05:13:00.889087+00:00"
+      },
+      "observedGenerationToPublishEndSeconds": 8.916034
+    },
+    {
+      "publication": {
+        "protocol": "immutable-checkpoint-v1",
+        "generation": "2026-11-12T05:13:23.672220+00:00",
+        "startedAt": "2026-11-12T05:13:24.671386+00:00",
+        "published": true,
+        "commit": "8a6d75c4d5e023cbc70c0b53d93fdef0f8c6c9d8",
+        "unchanged": false,
+        "endedAt": "2026-11-12T05:13:32.525793+00:00",
+        "durationSeconds": 7.85440792899999
+      },
+      "zecBooksDuring": 0,
+      "zecDuringReceipts": [],
+      "sourceReadsDuring": 0,
+      "bracketBefore": {
+        "bookHash": "3635eee17312b626ceb5f4f89e4383d660c2e96e5aa80ee1686db465123360e5",
+        "observedAt": "2026-11-12T05:13:23.487177+00:00"
+      },
+      "bracketAfter": {
+        "bookHash": "c8e3bb27a101705d638bb512f2a60774155f459d43c7b326368e9a284afb6e03",
+        "observedAt": "2026-11-12T05:13:35.079301+00:00"
+      },
+      "observedGenerationToPublishEndSeconds": 8.853573
+    },
+    {
+      "publication": {
+        "protocol": "immutable-checkpoint-v1",
+        "generation": "2026-11-12T05:13:57.878421+00:00",
+        "startedAt": "2026-11-12T05:13:58.814525+00:00",
+        "published": true,
+        "commit": "7593d56d8754473aa56e23768d4cf0f7bedff9c2",
+        "unchanged": false,
+        "endedAt": "2026-11-12T05:14:06.943038+00:00",
+        "durationSeconds": 8.128517167999917
+      },
+      "zecBooksDuring": 0,
+      "zecDuringReceipts": [],
+      "sourceReadsDuring": 0,
+      "bracketBefore": {
+        "bookHash": "1888e41e7193adaaed5f125d6bd40d950fd2d672e5b983b8bcf18c533f014f6c",
+        "observedAt": "2026-11-12T05:13:57.691863+00:00"
+      },
+      "bracketAfter": {
+        "bookHash": "e28c3bc8373d13d132f2638b829f5a8bbd2dc3f24faf48b0dc33571b63f038aa",
+        "observedAt": "2026-11-12T05:14:09.228121+00:00"
+      },
+      "observedGenerationToPublishEndSeconds": 9.064617
+    },
+    {
+      "publication": {
+        "protocol": "immutable-checkpoint-v1",
+        "generation": "2026-11-12T05:14:32.265059+00:00",
+        "startedAt": "2026-11-12T05:14:33.243590+00:00",
+        "published": true,
+        "commit": "139997d7d01273d04bce5e0c2165f91687466c32",
+        "unchanged": false,
+        "endedAt": "2026-11-12T05:14:41.440563+00:00",
+        "durationSeconds": 8.19697218300007
+      },
+      "zecBooksDuring": 0,
+      "zecDuringReceipts": [],
+      "sourceReadsDuring": 0,
+      "bracketBefore": {
+        "bookHash": "d9c90dfeda7e4b0caec4895fd107cf087c565647809682bd2b58351ba9ca8fc0",
+        "observedAt": "2026-11-12T05:14:31.838627+00:00"
+      },
+      "bracketAfter": {
+        "bookHash": "a7ad3398d4d3f32acd0d860bcec1a561cdb8486c9d43ec538acda7d16dfec289",
+        "observedAt": "2026-11-12T05:14:43.656542+00:00"
+      },
+      "observedGenerationToPublishEndSeconds": 9.175504
+    },
+    {
+      "publication": {
+        "protocol": "immutable-checkpoint-v1",
+        "generation": "2026-11-12T05:15:07.009686+00:00",
+        "startedAt": "2026-11-12T05:15:07.888347+00:00",
+        "published": true,
+        "commit": "0af48682bb40deb1f3ea37b53cc3899d7526108d",
+        "unchanged": false,
+        "endedAt": "2026-11-12T05:15:15.982010+00:00",
+        "durationSeconds": 8.093666872000085
+      },
+      "zecBooksDuring": 0,
+      "zecDuringReceipts": [],
+      "sourceReadsDuring": 0,
+      "bracketBefore": {
+        "bookHash": "ef68763602a26747e0fd8a28a2d1ba7cb61b03151d001b9d1d40c2512d3e02a5",
+        "observedAt": "2026-11-12T05:15:06.701075+00:00"
+      },
+      "bracketAfter": {
+        "bookHash": "c0d223b8ae34592eefc4938f44db9f0e3c1349b6a9cbb37e441a666ee95577d8",
+        "observedAt": "2026-11-12T05:15:18.339898+00:00"
+      },
+      "observedGenerationToPublishEndSeconds": 8.972324
+    },
+    {
+      "publication": {
+        "protocol": "immutable-checkpoint-v1",
+        "generation": "2026-11-12T05:15:41.638738+00:00",
+        "startedAt": "2026-11-12T05:15:42.621426+00:00",
+        "published": true,
+        "commit": "30ced9c3a2241974c43e957beb917e3e15da628e",
+        "unchanged": false,
+        "endedAt": "2026-11-12T05:15:51.356437+00:00",
+        "durationSeconds": 8.735009678999859
+      },
+      "zecBooksDuring": 0,
+      "zecDuringReceipts": [],
+      "sourceReadsDuring": 0,
+      "bracketBefore": {
+        "bookHash": "e776204c6f4fd10932636554352ff6902d491c90cc0ad9fc1cf790d0612d7588",
+        "observedAt": "2026-11-12T05:15:41.384299+00:00"
+      },
+      "bracketAfter": {
+        "bookHash": "0550cf7714c148c0c3ca1db088818d696d7f0a6f59fe038a55d59eec65555fb5",
+        "observedAt": "2026-11-12T05:15:53.270135+00:00"
+      },
+      "observedGenerationToPublishEndSeconds": 9.717699
+    },
+    {
+      "publication": {
+        "protocol": "immutable-checkpoint-v1",
+        "generation": "2026-11-12T05:16:18.258981+00:00",
+        "startedAt": "2026-11-12T05:16:19.177007+00:00",
+        "published": true,
+        "commit": "0ce6c30ebcb456ff45134632d29b963566cdbd32",
+        "unchanged": false,
+        "endedAt": "2026-11-12T05:16:27.133203+00:00",
+        "durationSeconds": 7.956203910000113
+      },
+      "zecBooksDuring": 0,
+      "zecDuringReceipts": [],
+      "sourceReadsDuring": 0,
+      "bracketBefore": {
+        "bookHash": "01551890891850f5ebee6d6619c4fea0d6e7787eadcc7a90df86e496925d6219",
+        "observedAt": "2026-11-12T05:16:18.008278+00:00"
+      },
+      "bracketAfter": {
+        "bookHash": "b7a4484ff3d8de704242813143b7d637bb09f7568c2f143166d9522340170270",
+        "observedAt": "2026-11-12T05:16:29.591899+00:00"
+      },
+      "observedGenerationToPublishEndSeconds": 8.874222
+    }
+  ],
+  "publisherSummary": {
+    "receipts": 35,
+    "failed": 24,
+    "succeeded": 11,
+    "failedDurationsSeconds": [
+      61.62389360300001,
+      61.68383174599998,
+      61.67611060500002,
+      61.723149998,
+      61.595644521999986,
+      61.707865982000044,
+      61.71364667900002,
+      61.66430162200004,
+      61.641809201,
+      61.697365583999954,
+      61.654271292999965,
+      61.584542913000064,
+      61.638735913999994,
+      61.64435003699998,
+      61.612572674000035,
+      61.757931117,
+      61.743547028000194,
+      61.856311157999926,
+      61.80290497500005,
+      61.74192596700004,
+      61.737212823999926,
+      61.68062467899995,
+      61.66823557399994,
+      61.59952588400006
+    ],
+    "successDurationsSeconds": [
+      22.664624151999988,
+      7.815575149000097,
+      7.927194636000195,
+      8.384510298000123,
+      7.945411171999922,
+      7.85440792899999,
+      8.128517167999917,
+      8.19697218300007,
+      8.093666872000085,
+      8.735009678999859,
+      7.956203910000113
+    ],
+    "failedSpanZecBooks": [
+      5,
+      5,
+      6,
+      5,
+      5,
+      6,
+      5,
+      5,
+      6,
+      5,
+      5,
+      6,
+      5,
+      5,
+      6,
+      5,
+      5,
+      6,
+      5,
+      5,
+      6,
+      5,
+      6,
+      5
+    ],
+    "failedSpanSourceReads": [
+      1,
+      2,
+      2,
+      2,
+      1,
+      2,
+      2,
+      2,
+      2,
+      1,
+      2,
+      2,
+      2,
+      2,
+      1,
+      2,
+      2,
+      2,
+      1,
+      2,
+      2,
+      2,
+      2,
+      1
+    ],
+    "firstSuccessfulReceipt": {
+      "protocol": "immutable-checkpoint-v1",
+      "generation": "2026-11-12T05:10:29.629663+00:00",
+      "startedAt": "2026-11-12T05:10:58.026038+00:00",
+      "published": true,
+      "commit": "dd2eb75b3790dadbb8696f4b91135fcfa4ad739b",
+      "unchanged": false,
+      "endedAt": "2026-11-12T05:11:20.690650+00:00",
+      "durationSeconds": 22.664624151999988
+    },
+    "maxObservedGenerationToSuccessEndSeconds": 51.060987,
+    "maxObservedGenerationToAttemptEndSeconds": 95.508434,
+    "errorCounts": {
+      "Checkpoint git read-tree failed (exit 128)": 24
+    }
+  },
+  "zecBookCoverage": {
+    "n": 163,
+    "first": "2026-11-12T04:45:42.079150+00:00",
+    "last": "2026-11-12T05:16:52.334123+00:00",
+    "medianIntervalSeconds": 11.585283,
+    "maxIntervalSeconds": 13.851822,
+    "intervalsOver30Seconds": 0
+  },
+  "genius": {
+    "history": 58,
+    "open": 50,
+    "closed": 8,
+    "cash": 4980.43376828499,
+    "realizedBeforeFunding": 86.71125486420027,
+    "openModeledPnlBeforeFunding": 550.0730846765875,
+    "closedPerformance": {
+      "n": 8,
+      "wins": 6,
+      "losses": 2,
+      "winRatePct": 75.0,
+      "expectancy": 10.838906858025034,
+      "profitFactor": 4.914207448134561,
+      "payoffRatio": 1.6380691493781872
+    },
+    "concentration": {
+      "ZEC": 12,
+      "BTC": 19,
+      "UNI": 1,
+      "XMR": 1,
+      "HYPE": 4,
+      "LIT": 2,
+      "ETH": 6,
+      "XRP": 1,
+      "SOL": 3,
+      "kPEPE": 1
+    },
+    "quality": {
+      "at": "2026-11-12T05:16:52.623510+00:00",
+      "status": "Unvalidated website-alert simulation; source holdings and funding incomplete",
+      "copyPerformanceEligible": false,
+      "activePaperExposures": 50,
+      "closureWarningPositionIds": [
+        10652,
+        10736,
+        10936,
+        11128,
+        11154,
+        11438,
+        11451,
+        11464,
+        11511,
+        11777,
+        11798,
+        11841,
+        11904,
+        11945,
+        11949,
+        11956,
+        11974,
+        11995,
+        12076,
+        12122,
+        12445,
+        12839,
+        13388,
+        14155,
+        17053
+      ],
+      "closureWarningCount": 25,
+      "sourceCardNoLongerLiveCount": 12,
+      "subsequentOpeningPositionIds": [
+        10652,
+        10736,
+        10936,
+        11128,
+        11154,
+        11438,
+        11464,
+        11511,
+        11777,
+        11798,
+        11841,
+        11904,
+        11945,
+        11949,
+        11974,
+        11995,
+        12076,
+        12122,
+        12445,
+        12839,
+        14155
+      ],
+      "subsequentOpeningWarningCount": 21,
+      "warningExposureModeledPnlBeforeFunding": 240.57611067538073,
+      "otherUnverifiedExposureModeledPnlBeforeFunding": 309.4969740012068,
+      "totalModeledPnlBeforeFunding": 550.0730846765875,
+      "interpretation": "Warning subtotal assumes continued exposure despite non-live source cards or subsequent openings; neither subtotal is verified copier performance."
+    },
+    "archiveExitScan": {
+      "at": "2026-11-12T05:16:15.363441+00:00",
+      "scope": "Saved original exits and copied-card ending revisions; uncaptured source history unknown",
+      "files": 178,
+      "bytesRead": 47375,
+      "exitCardsReviewed": 0,
+      "endingRevisionRowsReviewed": 0,
+      "newCardWarningsRecovered": 0,
+      "matchingExitIds": [
+        17036,
+        16710,
+        16479,
+        15815,
+        15248,
+        15176,
+        13000,
+        12838
+      ],
+      "backlogRemaining": false,
+      "errors": []
+    },
+    "pendingExitIds": [
+      "17036",
+      "16710",
+      "16479",
+      "15815",
+      "15248",
+      "15176",
+      "13000",
+      "12838"
+    ]
+  },
+  "scalp": {
+    "portfolio": {
+      "protocolVersion": "split-v4",
+      "families": {
+        "fresh": {
+          "total": 359,
+          "open": 0,
+          "closed": 359,
+          "closedPnlBeforeFunding": -49.08877837060961,
+          "milestones": {
+            "notional": {
+              "5": 9,
+              "10": 0,
+              "20": 0
+            },
+            "margin": {
+              "5": 103,
+              "10": 52,
+              "20": 30
+            }
+          }
+        },
+        "add_scalp": {
+          "total": 2386,
+          "open": 10,
+          "closed": 2376,
+          "closedPnlBeforeFunding": -790.7290126569267,
+          "milestones": {
+            "notional": {
+              "5": 5,
+              "10": 1,
+              "20": 0
+            },
+            "margin": {
+              "5": 492,
+              "10": 249,
+              "20": 89
+            }
+          }
+        }
+      },
+      "study": "github-portfolio-v3",
+      "initialEquity": 1000,
+      "equity": 159.6336484729048,
+      "realizedBeforeFunding": -839.8177910275363,
+      "openCloseEstimateBeforeFunding": -0.5485604995589414,
+      "marginInUse": 51.8801582165,
+      "available": 107.7534902564048,
+      "openCount": 10,
+      "closedCount": 2735,
+      "totalCount": 2745,
+      "maxOpen": 20,
+      "targetNotional": 200,
+      "maxPositionNotional": 350,
+      "stalePositions": [],
+      "milestones": {
+        "notional": {
+          "5": {
+            "hit": 14,
+            "total": 2745,
+            "unconfirmed": 2731
+          },
+          "10": {
+            "hit": 1,
+            "total": 2745,
+            "unconfirmed": 2744
+          },
+          "20": {
+            "hit": 0,
+            "total": 2745,
+            "unconfirmed": 2745
+          }
+        },
+        "margin": {
+          "5": {
+            "hit": 595,
+            "total": 2745,
+            "unconfirmed": 2150
+          },
+          "10": {
+            "hit": 301,
+            "total": 2745,
+            "unconfirmed": 2444
+          },
+          "20": {
+            "hit": 119,
+            "total": 2745,
+            "unconfirmed": 2626
+          }
+        }
+      },
+      "feesAssumedBps": 4.5,
+      "fundingComplete": false,
+      "at": "2026-11-12T05:16:52.665727+00:00",
+      "maxDrawdownObserved": 0.840850035330578
+    },
+    "closedPerformance": {
+      "n": 2735,
+      "wins": 870,
+      "losses": 1865,
+      "winRatePct": 31.809872029250457,
+      "expectancy": -0.30706317770659464,
+      "profitFactor": 0.45539223508146437,
+      "payoffRatio": 0.9762143889964725
+    },
+    "closedWithPathGap": 2692,
+    "newEntries": [
+      {
+        "eventId": 17523,
+        "signalClass": "add_scalp",
+        "openedAt": "2026-11-12T04:33:41.035749+00:00"
+      },
+      {
+        "eventId": 17524,
+        "signalClass": "add_scalp",
+        "openedAt": "2026-11-12T04:34:23.018633+00:00"
+      },
+      {
+        "eventId": 17525,
+        "signalClass": "add_scalp",
+        "openedAt": "2026-11-12T04:35:46.429286+00:00"
+      },
+      {
+        "eventId": 17527,
+        "signalClass": "add_scalp",
+        "openedAt": "2026-11-12T04:39:16.435842+00:00"
+      },
+      {
+        "eventId": 17528,
+        "signalClass": "add_scalp",
+        "openedAt": "2026-11-12T04:41:21.612320+00:00"
+      },
+      {
+        "eventId": 17534,
+        "signalClass": "add_scalp",
+        "openedAt": "2026-11-12T05:02:26.120371+00:00"
+      },
+      {
+        "eventId": 17535,
+        "signalClass": "add_scalp",
+        "openedAt": "2026-11-12T05:07:37.625538+00:00"
+      },
+      {
+        "eventId": 17536,
+        "signalClass": "add_scalp",
+        "openedAt": "2026-11-12T05:14:31.562181+00:00"
+      },
+      {
+        "eventId": 17537,
+        "signalClass": "add_scalp",
+        "openedAt": "2026-11-12T05:16:18.008278+00:00"
+      },
+      {
+        "eventId": 17538,
+        "signalClass": "add_scalp",
+        "openedAt": "2026-11-12T05:16:17.619522+00:00"
+      }
+    ],
+    "newClosures": [
+      {
+        "eventId": 17516,
+        "closedAt": "2026-11-12T04:20:14.887654+00:00",
+        "netPnl": -0.2080763657919977
+      },
+      {
+        "eventId": 17517,
+        "closedAt": "2026-11-12T04:32:57.118322+00:00",
+        "netPnl": 0.1391220962145045
+      },
+      {
+        "eventId": 17520,
+        "closedAt": "2026-11-12T04:40:39.718520+00:00",
+        "netPnl": -0.14293066519900188
+      },
+      {
+        "eventId": 17522,
+        "closedAt": "2026-11-12T05:06:17.009532+00:00",
+        "netPnl": -0.42953192172799554
+      }
+    ]
+  },
+  "interpretation": [
+    "Deployed immutable protocol and state/dashboard exact generation/hashes verified",
+    "24 failed publication spans each contain multiple independent ZEC books and at least one website read: in-window collector blocking by these publication failures is removed in this observed window",
+    "Read-tree exit128 remains a publishing error; original failure cause unresolved because command stderr was not saved. Do not infer missing tree/network cause",
+    "11 later successful publications verify eventual persistence; complete capture and future reliability not guaranteed",
+    "No source/parser/trading/risk rules changed; 79 prior tests retained and current workflow math step succeeded",
+    "No invented historical fill, deadline price or latency P&L"
+  ],
+  "nextTest": "Add bounded nonsecret Git command-stage/error diagnostics and verify current-job final drain/next handoff; keep publication-failure and collection-continuity measures separate",
+  "readiness": "research only; source identity, tier classification timing, source lifecycle, funding/liquidation, lawful US/PA access and meaningful out-of-sample/stressed-cost evidence remain unverified",
+  "websiteScan": {
+    "page": {
+      "at": "2026-11-12T05:17:45.079Z",
+      "status": "page_read",
+      "httpStatus": 200,
+      "hash": "e5753f69c269262066a7c116695aaf842fc8e23f1b3916e2530dd9345c6f3233"
+    },
+    "live": {
+      "at": "2026-11-12T05:17:47.404Z",
+      "status": "page_read",
+      "sourceHash": "b934ec785808d0b156570a44f3d9657d976a86478d36e04a0170e5959833a310",
+      "eventCount": 20
+    }
+  },
+  "currentJobs": {
+    "jobs": [
+      {
+        "id": 130978620685,
+        "name": "observe",
+        "status": "in_progress",
+        "conclusion": null,
+        "run_id": 43156834042,
+        "logs_url": null,
+        "steps": [
+          {
+            "name": "Set up job",
+            "status": "completed",
+            "conclusion": "success",
+            "number": 1
+          },
+          {
+            "name": "Run actions/checkout@v4",
+            "status": "completed",
+            "conclusion": "success",
+            "number": 2
+          },
+          {
+            "name": "Run actions/setup-python@v5",
+            "status": "completed",
+            "conclusion": "success",
+            "number": 3
+          },
+          {
+            "name": "Verify paper math",
+            "status": "completed",
+            "conclusion": "success",
+            "number": 4
+          },
+          {
+            "name": "Collect public events and paper quotes",
+            "status": "in_progress",
+            "conclusion": null,
+            "number": 5
+          },
+          {
+            "name": "Persist public evidence",
+            "status": "pending",
+            "conclusion": null,
+            "number": 6
+          },
+          {
+            "name": "Preserve evidence artifact even if commit fails",
+            "status": "pending",
+            "conclusion": null,
+            "number": 7
+          },
+          {
+            "name": "Hand off to next bounded collector window",
+            "status": "pending",
+            "conclusion": null,
+            "number": 8
+          },
+          {
+            "name": "Post Run actions/setup-python@v5",
+            "status": "pending",
+            "conclusion": null,
+            "number": 15
+          },
+          {
+            "name": "Post Run actions/checkout@v4",
+            "status": "pending",
+            "conclusion": null,
+            "number": 16
+          }
+        ]
+      }
+    ]
+  },
+  "completedJobs": {
+    "jobs": [
+      {
+        "id": 130959065202,
+        "name": "observe",
+        "status": "completed",
+        "conclusion": "success",
+        "run_id": 43150748195,
+        "logs_url": null,
+        "steps": [
+          {
+            "name": "Set up job",
+            "status": "completed",
+            "conclusion": "success",
+            "number": 1
+          },
+          {
+            "name": "Run actions/checkout@v4",
+            "status": "completed",
+            "conclusion": "success",
+            "number": 2
+          },
+          {
+            "name": "Run actions/setup-python@v5",
+            "status": "completed",
+            "conclusion": "success",
+            "number": 3
+          },
+          {
+            "name": "Verify paper math",
+            "status": "completed",
+            "conclusion": "success",
+            "number": 4
+          },
+          {
+            "name": "Collect public events and paper quotes",
+            "status": "completed",
+            "conclusion": "success",
+            "number": 5
+          },
+          {
+            "name": "Persist public evidence",
+            "status": "completed",
+            "conclusion": "success",
+            "number": 6
+          },
+          {
+            "name": "Preserve evidence artifact even if commit fails",
+            "status": "completed",
+            "conclusion": "success",
+            "number": 7
+          },
+          {
+            "name": "Hand off to next bounded collector window",
+            "status": "completed",
+            "conclusion": "success",
+            "number": 8
+          },
+          {
+            "name": "Post Run actions/setup-python@v5",
+            "status": "completed",
+            "conclusion": "success",
+            "number": 15
+          },
+          {
+            "name": "Post Run actions/checkout@v4",
+            "status": "completed",
+            "conclusion": "success",
+            "number": 16
+          },
+          {
+            "name": "Complete job",
+            "status": "completed",
+            "conclusion": "success",
+            "number": 17
+          }
+        ]
+      }
+    ]
+  },
+  "deployedHead": "c3c0f5d803b920be04b712939221b560d5d2ca10",
+  "deployedSourceSha256": {
+    "module": "2448476a23ffb04c2a3d96379eccc1e94731dd1c16064e8d299fe93f0f946389",
+    "watcher": "1a06ee922691d18a51e340b3ebf8e0688fc4c2bd6b14211d80658823a896746c",
+    "tests": "4f08904140272f17098ee7ff6a06f1d27fa255c547cdc70a7d382522a87933a1"
+  },
+  "verifiedCurrentSessionPrefixes": [
+    {
+      "path": "stupid-money-lab/data/2026-11-12/sessions/43156834042-1/archive-exit-audits.jsonl",
+      "bytes": 2142,
+      "sha256": "453ac27c29e192ffb1af20fd8c0d63f91f279aca1d762ff10cf83dfbebf114c3",
+      "rows": 6
+    },
+    {
+      "path": "stupid-money-lab/data/2026-11-12/sessions/43156834042-1/books.jsonl",
+      "bytes": 3131223,
+      "sha256": "6736dfa0540c30253f7df091a93b49fe333a7fd86fd6a6e40febdedfb6c140a9",
+      "rows": 3423
+    },
+    {
+      "path": "stupid-money-lab/data/2026-11-12/sessions/43156834042-1/candle-audits.jsonl",
+      "bytes": 8328,
+      "sha256": "7cf1493ba2b0c1503822c9686f259ecd6a4efcfc03f57dd923044858f75d619b",
+      "rows": 1
+    },
+    {
+      "path": "stupid-money-lab/data/2026-11-12/sessions/43156834042-1/checkpoint-publications.jsonl",
+      "bytes": 10180,
+      "sha256": "3757d807812a975ea14e0f3073cacdd9fe55906619e7de0b5901c6cc68aaa305",
+      "rows": 35
+    },
+    {
+      "path": "stupid-money-lab/data/2026-11-12/sessions/43156834042-1/coverage-gaps.jsonl",
+      "bytes": 112,
+      "sha256": "7ab4b82b54ed1d2eb5be232f1c3930c629524d4099bc98c86fc116d1a6f8f82c",
+      "rows": 1
+    },
+    {
+      "path": "stupid-money-lab/data/2026-11-12/sessions/43156834042-1/events.jsonl",
+      "bytes": 99771,
+      "sha256": "40cf2c4e86507422bda0714943ecb4d54cf8175b5268b37fa294d3d5fbe88d69",
+      "rows": 86
+    },
+    {
+      "path": "stupid-money-lab/data/2026-11-12/sessions/43156834042-1/fills.jsonl",
+      "bytes": 37224,
+      "sha256": "317ca5b5a9c134913bbecf7c6afc9cb39cabe834aef83c53c8c50e1e7dfa2874",
+      "rows": 6
+    },
+    {
+      "path": "stupid-money-lab/data/2026-11-12/sessions/43156834042-1/genius-copy.jsonl",
+      "bytes": 132510,
+      "sha256": "51db7858c1ecc613f700f0e77cfbe66f4fd232d6eb1ca9b4adec8cffa310fa9d",
+      "rows": 52
+    },
+    {
+      "path": "stupid-money-lab/data/2026-11-12/sessions/43156834042-1/lifecycle-events.jsonl",
+      "bytes": 3352,
+      "sha256": "b6361d508a25d5f79e2c82a8cba2d0345b9346a8e2e8ba2bbc91d468b47342a5",
+      "rows": 3
+    },
+    {
+      "path": "stupid-money-lab/data/2026-11-12/sessions/43156834042-1/lifecycle-quotes.jsonl",
+      "bytes": 3314045,
+      "sha256": "e781a194a89b0ea5b86c52a5ab747fc3d9b10a072d319344f5eb67527d0e49f8",
+      "rows": 9054
+    },
+    {
+      "path": "stupid-money-lab/data/2026-11-12/sessions/43156834042-1/oracle-contexts.jsonl",
+      "bytes": 4647453,
+      "sha256": "f1be123b259120b5c65e867221c9e08763ceb9a2987b5d87c9362c23bd6f906c",
+      "rows": 63
+    },
+    {
+      "path": "stupid-money-lab/data/2026-11-12/sessions/43156834042-1/phase-timings.jsonl",
+      "bytes": 11678,
+      "sha256": "4b3ff73e378b500708033a84e908048b956d9f31522299dc446cb986e90a9ce8",
+      "rows": 55
+    },
+    {
+      "path": "stupid-money-lab/data/2026-11-12/sessions/43156834042-1/portfolio.jsonl",
+      "bytes": 197405,
+      "sha256": "7bcc58f2d81c0b8ddf7062759ae05f33aab5648771243c0a99c9f8388186c0fc",
+      "rows": 163
+    },
+    {
+      "path": "stupid-money-lab/data/2026-11-12/sessions/43156834042-1/quotes.jsonl",
+      "bytes": 247665,
+      "sha256": "76af4df1b191b5f0ea1505d4b9bf9d265305b6277ae8cc3cef8b9f9ef4280bcc",
+      "rows": 1064
+    },
+    {
+      "path": "stupid-money-lab/data/2026-11-12/sessions/43156834042-1/signal-decisions.jsonl",
+      "bytes": 834,
+      "sha256": "49558e771e76f95bbf34fda30df4f9e331439070563687442b27d1fd90986ae4",
+      "rows": 5
+    },
+    {
+      "path": "stupid-money-lab/data/2026-11-12/sessions/43156834042-1/source-checks.jsonl",
+      "bytes": 8635,
+      "sha256": "22527e272c5b5b936acd00adfc32f1b8bd32001fc1f54f0db45761beb621843e",
+      "rows": 55
+    },
+    {
+      "path": "stupid-money-lab/data/2026-11-12/sessions/43156834042-1/wallet-reconciliation.jsonl",
+      "bytes": 102120,
+      "sha256": "c6e801475e2a628d0421fb431f525f871ef06073cf38f7c413d719d99d64d007",
+      "rows": 222
+    }
+  ]
+}
