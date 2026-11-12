@@ -2,3 +2,4 @@
 {"at":"2026-11-12T15:00:25.913169+00:00","eventId":18186,"action":"ADDED","tier":"GENIUS","coin":"HYPE","status":"skipped","reason":"An add-alert scalp for this wallet/market/side is already open; no duplicate exposure"}
 {"at":"2026-11-12T15:02:11.703751+00:00","eventId":18187,"action":"ADDED","tier":"GENIUS","coin":"BTC","status":"filled","reason":"Standalone add-alert scalp opened"}
 {"at":"2026-11-12T15:02:11.754886+00:00","eventId":18188,"action":"ADDED","tier":"SMART","coin":"BTC","status":"filled","reason":"Standalone add-alert scalp opened"}
+{"at":"2026-11-12T15:03:24.820785+00:00","eventId":18189,"action":"ADDED","tier":"SMART","coin":"ETH","status":"skipped","reason":"20 open funded positions maximum"}
