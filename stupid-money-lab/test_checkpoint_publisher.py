@@ -317,9 +317,15 @@ class CommandDiagnosticTests(unittest.TestCase):
                 (root / name).write_text('{"updatedAt":"1"}')
             publisher = cp.GitPublisher(root)
             read_count = 0
+            verified = []
             def run(args, cancel, env=None, data=None):
                 nonlocal read_count
-                if args[0] == 'hash-object': return 'a\nb\nc'
+                if args[0] == 'hash-object':
+                    verified[:] = [(str(i + 1).zfill(40), pathlib.Path(p).stat().st_size)
+                                   for i, p in enumerate(data.decode().splitlines())]
+                    return '\n'.join(oid for oid, _ in verified)
+                if 'cat-file' in args:
+                    return '\n'.join(f'{oid} blob {size}' for oid, size in verified)
                 if args[0] == 'rev-parse': return 'parent'
                 if args[0] == 'read-tree':
                     read_count += 1
