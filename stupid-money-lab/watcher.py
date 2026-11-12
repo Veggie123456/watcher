@@ -51,6 +51,26 @@ def append(kind, value):
     dest=ROOT/'data'/day/'sessions'/session/f'{kind}.jsonl';dest.parent.mkdir(parents=True,exist_ok=True)
     with dest.open('a') as f: f.write(json.dumps(value,separators=(',',':'))+'\n')
 
+def measured_phase(name, operation):
+    """Record wall timestamps and monotonic duration without altering results."""
+    started_at = stamp()
+    started_clock = time.monotonic()
+    outcome = 'raised'
+    try:
+        result = operation()
+        outcome = 'returned_false' if result is False else 'returned'
+        return result
+    finally:
+        receipt = {'protocol': 'collector-phase-v1', 'phase': name,
+                   'startedAt': started_at, 'endedAt': stamp(),
+                   'durationSeconds': max(0.0, time.monotonic() - started_clock),
+                   'outcome': outcome}
+        try:
+            append('phase-timings', receipt)
+        except OSError:
+            # Timing diagnostics must not replace an operation result or exception.
+            pass
+
 def reject(state,e,ex):
     r={'at':stamp(),'eventId':e.get('id'),'reason':str(ex)};append('rejections',r);state['rejections']=([r]+state.get('rejections',[]))[:100]
 
@@ -239,7 +259,7 @@ def cycle(state, fetch_source=True):
         except Exception as ex:
             reject(state,e,ex);decision(state,e,'skipped',str(ex));state['pendingSignals'].pop(str(e['id']),None)
     if fetch_source:
-        genius_copy.reconcile(state,info,stamp,millis,append)
+        measured_phase('reconciliation', lambda: genius_copy.reconcile(state,info,stamp,millis,append))
     quotes={}
     with ThreadPoolExecutor(max_workers=8) as pool:
         futures={pool.submit(book,coin):coin for coin in sorted(coins)}
@@ -308,7 +328,7 @@ def cycle(state, fetch_source=True):
         slim['studies'].append(item)
     (ROOT/'dashboard.json').write_text(json.dumps(slim,separators=(',',':')))
 
-def publish_checkpoint():
+def _publish_checkpoint():
     # A separate index builds a data-only commit atop current main. Never rebase
     # the running checkout or overwrite unrelated code/scanner files.
     paths=['stupid-money-lab/state.json','stupid-money-lab/dashboard.json'] + [str(p.relative_to(ROOT.parent)) for p in (ROOT/'data').rglob('*') if p.is_file()]
@@ -330,6 +350,9 @@ def publish_checkpoint():
         except Exception as ex:
             if attempt==1:append('errors',{'at':stamp(),'error':str(ex)+'; local evidence/artifact retained, no upload assumed.'})
     return False
+
+def publish_checkpoint():
+    return measured_phase('checkpoint_publish', _publish_checkpoint)
 
 if __name__=='__main__':
     parser=argparse.ArgumentParser();parser.add_argument('--seconds',type=int,default=0);parser.add_argument('--publish-every',type=int,default=0);parser.add_argument('--continuous',action='store_true');parser.add_argument('--publish-only',action='store_true');args=parser.parse_args()
