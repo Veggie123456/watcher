@@ -25,16 +25,51 @@ class MonitoringTests(unittest.TestCase):
   self.run_cycle(state,[])
   self.assertEqual(len(state['archivedRuns']),1)
  def test_nonlive_genius_opening_does_not_spend(self):
-  state={'studies':[],'seen':{}};e=self.event(5,tier='GENIUS');e['traderCard']={'venue':'hyperliquid','pnl':{'live':False}}
+  state={'studies':[],'seen':{}};e=self.event(5,tier='GENIUS');e['traderCard']={'rank':250,'venue':'hyperliquid','pnl':{'live':False}}
   self.run_cycle(state,[e])
   self.assertEqual(state['geniusCopy']['cash'],10000)
   self.assertEqual(state['geniusCopy']['decisions'][0]['entryRejectionCode'],'source_card_explicitly_nonlive')
  def test_live_genius_and_milestones_only(self):
-  state={'studies':[],'seen':{}};e=self.event(6,tier='GENIUS');e['traderCard']={'venue':'hyperliquid','pnl':{'live':True}}
+  state={'studies':[],'seen':{}};e=self.event(6,tier='GENIUS');e['traderCard']={'rank':250,'venue':'hyperliquid','pnl':{'live':True}}
   self.run_cycle(state,[e])
   self.assertEqual(len(state['geniusCopy']['history']),1)
   self.assertIn('milestones',state['geniusCopy']['history'][0])
   self.assertEqual(state['studies'],[])
+
+class RankFilterTests(unittest.TestCase):
+ def update(self,state,events):
+  import genius_copy
+  import datetime as dt
+  now='2026-11-12T17:30:00+00:00'
+  b={'time':1,'levels':[[{'px':100,'sz':100}],[{'px':100,'sz':100}]]}
+  genius_copy.update(state,events,{'BTC':b},{'BTC':{'szDecimals':3,'maxLeverage':50}},lambda:now,
+   lambda x:dt.datetime.fromisoformat(x).timestamp()*1000,lambda b:None,lambda levels,q:100,lambda *a:None,0,0,lambda s,b:(100,0))
+  return state['geniusCopy']
+ def event(self,id,rank,action='OPENED',tier='GENIUS'):
+  return {'id':id,'coin':'BTC','createdAt':'2026-11-12T17:30:00+00:00','traderCard':{'rank':rank,'venue':'hyperliquid','pnl':{'live':True}},'payload':{'wallet':'0x'+'a'*40,'cohort':tier,'side':'LONG','action':action,'leverage':3,'addedMarginUsd':100,'marginUsd':300}}
+ def test_rank_boundaries_and_unreadable(self):
+  for rank in [1,500,501,584,None,0,-1,True,'500',float('nan'),2.5]:
+   state={};ledger=self.update(state,[self.event(1,rank)])
+   eligible=type(rank) is int and 1<=rank<=500
+   self.assertEqual(len(ledger.get('history',[])),int(eligible),str(rank))
+   if eligible:self.assertEqual(ledger['history'][0]['sourceTraderRankAtEntry'],rank)
+   else:self.assertIn('entryRejectionCode',ledger['decisions'][0])
+ def test_lifecycle_retained_after_rank_downgrade(self):
+  state={};self.update(state,[self.event(1,500)])
+  ledger=self.update(state,[self.event(2,700,'ADDED')])
+  self.assertEqual(ledger['history'][0]['quantity'],3)
+  ledger=self.update(state,[self.event(3,None,'CLOSED','SMART')])
+  self.assertTrue(ledger['history'][0]['closedAt']);self.assertEqual(ledger['cash'],10000)
+ def test_smart_top_rank_cannot_open(self):
+  ledger=self.update({},[self.event(1,1,tier='SMART')]);self.assertEqual(ledger['positions'],{})
+ def test_100_slots_and_no_capital_reset(self):
+  state={};ledger=self.update(state,[])
+  ledger['cash']=9000
+  ledger['positions']={str(i):{'id':i,'symbol':'BTC','basis':1,'quantity':1} for i in range(99)}
+  self.update(state,[self.event(1,1)])
+  self.assertEqual(len(ledger['positions']),100);self.assertEqual(ledger['cash'],8960)
+  e=self.event(2,1);e['payload']['wallet']='0x'+'b'*40
+  self.update(state,[e]);self.assertEqual(ledger['decisions'][-1]['reason'],'100 open paper position limit')
 
 class DepthSizingTests(unittest.TestCase):
  def test_multilevel_fresh_long_and_short_fit_200_cap(self):
