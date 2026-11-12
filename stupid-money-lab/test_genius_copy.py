@@ -7,7 +7,7 @@ book = {'time':1,'levels':[[{'px':100,'sz':100}],[{'px':100,'sz':100}]]}
 state = {}
 
 def run(*rows, quotes=None):
-    events = [dict(id=i, coin='BTC', createdAt=now, payload=dict(dict(wallet=wallet, cohort=tier,
+    events = [dict(id=i, coin='BTC', createdAt=now, traderCard={'rank':250}, payload=dict(dict(wallet=wallet, cohort=tier,
               venue='hyperliquid', side='LONG', leverage={'value':3}, action=action), **extra)) for i,action,tier,extra in rows]
     genius_copy.update(state,events,{'BTC':book} if quotes is None else quotes,
         {'BTC':{'szDecimals':3,'maxLeverage':50}},lambda:now,lambda s:dt.datetime.fromisoformat(s).timestamp()*1000,
@@ -36,10 +36,10 @@ run()
 assert ledger['cash']==6003.8 and len(ledger['capitalFlows'])==1
 state.clear()
 ledger=run()
-ledger['positions']={str(i):{'id':i,'symbol':'BTC','basis':1,'quantity':1} for i in range(50)}
+ledger['positions']={str(i):{'id':i,'symbol':'BTC','basis':1,'quantity':1} for i in range(100)}
 ledger=run((100,'OPENED','GENIUS',{}))
-assert ledger['decisions'][-1]['reason']=='50 open paper position limit'
-print('Capital migration idempotence and 50-slot guard passed')
+assert ledger['decisions'][-1]['reason']=='100 open paper position limit'
+print('Capital migration idempotence and 100-slot guard passed')
 
 state.clear()
 ledger=run((201,'OPENED','GENIUS',{}))
@@ -129,7 +129,7 @@ run((506,'CLOSED','SMART',{}))
 assert position.get('closedAt') and ledger['cash']==10000
 run((507,'OPENED','GENIUS',{'venue':None}))
 assert ledger['decisions'][-1]['status']=='skipped'
-conflicting=dict(id=508,coin='BTC',createdAt=now,payload=dict(wallet=wallet,cohort='GENIUS',side='LONG',action='OPENED',venue='hyperliquid'),traderCard={'venue':'lighter'})
+conflicting=dict(id=508,coin='BTC',createdAt=now,payload=dict(wallet=wallet,cohort='GENIUS',side='LONG',action='OPENED',venue='hyperliquid'),traderCard={'venue':'lighter','rank':250})
 genius_copy.update(state,[conflicting],{'BTC':book},{'BTC':{'szDecimals':3,'maxLeverage':50}},lambda:now,
    lambda s:dt.datetime.fromisoformat(s).timestamp()*1000,lambda b:None,
    lambda levels,q:100,lambda *args:None,0,0,lambda s,b:(100,0))
