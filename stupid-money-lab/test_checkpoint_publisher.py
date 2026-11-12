@@ -236,6 +236,43 @@ class PublisherTests(unittest.TestCase):
         self.assertEqual(scope['append'].call_args.args[1]['kind'], 'shutdown')
         self.assertIsNone(scope['append'].call_args.args[1]['latestPublished'])
 
+    def test_retry_uses_fresh_private_index_after_timeout_leaves_lock(self):
+        def git(where, *args):
+            return subprocess.check_output(['git', '-c', 'user.name=Test', '-c',
+                'user.email=test@example.invalid', *args], cwd=where, stderr=subprocess.DEVNULL).decode().strip()
+        bare = self.repo / 'remote.git'
+        git(self.repo, 'init', '--bare', str(bare)); git(self.repo, 'init', '-b', 'main')
+        (self.repo / 'unrelated.txt').write_text('preserve')
+        git(self.repo, 'add', 'unrelated.txt', 'stupid-money-lab'); git(self.repo, 'commit', '-m', 'initial')
+        git(self.repo, 'remote', 'add', 'origin', str(bare)); git(self.repo, 'push', 'origin', 'main')
+        checkout_index = (self.repo / '.git' / 'index').read_bytes()
+        class InterruptedPublisher(cp.GitPublisher):
+            reads = []
+            first_lock = None
+            second_read_saw_retained_lock = False
+            interrupted = False
+            def run(self, args, cancel, env=None, data=None):
+                if args[0] == 'read-tree':
+                    self.reads.append(env['GIT_INDEX_FILE'])
+                    if len(self.reads) == 2:
+                        self.second_read_saw_retained_lock = self.first_lock.exists()
+                if args[0] == 'write-tree' and not self.interrupted:
+                    self.interrupted = True
+                    self.first_lock = pathlib.Path(env['GIT_INDEX_FILE'] + '.lock')
+                    self.first_lock.write_text('left by interrupted private index writer')
+                    raise cp.GitCommandError('write-tree timed out',
+                        {'stage':'write-tree','result':'timed_out','returnCode':-9})
+                return super().run(args, cancel, env, data)
+        publisher = InterruptedPublisher(self.root)
+        result = publisher(cp.capture(self.root), threading.Event())
+        self.assertTrue(result['commit']); self.assertEqual(len(publisher.reads), 2)
+        self.assertNotEqual(publisher.reads[0], publisher.reads[1])
+        self.assertTrue(publisher.second_read_saw_retained_lock)
+        self.assertEqual(result['attemptDiagnostics'][0]['command']['result'], 'timed_out')
+        self.assertEqual((self.repo / '.git' / 'index').read_bytes(), checkout_index)
+        self.assertEqual(git(bare, 'show', 'main:unrelated.txt'), 'preserve')
+        self.assertEqual(json.loads(git(bare, 'show', 'main:stupid-money-lab/state.json'))['updatedAt'], '1')
+
     def test_git_timeout_and_cancellation_kill_child_group(self):
         # Real local Git hook stalls push, exercising cancellation below Popen.
         bare = self.repo / 'remote.git'
