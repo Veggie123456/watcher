@@ -44,7 +44,7 @@ def refresh_paper_close_labels(ledger):
         position['paperClosureLabelVersion'] = 'paper-close-label-v1'
 
 
-def update(state, events, quotes, metadata, stamp, millis, fresh, price, append, fee, slip, mark):
+def update(state, events, quotes, metadata, stamp, millis, fresh, price, append, fee, slip, mark, target_wallet=None):
     now = stamp()
     ledger = state.setdefault('geniusCopy', {
         'startedAt': now, 'cash': STARTING_CASH, 'positions': {}, 'decisions': [],
@@ -59,12 +59,20 @@ def update(state, events, quotes, metadata, stamp, millis, fresh, price, append,
         ledger['contributedCapital'] = STARTING_CASH
         ledger['capitalProtocol'] = '10k-50-v1'
     ledger['maxOpen'] = MAX_OPEN
-    ledger['entryRankPolicy'] = {'version': 'genius-top500-v1', 'maxRank': MAX_ENTRY_RANK,
-                                 'scope': 'New OPENED entries only; preserve matching adds and exits'}
+    ledger['entryRankPolicy'] = ({'version': 'explicit-wallet-v1', 'wallet': target_wallet,
+                                 'scope': 'User-selected wallet, independent of rank/cohort'} if target_wallet else
+                                {'version': 'genius-top500-v1', 'maxRank': MAX_ENTRY_RANK,
+                                 'scope': 'New OPENED entries only; preserve matching adds and exits'})
     ledger['defaultPaperLeverage'] = PAPER_LEVERAGE
     positions = ledger['positions']
     decided = {row['eventId'] for row in ledger['decisions']}
-    for event in sorted(filter(candidate, events), key=lambda e: (millis(e['createdAt']), e['id'])):
+    def selected(e):
+        if not target_wallet:
+            return candidate(e)
+        p = e.get('payload', {})
+        return (str(p.get('wallet', '')).lower() == target_wallet and p.get('action') in ACTIONS
+                and re.fullmatch(r'[A-Za-z0-9:._-]{1,30}', e.get('coin', '')))
+    for event in sorted(filter(selected, events), key=lambda e: (millis(e['createdAt']), e['id'])):
         ep = event.get('payload', {})
         target = positions.get(f"{str(ep.get('wallet', '')).lower()}:{event.get('coin')}:{ep.get('side')}")
         exit_recovery = ep.get('action') in ('CLOSED', 'REDUCED') and target and not target.get('closedAt') and not any(l.get('eventId') == event['id'] for l in target.get('legs', []))
@@ -80,7 +88,7 @@ def update(state, events, quotes, metadata, stamp, millis, fresh, price, append,
         receipt = {'eventId': event['id'], 'action': action, 'wallet': wallet, 'market': coin,
                    'side': side, 'publication': event['createdAt'], 'observedAt': state.get('seen', {}).get(str(event['id']), {}).get('firstObservedAt', now)}
         try:
-            if action == 'OPENED':
+            if action == 'OPENED' and not target_wallet:
                 rank = (event.get('traderCard') or {}).get('rank')
                 receipt['sourceTraderRank'] = rank
                 receipt['entryRankPolicy'] = 'genius-top500-v1'
@@ -188,7 +196,7 @@ def update(state, events, quotes, metadata, stamp, millis, fresh, price, append,
                 position = {'id': event['id'], 'wallet': wallet, 'symbol': coin, 'direction': side.lower(),
                             'sourceVenue': source_venue, 'paperQuoteVenue': 'hyperliquid',
                             'sourceOpenedAt': event['createdAt'], 'sourceLeverage': p.get('leverage'),
-                            'sourceTraderRankAtEntry': receipt['sourceTraderRank'], 'entryRankPolicy': 'genius-top500-v1',
+                            'sourceTraderRankAtEntry': receipt.get('sourceTraderRank', (event.get('traderCard') or {}).get('rank')), 'entryRankPolicy': 'explicit-wallet-v1' if target_wallet else 'genius-top500-v1',
                             'paperLeverage': leverage, 'marginRequired': 0, 'leverageMode': 'fixed_5x',
                             'openedAt': now, 'quantity': 0, 'basis': 0, 'entryFees': 0, 'realized': 0, 'legs': []}
                 positions[key] = position
