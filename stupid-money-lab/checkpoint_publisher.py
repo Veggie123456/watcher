@@ -10,6 +10,7 @@ import hashlib
 import json
 import os
 import pathlib
+import re
 import signal
 import subprocess
 import tempfile
@@ -96,6 +97,48 @@ def freeze_prefix(repo, prefix, destination, cancel=None):
             raise ValueError('Raw evidence changed during freeze')
 
 
+class GitCommandError(RuntimeError):
+    def __init__(self, message, diagnostic):
+        super().__init__(message)
+        self.diagnostic = diagnostic
+
+
+class PublicationAttemptsError(RuntimeError):
+    def __init__(self, error, attempts):
+        super().__init__(str(error))
+        self.attempt_diagnostics = attempts
+
+
+def command_diagnostic(args, started_at, elapsed, result, returncode, stderr):
+    """Persist allowlisted categories/counts only, never raw stderr/argv/URLs.
+
+    Classification inspects at most 8192 bytes. This is intentionally lossy:
+    unrecognized errors stay unknown; classifications are diagnostic hints.
+    """
+    allowed = {'hash-object', 'fetch', 'rev-parse', 'read-tree', 'update-index',
+               'write-tree', 'commit-tree', 'push'}
+    stage = next((x for x in args if x in allowed), 'other')
+    sample = stderr[:8192].decode('utf-8', errors='replace').lower()
+    patterns = {
+        'authentication_or_permission': r'authentication failed|could not read username|permission denied|access denied',
+        'network_or_transport': r'could not resolve|failed to connect|connection (?:reset|refused)|remote end hung up|rpc failed|http [45][0-9][0-9]',
+        'missing_or_invalid_object': r'unable to read tree|not a tree|bad object|missing (?:blob|tree|object)|invalid object|not a valid object',
+        'partial_clone_object_fetch': r'promisor|could not fetch.*object',
+        'index_lock': r'index.lock|another git process|unable to create.*lock',
+        'index_corruption': r'index file corrupt|index file smaller|bad signature|unknown index',
+        'sparse_checkout': r'sparse.checkout|sparse index',
+        'non_fast_forward': r'non.fast.forward|fetch first|updates were rejected',
+        'disk_or_memory': r'no space left|out of memory|cannot allocate memory',
+    }
+    classes = [name for name, pattern in patterns.items() if re.search(pattern, sample)]
+    return {'protocol': 'git-command-diagnostic-v1', 'stage': stage,
+            'startedAt': started_at, 'endedAt': stamp(),
+            'durationSeconds': max(0.0, elapsed), 'result': result,
+            'returnCode': returncode, 'stderrBytes': len(stderr),
+            'stderrInspectedBytes': min(len(stderr), 8192),
+            'stderrInspectionTruncated': len(stderr) > 8192,
+            'stderrClasses': classes or ['unclassified']}
+
 class GitPublisher:
     """Git subprocesses are cancellable; no working index or checkout writes."""
     def __init__(self, root, remote='origin', branch='main', command_timeout=60):
@@ -105,8 +148,14 @@ class GitPublisher:
         self.command_timeout = command_timeout
 
     def run(self, args, cancel, env=None, data=None):
+        started_at, started_clock = stamp(), time.monotonic()
+        def failure(result, returncode, stderr):
+            diagnostic = command_diagnostic(args, started_at, time.monotonic()-started_clock,
+                                            result, returncode, stderr)
+            return GitCommandError('Checkpoint git ' + diagnostic['stage'] + ' ' + result +
+                                   (' (exit ' + str(returncode) + ')' if returncode is not None else ''), diagnostic)
         if cancel.is_set():
-            raise RuntimeError('Checkpoint cancelled; local evidence retained')
+            raise failure('cancelled', None, b'')
         command = ['git', '-c', 'core.sparseCheckout=false', '-c', 'index.sparse=false', *args]
         process = subprocess.Popen(command, cwd=self.repo, env=env, stdin=subprocess.PIPE,
                                    stdout=subprocess.PIPE, stderr=subprocess.PIPE, start_new_session=True)
@@ -115,14 +164,17 @@ class GitPublisher:
             first = True
             while True:
                 try:
-                    out, _ = process.communicate(input=data if first else None, timeout=.2)
+                    out, stderr = process.communicate(input=data if first else None, timeout=.2)
                     break
                 except subprocess.TimeoutExpired:
                     first = False
                     if cancel.is_set() or time.monotonic() >= deadline:
-                        raise RuntimeError('Checkpoint git ' + args[0] + ' cancelled or timed out')
+                        result = 'cancelled' if cancel.is_set() else 'timed_out'
+                        os.killpg(process.pid, signal.SIGKILL)
+                        _, stderr = process.communicate()
+                        raise failure(result, process.returncode, stderr)
             if process.returncode:
-                raise RuntimeError('Checkpoint git ' + args[0] + ' failed (exit ' + str(process.returncode) + ')')
+                raise failure('failed', process.returncode, stderr)
             return out.decode().strip()
         finally:
             if process.poll() is None:
@@ -159,7 +211,8 @@ class GitPublisher:
                                  for (name, _), blob in zip(frozen, blobs)).encode()
             env = {**os.environ, 'GIT_INDEX_FILE': str(td / 'index')}
             last_error = None
-            for _ in range(2):
+            attempt_diagnostics = []
+            for attempt in range(2):
                 try:
                     self.run(['fetch', '--depth=1', self.remote, self.branch], cancel)
                     parent = self.run(['rev-parse', 'FETCH_HEAD'], cancel)
@@ -167,18 +220,20 @@ class GitPublisher:
                     self.run(['update-index', '--index-info'], cancel, env, index_info)
                     tree = self.run(['write-tree'], cancel, env)
                     if tree == self.run(['rev-parse', parent + '^{tree}'], cancel):
-                        return {'commit': parent, 'unchanged': True}
+                        return {'commit': parent, 'unchanged': True, 'attemptDiagnostics': attempt_diagnostics}
                     commit = self.run(['-c', 'user.name=Stupid Money research collector', '-c',
                                        'user.email=41898282+github-actions[bot]@users.noreply.github.com',
                                        'commit-tree', tree, '-p', parent, '-m',
                                        'Record immutable public paper checkpoint [skip ci]'], cancel, env)
                     self.run(['push', self.remote, commit + ':refs/heads/' + self.branch], cancel)
-                    return {'commit': commit, 'unchanged': False}
+                    return {'commit': commit, 'unchanged': False, 'attemptDiagnostics': attempt_diagnostics}
                 except Exception as error:
                     last_error = error
+                    attempt_diagnostics.append({'attempt': attempt + 1, 'command': getattr(error, 'diagnostic',
+                                                {'protocol':'git-command-diagnostic-v1', 'stage':'unknown', 'result':'exception'})})
                     if cancel.is_set():
                         break
-            raise last_error
+            raise PublicationAttemptsError(last_error, attempt_diagnostics)
 
 
 class BackgroundPublisher:
@@ -236,6 +291,10 @@ class BackgroundPublisher:
                 receipt['published'] = True
             except Exception as error:
                 receipt['error'] = str(error)
+                if hasattr(error, 'attempt_diagnostics'):
+                    receipt['attemptDiagnostics'] = error.attempt_diagnostics
+                elif hasattr(error, 'diagnostic'):
+                    receipt['commandDiagnostic'] = error.diagnostic
             receipt.update(endedAt=stamp(), durationSeconds=time.monotonic() - clock)
             with self.condition:
                 if receipt['published']:
