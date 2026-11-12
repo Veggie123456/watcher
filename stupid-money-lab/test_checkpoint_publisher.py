@@ -209,6 +209,31 @@ class PublisherTests(unittest.TestCase):
         self.assertEqual(git(bare, 'show', 'main:unrelated.txt'), 'concurrent change')
         self.assertEqual(json.loads(git(bare, 'show', 'main:stupid-money-lab/state.json'))['updatedAt'], '1')
 
+    def test_collector_exception_closes_publisher_before_process_fallback(self):
+        import ast
+        import inspect
+        import sys
+        from unittest.mock import Mock
+        # Execute the actual CLI block with a failing cycle and no network.
+        main = ast.parse(inspect.getsource(watcher)).body[-1]
+        code = compile(ast.Module(body=[main], type_ignores=[]), 'watcher-cli', 'exec')
+        publisher, oracle = Mock(), Mock()
+        publisher.drain_receipts.return_value = []
+        publisher.status.return_value = {'latestPublished': None}
+        publisher.close.return_value = {'latestPublished': None, 'pending': '1'}
+        scope = dict(vars(watcher), __name__='__main__', ROOT=self.root,
+                     cycle=Mock(side_effect=ValueError('cycle failed')), append=Mock())
+        with patch.object(sys, 'argv', ['watcher.py', '--publish-every', '30']), \
+             patch.object(watcher.signal, 'signal'), \
+             patch.object(watcher.oracle_capture, 'BackgroundCollector', return_value=oracle), \
+             patch.object(cp, 'BackgroundPublisher', return_value=publisher):
+            with self.assertRaisesRegex(ValueError, 'cycle failed'):
+                exec(code, scope)
+        oracle.close.assert_called_once()
+        publisher.close.assert_called_once_with(drain_seconds=5)
+        self.assertEqual(scope['append'].call_args.args[1]['kind'], 'shutdown')
+        self.assertIsNone(scope['append'].call_args.args[1]['latestPublished'])
+
     def test_git_timeout_and_cancellation_kill_child_group(self):
         # Real local Git hook stalls push, exercising cancellation below Popen.
         bare = self.repo / 'remote.git'
