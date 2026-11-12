@@ -209,10 +209,13 @@ class GitPublisher:
                 raise RuntimeError('Incomplete frozen blob set')
             index_info = ''.join('100644 ' + blob + '\t' + name + '\n'
                                  for (name, _), blob in zip(frozen, blobs)).encode()
-            env = {**os.environ, 'GIT_INDEX_FILE': str(td / 'index')}
             last_error = None
             attempt_diagnostics = []
             for attempt in range(2):
+                # A killed Git command can leave its private index.lock behind.
+                # Start each retry with a different isolated index; never remove
+                # a working-checkout lock or reuse an interrupted index.
+                env = {**os.environ, 'GIT_INDEX_FILE': str(td / ('index-' + str(attempt + 1)))}
                 try:
                     self.run(['fetch', '--depth=1', self.remote, self.branch], cancel)
                     parent = self.run(['rev-parse', 'FETCH_HEAD'], cancel)
