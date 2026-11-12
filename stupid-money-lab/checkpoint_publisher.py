@@ -115,7 +115,7 @@ def command_diagnostic(args, started_at, elapsed, result, returncode, stderr):
     Classification inspects at most 8192 bytes. This is intentionally lossy:
     unrecognized errors stay unknown; classifications are diagnostic hints.
     """
-    allowed = {'hash-object', 'fetch', 'rev-parse', 'read-tree', 'update-index',
+    allowed = {'hash-object', 'cat-file', 'fetch', 'rev-parse', 'read-tree', 'update-index',
                'write-tree', 'commit-tree', 'push'}
     stage = next((x for x in args if x in allowed), 'other')
     sample = stderr[:8192].decode('utf-8', errors='replace').lower()
@@ -276,6 +276,21 @@ class GitPublisher:
             if trace_directory is not None:
                 trace_directory.cleanup()
 
+    def verify_frozen_blobs(self, expected, cancel):
+        """Require every edited object locally; never fetch to satisfy this guard."""
+        error = 'Frozen blob verification failed; no tree publication'
+        if not expected or any(not re.fullmatch(r'[0-9a-f]{40}', oid) or size < 0
+                               for oid, size in expected):
+            raise RuntimeError(error)
+        rows = self.run(['--no-lazy-fetch', 'cat-file',
+                         '--batch-check=%(objectname) %(objecttype) %(objectsize)'], cancel,
+                        data=('\n'.join(oid for oid, _ in expected) + '\n').encode()).splitlines()
+        if len(rows) != len(expected):
+            raise RuntimeError(error)
+        for row, (oid, size) in zip(rows, expected):
+            if row.split() != [oid, 'blob', str(size)]:
+                raise RuntimeError(error)
+
     def __call__(self, snapshot, cancel):
         with tempfile.TemporaryDirectory(prefix='sm-checkpoint-') as directory:
             td = pathlib.Path(directory)
@@ -285,7 +300,8 @@ class GitPublisher:
             manifest = {'protocol': 'immutable-checkpoint-v1', 'observedGeneration': snapshot.generation,
                         'stateHash': hashlib.sha256(snapshot.state).hexdigest(),
                         'dashboardHash': hashlib.sha256(snapshot.dashboard).hexdigest(),
-                        'rawPrefixes': {p.path: p.size for p in snapshot.prefixes}}
+                        'rawPrefixes': {p.path: p.size for p in snapshot.prefixes},
+                        'treeWritePolicy': 'remote-parent+verified-frozen-blobs-v1'}
             files['stupid-money-lab/checkpoint-manifest.json'] = json.dumps(manifest, separators=(',', ':')).encode()
             for name, content in files.items():
                 path = td / ('frozen-' + str(len(frozen)))
@@ -302,6 +318,8 @@ class GitPublisher:
                              data=('\n'.join(str(p) for _, p in frozen) + '\n').encode()).splitlines()
             if len(blobs) != len(frozen):
                 raise RuntimeError('Incomplete frozen blob set')
+            self.verify_frozen_blobs([(blob, path.stat().st_size)
+                                     for (_, path), blob in zip(frozen, blobs)], cancel)
             index_info = ''.join('100644 ' + blob + '\t' + name + '\n'
                                  for (name, _), blob in zip(frozen, blobs)).encode()
             last_error = None
@@ -316,7 +334,9 @@ class GitPublisher:
                     parent = self.run(['rev-parse', 'FETCH_HEAD'], cancel)
                     self.run(['read-tree', parent], cancel, env)
                     self.run(['update-index', '--index-info'], cancel, env, index_info)
-                    tree = self.run(['write-tree'], cancel, env)
+                    # Unchanged entries come from the fetched parent. All edits
+                    # were frozen, hashed and verified locally above.
+                    tree = self.run(['write-tree', '--missing-ok'], cancel, env)
                     if tree == self.run(['rev-parse', parent + '^{tree}'], cancel):
                         return {'commit': parent, 'unchanged': True, 'attemptDiagnostics': attempt_diagnostics}
                     commit = self.run(['-c', 'user.name=Stupid Money research collector', '-c',
