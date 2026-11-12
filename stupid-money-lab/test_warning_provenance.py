@@ -9,7 +9,7 @@ NOW = '2026-11-08T05:00:00+00:00'
 WALLET = '0x' + 'a' * 40
 BOOK = {'time': 1, 'levels': [[{'px': 100, 'sz': 100}], [{'px': 100, 'sz': 100}]]}
 def event(i, action, **extra):
-    return {'id': i, 'coin': 'BTC', 'createdAt': NOW,
+    return {'id': i, 'coin': 'BTC', 'createdAt': NOW, 'traderCard': {'rank':250},
             'payload': dict(wallet=WALLET, cohort='GENIUS', venue='hyperliquid',
                             side='LONG', action=action, leverage={'value': 3}, **extra)}
 def run(module, state, rows):
