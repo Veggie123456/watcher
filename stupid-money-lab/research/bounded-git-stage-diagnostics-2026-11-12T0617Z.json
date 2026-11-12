@@ -1,0 +1,3016 @@
+{
+  "protocol": "bounded-git-stage-diagnostics-audit-v1",
+  "runAt": "2026-11-12T06:23:43.601360+00:00",
+  "immutableCheckpoint": "89fdfc1d2495162fca45e2c9c8a79397517d057a",
+  "previousCutoff": "2026-11-12T05:16:52.665899Z",
+  "cutoff": "2026-11-12T06:17:42.322872+00:00",
+  "heartbeatAt": "2026-11-12T06:17:41.044882+00:00",
+  "sourceCheckedAt": "2026-11-12T06:17:41.420968+00:00",
+  "sourceStatus": "read",
+  "manifest": {
+    "protocol": "immutable-checkpoint-v1",
+    "observedGeneration": "2026-11-12T06:17:42.322872+00:00",
+    "stateHash": "606e7ce455b074a69b30c6efabeaecba400ef4bbfd126e39e51819778781b08d",
+    "dashboardHash": "ec89af397308b5f52079410275692a0fd59296f8fd28c23a1529fc8ccd4b5115",
+    "rawPrefixes": {
+      "stupid-money-lab/data/2026-10-31/events.jsonl": 2703552,
+      "stupid-money-lab/data/2026-11-01/events.jsonl": 2246605,
+      "stupid-money-lab/data/2026-11-02/events.jsonl": 1847001,
+      "stupid-money-lab/data/2026-11-03/events.jsonl": 984181,
+      "stupid-money-lab/data/2026-11-04/events.jsonl": 2718758,
+      "stupid-money-lab/data/2026-11-05/events.jsonl": 5398389,
+      "stupid-money-lab/data/2026-11-05/sessions/42121487409-1/events.jsonl": 22602,
+      "stupid-money-lab/data/2026-11-05/sessions/42122004257-1/events.jsonl": 313268,
+      "stupid-money-lab/data/2026-11-05/sessions/42124534832-1/events.jsonl": 225918,
+      "stupid-money-lab/data/2026-11-06/sessions/42124534832-1/events.jsonl": 216597,
+      "stupid-money-lab/data/2026-11-06/sessions/42136128495-1/events.jsonl": 439349,
+      "stupid-money-lab/data/2026-11-06/sessions/42142637512-1/events.jsonl": 361737,
+      "stupid-money-lab/data/2026-11-06/sessions/42148663335-1/events.jsonl": 45727,
+      "stupid-money-lab/data/2026-11-06/sessions/42149288224-1/events.jsonl": 25876,
+      "stupid-money-lab/data/2026-11-06/sessions/42149680356-1/events.jsonl": 316701,
+      "stupid-money-lab/data/2026-11-06/sessions/42155427386-1/events.jsonl": 67394,
+      "stupid-money-lab/data/2026-11-06/sessions/42156160980-1/events.jsonl": 22214,
+      "stupid-money-lab/data/2026-11-06/sessions/42156486447-1/events.jsonl": 393015,
+      "stupid-money-lab/data/2026-11-06/sessions/42161961189-1/events.jsonl": 308874,
+      "stupid-money-lab/data/2026-11-06/sessions/42167416268-1/events.jsonl": 239540,
+      "stupid-money-lab/data/2026-11-06/sessions/42172862907-1/events.jsonl": 215544,
+      "stupid-money-lab/data/2026-11-06/sessions/42178700194-1/events.jsonl": 96840,
+      "stupid-money-lab/data/2026-11-06/sessions/42180556093-1/events.jsonl": 305771,
+      "stupid-money-lab/data/2026-11-06/sessions/42186774668-1/events.jsonl": 187851,
+      "stupid-money-lab/data/2026-11-06/sessions/42193494351-1/events.jsonl": 128308,
+      "stupid-money-lab/data/2026-11-06/sessions/42201386578-1/events.jsonl": 43619,
+      "stupid-money-lab/data/2026-11-06/sessions/42201668015-1/events.jsonl": 21856,
+      "stupid-money-lab/data/2026-11-06/sessions/42202332735-1/events.jsonl": 155858,
+      "stupid-money-lab/data/2026-11-06/sessions/42209335703-1/events.jsonl": 217020,
+      "stupid-money-lab/data/2026-11-06/sessions/42216109093-1/events.jsonl": 286274,
+      "stupid-money-lab/data/2026-11-06/sessions/42223227835-1/events.jsonl": 411177,
+      "stupid-money-lab/data/2026-11-06/sessions/42230725074-1/events.jsonl": 115578,
+      "stupid-money-lab/data/2026-11-06/sessions/42233019683-1/events.jsonl": 22426,
+      "stupid-money-lab/data/2026-11-06/sessions/42233605483-1/events.jsonl": 30930,
+      "stupid-money-lab/data/2026-11-06/sessions/42234360317-1/events.jsonl": 814505,
+      "stupid-money-lab/data/2026-11-06/sessions/42242790194-1/events.jsonl": 50541,
+      "stupid-money-lab/data/2026-11-06/sessions/42243769436-1/events.jsonl": 21827,
+      "stupid-money-lab/data/2026-11-06/sessions/42244637275-1/events.jsonl": 511535,
+      "stupid-money-lab/data/2026-11-06/sessions/42253245172-1/events.jsonl": 346462,
+      "stupid-money-lab/data/2026-11-06/sessions/42261753708-1/events.jsonl": 235682,
+      "stupid-money-lab/data/2026-11-06/sessions/42270095715-1/events.jsonl": 43472,
+      "stupid-money-lab/data/2026-11-06/sessions/42278358232-1/events.jsonl": 163859,
+      "stupid-money-lab/data/2026-11-06/sessions/42286428657-1/events.jsonl": 205019,
+      "stupid-money-lab/data/2026-11-06/sessions/42294224600-1/events.jsonl": 107547,
+      "stupid-money-lab/data/2026-11-06/sessions/42301720462-1/events.jsonl": 150996,
+      "stupid-money-lab/data/2026-11-06/sessions/42308665149-1/events.jsonl": 84267,
+      "stupid-money-lab/data/2026-11-07/sessions/42314885094-1/events.jsonl": 182619,
+      "stupid-money-lab/data/2026-11-07/sessions/42320570297-1/events.jsonl": 110516,
+      "stupid-money-lab/data/2026-11-07/sessions/42325691805-1/events.jsonl": 128913,
+      "stupid-money-lab/data/2026-11-07/sessions/42330365166-1/events.jsonl": 126303,
+      "stupid-money-lab/data/2026-11-07/sessions/42334704726-1/events.jsonl": 123410,
+      "stupid-money-lab/data/2026-11-07/sessions/42338779869-1/events.jsonl": 121766,
+      "stupid-money-lab/data/2026-11-07/sessions/42342717269-1/events.jsonl": 108788,
+      "stupid-money-lab/data/2026-11-07/sessions/42346650807-1/events.jsonl": 54005,
+      "stupid-money-lab/data/2026-11-07/sessions/42350609223-1/events.jsonl": 59461,
+      "stupid-money-lab/data/2026-11-07/sessions/42354449951-1/events.jsonl": 62781,
+      "stupid-money-lab/data/2026-11-07/sessions/42358368171-1/events.jsonl": 75187,
+      "stupid-money-lab/data/2026-11-07/sessions/42362251166-1/events.jsonl": 44512,
+      "stupid-money-lab/data/2026-11-07/sessions/42366147028-1/events.jsonl": 47306,
+      "stupid-money-lab/data/2026-11-07/sessions/42370066531-1/events.jsonl": 135728,
+      "stupid-money-lab/data/2026-11-07/sessions/42374119464-1/events.jsonl": 147372,
+      "stupid-money-lab/data/2026-11-07/sessions/42378298027-1/events.jsonl": 213479,
+      "stupid-money-lab/data/2026-11-07/sessions/42382599197-1/events.jsonl": 113854,
+      "stupid-money-lab/data/2026-11-07/sessions/42387027057-1/events.jsonl": 237556,
+      "stupid-money-lab/data/2026-11-07/sessions/42391550391-1/events.jsonl": 137779,
+      "stupid-money-lab/data/2026-11-07/sessions/42396184556-1/events.jsonl": 94375,
+      "stupid-money-lab/data/2026-11-07/sessions/42400766009-1/events.jsonl": 70040,
+      "stupid-money-lab/data/2026-11-07/sessions/42405303120-1/events.jsonl": 127995,
+      "stupid-money-lab/data/2026-11-07/sessions/42409772615-1/events.jsonl": 148917,
+      "stupid-money-lab/data/2026-11-07/sessions/42414205760-1/events.jsonl": 121465,
+      "stupid-money-lab/data/2026-11-07/sessions/42418591952-1/events.jsonl": 99419,
+      "stupid-money-lab/data/2026-11-07/sessions/42422938389-1/events.jsonl": 105271,
+      "stupid-money-lab/data/2026-11-07/sessions/42427151742-1/events.jsonl": 1113,
+      "stupid-money-lab/data/2026-11-08/sessions/42427151742-1/events.jsonl": 206025,
+      "stupid-money-lab/data/2026-11-08/sessions/42431343605-1/events.jsonl": 112426,
+      "stupid-money-lab/data/2026-11-08/sessions/42435409564-1/events.jsonl": 204857,
+      "stupid-money-lab/data/2026-11-08/sessions/42439350474-1/events.jsonl": 171221,
+      "stupid-money-lab/data/2026-11-08/sessions/42443190428-1/events.jsonl": 182551,
+      "stupid-money-lab/data/2026-11-08/sessions/42446946091-1/events.jsonl": 223671,
+      "stupid-money-lab/data/2026-11-08/sessions/42450599053-1/events.jsonl": 203422,
+      "stupid-money-lab/data/2026-11-08/sessions/42454228796-1/events.jsonl": 168973,
+      "stupid-money-lab/data/2026-11-08/sessions/42457962342-1/events.jsonl": 100583,
+      "stupid-money-lab/data/2026-11-08/sessions/42461731629-1/events.jsonl": 93490,
+      "stupid-money-lab/data/2026-11-08/sessions/42464839808-1/events.jsonl": 173045,
+      "stupid-money-lab/data/2026-11-08/sessions/42469540623-1/events.jsonl": 152413,
+      "stupid-money-lab/data/2026-11-08/sessions/42473482429-1/events.jsonl": 210362,
+      "stupid-money-lab/data/2026-11-08/sessions/42477537626-1/events.jsonl": 351660,
+      "stupid-money-lab/data/2026-11-08/sessions/42481794231-1/events.jsonl": 363025,
+      "stupid-money-lab/data/2026-11-08/sessions/42486158998-1/events.jsonl": 197963,
+      "stupid-money-lab/data/2026-11-08/sessions/42490667610-1/events.jsonl": 269895,
+      "stupid-money-lab/data/2026-11-08/sessions/42495290746-1/events.jsonl": 269629,
+      "stupid-money-lab/data/2026-11-08/sessions/42499973147-1/events.jsonl": 182085,
+      "stupid-money-lab/data/2026-11-08/sessions/42504665014-1/events.jsonl": 338839,
+      "stupid-money-lab/data/2026-11-08/sessions/42509302271-1/events.jsonl": 327914,
+      "stupid-money-lab/data/2026-11-08/sessions/42513950101-1/events.jsonl": 194881,
+      "stupid-money-lab/data/2026-11-08/sessions/42518608394-1/events.jsonl": 302472,
+      "stupid-money-lab/data/2026-11-08/sessions/42523301143-1/events.jsonl": 634524,
+      "stupid-money-lab/data/2026-11-08/sessions/42527922531-1/events.jsonl": 715629,
+      "stupid-money-lab/data/2026-11-08/sessions/42532565782-1/events.jsonl": 705229,
+      "stupid-money-lab/data/2026-11-08/sessions/42537060372-1/events.jsonl": 175291,
+      "stupid-money-lab/data/2026-11-09/sessions/42537060372-1/events.jsonl": 525772,
+      "stupid-money-lab/data/2026-11-09/sessions/42541910894-1/events.jsonl": 496379,
+      "stupid-money-lab/data/2026-11-09/sessions/42546855911-1/events.jsonl": 340482,
+      "stupid-money-lab/data/2026-11-09/sessions/42551870551-1/events.jsonl": 354406,
+      "stupid-money-lab/data/2026-11-09/sessions/42556895920-1/events.jsonl": 316062,
+      "stupid-money-lab/data/2026-11-09/sessions/42561903413-1/events.jsonl": 203163,
+      "stupid-money-lab/data/2026-11-09/sessions/42566957241-1/events.jsonl": 405094,
+      "stupid-money-lab/data/2026-11-09/sessions/42572191060-1/events.jsonl": 577653,
+      "stupid-money-lab/data/2026-11-09/sessions/42577951125-1/events.jsonl": 713216,
+      "stupid-money-lab/data/2026-11-09/sessions/42583854762-1/events.jsonl": 558311,
+      "stupid-money-lab/data/2026-11-09/sessions/42590571398-1/events.jsonl": 474368,
+      "stupid-money-lab/data/2026-11-09/sessions/42597592963-1/events.jsonl": 333398,
+      "stupid-money-lab/data/2026-11-09/sessions/42604813603-1/events.jsonl": 460612,
+      "stupid-money-lab/data/2026-11-09/sessions/42612235207-1/events.jsonl": 414626,
+      "stupid-money-lab/data/2026-11-09/sessions/42619798300-1/events.jsonl": 550411,
+      "stupid-money-lab/data/2026-11-09/sessions/42627746677-1/events.jsonl": 508400,
+      "stupid-money-lab/data/2026-11-09/sessions/42636487769-1/events.jsonl": 701016,
+      "stupid-money-lab/data/2026-11-09/sessions/42645768620-1/events.jsonl": 677382,
+      "stupid-money-lab/data/2026-11-09/sessions/42655128849-1/events.jsonl": 660602,
+      "stupid-money-lab/data/2026-11-09/sessions/42664223523-1/events.jsonl": 458721,
+      "stupid-money-lab/data/2026-11-09/sessions/42702612402-1/events.jsonl": 335087,
+      "stupid-money-lab/data/2026-11-09/sessions/42711316626-1/events.jsonl": 244135,
+      "stupid-money-lab/data/2026-11-09/sessions/42719343725-1/events.jsonl": 241550,
+      "stupid-money-lab/data/2026-11-10/sessions/42719343725-1/events.jsonl": 127018,
+      "stupid-money-lab/data/2026-11-10/sessions/42726666894-1/events.jsonl": 245151,
+      "stupid-money-lab/data/2026-11-10/sessions/42733686309-1/events.jsonl": 99385,
+      "stupid-money-lab/data/2026-11-10/sessions/42740227568-1/events.jsonl": 323942,
+      "stupid-money-lab/data/2026-11-10/sessions/42746531814-1/events.jsonl": 319157,
+      "stupid-money-lab/data/2026-11-10/sessions/42752559468-1/events.jsonl": 179825,
+      "stupid-money-lab/data/2026-11-10/sessions/42758438405-1/events.jsonl": 221810,
+      "stupid-money-lab/data/2026-11-10/sessions/42764226264-1/events.jsonl": 221889,
+      "stupid-money-lab/data/2026-11-10/sessions/42770273947-1/events.jsonl": 284773,
+      "stupid-money-lab/data/2026-11-10/sessions/42776602622-1/events.jsonl": 293410,
+      "stupid-money-lab/data/2026-11-10/sessions/42783510439-1/events.jsonl": 205393,
+      "stupid-money-lab/data/2026-11-10/sessions/42791015904-1/events.jsonl": 378649,
+      "stupid-money-lab/data/2026-11-10/sessions/42798832144-1/events.jsonl": 380618,
+      "stupid-money-lab/data/2026-11-10/sessions/42806560801-1/events.jsonl": 214081,
+      "stupid-money-lab/data/2026-11-10/sessions/42814202798-1/events.jsonl": 349309,
+      "stupid-money-lab/data/2026-11-10/sessions/42822191638-1/events.jsonl": 584548,
+      "stupid-money-lab/data/2026-11-10/sessions/42830825710-1/events.jsonl": 714843,
+      "stupid-money-lab/data/2026-11-10/sessions/42840229385-1/events.jsonl": 837942,
+      "stupid-money-lab/data/2026-11-10/sessions/42849915619-1/events.jsonl": 801150,
+      "stupid-money-lab/data/2026-11-10/sessions/42859244216-1/events.jsonl": 774661,
+      "stupid-money-lab/data/2026-11-10/sessions/42868885584-1/events.jsonl": 583852,
+      "stupid-money-lab/data/2026-11-10/sessions/42878363804-1/events.jsonl": 387032,
+      "stupid-money-lab/data/2026-11-10/sessions/42887663387-1/events.jsonl": 461247,
+      "stupid-money-lab/data/2026-11-10/sessions/42896927915-1/events.jsonl": 579076,
+      "stupid-money-lab/data/2026-11-10/sessions/42905938593-1/events.jsonl": 447803,
+      "stupid-money-lab/data/2026-11-10/sessions/42914721731-1/events.jsonl": 263962,
+      "stupid-money-lab/data/2026-11-10/sessions/42922908966-1/events.jsonl": 186170,
+      "stupid-money-lab/data/2026-11-11/sessions/42922908966-1/events.jsonl": 256909,
+      "stupid-money-lab/data/2026-11-11/sessions/42930310040-1/events.jsonl": 452854,
+      "stupid-money-lab/data/2026-11-11/sessions/42937428040-1/events.jsonl": 334456,
+      "stupid-money-lab/data/2026-11-11/sessions/42944052442-1/events.jsonl": 332309,
+      "stupid-money-lab/data/2026-11-11/sessions/42950351643-1/events.jsonl": 430045,
+      "stupid-money-lab/data/2026-11-11/sessions/42956421737-1/events.jsonl": 223823,
+      "stupid-money-lab/data/2026-11-11/sessions/42962452261-1/events.jsonl": 128974,
+      "stupid-money-lab/data/2026-11-11/sessions/42968519426-1/events.jsonl": 240797,
+      "stupid-money-lab/data/2026-11-11/sessions/42974893370-1/events.jsonl": 343766,
+      "stupid-money-lab/data/2026-11-11/sessions/42981522696-1/events.jsonl": 438511,
+      "stupid-money-lab/data/2026-11-11/sessions/42988643299-1/events.jsonl": 342681,
+      "stupid-money-lab/data/2026-11-11/sessions/42996270006-1/events.jsonl": 293272,
+      "stupid-money-lab/data/2026-11-11/sessions/43004073523-1/events.jsonl": 326961,
+      "stupid-money-lab/data/2026-11-11/sessions/43011784572-1/events.jsonl": 333457,
+      "stupid-money-lab/data/2026-11-11/sessions/43019531181-1/events.jsonl": 239428,
+      "stupid-money-lab/data/2026-11-11/sessions/43027628850-1/events.jsonl": 334402,
+      "stupid-money-lab/data/2026-11-11/sessions/43036191551-1/events.jsonl": 342483,
+      "stupid-money-lab/data/2026-11-11/sessions/43045252098-1/events.jsonl": 431928,
+      "stupid-money-lab/data/2026-11-11/sessions/43054475689-1/events.jsonl": 464643,
+      "stupid-money-lab/data/2026-11-11/sessions/43063619699-1/events.jsonl": 511896,
+      "stupid-money-lab/data/2026-11-11/sessions/43072646340-1/events.jsonl": 308726,
+      "stupid-money-lab/data/2026-11-11/sessions/43081506740-1/events.jsonl": 321115,
+      "stupid-money-lab/data/2026-11-11/sessions/43090220173-1/events.jsonl": 282716,
+      "stupid-money-lab/data/2026-11-11/sessions/43090220173-2/events.jsonl": 342073,
+      "stupid-money-lab/data/2026-11-11/sessions/43110161866-1/events.jsonl": 519173,
+      "stupid-money-lab/data/2026-11-11/sessions/43117824762-1/events.jsonl": 455677,
+      "stupid-money-lab/data/2026-11-12/sessions/43117824762-1/events.jsonl": 71289,
+      "stupid-money-lab/data/2026-11-12/sessions/43124862548-1/events.jsonl": 367690,
+      "stupid-money-lab/data/2026-11-12/sessions/43131669457-1/events.jsonl": 221518,
+      "stupid-money-lab/data/2026-11-12/sessions/43138096634-1/events.jsonl": 223705,
+      "stupid-money-lab/data/2026-11-12/sessions/43144522905-1/events.jsonl": 179954,
+      "stupid-money-lab/data/2026-11-12/sessions/43150748195-1/events.jsonl": 208698,
+      "stupid-money-lab/data/2026-11-12/sessions/43156834042-1/events.jsonl": 225879,
+      "stupid-money-lab/data/2026-11-12/sessions/43162992442-1/archive-exit-audits.jsonl": 2497,
+      "stupid-money-lab/data/2026-11-12/sessions/43162992442-1/books.jsonl": 3640967,
+      "stupid-money-lab/data/2026-11-12/sessions/43162992442-1/candle-audits.jsonl": 55484,
+      "stupid-money-lab/data/2026-11-12/sessions/43162992442-1/checkpoint-publications.jsonl": 15180,
+      "stupid-money-lab/data/2026-11-12/sessions/43162992442-1/coverage-gaps.jsonl": 112,
+      "stupid-money-lab/data/2026-11-12/sessions/43162992442-1/events.jsonl": 167411,
+      "stupid-money-lab/data/2026-11-12/sessions/43162992442-1/fills.jsonl": 92766,
+      "stupid-money-lab/data/2026-11-12/sessions/43162992442-1/genius-copy.jsonl": 155541,
+      "stupid-money-lab/data/2026-11-12/sessions/43162992442-1/lifecycle-events.jsonl": 6880,
+      "stupid-money-lab/data/2026-11-12/sessions/43162992442-1/lifecycle-quotes.jsonl": 3950134,
+      "stupid-money-lab/data/2026-11-12/sessions/43162992442-1/oracle-contexts.jsonl": 5381562,
+      "stupid-money-lab/data/2026-11-12/sessions/43162992442-1/phase-timings.jsonl": 13376,
+      "stupid-money-lab/data/2026-11-12/sessions/43162992442-1/portfolio.jsonl": 227079,
+      "stupid-money-lab/data/2026-11-12/sessions/43162992442-1/quotes.jsonl": 560277,
+      "stupid-money-lab/data/2026-11-12/sessions/43162992442-1/signal-decisions.jsonl": 1170,
+      "stupid-money-lab/data/2026-11-12/sessions/43162992442-1/source-checks.jsonl": 9891,
+      "stupid-money-lab/data/2026-11-12/sessions/43162992442-1/wallet-reconciliation.jsonl": 119140
+    }
+  },
+  "stateDashboardHashesVerified": true,
+  "coverage": {
+    "43156834042-1": {
+      "n": 96,
+      "first": "2026-11-12T04:45:41.602570+00:00",
+      "last": "2026-11-12T05:40:26.581591+00:00",
+      "medianIntervalSeconds": 34.330262,
+      "maxIntervalSeconds": 36.863803
+    },
+    "43162992442-1": {
+      "n": 63,
+      "first": "2026-11-12T05:41:25.461073+00:00",
+      "last": "2026-11-12T06:17:41.420968+00:00",
+      "medianIntervalSeconds": 34.769922,
+      "maxIntervalSeconds": 37.79424
+    }
+  },
+  "handoffSeconds": 58.879482,
+  "publishing": {
+    "43156834042-1": {
+      "records": [
+        {
+          "protocol": "immutable-checkpoint-v1",
+          "generation": "2026-11-12T04:46:16.573880+00:00",
+          "startedAt": "2026-11-12T04:46:17.575289+00:00",
+          "published": false,
+          "error": "Checkpoint git read-tree failed (exit 128)",
+          "endedAt": "2026-11-12T04:47:19.199180+00:00",
+          "durationSeconds": 61.62389360300001
+        },
+        {
+          "protocol": "immutable-checkpoint-v1",
+          "generation": "2026-11-12T04:46:51.049622+00:00",
+          "startedAt": "2026-11-12T04:47:19.199217+00:00",
+          "published": false,
+          "error": "Checkpoint git read-tree failed (exit 128)",
+          "endedAt": "2026-11-12T04:48:20.883032+00:00",
+          "durationSeconds": 61.68383174599998
+        },
+        {
+          "protocol": "immutable-checkpoint-v1",
+          "generation": "2026-11-12T04:47:59.963472+00:00",
+          "startedAt": "2026-11-12T04:48:20.883068+00:00",
+          "published": false,
+          "error": "Checkpoint git read-tree failed (exit 128)",
+          "endedAt": "2026-11-12T04:49:22.559165+00:00",
+          "durationSeconds": 61.67611060500002
+        },
+        {
+          "protocol": "immutable-checkpoint-v1",
+          "generation": "2026-11-12T04:49:08.501585+00:00",
+          "startedAt": "2026-11-12T04:49:22.559194+00:00",
+          "published": false,
+          "error": "Checkpoint git read-tree failed (exit 128)",
+          "endedAt": "2026-11-12T04:50:24.282326+00:00",
+          "durationSeconds": 61.723149998
+        },
+        {
+          "protocol": "immutable-checkpoint-v1",
+          "generation": "2026-11-12T04:50:19.124919+00:00",
+          "startedAt": "2026-11-12T04:50:24.282362+00:00",
+          "published": false,
+          "error": "Checkpoint git read-tree failed (exit 128)",
+          "endedAt": "2026-11-12T04:51:25.877990+00:00",
+          "durationSeconds": 61.595644521999986
+        },
+        {
+          "protocol": "immutable-checkpoint-v1",
+          "generation": "2026-11-12T04:50:53.586763+00:00",
+          "startedAt": "2026-11-12T04:51:25.878024+00:00",
+          "published": false,
+          "error": "Checkpoint git read-tree failed (exit 128)",
+          "endedAt": "2026-11-12T04:52:27.585873+00:00",
+          "durationSeconds": 61.707865982000044
+        },
+        {
+          "protocol": "immutable-checkpoint-v1",
+          "generation": "2026-11-12T04:52:02.711196+00:00",
+          "startedAt": "2026-11-12T04:52:27.585908+00:00",
+          "published": false,
+          "error": "Checkpoint git read-tree failed (exit 128)",
+          "endedAt": "2026-11-12T04:53:29.299532+00:00",
+          "durationSeconds": 61.71364667900002
+        },
+        {
+          "protocol": "immutable-checkpoint-v1",
+          "generation": "2026-11-12T04:53:11.330300+00:00",
+          "startedAt": "2026-11-12T04:53:29.299570+00:00",
+          "published": false,
+          "error": "Checkpoint git read-tree failed (exit 128)",
+          "endedAt": "2026-11-12T04:54:30.963858+00:00",
+          "durationSeconds": 61.66430162200004
+        },
+        {
+          "protocol": "immutable-checkpoint-v1",
+          "generation": "2026-11-12T04:54:20.810660+00:00",
+          "startedAt": "2026-11-12T04:54:30.963886+00:00",
+          "published": false,
+          "error": "Checkpoint git read-tree failed (exit 128)",
+          "endedAt": "2026-11-12T04:55:32.605676+00:00",
+          "durationSeconds": 61.641809201
+        },
+        {
+          "protocol": "immutable-checkpoint-v1",
+          "generation": "2026-11-12T04:55:31.618585+00:00",
+          "startedAt": "2026-11-12T04:55:32.605715+00:00",
+          "published": false,
+          "error": "Checkpoint git read-tree failed (exit 128)",
+          "endedAt": "2026-11-12T04:56:34.303062+00:00",
+          "durationSeconds": 61.697365583999954
+        },
+        {
+          "protocol": "immutable-checkpoint-v1",
+          "generation": "2026-11-12T04:56:06.276268+00:00",
+          "startedAt": "2026-11-12T04:56:34.303099+00:00",
+          "published": false,
+          "error": "Checkpoint git read-tree failed (exit 128)",
+          "endedAt": "2026-11-12T04:57:35.957351+00:00",
+          "durationSeconds": 61.654271292999965
+        },
+        {
+          "protocol": "immutable-checkpoint-v1",
+          "generation": "2026-11-12T04:57:14.741391+00:00",
+          "startedAt": "2026-11-12T04:57:35.957390+00:00",
+          "published": false,
+          "error": "Checkpoint git read-tree failed (exit 128)",
+          "endedAt": "2026-11-12T04:58:37.541914+00:00",
+          "durationSeconds": 61.584542913000064
+        },
+        {
+          "protocol": "immutable-checkpoint-v1",
+          "generation": "2026-11-12T04:58:23.353445+00:00",
+          "startedAt": "2026-11-12T04:58:37.541955+00:00",
+          "published": false,
+          "error": "Checkpoint git read-tree failed (exit 128)",
+          "endedAt": "2026-11-12T04:59:39.180672+00:00",
+          "durationSeconds": 61.638735913999994
+        },
+        {
+          "protocol": "immutable-checkpoint-v1",
+          "generation": "2026-11-12T04:59:32.038544+00:00",
+          "startedAt": "2026-11-12T04:59:39.180711+00:00",
+          "published": false,
+          "error": "Checkpoint git read-tree failed (exit 128)",
+          "endedAt": "2026-11-12T05:00:40.825050+00:00",
+          "durationSeconds": 61.64435003699998
+        },
+        {
+          "protocol": "immutable-checkpoint-v1",
+          "generation": "2026-11-12T05:00:06.929196+00:00",
+          "startedAt": "2026-11-12T05:00:40.825076+00:00",
+          "published": false,
+          "error": "Checkpoint git read-tree failed (exit 128)",
+          "endedAt": "2026-11-12T05:01:42.437630+00:00",
+          "durationSeconds": 61.612572674000035
+        },
+        {
+          "protocol": "immutable-checkpoint-v1",
+          "generation": "2026-11-12T05:01:17.552650+00:00",
+          "startedAt": "2026-11-12T05:01:42.437667+00:00",
+          "published": false,
+          "error": "Checkpoint git read-tree failed (exit 128)",
+          "endedAt": "2026-11-12T05:02:44.195585+00:00",
+          "durationSeconds": 61.757931117
+        },
+        {
+          "protocol": "immutable-checkpoint-v1",
+          "generation": "2026-11-12T05:02:26.339878+00:00",
+          "startedAt": "2026-11-12T05:02:44.195613+00:00",
+          "published": false,
+          "error": "Checkpoint git read-tree failed (exit 128)",
+          "endedAt": "2026-11-12T05:03:45.939144+00:00",
+          "durationSeconds": 61.743547028000194
+        },
+        {
+          "protocol": "immutable-checkpoint-v1",
+          "generation": "2026-11-12T05:03:35.248352+00:00",
+          "startedAt": "2026-11-12T05:03:45.939176+00:00",
+          "published": false,
+          "error": "Checkpoint git read-tree failed (exit 128)",
+          "endedAt": "2026-11-12T05:04:47.795466+00:00",
+          "durationSeconds": 61.856311157999926
+        },
+        {
+          "protocol": "immutable-checkpoint-v1",
+          "generation": "2026-11-12T05:04:44.067531+00:00",
+          "startedAt": "2026-11-12T05:04:47.795508+00:00",
+          "published": false,
+          "error": "Checkpoint git read-tree failed (exit 128)",
+          "endedAt": "2026-11-12T05:05:49.598398+00:00",
+          "durationSeconds": 61.80290497500005
+        },
+        {
+          "protocol": "immutable-checkpoint-v1",
+          "generation": "2026-11-12T05:05:18.263607+00:00",
+          "startedAt": "2026-11-12T05:05:49.598429+00:00",
+          "published": false,
+          "error": "Checkpoint git read-tree failed (exit 128)",
+          "endedAt": "2026-11-12T05:06:51.340336+00:00",
+          "durationSeconds": 61.74192596700004
+        },
+        {
+          "protocol": "immutable-checkpoint-v1",
+          "generation": "2026-11-12T05:06:28.976034+00:00",
+          "startedAt": "2026-11-12T05:06:51.340375+00:00",
+          "published": false,
+          "error": "Checkpoint git read-tree failed (exit 128)",
+          "endedAt": "2026-11-12T05:07:53.077569+00:00",
+          "durationSeconds": 61.737212823999926
+        },
+        {
+          "protocol": "immutable-checkpoint-v1",
+          "generation": "2026-11-12T05:07:38.044775+00:00",
+          "startedAt": "2026-11-12T05:07:53.077608+00:00",
+          "published": false,
+          "error": "Checkpoint git read-tree failed (exit 128)",
+          "endedAt": "2026-11-12T05:08:54.758217+00:00",
+          "durationSeconds": 61.68062467899995
+        },
+        {
+          "protocol": "immutable-checkpoint-v1",
+          "generation": "2026-11-12T05:08:46.246418+00:00",
+          "startedAt": "2026-11-12T05:08:54.758247+00:00",
+          "published": false,
+          "error": "Checkpoint git read-tree failed (exit 128)",
+          "endedAt": "2026-11-12T05:09:56.426468+00:00",
+          "durationSeconds": 61.66823557399994
+        },
+        {
+          "protocol": "immutable-checkpoint-v1",
+          "generation": "2026-11-12T05:09:55.381837+00:00",
+          "startedAt": "2026-11-12T05:09:56.426497+00:00",
+          "published": false,
+          "error": "Checkpoint git read-tree failed (exit 128)",
+          "endedAt": "2026-11-12T05:10:58.026010+00:00",
+          "durationSeconds": 61.59952588400006
+        },
+        {
+          "protocol": "immutable-checkpoint-v1",
+          "generation": "2026-11-12T05:10:29.629663+00:00",
+          "startedAt": "2026-11-12T05:10:58.026038+00:00",
+          "published": true,
+          "commit": "dd2eb75b3790dadbb8696f4b91135fcfa4ad739b",
+          "unchanged": false,
+          "endedAt": "2026-11-12T05:11:20.690650+00:00",
+          "durationSeconds": 22.664624151999988
+        },
+        {
+          "protocol": "immutable-checkpoint-v1",
+          "generation": "2026-11-12T05:11:06.164137+00:00",
+          "startedAt": "2026-11-12T05:11:20.692864+00:00",
+          "published": true,
+          "commit": "f0abc090fdca547b3d1af43563ba85ce60a418f1",
+          "unchanged": false,
+          "endedAt": "2026-11-12T05:11:28.508430+00:00",
+          "durationSeconds": 7.815575149000097
+        },
+        {
+          "protocol": "immutable-checkpoint-v1",
+          "generation": "2026-11-12T05:11:40.432944+00:00",
+          "startedAt": "2026-11-12T05:11:41.367872+00:00",
+          "published": true,
+          "commit": "dd6dce65279607f354ee4c9f1203e59db7f14b57",
+          "unchanged": false,
+          "endedAt": "2026-11-12T05:11:49.295065+00:00",
+          "durationSeconds": 7.927194636000195
+        },
+        {
+          "protocol": "immutable-checkpoint-v1",
+          "generation": "2026-11-12T05:12:15.159825+00:00",
+          "startedAt": "2026-11-12T05:12:16.161238+00:00",
+          "published": true,
+          "commit": "e2d782d410813a1e71d0bde1a5d3f01c9f5e4c4f",
+          "unchanged": false,
+          "endedAt": "2026-11-12T05:12:24.545751+00:00",
+          "durationSeconds": 8.384510298000123
+        },
+        {
+          "protocol": "immutable-checkpoint-v1",
+          "generation": "2026-11-12T05:12:49.479363+00:00",
+          "startedAt": "2026-11-12T05:12:50.449985+00:00",
+          "published": true,
+          "commit": "8bf8e7b27e95e440632861e57b30b8523c282e94",
+          "unchanged": false,
+          "endedAt": "2026-11-12T05:12:58.395397+00:00",
+          "durationSeconds": 7.945411171999922
+        },
+        {
+          "protocol": "immutable-checkpoint-v1",
+          "generation": "2026-11-12T05:13:23.672220+00:00",
+          "startedAt": "2026-11-12T05:13:24.671386+00:00",
+          "published": true,
+          "commit": "8a6d75c4d5e023cbc70c0b53d93fdef0f8c6c9d8",
+          "unchanged": false,
+          "endedAt": "2026-11-12T05:13:32.525793+00:00",
+          "durationSeconds": 7.85440792899999
+        },
+        {
+          "protocol": "immutable-checkpoint-v1",
+          "generation": "2026-11-12T05:13:57.878421+00:00",
+          "startedAt": "2026-11-12T05:13:58.814525+00:00",
+          "published": true,
+          "commit": "7593d56d8754473aa56e23768d4cf0f7bedff9c2",
+          "unchanged": false,
+          "endedAt": "2026-11-12T05:14:06.943038+00:00",
+          "durationSeconds": 8.128517167999917
+        },
+        {
+          "protocol": "immutable-checkpoint-v1",
+          "generation": "2026-11-12T05:14:32.265059+00:00",
+          "startedAt": "2026-11-12T05:14:33.243590+00:00",
+          "published": true,
+          "commit": "139997d7d01273d04bce5e0c2165f91687466c32",
+          "unchanged": false,
+          "endedAt": "2026-11-12T05:14:41.440563+00:00",
+          "durationSeconds": 8.19697218300007
+        },
+        {
+          "protocol": "immutable-checkpoint-v1",
+          "generation": "2026-11-12T05:15:07.009686+00:00",
+          "startedAt": "2026-11-12T05:15:07.888347+00:00",
+          "published": true,
+          "commit": "0af48682bb40deb1f3ea37b53cc3899d7526108d",
+          "unchanged": false,
+          "endedAt": "2026-11-12T05:15:15.982010+00:00",
+          "durationSeconds": 8.093666872000085
+        },
+        {
+          "protocol": "immutable-checkpoint-v1",
+          "generation": "2026-11-12T05:15:41.638738+00:00",
+          "startedAt": "2026-11-12T05:15:42.621426+00:00",
+          "published": true,
+          "commit": "30ced9c3a2241974c43e957beb917e3e15da628e",
+          "unchanged": false,
+          "endedAt": "2026-11-12T05:15:51.356437+00:00",
+          "durationSeconds": 8.735009678999859
+        },
+        {
+          "protocol": "immutable-checkpoint-v1",
+          "generation": "2026-11-12T05:16:18.258981+00:00",
+          "startedAt": "2026-11-12T05:16:19.177007+00:00",
+          "published": true,
+          "commit": "0ce6c30ebcb456ff45134632d29b963566cdbd32",
+          "unchanged": false,
+          "endedAt": "2026-11-12T05:16:27.133203+00:00",
+          "durationSeconds": 7.956203910000113
+        },
+        {
+          "protocol": "immutable-checkpoint-v1",
+          "generation": "2026-11-12T05:16:52.665899+00:00",
+          "startedAt": "2026-11-12T05:16:53.600485+00:00",
+          "published": true,
+          "commit": "a27f8a727e78e4ad11cefa59c46ef37f1b384692",
+          "unchanged": false,
+          "endedAt": "2026-11-12T05:17:03.266709+00:00",
+          "durationSeconds": 9.666224473000057
+        },
+        {
+          "protocol": "immutable-checkpoint-v1",
+          "generation": "2026-11-12T05:17:26.551187+00:00",
+          "startedAt": "2026-11-12T05:17:27.489324+00:00",
+          "published": true,
+          "commit": "5a0f061805f363c08c120a49f0bbf9411025efbf",
+          "unchanged": false,
+          "endedAt": "2026-11-12T05:17:35.432321+00:00",
+          "durationSeconds": 7.942998145999809
+        },
+        {
+          "protocol": "immutable-checkpoint-v1",
+          "generation": "2026-11-12T05:18:00.900296+00:00",
+          "startedAt": "2026-11-12T05:18:01.810626+00:00",
+          "published": true,
+          "commit": "1dae625f387f638e9ec189713b7bdc5a38e432ab",
+          "unchanged": false,
+          "endedAt": "2026-11-12T05:18:10.295385+00:00",
+          "durationSeconds": 8.48475739100013
+        },
+        {
+          "protocol": "immutable-checkpoint-v1",
+          "generation": "2026-11-12T05:18:34.972765+00:00",
+          "startedAt": "2026-11-12T05:18:35.937113+00:00",
+          "published": true,
+          "commit": "f45719efedd18122413026b02435a65fb8da45c7",
+          "unchanged": false,
+          "endedAt": "2026-11-12T05:18:45.452401+00:00",
+          "durationSeconds": 9.515287544999865
+        },
+        {
+          "protocol": "immutable-checkpoint-v1",
+          "generation": "2026-11-12T05:19:09.322353+00:00",
+          "startedAt": "2026-11-12T05:19:10.312873+00:00",
+          "published": true,
+          "commit": "3c14e0a1665abe9a539a186145b40fd32c5ef4ab",
+          "unchanged": false,
+          "endedAt": "2026-11-12T05:19:18.428881+00:00",
+          "durationSeconds": 8.116007979000187
+        },
+        {
+          "protocol": "immutable-checkpoint-v1",
+          "generation": "2026-11-12T05:19:43.441207+00:00",
+          "startedAt": "2026-11-12T05:19:44.323501+00:00",
+          "published": true,
+          "commit": "665ff451c832a45833c5ea4753fbd6a0b5aef251",
+          "unchanged": false,
+          "endedAt": "2026-11-12T05:19:52.470248+00:00",
+          "durationSeconds": 8.14674603200001
+        },
+        {
+          "protocol": "immutable-checkpoint-v1",
+          "generation": "2026-11-12T05:20:17.273212+00:00",
+          "startedAt": "2026-11-12T05:20:18.212753+00:00",
+          "published": true,
+          "commit": "e50f5c7e5204923eaafde6e84a00fff1b84adb51",
+          "unchanged": false,
+          "endedAt": "2026-11-12T05:20:27.660829+00:00",
+          "durationSeconds": 9.448078213999906
+        },
+        {
+          "protocol": "immutable-checkpoint-v1",
+          "generation": "2026-11-12T05:20:51.276424+00:00",
+          "startedAt": "2026-11-12T05:20:52.240454+00:00",
+          "published": true,
+          "commit": "f94e714c55d1046174b1f5da7a68a0db9f4c60de",
+          "unchanged": false,
+          "endedAt": "2026-11-12T05:21:01.619986+00:00",
+          "durationSeconds": 9.37953125499962
+        },
+        {
+          "protocol": "immutable-checkpoint-v1",
+          "generation": "2026-11-12T05:21:27.673432+00:00",
+          "startedAt": "2026-11-12T05:21:28.664102+00:00",
+          "published": true,
+          "commit": "87a352f4cd8373bd23c0a22a6f918ca7ec13f7f9",
+          "unchanged": false,
+          "endedAt": "2026-11-12T05:21:42.504001+00:00",
+          "durationSeconds": 13.83989874000008
+        },
+        {
+          "protocol": "immutable-checkpoint-v1",
+          "generation": "2026-11-12T05:22:01.590402+00:00",
+          "startedAt": "2026-11-12T05:22:02.541105+00:00",
+          "published": true,
+          "commit": "6923fab9ab8a7465b7133047534adee79c57f4d6",
+          "unchanged": false,
+          "endedAt": "2026-11-12T05:22:10.994625+00:00",
+          "durationSeconds": 8.453521100999751
+        },
+        {
+          "protocol": "immutable-checkpoint-v1",
+          "generation": "2026-11-12T05:22:35.998373+00:00",
+          "startedAt": "2026-11-12T05:22:36.950595+00:00",
+          "published": true,
+          "commit": "3fe9ebaac34c85bbea8913680caa1ee709457b56",
+          "unchanged": false,
+          "endedAt": "2026-11-12T05:22:45.285389+00:00",
+          "durationSeconds": 8.33479796399979
+        },
+        {
+          "protocol": "immutable-checkpoint-v1",
+          "generation": "2026-11-12T05:23:10.076816+00:00",
+          "startedAt": "2026-11-12T05:23:11.144626+00:00",
+          "published": true,
+          "commit": "09bcb5912fd71423235d26bccc89e415d66e130d",
+          "unchanged": false,
+          "endedAt": "2026-11-12T05:23:18.985323+00:00",
+          "durationSeconds": 7.8406940160002705
+        },
+        {
+          "protocol": "immutable-checkpoint-v1",
+          "generation": "2026-11-12T05:23:44.282510+00:00",
+          "startedAt": "2026-11-12T05:23:45.224391+00:00",
+          "published": true,
+          "commit": "32353bc5259671acd8e56f53e9ea33ae74b899f3",
+          "unchanged": false,
+          "endedAt": "2026-11-12T05:23:54.136277+00:00",
+          "durationSeconds": 8.911891792000006
+        },
+        {
+          "protocol": "immutable-checkpoint-v1",
+          "generation": "2026-11-12T05:24:18.288582+00:00",
+          "startedAt": "2026-11-12T05:24:19.313035+00:00",
+          "published": true,
+          "commit": "87f02238c441fb9f187d9ad610ede65b5c68150f",
+          "unchanged": false,
+          "endedAt": "2026-11-12T05:24:28.134735+00:00",
+          "durationSeconds": 8.821698618000028
+        },
+        {
+          "protocol": "immutable-checkpoint-v1",
+          "generation": "2026-11-12T05:24:52.635195+00:00",
+          "startedAt": "2026-11-12T05:24:53.623982+00:00",
+          "published": true,
+          "commit": "e88d4b6edbbefe4df0a3d88b35840a9a42a066d3",
+          "unchanged": false,
+          "endedAt": "2026-11-12T05:25:01.815897+00:00",
+          "durationSeconds": 8.191913776000092
+        },
+        {
+          "protocol": "immutable-checkpoint-v1",
+          "generation": "2026-11-12T05:25:26.691677+00:00",
+          "startedAt": "2026-11-12T05:25:27.640632+00:00",
+          "published": true,
+          "commit": "eb6a7f1e95dff3a6c8564857f66e6408dc22b7b0",
+          "unchanged": false,
+          "endedAt": "2026-11-12T05:25:35.895878+00:00",
+          "durationSeconds": 8.255246798999906
+        },
+        {
+          "protocol": "immutable-checkpoint-v1",
+          "generation": "2026-11-12T05:26:00.719498+00:00",
+          "startedAt": "2026-11-12T05:26:01.651445+00:00",
+          "published": true,
+          "commit": "f0043115d9a25140366c4014b2845556e28b5a4c",
+          "unchanged": false,
+          "endedAt": "2026-11-12T05:26:10.163202+00:00",
+          "durationSeconds": 8.511758880999878
+        },
+        {
+          "protocol": "immutable-checkpoint-v1",
+          "generation": "2026-11-12T05:26:37.183830+00:00",
+          "startedAt": "2026-11-12T05:26:38.103835+00:00",
+          "published": true,
+          "commit": "e8becca83411cc1d0e962b0926855f17a34d6066",
+          "unchanged": false,
+          "endedAt": "2026-11-12T05:26:46.520881+00:00",
+          "durationSeconds": 8.417048750000049
+        },
+        {
+          "protocol": "immutable-checkpoint-v1",
+          "generation": "2026-11-12T05:27:11.231497+00:00",
+          "startedAt": "2026-11-12T05:27:12.195522+00:00",
+          "published": true,
+          "commit": "ad51d10a520fefabc2ea9c15802cd89942250e8c",
+          "unchanged": false,
+          "endedAt": "2026-11-12T05:27:20.339792+00:00",
+          "durationSeconds": 8.144267528
+        },
+        {
+          "protocol": "immutable-checkpoint-v1",
+          "generation": "2026-11-12T05:27:45.626936+00:00",
+          "startedAt": "2026-11-12T05:27:46.638246+00:00",
+          "published": true,
+          "commit": "29afddbf8bd765c55066456dede8f9c184fc8829",
+          "unchanged": false,
+          "endedAt": "2026-11-12T05:27:55.439265+00:00",
+          "durationSeconds": 8.80102159199987
+        },
+        {
+          "protocol": "immutable-checkpoint-v1",
+          "generation": "2026-11-12T05:28:20.049508+00:00",
+          "startedAt": "2026-11-12T05:28:21.088429+00:00",
+          "published": true,
+          "commit": "d17ac211c1710d8bb57f0de135bb4c6a3956c788",
+          "unchanged": false,
+          "endedAt": "2026-11-12T05:28:29.520312+00:00",
+          "durationSeconds": 8.431883061999997
+        },
+        {
+          "protocol": "immutable-checkpoint-v1",
+          "generation": "2026-11-12T05:28:54.468222+00:00",
+          "startedAt": "2026-11-12T05:28:55.398515+00:00",
+          "published": true,
+          "commit": "ffddd4dea179ac8b610ba8415469fc4ee8ea47f6",
+          "unchanged": false,
+          "endedAt": "2026-11-12T05:29:04.071387+00:00",
+          "durationSeconds": 8.672872766000182
+        },
+        {
+          "protocol": "immutable-checkpoint-v1",
+          "generation": "2026-11-12T05:29:28.861074+00:00",
+          "startedAt": "2026-11-12T05:29:29.802818+00:00",
+          "published": true,
+          "commit": "4ce642e8cdb5a10529fee9688af72a9f382e893f",
+          "unchanged": false,
+          "endedAt": "2026-11-12T05:29:38.363081+00:00",
+          "durationSeconds": 8.560263860000305
+        },
+        {
+          "protocol": "immutable-checkpoint-v1",
+          "generation": "2026-11-12T05:30:03.262269+00:00",
+          "startedAt": "2026-11-12T05:30:04.183851+00:00",
+          "published": true,
+          "commit": "30f804a775c8da1074efbfe2d3246ed1acd5c773",
+          "unchanged": false,
+          "endedAt": "2026-11-12T05:30:12.752465+00:00",
+          "durationSeconds": 8.568613158000062
+        },
+        {
+          "protocol": "immutable-checkpoint-v1",
+          "generation": "2026-11-12T05:30:37.195153+00:00",
+          "startedAt": "2026-11-12T05:30:38.175588+00:00",
+          "published": true,
+          "commit": "4248eddf226b6d630625d2ef4572fa4728d57f95",
+          "unchanged": false,
+          "endedAt": "2026-11-12T05:30:46.667133+00:00",
+          "durationSeconds": 8.491543431000082
+        },
+        {
+          "protocol": "immutable-checkpoint-v1",
+          "generation": "2026-11-12T05:31:11.280240+00:00",
+          "startedAt": "2026-11-12T05:31:12.243220+00:00",
+          "published": true,
+          "commit": "87bc40e23afb7208698b03d195f3eb756ecbdeab",
+          "unchanged": false,
+          "endedAt": "2026-11-12T05:31:20.317457+00:00",
+          "durationSeconds": 8.074238401999992
+        },
+        {
+          "protocol": "immutable-checkpoint-v1",
+          "generation": "2026-11-12T05:31:47.676967+00:00",
+          "startedAt": "2026-11-12T05:31:48.612292+00:00",
+          "published": true,
+          "commit": "587bf728c0514b6bbd06ea003ca612c59142961a",
+          "unchanged": false,
+          "endedAt": "2026-11-12T05:31:56.994302+00:00",
+          "durationSeconds": 8.382008085000052
+        },
+        {
+          "protocol": "immutable-checkpoint-v1",
+          "generation": "2026-11-12T05:32:22.065843+00:00",
+          "startedAt": "2026-11-12T05:32:23.017028+00:00",
+          "published": true,
+          "commit": "d23ab2bee0039ccc219a33b1b3d68a02857470c4",
+          "unchanged": false,
+          "endedAt": "2026-11-12T05:32:31.381995+00:00",
+          "durationSeconds": 8.364964011999746
+        },
+        {
+          "protocol": "immutable-checkpoint-v1",
+          "generation": "2026-11-12T05:32:56.234492+00:00",
+          "startedAt": "2026-11-12T05:32:57.202409+00:00",
+          "published": true,
+          "commit": "254064712503ff5a07aa4b281f9a5aa919815b2f",
+          "unchanged": false,
+          "endedAt": "2026-11-12T05:33:06.089509+00:00",
+          "durationSeconds": 8.887099948000014
+        },
+        {
+          "protocol": "immutable-checkpoint-v1",
+          "generation": "2026-11-12T05:33:30.600540+00:00",
+          "startedAt": "2026-11-12T05:33:31.593942+00:00",
+          "published": true,
+          "commit": "67899b20d7e4786cc384be5c523742b325089e62",
+          "unchanged": false,
+          "endedAt": "2026-11-12T05:33:40.598096+00:00",
+          "durationSeconds": 9.004155959999935
+        },
+        {
+          "protocol": "immutable-checkpoint-v1",
+          "generation": "2026-11-12T05:34:05.359317+00:00",
+          "startedAt": "2026-11-12T05:34:06.287096+00:00",
+          "published": true,
+          "commit": "5b7f96bbb9146f2c595af2414740822eff258eda",
+          "unchanged": false,
+          "endedAt": "2026-11-12T05:34:15.349582+00:00",
+          "durationSeconds": 9.062486465999882
+        },
+        {
+          "protocol": "immutable-checkpoint-v1",
+          "generation": "2026-11-12T05:34:39.678629+00:00",
+          "startedAt": "2026-11-12T05:34:40.666417+00:00",
+          "published": true,
+          "commit": "b6dabec9bfcd6fa7858af95f1fd8591f8427eedc",
+          "unchanged": false,
+          "endedAt": "2026-11-12T05:34:49.888612+00:00",
+          "durationSeconds": 9.222194727999977
+        },
+        {
+          "protocol": "immutable-checkpoint-v1",
+          "generation": "2026-11-12T05:35:14.114217+00:00",
+          "startedAt": "2026-11-12T05:35:15.022670+00:00",
+          "published": true,
+          "commit": "a6a323e80d974c2020120a7f1c80eec65be3918e",
+          "unchanged": false,
+          "endedAt": "2026-11-12T05:35:23.741338+00:00",
+          "durationSeconds": 8.718669168999895
+        },
+        {
+          "protocol": "immutable-checkpoint-v1",
+          "generation": "2026-11-12T05:35:48.941725+00:00",
+          "startedAt": "2026-11-12T05:35:49.918927+00:00",
+          "published": true,
+          "commit": "1ed0e92bc035778ae363e6cc1390cf1e5fe145d1",
+          "unchanged": false,
+          "endedAt": "2026-11-12T05:35:59.051773+00:00",
+          "durationSeconds": 9.132848151999951
+        },
+        {
+          "protocol": "immutable-checkpoint-v1",
+          "generation": "2026-11-12T05:36:23.650362+00:00",
+          "startedAt": "2026-11-12T05:36:25.204716+00:00",
+          "published": true,
+          "commit": "d836d7d56bbc1d2b5a696868f7ca0646a501e440",
+          "unchanged": false,
+          "endedAt": "2026-11-12T05:36:34.406777+00:00",
+          "durationSeconds": 9.202064086000064
+        },
+        {
+          "protocol": "immutable-checkpoint-v1",
+          "generation": "2026-11-12T05:37:00.778627+00:00",
+          "startedAt": "2026-11-12T05:37:01.771824+00:00",
+          "published": true,
+          "commit": "3ad6022ef4e26c49a65504a1ce3a30fe3a57ab81",
+          "unchanged": false,
+          "endedAt": "2026-11-12T05:37:11.896017+00:00",
+          "durationSeconds": 10.124194713999714
+        },
+        {
+          "protocol": "immutable-checkpoint-v1",
+          "generation": "2026-11-12T05:37:35.575388+00:00",
+          "startedAt": "2026-11-12T05:37:36.572401+00:00",
+          "published": true,
+          "commit": "44f927a34e510b5692a0c1dbacb1c70a8837f2b8",
+          "unchanged": false,
+          "endedAt": "2026-11-12T05:37:45.120325+00:00",
+          "durationSeconds": 8.547930631000327
+        },
+        {
+          "protocol": "immutable-checkpoint-v1",
+          "generation": "2026-11-12T05:38:10.115702+00:00",
+          "startedAt": "2026-11-12T05:38:11.102342+00:00",
+          "published": true,
+          "commit": "331869129cb8e5818ca7276243e77ce883f41c17",
+          "unchanged": false,
+          "endedAt": "2026-11-12T05:38:20.088423+00:00",
+          "durationSeconds": 8.986084099999971
+        },
+        {
+          "protocol": "immutable-checkpoint-v1",
+          "generation": "2026-11-12T05:38:44.181779+00:00",
+          "startedAt": "2026-11-12T05:38:45.177558+00:00",
+          "published": true,
+          "commit": "b399dfe17f2861564c6e4a1412580d5132e405c2",
+          "unchanged": false,
+          "endedAt": "2026-11-12T05:38:53.974809+00:00",
+          "durationSeconds": 8.79724898800032
+        },
+        {
+          "protocol": "immutable-checkpoint-v1",
+          "generation": "2026-11-12T05:39:19.079932+00:00",
+          "startedAt": "2026-11-12T05:39:20.016850+00:00",
+          "published": true,
+          "commit": "1e4924c6472222282899ce5fa2026ffdf582064e",
+          "unchanged": false,
+          "endedAt": "2026-11-12T05:39:28.714609+00:00",
+          "durationSeconds": 8.697757325000111
+        },
+        {
+          "protocol": "immutable-checkpoint-v1",
+          "generation": "2026-11-12T05:39:53.186613+00:00",
+          "startedAt": "2026-11-12T05:39:54.075903+00:00",
+          "published": true,
+          "commit": "0718c7346e7faecc3885c53cef32000b3d35e4a5",
+          "unchanged": false,
+          "endedAt": "2026-11-12T05:40:02.319623+00:00",
+          "durationSeconds": 8.24372419600013
+        },
+        {
+          "protocol": "immutable-checkpoint-v1",
+          "generation": "2026-11-12T05:40:27.184100+00:00",
+          "startedAt": "2026-11-12T05:40:28.092971+00:00",
+          "published": true,
+          "commit": "d017be97e4bff85b9f3c5de7bca99342e7e78600",
+          "unchanged": false,
+          "endedAt": "2026-11-12T05:40:36.633101+00:00",
+          "durationSeconds": 8.540129381000042
+        },
+        {
+          "at": "2026-11-12T05:40:39.527996+00:00",
+          "kind": "shutdown",
+          "protocol": "immutable-checkpoint-v1",
+          "latestObserved": "2026-11-12T05:40:27.184100+00:00",
+          "latestPublished": "2026-11-12T05:40:27.184100+00:00",
+          "inflight": null,
+          "pending": null
+        }
+      ],
+      "attempts": 77,
+      "success": 53,
+      "failures": 24,
+      "errorCounts": {
+        "Checkpoint git read-tree failed (exit 128)": 24
+      },
+      "shutdown": [
+        {
+          "at": "2026-11-12T05:40:39.527996+00:00",
+          "kind": "shutdown",
+          "protocol": "immutable-checkpoint-v1",
+          "latestObserved": "2026-11-12T05:40:27.184100+00:00",
+          "latestPublished": "2026-11-12T05:40:27.184100+00:00",
+          "inflight": null,
+          "pending": null
+        }
+      ]
+    },
+    "43162992442-1": {
+      "records": [
+        {
+          "protocol": "immutable-checkpoint-v1",
+          "generation": "2026-11-12T05:42:03.606891+00:00",
+          "startedAt": "2026-11-12T05:42:04.688857+00:00",
+          "published": false,
+          "error": "Checkpoint git read-tree failed (exit 128)",
+          "endedAt": "2026-11-12T05:43:05.923125+00:00",
+          "durationSeconds": 61.234258496999985
+        },
+        {
+          "protocol": "immutable-checkpoint-v1",
+          "generation": "2026-11-12T05:42:38.313549+00:00",
+          "startedAt": "2026-11-12T05:43:05.923169+00:00",
+          "published": false,
+          "error": "Checkpoint git read-tree failed (exit 128)",
+          "endedAt": "2026-11-12T05:44:07.287791+00:00",
+          "durationSeconds": 61.36465183799993
+        },
+        {
+          "protocol": "immutable-checkpoint-v1",
+          "generation": "2026-11-12T05:43:47.581727+00:00",
+          "startedAt": "2026-11-12T05:44:07.287842+00:00",
+          "published": false,
+          "error": "Checkpoint git read-tree failed (exit 128)",
+          "endedAt": "2026-11-12T05:45:08.571266+00:00",
+          "durationSeconds": 61.28343622800003
+        },
+        {
+          "protocol": "immutable-checkpoint-v1",
+          "generation": "2026-11-12T05:44:56.838950+00:00",
+          "startedAt": "2026-11-12T05:45:08.571295+00:00",
+          "published": false,
+          "error": "Checkpoint git read-tree failed (exit 128)",
+          "endedAt": "2026-11-12T05:46:10.339120+00:00",
+          "durationSeconds": 61.76783682700011
+        },
+        {
+          "protocol": "immutable-checkpoint-v1",
+          "generation": "2026-11-12T05:46:06.771496+00:00",
+          "startedAt": "2026-11-12T05:46:10.339149+00:00",
+          "published": false,
+          "error": "Checkpoint git read-tree failed (exit 128)",
+          "endedAt": "2026-11-12T05:47:11.783286+00:00",
+          "durationSeconds": 61.44414732400003
+        },
+        {
+          "protocol": "immutable-checkpoint-v1",
+          "generation": "2026-11-12T05:46:41.278215+00:00",
+          "startedAt": "2026-11-12T05:47:11.783312+00:00",
+          "published": false,
+          "error": "Checkpoint git read-tree failed (exit 128)",
+          "endedAt": "2026-11-12T05:48:13.161852+00:00",
+          "durationSeconds": 61.37855281399993
+        },
+        {
+          "protocol": "immutable-checkpoint-v1",
+          "generation": "2026-11-12T05:47:52.878118+00:00",
+          "startedAt": "2026-11-12T05:48:13.161881+00:00",
+          "published": false,
+          "error": "Checkpoint git read-tree failed (exit 128)",
+          "endedAt": "2026-11-12T05:49:14.497784+00:00",
+          "durationSeconds": 61.335931105999975
+        },
+        {
+          "protocol": "immutable-checkpoint-v1",
+          "generation": "2026-11-12T05:49:01.932132+00:00",
+          "startedAt": "2026-11-12T05:49:14.497831+00:00",
+          "published": false,
+          "error": "Checkpoint git read-tree failed (exit 128)",
+          "endedAt": "2026-11-12T05:50:15.773821+00:00",
+          "durationSeconds": 61.275999902999956
+        },
+        {
+          "protocol": "immutable-checkpoint-v1",
+          "generation": "2026-11-12T05:50:11.456768+00:00",
+          "startedAt": "2026-11-12T05:50:15.773847+00:00",
+          "published": false,
+          "error": "Checkpoint git read-tree failed (exit 128)",
+          "endedAt": "2026-11-12T05:51:17.133826+00:00",
+          "durationSeconds": 61.35999760700008
+        },
+        {
+          "protocol": "immutable-checkpoint-v1",
+          "generation": "2026-11-12T05:50:46.464684+00:00",
+          "startedAt": "2026-11-12T05:51:17.133864+00:00",
+          "published": false,
+          "error": "Checkpoint git read-tree failed (exit 128)",
+          "endedAt": "2026-11-12T05:52:18.442980+00:00",
+          "durationSeconds": 61.30913009099993
+        },
+        {
+          "protocol": "immutable-checkpoint-v1",
+          "generation": "2026-11-12T05:51:55.967034+00:00",
+          "startedAt": "2026-11-12T05:52:18.443013+00:00",
+          "published": false,
+          "error": "Checkpoint git read-tree failed (exit 128)",
+          "endedAt": "2026-11-12T05:53:19.765741+00:00",
+          "durationSeconds": 61.322736843999905
+        },
+        {
+          "protocol": "immutable-checkpoint-v1",
+          "generation": "2026-11-12T05:53:08.207149+00:00",
+          "startedAt": "2026-11-12T05:53:19.765764+00:00",
+          "published": false,
+          "error": "Checkpoint git read-tree failed (exit 128)",
+          "endedAt": "2026-11-12T05:54:21.169743+00:00",
+          "durationSeconds": 61.40399180700001
+        },
+        {
+          "protocol": "immutable-checkpoint-v1",
+          "generation": "2026-11-12T05:54:17.631431+00:00",
+          "startedAt": "2026-11-12T05:54:21.169773+00:00",
+          "published": false,
+          "error": "Checkpoint git read-tree failed (exit 128)",
+          "endedAt": "2026-11-12T05:55:22.519028+00:00",
+          "durationSeconds": 61.349272718000066
+        },
+        {
+          "protocol": "immutable-checkpoint-v1",
+          "generation": "2026-11-12T05:54:52.539818+00:00",
+          "startedAt": "2026-11-12T05:55:22.519162+00:00",
+          "published": false,
+          "error": "Checkpoint git read-tree failed (exit 128)",
+          "endedAt": "2026-11-12T05:56:23.927086+00:00",
+          "durationSeconds": 61.40793064499985
+        },
+        {
+          "protocol": "immutable-checkpoint-v1",
+          "generation": "2026-11-12T05:56:01.893203+00:00",
+          "startedAt": "2026-11-12T05:56:23.927111+00:00",
+          "published": true,
+          "commit": "b4c8838986e6ee70fef8bed2455770a6bc7ba393",
+          "unchanged": false,
+          "endedAt": "2026-11-12T05:56:47.824605+00:00",
+          "durationSeconds": 23.897508716000175
+        },
+        {
+          "protocol": "immutable-checkpoint-v1",
+          "generation": "2026-11-12T05:56:36.509117+00:00",
+          "startedAt": "2026-11-12T05:56:47.829674+00:00",
+          "published": true,
+          "commit": "97efc1369a47d12548ff5d90962fb5bee11cfd7e",
+          "unchanged": false,
+          "endedAt": "2026-11-12T05:56:56.520019+00:00",
+          "durationSeconds": 8.690349406999985
+        },
+        {
+          "protocol": "immutable-checkpoint-v1",
+          "generation": "2026-11-12T05:57:11.824101+00:00",
+          "startedAt": "2026-11-12T05:57:12.908321+00:00",
+          "published": true,
+          "commit": "307c2b85dc0c8cce7f081e1a794aa520ee35a167",
+          "unchanged": false,
+          "endedAt": "2026-11-12T05:57:21.801666+00:00",
+          "durationSeconds": 8.893348894999917
+        },
+        {
+          "protocol": "immutable-checkpoint-v1",
+          "generation": "2026-11-12T05:57:48.975182+00:00",
+          "startedAt": "2026-11-12T05:57:50.016549+00:00",
+          "published": true,
+          "commit": "cf4c686f8fb10cafa462adeebf81842926b4872c",
+          "unchanged": false,
+          "endedAt": "2026-11-12T05:57:57.444350+00:00",
+          "durationSeconds": 7.427800586000103
+        },
+        {
+          "protocol": "immutable-checkpoint-v1",
+          "generation": "2026-11-12T05:58:24.076374+00:00",
+          "startedAt": "2026-11-12T05:58:25.138601+00:00",
+          "published": true,
+          "commit": "a9b110cb1124efb1e19ad6d92c3ab3dfbb6c7358",
+          "unchanged": false,
+          "endedAt": "2026-11-12T05:58:32.903021+00:00",
+          "durationSeconds": 7.764422149999973
+        },
+        {
+          "protocol": "immutable-checkpoint-v1",
+          "generation": "2026-11-12T05:58:59.122022+00:00",
+          "startedAt": "2026-11-12T05:59:00.196235+00:00",
+          "published": true,
+          "commit": "29f2593d2cf61921a0aa576786eeb381b812a305",
+          "unchanged": false,
+          "endedAt": "2026-11-12T05:59:09.160047+00:00",
+          "durationSeconds": 8.963809431000072
+        },
+        {
+          "protocol": "immutable-checkpoint-v1",
+          "generation": "2026-11-12T05:59:33.630459+00:00",
+          "startedAt": "2026-11-12T05:59:34.659274+00:00",
+          "published": true,
+          "commit": "e00234e9aeb479e18fe5e9089039ddb3d59dacb8",
+          "unchanged": false,
+          "endedAt": "2026-11-12T05:59:42.184122+00:00",
+          "durationSeconds": 7.524852261999968
+        },
+        {
+          "protocol": "immutable-checkpoint-v1",
+          "generation": "2026-11-12T06:00:08.596727+00:00",
+          "startedAt": "2026-11-12T06:00:09.623629+00:00",
+          "published": true,
+          "commit": "9f6f9024aec61abea9c9eb55129f47d909551daf",
+          "unchanged": false,
+          "endedAt": "2026-11-12T06:00:17.929702+00:00",
+          "durationSeconds": 8.306076962000134
+        },
+        {
+          "protocol": "immutable-checkpoint-v1",
+          "generation": "2026-11-12T06:00:43.000406+00:00",
+          "startedAt": "2026-11-12T06:00:44.044380+00:00",
+          "published": true,
+          "commit": "a6bcc2e682a5a97bdb7932d8ed17f705c0576050",
+          "unchanged": false,
+          "endedAt": "2026-11-12T06:00:52.703700+00:00",
+          "durationSeconds": 8.659318261999942
+        },
+        {
+          "protocol": "immutable-checkpoint-v1",
+          "generation": "2026-11-12T06:01:17.793936+00:00",
+          "startedAt": "2026-11-12T06:01:18.809361+00:00",
+          "published": true,
+          "commit": "cee1136fe4a3326b4091e06fc5f810f194aa10cc",
+          "unchanged": false,
+          "endedAt": "2026-11-12T06:01:26.641969+00:00",
+          "durationSeconds": 7.832607461999942
+        },
+        {
+          "protocol": "immutable-checkpoint-v1",
+          "generation": "2026-11-12T06:01:55.269544+00:00",
+          "startedAt": "2026-11-12T06:01:56.290939+00:00",
+          "published": true,
+          "commit": "40f6bdb5e3985687445eb1fde078c4b1a87fc16c",
+          "unchanged": false,
+          "endedAt": "2026-11-12T06:02:04.303005+00:00",
+          "durationSeconds": 8.012067533999925
+        },
+        {
+          "protocol": "immutable-checkpoint-v1",
+          "generation": "2026-11-12T06:02:30.307040+00:00",
+          "startedAt": "2026-11-12T06:02:31.358817+00:00",
+          "published": true,
+          "commit": "c8129a58591432f0af1b4ff019f9e4bbe1231348",
+          "unchanged": false,
+          "endedAt": "2026-11-12T06:02:38.946224+00:00",
+          "durationSeconds": 7.587408891999985
+        },
+        {
+          "protocol": "immutable-checkpoint-v1",
+          "generation": "2026-11-12T06:03:07.363695+00:00",
+          "startedAt": "2026-11-12T06:03:08.395819+00:00",
+          "published": true,
+          "commit": "a854b77c7f4bd46efeaaa4eee53724fb475392cd",
+          "unchanged": false,
+          "endedAt": "2026-11-12T06:03:16.471665+00:00",
+          "durationSeconds": 8.07584791399995
+        },
+        {
+          "protocol": "immutable-checkpoint-v1",
+          "generation": "2026-11-12T06:03:41.696985+00:00",
+          "startedAt": "2026-11-12T06:03:42.709326+00:00",
+          "published": true,
+          "commit": "10ff9fee23504b1adc768a46f76560c2ed36ff47",
+          "unchanged": false,
+          "endedAt": "2026-11-12T06:03:50.015688+00:00",
+          "durationSeconds": 7.306360661999861
+        },
+        {
+          "protocol": "immutable-checkpoint-v1",
+          "generation": "2026-11-12T06:04:16.268270+00:00",
+          "startedAt": "2026-11-12T06:04:17.289519+00:00",
+          "published": true,
+          "commit": "09f88d1a01a761086c98567234befcd0beae2108",
+          "unchanged": false,
+          "endedAt": "2026-11-12T06:04:25.353982+00:00",
+          "durationSeconds": 8.064461832000006
+        },
+        {
+          "protocol": "immutable-checkpoint-v1",
+          "generation": "2026-11-12T06:04:50.653949+00:00",
+          "startedAt": "2026-11-12T06:04:51.698353+00:00",
+          "published": true,
+          "commit": "681c55872b25c3c2914dbd79e274c35876774f32",
+          "unchanged": false,
+          "endedAt": "2026-11-12T06:04:59.490371+00:00",
+          "durationSeconds": 7.7920168609998655
+        },
+        {
+          "protocol": "immutable-checkpoint-v1",
+          "generation": "2026-11-12T06:05:25.101120+00:00",
+          "startedAt": "2026-11-12T06:05:26.149250+00:00",
+          "published": true,
+          "commit": "c6a88d3a4aa787cc59ab328963500e10fc64783b",
+          "unchanged": false,
+          "endedAt": "2026-11-12T06:05:34.166560+00:00",
+          "durationSeconds": 8.01731014699999
+        },
+        {
+          "protocol": "immutable-checkpoint-v1",
+          "generation": "2026-11-12T06:05:59.743899+00:00",
+          "startedAt": "2026-11-12T06:06:00.759602+00:00",
+          "published": true,
+          "commit": "e2fe0ba196dbcabb1625496f38cb2d01893c0c63",
+          "unchanged": false,
+          "endedAt": "2026-11-12T06:06:08.156127+00:00",
+          "durationSeconds": 7.396524974000158
+        },
+        {
+          "protocol": "immutable-checkpoint-v1",
+          "generation": "2026-11-12T06:06:34.323911+00:00",
+          "startedAt": "2026-11-12T06:06:35.343022+00:00",
+          "published": true,
+          "commit": "2e2630654eca47743e0fd6b1f987d4cbc57a5f46",
+          "unchanged": false,
+          "endedAt": "2026-11-12T06:06:43.452294+00:00",
+          "durationSeconds": 8.109271994999972
+        },
+        {
+          "protocol": "immutable-checkpoint-v1",
+          "generation": "2026-11-12T06:07:09.006290+00:00",
+          "startedAt": "2026-11-12T06:07:10.038897+00:00",
+          "published": true,
+          "commit": "b56338a04d7c1641d9d5c3f096f8955ed344dba2",
+          "unchanged": false,
+          "endedAt": "2026-11-12T06:07:17.858638+00:00",
+          "durationSeconds": 7.819739362000064
+        },
+        {
+          "protocol": "immutable-checkpoint-v1",
+          "generation": "2026-11-12T06:07:44.272571+00:00",
+          "startedAt": "2026-11-12T06:07:45.292479+00:00",
+          "published": true,
+          "commit": "ed29ce2141d0f70bf4974bc263397e4568b04c85",
+          "unchanged": false,
+          "endedAt": "2026-11-12T06:07:52.860431+00:00",
+          "durationSeconds": 7.567951601999994
+        },
+        {
+          "protocol": "immutable-checkpoint-v1",
+          "generation": "2026-11-12T06:08:21.606931+00:00",
+          "startedAt": "2026-11-12T06:08:22.655669+00:00",
+          "published": true,
+          "commit": "dddb6e9576b154dae4957d4e9e59c0576e9c8473",
+          "unchanged": false,
+          "endedAt": "2026-11-12T06:08:30.612512+00:00",
+          "durationSeconds": 7.956842798000025
+        },
+        {
+          "protocol": "immutable-checkpoint-v1",
+          "generation": "2026-11-12T06:08:56.538484+00:00",
+          "startedAt": "2026-11-12T06:08:57.555069+00:00",
+          "published": true,
+          "commit": "3b53d92c96da9a5353886cb17eefc45725b72592",
+          "unchanged": false,
+          "endedAt": "2026-11-12T06:09:05.510882+00:00",
+          "durationSeconds": 7.955812438999828
+        },
+        {
+          "protocol": "immutable-checkpoint-v1",
+          "generation": "2026-11-12T06:09:31.032721+00:00",
+          "startedAt": "2026-11-12T06:09:32.086216+00:00",
+          "published": true,
+          "commit": "575c7f83d8412d2969cfae31416310177759615f",
+          "unchanged": false,
+          "endedAt": "2026-11-12T06:09:39.922569+00:00",
+          "durationSeconds": 7.836362030000146
+        },
+        {
+          "protocol": "immutable-checkpoint-v1",
+          "generation": "2026-11-12T06:10:06.249819+00:00",
+          "startedAt": "2026-11-12T06:10:07.455078+00:00",
+          "published": true,
+          "commit": "bb8c27cfaf720573ef1bd908fc5ca60245562ce0",
+          "unchanged": false,
+          "endedAt": "2026-11-12T06:10:15.778053+00:00",
+          "durationSeconds": 8.32297107300019
+        },
+        {
+          "protocol": "immutable-checkpoint-v1",
+          "generation": "2026-11-12T06:10:40.982744+00:00",
+          "startedAt": "2026-11-12T06:10:42.058789+00:00",
+          "published": true,
+          "commit": "7dfe582905b91062ec85333ac9cb7f55605b27fb",
+          "unchanged": false,
+          "endedAt": "2026-11-12T06:10:50.350441+00:00",
+          "durationSeconds": 8.291641150000032
+        },
+        {
+          "protocol": "immutable-checkpoint-v1",
+          "generation": "2026-11-12T06:11:15.715248+00:00",
+          "startedAt": "2026-11-12T06:11:16.743107+00:00",
+          "published": true,
+          "commit": "e1573fe809dd56abe3e9f2d6df2a7357c68d6125",
+          "unchanged": false,
+          "endedAt": "2026-11-12T06:11:24.926142+00:00",
+          "durationSeconds": 8.183036786999764
+        },
+        {
+          "protocol": "immutable-checkpoint-v1",
+          "generation": "2026-11-12T06:11:50.597570+00:00",
+          "startedAt": "2026-11-12T06:11:51.643959+00:00",
+          "published": true,
+          "commit": "cd4d50bcbdc450d16b127205e4b94591408642f7",
+          "unchanged": false,
+          "endedAt": "2026-11-12T06:12:00.088553+00:00",
+          "durationSeconds": 8.44459647199983
+        },
+        {
+          "protocol": "immutable-checkpoint-v1",
+          "generation": "2026-11-12T06:12:25.637428+00:00",
+          "startedAt": "2026-11-12T06:12:26.647350+00:00",
+          "published": true,
+          "commit": "9dff74a3c312a8f41ebf1e21add26a7fff66762d",
+          "unchanged": false,
+          "endedAt": "2026-11-12T06:12:35.714659+00:00",
+          "durationSeconds": 9.067309617999854
+        },
+        {
+          "protocol": "immutable-checkpoint-v1",
+          "generation": "2026-11-12T06:13:00.295922+00:00",
+          "startedAt": "2026-11-12T06:13:01.341357+00:00",
+          "published": true,
+          "commit": "fe91e9666b4924c67c047d81076e7c69f05b66d2",
+          "unchanged": false,
+          "endedAt": "2026-11-12T06:13:11.508335+00:00",
+          "durationSeconds": 10.166978227000072
+        },
+        {
+          "protocol": "immutable-checkpoint-v1",
+          "generation": "2026-11-12T06:13:37.765153+00:00",
+          "startedAt": "2026-11-12T06:13:38.784435+00:00",
+          "published": true,
+          "commit": "55042264dda1b5c590573666d1814f9bfe615326",
+          "unchanged": false,
+          "endedAt": "2026-11-12T06:13:47.200340+00:00",
+          "durationSeconds": 8.415902477000145
+        },
+        {
+          "protocol": "immutable-checkpoint-v1",
+          "generation": "2026-11-12T06:14:12.581558+00:00",
+          "startedAt": "2026-11-12T06:14:13.588310+00:00",
+          "published": true,
+          "commit": "927457fbb5bacb2124bbf89b0351aca63c626ecf",
+          "unchanged": false,
+          "endedAt": "2026-11-12T06:14:21.371795+00:00",
+          "durationSeconds": 7.78353506700023
+        },
+        {
+          "protocol": "immutable-checkpoint-v1",
+          "generation": "2026-11-12T06:14:47.629898+00:00",
+          "startedAt": "2026-11-12T06:14:48.648092+00:00",
+          "published": true,
+          "commit": "b7c9696a6b163b53ff415597df87f879759013b7",
+          "unchanged": false,
+          "endedAt": "2026-11-12T06:14:57.233746+00:00",
+          "durationSeconds": 8.585653702999934
+        },
+        {
+          "protocol": "immutable-checkpoint-v1",
+          "generation": "2026-11-12T06:15:22.495893+00:00",
+          "startedAt": "2026-11-12T06:15:23.535294+00:00",
+          "published": true,
+          "commit": "c712c709052a636dfa7daf352cf82b1e7f43b217",
+          "unchanged": false,
+          "endedAt": "2026-11-12T06:15:32.213496+00:00",
+          "durationSeconds": 8.678202317000341
+        },
+        {
+          "protocol": "immutable-checkpoint-v1",
+          "generation": "2026-11-12T06:15:57.953149+00:00",
+          "startedAt": "2026-11-12T06:15:58.998733+00:00",
+          "published": true,
+          "commit": "ebe4f910131ab65d14d498541c79f81faf847c1b",
+          "unchanged": false,
+          "endedAt": "2026-11-12T06:16:07.164982+00:00",
+          "durationSeconds": 8.166250881999986
+        },
+        {
+          "protocol": "immutable-checkpoint-v1",
+          "generation": "2026-11-12T06:16:33.155036+00:00",
+          "startedAt": "2026-11-12T06:16:34.170571+00:00",
+          "published": true,
+          "commit": "af1ddef45b7a35edbd9f8d2d07db54ac98cfc524",
+          "unchanged": false,
+          "endedAt": "2026-11-12T06:16:42.676979+00:00",
+          "durationSeconds": 8.506419097000162
+        },
+        {
+          "protocol": "immutable-checkpoint-v1",
+          "generation": "2026-11-12T06:17:07.619610+00:00",
+          "startedAt": "2026-11-12T06:17:08.640475+00:00",
+          "published": true,
+          "commit": "0c3652057182b3130ab5b2836596e8d258f5cd07",
+          "unchanged": false,
+          "endedAt": "2026-11-12T06:17:17.136626+00:00",
+          "durationSeconds": 8.49614971200026
+        }
+      ],
+      "attempts": 51,
+      "success": 37,
+      "failures": 14,
+      "errorCounts": {
+        "Checkpoint git read-tree failed (exit 128)": 14
+      },
+      "shutdown": []
+    }
+  },
+  "newOriginals": [
+    {
+      "observedAt": "2026-11-12T05:19:08.673746+00:00",
+      "kind": "first_observation",
+      "event": {
+        "id": 17539,
+        "type": "SMART_FRESH",
+        "coin": "ETH",
+        "createdAt": "2026-11-12T05:19:03.577Z",
+        "occurredAt": "2026-11-12T05:19:00.303Z",
+        "payload": {
+          "side": "SHORT",
+          "addPx": 2037.2084839262104,
+          "liqPx": null,
+          "action": "ADDED",
+          "cohort": "GENIUS",
+          "wallet": "0x628f303158bb4dc2f6e31acb6e0a1fb464626a08",
+          "entryPx": 2112.08,
+          "leverage": {
+            "type": "cross",
+            "value": 20
+          },
+          "marginUsd": 64777.80581,
+          "positionUsd": 500237.4854,
+          "allTimePnlUsd": 13347956.062974,
+          "addedMarginUsd": 17172.80349
+        },
+        "tags": {
+          "0x628f303158bb4dc2f6e31acb6e0a1fb464626a08": [
+            "GIGA_WHALE"
+          ]
+        },
+        "perpPnl": 21619041.501656,
+        "allTimePnl": 21619041.501656,
+        "badges": {
+          "level": "genius-trader",
+          "secondary": [
+            "top-1000",
+            "mega-whale"
+          ]
+        },
+        "traderCard": {
+          "badges": [
+            "genius-trader",
+            "top-1000",
+            "mega-whale"
+          ],
+          "rank": 220,
+          "chips": [
+            {
+              "kind": "rank",
+              "label": "Trader Rank",
+              "value": "#220",
+              "url": "/trader/0x628f303158bb4dc2f6e31acb6e0a1fb464626a08"
+            }
+          ],
+          "venue": "hyperliquid",
+          "pnl": {
+            "side": "short",
+            "entryPx": "2112.08",
+            "leverage": 20,
+            "sizeAbs": 596.6054,
+            "seedPx": "2008",
+            "live": true,
+            "sizeShrunk": false,
+            "frozen": null
+          }
+        }
+      },
+      "hash": "274709f39f751226e121424b73a6774d04e507f7a82bb9fad19888eb571cc03c"
+    },
+    {
+      "observedAt": "2026-11-12T05:32:21.414814+00:00",
+      "kind": "first_observation",
+      "event": {
+        "id": 17540,
+        "type": "SMART_FRESH",
+        "coin": "BTC",
+        "createdAt": "2026-11-12T05:32:17.753Z",
+        "occurredAt": "2026-11-12T05:32:00.456Z",
+        "payload": {
+          "side": "LONG",
+          "addPx": 73793.78502169687,
+          "liqPx": null,
+          "action": "ADDED",
+          "cohort": "SMART",
+          "wallet": "0x5a499efccd4e98778b32cc5cf20c97d46e0cc96d",
+          "entryPx": 72973.2,
+          "leverage": {
+            "type": "cross",
+            "value": 12
+          },
+          "marginUsd": 217235.63279,
+          "positionUsd": 1615393.162,
+          "allTimePnlUsd": 18818853.692981,
+          "addedMarginUsd": 24503.412127541036
+        },
+        "tags": {
+          "0x5a499efccd4e98778b32cc5cf20c97d46e0cc96d": [
+            "VETERAN",
+            "WHALE"
+          ]
+        },
+        "perpPnl": 29506174.177383,
+        "allTimePnl": 29506174.177383,
+        "badges": {
+          "level": "smart-trader",
+          "secondary": [
+            "top-100",
+            "whale",
+            "veteran"
+          ]
+        },
+        "traderCard": {
+          "badges": [
+            "smart-trader",
+            "top-100",
+            "whale",
+            "veteran"
+          ],
+          "rank": 126,
+          "chips": [
+            {
+              "kind": "rank",
+              "label": "Trader Rank",
+              "value": "#126",
+              "url": "/trader/0x5a499efccd4e98778b32cc5cf20c97d46e0cc96d"
+            }
+          ],
+          "venue": "hyperliquid",
+          "pnl": {
+            "side": "long",
+            "entryPx": "72973.2",
+            "leverage": 12,
+            "sizeAbs": 19.624,
+            "seedPx": "76095",
+            "live": true,
+            "sizeShrunk": false,
+            "frozen": null
+          }
+        }
+      },
+      "hash": "60a2e1131252faec5f1487c2009fe59a8c156c1744c3c122fcd67c2fd1f647d4"
+    },
+    {
+      "observedAt": "2026-11-12T05:34:38.970723+00:00",
+      "kind": "first_observation",
+      "event": {
+        "id": 17541,
+        "type": "SMART_FRESH",
+        "coin": "HYPE",
+        "createdAt": "2026-11-12T05:34:14.495Z",
+        "occurredAt": "2026-11-12T05:34:00.424Z",
+        "payload": {
+          "side": "LONG",
+          "addPx": 71.79313726816022,
+          "liqPx": 168.1650961203422,
+          "action": "ADDED",
+          "cohort": "SMART",
+          "wallet": "0x83be5a269a9a435bcd57d542bada53516ffb5092",
+          "entryPx": 75.765,
+          "leverage": {
+            "type": "cross",
+            "value": 10
+          },
+          "marginUsd": 202656.3,
+          "positionUsd": 2633551,
+          "allTimePnlUsd": 633276.154294,
+          "addedMarginUsd": 32392.557137504606
+        },
+        "perpPnl": 1463291.138453,
+        "allTimePnl": 1463291.138453,
+        "badges": {
+          "level": "smart-trader",
+          "secondary": [
+            "whale"
+          ]
+        },
+        "traderCard": {
+          "badges": [
+            "smart-trader",
+            "whale"
+          ],
+          "rank": 3404,
+          "chips": [
+            {
+              "kind": "rank",
+              "label": "Trader Rank",
+              "value": "#3,404",
+              "url": "/trader/0x83be5a269a9a435bcd57d542bada53516ffb5092"
+            }
+          ],
+          "venue": "hyperliquid",
+          "pnl": {
+            "side": "long",
+            "entryPx": "75.765",
+            "leverage": 10,
+            "sizeAbs": 16841,
+            "seedPx": "73.319",
+            "live": true,
+            "sizeShrunk": false,
+            "frozen": null
+          }
+        }
+      },
+      "hash": "1fcb52090d33f867650b274163b779105fe6d40e0ff8d331142636598fd1fe87"
+    },
+    {
+      "observedAt": "2026-11-12T05:35:13.248702+00:00",
+      "kind": "first_observation",
+      "event": {
+        "id": 17543,
+        "type": "SMART_FRESH",
+        "coin": "XMR",
+        "createdAt": "2026-11-12T05:35:09.104Z",
+        "occurredAt": "2026-11-12T05:35:00.219Z",
+        "payload": {
+          "side": "LONG",
+          "addPx": 565.9929882485046,
+          "liqPx": 1138.5534880163111,
+          "action": "ADDED",
+          "cohort": "GENIUS",
+          "wallet": "0x72d19ef1f9e11256eccb1edd3e1766fdf7596241",
+          "entryPx": 594.519,
+          "leverage": {
+            "type": "cross",
+            "value": 5
+          },
+          "marginUsd": 153263.077396,
+          "positionUsd": 1566893.59199,
+          "allTimePnlUsd": 6416647.385908,
+          "addedMarginUsd": 37316.86783255436
+        },
+        "tags": {
+          "0x72d19ef1f9e11256eccb1edd3e1766fdf7596241": [
+            "WHALE"
+          ]
+        },
+        "perpPnl": 9345609.554602,
+        "allTimePnl": 9345609.554602,
+        "badges": {
+          "level": "genius-trader",
+          "secondary": [
+            "top-1000",
+            "whale"
+          ]
+        },
+        "traderCard": {
+          "badges": [
+            "genius-trader",
+            "top-1000",
+            "whale"
+          ],
+          "rank": 727,
+          "chips": [
+            {
+              "kind": "rank",
+              "label": "Trader Rank",
+              "value": "#727",
+              "url": "/trader/0x72d19ef1f9e11256eccb1edd3e1766fdf7596241"
+            }
+          ],
+          "venue": "hyperliquid",
+          "pnl": {
+            "side": "long",
+            "entryPx": "594.519",
+            "leverage": 5,
+            "sizeAbs": 2124.087,
+            "seedPx": "582.237",
+            "live": true,
+            "sizeShrunk": false,
+            "frozen": null
+          }
+        }
+      },
+      "hash": "f782e0a83be0b71722045048f014221a3769ee3cd8ff45eaaac293f3ee4a1125"
+    },
+    {
+      "observedAt": "2026-11-12T05:35:13.248837+00:00",
+      "kind": "first_observation",
+      "event": {
+        "id": 17542,
+        "type": "SMART_FRESH",
+        "coin": "HYPE",
+        "createdAt": "2026-11-12T05:35:09.093Z",
+        "occurredAt": "2026-11-12T05:35:00.219Z",
+        "payload": {
+          "side": "SHORT",
+          "addPx": 71.62323871141095,
+          "liqPx": null,
+          "action": "ADDED",
+          "cohort": "GENIUS",
+          "wallet": "0x628f303158bb4dc2f6e31acb6e0a1fb464626a08",
+          "entryPx": 72.8098,
+          "leverage": {
+            "type": "cross",
+            "value": 3
+          },
+          "marginUsd": 30628.41307,
+          "positionUsd": 171403.41454,
+          "allTimePnlUsd": 11749520.439486,
+          "addedMarginUsd": 25905.258192753994
+        },
+        "tags": {
+          "0x628f303158bb4dc2f6e31acb6e0a1fb464626a08": [
+            "GIGA_WHALE"
+          ]
+        },
+        "perpPnl": 19716154.89855,
+        "allTimePnl": 19716154.89855,
+        "badges": {
+          "level": "genius-trader",
+          "secondary": [
+            "top-1000",
+            "mega-whale"
+          ]
+        },
+        "traderCard": {
+          "badges": [
+            "genius-trader",
+            "top-1000",
+            "mega-whale"
+          ],
+          "rank": 148,
+          "chips": [
+            {
+              "kind": "rank",
+              "label": "Trader Rank",
+              "value": "#148",
+              "url": "/trader/0x628f303158bb4dc2f6e31acb6e0a1fb464626a08"
+            }
+          ],
+          "venue": "hyperliquid",
+          "pnl": {
+            "side": "short",
+            "entryPx": "72.8098",
+            "leverage": 3,
+            "sizeAbs": 1337.75,
+            "seedPx": "69.9056",
+            "live": true,
+            "sizeShrunk": false,
+            "frozen": null
+          }
+        }
+      },
+      "hash": "e270561d213e44eed4ca23ae1494db920aa0dc285d1fb547e46010fe9f62c0bf"
+    },
+    {
+      "observedAt": "2026-11-12T05:36:22.762416+00:00",
+      "kind": "first_observation",
+      "event": {
+        "id": 17544,
+        "type": "SMART_FRESH",
+        "coin": "XMR",
+        "createdAt": "2026-11-12T05:36:16.774Z",
+        "occurredAt": "2026-11-12T05:36:00.307Z",
+        "payload": {
+          "side": "SHORT",
+          "addPx": 567.3552645828908,
+          "liqPx": 45293.853191656526,
+          "action": "ADDED",
+          "cohort": "GENIUS",
+          "wallet": "0x4ff721407ab013f8b094391228a2d04074252ff8",
+          "entryPx": 577.13,
+          "leverage": {
+            "type": "cross",
+            "value": 5
+          },
+          "marginUsd": 45916.074575,
+          "positionUsd": 270672.48062,
+          "allTimePnlUsd": 33715170.60666,
+          "addedMarginUsd": 19819.911876,
+          "flippedFrom": "LONG"
+        },
+        "perpPnl": 69343891.738778,
+        "allTimePnl": 69343891.738778,
+        "badges": {
+          "level": "genius-trader",
+          "secondary": [
+            "top-100",
+            "mega-whale"
+          ]
+        },
+        "traderCard": {
+          "badges": [
+            "genius-trader",
+            "top-100",
+            "mega-whale"
+          ],
+          "rank": 58,
+          "chips": [
+            {
+              "kind": "rank",
+              "label": "Trader Rank",
+              "value": "#58",
+              "url": "/trader/0x4ff721407ab013f8b094391228a2d04074252ff8"
+            }
+          ],
+          "venue": "hyperliquid",
+          "pnl": {
+            "side": "short",
+            "entryPx": "577.13",
+            "leverage": 5,
+            "sizeAbs": 259.148,
+            "seedPx": "582.294",
+            "live": true,
+            "sizeShrunk": false,
+            "frozen": null
+          }
+        }
+      },
+      "hash": "397832cd90fdc9695c04efd43c6c142facab47ac149a868cab819b58e928c658"
+    },
+    {
+      "observedAt": "2026-11-12T05:46:40.444838+00:00",
+      "kind": "first_observation",
+      "event": {
+        "id": 17547,
+        "type": "SMART_FRESH",
+        "coin": "AVAX",
+        "createdAt": "2026-11-12T05:46:17.232Z",
+        "occurredAt": "2026-11-12T05:46:00.332Z",
+        "payload": {
+          "side": "LONG",
+          "addPx": 8.593541840493707,
+          "liqPx": 21.550406684405424,
+          "action": "ADDED",
+          "cohort": "SMART",
+          "wallet": "0x5d26cbe12cad98e13c482a93f16bbcfbd0100731",
+          "entryPx": 8.46,
+          "leverage": {
+            "type": "cross",
+            "value": 10
+          },
+          "marginUsd": 114472.430038,
+          "positionUsd": 2735935.42752,
+          "allTimePnlUsd": 5660075.499634,
+          "addedMarginUsd": 20778.457336602925
+        },
+        "tags": {
+          "0x5d26cbe12cad98e13c482a93f16bbcfbd0100731": [
+            "VETERAN",
+            "WHALE"
+          ]
+        },
+        "perpPnl": 4873495.788601,
+        "allTimePnl": 4873495.788601,
+        "badges": {
+          "level": "smart-trader",
+          "secondary": [
+            "top-1000",
+            "whale",
+            "veteran"
+          ]
+        },
+        "traderCard": {
+          "badges": [
+            "smart-trader",
+            "top-1000",
+            "whale",
+            "veteran"
+          ],
+          "rank": 713,
+          "chips": [
+            {
+              "kind": "rank",
+              "label": "Trader Rank",
+              "value": "#713",
+              "url": "/trader/0x5d26cbe12cad98e13c482a93f16bbcfbd0100731"
+            }
+          ],
+          "venue": "hyperliquid",
+          "pnl": {
+            "side": "long",
+            "entryPx": "8.46",
+            "leverage": 10,
+            "sizeAbs": 209844.4,
+            "seedPx": "8.6708",
+            "live": true,
+            "sizeShrunk": false,
+            "frozen": null
+          }
+        }
+      },
+      "hash": "798eef8f35fa0255c004e82aa9e3a45572484a75341e9c73388d0530f03a4b36"
+    },
+    {
+      "observedAt": "2026-11-12T05:58:23.182551+00:00",
+      "kind": "first_observation",
+      "event": {
+        "id": 17549,
+        "type": "SMART_FRESH",
+        "coin": "ETH",
+        "createdAt": "2026-11-12T05:58:15.386Z",
+        "occurredAt": "2026-11-12T05:58:00.247Z",
+        "payload": {
+          "side": "SHORT",
+          "addPx": 2045.9794363595302,
+          "liqPx": null,
+          "action": "ADDED",
+          "cohort": "GENIUS",
+          "wallet": "0x4623f25b919105765874381af97721bc40fdc06e",
+          "entryPx": 2095.29,
+          "leverage": {
+            "type": "cross",
+            "value": 25
+          },
+          "marginUsd": 99099.095081,
+          "positionUsd": 2480359.0574,
+          "allTimePnlUsd": 73139707.036707,
+          "addedMarginUsd": 24810.879884344056
+        },
+        "tags": {
+          "0x4623f25b919105765874381af97721bc40fdc06e": [
+            "VETERAN",
+            "WHALE"
+          ]
+        },
+        "perpPnl": 46979002.350073,
+        "allTimePnl": 46979002.350073,
+        "badges": {
+          "level": "genius-trader",
+          "secondary": [
+            "top-100",
+            "mega-whale",
+            "veteran"
+          ]
+        },
+        "traderCard": {
+          "badges": [
+            "genius-trader",
+            "top-100",
+            "mega-whale",
+            "veteran"
+          ],
+          "rank": 42,
+          "chips": [
+            {
+              "kind": "rank",
+              "label": "Trader Rank",
+              "value": "#42",
+              "url": "/trader/0x4623f25b919105765874381af97721bc40fdc06e"
+            }
+          ],
+          "venue": "hyperliquid",
+          "pnl": {
+            "side": "short",
+            "entryPx": "2095.29",
+            "leverage": 25,
+            "sizeAbs": 544.7997,
+            "seedPx": "2087.56",
+            "live": true,
+            "sizeShrunk": false,
+            "frozen": null
+          }
+        }
+      },
+      "hash": "5d88577e6ca04b99203f232c49ac028d4d08e175ab8e7b6ecbc8e3d7264cb903"
+    },
+    {
+      "observedAt": "2026-11-12T06:00:41.994646+00:00",
+      "kind": "first_observation",
+      "event": {
+        "id": 17550,
+        "type": "SMART_FRESH",
+        "coin": "HYPE",
+        "createdAt": "2026-11-12T06:00:21.209Z",
+        "occurredAt": "2026-11-12T06:00:00.472Z",
+        "payload": {
+          "side": "LONG",
+          "addPx": 71.48130598770011,
+          "liqPx": null,
+          "action": "ADDED",
+          "cohort": "SMART",
+          "wallet": "0x1b2987fc22923c61629ba1cb8900982f784c618d",
+          "entryPx": 70.2125,
+          "leverage": {
+            "type": "cross",
+            "value": 3
+          },
+          "marginUsd": 37294.334522,
+          "positionUsd": 106689.35624,
+          "allTimePnlUsd": 3417972.770809,
+          "addedMarginUsd": 34291.61699731233
+        },
+        "tags": {
+          "0x1b2987fc22923c61629ba1cb8900982f784c618d": [
+            "VETERAN"
+          ]
+        },
+        "perpPnl": 6591909.200438,
+        "allTimePnl": 6591909.200438,
+        "badges": {
+          "level": "smart-trader",
+          "secondary": [
+            "top-1000",
+            "whale",
+            "veteran"
+          ]
+        },
+        "traderCard": {
+          "badges": [
+            "smart-trader",
+            "top-1000",
+            "whale",
+            "veteran"
+          ],
+          "rank": 657,
+          "chips": [
+            {
+              "kind": "rank",
+              "label": "Trader Rank",
+              "value": "#657",
+              "url": "/trader/0x1b2987fc22923c61629ba1cb8900982f784c618d"
+            }
+          ],
+          "venue": "hyperliquid",
+          "pnl": {
+            "side": "long",
+            "entryPx": "70.2125",
+            "leverage": 3,
+            "sizeAbs": 1504.74,
+            "seedPx": "73.067",
+            "live": true,
+            "sizeShrunk": false,
+            "frozen": null
+          }
+        }
+      },
+      "hash": "f290fe833c1a30b381fd7c0b1e4ba1134526977d81ffb40cec8c5927e372573d"
+    },
+    {
+      "observedAt": "2026-11-12T06:04:15.409223+00:00",
+      "kind": "first_observation",
+      "event": {
+        "id": 17552,
+        "type": "SMART_FRESH",
+        "coin": "XMR",
+        "createdAt": "2026-11-12T06:04:13.331Z",
+        "occurredAt": "2026-11-12T06:04:00.310Z",
+        "payload": {
+          "side": "LONG",
+          "addPx": 564.8568910921376,
+          "liqPx": null,
+          "action": "ADDED",
+          "cohort": "GENIUS",
+          "wallet": "0x3c9ef394edc178e827f772fc41a1b064e1c0224d",
+          "entryPx": 584.204,
+          "leverage": {
+            "type": "cross",
+            "value": 5
+          },
+          "marginUsd": 109821.32007,
+          "positionUsd": 770742.87321,
+          "allTimePnlUsd": 25094908.922333,
+          "addedMarginUsd": 19966.83071
+        },
+        "tags": {
+          "0x3c9ef394edc178e827f772fc41a1b064e1c0224d": [
+            "VETERAN",
+            "WHALE"
+          ]
+        },
+        "perpPnl": 28121919.567071,
+        "allTimePnl": 28121919.567071,
+        "badges": {
+          "level": "genius-trader",
+          "secondary": [
+            "top-1000",
+            "whale",
+            "veteran"
+          ]
+        },
+        "traderCard": {
+          "badges": [
+            "genius-trader",
+            "top-1000",
+            "whale",
+            "veteran"
+          ],
+          "rank": 95,
+          "chips": [
+            {
+              "kind": "rank",
+              "label": "Trader Rank",
+              "value": "#95",
+              "url": "/trader/0x3c9ef394edc178e827f772fc41a1b064e1c0224d"
+            }
+          ],
+          "venue": "hyperliquid",
+          "pnl": {
+            "side": "long",
+            "entryPx": "584.204",
+            "leverage": 5,
+            "sizeAbs": 1358.441,
+            "seedPx": "573.83",
+            "live": true,
+            "sizeShrunk": false,
+            "frozen": null
+          }
+        }
+      },
+      "hash": "4215bb532da108e1ac7192ef7f0bd89107bd8f26a439a40d5d5ba831fe62d4a0"
+    },
+    {
+      "observedAt": "2026-11-12T06:06:33.402993+00:00",
+      "kind": "first_observation",
+      "event": {
+        "id": 17553,
+        "type": "SMART_FRESH",
+        "coin": "AVAX",
+        "createdAt": "2026-11-12T06:06:19.306Z",
+        "occurredAt": "2026-11-12T06:06:00.790Z",
+        "payload": {
+          "side": "LONG",
+          "addPx": 8.56908054941376,
+          "liqPx": null,
+          "action": "ADDED",
+          "cohort": "GENIUS",
+          "wallet": "0x72d19ef1f9e11256eccb1edd3e1766fdf7596241",
+          "entryPx": 8.3934,
+          "leverage": {
+            "type": "cross",
+            "value": 10
+          },
+          "marginUsd": 72965.619783,
+          "positionUsd": 901205.84986,
+          "allTimePnlUsd": 4748872.329127,
+          "addedMarginUsd": 15802.584715883977,
+          "flippedFrom": "SHORT"
+        },
+        "tags": {
+          "0x72d19ef1f9e11256eccb1edd3e1766fdf7596241": [
+            "WHALE"
+          ]
+        },
+        "perpPnl": 8981285.082993,
+        "allTimePnl": 8981285.082993,
+        "badges": {
+          "level": "genius-trader",
+          "secondary": [
+            "top-1000",
+            "whale"
+          ]
+        },
+        "traderCard": {
+          "badges": [
+            "genius-trader",
+            "top-1000",
+            "whale"
+          ],
+          "rank": 319,
+          "chips": [
+            {
+              "kind": "rank",
+              "label": "Trader Rank",
+              "value": "#319",
+              "url": "/trader/0x72d19ef1f9e11256eccb1edd3e1766fdf7596241"
+            }
+          ],
+          "venue": "hyperliquid",
+          "pnl": {
+            "side": "long",
+            "entryPx": "8.3934",
+            "leverage": 10,
+            "sizeAbs": 118949.2,
+            "seedPx": "8.6591",
+            "live": true,
+            "sizeShrunk": false,
+            "frozen": null
+          }
+        }
+      },
+      "hash": "889c32506174b2af662171a59d40f02ccee55d757dea20d4645d7d054f384784"
+    },
+    {
+      "observedAt": "2026-11-12T06:07:42.940017+00:00",
+      "kind": "first_observation",
+      "event": {
+        "id": 17554,
+        "type": "SMART_FRESH",
+        "coin": "ENA",
+        "createdAt": "2026-11-12T06:07:11.469Z",
+        "occurredAt": "2026-11-12T06:07:00.161Z",
+        "payload": {
+          "side": "LONG",
+          "addPx": 0.1434606650494299,
+          "liqPx": null,
+          "action": "ADDED",
+          "cohort": "GENIUS",
+          "wallet": "0x4c4d69d29acd0f193d5c252edb6724d87c16603b",
+          "entryPx": 0.138623,
+          "leverage": {
+            "type": "cross",
+            "value": 6
+          },
+          "marginUsd": 45284.80568,
+          "positionUsd": 244916.22504,
+          "allTimePnlUsd": 9456942.456059,
+          "addedMarginUsd": 39873.3060078416,
+          "flippedFrom": "SHORT"
+        },
+        "tags": {
+          "0x4c4d69d29acd0f193d5c252edb6724d87c16603b": [
+            "VETERAN"
+          ]
+        },
+        "perpPnl": 6487384.59982,
+        "allTimePnl": 6487384.59982,
+        "badges": {
+          "level": "genius-trader",
+          "secondary": [
+            "top-1000",
+            "whale",
+            "veteran"
+          ]
+        },
+        "traderCard": {
+          "badges": [
+            "genius-trader",
+            "top-1000",
+            "whale",
+            "veteran"
+          ],
+          "rank": 212,
+          "chips": [
+            {
+              "kind": "rank",
+              "label": "Trader Rank",
+              "value": "#212",
+              "url": "/trader/0x4c4d69d29acd0f193d5c252edb6724d87c16603b"
+            }
+          ],
+          "venue": "hyperliquid",
+          "pnl": {
+            "side": "long",
+            "entryPx": "0.138623",
+            "leverage": 6,
+            "sizeAbs": 1356528,
+            "seedPx": "0.14763",
+            "live": true,
+            "sizeShrunk": false,
+            "frozen": null
+          }
+        }
+      },
+      "hash": "b19e78cecc97b5d51d53334edd06521f8ad542978e582d9bc52611403754f17c"
+    },
+    {
+      "observedAt": "2026-11-12T06:08:55.479206+00:00",
+      "kind": "first_observation",
+      "event": {
+        "id": 17555,
+        "type": "SMART_FRESH",
+        "coin": "XMR",
+        "createdAt": "2026-11-12T06:08:18.535Z",
+        "occurredAt": "2026-11-12T06:08:00.399Z",
+        "payload": {
+          "side": "LONG",
+          "addPx": 559.6929164537962,
+          "liqPx": null,
+          "action": "ADDED",
+          "cohort": "GENIUS",
+          "wallet": "0x4623f25b919105765874381af97721bc40fdc06e",
+          "entryPx": 547.264,
+          "leverage": {
+            "type": "cross",
+            "value": 5
+          },
+          "marginUsd": 130046.69991,
+          "positionUsd": 769817.0819,
+          "allTimePnlUsd": 63764927.936238,
+          "addedMarginUsd": 150768.40651
+        },
+        "tags": {
+          "0x4623f25b919105765874381af97721bc40fdc06e": [
+            "VETERAN",
+            "WHALE"
+          ]
+        },
+        "perpPnl": 86001928.355916,
+        "allTimePnl": 86001928.355916,
+        "badges": {
+          "level": "genius-trader",
+          "secondary": [
+            "top-100",
+            "mega-whale",
+            "veteran"
+          ]
+        },
+        "traderCard": {
+          "badges": [
+            "genius-trader",
+            "top-100",
+            "mega-whale",
+            "veteran"
+          ],
+          "rank": 49,
+          "chips": [
+            {
+              "kind": "rank",
+              "label": "Trader Rank",
+              "value": "#49",
+              "url": "/trader/0x4623f25b919105765874381af97721bc40fdc06e"
+            }
+          ],
+          "venue": "hyperliquid",
+          "pnl": {
+            "side": "long",
+            "entryPx": "547.264",
+            "leverage": 5,
+            "sizeAbs": 1516.958,
+            "seedPx": "567.91",
+            "live": true,
+            "sizeShrunk": false,
+            "frozen": null
+          }
+        }
+      },
+      "hash": "1b6364b420a62e47ac4e43f6c5334560b14b2f3e906ae50ea015282a61484918"
+    }
+  ],
+  "newActionCounts": {
+    "ADDED": 13
+  },
+  "newTierCounts": {
+    "GENIUS": 9,
+    "SMART": 4
+  },
+  "revisionRows": 241,
+  "publicationLagSeconds": {
+    "n": 13,
+    "min": 2.078223,
+    "median": 7.796551,
+    "p90NearestRank": 31.471017,
+    "max": 36.944206
+  },
+  "exitJoins": [],
+  "newGeniusLegs": [],
+  "genius": {
+    "history": 58,
+    "open": 50,
+    "closed": 8,
+    "cash": 4980.43376828499,
+    "realizedBeforeFunding": 86.71125486420027,
+    "openModeledPnlBeforeFunding": 543.0360657706071,
+    "closedPerformance": {
+      "n": 8,
+      "wins": 6,
+      "losses": 2,
+      "winRatePct": 75.0,
+      "expectancy": 10.838906858025034,
+      "profitFactor": 4.914207448134561,
+      "payoffRatio": 1.6380691493781872
+    },
+    "concentration": {
+      "ZEC": 12,
+      "BTC": 19,
+      "UNI": 1,
+      "XMR": 1,
+      "HYPE": 4,
+      "LIT": 2,
+      "ETH": 6,
+      "XRP": 1,
+      "SOL": 3,
+      "kPEPE": 1
+    },
+    "valuationQuality": {
+      "at": "2026-11-12T06:17:42.290179+00:00",
+      "status": "Unvalidated website-alert simulation; source holdings and funding incomplete",
+      "copyPerformanceEligible": false,
+      "activePaperExposures": 50,
+      "closureWarningPositionIds": [
+        10652,
+        10736,
+        10936,
+        11128,
+        11154,
+        11438,
+        11451,
+        11464,
+        11511,
+        11777,
+        11798,
+        11841,
+        11904,
+        11945,
+        11949,
+        11956,
+        11974,
+        11995,
+        12076,
+        12122,
+        12445,
+        12839,
+        13388,
+        14155,
+        17053
+      ],
+      "closureWarningCount": 25,
+      "sourceCardNoLongerLiveCount": 12,
+      "subsequentOpeningPositionIds": [
+        10652,
+        10736,
+        10936,
+        11128,
+        11154,
+        11438,
+        11464,
+        11511,
+        11777,
+        11798,
+        11841,
+        11904,
+        11945,
+        11949,
+        11974,
+        11995,
+        12076,
+        12122,
+        12445,
+        12839,
+        14155
+      ],
+      "subsequentOpeningWarningCount": 21,
+      "warningExposureModeledPnlBeforeFunding": 236.39704874958204,
+      "otherUnverifiedExposureModeledPnlBeforeFunding": 306.6390170210251,
+      "totalModeledPnlBeforeFunding": 543.0360657706071,
+      "interpretation": "Warning subtotal assumes continued exposure despite non-live source cards or subsequent openings; neither subtotal is verified copier performance."
+    },
+    "archiveExitScan": {
+      "at": "2026-11-12T06:13:34.239747+00:00",
+      "scope": "Saved original exits and copied-card ending revisions; uncaptured source history unknown",
+      "files": 179,
+      "bytesRead": 25709,
+      "exitCardsReviewed": 0,
+      "endingRevisionRowsReviewed": 0,
+      "newCardWarningsRecovered": 0,
+      "matchingExitIds": [
+        17036,
+        16710,
+        16479,
+        15815,
+        15248,
+        15176,
+        13000,
+        12838
+      ],
+      "backlogRemaining": false,
+      "errors": []
+    },
+    "pendingExitIds": [
+      "17036",
+      "16710",
+      "16479",
+      "15815",
+      "15248",
+      "15176",
+      "13000",
+      "12838"
+    ]
+  },
+  "scalp": {
+    "portfolio": {
+      "protocolVersion": "split-v4",
+      "families": {
+        "fresh": {
+          "total": 359,
+          "open": 0,
+          "closed": 359,
+          "closedPnlBeforeFunding": -49.08877837060961,
+          "milestones": {
+            "notional": {
+              "5": 9,
+              "10": 0,
+              "20": 0
+            },
+            "margin": {
+              "5": 103,
+              "10": 52,
+              "20": 30
+            }
+          }
+        },
+        "add_scalp": {
+          "total": 2399,
+          "open": 12,
+          "closed": 2387,
+          "closedPnlBeforeFunding": -790.7752429840551,
+          "milestones": {
+            "notional": {
+              "5": 5,
+              "10": 1,
+              "20": 0
+            },
+            "margin": {
+              "5": 496,
+              "10": 250,
+              "20": 89
+            }
+          }
+        }
+      },
+      "study": "github-portfolio-v3",
+      "initialEquity": 1000,
+      "equity": 159.29288451517326,
+      "realizedBeforeFunding": -839.8640213546647,
+      "openCloseEstimateBeforeFunding": -0.8430941301620352,
+      "marginInUse": 69.15129562316666,
+      "available": 90.1415888920066,
+      "openCount": 12,
+      "closedCount": 2746,
+      "totalCount": 2758,
+      "maxOpen": 20,
+      "targetNotional": 200,
+      "maxPositionNotional": 350,
+      "stalePositions": [],
+      "milestones": {
+        "notional": {
+          "5": {
+            "hit": 14,
+            "total": 2758,
+            "unconfirmed": 2744
+          },
+          "10": {
+            "hit": 1,
+            "total": 2758,
+            "unconfirmed": 2757
+          },
+          "20": {
+            "hit": 0,
+            "total": 2758,
+            "unconfirmed": 2758
+          }
+        },
+        "margin": {
+          "5": {
+            "hit": 599,
+            "total": 2758,
+            "unconfirmed": 2159
+          },
+          "10": {
+            "hit": 302,
+            "total": 2758,
+            "unconfirmed": 2456
+          },
+          "20": {
+            "hit": 119,
+            "total": 2758,
+            "unconfirmed": 2639
+          }
+        }
+      },
+      "feesAssumedBps": 4.5,
+      "fundingComplete": false,
+      "at": "2026-11-12T06:17:42.322659+00:00",
+      "maxDrawdownObserved": 0.8413086727271465
+    },
+    "closedPerformance": {
+      "n": 2746,
+      "wins": 874,
+      "losses": 1872,
+      "winRatePct": 31.828113619810633,
+      "expectancy": -0.30584997136003816,
+      "profitFactor": 0.4559985130973038,
+      "payoffRatio": 0.9766924674120739
+    },
+    "closedWithPathGap": 2703,
+    "newEntries": [
+      {
+        "eventId": 17539,
+        "signalClass": "add_scalp",
+        "openedAt": "2026-11-12T05:19:08.816746+00:00"
+      },
+      {
+        "eventId": 17540,
+        "signalClass": "add_scalp",
+        "openedAt": "2026-11-12T05:32:21.569594+00:00"
+      },
+      {
+        "eventId": 17541,
+        "signalClass": "add_scalp",
+        "openedAt": "2026-11-12T05:34:39.150684+00:00"
+      },
+      {
+        "eventId": 17542,
+        "signalClass": "add_scalp",
+        "openedAt": "2026-11-12T05:35:13.416665+00:00"
+      },
+      {
+        "eventId": 17543,
+        "signalClass": "add_scalp",
+        "openedAt": "2026-11-12T05:35:13.700582+00:00"
+      },
+      {
+        "eventId": 17544,
+        "signalClass": "add_scalp",
+        "openedAt": "2026-11-12T05:36:23.255095+00:00"
+      },
+      {
+        "eventId": 17547,
+        "signalClass": "add_scalp",
+        "openedAt": "2026-11-12T05:46:40.653269+00:00"
+      },
+      {
+        "eventId": 17549,
+        "signalClass": "add_scalp",
+        "openedAt": "2026-11-12T05:58:23.431214+00:00"
+      },
+      {
+        "eventId": 17550,
+        "signalClass": "add_scalp",
+        "openedAt": "2026-11-12T06:00:42.239219+00:00"
+      },
+      {
+        "eventId": 17552,
+        "signalClass": "add_scalp",
+        "openedAt": "2026-11-12T06:04:15.948177+00:00"
+      },
+      {
+        "eventId": 17553,
+        "signalClass": "add_scalp",
+        "openedAt": "2026-11-12T06:06:33.604498+00:00"
+      },
+      {
+        "eventId": 17554,
+        "signalClass": "add_scalp",
+        "openedAt": "2026-11-12T06:07:43.119463+00:00"
+      },
+      {
+        "eventId": 17555,
+        "signalClass": "add_scalp",
+        "openedAt": "2026-11-12T06:08:56.062300+00:00"
+      }
+    ],
+    "newClosures": [
+      {
+        "eventId": 17523,
+        "closedAt": "2026-11-12T05:33:52.780273+00:00",
+        "netPnl": -0.30997089269999284
+      },
+      {
+        "eventId": 17524,
+        "closedAt": "2026-11-12T05:34:27.684263+00:00",
+        "netPnl": 0.27438932936050636
+      },
+      {
+        "eventId": 17525,
+        "closedAt": "2026-11-12T05:35:48.327375+00:00",
+        "netPnl": 0.22574053289600465
+      },
+      {
+        "eventId": 17527,
+        "closedAt": "2026-11-12T05:39:18.261332+00:00",
+        "netPnl": -0.06984958827750173
+      },
+      {
+        "eventId": 17528,
+        "closedAt": "2026-11-12T05:41:25.677386+00:00",
+        "netPnl": -0.03744491229149886
+      },
+      {
+        "eventId": 17534,
+        "closedAt": "2026-11-12T06:02:29.662110+00:00",
+        "netPnl": 0.4797411589439987
+      },
+      {
+        "eventId": 17535,
+        "closedAt": "2026-11-12T06:07:43.507582+00:00",
+        "netPnl": 0.7774733885760068
+      },
+      {
+        "eventId": 17536,
+        "closedAt": "2026-11-12T06:14:34.989590+00:00",
+        "netPnl": -0.1677835499444951
+      },
+      {
+        "eventId": 17537,
+        "closedAt": "2026-11-12T06:16:20.576405+00:00",
+        "netPnl": -0.3323615161049954
+      },
+      {
+        "eventId": 17538,
+        "closedAt": "2026-11-12T06:16:20.222582+00:00",
+        "netPnl": -0.06000481643449452
+      },
+      {
+        "eventId": 17543,
+        "closedAt": "2026-11-12T06:06:45.910249+00:00",
+        "netPnl": -0.8261594611520025
+      }
+    ]
+  },
+  "implementation": {
+    "moduleCommit": "364c30c449022572fa1ca3782802273f8993ff19",
+    "testsCommit": "60fd21b3b48ffc1fb01c46ea00cd235fbced504e",
+    "documentationCommit": "8502833fe8a842f7fd96dc28509028cddf0e7616",
+    "sourceVerifiedAtCommit": "60fd21b3b48ffc1fb01c46ea00cd235fbced504e",
+    "sourceSha256": {
+      "checkpoint_publisher.py": "7410ab77d1011259924337a894c0ad4c001a15f1533da5b2529274948ae3143a",
+      "test_checkpoint_publisher.py": "ba41c7df139fb84766cf28332deb8cf8b418e11a4a6aeef100c04098ac5e02b7"
+    },
+    "testsPassed": 82,
+    "runtimeVerified": false,
+    "changes": [
+      "git-command-diagnostic-v1 command stage/start/end/monotonic duration/result/return code",
+      "Classify at most8192stderr bytes into fixed categories; never persist raw stderr/argv/URLs/environment",
+      "Save inspected/observed byte counts and truncation flag; unknown stays unclassified",
+      "Preserve both failed retry commands rather than final error only, including earlier failures on eventual success",
+      "Keep retry count,timeout,cancellation,evidence freezing,trade logic and accounting unchanged"
+    ],
+    "tests": [
+      "82 full suite passes including all prior79 tests",
+      "Private token/URL/raw stderr and command arguments absent from bounded diagnostic JSON;8192byte inspection bound",
+      "Simulated first write-tree timeout and second read-tree exit128 both survive into failed background receipt; unpublished remains explicit",
+      "Actual Git subprocess timeout records timing/result without raw command",
+      "Existing actual non-fast-forward race now additionally asserts retained first-attempt push diagnostic on success"
+    ],
+    "interpretation": "Diagnostics are a future evidence improvement, not a historical root-cause diagnosis. Current running head lacks new diagnostic code; next natural successor must publish protocol fields before activation is verified."
+  },
+  "limitations": [
+    "Website-only bounded feed cannot prove complete entries/exits",
+    "No source price backdating, fake deadline fills or synthetic latency P&L",
+    "Funding incomplete,fee/slippage modeled,liquidation incomplete",
+    "Wallet identity,tier timing,lifecycle,lawful US/PA access,representative30/90day history and meaningful OOS/stressed-cost edge unverified"
+  ],
+  "nextTest": "Verify deployed diagnostic protocol and identify actual command-stage sequence/categories for next publication failure; verify next final drain/handoff without interrupting active collector.",
+  "websiteScan": {
+    "page": {
+      "at": "2026-11-12T06:18:48.165Z",
+      "status": "page_read",
+      "httpStatus": 200,
+      "hash": "dee196869a52d87cf3d62d0196ada2a065f412f5dfe9cd77a2fea7ee8f5f1ad8"
+    },
+    "live": {
+      "at": "2026-11-12T06:18:50.640Z",
+      "status": "page_read",
+      "sourceHash": "5618e553f9890934acd02517d3ffe977cfca1d4bb7723cc84eda828cc0d765af",
+      "eventCount": 19
+    }
+  },
+  "currentJobs": {
+    "jobs": [
+      {
+        "id": 130998301681,
+        "name": "observe",
+        "status": "in_progress",
+        "conclusion": null,
+        "run_id": 43162992442,
+        "logs_url": null,
+        "steps": [
+          {
+            "name": "Set up job",
+            "status": "completed",
+            "conclusion": "success",
+            "number": 1
+          },
+          {
+            "name": "Run actions/checkout@v4",
+            "status": "completed",
+            "conclusion": "success",
+            "number": 2
+          },
+          {
+            "name": "Run actions/setup-python@v5",
+            "status": "completed",
+            "conclusion": "success",
+            "number": 3
+          },
+          {
+            "name": "Verify paper math",
+            "status": "completed",
+            "conclusion": "success",
+            "number": 4
+          },
+          {
+            "name": "Collect public events and paper quotes",
+            "status": "in_progress",
+            "conclusion": null,
+            "number": 5
+          },
+          {
+            "name": "Persist public evidence",
+            "status": "pending",
+            "conclusion": null,
+            "number": 6
+          },
+          {
+            "name": "Preserve evidence artifact even if commit fails",
+            "status": "pending",
+            "conclusion": null,
+            "number": 7
+          },
+          {
+            "name": "Hand off to next bounded collector window",
+            "status": "pending",
+            "conclusion": null,
+            "number": 8
+          },
+          {
+            "name": "Post Run actions/setup-python@v5",
+            "status": "pending",
+            "conclusion": null,
+            "number": 15
+          },
+          {
+            "name": "Post Run actions/checkout@v4",
+            "status": "pending",
+            "conclusion": null,
+            "number": 16
+          }
+        ]
+      }
+    ]
+  },
+  "completedJobs": {
+    "jobs": [
+      {
+        "id": 130978620685,
+        "name": "observe",
+        "status": "completed",
+        "conclusion": "success",
+        "run_id": 43156834042,
+        "logs_url": null,
+        "steps": [
+          {
+            "name": "Set up job",
+            "status": "completed",
+            "conclusion": "success",
+            "number": 1
+          },
+          {
+            "name": "Run actions/checkout@v4",
+            "status": "completed",
+            "conclusion": "success",
+            "number": 2
+          },
+          {
+            "name": "Run actions/setup-python@v5",
+            "status": "completed",
+            "conclusion": "success",
+            "number": 3
+          },
+          {
+            "name": "Verify paper math",
+            "status": "completed",
+            "conclusion": "success",
+            "number": 4
+          },
+          {
+            "name": "Collect public events and paper quotes",
+            "status": "completed",
+            "conclusion": "success",
+            "number": 5
+          },
+          {
+            "name": "Persist public evidence",
+            "status": "completed",
+            "conclusion": "success",
+            "number": 6
+          },
+          {
+            "name": "Preserve evidence artifact even if commit fails",
+            "status": "completed",
+            "conclusion": "success",
+            "number": 7
+          },
+          {
+            "name": "Hand off to next bounded collector window",
+            "status": "completed",
+            "conclusion": "success",
+            "number": 8
+          },
+          {
+            "name": "Post Run actions/setup-python@v5",
+            "status": "completed",
+            "conclusion": "success",
+            "number": 15
+          },
+          {
+            "name": "Post Run actions/checkout@v4",
+            "status": "completed",
+            "conclusion": "success",
+            "number": 16
+          },
+          {
+            "name": "Complete job",
+            "status": "completed",
+            "conclusion": "success",
+            "number": 17
+          }
+        ]
+      }
+    ]
+  }
+}
