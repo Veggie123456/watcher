@@ -27,6 +27,10 @@ def prepare(state, live_events, fetch_source, request, parse_events, stamp, mill
         if millis(now) < child.get('profileRetryAfterMs', 0):
             raise ProfileCheckDeferred()
         html = request(SOURCE)
+        if not child.get('profileSnapshotSavedAt'):
+            append('profile-snapshots', {'at':stamp(), 'url':SOURCE, 'html':html,
+                'hash':hashlib.sha256(html.encode()).hexdigest()})
+            child['profileSnapshotSavedAt'] = stamp()
         events = [e for e in parse_events(html, all_cohorts=True) if exact(e)]
         found.update({e['id']: e for e in events})
         child.update(profileStatus='read' if events else 'no_parseable_wallet_events',
