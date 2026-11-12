@@ -48,4 +48,23 @@ class TargetTraderTests(unittest.TestCase):
         child,events=target.prepare(state,[],True,lambda u:'html',lambda h,**kw:[event(1),event(2,wallet='0x'+'b'*40)],lambda:next(now),millis,lambda *a:None)
         self.assertEqual([e['id'] for e in events],[1]);self.assertEqual(child['profileStatus'],'read')
 
+class ProfileEpisodeTests(unittest.TestCase):
+ def html(self,opens):
+  import json
+  data={'ours':{'address':target.WALLET,'cohort':'SMART','label':'GENIUS','allRank':3475,'opens':opens}}
+  return '<script>self.__next_f.push('+json.dumps([1,json.dumps(data,separators=(',',':'))])+')</script>'
+ def test_profile_baseline_and_prospective_new_episode(self):
+  st={};old=[{'coin':'BTC','side':'LONG','openedAt':'2026-11-11T18:00:00+00:00'}]
+  child,events=target.prepare(st,[],True,lambda u:self.html(old),lambda *a,**k:[],lambda:NOW,millis,lambda *a:None)
+  self.assertEqual(events,[]);self.assertEqual(child['profileSummary']['openEpisodeCount'],1)
+  later='2026-11-12T18:01:30+00:00'
+  new=old+[{'coin':'ETH','side':'SHORT','openedAt':'2026-11-12T18:01:20+00:00'}]
+  child,events=target.prepare(st,[],True,lambda u:self.html(new),lambda *a,**k:[],lambda:later,millis,lambda *a:None)
+  self.assertEqual(len(events),1);self.assertEqual(events[0]['coin'],'ETH');self.assertIsNone(events[0]['publishedAt'])
+  self.assertEqual(events[0]['origin'],'profile_open_episode')
+  child,events=target.prepare(st,[],True,lambda u:self.html(new),lambda *a,**k:[],lambda:'2026-11-12T18:03:00+00:00',millis,lambda *a:None)
+  self.assertEqual(events,[])
+ def test_profile_address_mismatch_rejected(self):
+  self.assertIsNone(target.profile_data(self.html([]).replace(target.WALLET,'0x'+'b'*40)))
+
 if __name__=='__main__':unittest.main()
