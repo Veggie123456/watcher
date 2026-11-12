@@ -1,0 +1,2558 @@
+{
+  "protocol": "publisher-isolation-implementation-audit-v1",
+  "runAt": "2026-11-12T04:28:46.367448+00:00",
+  "previousCutoff": "2026-11-12T03:15:03.459429Z",
+  "immutableCheckpoint": "68fe4c1de76347a958e99c5c2582c89c16c82d2c",
+  "cutoff": "2026-11-12T04:17:51.126855+00:00",
+  "heartbeatAt": "2026-11-12T04:17:50.506725+00:00",
+  "websiteCheckedAt": "2026-11-12T04:17:25.270680+00:00",
+  "sourceStatus": "read",
+  "coverage": {
+    "43144522905-1-source-checks.jsonl": {
+      "count": 66,
+      "first": {
+        "sourceStatus": "read",
+        "sourceCheckedAt": "2026-11-12T02:54:24.080300+00:00",
+        "sourceHash": "9aba23c1e5855e633aee594c3d128d62e3b4126e87d3519a8fea74a58d178124"
+      },
+      "last": {
+        "sourceStatus": "read",
+        "sourceCheckedAt": "2026-11-12T03:48:56.205880+00:00",
+        "sourceHash": "ec3ffc01274335411e11b461255ac3e78fa866f8315c5e3567369cb2880e829b"
+      },
+      "medianIntervalSeconds": 41.640584,
+      "maxIntervalSeconds": 158.926126
+    },
+    "43150748195-1-source-checks.jsonl": {
+      "count": 27,
+      "first": {
+        "sourceStatus": "read",
+        "sourceCheckedAt": "2026-11-12T03:50:02.767386+00:00",
+        "sourceHash": "04b93cf3995ddcd784548c5ab5c35e7b93921030f6957b2611971f6f61242e13"
+      },
+      "last": {
+        "sourceStatus": "read",
+        "sourceCheckedAt": "2026-11-12T04:17:25.270680+00:00",
+        "sourceHash": "4b18aaf422ea0ce64070b0565bc085df727abdb7fe33964d0f29f07fd8cb222f"
+      },
+      "medianIntervalSeconds": 42.173249999999996,
+      "maxIntervalSeconds": 158.649913
+    }
+  },
+  "sourceHandoffGapSeconds": 66.561506,
+  "newOriginals": [
+    {
+      "observedAt": "2026-11-12T03:20:09.664170+00:00",
+      "kind": "first_observation",
+      "event": {
+        "id": 17516,
+        "type": "SMART_FRESH",
+        "coin": "XMR",
+        "createdAt": "2026-11-12T03:20:09.031Z",
+        "occurredAt": "2026-11-12T03:20:00.470Z",
+        "payload": {
+          "side": "LONG",
+          "addPx": 574.6843948905861,
+          "liqPx": 1860.6452583454854,
+          "action": "ADDED",
+          "cohort": "SMART",
+          "wallet": "0x5a499efccd4e98778b32cc5cf20c97d46e0cc96d",
+          "entryPx": 584.043,
+          "leverage": {
+            "type": "cross",
+            "value": 5
+          },
+          "marginUsd": 257794.423108,
+          "positionUsd": 900087.45565,
+          "allTimePnlUsd": 30977208.468798,
+          "addedMarginUsd": 20228.787249693713
+        },
+        "tags": {
+          "0x5a499efccd4e98778b32cc5cf20c97d46e0cc96d": [
+            "VETERAN",
+            "WHALE"
+          ]
+        },
+        "perpPnl": 29619251.968116,
+        "allTimePnl": 29619251.968116,
+        "badges": {
+          "level": "smart-trader",
+          "secondary": [
+            "top-100",
+            "whale",
+            "veteran"
+          ]
+        },
+        "traderCard": {
+          "badges": [
+            "smart-trader",
+            "top-100",
+            "whale",
+            "veteran"
+          ],
+          "rank": 120,
+          "chips": [
+            {
+              "kind": "rank",
+              "label": "Trader Rank",
+              "value": "#120",
+              "url": "/trader/0x5a499efccd4e98778b32cc5cf20c97d46e0cc96d"
+            }
+          ],
+          "venue": "hyperliquid",
+          "pnl": {
+            "side": "long",
+            "entryPx": "584.043",
+            "leverage": 5,
+            "sizeAbs": 1544.625,
+            "seedPx": "562.84",
+            "live": true,
+            "sizeShrunk": false,
+            "frozen": null
+          }
+        }
+      },
+      "hash": "de7d25bb5fa405775cf7c655804f172c58622573c3be3af047626f2b07fa20e7"
+    },
+    {
+      "observedAt": "2026-11-12T03:20:09.664268+00:00",
+      "kind": "first_observation",
+      "event": {
+        "id": 17515,
+        "type": "SMART_FRESH",
+        "coin": "BTC",
+        "createdAt": "2026-11-12T03:20:09.013Z",
+        "occurredAt": "2026-11-12T03:20:00.470Z",
+        "payload": {
+          "side": "LONG",
+          "addPx": 74017.60000000002,
+          "liqPx": null,
+          "action": "ADDED",
+          "cohort": "SMART",
+          "wallet": "0x83be5a269a9a435bcd57d542bada53516ffb5092",
+          "entryPx": 74786,
+          "leverage": {
+            "type": "cross",
+            "value": 20
+          },
+          "marginUsd": 62671.3,
+          "positionUsd": 1915158,
+          "allTimePnlUsd": 1539528.544082,
+          "addedMarginUsd": 18976.8
+        },
+        "perpPnl": 979611.276506,
+        "allTimePnl": 979611.276506,
+        "badges": {
+          "level": "smart-trader",
+          "secondary": [
+            "whale"
+          ]
+        },
+        "traderCard": {
+          "badges": [
+            "smart-trader",
+            "whale"
+          ],
+          "rank": 2829,
+          "chips": [
+            {
+              "kind": "rank",
+              "label": "Trader Rank",
+              "value": "#2,829",
+              "url": "/trader/0x83be5a269a9a435bcd57d542bada53516ffb5092"
+            }
+          ],
+          "venue": "hyperliquid",
+          "pnl": {
+            "side": "long",
+            "entryPx": "74786",
+            "leverage": 20,
+            "sizeAbs": 19,
+            "seedPx": "75412",
+            "live": true,
+            "sizeShrunk": false,
+            "frozen": null
+          }
+        }
+      },
+      "hash": "5c076399e231ef626acdd308004494f92c19583322fcf660b1ce236072281c3f"
+    },
+    {
+      "observedAt": "2026-11-12T03:32:43.146111+00:00",
+      "kind": "first_observation",
+      "event": {
+        "id": 17517,
+        "type": "SMART_FRESH",
+        "coin": "XMR",
+        "createdAt": "2026-11-12T03:32:08.508Z",
+        "occurredAt": "2026-11-12T03:32:00.398Z",
+        "payload": {
+          "side": "SHORT",
+          "addPx": 573.6455603112842,
+          "liqPx": 4040.5779510930042,
+          "action": "ADDED",
+          "cohort": "GENIUS",
+          "wallet": "0x617139ae82c15c864fcdb1114bd20b185e9539a6",
+          "entryPx": 557.093,
+          "leverage": {
+            "type": "cross",
+            "value": 5
+          },
+          "marginUsd": 41916,
+          "positionUsd": 397560,
+          "allTimePnlUsd": 1782573.668756,
+          "addedMarginUsd": 47077.68009180112
+        },
+        "perpPnl": null,
+        "allTimePnl": null,
+        "badges": {
+          "level": "genius-trader",
+          "secondary": [
+            "whale"
+          ]
+        },
+        "traderCard": {
+          "badges": [
+            "genius-trader",
+            "whale"
+          ],
+          "rank": 1585,
+          "chips": [
+            {
+              "kind": "rank",
+              "label": "Trader Rank",
+              "value": "#1,585",
+              "url": "/trader/0x617139ae82c15c864fcdb1114bd20b185e9539a6"
+            }
+          ],
+          "venue": "hyperliquid",
+          "pnl": {
+            "side": "short",
+            "entryPx": "557.093",
+            "leverage": 5,
+            "sizeAbs": 566,
+            "seedPx": "586.4",
+            "live": true,
+            "sizeShrunk": false,
+            "frozen": null
+          }
+        }
+      },
+      "hash": "31a0290f4b9824a438fcdddbde3d2d475571bc088b895298cb1dd7a666d86e0e"
+    },
+    {
+      "observedAt": "2026-11-12T03:38:24.272816+00:00",
+      "kind": "first_observation",
+      "event": {
+        "id": 17519,
+        "type": "SMART_FRESH",
+        "coin": "LIT",
+        "createdAt": "2026-11-12T03:38:05.722Z",
+        "occurredAt": "2026-11-12T03:38:00.320Z",
+        "payload": {
+          "side": "SHORT",
+          "liqPx": 2.896004822683339,
+          "action": "OPENED",
+          "cohort": "SMART",
+          "wallet": "0xa41ed690bd9ddc427b1e866c72e9d4370eecf51d",
+          "entryPx": 3.225476,
+          "leverage": {
+            "type": "isolated",
+            "value": 5
+          },
+          "marginUsd": 19134.993249,
+          "positionUsd": 51997.054,
+          "allTimePnlUsd": 202868.11561,
+          "addedMarginUsd": null
+        },
+        "perpPnl": 381627.534569,
+        "allTimePnl": 381627.534569,
+        "badges": {
+          "level": "smart-trader",
+          "secondary": []
+        },
+        "traderCard": {
+          "badges": [
+            "smart-trader"
+          ],
+          "rank": 7333,
+          "chips": [
+            {
+              "kind": "rank",
+              "label": "Trader Rank",
+              "value": "#7,333",
+              "url": "/trader/0xa41ed690bd9ddc427b1e866c72e9d4370eecf51d"
+            }
+          ],
+          "venue": "hyperliquid",
+          "pnl": {
+            "side": "short",
+            "entryPx": "3.225476",
+            "leverage": 5,
+            "sizeAbs": 15181,
+            "seedPx": "3.3243",
+            "live": true,
+            "sizeShrunk": false,
+            "frozen": null
+          }
+        }
+      },
+      "hash": "08a3aa6755d5d03771c5626b63fab2abdc48c6129e055530748ac8dfc39efc9f"
+    },
+    {
+      "observedAt": "2026-11-12T03:40:31.090800+00:00",
+      "kind": "first_observation",
+      "event": {
+        "id": 17520,
+        "type": "SMART_FRESH",
+        "coin": "BTC",
+        "createdAt": "2026-11-12T03:40:07.090Z",
+        "occurredAt": "2026-11-12T03:40:00.428Z",
+        "payload": {
+          "side": "LONG",
+          "addPx": 73617.82958250027,
+          "liqPx": null,
+          "action": "ADDED",
+          "cohort": "SMART",
+          "wallet": "0x656479bffc5ae168ff19c11c6ed6b8b2d90261fc",
+          "entryPx": 74959,
+          "leverage": {
+            "type": "cross",
+            "value": 20
+          },
+          "marginUsd": 535786.136716,
+          "positionUsd": 19380629.13017,
+          "allTimePnlUsd": 320930178.607058,
+          "addedMarginUsd": 150270.25230387234
+        },
+        "tags": {
+          "0x656479bffc5ae168ff19c11c6ed6b8b2d90261fc": [
+            "GIGA_WHALE"
+          ]
+        },
+        "perpPnl": 274984419.447969,
+        "allTimePnl": 274984419.447969,
+        "badges": {
+          "level": "smart-trader",
+          "secondary": [
+            "top-100",
+            "fund",
+            "market-maker"
+          ]
+        },
+        "traderCard": {
+          "badges": [
+            "smart-trader",
+            "top-100",
+            "fund",
+            "market-maker"
+          ],
+          "rank": 5,
+          "chips": [
+            {
+              "kind": "rank",
+              "label": "Trader Rank",
+              "value": "#5",
+              "url": "/trader/0x656479bffc5ae168ff19c11c6ed6b8b2d90261fc"
+            }
+          ],
+          "venue": "hyperliquid",
+          "pnl": {
+            "side": "long",
+            "entryPx": "74959",
+            "leverage": 20,
+            "sizeAbs": 101.8298,
+            "seedPx": "71909",
+            "live": true,
+            "sizeShrunk": true,
+            "frozen": null
+          }
+        }
+      },
+      "hash": "b274165998321ae29c479c5f771ad0c43be3a58950df391371b72e0121735f71"
+    },
+    {
+      "observedAt": "2026-11-12T04:03:21.885376+00:00",
+      "kind": "first_observation",
+      "event": {
+        "id": 17521,
+        "type": "SMART_FRESH",
+        "coin": "XMR",
+        "createdAt": "2026-11-12T04:01:03.880Z",
+        "occurredAt": "2026-11-12T04:01:00.393Z",
+        "payload": {
+          "side": "SHORT",
+          "addPx": 573.8103558439411,
+          "liqPx": null,
+          "action": "ADDED",
+          "cohort": "GENIUS",
+          "wallet": "0x3c9ef394edc178e827f772fc41a1b064e1c0224d",
+          "entryPx": 561.541,
+          "leverage": {
+            "type": "cross",
+            "value": 5
+          },
+          "marginUsd": 100462.291151,
+          "positionUsd": 413621.55874,
+          "allTimePnlUsd": 17544647.66307,
+          "addedMarginUsd": 31344.378818267658
+        },
+        "tags": {
+          "0x3c9ef394edc178e827f772fc41a1b064e1c0224d": [
+            "VETERAN",
+            "WHALE"
+          ]
+        },
+        "perpPnl": 27084630.76322,
+        "allTimePnl": 27084630.76322,
+        "badges": {
+          "level": "genius-trader",
+          "secondary": [
+            "top-1000",
+            "whale",
+            "veteran"
+          ]
+        },
+        "traderCard": {
+          "badges": [
+            "genius-trader",
+            "top-1000",
+            "whale",
+            "veteran"
+          ],
+          "rank": 120,
+          "chips": [
+            {
+              "kind": "rank",
+              "label": "Trader Rank",
+              "value": "#120",
+              "url": "/trader/0x3c9ef394edc178e827f772fc41a1b064e1c0224d"
+            }
+          ],
+          "venue": "hyperliquid",
+          "pnl": {
+            "side": "short",
+            "entryPx": "561.541",
+            "leverage": 5,
+            "sizeAbs": 561.467,
+            "seedPx": "566.503",
+            "live": true,
+            "sizeShrunk": false,
+            "frozen": null
+          }
+        }
+      },
+      "hash": "13ec5f2de9d4914c0b568fa125d7ed8c8c6e230087ad9cb82797fa5c37b7e4fb"
+    },
+    {
+      "observedAt": "2026-11-12T04:06:08.142771+00:00",
+      "kind": "first_observation",
+      "event": {
+        "id": 17522,
+        "type": "SMART_FRESH",
+        "coin": "XMR",
+        "createdAt": "2026-11-12T04:06:03.320Z",
+        "occurredAt": "2026-11-12T04:06:00.501Z",
+        "payload": {
+          "side": "LONG",
+          "addPx": 572.5784005623948,
+          "liqPx": null,
+          "action": "ADDED",
+          "cohort": "GENIUS",
+          "wallet": "0x4623f25b919105765874381af97721bc40fdc06e",
+          "entryPx": 584.8,
+          "leverage": {
+            "type": "cross",
+            "value": 5
+          },
+          "marginUsd": 25070.773278,
+          "positionUsd": 107093.87869,
+          "allTimePnlUsd": 35799919.637757,
+          "addedMarginUsd": 14995.901319
+        },
+        "tags": {
+          "0x4623f25b919105765874381af97721bc40fdc06e": [
+            "VETERAN",
+            "WHALE"
+          ]
+        },
+        "perpPnl": 68066575.855261,
+        "allTimePnl": 68066575.855261,
+        "badges": {
+          "level": "genius-trader",
+          "secondary": [
+            "top-100",
+            "mega-whale",
+            "veteran"
+          ]
+        },
+        "traderCard": {
+          "badges": [
+            "genius-trader",
+            "top-100",
+            "mega-whale",
+            "veteran"
+          ],
+          "rank": 22,
+          "chips": [
+            {
+              "kind": "rank",
+              "label": "Trader Rank",
+              "value": "#22",
+              "url": "/trader/0x4623f25b919105765874381af97721bc40fdc06e"
+            }
+          ],
+          "venue": "hyperliquid",
+          "pnl": {
+            "side": "long",
+            "entryPx": "584.8",
+            "leverage": 5,
+            "sizeAbs": 105.516,
+            "seedPx": "562.98",
+            "live": true,
+            "sizeShrunk": false,
+            "frozen": null
+          }
+        }
+      },
+      "hash": "abb3f666dc39e986ca31b18706155b7588e77ed935ec76aa5f4f3bca69ce4851"
+    }
+  ],
+  "newOriginalCounts": {
+    "ADDED": 6,
+    "OPENED": 1
+  },
+  "tiers": {
+    "SMART": 4,
+    "GENIUS": 3
+  },
+  "revisionCount": 135,
+  "publicationLagSeconds": {
+    "n": 7,
+    "min": 0.63317,
+    "median": 18.550816,
+    "p90NearestRank": 138.005376,
+    "max": 138.005376
+  },
+  "sourceExitJoins": [],
+  "newGeniusLegs": [],
+  "genius": {
+    "history": 58,
+    "open": 50,
+    "closed": 8,
+    "cash": 4980.43376828499,
+    "realizedBeforeFunding": 86.71125486420027,
+    "openModeledPnlBeforeFunding": 540.2668747655152,
+    "closedPerformance": {
+      "closedCount": 8,
+      "wins": 6,
+      "losses": 2,
+      "winRatePct": 75.0,
+      "expectancy": 10.838906858025034,
+      "profitFactor": 4.914207448134561,
+      "payoffRatio": 1.6380691493781872
+    },
+    "concentration": {
+      "ZEC": 12,
+      "BTC": 19,
+      "UNI": 1,
+      "XMR": 1,
+      "HYPE": 4,
+      "LIT": 2,
+      "ETH": 6,
+      "XRP": 1,
+      "SOL": 3,
+      "kPEPE": 1
+    },
+    "qualityAtOwnQuotes": {
+      "at": "2026-11-12T04:17:28.806409+00:00",
+      "status": "Unvalidated website-alert simulation; source holdings and funding incomplete",
+      "copyPerformanceEligible": false,
+      "activePaperExposures": 50,
+      "closureWarningPositionIds": [
+        10652,
+        10736,
+        10936,
+        11128,
+        11154,
+        11438,
+        11451,
+        11464,
+        11511,
+        11777,
+        11798,
+        11841,
+        11904,
+        11945,
+        11949,
+        11956,
+        11974,
+        11995,
+        12076,
+        12122,
+        12445,
+        12839,
+        13388,
+        14155,
+        17053
+      ],
+      "closureWarningCount": 25,
+      "sourceCardNoLongerLiveCount": 12,
+      "subsequentOpeningPositionIds": [
+        10652,
+        10736,
+        10936,
+        11128,
+        11154,
+        11438,
+        11464,
+        11511,
+        11777,
+        11798,
+        11841,
+        11904,
+        11945,
+        11949,
+        11974,
+        11995,
+        12076,
+        12122,
+        12445,
+        12839,
+        14155
+      ],
+      "subsequentOpeningWarningCount": 21,
+      "warningExposureModeledPnlBeforeFunding": 232.66615913898244,
+      "otherUnverifiedExposureModeledPnlBeforeFunding": 308.40617755787315,
+      "totalModeledPnlBeforeFunding": 541.0723366968556,
+      "interpretation": "Warning subtotal assumes continued exposure despite non-live source cards or subsequent openings; neither subtotal is verified copier performance."
+    },
+    "archiveExitScan": {
+      "at": "2026-11-12T04:17:25.273292+00:00",
+      "scope": "Saved original exits and copied-card ending revisions; uncaptured source history unknown",
+      "files": 177,
+      "bytesRead": 5560,
+      "exitCardsReviewed": 0,
+      "endingRevisionRowsReviewed": 0,
+      "newCardWarningsRecovered": 0,
+      "matchingExitIds": [
+        17036,
+        16710,
+        16479,
+        15815,
+        15248,
+        15176,
+        13000,
+        12838
+      ],
+      "backlogRemaining": false,
+      "errors": []
+    },
+    "pendingExitIds": [
+      "17036",
+      "16710",
+      "16479",
+      "15815",
+      "15248",
+      "15176",
+      "13000",
+      "12838"
+    ]
+  },
+  "scalp": {
+    "portfolio": {
+      "protocolVersion": "split-v4",
+      "families": {
+        "fresh": {
+          "total": 359,
+          "open": 0,
+          "closed": 359,
+          "closedPnlBeforeFunding": -49.08877837060961,
+          "milestones": {
+            "notional": {
+              "5": 9,
+              "10": 0,
+              "20": 0
+            },
+            "margin": {
+              "5": 103,
+              "10": 52,
+              "20": 30
+            }
+          }
+        },
+        "add_scalp": {
+          "total": 2376,
+          "open": 4,
+          "closed": 2372,
+          "closedPnlBeforeFunding": -790.0875958004222,
+          "milestones": {
+            "notional": {
+              "5": 5,
+              "10": 1,
+              "20": 0
+            },
+            "margin": {
+              "5": 492,
+              "10": 249,
+              "20": 89
+            }
+          }
+        }
+      },
+      "study": "github-portfolio-v3",
+      "initialEquity": 1000,
+      "equity": 160.45049827889227,
+      "realizedBeforeFunding": -839.1763741710317,
+      "openCloseEstimateBeforeFunding": -0.37312755007598053,
+      "marginInUse": 23.7235893755,
+      "available": 136.72690890339226,
+      "openCount": 4,
+      "closedCount": 2731,
+      "totalCount": 2735,
+      "maxOpen": 20,
+      "targetNotional": 200,
+      "maxPositionNotional": 350,
+      "stalePositions": [],
+      "milestones": {
+        "notional": {
+          "5": {
+            "hit": 14,
+            "total": 2735,
+            "unconfirmed": 2721
+          },
+          "10": {
+            "hit": 1,
+            "total": 2735,
+            "unconfirmed": 2734
+          },
+          "20": {
+            "hit": 0,
+            "total": 2735,
+            "unconfirmed": 2735
+          }
+        },
+        "margin": {
+          "5": {
+            "hit": 595,
+            "total": 2735,
+            "unconfirmed": 2140
+          },
+          "10": {
+            "hit": 301,
+            "total": 2735,
+            "unconfirmed": 2434
+          },
+          "20": {
+            "hit": 119,
+            "total": 2735,
+            "unconfirmed": 2616
+          }
+        }
+      },
+      "feesAssumedBps": 4.5,
+      "fundingComplete": false,
+      "at": "2026-11-12T04:17:51.126704+00:00",
+      "maxDrawdownObserved": 0.8399720377981741
+    },
+    "closedPerformance": {
+      "closedCount": 2731,
+      "wins": 869,
+      "losses": 1862,
+      "winRatePct": 31.81984621017942,
+      "expectancy": -0.3072780571845594,
+      "profitFactor": 0.45553259203988133,
+      "payoffRatio": 0.9760663824836122
+    },
+    "newEntries": [
+      {
+        "eventId": 17516,
+        "signalClass": "add_scalp",
+        "openedAt": "2026-11-12T03:20:10.202607+00:00"
+      },
+      {
+        "eventId": 17517,
+        "signalClass": "add_scalp",
+        "openedAt": "2026-11-12T03:32:46.547145+00:00"
+      },
+      {
+        "eventId": 17520,
+        "signalClass": "add_scalp",
+        "openedAt": "2026-11-12T03:40:31.344815+00:00"
+      },
+      {
+        "eventId": 17522,
+        "signalClass": "add_scalp",
+        "openedAt": "2026-11-12T04:06:11.363775+00:00"
+      }
+    ],
+    "newClosures": [
+      {
+        "eventId": 17498,
+        "closedAt": "2026-11-12T03:17:48.837733+00:00",
+        "netPnl": -0.14150494052499674
+      },
+      {
+        "eventId": 17500,
+        "closedAt": "2026-11-12T03:20:32.107792+00:00",
+        "netPnl": -0.2061289445499905
+      },
+      {
+        "eventId": 17501,
+        "closedAt": "2026-11-12T03:20:32.444306+00:00",
+        "netPnl": 0.07934631872699964
+      },
+      {
+        "eventId": 17502,
+        "closedAt": "2026-11-12T03:32:24.693186+00:00",
+        "netPnl": -0.17643641539198923
+      },
+      {
+        "eventId": 17503,
+        "closedAt": "2026-11-12T03:32:24.333382+00:00",
+        "netPnl": 0.036780756255805146
+      },
+      {
+        "eventId": 17505,
+        "closedAt": "2026-11-12T03:39:31.487694+00:00",
+        "netPnl": -0.3196891784445018
+      },
+      {
+        "eventId": 17506,
+        "closedAt": "2026-11-12T03:39:31.303489+00:00",
+        "netPnl": -0.14342954142499342
+      },
+      {
+        "eventId": 17507,
+        "closedAt": "2026-11-12T03:44:26.980690+00:00",
+        "netPnl": -0.002452883181990252
+      },
+      {
+        "eventId": 17509,
+        "closedAt": "2026-11-12T03:58:06.951259+00:00",
+        "netPnl": -0.1275762289095025
+      },
+      {
+        "eventId": 17510,
+        "closedAt": "2026-11-12T03:58:06.947021+00:00",
+        "netPnl": -0.17293363030349812
+      },
+      {
+        "eventId": 17511,
+        "closedAt": "2026-11-12T03:58:06.951259+00:00",
+        "netPnl": -0.08806660262999902
+      },
+      {
+        "eventId": 17513,
+        "closedAt": "2026-11-12T04:09:55.133129+00:00",
+        "netPnl": 0.03869722111500227
+      }
+    ],
+    "closedWithPathGap": 2688
+  },
+  "savedOldRuntimePhaseReceipts": {
+    "43150748195-1-phase-timings.jsonl": {
+      "sha256": "683698199a830ee4074fcea33f3918128bc61e9a6dd0cd65bf00e37ddf49e930",
+      "bytes": 11046,
+      "records": [
+        {
+          "protocol": "collector-phase-v1",
+          "phase": "reconciliation",
+          "startedAt": "2026-11-12T03:50:02.800911+00:00",
+          "endedAt": "2026-11-12T03:50:05.650518+00:00",
+          "durationSeconds": 2.849609767000004,
+          "outcome": "returned"
+        },
+        {
+          "protocol": "collector-phase-v1",
+          "phase": "reconciliation",
+          "startedAt": "2026-11-12T03:50:39.850778+00:00",
+          "endedAt": "2026-11-12T03:50:39.850791+00:00",
+          "durationSeconds": 1.2028000000441352e-05,
+          "outcome": "returned"
+        },
+        {
+          "protocol": "collector-phase-v1",
+          "phase": "checkpoint_publish",
+          "startedAt": "2026-11-12T03:50:41.114542+00:00",
+          "endedAt": "2026-11-12T03:52:42.490521+00:00",
+          "durationSeconds": 121.375981699,
+          "outcome": "returned_false"
+        },
+        {
+          "protocol": "collector-phase-v1",
+          "phase": "reconciliation",
+          "startedAt": "2026-11-12T03:52:52.790016+00:00",
+          "endedAt": "2026-11-12T03:52:52.790028+00:00",
+          "durationSeconds": 1.0795999997981198e-05,
+          "outcome": "returned"
+        },
+        {
+          "protocol": "collector-phase-v1",
+          "phase": "checkpoint_publish",
+          "startedAt": "2026-11-12T03:53:16.951998+00:00",
+          "endedAt": "2026-11-12T03:55:18.382216+00:00",
+          "durationSeconds": 121.43021999499999,
+          "outcome": "returned_false"
+        },
+        {
+          "protocol": "collector-phase-v1",
+          "phase": "reconciliation",
+          "startedAt": "2026-11-12T03:55:28.550831+00:00",
+          "endedAt": "2026-11-12T03:55:31.435130+00:00",
+          "durationSeconds": 2.884304296000039,
+          "outcome": "returned"
+        },
+        {
+          "protocol": "collector-phase-v1",
+          "phase": "checkpoint_publish",
+          "startedAt": "2026-11-12T03:55:55.040697+00:00",
+          "endedAt": "2026-11-12T03:57:56.506538+00:00",
+          "durationSeconds": 121.46584236900003,
+          "outcome": "returned_false"
+        },
+        {
+          "protocol": "collector-phase-v1",
+          "phase": "reconciliation",
+          "startedAt": "2026-11-12T03:58:06.757873+00:00",
+          "endedAt": "2026-11-12T03:58:06.757885+00:00",
+          "durationSeconds": 1.1397000093893439e-05,
+          "outcome": "returned"
+        },
+        {
+          "protocol": "collector-phase-v1",
+          "phase": "checkpoint_publish",
+          "startedAt": "2026-11-12T03:58:31.324314+00:00",
+          "endedAt": "2026-11-12T04:00:32.825192+00:00",
+          "durationSeconds": 121.50088076300005,
+          "outcome": "returned_false"
+        },
+        {
+          "protocol": "collector-phase-v1",
+          "phase": "reconciliation",
+          "startedAt": "2026-11-12T04:00:43.269646+00:00",
+          "endedAt": "2026-11-12T04:00:45.809643+00:00",
+          "durationSeconds": 2.539999175999924,
+          "outcome": "returned"
+        },
+        {
+          "protocol": "collector-phase-v1",
+          "phase": "checkpoint_publish",
+          "startedAt": "2026-11-12T04:01:09.626730+00:00",
+          "endedAt": "2026-11-12T04:03:11.195687+00:00",
+          "durationSeconds": 121.56895872599989,
+          "outcome": "returned_false"
+        },
+        {
+          "protocol": "collector-phase-v1",
+          "phase": "reconciliation",
+          "startedAt": "2026-11-12T04:03:21.889026+00:00",
+          "endedAt": "2026-11-12T04:03:21.889042+00:00",
+          "durationSeconds": 1.412100004927197e-05,
+          "outcome": "returned"
+        },
+        {
+          "protocol": "collector-phase-v1",
+          "phase": "checkpoint_publish",
+          "startedAt": "2026-11-12T04:03:45.766769+00:00",
+          "endedAt": "2026-11-12T04:03:52.940807+00:00",
+          "durationSeconds": 7.174049099000058,
+          "outcome": "returned"
+        },
+        {
+          "protocol": "collector-phase-v1",
+          "phase": "reconciliation",
+          "startedAt": "2026-11-12T04:04:03.449948+00:00",
+          "endedAt": "2026-11-12T04:04:03.449963+00:00",
+          "durationSeconds": 2.5597999979254382e-05,
+          "outcome": "returned"
+        },
+        {
+          "protocol": "collector-phase-v1",
+          "phase": "checkpoint_publish",
+          "startedAt": "2026-11-12T04:04:27.434082+00:00",
+          "endedAt": "2026-11-12T04:04:34.480116+00:00",
+          "durationSeconds": 7.046048889999952,
+          "outcome": "returned"
+        },
+        {
+          "protocol": "collector-phase-v1",
+          "phase": "reconciliation",
+          "startedAt": "2026-11-12T04:04:45.057235+00:00",
+          "endedAt": "2026-11-12T04:04:45.057248+00:00",
+          "durationSeconds": 1.1737000022549182e-05,
+          "outcome": "returned"
+        },
+        {
+          "protocol": "collector-phase-v1",
+          "phase": "checkpoint_publish",
+          "startedAt": "2026-11-12T04:05:08.603111+00:00",
+          "endedAt": "2026-11-12T04:05:16.459336+00:00",
+          "durationSeconds": 7.856237952000015,
+          "outcome": "returned"
+        },
+        {
+          "protocol": "collector-phase-v1",
+          "phase": "reconciliation",
+          "startedAt": "2026-11-12T04:05:26.686448+00:00",
+          "endedAt": "2026-11-12T04:05:26.686461+00:00",
+          "durationSeconds": 1.1467000035736419e-05,
+          "outcome": "returned"
+        },
+        {
+          "protocol": "collector-phase-v1",
+          "phase": "checkpoint_publish",
+          "startedAt": "2026-11-12T04:05:50.600934+00:00",
+          "endedAt": "2026-11-12T04:05:57.432316+00:00",
+          "durationSeconds": 6.831395325000017,
+          "outcome": "returned"
+        },
+        {
+          "protocol": "collector-phase-v1",
+          "phase": "reconciliation",
+          "startedAt": "2026-11-12T04:06:08.196953+00:00",
+          "endedAt": "2026-11-12T04:06:10.789152+00:00",
+          "durationSeconds": 2.5922026199999664,
+          "outcome": "returned"
+        },
+        {
+          "protocol": "collector-phase-v1",
+          "phase": "checkpoint_publish",
+          "startedAt": "2026-11-12T04:06:34.517754+00:00",
+          "endedAt": "2026-11-12T04:06:41.618077+00:00",
+          "durationSeconds": 7.100339218999807,
+          "outcome": "returned"
+        },
+        {
+          "protocol": "collector-phase-v1",
+          "phase": "reconciliation",
+          "startedAt": "2026-11-12T04:06:52.143478+00:00",
+          "endedAt": "2026-11-12T04:06:52.143490+00:00",
+          "durationSeconds": 1.1146999895572662e-05,
+          "outcome": "returned"
+        },
+        {
+          "protocol": "collector-phase-v1",
+          "phase": "checkpoint_publish",
+          "startedAt": "2026-11-12T04:07:15.893186+00:00",
+          "endedAt": "2026-11-12T04:07:23.896317+00:00",
+          "durationSeconds": 8.003144637000105,
+          "outcome": "returned"
+        },
+        {
+          "protocol": "collector-phase-v1",
+          "phase": "reconciliation",
+          "startedAt": "2026-11-12T04:07:34.758894+00:00",
+          "endedAt": "2026-11-12T04:07:34.758907+00:00",
+          "durationSeconds": 1.198800009660772e-05,
+          "outcome": "returned"
+        },
+        {
+          "protocol": "collector-phase-v1",
+          "phase": "checkpoint_publish",
+          "startedAt": "2026-11-12T04:07:58.605622+00:00",
+          "endedAt": "2026-11-12T04:08:06.590204+00:00",
+          "durationSeconds": 7.984595042999899,
+          "outcome": "returned"
+        },
+        {
+          "protocol": "collector-phase-v1",
+          "phase": "reconciliation",
+          "startedAt": "2026-11-12T04:08:17.500870+00:00",
+          "endedAt": "2026-11-12T04:08:17.500888+00:00",
+          "durationSeconds": 1.6705000007277704e-05,
+          "outcome": "returned"
+        },
+        {
+          "protocol": "collector-phase-v1",
+          "phase": "checkpoint_publish",
+          "startedAt": "2026-11-12T04:08:42.725679+00:00",
+          "endedAt": "2026-11-12T04:08:51.159956+00:00",
+          "durationSeconds": 8.43430523699999,
+          "outcome": "returned"
+        },
+        {
+          "protocol": "collector-phase-v1",
+          "phase": "reconciliation",
+          "startedAt": "2026-11-12T04:09:01.664691+00:00",
+          "endedAt": "2026-11-12T04:09:01.664703+00:00",
+          "durationSeconds": 1.1106000101790414e-05,
+          "outcome": "returned"
+        },
+        {
+          "protocol": "collector-phase-v1",
+          "phase": "checkpoint_publish",
+          "startedAt": "2026-11-12T04:09:25.534226+00:00",
+          "endedAt": "2026-11-12T04:09:32.817461+00:00",
+          "durationSeconds": 7.28324729499991,
+          "outcome": "returned"
+        },
+        {
+          "protocol": "collector-phase-v1",
+          "phase": "reconciliation",
+          "startedAt": "2026-11-12T04:09:43.273845+00:00",
+          "endedAt": "2026-11-12T04:09:43.273857+00:00",
+          "durationSeconds": 1.0966999980155379e-05,
+          "outcome": "returned"
+        },
+        {
+          "protocol": "collector-phase-v1",
+          "phase": "checkpoint_publish",
+          "startedAt": "2026-11-12T04:10:06.933737+00:00",
+          "endedAt": "2026-11-12T04:10:14.191071+00:00",
+          "durationSeconds": 7.257348880000109,
+          "outcome": "returned"
+        },
+        {
+          "protocol": "collector-phase-v1",
+          "phase": "reconciliation",
+          "startedAt": "2026-11-12T04:10:24.519448+00:00",
+          "endedAt": "2026-11-12T04:10:24.519460+00:00",
+          "durationSeconds": 1.0815999985425151e-05,
+          "outcome": "returned"
+        },
+        {
+          "protocol": "collector-phase-v1",
+          "phase": "checkpoint_publish",
+          "startedAt": "2026-11-12T04:10:48.157919+00:00",
+          "endedAt": "2026-11-12T04:10:54.991603+00:00",
+          "durationSeconds": 6.833699925999781,
+          "outcome": "returned"
+        },
+        {
+          "protocol": "collector-phase-v1",
+          "phase": "reconciliation",
+          "startedAt": "2026-11-12T04:11:05.545866+00:00",
+          "endedAt": "2026-11-12T04:11:05.545879+00:00",
+          "durationSeconds": 1.1157000017192331e-05,
+          "outcome": "returned"
+        },
+        {
+          "protocol": "collector-phase-v1",
+          "phase": "checkpoint_publish",
+          "startedAt": "2026-11-12T04:11:29.309782+00:00",
+          "endedAt": "2026-11-12T04:11:36.195138+00:00",
+          "durationSeconds": 6.885368808999829,
+          "outcome": "returned"
+        },
+        {
+          "protocol": "collector-phase-v1",
+          "phase": "reconciliation",
+          "startedAt": "2026-11-12T04:11:46.735364+00:00",
+          "endedAt": "2026-11-12T04:11:49.427378+00:00",
+          "durationSeconds": 2.692014416999882,
+          "outcome": "returned"
+        },
+        {
+          "protocol": "collector-phase-v1",
+          "phase": "checkpoint_publish",
+          "startedAt": "2026-11-12T04:12:13.139539+00:00",
+          "endedAt": "2026-11-12T04:12:20.553902+00:00",
+          "durationSeconds": 7.414377716999979,
+          "outcome": "returned"
+        },
+        {
+          "protocol": "collector-phase-v1",
+          "phase": "reconciliation",
+          "startedAt": "2026-11-12T04:12:31.194440+00:00",
+          "endedAt": "2026-11-12T04:12:31.194452+00:00",
+          "durationSeconds": 1.0945999974865117e-05,
+          "outcome": "returned"
+        },
+        {
+          "protocol": "collector-phase-v1",
+          "phase": "checkpoint_publish",
+          "startedAt": "2026-11-12T04:12:55.418047+00:00",
+          "endedAt": "2026-11-12T04:13:02.763432+00:00",
+          "durationSeconds": 7.345397424000112,
+          "outcome": "returned"
+        },
+        {
+          "protocol": "collector-phase-v1",
+          "phase": "reconciliation",
+          "startedAt": "2026-11-12T04:13:13.410360+00:00",
+          "endedAt": "2026-11-12T04:13:13.410372+00:00",
+          "durationSeconds": 1.0897000038312399e-05,
+          "outcome": "returned"
+        },
+        {
+          "protocol": "collector-phase-v1",
+          "phase": "checkpoint_publish",
+          "startedAt": "2026-11-12T04:13:37.140509+00:00",
+          "endedAt": "2026-11-12T04:13:45.144790+00:00",
+          "durationSeconds": 8.004293212999983,
+          "outcome": "returned"
+        },
+        {
+          "protocol": "collector-phase-v1",
+          "phase": "reconciliation",
+          "startedAt": "2026-11-12T04:13:55.722118+00:00",
+          "endedAt": "2026-11-12T04:13:55.722131+00:00",
+          "durationSeconds": 1.1847999985548086e-05,
+          "outcome": "returned"
+        },
+        {
+          "protocol": "collector-phase-v1",
+          "phase": "checkpoint_publish",
+          "startedAt": "2026-11-12T04:14:19.135630+00:00",
+          "endedAt": "2026-11-12T04:14:26.569950+00:00",
+          "durationSeconds": 7.434348828000111,
+          "outcome": "returned"
+        },
+        {
+          "protocol": "collector-phase-v1",
+          "phase": "reconciliation",
+          "startedAt": "2026-11-12T04:14:37.232208+00:00",
+          "endedAt": "2026-11-12T04:14:37.232220+00:00",
+          "durationSeconds": 1.1667000080706202e-05,
+          "outcome": "returned"
+        },
+        {
+          "protocol": "collector-phase-v1",
+          "phase": "checkpoint_publish",
+          "startedAt": "2026-11-12T04:15:01.501741+00:00",
+          "endedAt": "2026-11-12T04:15:09.114473+00:00",
+          "durationSeconds": 7.612744034000116,
+          "outcome": "returned"
+        },
+        {
+          "protocol": "collector-phase-v1",
+          "phase": "reconciliation",
+          "startedAt": "2026-11-12T04:15:19.580898+00:00",
+          "endedAt": "2026-11-12T04:15:19.580909+00:00",
+          "durationSeconds": 1.037599986375426e-05,
+          "outcome": "returned"
+        },
+        {
+          "protocol": "collector-phase-v1",
+          "phase": "checkpoint_publish",
+          "startedAt": "2026-11-12T04:15:43.333751+00:00",
+          "endedAt": "2026-11-12T04:15:50.582640+00:00",
+          "durationSeconds": 7.248902533000091,
+          "outcome": "returned"
+        },
+        {
+          "protocol": "collector-phase-v1",
+          "phase": "reconciliation",
+          "startedAt": "2026-11-12T04:16:01.432096+00:00",
+          "endedAt": "2026-11-12T04:16:01.432108+00:00",
+          "durationSeconds": 1.1356999948475277e-05,
+          "outcome": "returned"
+        },
+        {
+          "protocol": "collector-phase-v1",
+          "phase": "checkpoint_publish",
+          "startedAt": "2026-11-12T04:16:25.126626+00:00",
+          "endedAt": "2026-11-12T04:16:32.731037+00:00",
+          "durationSeconds": 7.604423402000066,
+          "outcome": "returned"
+        },
+        {
+          "protocol": "collector-phase-v1",
+          "phase": "reconciliation",
+          "startedAt": "2026-11-12T04:16:43.562619+00:00",
+          "endedAt": "2026-11-12T04:16:43.562631+00:00",
+          "durationSeconds": 1.1287000006632297e-05,
+          "outcome": "returned"
+        },
+        {
+          "protocol": "collector-phase-v1",
+          "phase": "checkpoint_publish",
+          "startedAt": "2026-11-12T04:17:07.315282+00:00",
+          "endedAt": "2026-11-12T04:17:14.741720+00:00",
+          "durationSeconds": 7.42644975799999,
+          "outcome": "returned"
+        },
+        {
+          "protocol": "collector-phase-v1",
+          "phase": "reconciliation",
+          "startedAt": "2026-11-12T04:17:25.304253+00:00",
+          "endedAt": "2026-11-12T04:17:27.902656+00:00",
+          "durationSeconds": 2.598406916000158,
+          "outcome": "returned"
+        }
+      ]
+    },
+    "43144522905-1-phase-timings.jsonl": {
+      "sha256": "e9b8c3fe9ee19150b1bf512175ec11d431ed170804138dd1d6fbd01f75339480",
+      "bytes": 27796,
+      "records": [
+        {
+          "protocol": "collector-phase-v1",
+          "phase": "reconciliation",
+          "startedAt": "2026-11-12T02:54:24.082588+00:00",
+          "endedAt": "2026-11-12T02:54:24.082600+00:00",
+          "durationSeconds": 1.1326000006306458e-05,
+          "outcome": "returned"
+        },
+        {
+          "protocol": "collector-phase-v1",
+          "phase": "reconciliation",
+          "startedAt": "2026-11-12T02:54:58.445775+00:00",
+          "endedAt": "2026-11-12T02:54:58.445787+00:00",
+          "durationSeconds": 1.1767000003715111e-05,
+          "outcome": "returned"
+        },
+        {
+          "protocol": "collector-phase-v1",
+          "phase": "checkpoint_publish",
+          "startedAt": "2026-11-12T02:54:59.574646+00:00",
+          "endedAt": "2026-11-12T02:57:00.948244+00:00",
+          "durationSeconds": 121.37360000599999,
+          "outcome": "returned_false"
+        },
+        {
+          "protocol": "collector-phase-v1",
+          "phase": "reconciliation",
+          "startedAt": "2026-11-12T02:57:11.750963+00:00",
+          "endedAt": "2026-11-12T02:57:11.750972+00:00",
+          "durationSeconds": 9.31299999251678e-06,
+          "outcome": "returned"
+        },
+        {
+          "protocol": "collector-phase-v1",
+          "phase": "checkpoint_publish",
+          "startedAt": "2026-11-12T02:57:35.560171+00:00",
+          "endedAt": "2026-11-12T02:59:36.952774+00:00",
+          "durationSeconds": 121.39260448299999,
+          "outcome": "returned_false"
+        },
+        {
+          "protocol": "collector-phase-v1",
+          "phase": "reconciliation",
+          "startedAt": "2026-11-12T02:59:47.801629+00:00",
+          "endedAt": "2026-11-12T02:59:50.666036+00:00",
+          "durationSeconds": 2.8644175919999952,
+          "outcome": "returned"
+        },
+        {
+          "protocol": "collector-phase-v1",
+          "phase": "checkpoint_publish",
+          "startedAt": "2026-11-12T03:00:14.056766+00:00",
+          "endedAt": "2026-11-12T03:02:15.443661+00:00",
+          "durationSeconds": 121.38689638300002,
+          "outcome": "returned_false"
+        },
+        {
+          "protocol": "collector-phase-v1",
+          "phase": "reconciliation",
+          "startedAt": "2026-11-12T03:02:25.795929+00:00",
+          "endedAt": "2026-11-12T03:02:25.795940+00:00",
+          "durationSeconds": 9.794999982659647e-06,
+          "outcome": "returned"
+        },
+        {
+          "protocol": "collector-phase-v1",
+          "phase": "checkpoint_publish",
+          "startedAt": "2026-11-12T03:02:49.007855+00:00",
+          "endedAt": "2026-11-12T03:04:50.508180+00:00",
+          "durationSeconds": 121.50032653599999,
+          "outcome": "returned_false"
+        },
+        {
+          "protocol": "collector-phase-v1",
+          "phase": "reconciliation",
+          "startedAt": "2026-11-12T03:05:01.255523+00:00",
+          "endedAt": "2026-11-12T03:05:04.237249+00:00",
+          "durationSeconds": 2.9817275330000257,
+          "outcome": "returned"
+        },
+        {
+          "protocol": "collector-phase-v1",
+          "phase": "checkpoint_publish",
+          "startedAt": "2026-11-12T03:05:27.977742+00:00",
+          "endedAt": "2026-11-12T03:07:29.417927+00:00",
+          "durationSeconds": 121.44018796300008,
+          "outcome": "returned_false"
+        },
+        {
+          "protocol": "collector-phase-v1",
+          "phase": "reconciliation",
+          "startedAt": "2026-11-12T03:07:40.127417+00:00",
+          "endedAt": "2026-11-12T03:07:40.127428+00:00",
+          "durationSeconds": 1.0605999932522536e-05,
+          "outcome": "returned"
+        },
+        {
+          "protocol": "collector-phase-v1",
+          "phase": "checkpoint_publish",
+          "startedAt": "2026-11-12T03:08:03.643653+00:00",
+          "endedAt": "2026-11-12T03:08:11.927013+00:00",
+          "durationSeconds": 8.283374168000023,
+          "outcome": "returned"
+        },
+        {
+          "protocol": "collector-phase-v1",
+          "phase": "reconciliation",
+          "startedAt": "2026-11-12T03:08:22.722882+00:00",
+          "endedAt": "2026-11-12T03:08:22.722893+00:00",
+          "durationSeconds": 1.063599995632103e-05,
+          "outcome": "returned"
+        },
+        {
+          "protocol": "collector-phase-v1",
+          "phase": "checkpoint_publish",
+          "startedAt": "2026-11-12T03:08:46.099058+00:00",
+          "endedAt": "2026-11-12T03:08:53.240623+00:00",
+          "durationSeconds": 7.141579897999918,
+          "outcome": "returned"
+        },
+        {
+          "protocol": "collector-phase-v1",
+          "phase": "reconciliation",
+          "startedAt": "2026-11-12T03:09:03.590897+00:00",
+          "endedAt": "2026-11-12T03:09:03.590916+00:00",
+          "durationSeconds": 1.890800001547177e-05,
+          "outcome": "returned"
+        },
+        {
+          "protocol": "collector-phase-v1",
+          "phase": "checkpoint_publish",
+          "startedAt": "2026-11-12T03:09:28.229667+00:00",
+          "endedAt": "2026-11-12T03:09:35.329118+00:00",
+          "durationSeconds": 7.09946865500001,
+          "outcome": "returned"
+        },
+        {
+          "protocol": "collector-phase-v1",
+          "phase": "reconciliation",
+          "startedAt": "2026-11-12T03:09:46.129761+00:00",
+          "endedAt": "2026-11-12T03:09:46.129776+00:00",
+          "durationSeconds": 1.3779999903817952e-05,
+          "outcome": "returned"
+        },
+        {
+          "protocol": "collector-phase-v1",
+          "phase": "checkpoint_publish",
+          "startedAt": "2026-11-12T03:10:10.508179+00:00",
+          "endedAt": "2026-11-12T03:10:17.538002+00:00",
+          "durationSeconds": 7.029836715999977,
+          "outcome": "returned"
+        },
+        {
+          "protocol": "collector-phase-v1",
+          "phase": "reconciliation",
+          "startedAt": "2026-11-12T03:10:27.899901+00:00",
+          "endedAt": "2026-11-12T03:10:30.693831+00:00",
+          "durationSeconds": 2.7939232799999445,
+          "outcome": "returned"
+        },
+        {
+          "protocol": "collector-phase-v1",
+          "phase": "checkpoint_publish",
+          "startedAt": "2026-11-12T03:10:54.511052+00:00",
+          "endedAt": "2026-11-12T03:11:02.538793+00:00",
+          "durationSeconds": 8.027755117999959,
+          "outcome": "returned"
+        },
+        {
+          "protocol": "collector-phase-v1",
+          "phase": "reconciliation",
+          "startedAt": "2026-11-12T03:11:13.010995+00:00",
+          "endedAt": "2026-11-12T03:11:13.011006+00:00",
+          "durationSeconds": 1.1497000059534912e-05,
+          "outcome": "returned"
+        },
+        {
+          "protocol": "collector-phase-v1",
+          "phase": "checkpoint_publish",
+          "startedAt": "2026-11-12T03:11:36.363515+00:00",
+          "endedAt": "2026-11-12T03:11:43.757664+00:00",
+          "durationSeconds": 7.3941721099999995,
+          "outcome": "returned"
+        },
+        {
+          "protocol": "collector-phase-v1",
+          "phase": "reconciliation",
+          "startedAt": "2026-11-12T03:11:54.140126+00:00",
+          "endedAt": "2026-11-12T03:11:54.140138+00:00",
+          "durationSeconds": 1.161699992735521e-05,
+          "outcome": "returned"
+        },
+        {
+          "protocol": "collector-phase-v1",
+          "phase": "checkpoint_publish",
+          "startedAt": "2026-11-12T03:12:17.747757+00:00",
+          "endedAt": "2026-11-12T03:12:24.976045+00:00",
+          "durationSeconds": 7.228309818000071,
+          "outcome": "returned"
+        },
+        {
+          "protocol": "collector-phase-v1",
+          "phase": "reconciliation",
+          "startedAt": "2026-11-12T03:12:35.259936+00:00",
+          "endedAt": "2026-11-12T03:12:35.259952+00:00",
+          "durationSeconds": 1.484199992773938e-05,
+          "outcome": "returned"
+        },
+        {
+          "protocol": "collector-phase-v1",
+          "phase": "checkpoint_publish",
+          "startedAt": "2026-11-12T03:12:58.962235+00:00",
+          "endedAt": "2026-11-12T03:13:07.043722+00:00",
+          "durationSeconds": 8.08150049599999,
+          "outcome": "returned"
+        },
+        {
+          "protocol": "collector-phase-v1",
+          "phase": "reconciliation",
+          "startedAt": "2026-11-12T03:13:17.415763+00:00",
+          "endedAt": "2026-11-12T03:13:17.415779+00:00",
+          "durationSeconds": 1.734600004965614e-05,
+          "outcome": "returned"
+        },
+        {
+          "protocol": "collector-phase-v1",
+          "phase": "checkpoint_publish",
+          "startedAt": "2026-11-12T03:13:41.019650+00:00",
+          "endedAt": "2026-11-12T03:13:48.029837+00:00",
+          "durationSeconds": 7.010201701999904,
+          "outcome": "returned"
+        },
+        {
+          "protocol": "collector-phase-v1",
+          "phase": "reconciliation",
+          "startedAt": "2026-11-12T03:13:58.542046+00:00",
+          "endedAt": "2026-11-12T03:13:58.542057+00:00",
+          "durationSeconds": 1.0395999879619922e-05,
+          "outcome": "returned"
+        },
+        {
+          "protocol": "collector-phase-v1",
+          "phase": "checkpoint_publish",
+          "startedAt": "2026-11-12T03:14:21.926471+00:00",
+          "endedAt": "2026-11-12T03:14:29.936099+00:00",
+          "durationSeconds": 8.009644624999964,
+          "outcome": "returned"
+        },
+        {
+          "protocol": "collector-phase-v1",
+          "phase": "reconciliation",
+          "startedAt": "2026-11-12T03:14:40.182939+00:00",
+          "endedAt": "2026-11-12T03:14:40.182950+00:00",
+          "durationSeconds": 1.0384999995949329e-05,
+          "outcome": "returned"
+        },
+        {
+          "protocol": "collector-phase-v1",
+          "phase": "checkpoint_publish",
+          "startedAt": "2026-11-12T03:15:03.870327+00:00",
+          "endedAt": "2026-11-12T03:15:10.745508+00:00",
+          "durationSeconds": 6.875196024999923,
+          "outcome": "returned"
+        },
+        {
+          "protocol": "collector-phase-v1",
+          "phase": "reconciliation",
+          "startedAt": "2026-11-12T03:15:21.078460+00:00",
+          "endedAt": "2026-11-12T03:15:21.078472+00:00",
+          "durationSeconds": 1.1157000017192331e-05,
+          "outcome": "returned"
+        },
+        {
+          "protocol": "collector-phase-v1",
+          "phase": "checkpoint_publish",
+          "startedAt": "2026-11-12T03:15:44.419745+00:00",
+          "endedAt": "2026-11-12T03:15:51.633515+00:00",
+          "durationSeconds": 7.213788681000096,
+          "outcome": "returned"
+        },
+        {
+          "protocol": "collector-phase-v1",
+          "phase": "reconciliation",
+          "startedAt": "2026-11-12T03:16:02.051336+00:00",
+          "endedAt": "2026-11-12T03:16:04.797417+00:00",
+          "durationSeconds": 2.7460856220000096,
+          "outcome": "returned"
+        },
+        {
+          "protocol": "collector-phase-v1",
+          "phase": "checkpoint_publish",
+          "startedAt": "2026-11-12T03:16:28.061989+00:00",
+          "endedAt": "2026-11-12T03:16:35.452003+00:00",
+          "durationSeconds": 7.390029729999924,
+          "outcome": "returned"
+        },
+        {
+          "protocol": "collector-phase-v1",
+          "phase": "reconciliation",
+          "startedAt": "2026-11-12T03:16:45.835097+00:00",
+          "endedAt": "2026-11-12T03:16:45.835109+00:00",
+          "durationSeconds": 1.0775999953693827e-05,
+          "outcome": "returned"
+        },
+        {
+          "protocol": "collector-phase-v1",
+          "phase": "checkpoint_publish",
+          "startedAt": "2026-11-12T03:17:08.925475+00:00",
+          "endedAt": "2026-11-12T03:17:15.810062+00:00",
+          "durationSeconds": 6.884603207000055,
+          "outcome": "returned"
+        },
+        {
+          "protocol": "collector-phase-v1",
+          "phase": "reconciliation",
+          "startedAt": "2026-11-12T03:17:26.120683+00:00",
+          "endedAt": "2026-11-12T03:17:26.120693+00:00",
+          "durationSeconds": 9.48399997469096e-06,
+          "outcome": "returned"
+        },
+        {
+          "protocol": "collector-phase-v1",
+          "phase": "checkpoint_publish",
+          "startedAt": "2026-11-12T03:17:49.852433+00:00",
+          "endedAt": "2026-11-12T03:17:56.892521+00:00",
+          "durationSeconds": 7.0400996670000495,
+          "outcome": "returned"
+        },
+        {
+          "protocol": "collector-phase-v1",
+          "phase": "reconciliation",
+          "startedAt": "2026-11-12T03:18:07.366173+00:00",
+          "endedAt": "2026-11-12T03:18:07.366184+00:00",
+          "durationSeconds": 1.0897000038312399e-05,
+          "outcome": "returned"
+        },
+        {
+          "protocol": "collector-phase-v1",
+          "phase": "checkpoint_publish",
+          "startedAt": "2026-11-12T03:18:30.778612+00:00",
+          "endedAt": "2026-11-12T03:18:38.032684+00:00",
+          "durationSeconds": 7.254087545999937,
+          "outcome": "returned"
+        },
+        {
+          "protocol": "collector-phase-v1",
+          "phase": "reconciliation",
+          "startedAt": "2026-11-12T03:18:48.375541+00:00",
+          "endedAt": "2026-11-12T03:18:48.375551+00:00",
+          "durationSeconds": 9.845000022323802e-06,
+          "outcome": "returned"
+        },
+        {
+          "protocol": "collector-phase-v1",
+          "phase": "checkpoint_publish",
+          "startedAt": "2026-11-12T03:19:11.774509+00:00",
+          "endedAt": "2026-11-12T03:19:18.930668+00:00",
+          "durationSeconds": 7.15617290299997,
+          "outcome": "returned"
+        },
+        {
+          "protocol": "collector-phase-v1",
+          "phase": "reconciliation",
+          "startedAt": "2026-11-12T03:19:29.263757+00:00",
+          "endedAt": "2026-11-12T03:19:29.263767+00:00",
+          "durationSeconds": 1.0454999937792309e-05,
+          "outcome": "returned"
+        },
+        {
+          "protocol": "collector-phase-v1",
+          "phase": "checkpoint_publish",
+          "startedAt": "2026-11-12T03:19:52.571151+00:00",
+          "endedAt": "2026-11-12T03:19:59.362266+00:00",
+          "durationSeconds": 6.7911289979999765,
+          "outcome": "returned"
+        },
+        {
+          "protocol": "collector-phase-v1",
+          "phase": "reconciliation",
+          "startedAt": "2026-11-12T03:20:09.666592+00:00",
+          "endedAt": "2026-11-12T03:20:09.666603+00:00",
+          "durationSeconds": 1.02349999906437e-05,
+          "outcome": "returned"
+        },
+        {
+          "protocol": "collector-phase-v1",
+          "phase": "checkpoint_publish",
+          "startedAt": "2026-11-12T03:20:33.259493+00:00",
+          "endedAt": "2026-11-12T03:20:40.108380+00:00",
+          "durationSeconds": 6.848901654999963,
+          "outcome": "returned"
+        },
+        {
+          "protocol": "collector-phase-v1",
+          "phase": "reconciliation",
+          "startedAt": "2026-11-12T03:20:50.477176+00:00",
+          "endedAt": "2026-11-12T03:20:50.477188+00:00",
+          "durationSeconds": 1.0876000033022137e-05,
+          "outcome": "returned"
+        },
+        {
+          "protocol": "collector-phase-v1",
+          "phase": "checkpoint_publish",
+          "startedAt": "2026-11-12T03:21:13.708057+00:00",
+          "endedAt": "2026-11-12T03:21:20.870786+00:00",
+          "durationSeconds": 7.16274458099997,
+          "outcome": "returned"
+        },
+        {
+          "protocol": "collector-phase-v1",
+          "phase": "reconciliation",
+          "startedAt": "2026-11-12T03:21:31.328202+00:00",
+          "endedAt": "2026-11-12T03:21:33.921270+00:00",
+          "durationSeconds": 2.593077039000036,
+          "outcome": "returned"
+        },
+        {
+          "protocol": "collector-phase-v1",
+          "phase": "checkpoint_publish",
+          "startedAt": "2026-11-12T03:21:57.374953+00:00",
+          "endedAt": "2026-11-12T03:22:05.830243+00:00",
+          "durationSeconds": 8.455303724000032,
+          "outcome": "returned"
+        },
+        {
+          "protocol": "collector-phase-v1",
+          "phase": "reconciliation",
+          "startedAt": "2026-11-12T03:22:16.251022+00:00",
+          "endedAt": "2026-11-12T03:22:16.251033+00:00",
+          "durationSeconds": 1.0856000017156475e-05,
+          "outcome": "returned"
+        },
+        {
+          "protocol": "collector-phase-v1",
+          "phase": "checkpoint_publish",
+          "startedAt": "2026-11-12T03:22:39.696459+00:00",
+          "endedAt": "2026-11-12T03:22:47.392405+00:00",
+          "durationSeconds": 7.695960338000077,
+          "outcome": "returned"
+        },
+        {
+          "protocol": "collector-phase-v1",
+          "phase": "reconciliation",
+          "startedAt": "2026-11-12T03:22:57.700069+00:00",
+          "endedAt": "2026-11-12T03:22:57.700080+00:00",
+          "durationSeconds": 1.0546000112299225e-05,
+          "outcome": "returned"
+        },
+        {
+          "protocol": "collector-phase-v1",
+          "phase": "checkpoint_publish",
+          "startedAt": "2026-11-12T03:23:21.252335+00:00",
+          "endedAt": "2026-11-12T03:23:28.577487+00:00",
+          "durationSeconds": 7.32516753799996,
+          "outcome": "returned"
+        },
+        {
+          "protocol": "collector-phase-v1",
+          "phase": "reconciliation",
+          "startedAt": "2026-11-12T03:23:38.918879+00:00",
+          "endedAt": "2026-11-12T03:23:38.918889+00:00",
+          "durationSeconds": 9.735000048749498e-06,
+          "outcome": "returned"
+        },
+        {
+          "protocol": "collector-phase-v1",
+          "phase": "checkpoint_publish",
+          "startedAt": "2026-11-12T03:24:02.325193+00:00",
+          "endedAt": "2026-11-12T03:24:09.954430+00:00",
+          "durationSeconds": 7.629253058999893,
+          "outcome": "returned"
+        },
+        {
+          "protocol": "collector-phase-v1",
+          "phase": "reconciliation",
+          "startedAt": "2026-11-12T03:24:20.252692+00:00",
+          "endedAt": "2026-11-12T03:24:20.252703+00:00",
+          "durationSeconds": 9.675000001152512e-06,
+          "outcome": "returned"
+        },
+        {
+          "protocol": "collector-phase-v1",
+          "phase": "checkpoint_publish",
+          "startedAt": "2026-11-12T03:24:43.479440+00:00",
+          "endedAt": "2026-11-12T03:24:50.776552+00:00",
+          "durationSeconds": 7.297127420000152,
+          "outcome": "returned"
+        },
+        {
+          "protocol": "collector-phase-v1",
+          "phase": "reconciliation",
+          "startedAt": "2026-11-12T03:25:01.153946+00:00",
+          "endedAt": "2026-11-12T03:25:01.153958+00:00",
+          "durationSeconds": 1.0956000096484786e-05,
+          "outcome": "returned"
+        },
+        {
+          "protocol": "collector-phase-v1",
+          "phase": "checkpoint_publish",
+          "startedAt": "2026-11-12T03:25:24.760072+00:00",
+          "endedAt": "2026-11-12T03:25:32.024925+00:00",
+          "durationSeconds": 7.264868158999889,
+          "outcome": "returned"
+        },
+        {
+          "protocol": "collector-phase-v1",
+          "phase": "reconciliation",
+          "startedAt": "2026-11-12T03:25:42.484375+00:00",
+          "endedAt": "2026-11-12T03:25:42.484386+00:00",
+          "durationSeconds": 1.0225000096397707e-05,
+          "outcome": "returned"
+        },
+        {
+          "protocol": "collector-phase-v1",
+          "phase": "checkpoint_publish",
+          "startedAt": "2026-11-12T03:26:06.347712+00:00",
+          "endedAt": "2026-11-12T03:26:14.471973+00:00",
+          "durationSeconds": 8.12427599700004,
+          "outcome": "returned"
+        },
+        {
+          "protocol": "collector-phase-v1",
+          "phase": "reconciliation",
+          "startedAt": "2026-11-12T03:26:24.873976+00:00",
+          "endedAt": "2026-11-12T03:26:24.873987+00:00",
+          "durationSeconds": 1.0706000011850847e-05,
+          "outcome": "returned"
+        },
+        {
+          "protocol": "collector-phase-v1",
+          "phase": "checkpoint_publish",
+          "startedAt": "2026-11-12T03:26:48.361146+00:00",
+          "endedAt": "2026-11-12T03:26:57.908057+00:00",
+          "durationSeconds": 9.546926252000048,
+          "outcome": "returned"
+        },
+        {
+          "protocol": "collector-phase-v1",
+          "phase": "reconciliation",
+          "startedAt": "2026-11-12T03:27:08.443063+00:00",
+          "endedAt": "2026-11-12T03:27:11.506884+00:00",
+          "durationSeconds": 3.063824595000142,
+          "outcome": "returned"
+        },
+        {
+          "protocol": "collector-phase-v1",
+          "phase": "checkpoint_publish",
+          "startedAt": "2026-11-12T03:27:34.807747+00:00",
+          "endedAt": "2026-11-12T03:27:42.061664+00:00",
+          "durationSeconds": 7.253936622999845,
+          "outcome": "returned"
+        },
+        {
+          "protocol": "collector-phase-v1",
+          "phase": "reconciliation",
+          "startedAt": "2026-11-12T03:27:52.495600+00:00",
+          "endedAt": "2026-11-12T03:27:52.495615+00:00",
+          "durationSeconds": 1.4110999927652301e-05,
+          "outcome": "returned"
+        },
+        {
+          "protocol": "collector-phase-v1",
+          "phase": "checkpoint_publish",
+          "startedAt": "2026-11-12T03:28:16.022093+00:00",
+          "endedAt": "2026-11-12T03:28:23.903558+00:00",
+          "durationSeconds": 7.881479952000063,
+          "outcome": "returned"
+        },
+        {
+          "protocol": "collector-phase-v1",
+          "phase": "reconciliation",
+          "startedAt": "2026-11-12T03:28:34.226313+00:00",
+          "endedAt": "2026-11-12T03:28:34.226323+00:00",
+          "durationSeconds": 9.634999969421187e-06,
+          "outcome": "returned"
+        },
+        {
+          "protocol": "collector-phase-v1",
+          "phase": "checkpoint_publish",
+          "startedAt": "2026-11-12T03:28:57.490401+00:00",
+          "endedAt": "2026-11-12T03:29:05.045371+00:00",
+          "durationSeconds": 7.554984868000247,
+          "outcome": "returned"
+        },
+        {
+          "protocol": "collector-phase-v1",
+          "phase": "reconciliation",
+          "startedAt": "2026-11-12T03:29:16.164823+00:00",
+          "endedAt": "2026-11-12T03:29:16.164833+00:00",
+          "durationSeconds": 1.0105000001203734e-05,
+          "outcome": "returned"
+        },
+        {
+          "protocol": "collector-phase-v1",
+          "phase": "checkpoint_publish",
+          "startedAt": "2026-11-12T03:29:39.681538+00:00",
+          "endedAt": "2026-11-12T03:29:47.619870+00:00",
+          "durationSeconds": 7.9383469169997625,
+          "outcome": "returned"
+        },
+        {
+          "protocol": "collector-phase-v1",
+          "phase": "reconciliation",
+          "startedAt": "2026-11-12T03:29:58.215191+00:00",
+          "endedAt": "2026-11-12T03:29:58.215202+00:00",
+          "durationSeconds": 1.0986999768647365e-05,
+          "outcome": "returned"
+        },
+        {
+          "protocol": "collector-phase-v1",
+          "phase": "checkpoint_publish",
+          "startedAt": "2026-11-12T03:30:22.003165+00:00",
+          "endedAt": "2026-11-12T03:30:29.339953+00:00",
+          "durationSeconds": 7.33679482000025,
+          "outcome": "returned"
+        },
+        {
+          "protocol": "collector-phase-v1",
+          "phase": "reconciliation",
+          "startedAt": "2026-11-12T03:30:39.827108+00:00",
+          "endedAt": "2026-11-12T03:30:39.827118+00:00",
+          "durationSeconds": 9.815000339585822e-06,
+          "outcome": "returned"
+        },
+        {
+          "protocol": "collector-phase-v1",
+          "phase": "checkpoint_publish",
+          "startedAt": "2026-11-12T03:31:03.153053+00:00",
+          "endedAt": "2026-11-12T03:31:10.220617+00:00",
+          "durationSeconds": 7.06757830000015,
+          "outcome": "returned"
+        },
+        {
+          "protocol": "collector-phase-v1",
+          "phase": "reconciliation",
+          "startedAt": "2026-11-12T03:31:20.759549+00:00",
+          "endedAt": "2026-11-12T03:31:20.759559+00:00",
+          "durationSeconds": 9.914999736793106e-06,
+          "outcome": "returned"
+        },
+        {
+          "protocol": "collector-phase-v1",
+          "phase": "checkpoint_publish",
+          "startedAt": "2026-11-12T03:31:44.132292+00:00",
+          "endedAt": "2026-11-12T03:31:51.347938+00:00",
+          "durationSeconds": 7.215660188000129,
+          "outcome": "returned"
+        },
+        {
+          "protocol": "collector-phase-v1",
+          "phase": "reconciliation",
+          "startedAt": "2026-11-12T03:32:01.724843+00:00",
+          "endedAt": "2026-11-12T03:32:01.724853+00:00",
+          "durationSeconds": 9.27400014916202e-06,
+          "outcome": "returned"
+        },
+        {
+          "protocol": "collector-phase-v1",
+          "phase": "checkpoint_publish",
+          "startedAt": "2026-11-12T03:32:25.693858+00:00",
+          "endedAt": "2026-11-12T03:32:32.770879+00:00",
+          "durationSeconds": 7.0770357730002615,
+          "outcome": "returned"
+        },
+        {
+          "protocol": "collector-phase-v1",
+          "phase": "reconciliation",
+          "startedAt": "2026-11-12T03:32:43.172495+00:00",
+          "endedAt": "2026-11-12T03:32:46.000704+00:00",
+          "durationSeconds": 2.828218506000212,
+          "outcome": "returned"
+        },
+        {
+          "protocol": "collector-phase-v1",
+          "phase": "checkpoint_publish",
+          "startedAt": "2026-11-12T03:33:09.406437+00:00",
+          "endedAt": "2026-11-12T03:33:17.272877+00:00",
+          "durationSeconds": 7.866453885999817,
+          "outcome": "returned"
+        },
+        {
+          "protocol": "collector-phase-v1",
+          "phase": "reconciliation",
+          "startedAt": "2026-11-12T03:33:28.042170+00:00",
+          "endedAt": "2026-11-12T03:33:28.042181+00:00",
+          "durationSeconds": 9.643999874242581e-06,
+          "outcome": "returned"
+        },
+        {
+          "protocol": "collector-phase-v1",
+          "phase": "checkpoint_publish",
+          "startedAt": "2026-11-12T03:33:51.730335+00:00",
+          "endedAt": "2026-11-12T03:34:00.846172+00:00",
+          "durationSeconds": 9.115852967000137,
+          "outcome": "returned"
+        },
+        {
+          "protocol": "collector-phase-v1",
+          "phase": "reconciliation",
+          "startedAt": "2026-11-12T03:34:11.791877+00:00",
+          "endedAt": "2026-11-12T03:34:11.791888+00:00",
+          "durationSeconds": 1.0756000392575515e-05,
+          "outcome": "returned"
+        },
+        {
+          "protocol": "collector-phase-v1",
+          "phase": "checkpoint_publish",
+          "startedAt": "2026-11-12T03:34:35.171705+00:00",
+          "endedAt": "2026-11-12T03:34:43.342711+00:00",
+          "durationSeconds": 8.171020498999951,
+          "outcome": "returned"
+        },
+        {
+          "protocol": "collector-phase-v1",
+          "phase": "reconciliation",
+          "startedAt": "2026-11-12T03:34:53.934687+00:00",
+          "endedAt": "2026-11-12T03:34:53.934697+00:00",
+          "durationSeconds": 1.00040001598245e-05,
+          "outcome": "returned"
+        },
+        {
+          "protocol": "collector-phase-v1",
+          "phase": "checkpoint_publish",
+          "startedAt": "2026-11-12T03:35:17.229075+00:00",
+          "endedAt": "2026-11-12T03:35:25.666684+00:00",
+          "durationSeconds": 8.437616551999781,
+          "outcome": "returned"
+        },
+        {
+          "protocol": "collector-phase-v1",
+          "phase": "reconciliation",
+          "startedAt": "2026-11-12T03:35:36.111527+00:00",
+          "endedAt": "2026-11-12T03:35:36.111539+00:00",
+          "durationSeconds": 1.1076000191678759e-05,
+          "outcome": "returned"
+        },
+        {
+          "protocol": "collector-phase-v1",
+          "phase": "checkpoint_publish",
+          "startedAt": "2026-11-12T03:35:59.455870+00:00",
+          "endedAt": "2026-11-12T03:36:07.507410+00:00",
+          "durationSeconds": 8.051553581000007,
+          "outcome": "returned"
+        },
+        {
+          "protocol": "collector-phase-v1",
+          "phase": "reconciliation",
+          "startedAt": "2026-11-12T03:36:19.158547+00:00",
+          "endedAt": "2026-11-12T03:36:19.158558+00:00",
+          "durationSeconds": 9.83400013865321e-06,
+          "outcome": "returned"
+        },
+        {
+          "protocol": "collector-phase-v1",
+          "phase": "checkpoint_publish",
+          "startedAt": "2026-11-12T03:36:42.859224+00:00",
+          "endedAt": "2026-11-12T03:36:50.724038+00:00",
+          "durationSeconds": 7.8648287420001,
+          "outcome": "returned"
+        },
+        {
+          "protocol": "collector-phase-v1",
+          "phase": "reconciliation",
+          "startedAt": "2026-11-12T03:37:01.654957+00:00",
+          "endedAt": "2026-11-12T03:37:01.654968+00:00",
+          "durationSeconds": 1.0475999715708895e-05,
+          "outcome": "returned"
+        },
+        {
+          "protocol": "collector-phase-v1",
+          "phase": "checkpoint_publish",
+          "startedAt": "2026-11-12T03:37:24.903669+00:00",
+          "endedAt": "2026-11-12T03:37:32.645755+00:00",
+          "durationSeconds": 7.742100918999768,
+          "outcome": "returned"
+        },
+        {
+          "protocol": "collector-phase-v1",
+          "phase": "reconciliation",
+          "startedAt": "2026-11-12T03:37:43.077642+00:00",
+          "endedAt": "2026-11-12T03:37:43.077654+00:00",
+          "durationSeconds": 1.102599981095409e-05,
+          "outcome": "returned"
+        },
+        {
+          "protocol": "collector-phase-v1",
+          "phase": "checkpoint_publish",
+          "startedAt": "2026-11-12T03:38:06.362966+00:00",
+          "endedAt": "2026-11-12T03:38:13.981611+00:00",
+          "durationSeconds": 7.618658140999742,
+          "outcome": "returned"
+        },
+        {
+          "protocol": "collector-phase-v1",
+          "phase": "reconciliation",
+          "startedAt": "2026-11-12T03:38:24.332763+00:00",
+          "endedAt": "2026-11-12T03:38:27.250115+00:00",
+          "durationSeconds": 2.917362654000044,
+          "outcome": "returned"
+        },
+        {
+          "protocol": "collector-phase-v1",
+          "phase": "checkpoint_publish",
+          "startedAt": "2026-11-12T03:38:50.854546+00:00",
+          "endedAt": "2026-11-12T03:38:58.413983+00:00",
+          "durationSeconds": 7.5594520399999965,
+          "outcome": "returned"
+        },
+        {
+          "protocol": "collector-phase-v1",
+          "phase": "reconciliation",
+          "startedAt": "2026-11-12T03:39:09.004433+00:00",
+          "endedAt": "2026-11-12T03:39:09.004445+00:00",
+          "durationSeconds": 1.1446999906183919e-05,
+          "outcome": "returned"
+        },
+        {
+          "protocol": "collector-phase-v1",
+          "phase": "checkpoint_publish",
+          "startedAt": "2026-11-12T03:39:32.522726+00:00",
+          "endedAt": "2026-11-12T03:39:39.849172+00:00",
+          "durationSeconds": 7.32645837400014,
+          "outcome": "returned"
+        },
+        {
+          "protocol": "collector-phase-v1",
+          "phase": "reconciliation",
+          "startedAt": "2026-11-12T03:39:50.207727+00:00",
+          "endedAt": "2026-11-12T03:39:50.207738+00:00",
+          "durationSeconds": 1.0785999620566145e-05,
+          "outcome": "returned"
+        },
+        {
+          "protocol": "collector-phase-v1",
+          "phase": "checkpoint_publish",
+          "startedAt": "2026-11-12T03:40:13.380605+00:00",
+          "endedAt": "2026-11-12T03:40:20.657838+00:00",
+          "durationSeconds": 7.277246302000094,
+          "outcome": "returned"
+        },
+        {
+          "protocol": "collector-phase-v1",
+          "phase": "reconciliation",
+          "startedAt": "2026-11-12T03:40:31.093001+00:00",
+          "endedAt": "2026-11-12T03:40:31.093011+00:00",
+          "durationSeconds": 9.444000170333311e-06,
+          "outcome": "returned"
+        },
+        {
+          "protocol": "collector-phase-v1",
+          "phase": "checkpoint_publish",
+          "startedAt": "2026-11-12T03:40:54.757728+00:00",
+          "endedAt": "2026-11-12T03:41:02.523646+00:00",
+          "durationSeconds": 7.765931317000195,
+          "outcome": "returned"
+        },
+        {
+          "protocol": "collector-phase-v1",
+          "phase": "reconciliation",
+          "startedAt": "2026-11-12T03:41:14.155801+00:00",
+          "endedAt": "2026-11-12T03:41:14.155812+00:00",
+          "durationSeconds": 9.903999853122514e-06,
+          "outcome": "returned"
+        },
+        {
+          "protocol": "collector-phase-v1",
+          "phase": "checkpoint_publish",
+          "startedAt": "2026-11-12T03:41:37.627462+00:00",
+          "endedAt": "2026-11-12T03:41:45.490815+00:00",
+          "durationSeconds": 7.863367570999799,
+          "outcome": "returned"
+        },
+        {
+          "protocol": "collector-phase-v1",
+          "phase": "reconciliation",
+          "startedAt": "2026-11-12T03:41:56.284625+00:00",
+          "endedAt": "2026-11-12T03:41:56.284637+00:00",
+          "durationSeconds": 1.0755999937828165e-05,
+          "outcome": "returned"
+        },
+        {
+          "protocol": "collector-phase-v1",
+          "phase": "checkpoint_publish",
+          "startedAt": "2026-11-12T03:42:19.530790+00:00",
+          "endedAt": "2026-11-12T03:42:27.202862+00:00",
+          "durationSeconds": 7.672086738999951,
+          "outcome": "returned"
+        },
+        {
+          "protocol": "collector-phase-v1",
+          "phase": "reconciliation",
+          "startedAt": "2026-11-12T03:42:38.101748+00:00",
+          "endedAt": "2026-11-12T03:42:38.101759+00:00",
+          "durationSeconds": 1.0294999810867012e-05,
+          "outcome": "returned"
+        },
+        {
+          "protocol": "collector-phase-v1",
+          "phase": "checkpoint_publish",
+          "startedAt": "2026-11-12T03:43:01.468022+00:00",
+          "endedAt": "2026-11-12T03:43:09.087041+00:00",
+          "durationSeconds": 7.619037134000337,
+          "outcome": "returned"
+        },
+        {
+          "protocol": "collector-phase-v1",
+          "phase": "reconciliation",
+          "startedAt": "2026-11-12T03:43:19.672894+00:00",
+          "endedAt": "2026-11-12T03:43:19.672913+00:00",
+          "durationSeconds": 1.848700003392878e-05,
+          "outcome": "returned"
+        },
+        {
+          "protocol": "collector-phase-v1",
+          "phase": "checkpoint_publish",
+          "startedAt": "2026-11-12T03:43:43.183631+00:00",
+          "endedAt": "2026-11-12T03:43:50.481164+00:00",
+          "durationSeconds": 7.2975480180002705,
+          "outcome": "returned"
+        },
+        {
+          "protocol": "collector-phase-v1",
+          "phase": "reconciliation",
+          "startedAt": "2026-11-12T03:44:01.004650+00:00",
+          "endedAt": "2026-11-12T03:44:04.100508+00:00",
+          "durationSeconds": 3.0958614739997756,
+          "outcome": "returned"
+        },
+        {
+          "protocol": "collector-phase-v1",
+          "phase": "checkpoint_publish",
+          "startedAt": "2026-11-12T03:44:28.017045+00:00",
+          "endedAt": "2026-11-12T03:44:35.269675+00:00",
+          "durationSeconds": 7.2526445239996065,
+          "outcome": "returned"
+        },
+        {
+          "protocol": "collector-phase-v1",
+          "phase": "reconciliation",
+          "startedAt": "2026-11-12T03:44:45.741131+00:00",
+          "endedAt": "2026-11-12T03:44:45.741142+00:00",
+          "durationSeconds": 9.984999906009762e-06,
+          "outcome": "returned"
+        },
+        {
+          "protocol": "collector-phase-v1",
+          "phase": "checkpoint_publish",
+          "startedAt": "2026-11-12T03:45:09.063792+00:00",
+          "endedAt": "2026-11-12T03:45:16.901795+00:00",
+          "durationSeconds": 7.8380169080001,
+          "outcome": "returned"
+        },
+        {
+          "protocol": "collector-phase-v1",
+          "phase": "reconciliation",
+          "startedAt": "2026-11-12T03:45:27.682489+00:00",
+          "endedAt": "2026-11-12T03:45:27.682499+00:00",
+          "durationSeconds": 9.473999853071291e-06,
+          "outcome": "returned"
+        },
+        {
+          "protocol": "collector-phase-v1",
+          "phase": "checkpoint_publish",
+          "startedAt": "2026-11-12T03:45:50.958570+00:00",
+          "endedAt": "2026-11-12T03:45:57.908297+00:00",
+          "durationSeconds": 6.949733838999691,
+          "outcome": "returned"
+        },
+        {
+          "protocol": "collector-phase-v1",
+          "phase": "reconciliation",
+          "startedAt": "2026-11-12T03:46:08.754630+00:00",
+          "endedAt": "2026-11-12T03:46:08.754641+00:00",
+          "durationSeconds": 1.1035999705200084e-05,
+          "outcome": "returned"
+        },
+        {
+          "protocol": "collector-phase-v1",
+          "phase": "checkpoint_publish",
+          "startedAt": "2026-11-12T03:46:32.013278+00:00",
+          "endedAt": "2026-11-12T03:46:39.327790+00:00",
+          "durationSeconds": 7.314527422000083,
+          "outcome": "returned"
+        },
+        {
+          "protocol": "collector-phase-v1",
+          "phase": "reconciliation",
+          "startedAt": "2026-11-12T03:46:49.837068+00:00",
+          "endedAt": "2026-11-12T03:46:49.837079+00:00",
+          "durationSeconds": 9.684999895398505e-06,
+          "outcome": "returned"
+        },
+        {
+          "protocol": "collector-phase-v1",
+          "phase": "checkpoint_publish",
+          "startedAt": "2026-11-12T03:47:13.255366+00:00",
+          "endedAt": "2026-11-12T03:47:22.375050+00:00",
+          "durationSeconds": 9.119697738000013,
+          "outcome": "returned"
+        },
+        {
+          "protocol": "collector-phase-v1",
+          "phase": "reconciliation",
+          "startedAt": "2026-11-12T03:47:32.766855+00:00",
+          "endedAt": "2026-11-12T03:47:32.766866+00:00",
+          "durationSeconds": 1.0214999747404363e-05,
+          "outcome": "returned"
+        },
+        {
+          "protocol": "collector-phase-v1",
+          "phase": "checkpoint_publish",
+          "startedAt": "2026-11-12T03:47:56.095999+00:00",
+          "endedAt": "2026-11-12T03:48:03.615708+00:00",
+          "durationSeconds": 7.51972518599996,
+          "outcome": "returned"
+        },
+        {
+          "protocol": "collector-phase-v1",
+          "phase": "reconciliation",
+          "startedAt": "2026-11-12T03:48:14.749870+00:00",
+          "endedAt": "2026-11-12T03:48:14.749881+00:00",
+          "durationSeconds": 1.0456000381964259e-05,
+          "outcome": "returned"
+        },
+        {
+          "protocol": "collector-phase-v1",
+          "phase": "checkpoint_publish",
+          "startedAt": "2026-11-12T03:48:38.027418+00:00",
+          "endedAt": "2026-11-12T03:48:45.630289+00:00",
+          "durationSeconds": 7.602885925999999,
+          "outcome": "returned"
+        },
+        {
+          "protocol": "collector-phase-v1",
+          "phase": "reconciliation",
+          "startedAt": "2026-11-12T03:48:56.207413+00:00",
+          "endedAt": "2026-11-12T03:48:56.207424+00:00",
+          "durationSeconds": 1.0955999641737435e-05,
+          "outcome": "returned"
+        },
+        {
+          "protocol": "collector-phase-v1",
+          "phase": "checkpoint_publish",
+          "startedAt": "2026-11-12T03:49:19.683750+00:00",
+          "endedAt": "2026-11-12T03:49:27.599966+00:00",
+          "durationSeconds": 7.9162310500000785,
+          "outcome": "returned"
+        }
+      ]
+    }
+  },
+  "implementation": {
+    "moduleCommit": "2153a5459a814fdadba27d4eec1b7b17dd724306",
+    "watcherCommit": "c0acea8672dc2dabe4725284c070f0d612f15b8b",
+    "testCommit": "a870b94aa5e0ad117a95ab78556ce8e349c0e8f5",
+    "runtimeVerified": false,
+    "testsPassed": 79,
+    "sourceHashes": {
+      "checkpoint_publisher.py": "2448476a23ffb04c2a3d96379eccc1e94731dd1c16064e8d299fe93f0f946389",
+      "watcher.py": "1a06ee922691d18a51e340b3ebf8e0688fc4c2bd6b14211d80658823a896746c",
+      "test_checkpoint_publisher.py": "4f08904140272f17098ee7ff6a06f1d27fa255c547cdc70a7d382522a87933a1"
+    },
+    "design": [
+      "One Git worker; one in-flight and one latest pending immutable snapshot",
+      "Cycle-boundary state/dashboard generation equality; append-lock protects complete raw JSONL boundaries including oracle receipts",
+      "Exact raw prefix lengths, inode/device/boundary checks; append-only writer contract, not adversarial full-prefix rewrite detection",
+      "Frozen files hashed into isolated index; no git add of live files; no checkout changes; unrelated paths retained",
+      "Non-fast-forward retry reapplies same frozen blobs atop latest main, no force push",
+      "Git processes in own process group, cancelled/time-limited and reaped",
+      "Five-second shutdown drain then cancellation and bounded worker join; final synchronous fallback/artifact retained, handoff gaps remain",
+      "Source/exit/sizing/study gates unchanged",
+      "Collector finally blocks close worker on cycle exceptions; SIGTERM raises SystemExit to enter cleanup"
+    ],
+    "tests": [
+      "20 real paper quote updates while deliberately blocked Git; pending coalesces 20 generations and retains all 21 loss rows",
+      "Frozen state/dashboard match and later raw appends excluded",
+      "Mismatched generations, truncated/replaced prefixes and missing raw files rejected",
+      "Concurrent oracle-style partial write completes before snapshot prefix captured",
+      "Single worker; explicit unpublished failed/cancelled status; retry and local evidence intact",
+      "Real Git preserves checkout/unrelated paths and exact snapshot generation",
+      "Actual non-fast-forward race retries without losing concurrent independent edit",
+      "Real Git subprocess cancellation kills stalled child process group",
+      "Execute actual collector CLI block with failing cycle: publisher and oracle cleanup run before exception propagates; unpublished status retained"
+    ],
+    "remainingVerification": "Next natural successor must pass workflow tests, publish immutable-checkpoint-v1 manifest/receipts, and show quote/source observations continuing through long publisher spans; no production stall-fix claim yet",
+    "sourceBytesVerifiedAtCommit": "5035d2790ff6e3de902649bf27674b19e64f5812",
+    "localForegroundCaptureBenchmark": {
+      "stateBytes": 33816800,
+      "dashboardBytes": 9979830,
+      "rawFiles": 2,
+      "rawBytes": 235954,
+      "durationSeconds": [
+        1.1358371050000642,
+        0.557802340999956,
+        0.5159077060000072
+      ],
+      "scope": "Local actual immutable state/dashboard plus two sampled event archives only; excludes complete production raw inventory and is not a production latency guarantee"
+    },
+    "watcherCleanupCommit": "93ed25f8a7fbfb67ced01b795f32b934a97de35f",
+    "finalTestCommit": "5035d2790ff6e3de902649bf27674b19e64f5812"
+  },
+  "limitations": [
+    "Website only; bounded feed and collector windows can miss events",
+    "Funding incomplete; fee/slippage modeled, liquidation incompletely modeled",
+    "Genius holdings/tier timing/lifecycle and US/Pennsylvania eligibility remain unverified",
+    "No new historical backtest or latency P&L; frozen study gates unchanged",
+    "Positive modeled open marks are not validated copier performance"
+  ],
+  "websiteScan": {
+    "page": {
+      "at": "2026-11-12T04:18:36.997Z",
+      "status": "page_read",
+      "httpStatus": 200,
+      "hash": "5bd7bbe86789e7091e8bb8bd104fe6b6098c5eca0d5dbe696d5599ca89a5c726"
+    },
+    "live": {
+      "at": "2026-11-12T04:18:39.134Z",
+      "status": "page_read",
+      "sourceHash": "52dfd87c956297f83c45a6da5f3ae4786241bb999a9c7de22a80453f9fe9a3dd",
+      "eventCount": 20
+    }
+  },
+  "completedJobs": {
+    "jobs": [
+      {
+        "id": 130939118716,
+        "name": "observe",
+        "status": "completed",
+        "conclusion": "success",
+        "run_id": 43144522905,
+        "logs_url": null,
+        "steps": [
+          {
+            "name": "Set up job",
+            "status": "completed",
+            "conclusion": "success",
+            "number": 1
+          },
+          {
+            "name": "Run actions/checkout@v4",
+            "status": "completed",
+            "conclusion": "success",
+            "number": 2
+          },
+          {
+            "name": "Run actions/setup-python@v5",
+            "status": "completed",
+            "conclusion": "success",
+            "number": 3
+          },
+          {
+            "name": "Verify paper math",
+            "status": "completed",
+            "conclusion": "success",
+            "number": 4
+          },
+          {
+            "name": "Collect public events and paper quotes",
+            "status": "completed",
+            "conclusion": "success",
+            "number": 5
+          },
+          {
+            "name": "Persist public evidence",
+            "status": "completed",
+            "conclusion": "success",
+            "number": 6
+          },
+          {
+            "name": "Preserve evidence artifact even if commit fails",
+            "status": "completed",
+            "conclusion": "success",
+            "number": 7
+          },
+          {
+            "name": "Hand off to next bounded collector window",
+            "status": "completed",
+            "conclusion": "success",
+            "number": 8
+          },
+          {
+            "name": "Post Run actions/setup-python@v5",
+            "status": "completed",
+            "conclusion": "success",
+            "number": 15
+          },
+          {
+            "name": "Post Run actions/checkout@v4",
+            "status": "completed",
+            "conclusion": "success",
+            "number": 16
+          },
+          {
+            "name": "Complete job",
+            "status": "completed",
+            "conclusion": "success",
+            "number": 17
+          }
+        ]
+      }
+    ]
+  },
+  "currentJobs": {
+    "jobs": [
+      {
+        "id": 130959065202,
+        "name": "observe",
+        "status": "in_progress",
+        "conclusion": null,
+        "run_id": 43150748195,
+        "logs_url": null,
+        "steps": [
+          {
+            "name": "Set up job",
+            "status": "completed",
+            "conclusion": "success",
+            "number": 1
+          },
+          {
+            "name": "Run actions/checkout@v4",
+            "status": "completed",
+            "conclusion": "success",
+            "number": 2
+          },
+          {
+            "name": "Run actions/setup-python@v5",
+            "status": "completed",
+            "conclusion": "success",
+            "number": 3
+          },
+          {
+            "name": "Verify paper math",
+            "status": "completed",
+            "conclusion": "success",
+            "number": 4
+          },
+          {
+            "name": "Collect public events and paper quotes",
+            "status": "in_progress",
+            "conclusion": null,
+            "number": 5
+          },
+          {
+            "name": "Persist public evidence",
+            "status": "pending",
+            "conclusion": null,
+            "number": 6
+          },
+          {
+            "name": "Preserve evidence artifact even if commit fails",
+            "status": "pending",
+            "conclusion": null,
+            "number": 7
+          },
+          {
+            "name": "Hand off to next bounded collector window",
+            "status": "pending",
+            "conclusion": null,
+            "number": 8
+          },
+          {
+            "name": "Post Run actions/setup-python@v5",
+            "status": "pending",
+            "conclusion": null,
+            "number": 15
+          },
+          {
+            "name": "Post Run actions/checkout@v4",
+            "status": "pending",
+            "conclusion": null,
+            "number": 16
+          }
+        ]
+      }
+    ]
+  },
+  "documentationCommit": "b8ceb6a769538f8566983040365fbfb31e4f6920",
+  "sourceBytesVerifiedAtCommit": "5035d2790ff6e3de902649bf27674b19e64f5812"
+}
