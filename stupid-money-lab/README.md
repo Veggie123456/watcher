@@ -90,3 +90,10 @@ The implementation passed 79 local unit tests including blocked-publisher paper 
 `git-command-diagnostic-v1` preserves the command stage, start/end and monotonic duration, failed/timed_out/cancelled result, return code, stderr byte counts and allowlisted error categories. Classification inspects at most 8192 stderr bytes; raw stderr, command arguments, URLs and environment are never placed in the diagnostic payload. Unknown errors remain unclassified. Categories are hints, not independently verified causes.
 
 Publication receipts retain diagnostics from both failed attempts and also retain the first failure when a later retry succeeds. This prevents a final read-tree error from hiding an earlier timeout; it does not assert that this sequence caused any historical failure. Existing publication retry count, timeout, cancellation, frozen bytes, entry/exit/risk rules and study accounting are unchanged. The existing 79 tests plus three diagnostic/privacy/retry tests passed (82 total). Production diagnostics await the next normal collector handoff; historical stderr cannot be reconstructed.
+
+
+### Retry index isolation (2026-11-12)
+
+Deployed diagnostic receipts show write-tree timing out before a second read-tree command fails with the index_lock category. A killed command can retain its private index lock. Each retry now uses a new index pathname inside the operation's private temporary directory. It never reuses an interrupted index or deletes a working-checkout lock. Frozen blob bytes, remote parent refresh, retry count and timeouts are unchanged.
+
+83 tests passed, including a real local Git repository regression that simulates the first interrupted write leaving a private lock, then verifies successful retry with a different index while the abandoned lock still exists, unchanged checkout index, preserved unrelated file and exact frozen state. This addresses the secondary retry lock obstruction; it does not establish or fix the original write-tree timeout cause. Production verification awaits the next normal successor.
