@@ -45,3 +45,7 @@
 {"protocol":"collector-phase-v1","phase":"reconciliation","startedAt":"2026-11-12T11:41:30.165610+00:00","endedAt":"2026-11-12T11:41:30.165633+00:00","durationSeconds":2.3335000150837004e-05,"outcome":"returned"}
 {"protocol":"collector-phase-v1","phase":"reconciliation","startedAt":"2026-11-12T11:42:04.544420+00:00","endedAt":"2026-11-12T11:42:04.544433+00:00","durationSeconds":1.2728999990940792e-05,"outcome":"returned"}
 {"protocol":"collector-phase-v1","phase":"reconciliation","startedAt":"2026-11-12T11:42:38.958868+00:00","endedAt":"2026-11-12T11:42:38.958883+00:00","durationSeconds":1.47719999858964e-05,"outcome":"returned"}
+{"protocol":"collector-phase-v1","phase":"reconciliation","startedAt":"2026-11-12T11:43:13.043752+00:00","endedAt":"2026-11-12T11:43:13.043765+00:00","durationSeconds":1.2558999969769502e-05,"outcome":"returned"}
+{"protocol":"collector-phase-v1","phase":"reconciliation","startedAt":"2026-11-12T11:43:47.212260+00:00","endedAt":"2026-11-12T11:43:47.212272+00:00","durationSeconds":1.1167000138812e-05,"outcome":"returned"}
+{"protocol":"collector-phase-v1","phase":"reconciliation","startedAt":"2026-11-12T11:44:21.949272+00:00","endedAt":"2026-11-12T11:44:24.875501+00:00","durationSeconds":2.9262326339999163,"outcome":"returned"}
+{"protocol":"collector-phase-v1","phase":"reconciliation","startedAt":"2026-11-12T11:44:59.329350+00:00","endedAt":"2026-11-12T11:44:59.329361+00:00","durationSeconds":1.1517999837451498e-05,"outcome":"returned"}
