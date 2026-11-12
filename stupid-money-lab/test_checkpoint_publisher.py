@@ -206,6 +206,8 @@ class PublisherTests(unittest.TestCase):
         publisher = ConcurrentPublisher(self.root)
         result = publisher(cp.capture(self.root), threading.Event())
         self.assertTrue(result['commit']); self.assertEqual(publisher.pushes, 2)
+        self.assertEqual(result['attemptDiagnostics'][0]['command']['stage'], 'push')
+        self.assertIn('non_fast_forward', result['attemptDiagnostics'][0]['command']['stderrClasses'])
         self.assertEqual(git(bare, 'show', 'main:unrelated.txt'), 'concurrent change')
         self.assertEqual(json.loads(git(bare, 'show', 'main:stupid-money-lab/state.json'))['updatedAt'], '1')
 
@@ -254,6 +256,61 @@ class PublisherTests(unittest.TestCase):
             self.assertLess(time.monotonic() - start, 2)
         finally:
             timer.cancel()
+
+
+class CommandDiagnosticTests(unittest.TestCase):
+    def test_diagnostics_do_not_persist_secret_stderr_or_arguments_and_are_bounded(self):
+        secret = 'DO_NOT_SAVE_PRIVATE_TOKEN'
+        stderr = ('fatal: Authentication failed for https://user:' + secret + '@example.invalid\n' +
+                  'fatal: unable to read tree abc\n' + 'x' * 9000).encode()
+        row = cp.command_diagnostic(['read-tree', secret], 'start', .25, 'failed', 128, stderr)
+        encoded = json.dumps(row)
+        self.assertNotIn(secret, encoded); self.assertNotIn('example.invalid', encoded)
+        self.assertNotIn('unable to read tree abc', encoded)
+        self.assertEqual(row['stderrInspectedBytes'], 8192)
+        self.assertTrue(row['stderrInspectionTruncated'])
+        self.assertIn('authentication_or_permission', row['stderrClasses'])
+        self.assertIn('missing_or_invalid_object', row['stderrClasses'])
+        self.assertLess(len(encoded), 1000)
+
+    def test_first_timeout_and_second_read_tree_error_both_survive_in_receipt(self):
+        with tempfile.TemporaryDirectory() as directory:
+            root = pathlib.Path(directory) / 'stupid-money-lab'; root.mkdir()
+            for name in ['state.json', 'dashboard.json']:
+                (root / name).write_text('{"updatedAt":"1"}')
+            publisher = cp.GitPublisher(root)
+            read_count = 0
+            def run(args, cancel, env=None, data=None):
+                nonlocal read_count
+                if args[0] == 'hash-object': return 'a\nb\nc'
+                if args[0] == 'rev-parse': return 'parent'
+                if args[0] == 'read-tree':
+                    read_count += 1
+                    if read_count == 2:
+                        raise cp.GitCommandError('read-tree failed', {'stage':'read-tree','result':'failed','returnCode':128})
+                if args[0] == 'write-tree':
+                    raise cp.GitCommandError('write-tree timed out', {'stage':'write-tree','result':'timed_out','returnCode':-9})
+                return ''
+            with patch.object(publisher, 'run', side_effect=run):
+                worker = cp.BackgroundPublisher(publisher)
+                worker.submit(cp.capture(root)); worker.close(1)
+                receipt = worker.drain_receipts()[0]
+            self.assertFalse(receipt['published']); self.assertIsNone(worker.status()['latestPublished'])
+            self.assertEqual([r['command']['stage'] for r in receipt['attemptDiagnostics']], ['write-tree','read-tree'])
+            self.assertEqual([r['command']['result'] for r in receipt['attemptDiagnostics']], ['timed_out','failed'])
+            self.assertEqual([r['attempt'] for r in receipt['attemptDiagnostics']], [1,2])
+
+    def test_actual_git_timeout_records_stage_and_timeout_without_raw_command(self):
+        with tempfile.TemporaryDirectory() as directory:
+            root = pathlib.Path(directory) / 'stupid-money-lab'; root.mkdir()
+            with self.assertRaises(cp.GitCommandError) as caught:
+                cp.GitPublisher(root, command_timeout=.01).run(
+                    ['-c','alias.stall=!sleep 30','stall'], threading.Event())
+            diagnostic = caught.exception.diagnostic
+            self.assertEqual(diagnostic['result'], 'timed_out')
+            self.assertEqual(diagnostic['stage'], 'other')
+            self.assertNotIn('sleep', json.dumps(diagnostic))
+            self.assertLess(diagnostic['durationSeconds'], 2)
 
 
 if __name__ == '__main__':
