@@ -90,6 +90,9 @@ def update(state, events, quotes, metadata, stamp, millis, fresh, price, append,
                 raise ValueError('Unsupported source venue ' + source_venue + '; Hyperliquid quote is not a matched-venue fill')
             if action == 'OPENED' and not source_venue:
                 raise ValueError('Source venue unavailable; no matched-venue opening')
+            if action == 'OPENED' and ((event.get('traderCard') or {}).get('pnl') or {}).get('live') is False:
+                receipt['entryRejectionCode']='source_card_explicitly_nonlive'
+                raise ValueError('Initial source card explicitly non-live; no prospective opening')
             age = millis(now) - millis(event['createdAt'])
             if age < -1000 or (action in ('OPENED', 'ADDED') and age > 120000):
                 raise ValueError('Outside 120-second entry observation window')
@@ -228,6 +231,15 @@ def update(state, events, quotes, metadata, stamp, millis, fresh, price, append,
             book = quotes[position['symbol']]
             fresh(book)
             _, position['openPnl'] = mark({**position, 'entry': position['basis'] / position['quantity']}, book)
+            hits=position.setdefault('milestones',{'notional':{},'margin':{}})
+            for kind, denominator in [('notional',position['basis']),('margin',position.get('marginRequired',position['basis']/position.get('paperLeverage',1)))]:
+                if denominator<=0:continue
+                value=position['openPnl']/denominator
+                position['peakReturnOn'+kind.title()]=max(position.get('peakReturnOn'+kind.title(),value),value)
+                for threshold in (5,10,20):
+                    if value>=threshold/100 and str(threshold) not in hits[kind]:
+                        hits[kind][str(threshold)]={'observedAt':now,'bookTime':book['time'],'quantity':position['quantity'],'legCount':len(position['legs']),'denominator':denominator,'pnlBeforeFunding':position['openPnl'],'return':value}
+
         except (KeyError, ValueError):
             pass
     current = {p['id']: p for p in positions.values()}
