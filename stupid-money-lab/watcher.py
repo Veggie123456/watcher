@@ -1,8 +1,8 @@
-# Active production lane: Genius-only, user-authorized reset v1.
 """Public-source collector and independent exploratory paper scenarios. No order API."""
 from concurrent.futures import ThreadPoolExecutor, as_completed
 import portfolio
 import genius_copy
+import target_trader
 import evidence_audit
 import oracle_capture
 import checkpoint_publisher
@@ -34,7 +34,7 @@ def request(url, body=None):
 
 def info(body): return json.loads(request(API,body))
 
-def parse_events(html):
+def parse_events(html, all_cohorts=False):
     found={}
     for m in re.finditer(r'self\.__next_f\.push\((\[[\s\S]*?\])\)\s*;?\s*</script>',html):
         try: chunk=json.loads(m[1])[1]
@@ -45,7 +45,7 @@ def parse_events(html):
             except ValueError: continue
             for e in items:
                 p=e.get('payload',{}) if isinstance(e,dict) else {}
-                if (p.get('cohort') in ('GENIUS','SMART') or p.get('action') in ('CLOSED','REDUCED')) and isinstance(e.get('id'),int): found[str(e['id'])]=e
+                if (all_cohorts or p.get('cohort') in ('GENIUS','SMART') or p.get('action') in ('CLOSED','REDUCED')) and isinstance(e.get('id'),int): found[str(e['id'])]=e
     return list(found.values())
 
 def append(kind, value):
@@ -244,6 +244,8 @@ def cycle(state, fetch_source=True):
                     state['signalCoverage'][action][tier]+=1
             state['seen'][key]={'hash':h,'firstObservedAt':old['firstObservedAt'] if old else stamp()}
     active=[s for s in state['studies'] if not s.get('closedAt')]
+    target_append=lambda kind,value: append('target-trader-'+kind,value)
+    target_state,target_events=target_trader.prepare(state,events,fetch_source,request,parse_events,stamp,millis,target_append)
     coins=set(s['symbol'] for s in active) | excursion_coins(state)
     copy_events=list({e['id']:e for e in unseen + [e for e in events if e.get('payload', {}).get('action') in ('REDUCED','CLOSED')] if genius_copy.candidate(e)}.values())
     if fetch_source:
@@ -255,6 +257,8 @@ def cycle(state, fetch_source=True):
                 position.setdefault("unresolved", "Public alert windows did not overlap")
     coins.update(e["coin"] for e in copy_events)
     coins.update(p["symbol"] for p in copy_positions if not p.get("closedAt"))
+    coins.update(e['coin'] for e in target_events)
+    coins.update(p['symbol'] for p in target_state.get('geniusCopy',{}).get('positions',{}).values() if not p.get('closedAt'))
     eligible=[]
     for e in sorted(state['pendingSignals'].values(),key=lambda e:(e.get('createdAt',''),e.get('id',0))):
         try:
@@ -269,6 +273,7 @@ def cycle(state, fetch_source=True):
             reject(state,e,ex);decision(state,e,'skipped',str(ex));state['pendingSignals'].pop(str(e['id']),None)
     if fetch_source:
         measured_phase('reconciliation', lambda: genius_copy.reconcile(state,info,stamp,millis,append))
+        genius_copy.reconcile(target_state,info,stamp,millis,target_append)
     quotes={}
     with ThreadPoolExecutor(max_workers=8) as pool:
         futures={pool.submit(book,coin):coin for coin in sorted(coins)}
@@ -283,11 +288,12 @@ def cycle(state, fetch_source=True):
                 fresh(quotes[s['symbol']]); update(s,quotes[s['symbol']])
             except Exception as ex: append('errors',{'at':stamp(),'scenario':s['id'],'error':str(ex)})
     assets={}
-    if eligible or copy_events:
+    if eligible or copy_events or target_events:
         try: assets={a['name']:a for a in info({'type':'meta'})['universe']};sizes={k:a['szDecimals'] for k,a in assets.items()}
         except Exception: sizes={}
     genius_copy.update(state,copy_events,quotes,assets,stamp,millis,fresh,price,append,FEE,SLIP,mark)
     genius_copy.close_reconciled(state,quotes,stamp,fresh,price,append,FEE,SLIP)
+    target_trader.update(target_state,target_events,quotes,assets,stamp,millis,fresh,price,target_append,FEE,SLIP,mark)
     if fetch_source:
         genius_copy.audit_source_cards(state,events,stamp,append)
     if eligible:
@@ -329,6 +335,11 @@ def cycle(state, fetch_source=True):
     copy=state['geniusCopy']
     slim['geniusCopy']={k:v for k,v in copy.items() if k not in ('positions','history','decisions')}
     slim['geniusCopy'].update(history=copy.get('history',[]),decisions=copy['decisions'][-50:])
+    target=state.get('targetTrader',{})
+    slim['targetTrader']={k:v for k,v in target.items() if k not in ('seen','geniusCopy')}
+    target_ledger=target.get('geniusCopy',{})
+    slim['targetTrader']['geniusCopy']={k:v for k,v in target_ledger.items() if k not in ('positions','decisions')}
+    slim['targetTrader']['geniusCopy']['decisions']=target_ledger.get('decisions',[])[-50:]
     slim['studies']=[]
     for s in state['studies'][-200:]:
         item={k:v for k,v in s.items() if k not in ('entryBook','exitBook','legs')}
