@@ -1,3 +1,4 @@
+# Active production lane: Genius-only, user-authorized reset v1.
 """Public-source collector and independent exploratory paper scenarios. No order API."""
 from concurrent.futures import ThreadPoolExecutor, as_completed
 import portfolio
