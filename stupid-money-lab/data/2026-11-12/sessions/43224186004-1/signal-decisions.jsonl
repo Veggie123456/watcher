@@ -30,3 +30,4 @@
 {"at":"2026-11-12T13:33:08.081858+00:00","eventId":17944,"action":"ADDED","tier":"GENIUS","coin":"HYPE","status":"skipped","reason":"20 open funded positions maximum"}
 {"at":"2026-11-12T13:36:36.307909+00:00","eventId":17945,"action":"ADDED","tier":"GENIUS","coin":"BTC","status":"filled","reason":"Standalone add-alert scalp opened"}
 {"at":"2026-11-12T13:40:42.038279+00:00","eventId":17947,"action":"ADDED","tier":"GENIUS","coin":"ETH","status":"skipped","reason":"Source leverage missing, unreadable or above venue limit; no matched-leverage fill"}
+{"at":"2026-11-12T13:42:24.552157+00:00","eventId":17948,"action":"ADDED","tier":"SMART","coin":"ETH","status":"skipped","reason":"20 open funded positions maximum"}
