@@ -1,10 +1,23 @@
 """User-selected wallet study. Separate cash, evidence and decisions; no order API."""
 import hashlib
 import json
+import re
 import genius_copy
 
 WALLET = '0xecb63caa47c7c4e77f60f1ce858cf28dc2b82b00'
 SOURCE = 'https://www.stupidmoney.io/trader/' + WALLET
+
+
+def profile_data(html):
+    for m in re.finditer(r'self\.__next_f\.push\((\[[\s\S]*?\])\)\s*;?\s*</script>',html):
+        try:
+            chunk=json.loads(m[1])[1]
+            if not isinstance(chunk,str):continue
+            for x in re.finditer(r'"ours":\{',chunk):
+                data,_=json.JSONDecoder().raw_decode(chunk[x.end()-1:])
+                if data.get('address','').lower()==WALLET and isinstance(data.get('opens'),list):return data
+        except (ValueError,IndexError,TypeError):continue
+    return None
 
 
 def prepare(state, live_events, fetch_source, request, parse_events, stamp, millis, append):
@@ -32,8 +45,33 @@ def prepare(state, live_events, fetch_source, request, parse_events, stamp, mill
                 'hash':hashlib.sha256(html.encode()).hexdigest()})
             child['profileSnapshotSavedAt'] = stamp()
         events = [e for e in parse_events(html, all_cohorts=True) if exact(e)]
+        profile=profile_data(html)
+        if profile:
+            old_episodes=child.get('profileOpenEpisodes')
+            episodes={}
+            for p in profile['opens']:
+                try:
+                    identity=p['coin']+':'+p['side']+':'+p['openedAt']
+                    if p['side'] not in ('LONG','SHORT') or not re.fullmatch(r'[A-Za-z0-9:._-]{1,30}',p['coin']):continue
+                    millis(p['openedAt'])
+                    episodes[identity]=p
+                    if old_episodes is not None and identity not in old_episodes and millis(p['openedAt'])>=millis(child['startedAt']):
+                        synthetic=int(hashlib.sha256((WALLET+identity).encode()).hexdigest()[:13],16)
+                        events.append({'id':synthetic,'coin':p['coin'],'createdAt':p['openedAt'],'publishedAt':None,
+                            'sourceUrl':SOURCE,'origin':'profile_open_episode','traderCard':{'venue':'hyperliquid'},
+                            'payload':{'wallet':WALLET,'cohort':profile.get('label'),'side':p['side'],'action':'OPENED','venue':'hyperliquid'}})
+                except (KeyError,TypeError,ValueError):continue
+            missing=set(old_episodes or {})-set(episodes)
+            child['profileSummary']={k:profile.get(k) for k in ['address','cohort','label','allRank','tags','displayName']}
+            child['profileSummary'].update(openEpisodeCount=len(episodes),observedAt=stamp(),identityVerified=False)
+            child['profileOpenEpisodes']=episodes
+            append('profile-positions',{'at':stamp(),'source':SOURCE,'profile':profile,'baseline':old_episodes is None,'missingEpisodeKeys':sorted(missing)})
+            for pos in child.get('geniusCopy',{}).get('positions',{}).values():
+                if not pos.get('closedAt') and any(v['coin']==pos['symbol'] and v['side']==pos['direction'].upper() for k,v in (old_episodes or {}).items() if k in missing):
+                    pos['profileEpisodeMissingAt']=stamp()
+                    pos.setdefault('unresolved','Source profile episode disappeared; no exit fill inferred; reconciliation required')
         found.update({e['id']: e for e in events})
-        child.update(profileStatus='read' if events else 'no_parseable_wallet_events',
+        child.update(profileStatus='profile_positions_read' if profile else 'read' if events else 'no_parseable_wallet_events',
                      profileCheckedAt=stamp(), profileHash=hashlib.sha256(html.encode()).hexdigest(), profileError=None)
         child['profileRetryAfterMs'] = millis(now) + 65000
     except ProfileCheckDeferred:
