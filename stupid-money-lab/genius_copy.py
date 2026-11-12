@@ -4,7 +4,8 @@ import re
 from datetime import datetime
 
 STARTING_CASH = 10000
-MAX_OPEN = 50
+MAX_OPEN = 100
+MAX_ENTRY_RANK = 500
 ENTRY = 200
 PAPER_LEVERAGE = 5
 ACTIONS = {'OPENED', 'ADDED', 'REDUCED', 'CLOSED'}
@@ -58,6 +59,8 @@ def update(state, events, quotes, metadata, stamp, millis, fresh, price, append,
         ledger['contributedCapital'] = STARTING_CASH
         ledger['capitalProtocol'] = '10k-50-v1'
     ledger['maxOpen'] = MAX_OPEN
+    ledger['entryRankPolicy'] = {'version': 'genius-top500-v1', 'maxRank': MAX_ENTRY_RANK,
+                                 'scope': 'New OPENED entries only; preserve matching adds and exits'}
     ledger['defaultPaperLeverage'] = PAPER_LEVERAGE
     positions = ledger['positions']
     decided = {row['eventId'] for row in ledger['decisions']}
@@ -77,6 +80,16 @@ def update(state, events, quotes, metadata, stamp, millis, fresh, price, append,
         receipt = {'eventId': event['id'], 'action': action, 'wallet': wallet, 'market': coin,
                    'side': side, 'publication': event['createdAt'], 'observedAt': state.get('seen', {}).get(str(event['id']), {}).get('firstObservedAt', now)}
         try:
+            if action == 'OPENED':
+                rank = (event.get('traderCard') or {}).get('rank')
+                receipt['sourceTraderRank'] = rank
+                receipt['entryRankPolicy'] = 'genius-top500-v1'
+                if type(rank) is not int or rank < 1:
+                    receipt['entryRejectionCode'] = 'source_rank_missing_or_invalid'
+                    raise ValueError('New Genius entry requires a readable positive integer traderCard.rank')
+                if rank > MAX_ENTRY_RANK:
+                    receipt['entryRejectionCode'] = 'source_rank_outside_top500'
+                    raise ValueError('Source trader rank outside top 500; no new entry')
             if not re.fullmatch(r'0x[0-9a-f]{40}', wallet) or side not in ('LONG', 'SHORT'):
                 raise ValueError('Missing full source address or direction')
             payload_venue = str(p.get('venue') or '').lower()
@@ -113,7 +126,7 @@ def update(state, events, quotes, metadata, stamp, millis, fresh, price, append,
                     receipt['conflictingPositionId'] = opposite['id']
                     raise ValueError('Opposite copied exposure has no matched close; new entry quarantined')
             if action == 'OPENED' and sum(not row.get('closedAt') for row in positions.values()) >= MAX_OPEN:
-                raise ValueError('50 open paper position limit')
+                raise ValueError('100 open paper position limit')
             if action == 'OPENED' and active:
                 raise ValueError('Overlapping opening for the same address, market and side')
             if action != 'OPENED' and not active:
@@ -175,6 +188,7 @@ def update(state, events, quotes, metadata, stamp, millis, fresh, price, append,
                 position = {'id': event['id'], 'wallet': wallet, 'symbol': coin, 'direction': side.lower(),
                             'sourceVenue': source_venue, 'paperQuoteVenue': 'hyperliquid',
                             'sourceOpenedAt': event['createdAt'], 'sourceLeverage': p.get('leverage'),
+                            'sourceTraderRankAtEntry': receipt['sourceTraderRank'], 'entryRankPolicy': 'genius-top500-v1',
                             'paperLeverage': leverage, 'marginRequired': 0, 'leverageMode': 'fixed_5x',
                             'openedAt': now, 'quantity': 0, 'basis': 0, 'entryFees': 0, 'realized': 0, 'legs': []}
                 positions[key] = position
