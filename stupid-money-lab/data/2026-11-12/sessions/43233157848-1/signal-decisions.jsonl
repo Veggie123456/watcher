@@ -27,3 +27,6 @@
 {"at":"2026-11-12T14:41:59.429544+00:00","eventId":18090,"action":"OPENED","tier":"SMART","coin":"AERO","status":"filled","reason":"Fresh opening recorded"}
 {"at":"2026-11-12T14:42:37.344405+00:00","eventId":18091,"action":"ADDED","tier":"SMART","coin":"VVV","status":"skipped","reason":"20 open funded positions maximum"}
 {"at":"2026-11-12T14:42:37.365948+00:00","eventId":18092,"action":"ADDED","tier":"SMART","coin":"ZEC","status":"skipped","reason":"20 open funded positions maximum"}
+{"at":"2026-11-12T14:43:12.002882+00:00","eventId":18095,"action":"ADDED","tier":"SMART","coin":"BTC","status":"skipped","reason":"20 open funded positions maximum"}
+{"at":"2026-11-12T14:43:12.026694+00:00","eventId":18096,"action":"ADDED","tier":"GENIUS","coin":"BTC","status":"skipped","reason":"20 open funded positions maximum"}
+{"at":"2026-11-12T14:43:12.048657+00:00","eventId":18097,"action":"ADDED","tier":"GENIUS","coin":"BTC","status":"skipped","reason":"20 open funded positions maximum"}
