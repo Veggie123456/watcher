@@ -139,6 +139,84 @@ def command_diagnostic(args, started_at, elapsed, result, returncode, stderr):
             'stderrInspectionTruncated': len(stderr) > 8192,
             'stderrClasses': classes or ['unclassified']}
 
+def trace_child_category(argv):
+    """Return only a fixed category; no argument values leave this function."""
+    allowed = {'fetch', 'fetch-pack', 'index-pack', 'remote-https', 'remote-http',
+               'remote-file', 'upload-pack', 'pack-objects'}
+    if not isinstance(argv, list) or not argv or not all(isinstance(x, str) for x in argv):
+        return 'other'
+    executable = pathlib.PurePath(argv[0]).name.removesuffix('.exe')
+    if executable == 'git':
+        index = 1
+        while index < len(argv) and argv[index].startswith('-'):
+            index += 2 if argv[index] in {'-c', '-C', '--git-dir', '--work-tree', '--namespace'} else 1
+        command = argv[index] if index < len(argv) else ''
+    elif executable.startswith('git-'):
+        command = executable.removeprefix('git-')
+    else:
+        return 'other'
+    return command if command in allowed else 'other'
+
+
+def summarize_trace2(path, byte_limit=262144, event_limit=2048, line_limit=8192):
+    """Bounded privacy-scrubbed summary. Missing/partial counts are lower bounds."""
+    result = {'protocol': 'git-trace2-summary-v1', 'status': 'missing',
+              'bytesObserved': None, 'bytesInspected': 0, 'eventsInspected': 0,
+              'byteLimit': byte_limit, 'eventLimit': event_limit, 'lineLimit': line_limit,
+              'truncated': False, 'malformedLines': 0, 'oversizeLines': 0,
+              'rootExitObserved': False, 'observedChildStarts': {},
+              'countsAreLowerBounds': True, 'exactFetchChildStarts': None}
+    try:
+        with pathlib.Path(path).open('rb') as stream:
+            result['bytesObserved'] = os.fstat(stream.fileno()).st_size
+            raw = stream.read(byte_limit + 1)
+    except FileNotFoundError:
+        return result
+    except OSError:
+        result['status'] = 'unreadable'
+        return result
+    result['truncated'] = len(raw) > byte_limit or result['bytesObserved'] > byte_limit
+    raw = raw[:byte_limit]
+    result['bytesInspected'] = len(raw)
+    if not raw:
+        result['status'] = 'empty'
+        return result
+    if not raw.endswith(b'\n'):
+        result['truncated'] = True
+        raw = raw.rsplit(b'\n', 1)[0] if b'\n' in raw else b''
+    root_sid = None
+    for index, line in enumerate(raw.splitlines()):
+        if index >= event_limit:
+            result['truncated'] = True
+            break
+        if len(line) > line_limit:
+            result['oversizeLines'] += 1
+            continue
+        try:
+            row = json.loads(line)
+            if not isinstance(row, dict):
+                raise ValueError('non-object event')
+        except (ValueError, UnicodeError):
+            result['malformedLines'] += 1
+            continue
+        result['eventsInspected'] += 1
+        if row.get('event') == 'start' and root_sid is None:
+            root_sid = row.get('sid')
+        if row.get('event') == 'exit' and root_sid is not None and row.get('sid') == root_sid:
+            result['rootExitObserved'] = True
+        if row.get('event') == 'child_start':
+            category = trace_child_category(row.get('argv'))
+            counts = result['observedChildStarts']
+            counts[category] = counts.get(category, 0) + 1
+    complete = (not result['truncated'] and not result['malformedLines'] and
+                not result['oversizeLines'] and result['rootExitObserved'])
+    result['status'] = 'complete' if complete else 'partial'
+    result['countsAreLowerBounds'] = not complete
+    if complete:
+        result['exactFetchChildStarts'] = result['observedChildStarts'].get('fetch', 0)
+    return result
+
+
 class GitPublisher:
     """Git subprocesses are cancellable; no working index or checkout writes."""
     def __init__(self, root, remote='origin', branch='main', command_timeout=60):
@@ -149,16 +227,31 @@ class GitPublisher:
 
     def run(self, args, cancel, env=None, data=None):
         started_at, started_clock = stamp(), time.monotonic()
+        trace_directory = None
+        trace_path = None
         def failure(result, returncode, stderr):
             diagnostic = command_diagnostic(args, started_at, time.monotonic()-started_clock,
                                             result, returncode, stderr)
+            if trace_path is not None:
+                try: diagnostic['trace2'] = summarize_trace2(trace_path)
+                except Exception: diagnostic['trace2'] = {'protocol':'git-trace2-summary-v1', 'status':'unreadable', 'exactFetchChildStarts':None, 'countsAreLowerBounds':True}
             return GitCommandError('Checkpoint git ' + diagnostic['stage'] + ' ' + result +
                                    (' (exit ' + str(returncode) + ')' if returncode is not None else ''), diagnostic)
         if cancel.is_set():
             raise failure('cancelled', None, b'')
         command = ['git', '-c', 'core.sparseCheckout=false', '-c', 'index.sparse=false', *args]
-        process = subprocess.Popen(command, cwd=self.repo, env=env, stdin=subprocess.PIPE,
-                                   stdout=subprocess.PIPE, stderr=subprocess.PIPE, start_new_session=True)
+        command_env = env
+        if args and args[0] == 'write-tree':
+            trace_directory = tempfile.TemporaryDirectory(prefix='sm-write-tree-trace-')
+            trace_path = pathlib.Path(trace_directory.name) / 'trace.jsonl'
+            command_env = {**os.environ, **(env or {}), 'GIT_TRACE2_EVENT':str(trace_path),
+                           'GIT_TRACE2_CONFIG_PARAMS':'', 'GIT_TRACE2_ENV_VARS':''}
+        try:
+            process = subprocess.Popen(command, cwd=self.repo, env=command_env, stdin=subprocess.PIPE,
+                                       stdout=subprocess.PIPE, stderr=subprocess.PIPE, start_new_session=True)
+        except BaseException:
+            if trace_directory is not None: trace_directory.cleanup()
+            raise
         deadline = time.monotonic() + self.command_timeout
         try:
             first = True
@@ -180,6 +273,8 @@ class GitPublisher:
             if process.poll() is None:
                 os.killpg(process.pid, signal.SIGKILL)
                 process.communicate()
+            if trace_directory is not None:
+                trace_directory.cleanup()
 
     def __call__(self, snapshot, cancel):
         with tempfile.TemporaryDirectory(prefix='sm-checkpoint-') as directory:
