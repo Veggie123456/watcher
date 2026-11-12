@@ -1,0 +1,1965 @@
+{
+  "run": "64",
+  "checkpoint": "3bd5515ceb51ba104ef7988c2ea255e9294654d7",
+  "cutoff": "2026-11-12T12:19:46.932733+00:00",
+  "priorCutoff": "2026-11-12T11:15:13.352616+00:00",
+  "heartbeat": "2026-11-12T12:19:45.816388+00:00",
+  "sourceCheckedAt": "2026-11-12T12:19:46.281324+00:00",
+  "sourceStatus": "read",
+  "manifestPolicy": "remote-parent+verified-frozen-blobs-v1",
+  "snapshotHashesVerified": true,
+  "checkedCurrentRawPrefixes": [
+    "stupid-money-lab/data/2026-11-12/sessions/43215604983-1/books.jsonl",
+    "stupid-money-lab/data/2026-11-12/sessions/43215604983-1/checkpoint-publications.jsonl",
+    "stupid-money-lab/data/2026-11-12/sessions/43215604983-1/events.jsonl",
+    "stupid-money-lab/data/2026-11-12/sessions/43215604983-1/lifecycle-events.jsonl",
+    "stupid-money-lab/data/2026-11-12/sessions/43215604983-1/phase-timings.jsonl",
+    "stupid-money-lab/data/2026-11-12/sessions/43215604983-1/source-checks.jsonl"
+  ],
+  "sourceCoverage": [
+    {
+      "run": "43207580697",
+      "count": 95,
+      "first": {
+        "sourceStatus": "read",
+        "sourceCheckedAt": "2026-11-12T11:16:03.651702+00:00",
+        "sourceHash": "c716cc5752d9a984292b1d79f19b6710f5d597c03a716128e5046f19d9666ef2"
+      },
+      "last": {
+        "sourceStatus": "read",
+        "sourceCheckedAt": "2026-11-12T12:10:32.100494+00:00",
+        "sourceHash": "3b2d8e4efa76055e7b9d3740915c39db5429302e4ad404f42d892a569eabed22"
+      },
+      "medianSpacingSeconds": 34.4716,
+      "maxSpacingSeconds": 38.636406
+    },
+    {
+      "run": "43215604983",
+      "count": 15,
+      "first": {
+        "sourceStatus": "read",
+        "sourceCheckedAt": "2026-11-12T12:11:42.373129+00:00",
+        "sourceHash": "099f6ce709c41d9cb7fe5e14c3b21fea1c93c00bae6259521ad7e0d4873762f4"
+      },
+      "last": {
+        "sourceStatus": "read",
+        "sourceCheckedAt": "2026-11-12T12:19:46.281324+00:00",
+        "sourceHash": "77bd4e90a0c25bd7da78bf4b030e3525fe9c46255bb52edd0a3107cd47f61dfc"
+      },
+      "medianSpacingSeconds": 34.4153405,
+      "maxSpacingSeconds": 36.522363
+    }
+  ],
+  "sourceBoundarySeconds": 70.272635,
+  "incrementalKinds": {
+    "first_observation": 32,
+    "revision": 504
+  },
+  "newOriginalSignals": 32,
+  "originalActions": {
+    "ADDED": 20,
+    "OPENED": 8,
+    "CLOSED": 1,
+    "REDUCED": 3
+  },
+  "originalIds": [
+    17660,
+    17661,
+    17662,
+    17663,
+    17664,
+    17672,
+    17675,
+    17679,
+    17678,
+    17677,
+    17691,
+    17690,
+    17704,
+    17708,
+    17712,
+    17714,
+    17717,
+    17716,
+    17715,
+    17729,
+    17735,
+    17734,
+    17737,
+    17736,
+    17739,
+    17741,
+    17745,
+    17752,
+    17755,
+    17754,
+    17757,
+    17760
+  ],
+  "publicationObservationLatency": {
+    "median": 23.6610455,
+    "max": 34.3427
+  },
+  "exits": [
+    {
+      "eventId": 17677,
+      "action": "CLOSED",
+      "market": "HYPE",
+      "wallet": "0x7f53aa6f9cb3361a435eadb53fdd0c7e3083ccaf",
+      "matchingMainPositions": [],
+      "decisions": [
+        {
+          "eventId": 17677,
+          "action": "CLOSED",
+          "wallet": "0x7f53aa6f9cb3361a435eadb53fdd0c7e3083ccaf",
+          "market": "HYPE",
+          "side": "SHORT",
+          "publication": "2026-11-12T11:34:03.688Z",
+          "observedAt": "2026-11-12T11:34:35.548874+00:00",
+          "sourceVenue": "hyperliquid",
+          "paperQuoteVenue": "hyperliquid",
+          "exitDiscoveryAt": "2026-11-12T11:34:36.364800+00:00",
+          "sourcePublicationAt": "2026-11-12T11:34:03.688Z",
+          "lateDiscovery": false,
+          "exitPolicy": "Current observed book; never backdated to source close",
+          "status": "skipped",
+          "reason": "No prospectively copied opening"
+        }
+      ]
+    },
+    {
+      "eventId": 17708,
+      "action": "REDUCED",
+      "market": "NEAR",
+      "wallet": "0x7d12ca15c85f0291631cfb9ab4ddc74f58322c18",
+      "matchingMainPositions": [],
+      "decisions": [
+        {
+          "eventId": 17708,
+          "action": "REDUCED",
+          "wallet": "0x7d12ca15c85f0291631cfb9ab4ddc74f58322c18",
+          "market": "NEAR",
+          "side": "SHORT",
+          "publication": "2026-11-12T11:48:04.627Z",
+          "observedAt": "2026-11-12T11:48:25.436338+00:00",
+          "sourceVenue": "hyperliquid",
+          "paperQuoteVenue": "hyperliquid",
+          "exitDiscoveryAt": "2026-11-12T11:48:26.322653+00:00",
+          "sourcePublicationAt": "2026-11-12T11:48:04.627Z",
+          "lateDiscovery": false,
+          "exitPolicy": "Current observed book; never backdated to source close",
+          "status": "skipped",
+          "reason": "No prospectively copied opening"
+        }
+      ]
+    },
+    {
+      "eventId": 17712,
+      "action": "REDUCED",
+      "market": "HYPE",
+      "wallet": "0x44f2b4405eb992b3065b483a20aa2cfd21628fc0",
+      "matchingMainPositions": [],
+      "decisions": [
+        {
+          "eventId": 17712,
+          "action": "REDUCED",
+          "wallet": "0x44f2b4405eb992b3065b483a20aa2cfd21628fc0",
+          "market": "HYPE",
+          "side": "LONG",
+          "publication": "2026-11-12T11:49:04.082Z",
+          "observedAt": "2026-11-12T11:49:34.439786+00:00",
+          "sourceVenue": "hyperliquid",
+          "paperQuoteVenue": "hyperliquid",
+          "exitDiscoveryAt": "2026-11-12T11:49:37.825127+00:00",
+          "sourcePublicationAt": "2026-11-12T11:49:04.082Z",
+          "lateDiscovery": false,
+          "exitPolicy": "Current observed book; never backdated to source close",
+          "status": "skipped",
+          "reason": "No prospectively copied opening"
+        }
+      ]
+    },
+    {
+      "eventId": 17736,
+      "action": "REDUCED",
+      "market": "ETH",
+      "wallet": "0x2dfe69fc6f1464e2d9905e0321aff8f98065fee7",
+      "matchingMainPositions": [],
+      "decisions": [
+        {
+          "eventId": 17736,
+          "action": "REDUCED",
+          "wallet": "0x2dfe69fc6f1464e2d9905e0321aff8f98065fee7",
+          "market": "ETH",
+          "side": "SHORT",
+          "publication": "2026-11-12T12:02:03.894Z",
+          "observedAt": "2026-11-12T12:02:23.989397+00:00",
+          "sourceVenue": "hyperliquid",
+          "paperQuoteVenue": "hyperliquid",
+          "exitDiscoveryAt": "2026-11-12T12:02:24.729497+00:00",
+          "sourcePublicationAt": "2026-11-12T12:02:03.894Z",
+          "lateDiscovery": false,
+          "exitPolicy": "Current observed book; never backdated to source close",
+          "status": "skipped",
+          "reason": "No prospectively copied opening"
+        }
+      ]
+    }
+  ],
+  "publisher": {
+    "43207580697": {
+      "receipts": 59,
+      "success": 46,
+      "failed": 13,
+      "duration": {
+        "median": 9.606715949999852,
+        "max": 125.27360819799992
+      },
+      "first": {
+        "protocol": "immutable-checkpoint-v1",
+        "generation": "2026-11-12T11:16:39.233501+00:00",
+        "startedAt": "2026-11-12T11:16:40.085830+00:00",
+        "published": false,
+        "error": "Checkpoint git write-tree timed_out (exit -9)",
+        "attemptDiagnostics": [
+          {
+            "attempt": 1,
+            "command": {
+              "protocol": "git-command-diagnostic-v1",
+              "stage": "write-tree",
+              "startedAt": "2026-11-12T11:16:40.960470+00:00",
+              "endedAt": "2026-11-12T11:17:41.029011+00:00",
+              "durationSeconds": 60.067849519000006,
+              "result": "timed_out",
+              "returnCode": -9,
+              "stderrBytes": 0,
+              "stderrInspectedBytes": 0,
+              "stderrInspectionTruncated": false,
+              "stderrClasses": [
+                "unclassified"
+              ],
+              "trace2": {
+                "protocol": "git-trace2-summary-v1",
+                "status": "partial",
+                "bytesObserved": 10147,
+                "bytesInspected": 10147,
+                "eventsInspected": 34,
+                "byteLimit": 262144,
+                "eventLimit": 2048,
+                "lineLimit": 8192,
+                "truncated": false,
+                "malformedLines": 0,
+                "oversizeLines": 0,
+                "rootExitObserved": false,
+                "observedChildStarts": {
+                  "fetch": 1,
+                  "remote-https": 2
+                },
+                "countsAreLowerBounds": true,
+                "exactFetchChildStarts": null
+              }
+            }
+          },
+          {
+            "attempt": 2,
+            "command": {
+              "protocol": "git-command-diagnostic-v1",
+              "stage": "write-tree",
+              "startedAt": "2026-11-12T11:17:41.410343+00:00",
+              "endedAt": "2026-11-12T11:18:41.582897+00:00",
+              "durationSeconds": 60.17250866700002,
+              "result": "timed_out",
+              "returnCode": -9,
+              "stderrBytes": 0,
+              "stderrInspectedBytes": 0,
+              "stderrInspectionTruncated": false,
+              "stderrClasses": [
+                "unclassified"
+              ],
+              "trace2": {
+                "protocol": "git-trace2-summary-v1",
+                "status": "partial",
+                "bytesObserved": 10147,
+                "bytesInspected": 10147,
+                "eventsInspected": 34,
+                "byteLimit": 262144,
+                "eventLimit": 2048,
+                "lineLimit": 8192,
+                "truncated": false,
+                "malformedLines": 0,
+                "oversizeLines": 0,
+                "rootExitObserved": false,
+                "observedChildStarts": {
+                  "fetch": 1,
+                  "remote-https": 2
+                },
+                "countsAreLowerBounds": true,
+                "exactFetchChildStarts": null
+              }
+            }
+          }
+        ],
+        "endedAt": "2026-11-12T11:18:41.617417+00:00",
+        "durationSeconds": 121.531592652
+      },
+      "last": {
+        "protocol": "immutable-checkpoint-v1",
+        "generation": "2026-11-12T12:10:35.733055+00:00",
+        "startedAt": "2026-11-12T12:10:36.630018+00:00",
+        "published": true,
+        "commit": "6e688c4ace8020e7ee5910663f27dcc532b5d92f",
+        "unchanged": false,
+        "attemptDiagnostics": [],
+        "endedAt": "2026-11-12T12:10:46.177520+00:00",
+        "durationSeconds": 9.547504129999652
+      },
+      "otherRows": [
+        {
+          "at": "2026-11-12T12:10:58.739265+00:00",
+          "kind": "shutdown",
+          "protocol": "immutable-checkpoint-v1",
+          "latestObserved": "2026-11-12T12:10:35.733055+00:00",
+          "latestPublished": "2026-11-12T12:10:35.733055+00:00",
+          "inflight": null,
+          "pending": null
+        }
+      ],
+      "diagnostics": [
+        {
+          "attempt": 1,
+          "command": {
+            "protocol": "git-command-diagnostic-v1",
+            "stage": "write-tree",
+            "startedAt": "2026-11-12T11:16:40.960470+00:00",
+            "endedAt": "2026-11-12T11:17:41.029011+00:00",
+            "durationSeconds": 60.067849519000006,
+            "result": "timed_out",
+            "returnCode": -9,
+            "stderrBytes": 0,
+            "stderrInspectedBytes": 0,
+            "stderrInspectionTruncated": false,
+            "stderrClasses": [
+              "unclassified"
+            ],
+            "trace2": {
+              "protocol": "git-trace2-summary-v1",
+              "status": "partial",
+              "bytesObserved": 10147,
+              "bytesInspected": 10147,
+              "eventsInspected": 34,
+              "byteLimit": 262144,
+              "eventLimit": 2048,
+              "lineLimit": 8192,
+              "truncated": false,
+              "malformedLines": 0,
+              "oversizeLines": 0,
+              "rootExitObserved": false,
+              "observedChildStarts": {
+                "fetch": 1,
+                "remote-https": 2
+              },
+              "countsAreLowerBounds": true,
+              "exactFetchChildStarts": null
+            }
+          }
+        },
+        {
+          "attempt": 2,
+          "command": {
+            "protocol": "git-command-diagnostic-v1",
+            "stage": "write-tree",
+            "startedAt": "2026-11-12T11:17:41.410343+00:00",
+            "endedAt": "2026-11-12T11:18:41.582897+00:00",
+            "durationSeconds": 60.17250866700002,
+            "result": "timed_out",
+            "returnCode": -9,
+            "stderrBytes": 0,
+            "stderrInspectedBytes": 0,
+            "stderrInspectionTruncated": false,
+            "stderrClasses": [
+              "unclassified"
+            ],
+            "trace2": {
+              "protocol": "git-trace2-summary-v1",
+              "status": "partial",
+              "bytesObserved": 10147,
+              "bytesInspected": 10147,
+              "eventsInspected": 34,
+              "byteLimit": 262144,
+              "eventLimit": 2048,
+              "lineLimit": 8192,
+              "truncated": false,
+              "malformedLines": 0,
+              "oversizeLines": 0,
+              "rootExitObserved": false,
+              "observedChildStarts": {
+                "fetch": 1,
+                "remote-https": 2
+              },
+              "countsAreLowerBounds": true,
+              "exactFetchChildStarts": null
+            }
+          }
+        },
+        {
+          "attempt": 1,
+          "command": {
+            "protocol": "git-command-diagnostic-v1",
+            "stage": "write-tree",
+            "startedAt": "2026-11-12T11:18:42.457130+00:00",
+            "endedAt": "2026-11-12T11:19:42.488668+00:00",
+            "durationSeconds": 60.03147311699999,
+            "result": "timed_out",
+            "returnCode": -9,
+            "stderrBytes": 0,
+            "stderrInspectedBytes": 0,
+            "stderrInspectionTruncated": false,
+            "stderrClasses": [
+              "unclassified"
+            ],
+            "trace2": {
+              "protocol": "git-trace2-summary-v1",
+              "status": "partial",
+              "bytesObserved": 10147,
+              "bytesInspected": 10147,
+              "eventsInspected": 34,
+              "byteLimit": 262144,
+              "eventLimit": 2048,
+              "lineLimit": 8192,
+              "truncated": false,
+              "malformedLines": 0,
+              "oversizeLines": 0,
+              "rootExitObserved": false,
+              "observedChildStarts": {
+                "fetch": 1,
+                "remote-https": 2
+              },
+              "countsAreLowerBounds": true,
+              "exactFetchChildStarts": null
+            }
+          }
+        },
+        {
+          "attempt": 2,
+          "command": {
+            "protocol": "git-command-diagnostic-v1",
+            "stage": "write-tree",
+            "startedAt": "2026-11-12T11:19:42.833738+00:00",
+            "endedAt": "2026-11-12T11:20:42.899561+00:00",
+            "durationSeconds": 60.065776590999974,
+            "result": "timed_out",
+            "returnCode": -9,
+            "stderrBytes": 0,
+            "stderrInspectedBytes": 0,
+            "stderrInspectionTruncated": false,
+            "stderrClasses": [
+              "unclassified"
+            ],
+            "trace2": {
+              "protocol": "git-trace2-summary-v1",
+              "status": "partial",
+              "bytesObserved": 10147,
+              "bytesInspected": 10147,
+              "eventsInspected": 34,
+              "byteLimit": 262144,
+              "eventLimit": 2048,
+              "lineLimit": 8192,
+              "truncated": false,
+              "malformedLines": 0,
+              "oversizeLines": 0,
+              "rootExitObserved": false,
+              "observedChildStarts": {
+                "fetch": 1,
+                "remote-https": 2
+              },
+              "countsAreLowerBounds": true,
+              "exactFetchChildStarts": null
+            }
+          }
+        },
+        {
+          "attempt": 1,
+          "command": {
+            "protocol": "git-command-diagnostic-v1",
+            "stage": "write-tree",
+            "startedAt": "2026-11-12T11:20:43.799309+00:00",
+            "endedAt": "2026-11-12T11:21:43.939476+00:00",
+            "durationSeconds": 60.14012641200003,
+            "result": "timed_out",
+            "returnCode": -9,
+            "stderrBytes": 0,
+            "stderrInspectedBytes": 0,
+            "stderrInspectionTruncated": false,
+            "stderrClasses": [
+              "unclassified"
+            ],
+            "trace2": {
+              "protocol": "git-trace2-summary-v1",
+              "status": "partial",
+              "bytesObserved": 10147,
+              "bytesInspected": 10147,
+              "eventsInspected": 34,
+              "byteLimit": 262144,
+              "eventLimit": 2048,
+              "lineLimit": 8192,
+              "truncated": false,
+              "malformedLines": 0,
+              "oversizeLines": 0,
+              "rootExitObserved": false,
+              "observedChildStarts": {
+                "fetch": 1,
+                "remote-https": 2
+              },
+              "countsAreLowerBounds": true,
+              "exactFetchChildStarts": null
+            }
+          }
+        },
+        {
+          "attempt": 2,
+          "command": {
+            "protocol": "git-command-diagnostic-v1",
+            "stage": "write-tree",
+            "startedAt": "2026-11-12T11:21:44.287238+00:00",
+            "endedAt": "2026-11-12T11:22:44.432339+00:00",
+            "durationSeconds": 60.145048781000014,
+            "result": "timed_out",
+            "returnCode": -9,
+            "stderrBytes": 0,
+            "stderrInspectedBytes": 0,
+            "stderrInspectionTruncated": false,
+            "stderrClasses": [
+              "unclassified"
+            ],
+            "trace2": {
+              "protocol": "git-trace2-summary-v1",
+              "status": "partial",
+              "bytesObserved": 10147,
+              "bytesInspected": 10147,
+              "eventsInspected": 34,
+              "byteLimit": 262144,
+              "eventLimit": 2048,
+              "lineLimit": 8192,
+              "truncated": false,
+              "malformedLines": 0,
+              "oversizeLines": 0,
+              "rootExitObserved": false,
+              "observedChildStarts": {
+                "fetch": 1,
+                "remote-https": 2
+              },
+              "countsAreLowerBounds": true,
+              "exactFetchChildStarts": null
+            }
+          }
+        },
+        {
+          "attempt": 1,
+          "command": {
+            "protocol": "git-command-diagnostic-v1",
+            "stage": "write-tree",
+            "startedAt": "2026-11-12T11:22:45.309143+00:00",
+            "endedAt": "2026-11-12T11:23:45.346679+00:00",
+            "durationSeconds": 60.03749247899998,
+            "result": "timed_out",
+            "returnCode": -9,
+            "stderrBytes": 0,
+            "stderrInspectedBytes": 0,
+            "stderrInspectionTruncated": false,
+            "stderrClasses": [
+              "unclassified"
+            ],
+            "trace2": {
+              "protocol": "git-trace2-summary-v1",
+              "status": "partial",
+              "bytesObserved": 10147,
+              "bytesInspected": 10147,
+              "eventsInspected": 34,
+              "byteLimit": 262144,
+              "eventLimit": 2048,
+              "lineLimit": 8192,
+              "truncated": false,
+              "malformedLines": 0,
+              "oversizeLines": 0,
+              "rootExitObserved": false,
+              "observedChildStarts": {
+                "fetch": 1,
+                "remote-https": 2
+              },
+              "countsAreLowerBounds": true,
+              "exactFetchChildStarts": null
+            }
+          }
+        },
+        {
+          "attempt": 2,
+          "command": {
+            "protocol": "git-command-diagnostic-v1",
+            "stage": "write-tree",
+            "startedAt": "2026-11-12T11:23:45.752386+00:00",
+            "endedAt": "2026-11-12T11:24:45.756555+00:00",
+            "durationSeconds": 60.00412291699996,
+            "result": "timed_out",
+            "returnCode": -9,
+            "stderrBytes": 0,
+            "stderrInspectedBytes": 0,
+            "stderrInspectionTruncated": false,
+            "stderrClasses": [
+              "unclassified"
+            ],
+            "trace2": {
+              "protocol": "git-trace2-summary-v1",
+              "status": "partial",
+              "bytesObserved": 10147,
+              "bytesInspected": 10147,
+              "eventsInspected": 34,
+              "byteLimit": 262144,
+              "eventLimit": 2048,
+              "lineLimit": 8192,
+              "truncated": false,
+              "malformedLines": 0,
+              "oversizeLines": 0,
+              "rootExitObserved": false,
+              "observedChildStarts": {
+                "fetch": 1,
+                "remote-https": 2
+              },
+              "countsAreLowerBounds": true,
+              "exactFetchChildStarts": null
+            }
+          }
+        },
+        {
+          "attempt": 1,
+          "command": {
+            "protocol": "git-command-diagnostic-v1",
+            "stage": "write-tree",
+            "startedAt": "2026-11-12T11:24:46.648527+00:00",
+            "endedAt": "2026-11-12T11:25:46.822012+00:00",
+            "durationSeconds": 60.173441925999896,
+            "result": "timed_out",
+            "returnCode": -9,
+            "stderrBytes": 0,
+            "stderrInspectedBytes": 0,
+            "stderrInspectionTruncated": false,
+            "stderrClasses": [
+              "unclassified"
+            ],
+            "trace2": {
+              "protocol": "git-trace2-summary-v1",
+              "status": "partial",
+              "bytesObserved": 10147,
+              "bytesInspected": 10147,
+              "eventsInspected": 34,
+              "byteLimit": 262144,
+              "eventLimit": 2048,
+              "lineLimit": 8192,
+              "truncated": false,
+              "malformedLines": 0,
+              "oversizeLines": 0,
+              "rootExitObserved": false,
+              "observedChildStarts": {
+                "fetch": 1,
+                "remote-https": 2
+              },
+              "countsAreLowerBounds": true,
+              "exactFetchChildStarts": null
+            }
+          }
+        },
+        {
+          "attempt": 2,
+          "command": {
+            "protocol": "git-command-diagnostic-v1",
+            "stage": "write-tree",
+            "startedAt": "2026-11-12T11:25:47.147099+00:00",
+            "endedAt": "2026-11-12T11:26:47.316524+00:00",
+            "durationSeconds": 60.16938055600008,
+            "result": "timed_out",
+            "returnCode": -9,
+            "stderrBytes": 0,
+            "stderrInspectedBytes": 0,
+            "stderrInspectionTruncated": false,
+            "stderrClasses": [
+              "unclassified"
+            ],
+            "trace2": {
+              "protocol": "git-trace2-summary-v1",
+              "status": "partial",
+              "bytesObserved": 10147,
+              "bytesInspected": 10147,
+              "eventsInspected": 34,
+              "byteLimit": 262144,
+              "eventLimit": 2048,
+              "lineLimit": 8192,
+              "truncated": false,
+              "malformedLines": 0,
+              "oversizeLines": 0,
+              "rootExitObserved": false,
+              "observedChildStarts": {
+                "fetch": 1,
+                "remote-https": 2
+              },
+              "countsAreLowerBounds": true,
+              "exactFetchChildStarts": null
+            }
+          }
+        },
+        {
+          "attempt": 1,
+          "command": {
+            "protocol": "git-command-diagnostic-v1",
+            "stage": "write-tree",
+            "startedAt": "2026-11-12T11:26:48.220083+00:00",
+            "endedAt": "2026-11-12T11:27:48.413941+00:00",
+            "durationSeconds": 60.193807288000016,
+            "result": "timed_out",
+            "returnCode": -9,
+            "stderrBytes": 0,
+            "stderrInspectedBytes": 0,
+            "stderrInspectionTruncated": false,
+            "stderrClasses": [
+              "unclassified"
+            ],
+            "trace2": {
+              "protocol": "git-trace2-summary-v1",
+              "status": "partial",
+              "bytesObserved": 10147,
+              "bytesInspected": 10147,
+              "eventsInspected": 34,
+              "byteLimit": 262144,
+              "eventLimit": 2048,
+              "lineLimit": 8192,
+              "truncated": false,
+              "malformedLines": 0,
+              "oversizeLines": 0,
+              "rootExitObserved": false,
+              "observedChildStarts": {
+                "fetch": 1,
+                "remote-https": 2
+              },
+              "countsAreLowerBounds": true,
+              "exactFetchChildStarts": null
+            }
+          }
+        },
+        {
+          "attempt": 2,
+          "command": {
+            "protocol": "git-command-diagnostic-v1",
+            "stage": "write-tree",
+            "startedAt": "2026-11-12T11:27:48.777286+00:00",
+            "endedAt": "2026-11-12T11:28:48.966082+00:00",
+            "durationSeconds": 60.18875683199997,
+            "result": "timed_out",
+            "returnCode": -9,
+            "stderrBytes": 0,
+            "stderrInspectedBytes": 0,
+            "stderrInspectionTruncated": false,
+            "stderrClasses": [
+              "unclassified"
+            ],
+            "trace2": {
+              "protocol": "git-trace2-summary-v1",
+              "status": "partial",
+              "bytesObserved": 10147,
+              "bytesInspected": 10147,
+              "eventsInspected": 34,
+              "byteLimit": 262144,
+              "eventLimit": 2048,
+              "lineLimit": 8192,
+              "truncated": false,
+              "malformedLines": 0,
+              "oversizeLines": 0,
+              "rootExitObserved": false,
+              "observedChildStarts": {
+                "fetch": 1,
+                "remote-https": 2
+              },
+              "countsAreLowerBounds": true,
+              "exactFetchChildStarts": null
+            }
+          }
+        },
+        {
+          "attempt": 1,
+          "command": {
+            "protocol": "git-command-diagnostic-v1",
+            "stage": "write-tree",
+            "startedAt": "2026-11-12T11:28:49.958243+00:00",
+            "endedAt": "2026-11-12T11:29:49.993654+00:00",
+            "durationSeconds": 60.03533242900005,
+            "result": "timed_out",
+            "returnCode": -9,
+            "stderrBytes": 0,
+            "stderrInspectedBytes": 0,
+            "stderrInspectionTruncated": false,
+            "stderrClasses": [
+              "unclassified"
+            ],
+            "trace2": {
+              "protocol": "git-trace2-summary-v1",
+              "status": "partial",
+              "bytesObserved": 10147,
+              "bytesInspected": 10147,
+              "eventsInspected": 34,
+              "byteLimit": 262144,
+              "eventLimit": 2048,
+              "lineLimit": 8192,
+              "truncated": false,
+              "malformedLines": 0,
+              "oversizeLines": 0,
+              "rootExitObserved": false,
+              "observedChildStarts": {
+                "fetch": 1,
+                "remote-https": 2
+              },
+              "countsAreLowerBounds": true,
+              "exactFetchChildStarts": null
+            }
+          }
+        },
+        {
+          "attempt": 2,
+          "command": {
+            "protocol": "git-command-diagnostic-v1",
+            "stage": "write-tree",
+            "startedAt": "2026-11-12T11:29:50.349495+00:00",
+            "endedAt": "2026-11-12T11:30:50.538790+00:00",
+            "durationSeconds": 60.18923658599999,
+            "result": "timed_out",
+            "returnCode": -9,
+            "stderrBytes": 0,
+            "stderrInspectedBytes": 0,
+            "stderrInspectionTruncated": false,
+            "stderrClasses": [
+              "unclassified"
+            ],
+            "trace2": {
+              "protocol": "git-trace2-summary-v1",
+              "status": "partial",
+              "bytesObserved": 10147,
+              "bytesInspected": 10147,
+              "eventsInspected": 34,
+              "byteLimit": 262144,
+              "eventLimit": 2048,
+              "lineLimit": 8192,
+              "truncated": false,
+              "malformedLines": 0,
+              "oversizeLines": 0,
+              "rootExitObserved": false,
+              "observedChildStarts": {
+                "fetch": 1,
+                "remote-https": 2
+              },
+              "countsAreLowerBounds": true,
+              "exactFetchChildStarts": null
+            }
+          }
+        },
+        {
+          "attempt": 1,
+          "command": {
+            "protocol": "git-command-diagnostic-v1",
+            "stage": "write-tree",
+            "startedAt": "2026-11-12T11:30:51.451543+00:00",
+            "endedAt": "2026-11-12T11:31:51.488389+00:00",
+            "durationSeconds": 60.03679318799993,
+            "result": "timed_out",
+            "returnCode": -9,
+            "stderrBytes": 0,
+            "stderrInspectedBytes": 0,
+            "stderrInspectionTruncated": false,
+            "stderrClasses": [
+              "unclassified"
+            ],
+            "trace2": {
+              "protocol": "git-trace2-summary-v1",
+              "status": "partial",
+              "bytesObserved": 10147,
+              "bytesInspected": 10147,
+              "eventsInspected": 34,
+              "byteLimit": 262144,
+              "eventLimit": 2048,
+              "lineLimit": 8192,
+              "truncated": false,
+              "malformedLines": 0,
+              "oversizeLines": 0,
+              "rootExitObserved": false,
+              "observedChildStarts": {
+                "fetch": 1,
+                "remote-https": 2
+              },
+              "countsAreLowerBounds": true,
+              "exactFetchChildStarts": null
+            }
+          }
+        },
+        {
+          "attempt": 2,
+          "command": {
+            "protocol": "git-command-diagnostic-v1",
+            "stage": "write-tree",
+            "startedAt": "2026-11-12T11:31:51.875107+00:00",
+            "endedAt": "2026-11-12T11:32:51.975202+00:00",
+            "durationSeconds": 60.100037543999974,
+            "result": "timed_out",
+            "returnCode": -9,
+            "stderrBytes": 0,
+            "stderrInspectedBytes": 0,
+            "stderrInspectionTruncated": false,
+            "stderrClasses": [
+              "unclassified"
+            ],
+            "trace2": {
+              "protocol": "git-trace2-summary-v1",
+              "status": "partial",
+              "bytesObserved": 10147,
+              "bytesInspected": 10147,
+              "eventsInspected": 34,
+              "byteLimit": 262144,
+              "eventLimit": 2048,
+              "lineLimit": 8192,
+              "truncated": false,
+              "malformedLines": 0,
+              "oversizeLines": 0,
+              "rootExitObserved": false,
+              "observedChildStarts": {
+                "fetch": 1,
+                "remote-https": 2
+              },
+              "countsAreLowerBounds": true,
+              "exactFetchChildStarts": null
+            }
+          }
+        },
+        {
+          "attempt": 1,
+          "command": {
+            "protocol": "git-command-diagnostic-v1",
+            "stage": "write-tree",
+            "startedAt": "2026-11-12T11:32:52.922370+00:00",
+            "endedAt": "2026-11-12T11:33:53.064139+00:00",
+            "durationSeconds": 60.141723230000025,
+            "result": "timed_out",
+            "returnCode": -9,
+            "stderrBytes": 0,
+            "stderrInspectedBytes": 0,
+            "stderrInspectionTruncated": false,
+            "stderrClasses": [
+              "unclassified"
+            ],
+            "trace2": {
+              "protocol": "git-trace2-summary-v1",
+              "status": "partial",
+              "bytesObserved": 10147,
+              "bytesInspected": 10147,
+              "eventsInspected": 34,
+              "byteLimit": 262144,
+              "eventLimit": 2048,
+              "lineLimit": 8192,
+              "truncated": false,
+              "malformedLines": 0,
+              "oversizeLines": 0,
+              "rootExitObserved": false,
+              "observedChildStarts": {
+                "fetch": 1,
+                "remote-https": 2
+              },
+              "countsAreLowerBounds": true,
+              "exactFetchChildStarts": null
+            }
+          }
+        },
+        {
+          "attempt": 2,
+          "command": {
+            "protocol": "git-command-diagnostic-v1",
+            "stage": "write-tree",
+            "startedAt": "2026-11-12T11:33:53.439974+00:00",
+            "endedAt": "2026-11-12T11:34:53.516738+00:00",
+            "durationSeconds": 60.076720785999896,
+            "result": "timed_out",
+            "returnCode": -9,
+            "stderrBytes": 0,
+            "stderrInspectedBytes": 0,
+            "stderrInspectionTruncated": false,
+            "stderrClasses": [
+              "unclassified"
+            ],
+            "trace2": {
+              "protocol": "git-trace2-summary-v1",
+              "status": "partial",
+              "bytesObserved": 10147,
+              "bytesInspected": 10147,
+              "eventsInspected": 34,
+              "byteLimit": 262144,
+              "eventLimit": 2048,
+              "lineLimit": 8192,
+              "truncated": false,
+              "malformedLines": 0,
+              "oversizeLines": 0,
+              "rootExitObserved": false,
+              "observedChildStarts": {
+                "fetch": 1,
+                "remote-https": 2
+              },
+              "countsAreLowerBounds": true,
+              "exactFetchChildStarts": null
+            }
+          }
+        },
+        {
+          "attempt": 1,
+          "command": {
+            "protocol": "git-command-diagnostic-v1",
+            "stage": "write-tree",
+            "startedAt": "2026-11-12T11:34:54.409990+00:00",
+            "endedAt": "2026-11-12T11:35:54.449210+00:00",
+            "durationSeconds": 60.03917912399993,
+            "result": "timed_out",
+            "returnCode": -9,
+            "stderrBytes": 0,
+            "stderrInspectedBytes": 0,
+            "stderrInspectionTruncated": false,
+            "stderrClasses": [
+              "unclassified"
+            ],
+            "trace2": {
+              "protocol": "git-trace2-summary-v1",
+              "status": "partial",
+              "bytesObserved": 10147,
+              "bytesInspected": 10147,
+              "eventsInspected": 34,
+              "byteLimit": 262144,
+              "eventLimit": 2048,
+              "lineLimit": 8192,
+              "truncated": false,
+              "malformedLines": 0,
+              "oversizeLines": 0,
+              "rootExitObserved": false,
+              "observedChildStarts": {
+                "fetch": 1,
+                "remote-https": 2
+              },
+              "countsAreLowerBounds": true,
+              "exactFetchChildStarts": null
+            }
+          }
+        },
+        {
+          "attempt": 2,
+          "command": {
+            "protocol": "git-command-diagnostic-v1",
+            "stage": "write-tree",
+            "startedAt": "2026-11-12T11:35:54.783888+00:00",
+            "endedAt": "2026-11-12T11:36:55.041491+00:00",
+            "durationSeconds": 60.25756183900012,
+            "result": "timed_out",
+            "returnCode": -9,
+            "stderrBytes": 0,
+            "stderrInspectedBytes": 0,
+            "stderrInspectionTruncated": false,
+            "stderrClasses": [
+              "unclassified"
+            ],
+            "trace2": {
+              "protocol": "git-trace2-summary-v1",
+              "status": "partial",
+              "bytesObserved": 10147,
+              "bytesInspected": 10147,
+              "eventsInspected": 34,
+              "byteLimit": 262144,
+              "eventLimit": 2048,
+              "lineLimit": 8192,
+              "truncated": false,
+              "malformedLines": 0,
+              "oversizeLines": 0,
+              "rootExitObserved": false,
+              "observedChildStarts": {
+                "fetch": 1,
+                "remote-https": 2
+              },
+              "countsAreLowerBounds": true,
+              "exactFetchChildStarts": null
+            }
+          }
+        },
+        {
+          "attempt": 1,
+          "command": {
+            "protocol": "git-command-diagnostic-v1",
+            "stage": "write-tree",
+            "startedAt": "2026-11-12T11:36:55.997259+00:00",
+            "endedAt": "2026-11-12T11:37:56.133362+00:00",
+            "durationSeconds": 60.136060402999874,
+            "result": "timed_out",
+            "returnCode": -9,
+            "stderrBytes": 0,
+            "stderrInspectedBytes": 0,
+            "stderrInspectionTruncated": false,
+            "stderrClasses": [
+              "unclassified"
+            ],
+            "trace2": {
+              "protocol": "git-trace2-summary-v1",
+              "status": "partial",
+              "bytesObserved": 10147,
+              "bytesInspected": 10147,
+              "eventsInspected": 34,
+              "byteLimit": 262144,
+              "eventLimit": 2048,
+              "lineLimit": 8192,
+              "truncated": false,
+              "malformedLines": 0,
+              "oversizeLines": 0,
+              "rootExitObserved": false,
+              "observedChildStarts": {
+                "fetch": 1,
+                "remote-https": 2
+              },
+              "countsAreLowerBounds": true,
+              "exactFetchChildStarts": null
+            }
+          }
+        },
+        {
+          "attempt": 2,
+          "command": {
+            "protocol": "git-command-diagnostic-v1",
+            "stage": "write-tree",
+            "startedAt": "2026-11-12T11:37:56.460744+00:00",
+            "endedAt": "2026-11-12T11:38:56.506070+00:00",
+            "durationSeconds": 60.04528315599987,
+            "result": "timed_out",
+            "returnCode": -9,
+            "stderrBytes": 0,
+            "stderrInspectedBytes": 0,
+            "stderrInspectionTruncated": false,
+            "stderrClasses": [
+              "unclassified"
+            ],
+            "trace2": {
+              "protocol": "git-trace2-summary-v1",
+              "status": "partial",
+              "bytesObserved": 10147,
+              "bytesInspected": 10147,
+              "eventsInspected": 34,
+              "byteLimit": 262144,
+              "eventLimit": 2048,
+              "lineLimit": 8192,
+              "truncated": false,
+              "malformedLines": 0,
+              "oversizeLines": 0,
+              "rootExitObserved": false,
+              "observedChildStarts": {
+                "fetch": 1,
+                "remote-https": 2
+              },
+              "countsAreLowerBounds": true,
+              "exactFetchChildStarts": null
+            }
+          }
+        },
+        {
+          "attempt": 1,
+          "command": {
+            "protocol": "git-command-diagnostic-v1",
+            "stage": "write-tree",
+            "startedAt": "2026-11-12T11:38:57.438819+00:00",
+            "endedAt": "2026-11-12T11:39:57.572338+00:00",
+            "durationSeconds": 60.13346711100007,
+            "result": "timed_out",
+            "returnCode": -9,
+            "stderrBytes": 0,
+            "stderrInspectedBytes": 0,
+            "stderrInspectionTruncated": false,
+            "stderrClasses": [
+              "unclassified"
+            ],
+            "trace2": {
+              "protocol": "git-trace2-summary-v1",
+              "status": "partial",
+              "bytesObserved": 10147,
+              "bytesInspected": 10147,
+              "eventsInspected": 34,
+              "byteLimit": 262144,
+              "eventLimit": 2048,
+              "lineLimit": 8192,
+              "truncated": false,
+              "malformedLines": 0,
+              "oversizeLines": 0,
+              "rootExitObserved": false,
+              "observedChildStarts": {
+                "fetch": 1,
+                "remote-https": 2
+              },
+              "countsAreLowerBounds": true,
+              "exactFetchChildStarts": null
+            }
+          }
+        },
+        {
+          "attempt": 2,
+          "command": {
+            "protocol": "git-command-diagnostic-v1",
+            "stage": "write-tree",
+            "startedAt": "2026-11-12T11:39:57.942978+00:00",
+            "endedAt": "2026-11-12T11:40:58.115090+00:00",
+            "durationSeconds": 60.172067513,
+            "result": "timed_out",
+            "returnCode": -9,
+            "stderrBytes": 0,
+            "stderrInspectedBytes": 0,
+            "stderrInspectionTruncated": false,
+            "stderrClasses": [
+              "unclassified"
+            ],
+            "trace2": {
+              "protocol": "git-trace2-summary-v1",
+              "status": "partial",
+              "bytesObserved": 10147,
+              "bytesInspected": 10147,
+              "eventsInspected": 34,
+              "byteLimit": 262144,
+              "eventLimit": 2048,
+              "lineLimit": 8192,
+              "truncated": false,
+              "malformedLines": 0,
+              "oversizeLines": 0,
+              "rootExitObserved": false,
+              "observedChildStarts": {
+                "fetch": 1,
+                "remote-https": 2
+              },
+              "countsAreLowerBounds": true,
+              "exactFetchChildStarts": null
+            }
+          }
+        },
+        {
+          "attempt": 1,
+          "command": {
+            "protocol": "git-command-diagnostic-v1",
+            "stage": "write-tree",
+            "startedAt": "2026-11-12T11:40:59.069889+00:00",
+            "endedAt": "2026-11-12T11:41:59.112932+00:00",
+            "durationSeconds": 60.04299150599991,
+            "result": "timed_out",
+            "returnCode": -9,
+            "stderrBytes": 0,
+            "stderrInspectedBytes": 0,
+            "stderrInspectionTruncated": false,
+            "stderrClasses": [
+              "unclassified"
+            ],
+            "trace2": {
+              "protocol": "git-trace2-summary-v1",
+              "status": "partial",
+              "bytesObserved": 10147,
+              "bytesInspected": 10147,
+              "eventsInspected": 34,
+              "byteLimit": 262144,
+              "eventLimit": 2048,
+              "lineLimit": 8192,
+              "truncated": false,
+              "malformedLines": 0,
+              "oversizeLines": 0,
+              "rootExitObserved": false,
+              "observedChildStarts": {
+                "fetch": 1,
+                "remote-https": 2
+              },
+              "countsAreLowerBounds": true,
+              "exactFetchChildStarts": null
+            }
+          }
+        },
+        {
+          "attempt": 2,
+          "command": {
+            "protocol": "git-command-diagnostic-v1",
+            "stage": "write-tree",
+            "startedAt": "2026-11-12T11:41:59.465034+00:00",
+            "endedAt": "2026-11-12T11:42:59.598314+00:00",
+            "durationSeconds": 60.13323717100002,
+            "result": "timed_out",
+            "returnCode": -9,
+            "stderrBytes": 0,
+            "stderrInspectedBytes": 0,
+            "stderrInspectionTruncated": false,
+            "stderrClasses": [
+              "unclassified"
+            ],
+            "trace2": {
+              "protocol": "git-trace2-summary-v1",
+              "status": "partial",
+              "bytesObserved": 10147,
+              "bytesInspected": 10147,
+              "eventsInspected": 34,
+              "byteLimit": 262144,
+              "eventLimit": 2048,
+              "lineLimit": 8192,
+              "truncated": false,
+              "malformedLines": 0,
+              "oversizeLines": 0,
+              "rootExitObserved": false,
+              "observedChildStarts": {
+                "fetch": 1,
+                "remote-https": 2
+              },
+              "countsAreLowerBounds": true,
+              "exactFetchChildStarts": null
+            }
+          }
+        },
+        {
+          "attempt": 1,
+          "command": {
+            "protocol": "git-command-diagnostic-v1",
+            "stage": "write-tree",
+            "startedAt": "2026-11-12T11:43:00.550369+00:00",
+            "endedAt": "2026-11-12T11:44:00.613930+00:00",
+            "durationSeconds": 60.063519395000185,
+            "result": "timed_out",
+            "returnCode": -9,
+            "stderrBytes": 0,
+            "stderrInspectedBytes": 0,
+            "stderrInspectionTruncated": false,
+            "stderrClasses": [
+              "unclassified"
+            ],
+            "trace2": {
+              "protocol": "git-trace2-summary-v1",
+              "status": "partial",
+              "bytesObserved": 10147,
+              "bytesInspected": 10147,
+              "eventsInspected": 34,
+              "byteLimit": 262144,
+              "eventLimit": 2048,
+              "lineLimit": 8192,
+              "truncated": false,
+              "malformedLines": 0,
+              "oversizeLines": 0,
+              "rootExitObserved": false,
+              "observedChildStarts": {
+                "fetch": 1,
+                "remote-https": 2
+              },
+              "countsAreLowerBounds": true,
+              "exactFetchChildStarts": null
+            }
+          }
+        }
+      ]
+    },
+    "43215604983": {
+      "receipts": 13,
+      "success": 13,
+      "failed": 0,
+      "duration": {
+        "median": 8.112252468000008,
+        "max": 9.660091835000003
+      },
+      "first": {
+        "protocol": "immutable-checkpoint-v1",
+        "generation": "2026-11-12T12:12:17.689722+00:00",
+        "startedAt": "2026-11-12T12:12:18.691147+00:00",
+        "published": true,
+        "commit": "b8e8fca60e70f50d0fd629d19511585c4cd89805",
+        "unchanged": false,
+        "attemptDiagnostics": [],
+        "endedAt": "2026-11-12T12:12:28.109115+00:00",
+        "durationSeconds": 9.417975487999996
+      },
+      "last": {
+        "protocol": "immutable-checkpoint-v1",
+        "generation": "2026-11-12T12:19:12.577373+00:00",
+        "startedAt": "2026-11-12T12:19:13.676155+00:00",
+        "published": true,
+        "commit": "e7145167fb948b9162e1248609c7e2a62d535463",
+        "unchanged": false,
+        "attemptDiagnostics": [],
+        "endedAt": "2026-11-12T12:19:22.349017+00:00",
+        "durationSeconds": 8.672864208000021
+      },
+      "otherRows": [],
+      "diagnostics": [],
+      "policyReceiptsVerified": [
+        {
+          "commit": "b8e8fca60e70f50d0fd629d19511585c4cd89805",
+          "generation": "2026-11-12T12:12:17.689722+00:00",
+          "policyVerified": true
+        },
+        {
+          "commit": "7c54da90c42c546739cf78e034f8082d65d9dd02",
+          "generation": "2026-11-12T12:12:52.351385+00:00",
+          "policyVerified": true
+        },
+        {
+          "commit": "a159c754391325a7748347e65ff9181e3988eeb8",
+          "generation": "2026-11-12T12:13:26.547842+00:00",
+          "policyVerified": true
+        },
+        {
+          "commit": "b36bcf0c98df39a82de26ff9a63e2ffc619e8065",
+          "generation": "2026-11-12T12:14:00.879165+00:00",
+          "policyVerified": true
+        },
+        {
+          "commit": "827a8fa324d4ac8a6f15811ec316edb8573c1921",
+          "generation": "2026-11-12T12:14:35.210088+00:00",
+          "policyVerified": true
+        },
+        {
+          "commit": "6217a6ce8dde47bdbb81695b7c7b7d3722e9a6a2",
+          "generation": "2026-11-12T12:15:09.345723+00:00",
+          "policyVerified": true
+        },
+        {
+          "commit": "21e5fe08c26dedff55d364f17b4462c611d63a6a",
+          "generation": "2026-11-12T12:15:45.781953+00:00",
+          "policyVerified": true
+        },
+        {
+          "commit": "fbb3d428760ade1e0b96e8a59c9ce30fe54a4d70",
+          "generation": "2026-11-12T12:16:20.146934+00:00",
+          "policyVerified": true
+        },
+        {
+          "commit": "726d068927643b1598ebced215fc0d17163a1a0b",
+          "generation": "2026-11-12T12:16:55.183718+00:00",
+          "policyVerified": true
+        },
+        {
+          "commit": "e27b5034c5205f01a5d34ec11b116e52564b4fc8",
+          "generation": "2026-11-12T12:17:29.609371+00:00",
+          "policyVerified": true
+        },
+        {
+          "commit": "fd1e90b281b50c1583903d7f73508d5d377f33b6",
+          "generation": "2026-11-12T12:18:04.305709+00:00",
+          "policyVerified": true
+        },
+        {
+          "commit": "65c87178cba3fe47c64c5d74661171c75dd78107",
+          "generation": "2026-11-12T12:18:38.371278+00:00",
+          "policyVerified": true
+        },
+        {
+          "commit": "e7145167fb948b9162e1248609c7e2a62d535463",
+          "generation": "2026-11-12T12:19:12.577373+00:00",
+          "policyVerified": true
+        }
+      ]
+    }
+  },
+  "newPolicyZecBooks": {
+    "count": 43,
+    "first": "2026-11-12T12:11:43.301326+00:00",
+    "last": "2026-11-12T12:19:46.755193+00:00",
+    "maxSpacingSeconds": 13.429765,
+    "medianSpacingSeconds": 11.5499165
+  },
+  "main": {
+    "total": 58,
+    "open": 50,
+    "closed": 8,
+    "cash": 4980.43376828499,
+    "realizedBeforeFunding": 86.71125486420027,
+    "openPnlBeforeFunding": 560.2780869472522,
+    "newLegs": [],
+    "statistics": {
+      "count": 8,
+      "wins": 6,
+      "losses": 2,
+      "winRate": 0.75,
+      "expectancy": 10.838906858025034,
+      "profitFactor": 4.914207448134561,
+      "payoffRatio": 1.6380691493781872
+    },
+    "concentration": {
+      "ZEC": 12,
+      "BTC": 19,
+      "UNI": 1,
+      "XMR": 1,
+      "HYPE": 4,
+      "LIT": 2,
+      "ETH": 6,
+      "XRP": 1,
+      "SOL": 3,
+      "kPEPE": 1
+    },
+    "valuationQuality": {
+      "at": "2026-11-12T12:19:46.903816+00:00",
+      "status": "Unvalidated website-alert simulation; source holdings and funding incomplete",
+      "copyPerformanceEligible": false,
+      "activePaperExposures": 50,
+      "closureWarningPositionIds": [
+        10652,
+        10736,
+        10936,
+        11128,
+        11154,
+        11438,
+        11451,
+        11464,
+        11511,
+        11777,
+        11798,
+        11841,
+        11904,
+        11945,
+        11949,
+        11956,
+        11974,
+        11995,
+        12076,
+        12122,
+        12445,
+        12839,
+        13388,
+        14155,
+        17053
+      ],
+      "closureWarningCount": 25,
+      "sourceCardNoLongerLiveCount": 12,
+      "subsequentOpeningPositionIds": [
+        10652,
+        10736,
+        10936,
+        11128,
+        11154,
+        11438,
+        11464,
+        11511,
+        11777,
+        11798,
+        11841,
+        11904,
+        11945,
+        11949,
+        11974,
+        11995,
+        12076,
+        12122,
+        12445,
+        12839,
+        14155
+      ],
+      "subsequentOpeningWarningCount": 21,
+      "warningExposureModeledPnlBeforeFunding": 251.83044302025434,
+      "otherUnverifiedExposureModeledPnlBeforeFunding": 308.44764392699784,
+      "totalModeledPnlBeforeFunding": 560.2780869472522,
+      "interpretation": "Warning subtotal assumes continued exposure despite non-live source cards or subsequent openings; neither subtotal is verified copier performance."
+    },
+    "drawdown": "Unavailable; unresolved lifecycle and mixed valuation timestamps"
+  },
+  "scalp": {
+    "protocolVersion": "split-v4",
+    "families": {
+      "fresh": {
+        "total": 369,
+        "open": 4,
+        "closed": 365,
+        "closedPnlBeforeFunding": -50.00758898549861,
+        "milestones": {
+          "notional": {
+            "5": 9,
+            "10": 0,
+            "20": 0
+          },
+          "margin": {
+            "5": 104,
+            "10": 52,
+            "20": 30
+          }
+        }
+      },
+      "add_scalp": {
+        "total": 2472,
+        "open": 16,
+        "closed": 2456,
+        "closedPnlBeforeFunding": -794.5242369206786,
+        "milestones": {
+          "notional": {
+            "5": 5,
+            "10": 1,
+            "20": 0
+          },
+          "margin": {
+            "5": 508,
+            "10": 253,
+            "20": 89
+          }
+        }
+      }
+    },
+    "study": "github-portfolio-v3",
+    "initialEquity": 1000,
+    "equity": 153.7556162796141,
+    "realizedBeforeFunding": -844.5318259061772,
+    "openCloseEstimateBeforeFunding": -1.712557814208682,
+    "marginInUse": 89.28286283316666,
+    "available": 64.47275344644743,
+    "openCount": 20,
+    "closedCount": 2821,
+    "totalCount": 2841,
+    "maxOpen": 20,
+    "targetNotional": 200,
+    "maxPositionNotional": 350,
+    "stalePositions": [],
+    "milestones": {
+      "notional": {
+        "5": {
+          "hit": 14,
+          "total": 2841,
+          "unconfirmed": 2827
+        },
+        "10": {
+          "hit": 1,
+          "total": 2841,
+          "unconfirmed": 2840
+        },
+        "20": {
+          "hit": 0,
+          "total": 2841,
+          "unconfirmed": 2841
+        }
+      },
+      "margin": {
+        "5": {
+          "hit": 612,
+          "total": 2841,
+          "unconfirmed": 2229
+        },
+        "10": {
+          "hit": 305,
+          "total": 2841,
+          "unconfirmed": 2536
+        },
+        "20": {
+          "hit": 119,
+          "total": 2841,
+          "unconfirmed": 2722
+        }
+      }
+    },
+    "feesAssumedBps": 4.5,
+    "fundingComplete": false,
+    "at": "2026-11-12T12:19:46.932434+00:00",
+    "maxDrawdownObserved": 0.8471830080865712,
+    "statistics": {
+      "count": 2821,
+      "wins": 898,
+      "losses": 1923,
+      "winRate": 0.31832683445586674,
+      "expectancy": -0.299373210175887,
+      "profitFactor": 0.456167210679318,
+      "payoffRatio": 0.9768480469224148
+    },
+    "newEntries": 22,
+    "newCloses": 15
+  },
+  "archiveExitScan": {
+    "at": "2026-11-12T12:15:42.813701+00:00",
+    "scope": "Saved original exits and copied-card ending revisions; uncaptured source history unknown",
+    "files": 186,
+    "bytesRead": 26906,
+    "exitCardsReviewed": 0,
+    "endingRevisionRowsReviewed": 0,
+    "newCardWarningsRecovered": 0,
+    "matchingExitIds": [
+      17036,
+      16710,
+      16479,
+      15815,
+      15248,
+      15176,
+      13000,
+      12838
+    ],
+    "backlogRemaining": false,
+    "errors": []
+  },
+  "pendingExitIds": [
+    "17036",
+    "16710",
+    "16479",
+    "15815",
+    "15248",
+    "15176",
+    "13000",
+    "12838"
+  ],
+  "limits": [
+    "New-policy production sample is partial and short; full job shutdown/handoff not complete",
+    "No proof every website event was captured; burst/window gaps unknown",
+    "Source lifecycle and tier timing unverified",
+    "Funding excluded; fees and slippage modeled; liquidation incomplete",
+    "30/90-day representative backtest and delayed-book latency stress unavailable",
+    "No validated edge or verified lawful real-trading access"
+  ],
+  "rawIntegrity": [
+    {
+      "path": "stupid-money-lab/data/2026-11-12/sessions/43215604983-1/archive-exit-audits.jsonl",
+      "bytes": 358,
+      "sha256": "1d859271d836f891d00ce6ef522da6e4848ed24da1a4d012968942cf716199af"
+    },
+    {
+      "path": "stupid-money-lab/data/2026-11-12/sessions/43215604983-1/books.jsonl",
+      "bytes": 865258,
+      "sha256": "c418877b3fd70004988e6116bbc747ef76ff81901c44dc3a501216e6bdcbe4b8"
+    },
+    {
+      "path": "stupid-money-lab/data/2026-11-12/sessions/43215604983-1/candle-audits.jsonl",
+      "bytes": 16621,
+      "sha256": "e76cdfffc57d9e1067d18a4c5970991e3afe785ea5f4b910690ce95948db219f"
+    },
+    {
+      "path": "stupid-money-lab/data/2026-11-12/sessions/43215604983-1/checkpoint-publications.jsonl",
+      "bytes": 4238,
+      "sha256": "6540a823016f7bd089fe6d0f529d4ed803ff2e229c5ca9cbe459fb5b6564fcbb"
+    },
+    {
+      "path": "stupid-money-lab/data/2026-11-12/sessions/43215604983-1/coverage-gaps.jsonl",
+      "bytes": 113,
+      "sha256": "1cfb6de5efcd81278e604c0af79922a186491423395bd502d38f7b4a83b4ed9c"
+    },
+    {
+      "path": "stupid-money-lab/data/2026-11-12/sessions/43215604983-1/events.jsonl",
+      "bytes": 98583,
+      "sha256": "8d098934de0489569be3db38d0096089d4ad297118276052060763cc44cb2330"
+    },
+    {
+      "path": "stupid-money-lab/data/2026-11-12/sessions/43215604983-1/fills.jsonl",
+      "bytes": 26052,
+      "sha256": "aac486d694eb6670ff4e91197d1403d0961b2ef615603e594899862f91edd571"
+    },
+    {
+      "path": "stupid-money-lab/data/2026-11-12/sessions/43215604983-1/genius-copy.jsonl",
+      "bytes": 26954,
+      "sha256": "86bf36a0a2d9b070908c632116517425a2c6e757362038a5b68ebb8c3757ca0e"
+    },
+    {
+      "path": "stupid-money-lab/data/2026-11-12/sessions/43215604983-1/lifecycle-events.jsonl",
+      "bytes": 2309,
+      "sha256": "da8ec12ac0fa7d87bc89092fa14bb594594130737fb107e7a6c106f6f8b87c93"
+    },
+    {
+      "path": "stupid-money-lab/data/2026-11-12/sessions/43215604983-1/lifecycle-quotes.jsonl",
+      "bytes": 823211,
+      "sha256": "a6053c83045801aefa24ef794454e57e854f6d2b8d657d087fb6deef511b4787"
+    },
+    {
+      "path": "stupid-money-lab/data/2026-11-12/sessions/43215604983-1/oracle-contexts.jsonl",
+      "bytes": 1254144,
+      "sha256": "b75fb2bd1f062f17be2f405f1235fee5cc42a59371052990d0479779587abcc1"
+    },
+    {
+      "path": "stupid-money-lab/data/2026-11-12/sessions/43215604983-1/phase-timings.jsonl",
+      "bytes": 3187,
+      "sha256": "de516123e77166710a4a0fa8a46ec9e6259a4fe604e94b91419f6679aafb581a"
+    },
+    {
+      "path": "stupid-money-lab/data/2026-11-12/sessions/43215604983-1/portfolio.jsonl",
+      "bytes": 52208,
+      "sha256": "0b2ea4531031fe17bfe3b336a09854fb8a70154de4f874fd67942a79c63e6682"
+    },
+    {
+      "path": "stupid-money-lab/data/2026-11-12/sessions/43215604983-1/quotes.jsonl",
+      "bytes": 195375,
+      "sha256": "c1eef1028f28494d26c391db380289edf44817f5e668789c0f7b1b1cebc5bad4"
+    },
+    {
+      "path": "stupid-money-lab/data/2026-11-12/sessions/43215604983-1/rejections.jsonl",
+      "bytes": 316,
+      "sha256": "818ef8a437e5a380df9567d7591572dc9d6b27e534b6d323633bdba478b3ae63"
+    },
+    {
+      "path": "stupid-money-lab/data/2026-11-12/sessions/43215604983-1/signal-decisions.jsonl",
+      "bytes": 845,
+      "sha256": "6395c1e61fe5236b77a585367e54e35e4ce548037b85157116a7e071aa7e33d4"
+    },
+    {
+      "path": "stupid-money-lab/data/2026-11-12/sessions/43215604983-1/source-checks.jsonl",
+      "bytes": 2355,
+      "sha256": "59b4d17c6b099fe324a946abd92754df2fefe89baa39c1bcd499c97068ae357a"
+    },
+    {
+      "path": "stupid-money-lab/data/2026-11-12/sessions/43215604983-1/wallet-reconciliation.jsonl",
+      "bytes": 17020,
+      "sha256": "68cde688e61a0633a19eca77d90bc316d919a8975a474ed1de389d46d3d968a6"
+    }
+  ],
+  "runningSourceSha256": "5a2724f851d840c2ca98af5dbf92ff8ab99d549e1e783a8811da898c006c96a4",
+  "runningHead": "06d6f3b8adddf4dd9adb94f23cd0b80ca5c7568b",
+  "scan": {
+    "page": {
+      "at": "2026-11-12T12:20:50.060Z",
+      "status": "page_read",
+      "httpStatus": 200,
+      "hash": "0bcfc9a377ab8e09b4e74be8cb60cd3fa333ccf88e6df0712e8a752a645e21bf"
+    },
+    "live": {
+      "at": "2026-11-12T12:20:51.852Z",
+      "status": "page_read",
+      "eventCount": 20,
+      "sourceHash": "e63292e5a9f478578ca23323f06ad3960cb97c060de99f329ed9370b82705aa4"
+    }
+  },
+  "jobs": {
+    "completed": [
+      {
+        "id": 131146564691,
+        "name": "observe",
+        "status": "completed",
+        "conclusion": "success",
+        "run_id": 43207580697,
+        "logs_url": null,
+        "steps": [
+          {
+            "name": "Set up job",
+            "status": "completed",
+            "conclusion": "success",
+            "number": 1
+          },
+          {
+            "name": "Run actions/checkout@v4",
+            "status": "completed",
+            "conclusion": "success",
+            "number": 2
+          },
+          {
+            "name": "Run actions/setup-python@v5",
+            "status": "completed",
+            "conclusion": "success",
+            "number": 3
+          },
+          {
+            "name": "Verify paper math",
+            "status": "completed",
+            "conclusion": "success",
+            "number": 4
+          },
+          {
+            "name": "Collect public events and paper quotes",
+            "status": "completed",
+            "conclusion": "success",
+            "number": 5
+          },
+          {
+            "name": "Persist public evidence",
+            "status": "completed",
+            "conclusion": "success",
+            "number": 6
+          },
+          {
+            "name": "Preserve evidence artifact even if commit fails",
+            "status": "completed",
+            "conclusion": "success",
+            "number": 7
+          },
+          {
+            "name": "Hand off to next bounded collector window",
+            "status": "completed",
+            "conclusion": "success",
+            "number": 8
+          },
+          {
+            "name": "Post Run actions/setup-python@v5",
+            "status": "completed",
+            "conclusion": "success",
+            "number": 15
+          },
+          {
+            "name": "Post Run actions/checkout@v4",
+            "status": "completed",
+            "conclusion": "success",
+            "number": 16
+          },
+          {
+            "name": "Complete job",
+            "status": "completed",
+            "conclusion": "success",
+            "number": 17
+          }
+        ]
+      }
+    ],
+    "current": [
+      {
+        "id": 131173946990,
+        "name": "observe",
+        "status": "in_progress",
+        "conclusion": null,
+        "run_id": 43215604983,
+        "logs_url": null,
+        "steps": [
+          {
+            "name": "Set up job",
+            "status": "completed",
+            "conclusion": "success",
+            "number": 1
+          },
+          {
+            "name": "Run actions/checkout@v4",
+            "status": "completed",
+            "conclusion": "success",
+            "number": 2
+          },
+          {
+            "name": "Run actions/setup-python@v5",
+            "status": "completed",
+            "conclusion": "success",
+            "number": 3
+          },
+          {
+            "name": "Verify paper math",
+            "status": "completed",
+            "conclusion": "success",
+            "number": 4
+          },
+          {
+            "name": "Collect public events and paper quotes",
+            "status": "in_progress",
+            "conclusion": null,
+            "number": 5
+          },
+          {
+            "name": "Persist public evidence",
+            "status": "pending",
+            "conclusion": null,
+            "number": 6
+          },
+          {
+            "name": "Preserve evidence artifact even if commit fails",
+            "status": "pending",
+            "conclusion": null,
+            "number": 7
+          },
+          {
+            "name": "Hand off to next bounded collector window",
+            "status": "pending",
+            "conclusion": null,
+            "number": 8
+          },
+          {
+            "name": "Post Run actions/setup-python@v5",
+            "status": "pending",
+            "conclusion": null,
+            "number": 15
+          },
+          {
+            "name": "Post Run actions/checkout@v4",
+            "status": "pending",
+            "conclusion": null,
+            "number": 16
+          }
+        ]
+      }
+    ]
+  },
+  "runAtAmericaNewYork": "2026-11-12T07:23:51.062924-05:00",
+  "nextTest": "Check full guarded collector completion, final drain/handoff and successor persistence; then return to lifecycle/exit linkage research without changing trade rules."
+}
