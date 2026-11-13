@@ -41,3 +41,4 @@
 {"protocol":"collector-phase-v1","phase":"reconciliation","startedAt":"2026-11-13T18:19:57.473925+00:00","endedAt":"2026-11-13T18:19:57.473938+00:00","durationSeconds":1.2372999890430947e-05,"outcome":"returned"}
 {"protocol":"collector-phase-v1","phase":"reconciliation","startedAt":"2026-11-13T18:20:30.874958+00:00","endedAt":"2026-11-13T18:20:30.874970+00:00","durationSeconds":1.2111999922126415e-05,"outcome":"returned"}
 {"protocol":"collector-phase-v1","phase":"reconciliation","startedAt":"2026-11-13T18:21:03.856786+00:00","endedAt":"2026-11-13T18:21:03.856800+00:00","durationSeconds":1.2954000112586073e-05,"outcome":"returned"}
+{"protocol":"collector-phase-v1","phase":"reconciliation","startedAt":"2026-11-13T18:21:36.714938+00:00","endedAt":"2026-11-13T18:21:37.268070+00:00","durationSeconds":0.5531398299999637,"outcome":"returned"}
